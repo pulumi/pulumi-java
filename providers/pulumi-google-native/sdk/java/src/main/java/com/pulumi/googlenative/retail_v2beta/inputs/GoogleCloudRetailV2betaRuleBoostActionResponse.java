@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse extends com.pu
      * 
      */
     @Import(name="boost", required=true)
-      private final Double boost;
+    private Double boost;
 
     public Double boost() {
         return this.boost;
@@ -33,55 +33,52 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse extends com.pu
      * 
      */
     @Import(name="productsFilter", required=true)
-      private final String productsFilter;
+    private String productsFilter;
 
     public String productsFilter() {
         return this.productsFilter;
     }
 
-    public GoogleCloudRetailV2betaRuleBoostActionResponse(
-        Double boost,
-        String productsFilter) {
-        this.boost = Objects.requireNonNull(boost, "expected parameter 'boost' to be non-null");
-        this.productsFilter = Objects.requireNonNull(productsFilter, "expected parameter 'productsFilter' to be non-null");
-    }
+    private GoogleCloudRetailV2betaRuleBoostActionResponse() {}
 
-    private GoogleCloudRetailV2betaRuleBoostActionResponse() {
-        this.boost = null;
-        this.productsFilter = null;
+    private GoogleCloudRetailV2betaRuleBoostActionResponse(GoogleCloudRetailV2betaRuleBoostActionResponse $) {
+        this.boost = $.boost;
+        this.productsFilter = $.productsFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleBoostActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double boost;
-        private String productsFilter;
+        private GoogleCloudRetailV2betaRuleBoostActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleBoostActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleBoostActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boost = defaults.boost;
-    	      this.productsFilter = defaults.productsFilter;
+            $ = new GoogleCloudRetailV2betaRuleBoostActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boost(Double boost) {
-            this.boost = Objects.requireNonNull(boost);
+            $.boost = boost;
             return this;
         }
+
         public Builder productsFilter(String productsFilter) {
-            this.productsFilter = Objects.requireNonNull(productsFilter);
+            $.productsFilter = productsFilter;
             return this;
-        }        public GoogleCloudRetailV2betaRuleBoostActionResponse build() {
-            return new GoogleCloudRetailV2betaRuleBoostActionResponse(boost, productsFilter);
+        }
+
+        public GoogleCloudRetailV2betaRuleBoostActionResponse build() {
+            $.boost = Objects.requireNonNull($.boost, "expected parameter 'boost' to be non-null");
+            $.productsFilter = Objects.requireNonNull($.productsFilter, "expected parameter 'productsFilter' to be non-null");
+            return $;
         }
     }
+
 }

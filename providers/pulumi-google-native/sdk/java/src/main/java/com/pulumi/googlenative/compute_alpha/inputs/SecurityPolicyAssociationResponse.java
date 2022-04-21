@@ -17,7 +17,7 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="attachmentId", required=true)
-      private final String attachmentId;
+    private String attachmentId;
 
     public String attachmentId() {
         return this.attachmentId;
@@ -28,7 +28,7 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -39,7 +39,7 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -50,73 +50,66 @@ public final class SecurityPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="securityPolicyId", required=true)
-      private final String securityPolicyId;
+    private String securityPolicyId;
 
     public String securityPolicyId() {
         return this.securityPolicyId;
     }
 
-    public SecurityPolicyAssociationResponse(
-        String attachmentId,
-        String displayName,
-        String name,
-        String securityPolicyId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId, "expected parameter 'attachmentId' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.securityPolicyId = Objects.requireNonNull(securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
-    }
+    private SecurityPolicyAssociationResponse() {}
 
-    private SecurityPolicyAssociationResponse() {
-        this.attachmentId = null;
-        this.displayName = null;
-        this.name = null;
-        this.securityPolicyId = null;
+    private SecurityPolicyAssociationResponse(SecurityPolicyAssociationResponse $) {
+        this.attachmentId = $.attachmentId;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.securityPolicyId = $.securityPolicyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAssociationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachmentId;
-        private String displayName;
-        private String name;
-        private String securityPolicyId;
+        private SecurityPolicyAssociationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAssociationResponse();
         }
 
         public Builder(SecurityPolicyAssociationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.securityPolicyId = defaults.securityPolicyId;
+            $ = new SecurityPolicyAssociationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(String attachmentId) {
-            this.attachmentId = Objects.requireNonNull(attachmentId);
+            $.attachmentId = attachmentId;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder securityPolicyId(String securityPolicyId) {
-            this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+            $.securityPolicyId = securityPolicyId;
             return this;
-        }        public SecurityPolicyAssociationResponse build() {
-            return new SecurityPolicyAssociationResponse(attachmentId, displayName, name, securityPolicyId);
+        }
+
+        public SecurityPolicyAssociationResponse build() {
+            $.attachmentId = Objects.requireNonNull($.attachmentId, "expected parameter 'attachmentId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.securityPolicyId = Objects.requireNonNull($.securityPolicyId, "expected parameter 'securityPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

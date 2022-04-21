@@ -23,10 +23,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cacheDuration")
-      private final @Nullable String cacheDuration;
+    private @Nullable String cacheDuration;
 
     public Optional<String> cacheDuration() {
-        return this.cacheDuration == null ? Optional.empty() : Optional.ofNullable(this.cacheDuration);
+        return Optional.ofNullable(this.cacheDuration);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dynamicCompression")
-      private final @Nullable String dynamicCompression;
+    private @Nullable String dynamicCompression;
 
     public Optional<String> dynamicCompression() {
-        return this.dynamicCompression == null ? Optional.empty() : Optional.ofNullable(this.dynamicCompression);
+        return Optional.ofNullable(this.dynamicCompression);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="queryParameterStripDirective")
-      private final @Nullable String queryParameterStripDirective;
+    private @Nullable String queryParameterStripDirective;
 
     public Optional<String> queryParameterStripDirective() {
-        return this.queryParameterStripDirective == null ? Optional.empty() : Optional.ofNullable(this.queryParameterStripDirective);
+        return Optional.ofNullable(this.queryParameterStripDirective);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class CacheConfigurationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="queryParameters")
-      private final @Nullable String queryParameters;
+    private @Nullable String queryParameters;
 
     public Optional<String> queryParameters() {
-        return this.queryParameters == null ? Optional.empty() : Optional.ofNullable(this.queryParameters);
+        return Optional.ofNullable(this.queryParameters);
     }
 
-    public CacheConfigurationResponse(
-        @Nullable String cacheDuration,
-        @Nullable String dynamicCompression,
-        @Nullable String queryParameterStripDirective,
-        @Nullable String queryParameters) {
-        this.cacheDuration = cacheDuration;
-        this.dynamicCompression = dynamicCompression;
-        this.queryParameterStripDirective = queryParameterStripDirective;
-        this.queryParameters = queryParameters;
-    }
+    private CacheConfigurationResponse() {}
 
-    private CacheConfigurationResponse() {
-        this.cacheDuration = null;
-        this.dynamicCompression = null;
-        this.queryParameterStripDirective = null;
-        this.queryParameters = null;
+    private CacheConfigurationResponse(CacheConfigurationResponse $) {
+        this.cacheDuration = $.cacheDuration;
+        this.dynamicCompression = $.dynamicCompression;
+        this.queryParameterStripDirective = $.queryParameterStripDirective;
+        this.queryParameters = $.queryParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cacheDuration;
-        private @Nullable String dynamicCompression;
-        private @Nullable String queryParameterStripDirective;
-        private @Nullable String queryParameters;
+        private CacheConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheConfigurationResponse();
         }
 
         public Builder(CacheConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheDuration = defaults.cacheDuration;
-    	      this.dynamicCompression = defaults.dynamicCompression;
-    	      this.queryParameterStripDirective = defaults.queryParameterStripDirective;
-    	      this.queryParameters = defaults.queryParameters;
+            $ = new CacheConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheDuration(@Nullable String cacheDuration) {
-            this.cacheDuration = cacheDuration;
+            $.cacheDuration = cacheDuration;
             return this;
         }
+
         public Builder dynamicCompression(@Nullable String dynamicCompression) {
-            this.dynamicCompression = dynamicCompression;
+            $.dynamicCompression = dynamicCompression;
             return this;
         }
+
         public Builder queryParameterStripDirective(@Nullable String queryParameterStripDirective) {
-            this.queryParameterStripDirective = queryParameterStripDirective;
+            $.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
+
         public Builder queryParameters(@Nullable String queryParameters) {
-            this.queryParameters = queryParameters;
+            $.queryParameters = queryParameters;
             return this;
-        }        public CacheConfigurationResponse build() {
-            return new CacheConfigurationResponse(cacheDuration, dynamicCompression, queryParameterStripDirective, queryParameters);
+        }
+
+        public CacheConfigurationResponse build() {
+            return $;
         }
     }
+
 }

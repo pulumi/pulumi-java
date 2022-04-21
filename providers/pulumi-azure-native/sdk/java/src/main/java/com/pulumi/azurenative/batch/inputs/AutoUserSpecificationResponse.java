@@ -19,10 +19,10 @@ public final class AutoUserSpecificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="elevationLevel")
-      private final @Nullable String elevationLevel;
+    private @Nullable String elevationLevel;
 
     public Optional<String> elevationLevel() {
-        return this.elevationLevel == null ? Optional.empty() : Optional.ofNullable(this.elevationLevel);
+        return Optional.ofNullable(this.elevationLevel);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class AutoUserSpecificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="scope")
-      private final @Nullable String scope;
+    private @Nullable String scope;
 
     public Optional<String> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
-    public AutoUserSpecificationResponse(
-        @Nullable String elevationLevel,
-        @Nullable String scope) {
-        this.elevationLevel = elevationLevel;
-        this.scope = scope;
-    }
+    private AutoUserSpecificationResponse() {}
 
-    private AutoUserSpecificationResponse() {
-        this.elevationLevel = null;
-        this.scope = null;
+    private AutoUserSpecificationResponse(AutoUserSpecificationResponse $) {
+        this.elevationLevel = $.elevationLevel;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoUserSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String elevationLevel;
-        private @Nullable String scope;
+        private AutoUserSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoUserSpecificationResponse();
         }
 
         public Builder(AutoUserSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elevationLevel = defaults.elevationLevel;
-    	      this.scope = defaults.scope;
+            $ = new AutoUserSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elevationLevel(@Nullable String elevationLevel) {
-            this.elevationLevel = elevationLevel;
+            $.elevationLevel = elevationLevel;
             return this;
         }
+
         public Builder scope(@Nullable String scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
-        }        public AutoUserSpecificationResponse build() {
-            return new AutoUserSpecificationResponse(elevationLevel, scope);
+        }
+
+        public AutoUserSpecificationResponse build() {
+            return $;
         }
     }
+
 }

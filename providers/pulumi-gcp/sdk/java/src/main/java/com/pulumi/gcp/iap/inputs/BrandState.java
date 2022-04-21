@@ -5,10 +5,10 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BrandState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationTitle")
-      private final @Nullable Output<String> applicationTitle;
+    private @Nullable Output<String> applicationTitle;
 
-    public Output<String> applicationTitle() {
-        return this.applicationTitle == null ? Codegen.empty() : this.applicationTitle;
+    public Optional<Output<String>> applicationTitle() {
+        return Optional.ofNullable(this.applicationTitle);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BrandState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BrandState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgInternalOnly")
-      private final @Nullable Output<Boolean> orgInternalOnly;
+    private @Nullable Output<Boolean> orgInternalOnly;
 
-    public Output<Boolean> orgInternalOnly() {
-        return this.orgInternalOnly == null ? Codegen.empty() : this.orgInternalOnly;
+    public Optional<Output<Boolean>> orgInternalOnly() {
+        return Optional.ofNullable(this.orgInternalOnly);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BrandState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class BrandState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportEmail")
-      private final @Nullable Output<String> supportEmail;
+    private @Nullable Output<String> supportEmail;
 
-    public Output<String> supportEmail() {
-        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
+    public Optional<Output<String>> supportEmail() {
+        return Optional.ofNullable(this.supportEmail);
     }
 
-    public BrandState(
-        @Nullable Output<String> applicationTitle,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> orgInternalOnly,
-        @Nullable Output<String> project,
-        @Nullable Output<String> supportEmail) {
-        this.applicationTitle = applicationTitle;
-        this.name = name;
-        this.orgInternalOnly = orgInternalOnly;
-        this.project = project;
-        this.supportEmail = supportEmail;
-    }
+    private BrandState() {}
 
-    private BrandState() {
-        this.applicationTitle = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgInternalOnly = Codegen.empty();
-        this.project = Codegen.empty();
-        this.supportEmail = Codegen.empty();
+    private BrandState(BrandState $) {
+        this.applicationTitle = $.applicationTitle;
+        this.name = $.name;
+        this.orgInternalOnly = $.orgInternalOnly;
+        this.project = $.project;
+        this.supportEmail = $.supportEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrandState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationTitle;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> orgInternalOnly;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> supportEmail;
+        private BrandState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrandState();
         }
 
         public Builder(BrandState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationTitle = defaults.applicationTitle;
-    	      this.name = defaults.name;
-    	      this.orgInternalOnly = defaults.orgInternalOnly;
-    	      this.project = defaults.project;
-    	      this.supportEmail = defaults.supportEmail;
+            $ = new BrandState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationTitle(@Nullable Output<String> applicationTitle) {
-            this.applicationTitle = applicationTitle;
+            $.applicationTitle = applicationTitle;
             return this;
         }
-        public Builder applicationTitle(@Nullable String applicationTitle) {
-            this.applicationTitle = Codegen.ofNullable(applicationTitle);
-            return this;
+
+        public Builder applicationTitle(String applicationTitle) {
+            return applicationTitle(Output.of(applicationTitle));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgInternalOnly(@Nullable Output<Boolean> orgInternalOnly) {
-            this.orgInternalOnly = orgInternalOnly;
+            $.orgInternalOnly = orgInternalOnly;
             return this;
         }
-        public Builder orgInternalOnly(@Nullable Boolean orgInternalOnly) {
-            this.orgInternalOnly = Codegen.ofNullable(orgInternalOnly);
-            return this;
+
+        public Builder orgInternalOnly(Boolean orgInternalOnly) {
+            return orgInternalOnly(Output.of(orgInternalOnly));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
-            this.supportEmail = supportEmail;
+            $.supportEmail = supportEmail;
             return this;
         }
-        public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Codegen.ofNullable(supportEmail);
-            return this;
-        }        public BrandState build() {
-            return new BrandState(applicationTitle, name, orgInternalOnly, project, supportEmail);
+
+        public Builder supportEmail(String supportEmail) {
+            return supportEmail(Output.of(supportEmail));
+        }
+
+        public BrandState build() {
+            return $;
         }
     }
+
 }

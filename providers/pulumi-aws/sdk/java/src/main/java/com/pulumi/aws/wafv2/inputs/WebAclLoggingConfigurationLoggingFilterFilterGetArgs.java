@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
      * 
      */
     @Import(name="behavior", required=true)
-      private final Output<String> behavior;
+    private Output<String> behavior;
 
     public Output<String> behavior() {
         return this.behavior;
@@ -32,7 +31,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions;
+    private Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions;
 
     public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions() {
         return this.conditions;
@@ -43,79 +42,75 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
      * 
      */
     @Import(name="requirement", required=true)
-      private final Output<String> requirement;
+    private Output<String> requirement;
 
     public Output<String> requirement() {
         return this.requirement;
     }
 
-    public WebAclLoggingConfigurationLoggingFilterFilterGetArgs(
-        Output<String> behavior,
-        Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions,
-        Output<String> requirement) {
-        this.behavior = Objects.requireNonNull(behavior, "expected parameter 'behavior' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.requirement = Objects.requireNonNull(requirement, "expected parameter 'requirement' to be non-null");
-    }
+    private WebAclLoggingConfigurationLoggingFilterFilterGetArgs() {}
 
-    private WebAclLoggingConfigurationLoggingFilterFilterGetArgs() {
-        this.behavior = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.requirement = Codegen.empty();
+    private WebAclLoggingConfigurationLoggingFilterFilterGetArgs(WebAclLoggingConfigurationLoggingFilterFilterGetArgs $) {
+        this.behavior = $.behavior;
+        this.conditions = $.conditions;
+        this.requirement = $.requirement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationLoggingFilterFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> behavior;
-        private Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions;
-        private Output<String> requirement;
+        private WebAclLoggingConfigurationLoggingFilterFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationLoggingFilterFilterGetArgs();
         }
 
         public Builder(WebAclLoggingConfigurationLoggingFilterFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.behavior = defaults.behavior;
-    	      this.conditions = defaults.conditions;
-    	      this.requirement = defaults.requirement;
+            $ = new WebAclLoggingConfigurationLoggingFilterFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder behavior(Output<String> behavior) {
-            this.behavior = Objects.requireNonNull(behavior);
+            $.behavior = behavior;
             return this;
         }
+
         public Builder behavior(String behavior) {
-            this.behavior = Output.of(Objects.requireNonNull(behavior));
-            return this;
+            return behavior(Output.of(behavior));
         }
+
         public Builder conditions(Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder requirement(Output<String> requirement) {
-            this.requirement = Objects.requireNonNull(requirement);
+            $.requirement = requirement;
             return this;
         }
+
         public Builder requirement(String requirement) {
-            this.requirement = Output.of(Objects.requireNonNull(requirement));
-            return this;
-        }        public WebAclLoggingConfigurationLoggingFilterFilterGetArgs build() {
-            return new WebAclLoggingConfigurationLoggingFilterFilterGetArgs(behavior, conditions, requirement);
+            return requirement(Output.of(requirement));
+        }
+
+        public WebAclLoggingConfigurationLoggingFilterFilterGetArgs build() {
+            $.behavior = Objects.requireNonNull($.behavior, "expected parameter 'behavior' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.requirement = Objects.requireNonNull($.requirement, "expected parameter 'requirement' to be non-null");
+            return $;
         }
     }
+
 }

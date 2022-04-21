@@ -5,9 +5,9 @@ package com.pulumi.aws.licensemanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseConfigurationArn")
-      private final @Nullable Output<String> licenseConfigurationArn;
+    private @Nullable Output<String> licenseConfigurationArn;
 
-    public Output<String> licenseConfigurationArn() {
-        return this.licenseConfigurationArn == null ? Codegen.empty() : this.licenseConfigurationArn;
+    public Optional<Output<String>> licenseConfigurationArn() {
+        return Optional.ofNullable(this.licenseConfigurationArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
-    public AssociationState(
-        @Nullable Output<String> licenseConfigurationArn,
-        @Nullable Output<String> resourceArn) {
-        this.licenseConfigurationArn = licenseConfigurationArn;
-        this.resourceArn = resourceArn;
-    }
+    private AssociationState() {}
 
-    private AssociationState() {
-        this.licenseConfigurationArn = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private AssociationState(AssociationState $) {
+        this.licenseConfigurationArn = $.licenseConfigurationArn;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> licenseConfigurationArn;
-        private @Nullable Output<String> resourceArn;
+        private AssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationState();
         }
 
         public Builder(AssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.licenseConfigurationArn = defaults.licenseConfigurationArn;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new AssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder licenseConfigurationArn(@Nullable Output<String> licenseConfigurationArn) {
-            this.licenseConfigurationArn = licenseConfigurationArn;
+            $.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
-        public Builder licenseConfigurationArn(@Nullable String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Codegen.ofNullable(licenseConfigurationArn);
-            return this;
+
+        public Builder licenseConfigurationArn(String licenseConfigurationArn) {
+            return licenseConfigurationArn(Output.of(licenseConfigurationArn));
         }
+
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
-        }        public AssociationState build() {
-            return new AssociationState(licenseConfigurationArn, resourceArn);
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public AssociationState build() {
+            return $;
         }
     }
+
 }

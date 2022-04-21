@@ -24,7 +24,7 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hashKeyField", required=true)
-      private final String hashKeyField;
+    private String hashKeyField;
 
     public String hashKeyField() {
         return this.hashKeyField;
@@ -41,10 +41,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hashKeyType")
-      private final @Nullable String hashKeyType;
+    private @Nullable String hashKeyType;
 
     public Optional<String> hashKeyType() {
-        return this.hashKeyType == null ? Optional.empty() : Optional.ofNullable(this.hashKeyType);
+        return Optional.ofNullable(this.hashKeyType);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hashKeyValue", required=true)
-      private final String hashKeyValue;
+    private String hashKeyValue;
 
     public String hashKeyValue() {
         return this.hashKeyValue;
@@ -71,17 +71,17 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="operation")
-      private final @Nullable String operation;
+    private @Nullable String operation;
 
     public Optional<String> operation() {
-        return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
+        return Optional.ofNullable(this.operation);
     }
 
     @Import(name="payload")
-      private final @Nullable DetectorModelPayload payload;
+    private @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> payload() {
-        return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="payloadField")
-      private final @Nullable String payloadField;
+    private @Nullable String payloadField;
 
     public Optional<String> payloadField() {
-        return this.payloadField == null ? Optional.empty() : Optional.ofNullable(this.payloadField);
+        return Optional.ofNullable(this.payloadField);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rangeKeyField")
-      private final @Nullable String rangeKeyField;
+    private @Nullable String rangeKeyField;
 
     public Optional<String> rangeKeyField() {
-        return this.rangeKeyField == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyField);
+        return Optional.ofNullable(this.rangeKeyField);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rangeKeyType")
-      private final @Nullable String rangeKeyType;
+    private @Nullable String rangeKeyType;
 
     public Optional<String> rangeKeyType() {
-        return this.rangeKeyType == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyType);
+        return Optional.ofNullable(this.rangeKeyType);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rangeKeyValue")
-      private final @Nullable String rangeKeyValue;
+    private @Nullable String rangeKeyValue;
 
     public Optional<String> rangeKeyValue() {
-        return this.rangeKeyValue == null ? Optional.empty() : Optional.ofNullable(this.rangeKeyValue);
+        return Optional.ofNullable(this.rangeKeyValue);
     }
 
     /**
@@ -141,127 +141,101 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public DetectorModelDynamoDB(
-        String hashKeyField,
-        @Nullable String hashKeyType,
-        String hashKeyValue,
-        @Nullable String operation,
-        @Nullable DetectorModelPayload payload,
-        @Nullable String payloadField,
-        @Nullable String rangeKeyField,
-        @Nullable String rangeKeyType,
-        @Nullable String rangeKeyValue,
-        String tableName) {
-        this.hashKeyField = Objects.requireNonNull(hashKeyField, "expected parameter 'hashKeyField' to be non-null");
-        this.hashKeyType = hashKeyType;
-        this.hashKeyValue = Objects.requireNonNull(hashKeyValue, "expected parameter 'hashKeyValue' to be non-null");
-        this.operation = operation;
-        this.payload = payload;
-        this.payloadField = payloadField;
-        this.rangeKeyField = rangeKeyField;
-        this.rangeKeyType = rangeKeyType;
-        this.rangeKeyValue = rangeKeyValue;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private DetectorModelDynamoDB() {}
 
-    private DetectorModelDynamoDB() {
-        this.hashKeyField = null;
-        this.hashKeyType = null;
-        this.hashKeyValue = null;
-        this.operation = null;
-        this.payload = null;
-        this.payloadField = null;
-        this.rangeKeyField = null;
-        this.rangeKeyType = null;
-        this.rangeKeyValue = null;
-        this.tableName = null;
+    private DetectorModelDynamoDB(DetectorModelDynamoDB $) {
+        this.hashKeyField = $.hashKeyField;
+        this.hashKeyType = $.hashKeyType;
+        this.hashKeyValue = $.hashKeyValue;
+        this.operation = $.operation;
+        this.payload = $.payload;
+        this.payloadField = $.payloadField;
+        this.rangeKeyField = $.rangeKeyField;
+        this.rangeKeyType = $.rangeKeyType;
+        this.rangeKeyValue = $.rangeKeyValue;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelDynamoDB defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hashKeyField;
-        private @Nullable String hashKeyType;
-        private String hashKeyValue;
-        private @Nullable String operation;
-        private @Nullable DetectorModelPayload payload;
-        private @Nullable String payloadField;
-        private @Nullable String rangeKeyField;
-        private @Nullable String rangeKeyType;
-        private @Nullable String rangeKeyValue;
-        private String tableName;
+        private DetectorModelDynamoDB $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelDynamoDB();
         }
 
         public Builder(DetectorModelDynamoDB defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hashKeyField = defaults.hashKeyField;
-    	      this.hashKeyType = defaults.hashKeyType;
-    	      this.hashKeyValue = defaults.hashKeyValue;
-    	      this.operation = defaults.operation;
-    	      this.payload = defaults.payload;
-    	      this.payloadField = defaults.payloadField;
-    	      this.rangeKeyField = defaults.rangeKeyField;
-    	      this.rangeKeyType = defaults.rangeKeyType;
-    	      this.rangeKeyValue = defaults.rangeKeyValue;
-    	      this.tableName = defaults.tableName;
+            $ = new DetectorModelDynamoDB(Objects.requireNonNull(defaults));
         }
 
         public Builder hashKeyField(String hashKeyField) {
-            this.hashKeyField = Objects.requireNonNull(hashKeyField);
+            $.hashKeyField = hashKeyField;
             return this;
         }
+
         public Builder hashKeyType(@Nullable String hashKeyType) {
-            this.hashKeyType = hashKeyType;
+            $.hashKeyType = hashKeyType;
             return this;
         }
+
         public Builder hashKeyValue(String hashKeyValue) {
-            this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
+            $.hashKeyValue = hashKeyValue;
             return this;
         }
+
         public Builder operation(@Nullable String operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
         }
+
         public Builder payload(@Nullable DetectorModelPayload payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
+
         public Builder payloadField(@Nullable String payloadField) {
-            this.payloadField = payloadField;
+            $.payloadField = payloadField;
             return this;
         }
+
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
-            this.rangeKeyField = rangeKeyField;
+            $.rangeKeyField = rangeKeyField;
             return this;
         }
+
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
-            this.rangeKeyType = rangeKeyType;
+            $.rangeKeyType = rangeKeyType;
             return this;
         }
+
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
-            this.rangeKeyValue = rangeKeyValue;
+            $.rangeKeyValue = rangeKeyValue;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public DetectorModelDynamoDB build() {
-            return new DetectorModelDynamoDB(hashKeyField, hashKeyType, hashKeyValue, operation, payload, payloadField, rangeKeyField, rangeKeyType, rangeKeyValue, tableName);
+        }
+
+        public DetectorModelDynamoDB build() {
+            $.hashKeyField = Objects.requireNonNull($.hashKeyField, "expected parameter 'hashKeyField' to be non-null");
+            $.hashKeyValue = Objects.requireNonNull($.hashKeyValue, "expected parameter 'hashKeyValue' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

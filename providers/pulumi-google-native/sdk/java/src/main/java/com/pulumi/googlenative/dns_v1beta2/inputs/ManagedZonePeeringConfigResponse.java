@@ -14,7 +14,7 @@ public final class ManagedZonePeeringConfigResponse extends com.pulumi.resources
     public static final ManagedZonePeeringConfigResponse Empty = new ManagedZonePeeringConfigResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -25,55 +25,52 @@ public final class ManagedZonePeeringConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="targetNetwork", required=true)
-      private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
+    private ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
     public ManagedZonePeeringConfigTargetNetworkResponse targetNetwork() {
         return this.targetNetwork;
     }
 
-    public ManagedZonePeeringConfigResponse(
-        String kind,
-        ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.targetNetwork = Objects.requireNonNull(targetNetwork, "expected parameter 'targetNetwork' to be non-null");
-    }
+    private ManagedZonePeeringConfigResponse() {}
 
-    private ManagedZonePeeringConfigResponse() {
-        this.kind = null;
-        this.targetNetwork = null;
+    private ManagedZonePeeringConfigResponse(ManagedZonePeeringConfigResponse $) {
+        this.kind = $.kind;
+        this.targetNetwork = $.targetNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePeeringConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
+        private ManagedZonePeeringConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePeeringConfigResponse();
         }
 
         public Builder(ManagedZonePeeringConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.targetNetwork = defaults.targetNetwork;
+            $ = new ManagedZonePeeringConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
-            this.targetNetwork = Objects.requireNonNull(targetNetwork);
+            $.targetNetwork = targetNetwork;
             return this;
-        }        public ManagedZonePeeringConfigResponse build() {
-            return new ManagedZonePeeringConfigResponse(kind, targetNetwork);
+        }
+
+        public ManagedZonePeeringConfigResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.targetNetwork = Objects.requireNonNull($.targetNetwork, "expected parameter 'targetNetwork' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends com.pulumi
      * 
      */
     @Import(name="fqdns")
-      private final @Nullable List<String> fqdns;
+    private @Nullable List<String> fqdns;
 
-    public List<String> fqdns() {
-        return this.fqdns == null ? List.of() : this.fqdns;
+    public Optional<List<String>> fqdns() {
+        return Optional.ofNullable(this.fqdns);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends com.pulumi
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable List<String> ipAddresses;
+    private @Nullable List<String> ipAddresses;
 
-    public List<String> ipAddresses() {
-        return this.ipAddresses == null ? List.of() : this.ipAddresses;
+    public Optional<List<String>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
-    public FirewallPolicyThreatIntelWhitelistResponse(
-        @Nullable List<String> fqdns,
-        @Nullable List<String> ipAddresses) {
-        this.fqdns = fqdns;
-        this.ipAddresses = ipAddresses;
-    }
+    private FirewallPolicyThreatIntelWhitelistResponse() {}
 
-    private FirewallPolicyThreatIntelWhitelistResponse() {
-        this.fqdns = List.of();
-        this.ipAddresses = List.of();
+    private FirewallPolicyThreatIntelWhitelistResponse(FirewallPolicyThreatIntelWhitelistResponse $) {
+        this.fqdns = $.fqdns;
+        this.ipAddresses = $.ipAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyThreatIntelWhitelistResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> fqdns;
-        private @Nullable List<String> ipAddresses;
+        private FirewallPolicyThreatIntelWhitelistResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyThreatIntelWhitelistResponse();
         }
 
         public Builder(FirewallPolicyThreatIntelWhitelistResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdns = defaults.fqdns;
-    	      this.ipAddresses = defaults.ipAddresses;
+            $ = new FirewallPolicyThreatIntelWhitelistResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = fqdns;
+            $.fqdns = fqdns;
             return this;
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
-        }        public FirewallPolicyThreatIntelWhitelistResponse build() {
-            return new FirewallPolicyThreatIntelWhitelistResponse(fqdns, ipAddresses);
+        }
+
+        public FirewallPolicyThreatIntelWhitelistResponse build() {
+            return $;
         }
     }
+
 }

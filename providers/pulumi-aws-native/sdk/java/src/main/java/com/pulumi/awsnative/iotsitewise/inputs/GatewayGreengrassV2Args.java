@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GatewayGreengrassV2Args extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="coreDeviceThingName", required=true)
-      private final Output<String> coreDeviceThingName;
+    private Output<String> coreDeviceThingName;
 
     public Output<String> coreDeviceThingName() {
         return this.coreDeviceThingName;
     }
 
-    public GatewayGreengrassV2Args(Output<String> coreDeviceThingName) {
-        this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName, "expected parameter 'coreDeviceThingName' to be non-null");
-    }
+    private GatewayGreengrassV2Args() {}
 
-    private GatewayGreengrassV2Args() {
-        this.coreDeviceThingName = Codegen.empty();
+    private GatewayGreengrassV2Args(GatewayGreengrassV2Args $) {
+        this.coreDeviceThingName = $.coreDeviceThingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayGreengrassV2Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> coreDeviceThingName;
+        private GatewayGreengrassV2Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayGreengrassV2Args();
         }
 
         public Builder(GatewayGreengrassV2Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreDeviceThingName = defaults.coreDeviceThingName;
+            $ = new GatewayGreengrassV2Args(Objects.requireNonNull(defaults));
         }
 
         public Builder coreDeviceThingName(Output<String> coreDeviceThingName) {
-            this.coreDeviceThingName = Objects.requireNonNull(coreDeviceThingName);
+            $.coreDeviceThingName = coreDeviceThingName;
             return this;
         }
+
         public Builder coreDeviceThingName(String coreDeviceThingName) {
-            this.coreDeviceThingName = Output.of(Objects.requireNonNull(coreDeviceThingName));
-            return this;
-        }        public GatewayGreengrassV2Args build() {
-            return new GatewayGreengrassV2Args(coreDeviceThingName);
+            return coreDeviceThingName(Output.of(coreDeviceThingName));
+        }
+
+        public GatewayGreengrassV2Args build() {
+            $.coreDeviceThingName = Objects.requireNonNull($.coreDeviceThingName, "expected parameter 'coreDeviceThingName' to be non-null");
+            return $;
         }
     }
+
 }

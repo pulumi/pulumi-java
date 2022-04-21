@@ -8,8 +8,8 @@ import com.pulumi.awsnative.iot.inputs.TopicRuleDestinationHttpUrlDestinationSum
 import com.pulumi.awsnative.iot.inputs.TopicRuleDestinationVpcDestinationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="httpUrlProperties")
-      private final @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
+    private @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
 
-    public Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties() {
-        return this.httpUrlProperties == null ? Codegen.empty() : this.httpUrlProperties;
+    public Optional<Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs>> httpUrlProperties() {
+        return Optional.ofNullable(this.httpUrlProperties);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<TopicRuleDestinationStatus> status;
+    private @Nullable Output<TopicRuleDestinationStatus> status;
 
-    public Output<TopicRuleDestinationStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<TopicRuleDestinationStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class TopicRuleDestinationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vpcProperties")
-      private final @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
+    private @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
 
-    public Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties() {
-        return this.vpcProperties == null ? Codegen.empty() : this.vpcProperties;
+    public Optional<Output<TopicRuleDestinationVpcDestinationPropertiesArgs>> vpcProperties() {
+        return Optional.ofNullable(this.vpcProperties);
     }
 
-    public TopicRuleDestinationArgs(
-        @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties,
-        @Nullable Output<TopicRuleDestinationStatus> status,
-        @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
-        this.httpUrlProperties = httpUrlProperties;
-        this.status = status;
-        this.vpcProperties = vpcProperties;
-    }
+    private TopicRuleDestinationArgs() {}
 
-    private TopicRuleDestinationArgs() {
-        this.httpUrlProperties = Codegen.empty();
-        this.status = Codegen.empty();
-        this.vpcProperties = Codegen.empty();
+    private TopicRuleDestinationArgs(TopicRuleDestinationArgs $) {
+        this.httpUrlProperties = $.httpUrlProperties;
+        this.status = $.status;
+        this.vpcProperties = $.vpcProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
-        private @Nullable Output<TopicRuleDestinationStatus> status;
-        private @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
+        private TopicRuleDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleDestinationArgs();
         }
 
         public Builder(TopicRuleDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpUrlProperties = defaults.httpUrlProperties;
-    	      this.status = defaults.status;
-    	      this.vpcProperties = defaults.vpcProperties;
+            $ = new TopicRuleDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpUrlProperties(@Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties) {
-            this.httpUrlProperties = httpUrlProperties;
+            $.httpUrlProperties = httpUrlProperties;
             return this;
         }
-        public Builder httpUrlProperties(@Nullable TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
-            this.httpUrlProperties = Codegen.ofNullable(httpUrlProperties);
-            return this;
+
+        public Builder httpUrlProperties(TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
+            return httpUrlProperties(Output.of(httpUrlProperties));
         }
+
         public Builder status(@Nullable Output<TopicRuleDestinationStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable TopicRuleDestinationStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(TopicRuleDestinationStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder vpcProperties(@Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
-            this.vpcProperties = vpcProperties;
+            $.vpcProperties = vpcProperties;
             return this;
         }
-        public Builder vpcProperties(@Nullable TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
-            this.vpcProperties = Codegen.ofNullable(vpcProperties);
-            return this;
-        }        public TopicRuleDestinationArgs build() {
-            return new TopicRuleDestinationArgs(httpUrlProperties, status, vpcProperties);
+
+        public Builder vpcProperties(TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
+            return vpcProperties(Output.of(vpcProperties));
+        }
+
+        public TopicRuleDestinationArgs build() {
+            return $;
         }
     }
+
 }

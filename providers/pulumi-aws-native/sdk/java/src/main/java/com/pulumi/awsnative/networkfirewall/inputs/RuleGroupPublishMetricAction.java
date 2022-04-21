@@ -14,48 +14,49 @@ public final class RuleGroupPublishMetricAction extends com.pulumi.resources.Inv
     public static final RuleGroupPublishMetricAction Empty = new RuleGroupPublishMetricAction();
 
     @Import(name="dimensions", required=true)
-      private final List<RuleGroupDimension> dimensions;
+    private List<RuleGroupDimension> dimensions;
 
     public List<RuleGroupDimension> dimensions() {
         return this.dimensions;
     }
 
-    public RuleGroupPublishMetricAction(List<RuleGroupDimension> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-    }
+    private RuleGroupPublishMetricAction() {}
 
-    private RuleGroupPublishMetricAction() {
-        this.dimensions = List.of();
+    private RuleGroupPublishMetricAction(RuleGroupPublishMetricAction $) {
+        this.dimensions = $.dimensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupPublishMetricAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RuleGroupDimension> dimensions;
+        private RuleGroupPublishMetricAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupPublishMetricAction();
         }
 
         public Builder(RuleGroupPublishMetricAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
+            $ = new RuleGroupPublishMetricAction(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(List<RuleGroupDimension> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(RuleGroupDimension... dimensions) {
             return dimensions(List.of(dimensions));
-        }        public RuleGroupPublishMetricAction build() {
-            return new RuleGroupPublishMetricAction(dimensions);
+        }
+
+        public RuleGroupPublishMetricAction build() {
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.deploymentmanager_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.CollectionOverrideArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.CredentialArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.OptionsArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.deploymentmanager_alpha.inputs.TypeProviderLabelE
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collectionOverrides")
-      private final @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
+    private @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
 
-    public Output<List<CollectionOverrideArgs>> collectionOverrides() {
-        return this.collectionOverrides == null ? Codegen.empty() : this.collectionOverrides;
+    public Optional<Output<List<CollectionOverrideArgs>>> collectionOverrides() {
+        return Optional.ofNullable(this.collectionOverrides);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credential")
-      private final @Nullable Output<CredentialArgs> credential;
+    private @Nullable Output<CredentialArgs> credential;
 
-    public Output<CredentialArgs> credential() {
-        return this.credential == null ? Codegen.empty() : this.credential;
+    public Optional<Output<CredentialArgs>> credential() {
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customCertificateAuthorityRoots")
-      private final @Nullable Output<List<String>> customCertificateAuthorityRoots;
+    private @Nullable Output<List<String>> customCertificateAuthorityRoots;
 
-    public Output<List<String>> customCertificateAuthorityRoots() {
-        return this.customCertificateAuthorityRoots == null ? Codegen.empty() : this.customCertificateAuthorityRoots;
+    public Optional<Output<List<String>>> customCertificateAuthorityRoots() {
+        return Optional.ofNullable(this.customCertificateAuthorityRoots);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="descriptorUrl")
-      private final @Nullable Output<String> descriptorUrl;
+    private @Nullable Output<String> descriptorUrl;
 
-    public Output<String> descriptorUrl() {
-        return this.descriptorUrl == null ? Codegen.empty() : this.descriptorUrl;
+    public Optional<Output<String>> descriptorUrl() {
+        return Optional.ofNullable(this.descriptorUrl);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
+    private @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
 
-    public Output<List<TypeProviderLabelEntryArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<TypeProviderLabelEntryArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,170 +102,147 @@ public final class TypeProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<OptionsArgs> options;
+    private @Nullable Output<OptionsArgs> options;
 
-    public Output<OptionsArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<OptionsArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public TypeProviderArgs(
-        @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides,
-        @Nullable Output<CredentialArgs> credential,
-        @Nullable Output<List<String>> customCertificateAuthorityRoots,
-        @Nullable Output<String> description,
-        @Nullable Output<String> descriptorUrl,
-        @Nullable Output<List<TypeProviderLabelEntryArgs>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<OptionsArgs> options,
-        @Nullable Output<String> project) {
-        this.collectionOverrides = collectionOverrides;
-        this.credential = credential;
-        this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
-        this.description = description;
-        this.descriptorUrl = descriptorUrl;
-        this.labels = labels;
-        this.name = name;
-        this.options = options;
-        this.project = project;
-    }
+    private TypeProviderArgs() {}
 
-    private TypeProviderArgs() {
-        this.collectionOverrides = Codegen.empty();
-        this.credential = Codegen.empty();
-        this.customCertificateAuthorityRoots = Codegen.empty();
-        this.description = Codegen.empty();
-        this.descriptorUrl = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
-        this.project = Codegen.empty();
+    private TypeProviderArgs(TypeProviderArgs $) {
+        this.collectionOverrides = $.collectionOverrides;
+        this.credential = $.credential;
+        this.customCertificateAuthorityRoots = $.customCertificateAuthorityRoots;
+        this.description = $.description;
+        this.descriptorUrl = $.descriptorUrl;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.options = $.options;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TypeProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
-        private @Nullable Output<CredentialArgs> credential;
-        private @Nullable Output<List<String>> customCertificateAuthorityRoots;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> descriptorUrl;
-        private @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<OptionsArgs> options;
-        private @Nullable Output<String> project;
+        private TypeProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TypeProviderArgs();
         }
 
         public Builder(TypeProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionOverrides = defaults.collectionOverrides;
-    	      this.credential = defaults.credential;
-    	      this.customCertificateAuthorityRoots = defaults.customCertificateAuthorityRoots;
-    	      this.description = defaults.description;
-    	      this.descriptorUrl = defaults.descriptorUrl;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.project = defaults.project;
+            $ = new TypeProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionOverrides(@Nullable Output<List<CollectionOverrideArgs>> collectionOverrides) {
-            this.collectionOverrides = collectionOverrides;
+            $.collectionOverrides = collectionOverrides;
             return this;
         }
-        public Builder collectionOverrides(@Nullable List<CollectionOverrideArgs> collectionOverrides) {
-            this.collectionOverrides = Codegen.ofNullable(collectionOverrides);
-            return this;
+
+        public Builder collectionOverrides(List<CollectionOverrideArgs> collectionOverrides) {
+            return collectionOverrides(Output.of(collectionOverrides));
         }
+
         public Builder collectionOverrides(CollectionOverrideArgs... collectionOverrides) {
             return collectionOverrides(List.of(collectionOverrides));
         }
+
         public Builder credential(@Nullable Output<CredentialArgs> credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
-        public Builder credential(@Nullable CredentialArgs credential) {
-            this.credential = Codegen.ofNullable(credential);
-            return this;
+
+        public Builder credential(CredentialArgs credential) {
+            return credential(Output.of(credential));
         }
+
         public Builder customCertificateAuthorityRoots(@Nullable Output<List<String>> customCertificateAuthorityRoots) {
-            this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
+            $.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
             return this;
         }
-        public Builder customCertificateAuthorityRoots(@Nullable List<String> customCertificateAuthorityRoots) {
-            this.customCertificateAuthorityRoots = Codegen.ofNullable(customCertificateAuthorityRoots);
-            return this;
+
+        public Builder customCertificateAuthorityRoots(List<String> customCertificateAuthorityRoots) {
+            return customCertificateAuthorityRoots(Output.of(customCertificateAuthorityRoots));
         }
+
         public Builder customCertificateAuthorityRoots(String... customCertificateAuthorityRoots) {
             return customCertificateAuthorityRoots(List.of(customCertificateAuthorityRoots));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder descriptorUrl(@Nullable Output<String> descriptorUrl) {
-            this.descriptorUrl = descriptorUrl;
+            $.descriptorUrl = descriptorUrl;
             return this;
         }
-        public Builder descriptorUrl(@Nullable String descriptorUrl) {
-            this.descriptorUrl = Codegen.ofNullable(descriptorUrl);
-            return this;
+
+        public Builder descriptorUrl(String descriptorUrl) {
+            return descriptorUrl(Output.of(descriptorUrl));
         }
+
         public Builder labels(@Nullable Output<List<TypeProviderLabelEntryArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<TypeProviderLabelEntryArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<TypeProviderLabelEntryArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(TypeProviderLabelEntryArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<OptionsArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable OptionsArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(OptionsArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public TypeProviderArgs build() {
-            return new TypeProviderArgs(collectionOverrides, credential, customCertificateAuthorityRoots, description, descriptorUrl, labels, name, options, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public TypeProviderArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventRequestMessage")
-      private final @Nullable EventRequestMessageResponse eventRequestMessage;
+    private @Nullable EventRequestMessageResponse eventRequestMessage;
 
     public Optional<EventRequestMessageResponse> eventRequestMessage() {
-        return this.eventRequestMessage == null ? Optional.empty() : Optional.ofNullable(this.eventRequestMessage);
+        return Optional.ofNullable(this.eventRequestMessage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventResponseMessage")
-      private final @Nullable EventResponseMessageResponse eventResponseMessage;
+    private @Nullable EventResponseMessageResponse eventResponseMessage;
 
     public Optional<EventResponseMessageResponse> eventResponseMessage() {
-        return this.eventResponseMessage == null ? Optional.empty() : Optional.ofNullable(this.eventResponseMessage);
+        return Optional.ofNullable(this.eventResponseMessage);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public EventResponse(
-        @Nullable EventRequestMessageResponse eventRequestMessage,
-        @Nullable EventResponseMessageResponse eventResponseMessage,
-        @Nullable String id) {
-        this.eventRequestMessage = eventRequestMessage;
-        this.eventResponseMessage = eventResponseMessage;
-        this.id = id;
-    }
+    private EventResponse() {}
 
-    private EventResponse() {
-        this.eventRequestMessage = null;
-        this.eventResponseMessage = null;
-        this.id = null;
+    private EventResponse(EventResponse $) {
+        this.eventRequestMessage = $.eventRequestMessage;
+        this.eventResponseMessage = $.eventResponseMessage;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EventRequestMessageResponse eventRequestMessage;
-        private @Nullable EventResponseMessageResponse eventResponseMessage;
-        private @Nullable String id;
+        private EventResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventResponse();
         }
 
         public Builder(EventResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventRequestMessage = defaults.eventRequestMessage;
-    	      this.eventResponseMessage = defaults.eventResponseMessage;
-    	      this.id = defaults.id;
+            $ = new EventResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventRequestMessage(@Nullable EventRequestMessageResponse eventRequestMessage) {
-            this.eventRequestMessage = eventRequestMessage;
+            $.eventRequestMessage = eventRequestMessage;
             return this;
         }
+
         public Builder eventResponseMessage(@Nullable EventResponseMessageResponse eventResponseMessage) {
-            this.eventResponseMessage = eventResponseMessage;
+            $.eventResponseMessage = eventResponseMessage;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public EventResponse build() {
-            return new EventResponse(eventRequestMessage, eventResponseMessage, id);
+        }
+
+        public EventResponse build() {
+            return $;
         }
     }
+
 }

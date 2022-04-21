@@ -26,7 +26,7 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="chartOptions", required=true)
-      private final ChartOptionsResponse chartOptions;
+    private ChartOptionsResponse chartOptions;
 
     public ChartOptionsResponse chartOptions() {
         return this.chartOptions;
@@ -37,7 +37,7 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataSets", required=true)
-      private final List<DataSetResponse> dataSets;
+    private List<DataSetResponse> dataSets;
 
     public List<DataSetResponse> dataSets() {
         return this.dataSets;
@@ -48,7 +48,7 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="thresholds", required=true)
-      private final List<ThresholdResponse> thresholds;
+    private List<ThresholdResponse> thresholds;
 
     public List<ThresholdResponse> thresholds() {
         return this.thresholds;
@@ -59,7 +59,7 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeshiftDuration", required=true)
-      private final String timeshiftDuration;
+    private String timeshiftDuration;
 
     public String timeshiftDuration() {
         return this.timeshiftDuration;
@@ -70,7 +70,7 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xAxis", required=true)
-      private final AxisResponse xAxis;
+    private AxisResponse xAxis;
 
     public AxisResponse xAxis() {
         return this.xAxis;
@@ -81,7 +81,7 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="y2Axis", required=true)
-      private final AxisResponse y2Axis;
+    private AxisResponse y2Axis;
 
     public AxisResponse y2Axis() {
         return this.y2Axis;
@@ -92,106 +92,95 @@ public final class XyChartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="yAxis", required=true)
-      private final AxisResponse yAxis;
+    private AxisResponse yAxis;
 
     public AxisResponse yAxis() {
         return this.yAxis;
     }
 
-    public XyChartResponse(
-        ChartOptionsResponse chartOptions,
-        List<DataSetResponse> dataSets,
-        List<ThresholdResponse> thresholds,
-        String timeshiftDuration,
-        AxisResponse xAxis,
-        AxisResponse y2Axis,
-        AxisResponse yAxis) {
-        this.chartOptions = Objects.requireNonNull(chartOptions, "expected parameter 'chartOptions' to be non-null");
-        this.dataSets = Objects.requireNonNull(dataSets, "expected parameter 'dataSets' to be non-null");
-        this.thresholds = Objects.requireNonNull(thresholds, "expected parameter 'thresholds' to be non-null");
-        this.timeshiftDuration = Objects.requireNonNull(timeshiftDuration, "expected parameter 'timeshiftDuration' to be non-null");
-        this.xAxis = Objects.requireNonNull(xAxis, "expected parameter 'xAxis' to be non-null");
-        this.y2Axis = Objects.requireNonNull(y2Axis, "expected parameter 'y2Axis' to be non-null");
-        this.yAxis = Objects.requireNonNull(yAxis, "expected parameter 'yAxis' to be non-null");
-    }
+    private XyChartResponse() {}
 
-    private XyChartResponse() {
-        this.chartOptions = null;
-        this.dataSets = List.of();
-        this.thresholds = List.of();
-        this.timeshiftDuration = null;
-        this.xAxis = null;
-        this.y2Axis = null;
-        this.yAxis = null;
+    private XyChartResponse(XyChartResponse $) {
+        this.chartOptions = $.chartOptions;
+        this.dataSets = $.dataSets;
+        this.thresholds = $.thresholds;
+        this.timeshiftDuration = $.timeshiftDuration;
+        this.xAxis = $.xAxis;
+        this.y2Axis = $.y2Axis;
+        this.yAxis = $.yAxis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(XyChartResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ChartOptionsResponse chartOptions;
-        private List<DataSetResponse> dataSets;
-        private List<ThresholdResponse> thresholds;
-        private String timeshiftDuration;
-        private AxisResponse xAxis;
-        private AxisResponse y2Axis;
-        private AxisResponse yAxis;
+        private XyChartResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new XyChartResponse();
         }
 
         public Builder(XyChartResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chartOptions = defaults.chartOptions;
-    	      this.dataSets = defaults.dataSets;
-    	      this.thresholds = defaults.thresholds;
-    	      this.timeshiftDuration = defaults.timeshiftDuration;
-    	      this.xAxis = defaults.xAxis;
-    	      this.y2Axis = defaults.y2Axis;
-    	      this.yAxis = defaults.yAxis;
+            $ = new XyChartResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder chartOptions(ChartOptionsResponse chartOptions) {
-            this.chartOptions = Objects.requireNonNull(chartOptions);
+            $.chartOptions = chartOptions;
             return this;
         }
+
         public Builder dataSets(List<DataSetResponse> dataSets) {
-            this.dataSets = Objects.requireNonNull(dataSets);
+            $.dataSets = dataSets;
             return this;
         }
+
         public Builder dataSets(DataSetResponse... dataSets) {
             return dataSets(List.of(dataSets));
         }
+
         public Builder thresholds(List<ThresholdResponse> thresholds) {
-            this.thresholds = Objects.requireNonNull(thresholds);
+            $.thresholds = thresholds;
             return this;
         }
+
         public Builder thresholds(ThresholdResponse... thresholds) {
             return thresholds(List.of(thresholds));
         }
+
         public Builder timeshiftDuration(String timeshiftDuration) {
-            this.timeshiftDuration = Objects.requireNonNull(timeshiftDuration);
+            $.timeshiftDuration = timeshiftDuration;
             return this;
         }
+
         public Builder xAxis(AxisResponse xAxis) {
-            this.xAxis = Objects.requireNonNull(xAxis);
+            $.xAxis = xAxis;
             return this;
         }
+
         public Builder y2Axis(AxisResponse y2Axis) {
-            this.y2Axis = Objects.requireNonNull(y2Axis);
+            $.y2Axis = y2Axis;
             return this;
         }
+
         public Builder yAxis(AxisResponse yAxis) {
-            this.yAxis = Objects.requireNonNull(yAxis);
+            $.yAxis = yAxis;
             return this;
-        }        public XyChartResponse build() {
-            return new XyChartResponse(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
+        }
+
+        public XyChartResponse build() {
+            $.chartOptions = Objects.requireNonNull($.chartOptions, "expected parameter 'chartOptions' to be non-null");
+            $.dataSets = Objects.requireNonNull($.dataSets, "expected parameter 'dataSets' to be non-null");
+            $.thresholds = Objects.requireNonNull($.thresholds, "expected parameter 'thresholds' to be non-null");
+            $.timeshiftDuration = Objects.requireNonNull($.timeshiftDuration, "expected parameter 'timeshiftDuration' to be non-null");
+            $.xAxis = Objects.requireNonNull($.xAxis, "expected parameter 'xAxis' to be non-null");
+            $.y2Axis = Objects.requireNonNull($.y2Axis, "expected parameter 'y2Axis' to be non-null");
+            $.yAxis = Objects.requireNonNull($.yAxis, "expected parameter 'yAxis' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<Map<String,Object>> arguments;
+    private @Nullable Output<Map<String,Object>> arguments;
 
-    public Output<Map<String,Object>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<Map<String,Object>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extraJarsS3Path")
-      private final @Nullable Output<String> extraJarsS3Path;
+    private @Nullable Output<String> extraJarsS3Path;
 
-    public Output<String> extraJarsS3Path() {
-        return this.extraJarsS3Path == null ? Codegen.empty() : this.extraJarsS3Path;
+    public Optional<Output<String>> extraJarsS3Path() {
+        return Optional.ofNullable(this.extraJarsS3Path);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extraPythonLibsS3Path")
-      private final @Nullable Output<String> extraPythonLibsS3Path;
+    private @Nullable Output<String> extraPythonLibsS3Path;
 
-    public Output<String> extraPythonLibsS3Path() {
-        return this.extraPythonLibsS3Path == null ? Codegen.empty() : this.extraPythonLibsS3Path;
+    public Optional<Output<String>> extraPythonLibsS3Path() {
+        return Optional.ofNullable(this.extraPythonLibsS3Path);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failureReason")
-      private final @Nullable Output<String> failureReason;
+    private @Nullable Output<String> failureReason;
 
-    public Output<String> failureReason() {
-        return this.failureReason == null ? Codegen.empty() : this.failureReason;
+    public Optional<Output<String>> failureReason() {
+        return Optional.ofNullable(this.failureReason);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="glueVersion")
-      private final @Nullable Output<String> glueVersion;
+    private @Nullable Output<String> glueVersion;
 
-    public Output<String> glueVersion() {
-        return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
+    public Optional<Output<String>> glueVersion() {
+        return Optional.ofNullable(this.glueVersion);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfNodes")
-      private final @Nullable Output<Integer> numberOfNodes;
+    private @Nullable Output<Integer> numberOfNodes;
 
-    public Output<Integer> numberOfNodes() {
-        return this.numberOfNodes == null ? Codegen.empty() : this.numberOfNodes;
+    public Optional<Output<Integer>> numberOfNodes() {
+        return Optional.ofNullable(this.numberOfNodes);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfWorkers")
-      private final @Nullable Output<Integer> numberOfWorkers;
+    private @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> numberOfWorkers() {
-        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
+    public Optional<Output<Integer>> numberOfWorkers() {
+        return Optional.ofNullable(this.numberOfWorkers);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateAddress")
-      private final @Nullable Output<String> privateAddress;
+    private @Nullable Output<String> privateAddress;
 
-    public Output<String> privateAddress() {
-        return this.privateAddress == null ? Codegen.empty() : this.privateAddress;
+    public Optional<Output<String>> privateAddress() {
+        return Optional.ofNullable(this.privateAddress);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicAddress")
-      private final @Nullable Output<String> publicAddress;
+    private @Nullable Output<String> publicAddress;
 
-    public Output<String> publicAddress() {
-        return this.publicAddress == null ? Codegen.empty() : this.publicAddress;
+    public Optional<Output<String>> publicAddress() {
+        return Optional.ofNullable(this.publicAddress);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<String>> publicKeys;
+    private @Nullable Output<List<String>> publicKeys;
 
-    public Output<List<String>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<String>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityConfiguration")
-      private final @Nullable Output<String> securityConfiguration;
+    private @Nullable Output<String> securityConfiguration;
 
-    public Output<String> securityConfiguration() {
-        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
+    public Optional<Output<String>> securityConfiguration() {
+        return Optional.ofNullable(this.securityConfiguration);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerType")
-      private final @Nullable Output<String> workerType;
+    private @Nullable Output<String> workerType;
 
-    public Output<String> workerType() {
-        return this.workerType == null ? Codegen.empty() : this.workerType;
+    public Optional<Output<String>> workerType() {
+        return Optional.ofNullable(this.workerType);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="yarnEndpointAddress")
-      private final @Nullable Output<String> yarnEndpointAddress;
+    private @Nullable Output<String> yarnEndpointAddress;
 
-    public Output<String> yarnEndpointAddress() {
-        return this.yarnEndpointAddress == null ? Codegen.empty() : this.yarnEndpointAddress;
+    public Optional<Output<String>> yarnEndpointAddress() {
+        return Optional.ofNullable(this.yarnEndpointAddress);
     }
 
     /**
@@ -288,368 +288,296 @@ public final class DevEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zeppelinRemoteSparkInterpreterPort")
-      private final @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
+    private @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
 
-    public Output<Integer> zeppelinRemoteSparkInterpreterPort() {
-        return this.zeppelinRemoteSparkInterpreterPort == null ? Codegen.empty() : this.zeppelinRemoteSparkInterpreterPort;
+    public Optional<Output<Integer>> zeppelinRemoteSparkInterpreterPort() {
+        return Optional.ofNullable(this.zeppelinRemoteSparkInterpreterPort);
     }
 
-    public DevEndpointState(
-        @Nullable Output<Map<String,Object>> arguments,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> extraJarsS3Path,
-        @Nullable Output<String> extraPythonLibsS3Path,
-        @Nullable Output<String> failureReason,
-        @Nullable Output<String> glueVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> numberOfNodes,
-        @Nullable Output<Integer> numberOfWorkers,
-        @Nullable Output<String> privateAddress,
-        @Nullable Output<String> publicAddress,
-        @Nullable Output<String> publicKey,
-        @Nullable Output<List<String>> publicKeys,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> securityConfiguration,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<String> status,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> vpcId,
-        @Nullable Output<String> workerType,
-        @Nullable Output<String> yarnEndpointAddress,
-        @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort) {
-        this.arguments = arguments;
-        this.arn = arn;
-        this.availabilityZone = availabilityZone;
-        this.extraJarsS3Path = extraJarsS3Path;
-        this.extraPythonLibsS3Path = extraPythonLibsS3Path;
-        this.failureReason = failureReason;
-        this.glueVersion = glueVersion;
-        this.name = name;
-        this.numberOfNodes = numberOfNodes;
-        this.numberOfWorkers = numberOfWorkers;
-        this.privateAddress = privateAddress;
-        this.publicAddress = publicAddress;
-        this.publicKey = publicKey;
-        this.publicKeys = publicKeys;
-        this.roleArn = roleArn;
-        this.securityConfiguration = securityConfiguration;
-        this.securityGroupIds = securityGroupIds;
-        this.status = status;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcId = vpcId;
-        this.workerType = workerType;
-        this.yarnEndpointAddress = yarnEndpointAddress;
-        this.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
-    }
+    private DevEndpointState() {}
 
-    private DevEndpointState() {
-        this.arguments = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.extraJarsS3Path = Codegen.empty();
-        this.extraPythonLibsS3Path = Codegen.empty();
-        this.failureReason = Codegen.empty();
-        this.glueVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.numberOfNodes = Codegen.empty();
-        this.numberOfWorkers = Codegen.empty();
-        this.privateAddress = Codegen.empty();
-        this.publicAddress = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.publicKeys = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.securityConfiguration = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcId = Codegen.empty();
-        this.workerType = Codegen.empty();
-        this.yarnEndpointAddress = Codegen.empty();
-        this.zeppelinRemoteSparkInterpreterPort = Codegen.empty();
+    private DevEndpointState(DevEndpointState $) {
+        this.arguments = $.arguments;
+        this.arn = $.arn;
+        this.availabilityZone = $.availabilityZone;
+        this.extraJarsS3Path = $.extraJarsS3Path;
+        this.extraPythonLibsS3Path = $.extraPythonLibsS3Path;
+        this.failureReason = $.failureReason;
+        this.glueVersion = $.glueVersion;
+        this.name = $.name;
+        this.numberOfNodes = $.numberOfNodes;
+        this.numberOfWorkers = $.numberOfWorkers;
+        this.privateAddress = $.privateAddress;
+        this.publicAddress = $.publicAddress;
+        this.publicKey = $.publicKey;
+        this.publicKeys = $.publicKeys;
+        this.roleArn = $.roleArn;
+        this.securityConfiguration = $.securityConfiguration;
+        this.securityGroupIds = $.securityGroupIds;
+        this.status = $.status;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcId = $.vpcId;
+        this.workerType = $.workerType;
+        this.yarnEndpointAddress = $.yarnEndpointAddress;
+        this.zeppelinRemoteSparkInterpreterPort = $.zeppelinRemoteSparkInterpreterPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevEndpointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> arguments;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> extraJarsS3Path;
-        private @Nullable Output<String> extraPythonLibsS3Path;
-        private @Nullable Output<String> failureReason;
-        private @Nullable Output<String> glueVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> numberOfNodes;
-        private @Nullable Output<Integer> numberOfWorkers;
-        private @Nullable Output<String> privateAddress;
-        private @Nullable Output<String> publicAddress;
-        private @Nullable Output<String> publicKey;
-        private @Nullable Output<List<String>> publicKeys;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> securityConfiguration;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> vpcId;
-        private @Nullable Output<String> workerType;
-        private @Nullable Output<String> yarnEndpointAddress;
-        private @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
+        private DevEndpointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevEndpointState();
         }
 
         public Builder(DevEndpointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.arn = defaults.arn;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.extraJarsS3Path = defaults.extraJarsS3Path;
-    	      this.extraPythonLibsS3Path = defaults.extraPythonLibsS3Path;
-    	      this.failureReason = defaults.failureReason;
-    	      this.glueVersion = defaults.glueVersion;
-    	      this.name = defaults.name;
-    	      this.numberOfNodes = defaults.numberOfNodes;
-    	      this.numberOfWorkers = defaults.numberOfWorkers;
-    	      this.privateAddress = defaults.privateAddress;
-    	      this.publicAddress = defaults.publicAddress;
-    	      this.publicKey = defaults.publicKey;
-    	      this.publicKeys = defaults.publicKeys;
-    	      this.roleArn = defaults.roleArn;
-    	      this.securityConfiguration = defaults.securityConfiguration;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.status = defaults.status;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcId = defaults.vpcId;
-    	      this.workerType = defaults.workerType;
-    	      this.yarnEndpointAddress = defaults.yarnEndpointAddress;
-    	      this.zeppelinRemoteSparkInterpreterPort = defaults.zeppelinRemoteSparkInterpreterPort;
+            $ = new DevEndpointState(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<Map<String,Object>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable Map<String,Object> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(Map<String,Object> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder extraJarsS3Path(@Nullable Output<String> extraJarsS3Path) {
-            this.extraJarsS3Path = extraJarsS3Path;
+            $.extraJarsS3Path = extraJarsS3Path;
             return this;
         }
-        public Builder extraJarsS3Path(@Nullable String extraJarsS3Path) {
-            this.extraJarsS3Path = Codegen.ofNullable(extraJarsS3Path);
-            return this;
+
+        public Builder extraJarsS3Path(String extraJarsS3Path) {
+            return extraJarsS3Path(Output.of(extraJarsS3Path));
         }
+
         public Builder extraPythonLibsS3Path(@Nullable Output<String> extraPythonLibsS3Path) {
-            this.extraPythonLibsS3Path = extraPythonLibsS3Path;
+            $.extraPythonLibsS3Path = extraPythonLibsS3Path;
             return this;
         }
-        public Builder extraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
-            this.extraPythonLibsS3Path = Codegen.ofNullable(extraPythonLibsS3Path);
-            return this;
+
+        public Builder extraPythonLibsS3Path(String extraPythonLibsS3Path) {
+            return extraPythonLibsS3Path(Output.of(extraPythonLibsS3Path));
         }
+
         public Builder failureReason(@Nullable Output<String> failureReason) {
-            this.failureReason = failureReason;
+            $.failureReason = failureReason;
             return this;
         }
-        public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Codegen.ofNullable(failureReason);
-            return this;
+
+        public Builder failureReason(String failureReason) {
+            return failureReason(Output.of(failureReason));
         }
+
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
-            this.glueVersion = glueVersion;
+            $.glueVersion = glueVersion;
             return this;
         }
-        public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Codegen.ofNullable(glueVersion);
-            return this;
+
+        public Builder glueVersion(String glueVersion) {
+            return glueVersion(Output.of(glueVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder numberOfNodes(@Nullable Output<Integer> numberOfNodes) {
-            this.numberOfNodes = numberOfNodes;
+            $.numberOfNodes = numberOfNodes;
             return this;
         }
-        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = Codegen.ofNullable(numberOfNodes);
-            return this;
+
+        public Builder numberOfNodes(Integer numberOfNodes) {
+            return numberOfNodes(Output.of(numberOfNodes));
         }
+
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
-            this.numberOfWorkers = numberOfWorkers;
+            $.numberOfWorkers = numberOfWorkers;
             return this;
         }
-        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
-            return this;
+
+        public Builder numberOfWorkers(Integer numberOfWorkers) {
+            return numberOfWorkers(Output.of(numberOfWorkers));
         }
+
         public Builder privateAddress(@Nullable Output<String> privateAddress) {
-            this.privateAddress = privateAddress;
+            $.privateAddress = privateAddress;
             return this;
         }
-        public Builder privateAddress(@Nullable String privateAddress) {
-            this.privateAddress = Codegen.ofNullable(privateAddress);
-            return this;
+
+        public Builder privateAddress(String privateAddress) {
+            return privateAddress(Output.of(privateAddress));
         }
+
         public Builder publicAddress(@Nullable Output<String> publicAddress) {
-            this.publicAddress = publicAddress;
+            $.publicAddress = publicAddress;
             return this;
         }
-        public Builder publicAddress(@Nullable String publicAddress) {
-            this.publicAddress = Codegen.ofNullable(publicAddress);
-            return this;
+
+        public Builder publicAddress(String publicAddress) {
+            return publicAddress(Output.of(publicAddress));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder publicKeys(@Nullable Output<List<String>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<String> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<String> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(String... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
-            this.securityConfiguration = securityConfiguration;
+            $.securityConfiguration = securityConfiguration;
             return this;
         }
-        public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
-            return this;
+
+        public Builder securityConfiguration(String securityConfiguration) {
+            return securityConfiguration(Output.of(securityConfiguration));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder workerType(@Nullable Output<String> workerType) {
-            this.workerType = workerType;
+            $.workerType = workerType;
             return this;
         }
-        public Builder workerType(@Nullable String workerType) {
-            this.workerType = Codegen.ofNullable(workerType);
-            return this;
+
+        public Builder workerType(String workerType) {
+            return workerType(Output.of(workerType));
         }
+
         public Builder yarnEndpointAddress(@Nullable Output<String> yarnEndpointAddress) {
-            this.yarnEndpointAddress = yarnEndpointAddress;
+            $.yarnEndpointAddress = yarnEndpointAddress;
             return this;
         }
-        public Builder yarnEndpointAddress(@Nullable String yarnEndpointAddress) {
-            this.yarnEndpointAddress = Codegen.ofNullable(yarnEndpointAddress);
-            return this;
+
+        public Builder yarnEndpointAddress(String yarnEndpointAddress) {
+            return yarnEndpointAddress(Output.of(yarnEndpointAddress));
         }
+
         public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort) {
-            this.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
+            $.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
             return this;
         }
-        public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Integer zeppelinRemoteSparkInterpreterPort) {
-            this.zeppelinRemoteSparkInterpreterPort = Codegen.ofNullable(zeppelinRemoteSparkInterpreterPort);
-            return this;
-        }        public DevEndpointState build() {
-            return new DevEndpointState(arguments, arn, availabilityZone, extraJarsS3Path, extraPythonLibsS3Path, failureReason, glueVersion, name, numberOfNodes, numberOfWorkers, privateAddress, publicAddress, publicKey, publicKeys, roleArn, securityConfiguration, securityGroupIds, status, subnetId, tags, tagsAll, vpcId, workerType, yarnEndpointAddress, zeppelinRemoteSparkInterpreterPort);
+
+        public Builder zeppelinRemoteSparkInterpreterPort(Integer zeppelinRemoteSparkInterpreterPort) {
+            return zeppelinRemoteSparkInterpreterPort(Output.of(zeppelinRemoteSparkInterpreterPort));
+        }
+
+        public DevEndpointState build() {
+            return $;
         }
     }
+
 }

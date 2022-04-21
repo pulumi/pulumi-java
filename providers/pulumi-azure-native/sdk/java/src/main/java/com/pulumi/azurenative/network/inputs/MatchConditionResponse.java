@@ -26,7 +26,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="matchValues", required=true)
-      private final List<String> matchValues;
+    private List<String> matchValues;
 
     public List<String> matchValues() {
         return this.matchValues;
@@ -37,7 +37,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="matchVariables", required=true)
-      private final List<MatchVariableResponse> matchVariables;
+    private List<MatchVariableResponse> matchVariables;
 
     public List<MatchVariableResponse> matchVariables() {
         return this.matchVariables;
@@ -48,10 +48,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="negationConditon")
-      private final @Nullable Boolean negationConditon;
+    private @Nullable Boolean negationConditon;
 
     public Optional<Boolean> negationConditon() {
-        return this.negationConditon == null ? Optional.empty() : Optional.ofNullable(this.negationConditon);
+        return Optional.ofNullable(this.negationConditon);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -70,91 +70,83 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="transforms")
-      private final @Nullable List<String> transforms;
+    private @Nullable List<String> transforms;
 
-    public List<String> transforms() {
-        return this.transforms == null ? List.of() : this.transforms;
+    public Optional<List<String>> transforms() {
+        return Optional.ofNullable(this.transforms);
     }
 
-    public MatchConditionResponse(
-        List<String> matchValues,
-        List<MatchVariableResponse> matchVariables,
-        @Nullable Boolean negationConditon,
-        String operator,
-        @Nullable List<String> transforms) {
-        this.matchValues = Objects.requireNonNull(matchValues, "expected parameter 'matchValues' to be non-null");
-        this.matchVariables = Objects.requireNonNull(matchVariables, "expected parameter 'matchVariables' to be non-null");
-        this.negationConditon = negationConditon;
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.transforms = transforms;
-    }
+    private MatchConditionResponse() {}
 
-    private MatchConditionResponse() {
-        this.matchValues = List.of();
-        this.matchVariables = List.of();
-        this.negationConditon = null;
-        this.operator = null;
-        this.transforms = List.of();
+    private MatchConditionResponse(MatchConditionResponse $) {
+        this.matchValues = $.matchValues;
+        this.matchVariables = $.matchVariables;
+        this.negationConditon = $.negationConditon;
+        this.operator = $.operator;
+        this.transforms = $.transforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MatchConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> matchValues;
-        private List<MatchVariableResponse> matchVariables;
-        private @Nullable Boolean negationConditon;
-        private String operator;
-        private @Nullable List<String> transforms;
+        private MatchConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MatchConditionResponse();
         }
 
         public Builder(MatchConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchValues = defaults.matchValues;
-    	      this.matchVariables = defaults.matchVariables;
-    	      this.negationConditon = defaults.negationConditon;
-    	      this.operator = defaults.operator;
-    	      this.transforms = defaults.transforms;
+            $ = new MatchConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder matchValues(List<String> matchValues) {
-            this.matchValues = Objects.requireNonNull(matchValues);
+            $.matchValues = matchValues;
             return this;
         }
+
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
+
         public Builder matchVariables(List<MatchVariableResponse> matchVariables) {
-            this.matchVariables = Objects.requireNonNull(matchVariables);
+            $.matchVariables = matchVariables;
             return this;
         }
+
         public Builder matchVariables(MatchVariableResponse... matchVariables) {
             return matchVariables(List.of(matchVariables));
         }
+
         public Builder negationConditon(@Nullable Boolean negationConditon) {
-            this.negationConditon = negationConditon;
+            $.negationConditon = negationConditon;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder transforms(@Nullable List<String> transforms) {
-            this.transforms = transforms;
+            $.transforms = transforms;
             return this;
         }
+
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
-        }        public MatchConditionResponse build() {
-            return new MatchConditionResponse(matchValues, matchVariables, negationConditon, operator, transforms);
+        }
+
+        public MatchConditionResponse build() {
+            $.matchValues = Objects.requireNonNull($.matchValues, "expected parameter 'matchValues' to be non-null");
+            $.matchVariables = Objects.requireNonNull($.matchVariables, "expected parameter 'matchVariables' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

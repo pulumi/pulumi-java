@@ -13,78 +13,73 @@ public final class GetExportArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetExportArgs Empty = new GetExportArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="exportId", required=true)
-      private final String exportId;
+    private String exportId;
 
     public String exportId() {
         return this.exportId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetExportArgs(
-        String environmentId,
-        String exportId,
-        String organizationId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.exportId = Objects.requireNonNull(exportId, "expected parameter 'exportId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetExportArgs() {}
 
-    private GetExportArgs() {
-        this.environmentId = null;
-        this.exportId = null;
-        this.organizationId = null;
+    private GetExportArgs(GetExportArgs $) {
+        this.environmentId = $.environmentId;
+        this.exportId = $.exportId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String exportId;
-        private String organizationId;
+        private GetExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExportArgs();
         }
 
         public Builder(GetExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.exportId = defaults.exportId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder exportId(String exportId) {
-            this.exportId = Objects.requireNonNull(exportId);
+            $.exportId = exportId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetExportArgs build() {
-            return new GetExportArgs(environmentId, exportId, organizationId);
+        }
+
+        public GetExportArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.exportId = Objects.requireNonNull($.exportId, "expected parameter 'exportId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="autoDelete", required=true)
-      private final Boolean autoDelete;
+    private Boolean autoDelete;
 
     public Boolean autoDelete() {
         return this.autoDelete;
@@ -34,7 +34,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="boot", required=true)
-      private final Boolean boot;
+    private Boolean boot;
 
     public Boolean boot() {
         return this.boot;
@@ -47,7 +47,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -58,7 +58,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskEncryptionKeys", required=true)
-      private final List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
+    private List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
 
     public List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys() {
         return this.diskEncryptionKeys;
@@ -70,7 +70,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -83,7 +83,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Integer diskSizeGb;
+    private Integer diskSizeGb;
 
     public Integer diskSizeGb() {
         return this.diskSizeGb;
@@ -95,7 +95,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -109,7 +109,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="interface", required=true)
-      private final String interface_;
+    private String interface_;
 
     public String interface_() {
         return this.interface_;
@@ -121,7 +121,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -134,14 +134,14 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
     @Import(name="resourcePolicies", required=true)
-      private final List<String> resourcePolicies;
+    private List<String> resourcePolicies;
 
     public List<String> resourcePolicies() {
         return this.resourcePolicies;
@@ -154,7 +154,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -171,7 +171,7 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceImage", required=true)
-      private final String sourceImage;
+    private String sourceImage;
 
     public String sourceImage() {
         return this.sourceImage;
@@ -182,169 +182,144 @@ public final class GetInstanceTemplateDisk extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetInstanceTemplateDisk(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys,
-        String diskName,
-        Integer diskSizeGb,
-        String diskType,
-        String interface_,
-        Map<String,String> labels,
-        String mode,
-        List<String> resourcePolicies,
-        String source,
-        String sourceImage,
-        String type) {
-        this.autoDelete = Objects.requireNonNull(autoDelete, "expected parameter 'autoDelete' to be non-null");
-        this.boot = Objects.requireNonNull(boot, "expected parameter 'boot' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.diskEncryptionKeys = Objects.requireNonNull(diskEncryptionKeys, "expected parameter 'diskEncryptionKeys' to be non-null");
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies, "expected parameter 'resourcePolicies' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.sourceImage = Objects.requireNonNull(sourceImage, "expected parameter 'sourceImage' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetInstanceTemplateDisk() {}
 
-    private GetInstanceTemplateDisk() {
-        this.autoDelete = null;
-        this.boot = null;
-        this.deviceName = null;
-        this.diskEncryptionKeys = List.of();
-        this.diskName = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.interface_ = null;
-        this.labels = Map.of();
-        this.mode = null;
-        this.resourcePolicies = List.of();
-        this.source = null;
-        this.sourceImage = null;
-        this.type = null;
+    private GetInstanceTemplateDisk(GetInstanceTemplateDisk $) {
+        this.autoDelete = $.autoDelete;
+        this.boot = $.boot;
+        this.deviceName = $.deviceName;
+        this.diskEncryptionKeys = $.diskEncryptionKeys;
+        this.diskName = $.diskName;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.interface_ = $.interface_;
+        this.labels = $.labels;
+        this.mode = $.mode;
+        this.resourcePolicies = $.resourcePolicies;
+        this.source = $.source;
+        this.sourceImage = $.sourceImage;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateDisk defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoDelete;
-        private Boolean boot;
-        private String deviceName;
-        private List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
-        private String diskName;
-        private Integer diskSizeGb;
-        private String diskType;
-        private String interface_;
-        private Map<String,String> labels;
-        private String mode;
-        private List<String> resourcePolicies;
-        private String source;
-        private String sourceImage;
-        private String type;
+        private GetInstanceTemplateDisk $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateDisk();
         }
 
         public Builder(GetInstanceTemplateDisk defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.boot = defaults.boot;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskEncryptionKeys = defaults.diskEncryptionKeys;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.interface_ = defaults.interface_;
-    	      this.labels = defaults.labels;
-    	      this.mode = defaults.mode;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.source = defaults.source;
-    	      this.sourceImage = defaults.sourceImage;
-    	      this.type = defaults.type;
+            $ = new GetInstanceTemplateDisk(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(Boolean autoDelete) {
-            this.autoDelete = Objects.requireNonNull(autoDelete);
+            $.autoDelete = autoDelete;
             return this;
         }
+
         public Builder boot(Boolean boot) {
-            this.boot = Objects.requireNonNull(boot);
+            $.boot = boot;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder diskEncryptionKeys(List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys) {
-            this.diskEncryptionKeys = Objects.requireNonNull(diskEncryptionKeys);
+            $.diskEncryptionKeys = diskEncryptionKeys;
             return this;
         }
+
         public Builder diskEncryptionKeys(GetInstanceTemplateDiskDiskEncryptionKey... diskEncryptionKeys) {
             return diskEncryptionKeys(List.of(diskEncryptionKeys));
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder resourcePolicies(List<String> resourcePolicies) {
-            this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
+
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder sourceImage(String sourceImage) {
-            this.sourceImage = Objects.requireNonNull(sourceImage);
+            $.sourceImage = sourceImage;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetInstanceTemplateDisk build() {
-            return new GetInstanceTemplateDisk(autoDelete, boot, deviceName, diskEncryptionKeys, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);
+        }
+
+        public GetInstanceTemplateDisk build() {
+            $.autoDelete = Objects.requireNonNull($.autoDelete, "expected parameter 'autoDelete' to be non-null");
+            $.boot = Objects.requireNonNull($.boot, "expected parameter 'boot' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.diskEncryptionKeys = Objects.requireNonNull($.diskEncryptionKeys, "expected parameter 'diskEncryptionKeys' to be non-null");
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.resourcePolicies = Objects.requireNonNull($.resourcePolicies, "expected parameter 'resourcePolicies' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.sourceImage = Objects.requireNonNull($.sourceImage, "expected parameter 'sourceImage' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

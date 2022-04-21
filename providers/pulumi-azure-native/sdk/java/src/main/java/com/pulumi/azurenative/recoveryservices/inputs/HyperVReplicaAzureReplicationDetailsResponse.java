@@ -31,10 +31,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="azureVmDiskDetails")
-      private final @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
+    private @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
 
-    public List<AzureVmDiskDetailsResponse> azureVmDiskDetails() {
-        return this.azureVmDiskDetails == null ? List.of() : this.azureVmDiskDetails;
+    public Optional<List<AzureVmDiskDetailsResponse>> azureVmDiskDetails() {
+        return Optional.ofNullable(this.azureVmDiskDetails);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="enableRdpOnTargetOption")
-      private final @Nullable String enableRdpOnTargetOption;
+    private @Nullable String enableRdpOnTargetOption;
 
     public Optional<String> enableRdpOnTargetOption() {
-        return this.enableRdpOnTargetOption == null ? Optional.empty() : Optional.ofNullable(this.enableRdpOnTargetOption);
+        return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="encryption")
-      private final @Nullable String encryption;
+    private @Nullable String encryption;
 
     public Optional<String> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="initialReplicationDetails")
-      private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
+    private @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
     public Optional<InitialReplicationDetailsResponse> initialReplicationDetails() {
-        return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
+        return Optional.ofNullable(this.initialReplicationDetails);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -87,10 +87,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="lastReplicatedTime")
-      private final @Nullable String lastReplicatedTime;
+    private @Nullable String lastReplicatedTime;
 
     public Optional<String> lastReplicatedTime() {
-        return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
+        return Optional.ofNullable(this.lastReplicatedTime);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="lastRpoCalculatedTime")
-      private final @Nullable String lastRpoCalculatedTime;
+    private @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> lastRpoCalculatedTime() {
-        return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
+        return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="oSDetails")
-      private final @Nullable OSDetailsResponse oSDetails;
+    private @Nullable OSDetailsResponse oSDetails;
 
     public Optional<OSDetailsResponse> oSDetails() {
-        return this.oSDetails == null ? Optional.empty() : Optional.ofNullable(this.oSDetails);
+        return Optional.ofNullable(this.oSDetails);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="recoveryAvailabilitySetId")
-      private final @Nullable String recoveryAvailabilitySetId;
+    private @Nullable String recoveryAvailabilitySetId;
 
     public Optional<String> recoveryAvailabilitySetId() {
-        return this.recoveryAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAvailabilitySetId);
+        return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="recoveryAzureLogStorageAccountId")
-      private final @Nullable String recoveryAzureLogStorageAccountId;
+    private @Nullable String recoveryAzureLogStorageAccountId;
 
     public Optional<String> recoveryAzureLogStorageAccountId() {
-        return this.recoveryAzureLogStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
+        return Optional.ofNullable(this.recoveryAzureLogStorageAccountId);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="recoveryAzureResourceGroupId")
-      private final @Nullable String recoveryAzureResourceGroupId;
+    private @Nullable String recoveryAzureResourceGroupId;
 
     public Optional<String> recoveryAzureResourceGroupId() {
-        return this.recoveryAzureResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureResourceGroupId);
+        return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="recoveryAzureStorageAccount")
-      private final @Nullable String recoveryAzureStorageAccount;
+    private @Nullable String recoveryAzureStorageAccount;
 
     public Optional<String> recoveryAzureStorageAccount() {
-        return this.recoveryAzureStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccount);
+        return Optional.ofNullable(this.recoveryAzureStorageAccount);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="recoveryAzureVMSize")
-      private final @Nullable String recoveryAzureVMSize;
+    private @Nullable String recoveryAzureVMSize;
 
     public Optional<String> recoveryAzureVMSize() {
-        return this.recoveryAzureVMSize == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVMSize);
+        return Optional.ofNullable(this.recoveryAzureVMSize);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="recoveryAzureVmName")
-      private final @Nullable String recoveryAzureVmName;
+    private @Nullable String recoveryAzureVmName;
 
     public Optional<String> recoveryAzureVmName() {
-        return this.recoveryAzureVmName == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureVmName);
+        return Optional.ofNullable(this.recoveryAzureVmName);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="rpoInSeconds")
-      private final @Nullable Double rpoInSeconds;
+    private @Nullable Double rpoInSeconds;
 
     public Optional<Double> rpoInSeconds() {
-        return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
+        return Optional.ofNullable(this.rpoInSeconds);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="selectedRecoveryAzureNetworkId")
-      private final @Nullable String selectedRecoveryAzureNetworkId;
+    private @Nullable String selectedRecoveryAzureNetworkId;
 
     public Optional<String> selectedRecoveryAzureNetworkId() {
-        return this.selectedRecoveryAzureNetworkId == null ? Optional.empty() : Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
+        return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="selectedSourceNicId")
-      private final @Nullable String selectedSourceNicId;
+    private @Nullable String selectedSourceNicId;
 
     public Optional<String> selectedSourceNicId() {
-        return this.selectedSourceNicId == null ? Optional.empty() : Optional.ofNullable(this.selectedSourceNicId);
+        return Optional.ofNullable(this.selectedSourceNicId);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="sourceVmCpuCount")
-      private final @Nullable Integer sourceVmCpuCount;
+    private @Nullable Integer sourceVmCpuCount;
 
     public Optional<Integer> sourceVmCpuCount() {
-        return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
+        return Optional.ofNullable(this.sourceVmCpuCount);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="sourceVmRamSizeInMB")
-      private final @Nullable Integer sourceVmRamSizeInMB;
+    private @Nullable Integer sourceVmRamSizeInMB;
 
     public Optional<Integer> sourceVmRamSizeInMB() {
-        return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
+        return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="targetAvailabilityZone")
-      private final @Nullable String targetAvailabilityZone;
+    private @Nullable String targetAvailabilityZone;
 
     public Optional<String> targetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
+        return Optional.ofNullable(this.targetAvailabilityZone);
     }
 
     /**
@@ -263,10 +263,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="targetProximityPlacementGroupId")
-      private final @Nullable String targetProximityPlacementGroupId;
+    private @Nullable String targetProximityPlacementGroupId;
 
     public Optional<String> targetProximityPlacementGroupId() {
-        return this.targetProximityPlacementGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetProximityPlacementGroupId);
+        return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
 
     /**
@@ -274,10 +274,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="useManagedDisks")
-      private final @Nullable String useManagedDisks;
+    private @Nullable String useManagedDisks;
 
     public Optional<String> useManagedDisks() {
-        return this.useManagedDisks == null ? Optional.empty() : Optional.ofNullable(this.useManagedDisks);
+        return Optional.ofNullable(this.useManagedDisks);
     }
 
     /**
@@ -285,10 +285,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="vmId")
-      private final @Nullable String vmId;
+    private @Nullable String vmId;
 
     public Optional<String> vmId() {
-        return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
+        return Optional.ofNullable(this.vmId);
     }
 
     /**
@@ -296,10 +296,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="vmNics")
-      private final @Nullable List<VMNicDetailsResponse> vmNics;
+    private @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> vmNics() {
-        return this.vmNics == null ? List.of() : this.vmNics;
+    public Optional<List<VMNicDetailsResponse>> vmNics() {
+        return Optional.ofNullable(this.vmNics);
     }
 
     /**
@@ -307,10 +307,10 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="vmProtectionState")
-      private final @Nullable String vmProtectionState;
+    private @Nullable String vmProtectionState;
 
     public Optional<String> vmProtectionState() {
-        return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
+        return Optional.ofNullable(this.vmProtectionState);
     }
 
     /**
@@ -318,286 +318,209 @@ public final class HyperVReplicaAzureReplicationDetailsResponse extends com.pulu
      * 
      */
     @Import(name="vmProtectionStateDescription")
-      private final @Nullable String vmProtectionStateDescription;
+    private @Nullable String vmProtectionStateDescription;
 
     public Optional<String> vmProtectionStateDescription() {
-        return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
+        return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 
-    public HyperVReplicaAzureReplicationDetailsResponse(
-        @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails,
-        @Nullable String enableRdpOnTargetOption,
-        @Nullable String encryption,
-        @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
-        String instanceType,
-        @Nullable String lastReplicatedTime,
-        @Nullable String lastRpoCalculatedTime,
-        @Nullable String licenseType,
-        @Nullable OSDetailsResponse oSDetails,
-        @Nullable String recoveryAvailabilitySetId,
-        @Nullable String recoveryAzureLogStorageAccountId,
-        @Nullable String recoveryAzureResourceGroupId,
-        @Nullable String recoveryAzureStorageAccount,
-        @Nullable String recoveryAzureVMSize,
-        @Nullable String recoveryAzureVmName,
-        @Nullable Double rpoInSeconds,
-        @Nullable String selectedRecoveryAzureNetworkId,
-        @Nullable String selectedSourceNicId,
-        @Nullable Integer sourceVmCpuCount,
-        @Nullable Integer sourceVmRamSizeInMB,
-        @Nullable String targetAvailabilityZone,
-        @Nullable String targetProximityPlacementGroupId,
-        @Nullable String useManagedDisks,
-        @Nullable String vmId,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription) {
-        this.azureVmDiskDetails = azureVmDiskDetails;
-        this.enableRdpOnTargetOption = enableRdpOnTargetOption;
-        this.encryption = encryption;
-        this.initialReplicationDetails = initialReplicationDetails;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.lastReplicatedTime = lastReplicatedTime;
-        this.lastRpoCalculatedTime = lastRpoCalculatedTime;
-        this.licenseType = licenseType;
-        this.oSDetails = oSDetails;
-        this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
-        this.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
-        this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
-        this.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
-        this.recoveryAzureVMSize = recoveryAzureVMSize;
-        this.recoveryAzureVmName = recoveryAzureVmName;
-        this.rpoInSeconds = rpoInSeconds;
-        this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
-        this.selectedSourceNicId = selectedSourceNicId;
-        this.sourceVmCpuCount = sourceVmCpuCount;
-        this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
-        this.targetAvailabilityZone = targetAvailabilityZone;
-        this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
-        this.useManagedDisks = useManagedDisks;
-        this.vmId = vmId;
-        this.vmNics = vmNics;
-        this.vmProtectionState = vmProtectionState;
-        this.vmProtectionStateDescription = vmProtectionStateDescription;
-    }
+    private HyperVReplicaAzureReplicationDetailsResponse() {}
 
-    private HyperVReplicaAzureReplicationDetailsResponse() {
-        this.azureVmDiskDetails = List.of();
-        this.enableRdpOnTargetOption = null;
-        this.encryption = null;
-        this.initialReplicationDetails = null;
-        this.instanceType = null;
-        this.lastReplicatedTime = null;
-        this.lastRpoCalculatedTime = null;
-        this.licenseType = null;
-        this.oSDetails = null;
-        this.recoveryAvailabilitySetId = null;
-        this.recoveryAzureLogStorageAccountId = null;
-        this.recoveryAzureResourceGroupId = null;
-        this.recoveryAzureStorageAccount = null;
-        this.recoveryAzureVMSize = null;
-        this.recoveryAzureVmName = null;
-        this.rpoInSeconds = null;
-        this.selectedRecoveryAzureNetworkId = null;
-        this.selectedSourceNicId = null;
-        this.sourceVmCpuCount = null;
-        this.sourceVmRamSizeInMB = null;
-        this.targetAvailabilityZone = null;
-        this.targetProximityPlacementGroupId = null;
-        this.useManagedDisks = null;
-        this.vmId = null;
-        this.vmNics = List.of();
-        this.vmProtectionState = null;
-        this.vmProtectionStateDescription = null;
+    private HyperVReplicaAzureReplicationDetailsResponse(HyperVReplicaAzureReplicationDetailsResponse $) {
+        this.azureVmDiskDetails = $.azureVmDiskDetails;
+        this.enableRdpOnTargetOption = $.enableRdpOnTargetOption;
+        this.encryption = $.encryption;
+        this.initialReplicationDetails = $.initialReplicationDetails;
+        this.instanceType = $.instanceType;
+        this.lastReplicatedTime = $.lastReplicatedTime;
+        this.lastRpoCalculatedTime = $.lastRpoCalculatedTime;
+        this.licenseType = $.licenseType;
+        this.oSDetails = $.oSDetails;
+        this.recoveryAvailabilitySetId = $.recoveryAvailabilitySetId;
+        this.recoveryAzureLogStorageAccountId = $.recoveryAzureLogStorageAccountId;
+        this.recoveryAzureResourceGroupId = $.recoveryAzureResourceGroupId;
+        this.recoveryAzureStorageAccount = $.recoveryAzureStorageAccount;
+        this.recoveryAzureVMSize = $.recoveryAzureVMSize;
+        this.recoveryAzureVmName = $.recoveryAzureVmName;
+        this.rpoInSeconds = $.rpoInSeconds;
+        this.selectedRecoveryAzureNetworkId = $.selectedRecoveryAzureNetworkId;
+        this.selectedSourceNicId = $.selectedSourceNicId;
+        this.sourceVmCpuCount = $.sourceVmCpuCount;
+        this.sourceVmRamSizeInMB = $.sourceVmRamSizeInMB;
+        this.targetAvailabilityZone = $.targetAvailabilityZone;
+        this.targetProximityPlacementGroupId = $.targetProximityPlacementGroupId;
+        this.useManagedDisks = $.useManagedDisks;
+        this.vmId = $.vmId;
+        this.vmNics = $.vmNics;
+        this.vmProtectionState = $.vmProtectionState;
+        this.vmProtectionStateDescription = $.vmProtectionStateDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVReplicaAzureReplicationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails;
-        private @Nullable String enableRdpOnTargetOption;
-        private @Nullable String encryption;
-        private @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
-        private String instanceType;
-        private @Nullable String lastReplicatedTime;
-        private @Nullable String lastRpoCalculatedTime;
-        private @Nullable String licenseType;
-        private @Nullable OSDetailsResponse oSDetails;
-        private @Nullable String recoveryAvailabilitySetId;
-        private @Nullable String recoveryAzureLogStorageAccountId;
-        private @Nullable String recoveryAzureResourceGroupId;
-        private @Nullable String recoveryAzureStorageAccount;
-        private @Nullable String recoveryAzureVMSize;
-        private @Nullable String recoveryAzureVmName;
-        private @Nullable Double rpoInSeconds;
-        private @Nullable String selectedRecoveryAzureNetworkId;
-        private @Nullable String selectedSourceNicId;
-        private @Nullable Integer sourceVmCpuCount;
-        private @Nullable Integer sourceVmRamSizeInMB;
-        private @Nullable String targetAvailabilityZone;
-        private @Nullable String targetProximityPlacementGroupId;
-        private @Nullable String useManagedDisks;
-        private @Nullable String vmId;
-        private @Nullable List<VMNicDetailsResponse> vmNics;
-        private @Nullable String vmProtectionState;
-        private @Nullable String vmProtectionStateDescription;
+        private HyperVReplicaAzureReplicationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVReplicaAzureReplicationDetailsResponse();
         }
 
         public Builder(HyperVReplicaAzureReplicationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureVmDiskDetails = defaults.azureVmDiskDetails;
-    	      this.enableRdpOnTargetOption = defaults.enableRdpOnTargetOption;
-    	      this.encryption = defaults.encryption;
-    	      this.initialReplicationDetails = defaults.initialReplicationDetails;
-    	      this.instanceType = defaults.instanceType;
-    	      this.lastReplicatedTime = defaults.lastReplicatedTime;
-    	      this.lastRpoCalculatedTime = defaults.lastRpoCalculatedTime;
-    	      this.licenseType = defaults.licenseType;
-    	      this.oSDetails = defaults.oSDetails;
-    	      this.recoveryAvailabilitySetId = defaults.recoveryAvailabilitySetId;
-    	      this.recoveryAzureLogStorageAccountId = defaults.recoveryAzureLogStorageAccountId;
-    	      this.recoveryAzureResourceGroupId = defaults.recoveryAzureResourceGroupId;
-    	      this.recoveryAzureStorageAccount = defaults.recoveryAzureStorageAccount;
-    	      this.recoveryAzureVMSize = defaults.recoveryAzureVMSize;
-    	      this.recoveryAzureVmName = defaults.recoveryAzureVmName;
-    	      this.rpoInSeconds = defaults.rpoInSeconds;
-    	      this.selectedRecoveryAzureNetworkId = defaults.selectedRecoveryAzureNetworkId;
-    	      this.selectedSourceNicId = defaults.selectedSourceNicId;
-    	      this.sourceVmCpuCount = defaults.sourceVmCpuCount;
-    	      this.sourceVmRamSizeInMB = defaults.sourceVmRamSizeInMB;
-    	      this.targetAvailabilityZone = defaults.targetAvailabilityZone;
-    	      this.targetProximityPlacementGroupId = defaults.targetProximityPlacementGroupId;
-    	      this.useManagedDisks = defaults.useManagedDisks;
-    	      this.vmId = defaults.vmId;
-    	      this.vmNics = defaults.vmNics;
-    	      this.vmProtectionState = defaults.vmProtectionState;
-    	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
+            $ = new HyperVReplicaAzureReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureVmDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVmDiskDetails) {
-            this.azureVmDiskDetails = azureVmDiskDetails;
+            $.azureVmDiskDetails = azureVmDiskDetails;
             return this;
         }
+
         public Builder azureVmDiskDetails(AzureVmDiskDetailsResponse... azureVmDiskDetails) {
             return azureVmDiskDetails(List.of(azureVmDiskDetails));
         }
+
         public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
-            this.enableRdpOnTargetOption = enableRdpOnTargetOption;
+            $.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
+
         public Builder encryption(@Nullable String encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
-            this.initialReplicationDetails = initialReplicationDetails;
+            $.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
-            this.lastReplicatedTime = lastReplicatedTime;
+            $.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
+
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
-            this.lastRpoCalculatedTime = lastRpoCalculatedTime;
+            $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder oSDetails(@Nullable OSDetailsResponse oSDetails) {
-            this.oSDetails = oSDetails;
+            $.oSDetails = oSDetails;
             return this;
         }
+
         public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
-            this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
+            $.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
+
         public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
-            this.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
+            $.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
+
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
-            this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
+            $.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
+
         public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
-            this.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
+            $.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
+
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
-            this.recoveryAzureVMSize = recoveryAzureVMSize;
+            $.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
+
         public Builder recoveryAzureVmName(@Nullable String recoveryAzureVmName) {
-            this.recoveryAzureVmName = recoveryAzureVmName;
+            $.recoveryAzureVmName = recoveryAzureVmName;
             return this;
         }
+
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
-            this.rpoInSeconds = rpoInSeconds;
+            $.rpoInSeconds = rpoInSeconds;
             return this;
         }
+
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
-            this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
+            $.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
+
         public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
-            this.selectedSourceNicId = selectedSourceNicId;
+            $.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
+
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
-            this.sourceVmCpuCount = sourceVmCpuCount;
+            $.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
+
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
-            this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
+            $.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
+
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
-            this.targetAvailabilityZone = targetAvailabilityZone;
+            $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
+
         public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
+            $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
+
         public Builder useManagedDisks(@Nullable String useManagedDisks) {
-            this.useManagedDisks = useManagedDisks;
+            $.useManagedDisks = useManagedDisks;
             return this;
         }
+
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
+
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
-            this.vmNics = vmNics;
+            $.vmNics = vmNics;
             return this;
         }
+
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
+
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
-            this.vmProtectionState = vmProtectionState;
+            $.vmProtectionState = vmProtectionState;
             return this;
         }
+
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
-            this.vmProtectionStateDescription = vmProtectionStateDescription;
+            $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }        public HyperVReplicaAzureReplicationDetailsResponse build() {
-            return new HyperVReplicaAzureReplicationDetailsResponse(azureVmDiskDetails, enableRdpOnTargetOption, encryption, initialReplicationDetails, instanceType, lastReplicatedTime, lastRpoCalculatedTime, licenseType, oSDetails, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMSize, recoveryAzureVmName, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, useManagedDisks, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
+        }
+
+        public HyperVReplicaAzureReplicationDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends com.pulumi
      * 
      */
     @Import(name="entityId", required=true)
-      private final GooglePrivacyDlpV2EntityIdResponse entityId;
+    private GooglePrivacyDlpV2EntityIdResponse entityId;
 
     public GooglePrivacyDlpV2EntityIdResponse entityId() {
         return this.entityId;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse extends com.pulumi
      * 
      */
     @Import(name="quasiIds", required=true)
-      private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
+    private List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> quasiIds() {
         return this.quasiIds;
     }
 
-    public GooglePrivacyDlpV2KAnonymityConfigResponse(
-        GooglePrivacyDlpV2EntityIdResponse entityId,
-        List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
-        this.entityId = Objects.requireNonNull(entityId, "expected parameter 'entityId' to be non-null");
-        this.quasiIds = Objects.requireNonNull(quasiIds, "expected parameter 'quasiIds' to be non-null");
-    }
+    private GooglePrivacyDlpV2KAnonymityConfigResponse() {}
 
-    private GooglePrivacyDlpV2KAnonymityConfigResponse() {
-        this.entityId = null;
-        this.quasiIds = List.of();
+    private GooglePrivacyDlpV2KAnonymityConfigResponse(GooglePrivacyDlpV2KAnonymityConfigResponse $) {
+        this.entityId = $.entityId;
+        this.quasiIds = $.quasiIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KAnonymityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2EntityIdResponse entityId;
-        private List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
+        private GooglePrivacyDlpV2KAnonymityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KAnonymityConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KAnonymityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityId = defaults.entityId;
-    	      this.quasiIds = defaults.quasiIds;
+            $ = new GooglePrivacyDlpV2KAnonymityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder entityId(GooglePrivacyDlpV2EntityIdResponse entityId) {
-            this.entityId = Objects.requireNonNull(entityId);
+            $.entityId = entityId;
             return this;
         }
+
         public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
-            this.quasiIds = Objects.requireNonNull(quasiIds);
+            $.quasiIds = quasiIds;
             return this;
         }
+
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdResponse... quasiIds) {
             return quasiIds(List.of(quasiIds));
-        }        public GooglePrivacyDlpV2KAnonymityConfigResponse build() {
-            return new GooglePrivacyDlpV2KAnonymityConfigResponse(entityId, quasiIds);
+        }
+
+        public GooglePrivacyDlpV2KAnonymityConfigResponse build() {
+            $.entityId = Objects.requireNonNull($.entityId, "expected parameter 'entityId' to be non-null");
+            $.quasiIds = Objects.requireNonNull($.quasiIds, "expected parameter 'quasiIds' to be non-null");
+            return $;
         }
     }
+
 }

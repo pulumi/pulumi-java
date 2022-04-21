@@ -21,7 +21,7 @@ public final class NormalizedCoordinateResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="x", required=true)
-      private final Double x;
+    private Double x;
 
     public Double x() {
         return this.x;
@@ -32,55 +32,52 @@ public final class NormalizedCoordinateResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="y", required=true)
-      private final Double y;
+    private Double y;
 
     public Double y() {
         return this.y;
     }
 
-    public NormalizedCoordinateResponse(
-        Double x,
-        Double y) {
-        this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
-        this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
-    }
+    private NormalizedCoordinateResponse() {}
 
-    private NormalizedCoordinateResponse() {
-        this.x = null;
-        this.y = null;
+    private NormalizedCoordinateResponse(NormalizedCoordinateResponse $) {
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NormalizedCoordinateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double x;
-        private Double y;
+        private NormalizedCoordinateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NormalizedCoordinateResponse();
         }
 
         public Builder(NormalizedCoordinateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new NormalizedCoordinateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder x(Double x) {
-            this.x = Objects.requireNonNull(x);
+            $.x = x;
             return this;
         }
+
         public Builder y(Double y) {
-            this.y = Objects.requireNonNull(y);
+            $.y = y;
             return this;
-        }        public NormalizedCoordinateResponse build() {
-            return new NormalizedCoordinateResponse(x, y);
+        }
+
+        public NormalizedCoordinateResponse build() {
+            $.x = Objects.requireNonNull($.x, "expected parameter 'x' to be non-null");
+            $.y = Objects.requireNonNull($.y, "expected parameter 'y' to be non-null");
+            return $;
         }
     }
+
 }

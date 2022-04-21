@@ -5,10 +5,10 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
     public static final ObjectLambdaAccessPointPolicyState Empty = new ObjectLambdaAccessPointPolicyState();
 
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
      * 
      */
     @Import(name="hasPublicAccessPolicy")
-      private final @Nullable Output<Boolean> hasPublicAccessPolicy;
+    private @Nullable Output<Boolean> hasPublicAccessPolicy;
 
-    public Output<Boolean> hasPublicAccessPolicy() {
-        return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
+    public Optional<Output<Boolean>> hasPublicAccessPolicy() {
+        return Optional.ofNullable(this.hasPublicAccessPolicy);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,89 +50,78 @@ public final class ObjectLambdaAccessPointPolicyState extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public ObjectLambdaAccessPointPolicyState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<Boolean> hasPublicAccessPolicy,
-        @Nullable Output<String> name,
-        @Nullable Output<String> policy) {
-        this.accountId = accountId;
-        this.hasPublicAccessPolicy = hasPublicAccessPolicy;
-        this.name = name;
-        this.policy = policy;
-    }
+    private ObjectLambdaAccessPointPolicyState() {}
 
-    private ObjectLambdaAccessPointPolicyState() {
-        this.accountId = Codegen.empty();
-        this.hasPublicAccessPolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private ObjectLambdaAccessPointPolicyState(ObjectLambdaAccessPointPolicyState $) {
+        this.accountId = $.accountId;
+        this.hasPublicAccessPolicy = $.hasPublicAccessPolicy;
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<Boolean> hasPublicAccessPolicy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> policy;
+        private ObjectLambdaAccessPointPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointPolicyState();
         }
 
         public Builder(ObjectLambdaAccessPointPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.hasPublicAccessPolicy = defaults.hasPublicAccessPolicy;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new ObjectLambdaAccessPointPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = hasPublicAccessPolicy;
+            $.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
-        public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = Codegen.ofNullable(hasPublicAccessPolicy);
-            return this;
+
+        public Builder hasPublicAccessPolicy(Boolean hasPublicAccessPolicy) {
+            return hasPublicAccessPolicy(Output.of(hasPublicAccessPolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public ObjectLambdaAccessPointPolicyState build() {
-            return new ObjectLambdaAccessPointPolicyState(accountId, hasPublicAccessPolicy, name, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public ObjectLambdaAccessPointPolicyState build() {
+            return $;
         }
     }
+
 }

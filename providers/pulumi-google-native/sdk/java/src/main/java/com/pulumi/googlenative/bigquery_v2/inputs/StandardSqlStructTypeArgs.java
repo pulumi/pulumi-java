@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class StandardSqlStructTypeArgs extends com.pulumi.resources.Resour
     public static final StandardSqlStructTypeArgs Empty = new StandardSqlStructTypeArgs();
 
     @Import(name="fields")
-      private final @Nullable Output<List<StandardSqlFieldArgs>> fields;
+    private @Nullable Output<List<StandardSqlFieldArgs>> fields;
 
-    public Output<List<StandardSqlFieldArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<StandardSqlFieldArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
-    public StandardSqlStructTypeArgs(@Nullable Output<List<StandardSqlFieldArgs>> fields) {
-        this.fields = fields;
-    }
+    private StandardSqlStructTypeArgs() {}
 
-    private StandardSqlStructTypeArgs() {
-        this.fields = Codegen.empty();
+    private StandardSqlStructTypeArgs(StandardSqlStructTypeArgs $) {
+        this.fields = $.fields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSqlStructTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StandardSqlFieldArgs>> fields;
+        private StandardSqlStructTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSqlStructTypeArgs();
         }
 
         public Builder(StandardSqlStructTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
+            $ = new StandardSqlStructTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable Output<List<StandardSqlFieldArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<StandardSqlFieldArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<StandardSqlFieldArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(StandardSqlFieldArgs... fields) {
             return fields(List.of(fields));
-        }        public StandardSqlStructTypeArgs build() {
-            return new StandardSqlStructTypeArgs(fields);
+        }
+
+        public StandardSqlStructTypeArgs build() {
+            return $;
         }
     }
+
 }

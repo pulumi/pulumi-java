@@ -13,10 +13,10 @@ import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionStoppingCon
 import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
     public static final DataQualityJobDefinitionArgs Empty = new DataQualityJobDefinitionArgs();
 
     @Import(name="dataQualityAppSpecification", required=true)
-      private final Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
+    private Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
 
     public Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification() {
         return this.dataQualityAppSpecification;
     }
 
     @Import(name="dataQualityBaselineConfig")
-      private final @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
+    private @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
 
-    public Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig() {
-        return this.dataQualityBaselineConfig == null ? Codegen.empty() : this.dataQualityBaselineConfig;
+    public Optional<Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs>> dataQualityBaselineConfig() {
+        return Optional.ofNullable(this.dataQualityBaselineConfig);
     }
 
     @Import(name="dataQualityJobInput", required=true)
-      private final Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
+    private Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
 
     public Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput() {
         return this.dataQualityJobInput;
     }
 
     @Import(name="dataQualityJobOutputConfig", required=true)
-      private final Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
+    private Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
 
     public Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig() {
         return this.dataQualityJobOutputConfig;
     }
 
     @Import(name="jobDefinitionName")
-      private final @Nullable Output<String> jobDefinitionName;
+    private @Nullable Output<String> jobDefinitionName;
 
-    public Output<String> jobDefinitionName() {
-        return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
+    public Optional<Output<String>> jobDefinitionName() {
+        return Optional.ofNullable(this.jobDefinitionName);
     }
 
     @Import(name="jobResources", required=true)
-      private final Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
+    private Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources() {
         return this.jobResources;
     }
 
     @Import(name="networkConfig")
-      private final @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
+    private @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
-    public Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<DataQualityJobDefinitionNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -78,17 +78,17 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
-      private final @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
+    private @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
-    public Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition() {
-        return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
+    public Optional<Output<DataQualityJobDefinitionStoppingConditionArgs>> stoppingCondition() {
+        return Optional.ofNullable(this.stoppingCondition);
     }
 
     /**
@@ -96,170 +96,147 @@ public final class DataQualityJobDefinitionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
+    private @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
 
-    public Output<List<DataQualityJobDefinitionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DataQualityJobDefinitionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataQualityJobDefinitionArgs(
-        Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification,
-        @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig,
-        Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput,
-        Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig,
-        @Nullable Output<String> jobDefinitionName,
-        Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources,
-        @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig,
-        Output<String> roleArn,
-        @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition,
-        @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags) {
-        this.dataQualityAppSpecification = Objects.requireNonNull(dataQualityAppSpecification, "expected parameter 'dataQualityAppSpecification' to be non-null");
-        this.dataQualityBaselineConfig = dataQualityBaselineConfig;
-        this.dataQualityJobInput = Objects.requireNonNull(dataQualityJobInput, "expected parameter 'dataQualityJobInput' to be non-null");
-        this.dataQualityJobOutputConfig = Objects.requireNonNull(dataQualityJobOutputConfig, "expected parameter 'dataQualityJobOutputConfig' to be non-null");
-        this.jobDefinitionName = jobDefinitionName;
-        this.jobResources = Objects.requireNonNull(jobResources, "expected parameter 'jobResources' to be non-null");
-        this.networkConfig = networkConfig;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stoppingCondition = stoppingCondition;
-        this.tags = tags;
-    }
+    private DataQualityJobDefinitionArgs() {}
 
-    private DataQualityJobDefinitionArgs() {
-        this.dataQualityAppSpecification = Codegen.empty();
-        this.dataQualityBaselineConfig = Codegen.empty();
-        this.dataQualityJobInput = Codegen.empty();
-        this.dataQualityJobOutputConfig = Codegen.empty();
-        this.jobDefinitionName = Codegen.empty();
-        this.jobResources = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stoppingCondition = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DataQualityJobDefinitionArgs(DataQualityJobDefinitionArgs $) {
+        this.dataQualityAppSpecification = $.dataQualityAppSpecification;
+        this.dataQualityBaselineConfig = $.dataQualityBaselineConfig;
+        this.dataQualityJobInput = $.dataQualityJobInput;
+        this.dataQualityJobOutputConfig = $.dataQualityJobOutputConfig;
+        this.jobDefinitionName = $.jobDefinitionName;
+        this.jobResources = $.jobResources;
+        this.networkConfig = $.networkConfig;
+        this.roleArn = $.roleArn;
+        this.stoppingCondition = $.stoppingCondition;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataQualityJobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
-        private @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
-        private Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
-        private Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
-        private @Nullable Output<String> jobDefinitionName;
-        private Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
-        private @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
-        private Output<String> roleArn;
-        private @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
-        private @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
+        private DataQualityJobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataQualityJobDefinitionArgs();
         }
 
         public Builder(DataQualityJobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataQualityAppSpecification = defaults.dataQualityAppSpecification;
-    	      this.dataQualityBaselineConfig = defaults.dataQualityBaselineConfig;
-    	      this.dataQualityJobInput = defaults.dataQualityJobInput;
-    	      this.dataQualityJobOutputConfig = defaults.dataQualityJobOutputConfig;
-    	      this.jobDefinitionName = defaults.jobDefinitionName;
-    	      this.jobResources = defaults.jobResources;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stoppingCondition = defaults.stoppingCondition;
-    	      this.tags = defaults.tags;
+            $ = new DataQualityJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataQualityAppSpecification(Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification) {
-            this.dataQualityAppSpecification = Objects.requireNonNull(dataQualityAppSpecification);
+            $.dataQualityAppSpecification = dataQualityAppSpecification;
             return this;
         }
+
         public Builder dataQualityAppSpecification(DataQualityJobDefinitionDataQualityAppSpecificationArgs dataQualityAppSpecification) {
-            this.dataQualityAppSpecification = Output.of(Objects.requireNonNull(dataQualityAppSpecification));
-            return this;
+            return dataQualityAppSpecification(Output.of(dataQualityAppSpecification));
         }
+
         public Builder dataQualityBaselineConfig(@Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig) {
-            this.dataQualityBaselineConfig = dataQualityBaselineConfig;
+            $.dataQualityBaselineConfig = dataQualityBaselineConfig;
             return this;
         }
-        public Builder dataQualityBaselineConfig(@Nullable DataQualityJobDefinitionDataQualityBaselineConfigArgs dataQualityBaselineConfig) {
-            this.dataQualityBaselineConfig = Codegen.ofNullable(dataQualityBaselineConfig);
-            return this;
+
+        public Builder dataQualityBaselineConfig(DataQualityJobDefinitionDataQualityBaselineConfigArgs dataQualityBaselineConfig) {
+            return dataQualityBaselineConfig(Output.of(dataQualityBaselineConfig));
         }
+
         public Builder dataQualityJobInput(Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput) {
-            this.dataQualityJobInput = Objects.requireNonNull(dataQualityJobInput);
+            $.dataQualityJobInput = dataQualityJobInput;
             return this;
         }
+
         public Builder dataQualityJobInput(DataQualityJobDefinitionDataQualityJobInputArgs dataQualityJobInput) {
-            this.dataQualityJobInput = Output.of(Objects.requireNonNull(dataQualityJobInput));
-            return this;
+            return dataQualityJobInput(Output.of(dataQualityJobInput));
         }
+
         public Builder dataQualityJobOutputConfig(Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig) {
-            this.dataQualityJobOutputConfig = Objects.requireNonNull(dataQualityJobOutputConfig);
+            $.dataQualityJobOutputConfig = dataQualityJobOutputConfig;
             return this;
         }
+
         public Builder dataQualityJobOutputConfig(DataQualityJobDefinitionMonitoringOutputConfigArgs dataQualityJobOutputConfig) {
-            this.dataQualityJobOutputConfig = Output.of(Objects.requireNonNull(dataQualityJobOutputConfig));
-            return this;
+            return dataQualityJobOutputConfig(Output.of(dataQualityJobOutputConfig));
         }
+
         public Builder jobDefinitionName(@Nullable Output<String> jobDefinitionName) {
-            this.jobDefinitionName = jobDefinitionName;
+            $.jobDefinitionName = jobDefinitionName;
             return this;
         }
-        public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Codegen.ofNullable(jobDefinitionName);
-            return this;
+
+        public Builder jobDefinitionName(String jobDefinitionName) {
+            return jobDefinitionName(Output.of(jobDefinitionName));
         }
+
         public Builder jobResources(Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources) {
-            this.jobResources = Objects.requireNonNull(jobResources);
+            $.jobResources = jobResources;
             return this;
         }
+
         public Builder jobResources(DataQualityJobDefinitionMonitoringResourcesArgs jobResources) {
-            this.jobResources = Output.of(Objects.requireNonNull(jobResources));
-            return this;
+            return jobResources(Output.of(jobResources));
         }
+
         public Builder networkConfig(@Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable DataQualityJobDefinitionNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(DataQualityJobDefinitionNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stoppingCondition(@Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition) {
-            this.stoppingCondition = stoppingCondition;
+            $.stoppingCondition = stoppingCondition;
             return this;
         }
-        public Builder stoppingCondition(@Nullable DataQualityJobDefinitionStoppingConditionArgs stoppingCondition) {
-            this.stoppingCondition = Codegen.ofNullable(stoppingCondition);
-            return this;
+
+        public Builder stoppingCondition(DataQualityJobDefinitionStoppingConditionArgs stoppingCondition) {
+            return stoppingCondition(Output.of(stoppingCondition));
         }
+
         public Builder tags(@Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DataQualityJobDefinitionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DataQualityJobDefinitionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DataQualityJobDefinitionTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DataQualityJobDefinitionArgs build() {
-            return new DataQualityJobDefinitionArgs(dataQualityAppSpecification, dataQualityBaselineConfig, dataQualityJobInput, dataQualityJobOutputConfig, jobDefinitionName, jobResources, networkConfig, roleArn, stoppingCondition, tags);
+        }
+
+        public DataQualityJobDefinitionArgs build() {
+            $.dataQualityAppSpecification = Objects.requireNonNull($.dataQualityAppSpecification, "expected parameter 'dataQualityAppSpecification' to be non-null");
+            $.dataQualityJobInput = Objects.requireNonNull($.dataQualityJobInput, "expected parameter 'dataQualityJobInput' to be non-null");
+            $.dataQualityJobOutputConfig = Objects.requireNonNull($.dataQualityJobOutputConfig, "expected parameter 'dataQualityJobOutputConfig' to be non-null");
+            $.jobResources = Objects.requireNonNull($.jobResources, "expected parameter 'jobResources' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

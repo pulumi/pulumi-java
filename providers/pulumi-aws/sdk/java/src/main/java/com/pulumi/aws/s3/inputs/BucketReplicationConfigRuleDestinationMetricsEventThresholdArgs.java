@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BucketReplicationConfigRuleDestinationMetricsEventThresholdAr
      * 
      */
     @Import(name="minutes", required=true)
-      private final Output<Integer> minutes;
+    private Output<Integer> minutes;
 
     public Output<Integer> minutes() {
         return this.minutes;
     }
 
-    public BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs(Output<Integer> minutes) {
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-    }
+    private BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs() {}
 
-    private BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs() {
-        this.minutes = Codegen.empty();
+    private BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs(BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs $) {
+        this.minutes = $.minutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> minutes;
+        private BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs();
         }
 
         public Builder(BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minutes = defaults.minutes;
+            $ = new BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minutes(Output<Integer> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Output.of(Objects.requireNonNull(minutes));
-            return this;
-        }        public BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs build() {
-            return new BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs(minutes);
+            return minutes(Output.of(minutes));
+        }
+
+        public BucketReplicationConfigRuleDestinationMetricsEventThresholdArgs build() {
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
+    private List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
@@ -34,7 +34,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse sourceConnectionInfo;
+    private SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -45,67 +45,63 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse extends 
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse targetConnectionInfo;
+    private SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ValidateSyncMigrationInputSqlServerTaskInputResponse(
-        List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ValidateSyncMigrationInputSqlServerTaskInputResponse() {}
 
-    private ValidateSyncMigrationInputSqlServerTaskInputResponse() {
-        this.selectedDatabases = List.of();
-        this.sourceConnectionInfo = null;
-        this.targetConnectionInfo = null;
+    private ValidateSyncMigrationInputSqlServerTaskInputResponse(ValidateSyncMigrationInputSqlServerTaskInputResponse $) {
+        this.selectedDatabases = $.selectedDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidateSyncMigrationInputSqlServerTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
-        private SqlConnectionInfoResponse sourceConnectionInfo;
-        private SqlConnectionInfoResponse targetConnectionInfo;
+        private ValidateSyncMigrationInputSqlServerTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidateSyncMigrationInputSqlServerTaskInputResponse();
         }
 
         public Builder(ValidateSyncMigrationInputSqlServerTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ValidateSyncMigrationInputSqlServerTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(MigrateSqlServerSqlDbSyncDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public ValidateSyncMigrationInputSqlServerTaskInputResponse build() {
-            return new ValidateSyncMigrationInputSqlServerTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
+        }
+
+        public ValidateSyncMigrationInputSqlServerTaskInputResponse build() {
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

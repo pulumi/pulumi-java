@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
+    private Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
 
     public Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint() {
         return this.endpoint;
@@ -39,7 +40,7 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -50,10 +51,10 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transport")
-      private final @Nullable Output<Either<String,RtspTransport>> transport;
+    private @Nullable Output<Either<String,RtspTransport>> transport;
 
-    public Output<Either<String,RtspTransport>> transport() {
-        return this.transport == null ? Codegen.empty() : this.transport;
+    public Optional<Output<Either<String,RtspTransport>>> transport() {
+        return Optional.ofNullable(this.transport);
     }
 
     /**
@@ -62,89 +63,81 @@ public final class RtspSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public RtspSourceArgs(
-        Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint,
-        Output<String> name,
-        @Nullable Output<Either<String,RtspTransport>> transport,
-        Output<String> type) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.transport = transport;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private RtspSourceArgs() {}
 
-    private RtspSourceArgs() {
-        this.endpoint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.transport = Codegen.empty();
-        this.type = Codegen.empty();
+    private RtspSourceArgs(RtspSourceArgs $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
+        this.transport = $.transport;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RtspSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
-        private Output<String> name;
-        private @Nullable Output<Either<String,RtspTransport>> transport;
-        private Output<String> type;
+        private RtspSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RtspSourceArgs();
         }
 
         public Builder(RtspSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
-    	      this.transport = defaults.transport;
-    	      this.type = defaults.type;
+            $ = new RtspSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(Either<TlsEndpointArgs,UnsecuredEndpointArgs> endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder transport(@Nullable Output<Either<String,RtspTransport>> transport) {
-            this.transport = transport;
+            $.transport = transport;
             return this;
         }
-        public Builder transport(@Nullable Either<String,RtspTransport> transport) {
-            this.transport = Codegen.ofNullable(transport);
-            return this;
+
+        public Builder transport(Either<String,RtspTransport> transport) {
+            return transport(Output.of(transport));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RtspSourceArgs build() {
-            return new RtspSourceArgs(endpoint, name, transport, type);
+            return type(Output.of(type));
+        }
+
+        public RtspSourceArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

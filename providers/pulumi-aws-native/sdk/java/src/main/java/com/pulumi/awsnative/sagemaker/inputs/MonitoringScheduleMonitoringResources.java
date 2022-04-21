@@ -17,45 +17,45 @@ public final class MonitoringScheduleMonitoringResources extends com.pulumi.reso
     public static final MonitoringScheduleMonitoringResources Empty = new MonitoringScheduleMonitoringResources();
 
     @Import(name="clusterConfig", required=true)
-      private final MonitoringScheduleClusterConfig clusterConfig;
+    private MonitoringScheduleClusterConfig clusterConfig;
 
     public MonitoringScheduleClusterConfig clusterConfig() {
         return this.clusterConfig;
     }
 
-    public MonitoringScheduleMonitoringResources(MonitoringScheduleClusterConfig clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
-    }
+    private MonitoringScheduleMonitoringResources() {}
 
-    private MonitoringScheduleMonitoringResources() {
-        this.clusterConfig = null;
+    private MonitoringScheduleMonitoringResources(MonitoringScheduleMonitoringResources $) {
+        this.clusterConfig = $.clusterConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringResources defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MonitoringScheduleClusterConfig clusterConfig;
+        private MonitoringScheduleMonitoringResources $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringResources();
         }
 
         public Builder(MonitoringScheduleMonitoringResources defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
+            $ = new MonitoringScheduleMonitoringResources(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(MonitoringScheduleClusterConfig clusterConfig) {
-            this.clusterConfig = Objects.requireNonNull(clusterConfig);
+            $.clusterConfig = clusterConfig;
             return this;
-        }        public MonitoringScheduleMonitoringResources build() {
-            return new MonitoringScheduleMonitoringResources(clusterConfig);
+        }
+
+        public MonitoringScheduleMonitoringResources build() {
+            $.clusterConfig = Objects.requireNonNull($.clusterConfig, "expected parameter 'clusterConfig' to be non-null");
+            return $;
         }
     }
+
 }

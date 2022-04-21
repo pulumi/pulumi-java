@@ -5,10 +5,10 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
      * 
      */
     @Import(name="categoricalFeatures")
-      private final @Nullable Output<Map<String,String>> categoricalFeatures;
+    private @Nullable Output<Map<String,String>> categoricalFeatures;
 
-    public Output<Map<String,String>> categoricalFeatures() {
-        return this.categoricalFeatures == null ? Codegen.empty() : this.categoricalFeatures;
+    public Optional<Output<Map<String,String>>> categoricalFeatures() {
+        return Optional.ofNullable(this.categoricalFeatures);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
      * 
      */
     @Import(name="numericalFeatures")
-      private final @Nullable Output<Map<String,String>> numericalFeatures;
+    private @Nullable Output<Map<String,String>> numericalFeatures;
 
-    public Output<Map<String,String>> numericalFeatures() {
-        return this.numericalFeatures == null ? Codegen.empty() : this.numericalFeatures;
+    public Optional<Output<Map<String,String>>> numericalFeatures() {
+        return Optional.ofNullable(this.numericalFeatures);
     }
 
-    public GoogleCloudRecommendationengineV1beta1FeatureMapArgs(
-        @Nullable Output<Map<String,String>> categoricalFeatures,
-        @Nullable Output<Map<String,String>> numericalFeatures) {
-        this.categoricalFeatures = categoricalFeatures;
-        this.numericalFeatures = numericalFeatures;
-    }
+    private GoogleCloudRecommendationengineV1beta1FeatureMapArgs() {}
 
-    private GoogleCloudRecommendationengineV1beta1FeatureMapArgs() {
-        this.categoricalFeatures = Codegen.empty();
-        this.numericalFeatures = Codegen.empty();
+    private GoogleCloudRecommendationengineV1beta1FeatureMapArgs(GoogleCloudRecommendationengineV1beta1FeatureMapArgs $) {
+        this.categoricalFeatures = $.categoricalFeatures;
+        this.numericalFeatures = $.numericalFeatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1FeatureMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> categoricalFeatures;
-        private @Nullable Output<Map<String,String>> numericalFeatures;
+        private GoogleCloudRecommendationengineV1beta1FeatureMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1FeatureMapArgs();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1FeatureMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoricalFeatures = defaults.categoricalFeatures;
-    	      this.numericalFeatures = defaults.numericalFeatures;
+            $ = new GoogleCloudRecommendationengineV1beta1FeatureMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categoricalFeatures(@Nullable Output<Map<String,String>> categoricalFeatures) {
-            this.categoricalFeatures = categoricalFeatures;
+            $.categoricalFeatures = categoricalFeatures;
             return this;
         }
-        public Builder categoricalFeatures(@Nullable Map<String,String> categoricalFeatures) {
-            this.categoricalFeatures = Codegen.ofNullable(categoricalFeatures);
-            return this;
+
+        public Builder categoricalFeatures(Map<String,String> categoricalFeatures) {
+            return categoricalFeatures(Output.of(categoricalFeatures));
         }
+
         public Builder numericalFeatures(@Nullable Output<Map<String,String>> numericalFeatures) {
-            this.numericalFeatures = numericalFeatures;
+            $.numericalFeatures = numericalFeatures;
             return this;
         }
-        public Builder numericalFeatures(@Nullable Map<String,String> numericalFeatures) {
-            this.numericalFeatures = Codegen.ofNullable(numericalFeatures);
-            return this;
-        }        public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {
-            return new GoogleCloudRecommendationengineV1beta1FeatureMapArgs(categoricalFeatures, numericalFeatures);
+
+        public Builder numericalFeatures(Map<String,String> numericalFeatures) {
+            return numericalFeatures(Output.of(numericalFeatures));
+        }
+
+        public GoogleCloudRecommendationengineV1beta1FeatureMapArgs build() {
+            return $;
         }
     }
+
 }

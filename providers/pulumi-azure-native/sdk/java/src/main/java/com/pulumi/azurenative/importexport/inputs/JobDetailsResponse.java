@@ -35,10 +35,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupDriveManifest")
-      private final @Nullable Boolean backupDriveManifest;
+    private @Nullable Boolean backupDriveManifest;
 
     public Optional<Boolean> backupDriveManifest() {
-        return this.backupDriveManifest == null ? Optional.empty() : Optional.ofNullable(this.backupDriveManifest);
+        return Optional.ofNullable(this.backupDriveManifest);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cancelRequested")
-      private final @Nullable Boolean cancelRequested;
+    private @Nullable Boolean cancelRequested;
 
     public Optional<Boolean> cancelRequested() {
-        return this.cancelRequested == null ? Optional.empty() : Optional.ofNullable(this.cancelRequested);
+        return Optional.ofNullable(this.cancelRequested);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deliveryPackage")
-      private final @Nullable DeliveryPackageInformationResponse deliveryPackage;
+    private @Nullable DeliveryPackageInformationResponse deliveryPackage;
 
     public Optional<DeliveryPackageInformationResponse> deliveryPackage() {
-        return this.deliveryPackage == null ? Optional.empty() : Optional.ofNullable(this.deliveryPackage);
+        return Optional.ofNullable(this.deliveryPackage);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diagnosticsPath")
-      private final @Nullable String diagnosticsPath;
+    private @Nullable String diagnosticsPath;
 
     public Optional<String> diagnosticsPath() {
-        return this.diagnosticsPath == null ? Optional.empty() : Optional.ofNullable(this.diagnosticsPath);
+        return Optional.ofNullable(this.diagnosticsPath);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="driveList")
-      private final @Nullable List<DriveStatusResponse> driveList;
+    private @Nullable List<DriveStatusResponse> driveList;
 
-    public List<DriveStatusResponse> driveList() {
-        return this.driveList == null ? List.of() : this.driveList;
+    public Optional<List<DriveStatusResponse>> driveList() {
+        return Optional.ofNullable(this.driveList);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionKey")
-      private final @Nullable EncryptionKeyDetailsResponse encryptionKey;
+    private @Nullable EncryptionKeyDetailsResponse encryptionKey;
 
     public Optional<EncryptionKeyDetailsResponse> encryptionKey() {
-        return this.encryptionKey == null ? Optional.empty() : Optional.ofNullable(this.encryptionKey);
+        return Optional.ofNullable(this.encryptionKey);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="export")
-      private final @Nullable ExportResponse export;
+    private @Nullable ExportResponse export;
 
     public Optional<ExportResponse> export() {
-        return this.export == null ? Optional.empty() : Optional.ofNullable(this.export);
+        return Optional.ofNullable(this.export);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="incompleteBlobListUri")
-      private final @Nullable String incompleteBlobListUri;
+    private @Nullable String incompleteBlobListUri;
 
     public Optional<String> incompleteBlobListUri() {
-        return this.incompleteBlobListUri == null ? Optional.empty() : Optional.ofNullable(this.incompleteBlobListUri);
+        return Optional.ofNullable(this.incompleteBlobListUri);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobType")
-      private final @Nullable String jobType;
+    private @Nullable String jobType;
 
     public Optional<String> jobType() {
-        return this.jobType == null ? Optional.empty() : Optional.ofNullable(this.jobType);
+        return Optional.ofNullable(this.jobType);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable String logLevel;
+    private @Nullable String logLevel;
 
     public Optional<String> logLevel() {
-        return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="percentComplete")
-      private final @Nullable Integer percentComplete;
+    private @Nullable Integer percentComplete;
 
     public Optional<Integer> percentComplete() {
-        return this.percentComplete == null ? Optional.empty() : Optional.ofNullable(this.percentComplete);
+        return Optional.ofNullable(this.percentComplete);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="returnAddress")
-      private final @Nullable ReturnAddressResponse returnAddress;
+    private @Nullable ReturnAddressResponse returnAddress;
 
     public Optional<ReturnAddressResponse> returnAddress() {
-        return this.returnAddress == null ? Optional.empty() : Optional.ofNullable(this.returnAddress);
+        return Optional.ofNullable(this.returnAddress);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="returnPackage")
-      private final @Nullable PackageInformationResponse returnPackage;
+    private @Nullable PackageInformationResponse returnPackage;
 
     public Optional<PackageInformationResponse> returnPackage() {
-        return this.returnPackage == null ? Optional.empty() : Optional.ofNullable(this.returnPackage);
+        return Optional.ofNullable(this.returnPackage);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="returnShipping")
-      private final @Nullable ReturnShippingResponse returnShipping;
+    private @Nullable ReturnShippingResponse returnShipping;
 
     public Optional<ReturnShippingResponse> returnShipping() {
-        return this.returnShipping == null ? Optional.empty() : Optional.ofNullable(this.returnShipping);
+        return Optional.ofNullable(this.returnShipping);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shippingInformation")
-      private final @Nullable ShippingInformationResponse shippingInformation;
+    private @Nullable ShippingInformationResponse shippingInformation;
 
     public Optional<ShippingInformationResponse> shippingInformation() {
-        return this.shippingInformation == null ? Optional.empty() : Optional.ofNullable(this.shippingInformation);
+        return Optional.ofNullable(this.shippingInformation);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -222,202 +222,153 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountId")
-      private final @Nullable String storageAccountId;
+    private @Nullable String storageAccountId;
 
     public Optional<String> storageAccountId() {
-        return this.storageAccountId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountId);
+        return Optional.ofNullable(this.storageAccountId);
     }
 
-    public JobDetailsResponse(
-        @Nullable Boolean backupDriveManifest,
-        @Nullable Boolean cancelRequested,
-        @Nullable DeliveryPackageInformationResponse deliveryPackage,
-        @Nullable String diagnosticsPath,
-        @Nullable List<DriveStatusResponse> driveList,
-        @Nullable EncryptionKeyDetailsResponse encryptionKey,
-        @Nullable ExportResponse export,
-        @Nullable String incompleteBlobListUri,
-        @Nullable String jobType,
-        @Nullable String logLevel,
-        @Nullable Integer percentComplete,
-        @Nullable String provisioningState,
-        @Nullable ReturnAddressResponse returnAddress,
-        @Nullable PackageInformationResponse returnPackage,
-        @Nullable ReturnShippingResponse returnShipping,
-        @Nullable ShippingInformationResponse shippingInformation,
-        @Nullable String state,
-        @Nullable String storageAccountId) {
-        this.backupDriveManifest = Codegen.booleanProp("backupDriveManifest").arg(backupDriveManifest).def(false).getNullable();
-        this.cancelRequested = Codegen.booleanProp("cancelRequested").arg(cancelRequested).def(false).getNullable();
-        this.deliveryPackage = deliveryPackage;
-        this.diagnosticsPath = diagnosticsPath;
-        this.driveList = driveList;
-        this.encryptionKey = encryptionKey;
-        this.export = export;
-        this.incompleteBlobListUri = incompleteBlobListUri;
-        this.jobType = jobType;
-        this.logLevel = logLevel;
-        this.percentComplete = percentComplete;
-        this.provisioningState = provisioningState;
-        this.returnAddress = returnAddress;
-        this.returnPackage = returnPackage;
-        this.returnShipping = returnShipping;
-        this.shippingInformation = shippingInformation;
-        this.state = Codegen.stringProp("state").arg(state).def("Creating").getNullable();
-        this.storageAccountId = storageAccountId;
-    }
+    private JobDetailsResponse() {}
 
-    private JobDetailsResponse() {
-        this.backupDriveManifest = null;
-        this.cancelRequested = null;
-        this.deliveryPackage = null;
-        this.diagnosticsPath = null;
-        this.driveList = List.of();
-        this.encryptionKey = null;
-        this.export = null;
-        this.incompleteBlobListUri = null;
-        this.jobType = null;
-        this.logLevel = null;
-        this.percentComplete = null;
-        this.provisioningState = null;
-        this.returnAddress = null;
-        this.returnPackage = null;
-        this.returnShipping = null;
-        this.shippingInformation = null;
-        this.state = null;
-        this.storageAccountId = null;
+    private JobDetailsResponse(JobDetailsResponse $) {
+        this.backupDriveManifest = $.backupDriveManifest;
+        this.cancelRequested = $.cancelRequested;
+        this.deliveryPackage = $.deliveryPackage;
+        this.diagnosticsPath = $.diagnosticsPath;
+        this.driveList = $.driveList;
+        this.encryptionKey = $.encryptionKey;
+        this.export = $.export;
+        this.incompleteBlobListUri = $.incompleteBlobListUri;
+        this.jobType = $.jobType;
+        this.logLevel = $.logLevel;
+        this.percentComplete = $.percentComplete;
+        this.provisioningState = $.provisioningState;
+        this.returnAddress = $.returnAddress;
+        this.returnPackage = $.returnPackage;
+        this.returnShipping = $.returnShipping;
+        this.shippingInformation = $.shippingInformation;
+        this.state = $.state;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean backupDriveManifest;
-        private @Nullable Boolean cancelRequested;
-        private @Nullable DeliveryPackageInformationResponse deliveryPackage;
-        private @Nullable String diagnosticsPath;
-        private @Nullable List<DriveStatusResponse> driveList;
-        private @Nullable EncryptionKeyDetailsResponse encryptionKey;
-        private @Nullable ExportResponse export;
-        private @Nullable String incompleteBlobListUri;
-        private @Nullable String jobType;
-        private @Nullable String logLevel;
-        private @Nullable Integer percentComplete;
-        private @Nullable String provisioningState;
-        private @Nullable ReturnAddressResponse returnAddress;
-        private @Nullable PackageInformationResponse returnPackage;
-        private @Nullable ReturnShippingResponse returnShipping;
-        private @Nullable ShippingInformationResponse shippingInformation;
-        private @Nullable String state;
-        private @Nullable String storageAccountId;
+        private JobDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDetailsResponse();
         }
 
         public Builder(JobDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupDriveManifest = defaults.backupDriveManifest;
-    	      this.cancelRequested = defaults.cancelRequested;
-    	      this.deliveryPackage = defaults.deliveryPackage;
-    	      this.diagnosticsPath = defaults.diagnosticsPath;
-    	      this.driveList = defaults.driveList;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.export = defaults.export;
-    	      this.incompleteBlobListUri = defaults.incompleteBlobListUri;
-    	      this.jobType = defaults.jobType;
-    	      this.logLevel = defaults.logLevel;
-    	      this.percentComplete = defaults.percentComplete;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.returnAddress = defaults.returnAddress;
-    	      this.returnPackage = defaults.returnPackage;
-    	      this.returnShipping = defaults.returnShipping;
-    	      this.shippingInformation = defaults.shippingInformation;
-    	      this.state = defaults.state;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new JobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupDriveManifest(@Nullable Boolean backupDriveManifest) {
-            this.backupDriveManifest = backupDriveManifest;
+            $.backupDriveManifest = backupDriveManifest;
             return this;
         }
+
         public Builder cancelRequested(@Nullable Boolean cancelRequested) {
-            this.cancelRequested = cancelRequested;
+            $.cancelRequested = cancelRequested;
             return this;
         }
+
         public Builder deliveryPackage(@Nullable DeliveryPackageInformationResponse deliveryPackage) {
-            this.deliveryPackage = deliveryPackage;
+            $.deliveryPackage = deliveryPackage;
             return this;
         }
+
         public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
-            this.diagnosticsPath = diagnosticsPath;
+            $.diagnosticsPath = diagnosticsPath;
             return this;
         }
+
         public Builder driveList(@Nullable List<DriveStatusResponse> driveList) {
-            this.driveList = driveList;
+            $.driveList = driveList;
             return this;
         }
+
         public Builder driveList(DriveStatusResponse... driveList) {
             return driveList(List.of(driveList));
         }
+
         public Builder encryptionKey(@Nullable EncryptionKeyDetailsResponse encryptionKey) {
-            this.encryptionKey = encryptionKey;
+            $.encryptionKey = encryptionKey;
             return this;
         }
+
         public Builder export(@Nullable ExportResponse export) {
-            this.export = export;
+            $.export = export;
             return this;
         }
+
         public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
-            this.incompleteBlobListUri = incompleteBlobListUri;
+            $.incompleteBlobListUri = incompleteBlobListUri;
             return this;
         }
+
         public Builder jobType(@Nullable String jobType) {
-            this.jobType = jobType;
+            $.jobType = jobType;
             return this;
         }
+
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
+
         public Builder percentComplete(@Nullable Integer percentComplete) {
-            this.percentComplete = percentComplete;
+            $.percentComplete = percentComplete;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder returnAddress(@Nullable ReturnAddressResponse returnAddress) {
-            this.returnAddress = returnAddress;
+            $.returnAddress = returnAddress;
             return this;
         }
+
         public Builder returnPackage(@Nullable PackageInformationResponse returnPackage) {
-            this.returnPackage = returnPackage;
+            $.returnPackage = returnPackage;
             return this;
         }
+
         public Builder returnShipping(@Nullable ReturnShippingResponse returnShipping) {
-            this.returnShipping = returnShipping;
+            $.returnShipping = returnShipping;
             return this;
         }
+
         public Builder shippingInformation(@Nullable ShippingInformationResponse shippingInformation) {
-            this.shippingInformation = shippingInformation;
+            $.shippingInformation = shippingInformation;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = storageAccountId;
+            $.storageAccountId = storageAccountId;
             return this;
-        }        public JobDetailsResponse build() {
-            return new JobDetailsResponse(backupDriveManifest, cancelRequested, deliveryPackage, diagnosticsPath, driveList, encryptionKey, export, incompleteBlobListUri, jobType, logLevel, percentComplete, provisioningState, returnAddress, returnPackage, returnShipping, shippingInformation, state, storageAccountId);
+        }
+
+        public JobDetailsResponse build() {
+            $.backupDriveManifest = Codegen.booleanProp("backupDriveManifest").arg($.backupDriveManifest).def(false).getNullable();
+            $.cancelRequested = Codegen.booleanProp("cancelRequested").arg($.cancelRequested).def(false).getNullable();
+            $.state = Codegen.stringProp("state").arg($.state).def("Creating").getNullable();
+            return $;
         }
     }
+
 }

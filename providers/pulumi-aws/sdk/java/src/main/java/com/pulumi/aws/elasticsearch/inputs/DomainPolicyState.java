@@ -5,9 +5,9 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DomainPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable Output<String> accessPolicies;
+    private @Nullable Output<String> accessPolicies;
 
-    public Output<String> accessPolicies() {
-        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
+    public Optional<Output<String>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
     /**
@@ -31,59 +31,58 @@ public final class DomainPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
-    public DomainPolicyState(
-        @Nullable Output<String> accessPolicies,
-        @Nullable Output<String> domainName) {
-        this.accessPolicies = accessPolicies;
-        this.domainName = domainName;
-    }
+    private DomainPolicyState() {}
 
-    private DomainPolicyState() {
-        this.accessPolicies = Codegen.empty();
-        this.domainName = Codegen.empty();
+    private DomainPolicyState(DomainPolicyState $) {
+        this.accessPolicies = $.accessPolicies;
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPolicies;
-        private @Nullable Output<String> domainName;
+        private DomainPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainPolicyState();
         }
 
         public Builder(DomainPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.domainName = defaults.domainName;
+            $ = new DomainPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable Output<String> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
+
+        public Builder accessPolicies(String accessPolicies) {
+            return accessPolicies(Output.of(accessPolicies));
+        }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
-        }        public DomainPolicyState build() {
-            return new DomainPolicyState(accessPolicies, domainName);
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        public DomainPolicyState build() {
+            return $;
         }
     }
+
 }

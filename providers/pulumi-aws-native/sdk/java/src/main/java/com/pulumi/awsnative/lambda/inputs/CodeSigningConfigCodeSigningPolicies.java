@@ -21,45 +21,45 @@ public final class CodeSigningConfigCodeSigningPolicies extends com.pulumi.resou
      * 
      */
     @Import(name="untrustedArtifactOnDeployment", required=true)
-      private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
+    private CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
 
     public CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }
 
-    public CodeSigningConfigCodeSigningPolicies(CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment) {
-        this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment, "expected parameter 'untrustedArtifactOnDeployment' to be non-null");
-    }
+    private CodeSigningConfigCodeSigningPolicies() {}
 
-    private CodeSigningConfigCodeSigningPolicies() {
-        this.untrustedArtifactOnDeployment = null;
+    private CodeSigningConfigCodeSigningPolicies(CodeSigningConfigCodeSigningPolicies $) {
+        this.untrustedArtifactOnDeployment = $.untrustedArtifactOnDeployment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeSigningConfigCodeSigningPolicies defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
+        private CodeSigningConfigCodeSigningPolicies $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeSigningConfigCodeSigningPolicies();
         }
 
         public Builder(CodeSigningConfigCodeSigningPolicies defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.untrustedArtifactOnDeployment = defaults.untrustedArtifactOnDeployment;
+            $ = new CodeSigningConfigCodeSigningPolicies(Objects.requireNonNull(defaults));
         }
 
         public Builder untrustedArtifactOnDeployment(CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment) {
-            this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
+            $.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
             return this;
-        }        public CodeSigningConfigCodeSigningPolicies build() {
-            return new CodeSigningConfigCodeSigningPolicies(untrustedArtifactOnDeployment);
+        }
+
+        public CodeSigningConfigCodeSigningPolicies build() {
+            $.untrustedArtifactOnDeployment = Objects.requireNonNull($.untrustedArtifactOnDeployment, "expected parameter 'untrustedArtifactOnDeployment' to be non-null");
+            return $;
         }
     }
+
 }

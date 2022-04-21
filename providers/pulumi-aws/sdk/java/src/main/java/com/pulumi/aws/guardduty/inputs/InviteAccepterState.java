@@ -5,9 +5,9 @@ package com.pulumi.aws.guardduty.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="detectorId")
-      private final @Nullable Output<String> detectorId;
+    private @Nullable Output<String> detectorId;
 
-    public Output<String> detectorId() {
-        return this.detectorId == null ? Codegen.empty() : this.detectorId;
+    public Optional<Output<String>> detectorId() {
+        return Optional.ofNullable(this.detectorId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class InviteAccepterState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="masterAccountId")
-      private final @Nullable Output<String> masterAccountId;
+    private @Nullable Output<String> masterAccountId;
 
-    public Output<String> masterAccountId() {
-        return this.masterAccountId == null ? Codegen.empty() : this.masterAccountId;
+    public Optional<Output<String>> masterAccountId() {
+        return Optional.ofNullable(this.masterAccountId);
     }
 
-    public InviteAccepterState(
-        @Nullable Output<String> detectorId,
-        @Nullable Output<String> masterAccountId) {
-        this.detectorId = detectorId;
-        this.masterAccountId = masterAccountId;
-    }
+    private InviteAccepterState() {}
 
-    private InviteAccepterState() {
-        this.detectorId = Codegen.empty();
-        this.masterAccountId = Codegen.empty();
+    private InviteAccepterState(InviteAccepterState $) {
+        this.detectorId = $.detectorId;
+        this.masterAccountId = $.masterAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InviteAccepterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> detectorId;
-        private @Nullable Output<String> masterAccountId;
+        private InviteAccepterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InviteAccepterState();
         }
 
         public Builder(InviteAccepterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detectorId = defaults.detectorId;
-    	      this.masterAccountId = defaults.masterAccountId;
+            $ = new InviteAccepterState(Objects.requireNonNull(defaults));
         }
 
         public Builder detectorId(@Nullable Output<String> detectorId) {
-            this.detectorId = detectorId;
+            $.detectorId = detectorId;
             return this;
         }
-        public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Codegen.ofNullable(detectorId);
-            return this;
+
+        public Builder detectorId(String detectorId) {
+            return detectorId(Output.of(detectorId));
         }
+
         public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
-            this.masterAccountId = masterAccountId;
+            $.masterAccountId = masterAccountId;
             return this;
         }
-        public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Codegen.ofNullable(masterAccountId);
-            return this;
-        }        public InviteAccepterState build() {
-            return new InviteAccepterState(detectorId, masterAccountId);
+
+        public Builder masterAccountId(String masterAccountId) {
+            return masterAccountId(Output.of(masterAccountId));
+        }
+
+        public InviteAccepterState build() {
+            return $;
         }
     }
+
 }

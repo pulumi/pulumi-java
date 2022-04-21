@@ -24,7 +24,7 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="amount", required=true)
-      private final MoneyResponse amount;
+    private MoneyResponse amount;
 
     public MoneyResponse amount() {
         return this.amount;
@@ -35,7 +35,7 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -46,7 +46,7 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expectedUnitsPerYear", required=true)
-      private final Double expectedUnitsPerYear;
+    private Double expectedUnitsPerYear;
 
     public Double expectedUnitsPerYear() {
         return this.expectedUnitsPerYear;
@@ -57,7 +57,7 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="range", required=true)
-      private final CompensationRangeResponse range;
+    private CompensationRangeResponse range;
 
     public CompensationRangeResponse range() {
         return this.range;
@@ -68,7 +68,7 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -79,91 +79,80 @@ public final class CompensationEntryResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
     }
 
-    public CompensationEntryResponse(
-        MoneyResponse amount,
-        String description,
-        Double expectedUnitsPerYear,
-        CompensationRangeResponse range,
-        String type,
-        String unit) {
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.expectedUnitsPerYear = Objects.requireNonNull(expectedUnitsPerYear, "expected parameter 'expectedUnitsPerYear' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-    }
+    private CompensationEntryResponse() {}
 
-    private CompensationEntryResponse() {
-        this.amount = null;
-        this.description = null;
-        this.expectedUnitsPerYear = null;
-        this.range = null;
-        this.type = null;
-        this.unit = null;
+    private CompensationEntryResponse(CompensationEntryResponse $) {
+        this.amount = $.amount;
+        this.description = $.description;
+        this.expectedUnitsPerYear = $.expectedUnitsPerYear;
+        this.range = $.range;
+        this.type = $.type;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompensationEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MoneyResponse amount;
-        private String description;
-        private Double expectedUnitsPerYear;
-        private CompensationRangeResponse range;
-        private String type;
-        private String unit;
+        private CompensationEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompensationEntryResponse();
         }
 
         public Builder(CompensationEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amount = defaults.amount;
-    	      this.description = defaults.description;
-    	      this.expectedUnitsPerYear = defaults.expectedUnitsPerYear;
-    	      this.range = defaults.range;
-    	      this.type = defaults.type;
-    	      this.unit = defaults.unit;
+            $ = new CompensationEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder amount(MoneyResponse amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder expectedUnitsPerYear(Double expectedUnitsPerYear) {
-            this.expectedUnitsPerYear = Objects.requireNonNull(expectedUnitsPerYear);
+            $.expectedUnitsPerYear = expectedUnitsPerYear;
             return this;
         }
+
         public Builder range(CompensationRangeResponse range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
-        }        public CompensationEntryResponse build() {
-            return new CompensationEntryResponse(amount, description, expectedUnitsPerYear, range, type, unit);
+        }
+
+        public CompensationEntryResponse build() {
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.expectedUnitsPerYear = Objects.requireNonNull($.expectedUnitsPerYear, "expected parameter 'expectedUnitsPerYear' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            return $;
         }
     }
+
 }

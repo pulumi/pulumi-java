@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfigArgs extends com.p
      * 
      */
     @Import(name="agent", required=true)
-      private final Output<String> agent;
+    private Output<String> agent;
 
     public Output<String> agent() {
         return this.agent;
     }
 
-    public GoogleCloudDialogflowV2AutomatedAgentConfigArgs(Output<String> agent) {
-        this.agent = Objects.requireNonNull(agent, "expected parameter 'agent' to be non-null");
-    }
+    private GoogleCloudDialogflowV2AutomatedAgentConfigArgs() {}
 
-    private GoogleCloudDialogflowV2AutomatedAgentConfigArgs() {
-        this.agent = Codegen.empty();
+    private GoogleCloudDialogflowV2AutomatedAgentConfigArgs(GoogleCloudDialogflowV2AutomatedAgentConfigArgs $) {
+        this.agent = $.agent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2AutomatedAgentConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agent;
+        private GoogleCloudDialogflowV2AutomatedAgentConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2AutomatedAgentConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2AutomatedAgentConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agent = defaults.agent;
+            $ = new GoogleCloudDialogflowV2AutomatedAgentConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agent(Output<String> agent) {
-            this.agent = Objects.requireNonNull(agent);
+            $.agent = agent;
             return this;
         }
+
         public Builder agent(String agent) {
-            this.agent = Output.of(Objects.requireNonNull(agent));
-            return this;
-        }        public GoogleCloudDialogflowV2AutomatedAgentConfigArgs build() {
-            return new GoogleCloudDialogflowV2AutomatedAgentConfigArgs(agent);
+            return agent(Output.of(agent));
+        }
+
+        public GoogleCloudDialogflowV2AutomatedAgentConfigArgs build() {
+            $.agent = Objects.requireNonNull($.agent, "expected parameter 'agent' to be non-null");
+            return $;
         }
     }
+
 }

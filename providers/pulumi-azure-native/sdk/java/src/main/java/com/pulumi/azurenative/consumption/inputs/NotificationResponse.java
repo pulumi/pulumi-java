@@ -27,7 +27,7 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contactEmails", required=true)
-      private final List<String> contactEmails;
+    private List<String> contactEmails;
 
     public List<String> contactEmails() {
         return this.contactEmails;
@@ -38,10 +38,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contactGroups")
-      private final @Nullable List<String> contactGroups;
+    private @Nullable List<String> contactGroups;
 
-    public List<String> contactGroups() {
-        return this.contactGroups == null ? List.of() : this.contactGroups;
+    public Optional<List<String>> contactGroups() {
+        return Optional.ofNullable(this.contactGroups);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="contactRoles")
-      private final @Nullable List<String> contactRoles;
+    private @Nullable List<String> contactRoles;
 
-    public List<String> contactRoles() {
-        return this.contactRoles == null ? List.of() : this.contactRoles;
+    public Optional<List<String>> contactRoles() {
+        return Optional.ofNullable(this.contactRoles);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -71,10 +71,10 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="locale")
-      private final @Nullable String locale;
+    private @Nullable String locale;
 
     public Optional<String> locale() {
-        return this.locale == null ? Optional.empty() : Optional.ofNullable(this.locale);
+        return Optional.ofNullable(this.locale);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -93,7 +93,7 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="threshold", required=true)
-      private final Double threshold;
+    private Double threshold;
 
     public Double threshold() {
         return this.threshold;
@@ -104,118 +104,103 @@ public final class NotificationResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="thresholdType")
-      private final @Nullable String thresholdType;
+    private @Nullable String thresholdType;
 
     public Optional<String> thresholdType() {
-        return this.thresholdType == null ? Optional.empty() : Optional.ofNullable(this.thresholdType);
+        return Optional.ofNullable(this.thresholdType);
     }
 
-    public NotificationResponse(
-        List<String> contactEmails,
-        @Nullable List<String> contactGroups,
-        @Nullable List<String> contactRoles,
-        Boolean enabled,
-        @Nullable String locale,
-        String operator,
-        Double threshold,
-        @Nullable String thresholdType) {
-        this.contactEmails = Objects.requireNonNull(contactEmails, "expected parameter 'contactEmails' to be non-null");
-        this.contactGroups = contactGroups;
-        this.contactRoles = contactRoles;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.locale = locale;
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.thresholdType = Codegen.stringProp("thresholdType").arg(thresholdType).def("Actual").getNullable();
-    }
+    private NotificationResponse() {}
 
-    private NotificationResponse() {
-        this.contactEmails = List.of();
-        this.contactGroups = List.of();
-        this.contactRoles = List.of();
-        this.enabled = null;
-        this.locale = null;
-        this.operator = null;
-        this.threshold = null;
-        this.thresholdType = null;
+    private NotificationResponse(NotificationResponse $) {
+        this.contactEmails = $.contactEmails;
+        this.contactGroups = $.contactGroups;
+        this.contactRoles = $.contactRoles;
+        this.enabled = $.enabled;
+        this.locale = $.locale;
+        this.operator = $.operator;
+        this.threshold = $.threshold;
+        this.thresholdType = $.thresholdType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> contactEmails;
-        private @Nullable List<String> contactGroups;
-        private @Nullable List<String> contactRoles;
-        private Boolean enabled;
-        private @Nullable String locale;
-        private String operator;
-        private Double threshold;
-        private @Nullable String thresholdType;
+        private NotificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationResponse();
         }
 
         public Builder(NotificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactEmails = defaults.contactEmails;
-    	      this.contactGroups = defaults.contactGroups;
-    	      this.contactRoles = defaults.contactRoles;
-    	      this.enabled = defaults.enabled;
-    	      this.locale = defaults.locale;
-    	      this.operator = defaults.operator;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdType = defaults.thresholdType;
+            $ = new NotificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contactEmails(List<String> contactEmails) {
-            this.contactEmails = Objects.requireNonNull(contactEmails);
+            $.contactEmails = contactEmails;
             return this;
         }
+
         public Builder contactEmails(String... contactEmails) {
             return contactEmails(List.of(contactEmails));
         }
+
         public Builder contactGroups(@Nullable List<String> contactGroups) {
-            this.contactGroups = contactGroups;
+            $.contactGroups = contactGroups;
             return this;
         }
+
         public Builder contactGroups(String... contactGroups) {
             return contactGroups(List.of(contactGroups));
         }
+
         public Builder contactRoles(@Nullable List<String> contactRoles) {
-            this.contactRoles = contactRoles;
+            $.contactRoles = contactRoles;
             return this;
         }
+
         public Builder contactRoles(String... contactRoles) {
             return contactRoles(List.of(contactRoles));
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder locale(@Nullable String locale) {
-            this.locale = locale;
+            $.locale = locale;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder thresholdType(@Nullable String thresholdType) {
-            this.thresholdType = thresholdType;
+            $.thresholdType = thresholdType;
             return this;
-        }        public NotificationResponse build() {
-            return new NotificationResponse(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);
+        }
+
+        public NotificationResponse build() {
+            $.contactEmails = Objects.requireNonNull($.contactEmails, "expected parameter 'contactEmails' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            $.thresholdType = Codegen.stringProp("thresholdType").arg($.thresholdType).def("Actual").getNullable();
+            return $;
         }
     }
+
 }

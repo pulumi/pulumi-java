@@ -21,45 +21,45 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse
      * 
      */
     @Import(name="domainNameLabel", required=true)
-      private final String domainNameLabel;
+    private String domainNameLabel;
 
     public String domainNameLabel() {
         return this.domainNameLabel;
     }
 
-    public VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse(String domainNameLabel) {
-        this.domainNameLabel = Objects.requireNonNull(domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
-    }
+    private VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse() {}
 
-    private VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse() {
-        this.domainNameLabel = null;
+    private VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse(VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse $) {
+        this.domainNameLabel = $.domainNameLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainNameLabel;
+        private VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse();
         }
 
         public Builder(VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainNameLabel = defaults.domainNameLabel;
+            $ = new VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainNameLabel(String domainNameLabel) {
-            this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
+            $.domainNameLabel = domainNameLabel;
             return this;
-        }        public VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse build() {
-            return new VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse(domainNameLabel);
+        }
+
+        public VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse build() {
+            $.domainNameLabel = Objects.requireNonNull($.domainNameLabel, "expected parameter 'domainNameLabel' to be non-null");
+            return $;
         }
     }
+
 }

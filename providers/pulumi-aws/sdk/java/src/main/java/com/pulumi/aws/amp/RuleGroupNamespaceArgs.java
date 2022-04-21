@@ -5,9 +5,9 @@ package com.pulumi.aws.amp;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RuleGroupNamespaceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="data", required=true)
-      private final Output<String> data;
+    private Output<String> data;
 
     public Output<String> data() {
         return this.data;
@@ -31,10 +31,10 @@ public final class RuleGroupNamespaceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class RuleGroupNamespaceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final Output<String> workspaceId;
+    private Output<String> workspaceId;
 
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
-    public RuleGroupNamespaceArgs(
-        Output<String> data,
-        @Nullable Output<String> name,
-        Output<String> workspaceId) {
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.name = name;
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-    }
+    private RuleGroupNamespaceArgs() {}
 
-    private RuleGroupNamespaceArgs() {
-        this.data = Codegen.empty();
-        this.name = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private RuleGroupNamespaceArgs(RuleGroupNamespaceArgs $) {
+        this.data = $.data;
+        this.name = $.name;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> data;
-        private @Nullable Output<String> name;
-        private Output<String> workspaceId;
+        private RuleGroupNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupNamespaceArgs();
         }
 
         public Builder(RuleGroupNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.name = defaults.name;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new RuleGroupNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(Output<String> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(String data) {
-            this.data = Output.of(Objects.requireNonNull(data));
-            return this;
+            return data(Output.of(data));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder workspaceId(Output<String> workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
-            return this;
-        }        public RuleGroupNamespaceArgs build() {
-            return new RuleGroupNamespaceArgs(data, name, workspaceId);
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public RuleGroupNamespaceArgs build() {
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

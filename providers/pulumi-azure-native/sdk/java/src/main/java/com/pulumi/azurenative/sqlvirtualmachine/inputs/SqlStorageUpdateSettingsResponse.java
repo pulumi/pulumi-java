@@ -24,10 +24,10 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="diskConfigurationType")
-      private final @Nullable String diskConfigurationType;
+    private @Nullable String diskConfigurationType;
 
     public Optional<String> diskConfigurationType() {
-        return this.diskConfigurationType == null ? Optional.empty() : Optional.ofNullable(this.diskConfigurationType);
+        return Optional.ofNullable(this.diskConfigurationType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="diskCount")
-      private final @Nullable Integer diskCount;
+    private @Nullable Integer diskCount;
 
     public Optional<Integer> diskCount() {
-        return this.diskCount == null ? Optional.empty() : Optional.ofNullable(this.diskCount);
+        return Optional.ofNullable(this.diskCount);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class SqlStorageUpdateSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="startingDeviceId")
-      private final @Nullable Integer startingDeviceId;
+    private @Nullable Integer startingDeviceId;
 
     public Optional<Integer> startingDeviceId() {
-        return this.startingDeviceId == null ? Optional.empty() : Optional.ofNullable(this.startingDeviceId);
+        return Optional.ofNullable(this.startingDeviceId);
     }
 
-    public SqlStorageUpdateSettingsResponse(
-        @Nullable String diskConfigurationType,
-        @Nullable Integer diskCount,
-        @Nullable Integer startingDeviceId) {
-        this.diskConfigurationType = diskConfigurationType;
-        this.diskCount = diskCount;
-        this.startingDeviceId = startingDeviceId;
-    }
+    private SqlStorageUpdateSettingsResponse() {}
 
-    private SqlStorageUpdateSettingsResponse() {
-        this.diskConfigurationType = null;
-        this.diskCount = null;
-        this.startingDeviceId = null;
+    private SqlStorageUpdateSettingsResponse(SqlStorageUpdateSettingsResponse $) {
+        this.diskConfigurationType = $.diskConfigurationType;
+        this.diskCount = $.diskCount;
+        this.startingDeviceId = $.startingDeviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlStorageUpdateSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskConfigurationType;
-        private @Nullable Integer diskCount;
-        private @Nullable Integer startingDeviceId;
+        private SqlStorageUpdateSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlStorageUpdateSettingsResponse();
         }
 
         public Builder(SqlStorageUpdateSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskConfigurationType = defaults.diskConfigurationType;
-    	      this.diskCount = defaults.diskCount;
-    	      this.startingDeviceId = defaults.startingDeviceId;
+            $ = new SqlStorageUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
-            this.diskConfigurationType = diskConfigurationType;
+            $.diskConfigurationType = diskConfigurationType;
             return this;
         }
+
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = diskCount;
+            $.diskCount = diskCount;
             return this;
         }
+
         public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
-            this.startingDeviceId = startingDeviceId;
+            $.startingDeviceId = startingDeviceId;
             return this;
-        }        public SqlStorageUpdateSettingsResponse build() {
-            return new SqlStorageUpdateSettingsResponse(diskConfigurationType, diskCount, startingDeviceId);
+        }
+
+        public SqlStorageUpdateSettingsResponse build() {
+            return $;
         }
     }
+
 }

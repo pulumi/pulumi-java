@@ -5,7 +5,6 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceLambdaConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="functionArn", required=true)
-      private final Output<String> functionArn;
+    private Output<String> functionArn;
 
     public Output<String> functionArn() {
         return this.functionArn;
     }
 
-    public DataSourceLambdaConfigArgs(Output<String> functionArn) {
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-    }
+    private DataSourceLambdaConfigArgs() {}
 
-    private DataSourceLambdaConfigArgs() {
-        this.functionArn = Codegen.empty();
+    private DataSourceLambdaConfigArgs(DataSourceLambdaConfigArgs $) {
+        this.functionArn = $.functionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceLambdaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> functionArn;
+        private DataSourceLambdaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceLambdaConfigArgs();
         }
 
         public Builder(DataSourceLambdaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
+            $ = new DataSourceLambdaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(Output<String> functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder functionArn(String functionArn) {
-            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
-            return this;
-        }        public DataSourceLambdaConfigArgs build() {
-            return new DataSourceLambdaConfigArgs(functionArn);
+            return functionArn(Output.of(functionArn));
+        }
+
+        public DataSourceLambdaConfigArgs build() {
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetClientArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="brand", required=true)
-      private final String brand;
+    private String brand;
 
     public String brand() {
         return this.brand;
@@ -28,55 +28,52 @@ public final class GetClientArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
     }
 
-    public GetClientArgs(
-        String brand,
-        String clientId) {
-        this.brand = Objects.requireNonNull(brand, "expected parameter 'brand' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-    }
+    private GetClientArgs() {}
 
-    private GetClientArgs() {
-        this.brand = null;
-        this.clientId = null;
+    private GetClientArgs(GetClientArgs $) {
+        this.brand = $.brand;
+        this.clientId = $.clientId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClientArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String brand;
-        private String clientId;
+        private GetClientArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClientArgs();
         }
 
         public Builder(GetClientArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brand = defaults.brand;
-    	      this.clientId = defaults.clientId;
+            $ = new GetClientArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brand(String brand) {
-            this.brand = Objects.requireNonNull(brand);
+            $.brand = brand;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
-        }        public GetClientArgs build() {
-            return new GetClientArgs(brand, clientId);
+        }
+
+        public GetClientArgs build() {
+            $.brand = Objects.requireNonNull($.brand, "expected parameter 'brand' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            return $;
         }
     }
+
 }

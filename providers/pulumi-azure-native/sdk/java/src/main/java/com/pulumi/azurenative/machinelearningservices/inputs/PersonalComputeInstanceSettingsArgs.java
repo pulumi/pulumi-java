@@ -6,8 +6,8 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.AssignedUserArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PersonalComputeInstanceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="assignedUser")
-      private final @Nullable Output<AssignedUserArgs> assignedUser;
+    private @Nullable Output<AssignedUserArgs> assignedUser;
 
-    public Output<AssignedUserArgs> assignedUser() {
-        return this.assignedUser == null ? Codegen.empty() : this.assignedUser;
+    public Optional<Output<AssignedUserArgs>> assignedUser() {
+        return Optional.ofNullable(this.assignedUser);
     }
 
-    public PersonalComputeInstanceSettingsArgs(@Nullable Output<AssignedUserArgs> assignedUser) {
-        this.assignedUser = assignedUser;
-    }
+    private PersonalComputeInstanceSettingsArgs() {}
 
-    private PersonalComputeInstanceSettingsArgs() {
-        this.assignedUser = Codegen.empty();
+    private PersonalComputeInstanceSettingsArgs(PersonalComputeInstanceSettingsArgs $) {
+        this.assignedUser = $.assignedUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersonalComputeInstanceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AssignedUserArgs> assignedUser;
+        private PersonalComputeInstanceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersonalComputeInstanceSettingsArgs();
         }
 
         public Builder(PersonalComputeInstanceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignedUser = defaults.assignedUser;
+            $ = new PersonalComputeInstanceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignedUser(@Nullable Output<AssignedUserArgs> assignedUser) {
-            this.assignedUser = assignedUser;
+            $.assignedUser = assignedUser;
             return this;
         }
-        public Builder assignedUser(@Nullable AssignedUserArgs assignedUser) {
-            this.assignedUser = Codegen.ofNullable(assignedUser);
-            return this;
-        }        public PersonalComputeInstanceSettingsArgs build() {
-            return new PersonalComputeInstanceSettingsArgs(assignedUser);
+
+        public Builder assignedUser(AssignedUserArgs assignedUser) {
+            return assignedUser(Output.of(assignedUser));
+        }
+
+        public PersonalComputeInstanceSettingsArgs build() {
+            return $;
         }
     }
+
 }

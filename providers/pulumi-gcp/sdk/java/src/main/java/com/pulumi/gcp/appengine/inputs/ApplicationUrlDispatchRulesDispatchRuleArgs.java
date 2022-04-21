@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends com.pulum
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends com.pulum
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -45,76 +45,70 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends com.pulum
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public ApplicationUrlDispatchRulesDispatchRuleArgs(
-        @Nullable Output<String> domain,
-        Output<String> path,
-        Output<String> service) {
-        this.domain = domain;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private ApplicationUrlDispatchRulesDispatchRuleArgs() {}
 
-    private ApplicationUrlDispatchRulesDispatchRuleArgs() {
-        this.domain = Codegen.empty();
-        this.path = Codegen.empty();
-        this.service = Codegen.empty();
+    private ApplicationUrlDispatchRulesDispatchRuleArgs(ApplicationUrlDispatchRulesDispatchRuleArgs $) {
+        this.domain = $.domain;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationUrlDispatchRulesDispatchRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private Output<String> path;
-        private Output<String> service;
+        private ApplicationUrlDispatchRulesDispatchRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationUrlDispatchRulesDispatchRuleArgs();
         }
 
         public Builder(ApplicationUrlDispatchRulesDispatchRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new ApplicationUrlDispatchRulesDispatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public ApplicationUrlDispatchRulesDispatchRuleArgs build() {
-            return new ApplicationUrlDispatchRulesDispatchRuleArgs(domain, path, service);
+            return service(Output.of(service));
+        }
+
+        public ApplicationUrlDispatchRulesDispatchRuleArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

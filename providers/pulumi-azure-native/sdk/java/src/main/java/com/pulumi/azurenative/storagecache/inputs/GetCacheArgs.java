@@ -17,7 +17,7 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cacheName", required=true)
-      private final String cacheName;
+    private String cacheName;
 
     public String cacheName() {
         return this.cacheName;
@@ -28,55 +28,52 @@ public final class GetCacheArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCacheArgs(
-        String cacheName,
-        String resourceGroupName) {
-        this.cacheName = Objects.requireNonNull(cacheName, "expected parameter 'cacheName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCacheArgs() {}
 
-    private GetCacheArgs() {
-        this.cacheName = null;
-        this.resourceGroupName = null;
+    private GetCacheArgs(GetCacheArgs $) {
+        this.cacheName = $.cacheName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCacheArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cacheName;
-        private String resourceGroupName;
+        private GetCacheArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCacheArgs();
         }
 
         public Builder(GetCacheArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheName = defaults.cacheName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCacheArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheName(String cacheName) {
-            this.cacheName = Objects.requireNonNull(cacheName);
+            $.cacheName = cacheName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCacheArgs build() {
-            return new GetCacheArgs(cacheName, resourceGroupName);
+        }
+
+        public GetCacheArgs build() {
+            $.cacheName = Objects.requireNonNull($.cacheName, "expected parameter 'cacheName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

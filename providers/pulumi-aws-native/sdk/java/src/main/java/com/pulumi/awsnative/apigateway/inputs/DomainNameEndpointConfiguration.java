@@ -16,48 +16,48 @@ public final class DomainNameEndpointConfiguration extends com.pulumi.resources.
     public static final DomainNameEndpointConfiguration Empty = new DomainNameEndpointConfiguration();
 
     @Import(name="types")
-      private final @Nullable List<String> types;
+    private @Nullable List<String> types;
 
-    public List<String> types() {
-        return this.types == null ? List.of() : this.types;
+    public Optional<List<String>> types() {
+        return Optional.ofNullable(this.types);
     }
 
-    public DomainNameEndpointConfiguration(@Nullable List<String> types) {
-        this.types = types;
-    }
+    private DomainNameEndpointConfiguration() {}
 
-    private DomainNameEndpointConfiguration() {
-        this.types = List.of();
+    private DomainNameEndpointConfiguration(DomainNameEndpointConfiguration $) {
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameEndpointConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> types;
+        private DomainNameEndpointConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameEndpointConfiguration();
         }
 
         public Builder(DomainNameEndpointConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.types = defaults.types;
+            $ = new DomainNameEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder types(@Nullable List<String> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public DomainNameEndpointConfiguration build() {
-            return new DomainNameEndpointConfiguration(types);
+        }
+
+        public DomainNameEndpointConfiguration build() {
+            return $;
         }
     }
+
 }

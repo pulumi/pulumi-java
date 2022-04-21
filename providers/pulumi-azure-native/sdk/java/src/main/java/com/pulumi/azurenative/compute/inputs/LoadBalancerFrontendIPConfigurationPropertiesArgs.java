@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable Output<SubResourceArgs> publicIPAddress;
+    private @Nullable Output<SubResourceArgs> publicIPAddress;
 
-    public Output<SubResourceArgs> publicIPAddress() {
-        return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
+    public Optional<Output<SubResourceArgs>> publicIPAddress() {
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubResourceArgs> subnet;
+    private @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubResourceArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public LoadBalancerFrontendIPConfigurationPropertiesArgs(
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<SubResourceArgs> publicIPAddress,
-        @Nullable Output<SubResourceArgs> subnet) {
-        this.privateIPAddress = privateIPAddress;
-        this.publicIPAddress = publicIPAddress;
-        this.subnet = subnet;
-    }
+    private LoadBalancerFrontendIPConfigurationPropertiesArgs() {}
 
-    private LoadBalancerFrontendIPConfigurationPropertiesArgs() {
-        this.privateIPAddress = Codegen.empty();
-        this.publicIPAddress = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private LoadBalancerFrontendIPConfigurationPropertiesArgs(LoadBalancerFrontendIPConfigurationPropertiesArgs $) {
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerFrontendIPConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<SubResourceArgs> publicIPAddress;
-        private @Nullable Output<SubResourceArgs> subnet;
+        private LoadBalancerFrontendIPConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerFrontendIPConfigurationPropertiesArgs();
         }
 
         public Builder(LoadBalancerFrontendIPConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
+            $ = new LoadBalancerFrontendIPConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
-        public Builder publicIPAddress(@Nullable SubResourceArgs publicIPAddress) {
-            this.publicIPAddress = Codegen.ofNullable(publicIPAddress);
-            return this;
+
+        public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
+            return publicIPAddress(Output.of(publicIPAddress));
         }
+
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public LoadBalancerFrontendIPConfigurationPropertiesArgs build() {
-            return new LoadBalancerFrontendIPConfigurationPropertiesArgs(privateIPAddress, publicIPAddress, subnet);
+
+        public Builder subnet(SubResourceArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public LoadBalancerFrontendIPConfigurationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

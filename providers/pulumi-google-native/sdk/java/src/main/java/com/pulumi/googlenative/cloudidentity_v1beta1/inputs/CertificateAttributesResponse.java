@@ -22,7 +22,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="certificateTemplate", required=true)
-      private final CertificateTemplateResponse certificateTemplate;
+    private CertificateTemplateResponse certificateTemplate;
 
     public CertificateTemplateResponse certificateTemplate() {
         return this.certificateTemplate;
@@ -33,7 +33,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final String fingerprint;
+    private String fingerprint;
 
     public String fingerprint() {
         return this.fingerprint;
@@ -44,7 +44,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -55,7 +55,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
@@ -66,7 +66,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
@@ -77,7 +77,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="thumbprint", required=true)
-      private final String thumbprint;
+    private String thumbprint;
 
     public String thumbprint() {
         return this.thumbprint;
@@ -88,7 +88,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validationState", required=true)
-      private final String validationState;
+    private String validationState;
 
     public String validationState() {
         return this.validationState;
@@ -99,7 +99,7 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validityExpirationTime", required=true)
-      private final String validityExpirationTime;
+    private String validityExpirationTime;
 
     public String validityExpirationTime() {
         return this.validityExpirationTime;
@@ -110,118 +110,101 @@ public final class CertificateAttributesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validityStartTime", required=true)
-      private final String validityStartTime;
+    private String validityStartTime;
 
     public String validityStartTime() {
         return this.validityStartTime;
     }
 
-    public CertificateAttributesResponse(
-        CertificateTemplateResponse certificateTemplate,
-        String fingerprint,
-        String issuer,
-        String serialNumber,
-        String subject,
-        String thumbprint,
-        String validationState,
-        String validityExpirationTime,
-        String validityStartTime) {
-        this.certificateTemplate = Objects.requireNonNull(certificateTemplate, "expected parameter 'certificateTemplate' to be non-null");
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.thumbprint = Objects.requireNonNull(thumbprint, "expected parameter 'thumbprint' to be non-null");
-        this.validationState = Objects.requireNonNull(validationState, "expected parameter 'validationState' to be non-null");
-        this.validityExpirationTime = Objects.requireNonNull(validityExpirationTime, "expected parameter 'validityExpirationTime' to be non-null");
-        this.validityStartTime = Objects.requireNonNull(validityStartTime, "expected parameter 'validityStartTime' to be non-null");
-    }
+    private CertificateAttributesResponse() {}
 
-    private CertificateAttributesResponse() {
-        this.certificateTemplate = null;
-        this.fingerprint = null;
-        this.issuer = null;
-        this.serialNumber = null;
-        this.subject = null;
-        this.thumbprint = null;
-        this.validationState = null;
-        this.validityExpirationTime = null;
-        this.validityStartTime = null;
+    private CertificateAttributesResponse(CertificateAttributesResponse $) {
+        this.certificateTemplate = $.certificateTemplate;
+        this.fingerprint = $.fingerprint;
+        this.issuer = $.issuer;
+        this.serialNumber = $.serialNumber;
+        this.subject = $.subject;
+        this.thumbprint = $.thumbprint;
+        this.validationState = $.validationState;
+        this.validityExpirationTime = $.validityExpirationTime;
+        this.validityStartTime = $.validityStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CertificateTemplateResponse certificateTemplate;
-        private String fingerprint;
-        private String issuer;
-        private String serialNumber;
-        private String subject;
-        private String thumbprint;
-        private String validationState;
-        private String validityExpirationTime;
-        private String validityStartTime;
+        private CertificateAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAttributesResponse();
         }
 
         public Builder(CertificateAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateTemplate = defaults.certificateTemplate;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.issuer = defaults.issuer;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.subject = defaults.subject;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.validationState = defaults.validationState;
-    	      this.validityExpirationTime = defaults.validityExpirationTime;
-    	      this.validityStartTime = defaults.validityStartTime;
+            $ = new CertificateAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateTemplate(CertificateTemplateResponse certificateTemplate) {
-            this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
+            $.certificateTemplate = certificateTemplate;
             return this;
         }
+
         public Builder fingerprint(String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder thumbprint(String thumbprint) {
-            this.thumbprint = Objects.requireNonNull(thumbprint);
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder validationState(String validationState) {
-            this.validationState = Objects.requireNonNull(validationState);
+            $.validationState = validationState;
             return this;
         }
+
         public Builder validityExpirationTime(String validityExpirationTime) {
-            this.validityExpirationTime = Objects.requireNonNull(validityExpirationTime);
+            $.validityExpirationTime = validityExpirationTime;
             return this;
         }
+
         public Builder validityStartTime(String validityStartTime) {
-            this.validityStartTime = Objects.requireNonNull(validityStartTime);
+            $.validityStartTime = validityStartTime;
             return this;
-        }        public CertificateAttributesResponse build() {
-            return new CertificateAttributesResponse(certificateTemplate, fingerprint, issuer, serialNumber, subject, thumbprint, validationState, validityExpirationTime, validityStartTime);
+        }
+
+        public CertificateAttributesResponse build() {
+            $.certificateTemplate = Objects.requireNonNull($.certificateTemplate, "expected parameter 'certificateTemplate' to be non-null");
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.thumbprint = Objects.requireNonNull($.thumbprint, "expected parameter 'thumbprint' to be non-null");
+            $.validationState = Objects.requireNonNull($.validationState, "expected parameter 'validationState' to be non-null");
+            $.validityExpirationTime = Objects.requireNonNull($.validityExpirationTime, "expected parameter 'validityExpirationTime' to be non-null");
+            $.validityStartTime = Objects.requireNonNull($.validityStartTime, "expected parameter 'validityStartTime' to be non-null");
+            return $;
         }
     }
+
 }

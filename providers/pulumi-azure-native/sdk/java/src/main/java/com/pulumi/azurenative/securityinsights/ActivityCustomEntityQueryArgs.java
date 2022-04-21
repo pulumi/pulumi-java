@@ -14,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="entitiesFilter")
-      private final @Nullable Output<Map<String,List<String>>> entitiesFilter;
+    private @Nullable Output<Map<String,List<String>>> entitiesFilter;
 
-    public Output<Map<String,List<String>>> entitiesFilter() {
-        return this.entitiesFilter == null ? Codegen.empty() : this.entitiesFilter;
+    public Optional<Output<Map<String,List<String>>>> entitiesFilter() {
+        return Optional.ofNullable(this.entitiesFilter);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="entityQueryId")
-      private final @Nullable Output<String> entityQueryId;
+    private @Nullable Output<String> entityQueryId;
 
-    public Output<String> entityQueryId() {
-        return this.entityQueryId == null ? Codegen.empty() : this.entityQueryId;
+    public Optional<Output<String>> entityQueryId() {
+        return Optional.ofNullable(this.entityQueryId);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="inputEntityType")
-      private final @Nullable Output<Either<String,EntityType>> inputEntityType;
+    private @Nullable Output<Either<String,EntityType>> inputEntityType;
 
-    public Output<Either<String,EntityType>> inputEntityType() {
-        return this.inputEntityType == null ? Codegen.empty() : this.inputEntityType;
+    public Optional<Output<Either<String,EntityType>>> inputEntityType() {
+        return Optional.ofNullable(this.inputEntityType);
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -104,7 +105,7 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -115,10 +116,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="queryDefinitions")
-      private final @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
+    private @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
 
-    public Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions() {
-        return this.queryDefinitions == null ? Codegen.empty() : this.queryDefinitions;
+    public Optional<Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs>> queryDefinitions() {
+        return Optional.ofNullable(this.queryDefinitions);
     }
 
     /**
@@ -126,10 +127,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="requiredInputFieldsSets")
-      private final @Nullable Output<List<List<String>>> requiredInputFieldsSets;
+    private @Nullable Output<List<List<String>>> requiredInputFieldsSets;
 
-    public Output<List<List<String>>> requiredInputFieldsSets() {
-        return this.requiredInputFieldsSets == null ? Codegen.empty() : this.requiredInputFieldsSets;
+    public Optional<Output<List<List<String>>>> requiredInputFieldsSets() {
+        return Optional.ofNullable(this.requiredInputFieldsSets);
     }
 
     /**
@@ -137,7 +138,7 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -148,10 +149,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="templateName")
-      private final @Nullable Output<String> templateName;
+    private @Nullable Output<String> templateName;
 
-    public Output<String> templateName() {
-        return this.templateName == null ? Codegen.empty() : this.templateName;
+    public Optional<Output<String>> templateName() {
+        return Optional.ofNullable(this.templateName);
     }
 
     /**
@@ -159,10 +160,10 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -170,219 +171,186 @@ public final class ActivityCustomEntityQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ActivityCustomEntityQueryArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Map<String,List<String>>> entitiesFilter,
-        @Nullable Output<String> entityQueryId,
-        @Nullable Output<Either<String,EntityType>> inputEntityType,
-        Output<String> kind,
-        Output<String> operationalInsightsResourceProvider,
-        @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions,
-        @Nullable Output<List<List<String>>> requiredInputFieldsSets,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> templateName,
-        @Nullable Output<String> title,
-        Output<String> workspaceName) {
-        this.content = content;
-        this.description = description;
-        this.enabled = enabled;
-        this.entitiesFilter = entitiesFilter;
-        this.entityQueryId = entityQueryId;
-        this.inputEntityType = inputEntityType;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.queryDefinitions = queryDefinitions;
-        this.requiredInputFieldsSets = requiredInputFieldsSets;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.templateName = templateName;
-        this.title = title;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ActivityCustomEntityQueryArgs() {}
 
-    private ActivityCustomEntityQueryArgs() {
-        this.content = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.entitiesFilter = Codegen.empty();
-        this.entityQueryId = Codegen.empty();
-        this.inputEntityType = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.queryDefinitions = Codegen.empty();
-        this.requiredInputFieldsSets = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.templateName = Codegen.empty();
-        this.title = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ActivityCustomEntityQueryArgs(ActivityCustomEntityQueryArgs $) {
+        this.content = $.content;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.entitiesFilter = $.entitiesFilter;
+        this.entityQueryId = $.entityQueryId;
+        this.inputEntityType = $.inputEntityType;
+        this.kind = $.kind;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.queryDefinitions = $.queryDefinitions;
+        this.requiredInputFieldsSets = $.requiredInputFieldsSets;
+        this.resourceGroupName = $.resourceGroupName;
+        this.templateName = $.templateName;
+        this.title = $.title;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityCustomEntityQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Map<String,List<String>>> entitiesFilter;
-        private @Nullable Output<String> entityQueryId;
-        private @Nullable Output<Either<String,EntityType>> inputEntityType;
-        private Output<String> kind;
-        private Output<String> operationalInsightsResourceProvider;
-        private @Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
-        private @Nullable Output<List<List<String>>> requiredInputFieldsSets;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> templateName;
-        private @Nullable Output<String> title;
-        private Output<String> workspaceName;
+        private ActivityCustomEntityQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityCustomEntityQueryArgs();
         }
 
         public Builder(ActivityCustomEntityQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.entitiesFilter = defaults.entitiesFilter;
-    	      this.entityQueryId = defaults.entityQueryId;
-    	      this.inputEntityType = defaults.inputEntityType;
-    	      this.kind = defaults.kind;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.queryDefinitions = defaults.queryDefinitions;
-    	      this.requiredInputFieldsSets = defaults.requiredInputFieldsSets;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.templateName = defaults.templateName;
-    	      this.title = defaults.title;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ActivityCustomEntityQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder entitiesFilter(@Nullable Output<Map<String,List<String>>> entitiesFilter) {
-            this.entitiesFilter = entitiesFilter;
+            $.entitiesFilter = entitiesFilter;
             return this;
         }
-        public Builder entitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
-            this.entitiesFilter = Codegen.ofNullable(entitiesFilter);
-            return this;
+
+        public Builder entitiesFilter(Map<String,List<String>> entitiesFilter) {
+            return entitiesFilter(Output.of(entitiesFilter));
         }
+
         public Builder entityQueryId(@Nullable Output<String> entityQueryId) {
-            this.entityQueryId = entityQueryId;
+            $.entityQueryId = entityQueryId;
             return this;
         }
-        public Builder entityQueryId(@Nullable String entityQueryId) {
-            this.entityQueryId = Codegen.ofNullable(entityQueryId);
-            return this;
+
+        public Builder entityQueryId(String entityQueryId) {
+            return entityQueryId(Output.of(entityQueryId));
         }
+
         public Builder inputEntityType(@Nullable Output<Either<String,EntityType>> inputEntityType) {
-            this.inputEntityType = inputEntityType;
+            $.inputEntityType = inputEntityType;
             return this;
         }
-        public Builder inputEntityType(@Nullable Either<String,EntityType> inputEntityType) {
-            this.inputEntityType = Codegen.ofNullable(inputEntityType);
-            return this;
+
+        public Builder inputEntityType(Either<String,EntityType> inputEntityType) {
+            return inputEntityType(Output.of(inputEntityType));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder queryDefinitions(@Nullable Output<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions) {
-            this.queryDefinitions = queryDefinitions;
+            $.queryDefinitions = queryDefinitions;
             return this;
         }
-        public Builder queryDefinitions(@Nullable ActivityEntityQueriesPropertiesQueryDefinitionsArgs queryDefinitions) {
-            this.queryDefinitions = Codegen.ofNullable(queryDefinitions);
-            return this;
+
+        public Builder queryDefinitions(ActivityEntityQueriesPropertiesQueryDefinitionsArgs queryDefinitions) {
+            return queryDefinitions(Output.of(queryDefinitions));
         }
+
         public Builder requiredInputFieldsSets(@Nullable Output<List<List<String>>> requiredInputFieldsSets) {
-            this.requiredInputFieldsSets = requiredInputFieldsSets;
+            $.requiredInputFieldsSets = requiredInputFieldsSets;
             return this;
         }
-        public Builder requiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
-            this.requiredInputFieldsSets = Codegen.ofNullable(requiredInputFieldsSets);
-            return this;
+
+        public Builder requiredInputFieldsSets(List<List<String>> requiredInputFieldsSets) {
+            return requiredInputFieldsSets(Output.of(requiredInputFieldsSets));
         }
+
+        public Builder requiredInputFieldsSets(List<String>... requiredInputFieldsSets) {
+            return requiredInputFieldsSets(List.of(requiredInputFieldsSets));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder templateName(@Nullable Output<String> templateName) {
-            this.templateName = templateName;
+            $.templateName = templateName;
             return this;
         }
-        public Builder templateName(@Nullable String templateName) {
-            this.templateName = Codegen.ofNullable(templateName);
-            return this;
+
+        public Builder templateName(String templateName) {
+            return templateName(Output.of(templateName));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ActivityCustomEntityQueryArgs build() {
-            return new ActivityCustomEntityQueryArgs(content, description, enabled, entitiesFilter, entityQueryId, inputEntityType, kind, operationalInsightsResourceProvider, queryDefinitions, requiredInputFieldsSets, resourceGroupName, templateName, title, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ActivityCustomEntityQueryArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

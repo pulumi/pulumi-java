@@ -6,8 +6,8 @@ package com.pulumi.awsnative.mwaa.inputs;
 import com.pulumi.awsnative.mwaa.inputs.EnvironmentModuleLoggingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,130 +20,116 @@ public final class EnvironmentLoggingConfigurationArgs extends com.pulumi.resour
     public static final EnvironmentLoggingConfigurationArgs Empty = new EnvironmentLoggingConfigurationArgs();
 
     @Import(name="dagProcessingLogs")
-      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
+    private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
 
-    public Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs() {
-        return this.dagProcessingLogs == null ? Codegen.empty() : this.dagProcessingLogs;
+    public Optional<Output<EnvironmentModuleLoggingConfigurationArgs>> dagProcessingLogs() {
+        return Optional.ofNullable(this.dagProcessingLogs);
     }
 
     @Import(name="schedulerLogs")
-      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
+    private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
 
-    public Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs() {
-        return this.schedulerLogs == null ? Codegen.empty() : this.schedulerLogs;
+    public Optional<Output<EnvironmentModuleLoggingConfigurationArgs>> schedulerLogs() {
+        return Optional.ofNullable(this.schedulerLogs);
     }
 
     @Import(name="taskLogs")
-      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
+    private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
 
-    public Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs() {
-        return this.taskLogs == null ? Codegen.empty() : this.taskLogs;
+    public Optional<Output<EnvironmentModuleLoggingConfigurationArgs>> taskLogs() {
+        return Optional.ofNullable(this.taskLogs);
     }
 
     @Import(name="webserverLogs")
-      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
+    private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
 
-    public Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs() {
-        return this.webserverLogs == null ? Codegen.empty() : this.webserverLogs;
+    public Optional<Output<EnvironmentModuleLoggingConfigurationArgs>> webserverLogs() {
+        return Optional.ofNullable(this.webserverLogs);
     }
 
     @Import(name="workerLogs")
-      private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
+    private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
 
-    public Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs() {
-        return this.workerLogs == null ? Codegen.empty() : this.workerLogs;
+    public Optional<Output<EnvironmentModuleLoggingConfigurationArgs>> workerLogs() {
+        return Optional.ofNullable(this.workerLogs);
     }
 
-    public EnvironmentLoggingConfigurationArgs(
-        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs,
-        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs,
-        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs,
-        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs,
-        @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs) {
-        this.dagProcessingLogs = dagProcessingLogs;
-        this.schedulerLogs = schedulerLogs;
-        this.taskLogs = taskLogs;
-        this.webserverLogs = webserverLogs;
-        this.workerLogs = workerLogs;
-    }
+    private EnvironmentLoggingConfigurationArgs() {}
 
-    private EnvironmentLoggingConfigurationArgs() {
-        this.dagProcessingLogs = Codegen.empty();
-        this.schedulerLogs = Codegen.empty();
-        this.taskLogs = Codegen.empty();
-        this.webserverLogs = Codegen.empty();
-        this.workerLogs = Codegen.empty();
+    private EnvironmentLoggingConfigurationArgs(EnvironmentLoggingConfigurationArgs $) {
+        this.dagProcessingLogs = $.dagProcessingLogs;
+        this.schedulerLogs = $.schedulerLogs;
+        this.taskLogs = $.taskLogs;
+        this.webserverLogs = $.webserverLogs;
+        this.workerLogs = $.workerLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentLoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
-        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
-        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
-        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
-        private @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
+        private EnvironmentLoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentLoggingConfigurationArgs();
         }
 
         public Builder(EnvironmentLoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dagProcessingLogs = defaults.dagProcessingLogs;
-    	      this.schedulerLogs = defaults.schedulerLogs;
-    	      this.taskLogs = defaults.taskLogs;
-    	      this.webserverLogs = defaults.webserverLogs;
-    	      this.workerLogs = defaults.workerLogs;
+            $ = new EnvironmentLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dagProcessingLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs) {
-            this.dagProcessingLogs = dagProcessingLogs;
+            $.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
-        public Builder dagProcessingLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs dagProcessingLogs) {
-            this.dagProcessingLogs = Codegen.ofNullable(dagProcessingLogs);
-            return this;
+
+        public Builder dagProcessingLogs(EnvironmentModuleLoggingConfigurationArgs dagProcessingLogs) {
+            return dagProcessingLogs(Output.of(dagProcessingLogs));
         }
+
         public Builder schedulerLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs) {
-            this.schedulerLogs = schedulerLogs;
+            $.schedulerLogs = schedulerLogs;
             return this;
         }
-        public Builder schedulerLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs schedulerLogs) {
-            this.schedulerLogs = Codegen.ofNullable(schedulerLogs);
-            return this;
+
+        public Builder schedulerLogs(EnvironmentModuleLoggingConfigurationArgs schedulerLogs) {
+            return schedulerLogs(Output.of(schedulerLogs));
         }
+
         public Builder taskLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs) {
-            this.taskLogs = taskLogs;
+            $.taskLogs = taskLogs;
             return this;
         }
-        public Builder taskLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs taskLogs) {
-            this.taskLogs = Codegen.ofNullable(taskLogs);
-            return this;
+
+        public Builder taskLogs(EnvironmentModuleLoggingConfigurationArgs taskLogs) {
+            return taskLogs(Output.of(taskLogs));
         }
+
         public Builder webserverLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs) {
-            this.webserverLogs = webserverLogs;
+            $.webserverLogs = webserverLogs;
             return this;
         }
-        public Builder webserverLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs webserverLogs) {
-            this.webserverLogs = Codegen.ofNullable(webserverLogs);
-            return this;
+
+        public Builder webserverLogs(EnvironmentModuleLoggingConfigurationArgs webserverLogs) {
+            return webserverLogs(Output.of(webserverLogs));
         }
+
         public Builder workerLogs(@Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs) {
-            this.workerLogs = workerLogs;
+            $.workerLogs = workerLogs;
             return this;
         }
-        public Builder workerLogs(@Nullable EnvironmentModuleLoggingConfigurationArgs workerLogs) {
-            this.workerLogs = Codegen.ofNullable(workerLogs);
-            return this;
-        }        public EnvironmentLoggingConfigurationArgs build() {
-            return new EnvironmentLoggingConfigurationArgs(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);
+
+        public Builder workerLogs(EnvironmentModuleLoggingConfigurationArgs workerLogs) {
+            return workerLogs(Output.of(workerLogs));
+        }
+
+        public EnvironmentLoggingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

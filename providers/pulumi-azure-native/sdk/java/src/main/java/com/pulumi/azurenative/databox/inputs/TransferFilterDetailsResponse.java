@@ -28,10 +28,10 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="azureFileFilterDetails")
-      private final @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
+    private @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
 
     public Optional<AzureFileFilterDetailsResponse> azureFileFilterDetails() {
-        return this.azureFileFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.azureFileFilterDetails);
+        return Optional.ofNullable(this.azureFileFilterDetails);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="blobFilterDetails")
-      private final @Nullable BlobFilterDetailsResponse blobFilterDetails;
+    private @Nullable BlobFilterDetailsResponse blobFilterDetails;
 
     public Optional<BlobFilterDetailsResponse> blobFilterDetails() {
-        return this.blobFilterDetails == null ? Optional.empty() : Optional.ofNullable(this.blobFilterDetails);
+        return Optional.ofNullable(this.blobFilterDetails);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final String dataAccountType;
+    private String dataAccountType;
 
     public String dataAccountType() {
         return this.dataAccountType;
@@ -61,76 +61,67 @@ public final class TransferFilterDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filterFileDetails")
-      private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
+    private @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
-    public List<FilterFileDetailsResponse> filterFileDetails() {
-        return this.filterFileDetails == null ? List.of() : this.filterFileDetails;
+    public Optional<List<FilterFileDetailsResponse>> filterFileDetails() {
+        return Optional.ofNullable(this.filterFileDetails);
     }
 
-    public TransferFilterDetailsResponse(
-        @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
-        @Nullable BlobFilterDetailsResponse blobFilterDetails,
-        String dataAccountType,
-        @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
-        this.azureFileFilterDetails = azureFileFilterDetails;
-        this.blobFilterDetails = blobFilterDetails;
-        this.dataAccountType = Codegen.stringProp("dataAccountType").arg(dataAccountType).def("StorageAccount").require();
-        this.filterFileDetails = filterFileDetails;
-    }
+    private TransferFilterDetailsResponse() {}
 
-    private TransferFilterDetailsResponse() {
-        this.azureFileFilterDetails = null;
-        this.blobFilterDetails = null;
-        this.dataAccountType = null;
-        this.filterFileDetails = List.of();
+    private TransferFilterDetailsResponse(TransferFilterDetailsResponse $) {
+        this.azureFileFilterDetails = $.azureFileFilterDetails;
+        this.blobFilterDetails = $.blobFilterDetails;
+        this.dataAccountType = $.dataAccountType;
+        this.filterFileDetails = $.filterFileDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferFilterDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
-        private @Nullable BlobFilterDetailsResponse blobFilterDetails;
-        private String dataAccountType;
-        private @Nullable List<FilterFileDetailsResponse> filterFileDetails;
+        private TransferFilterDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferFilterDetailsResponse();
         }
 
         public Builder(TransferFilterDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureFileFilterDetails = defaults.azureFileFilterDetails;
-    	      this.blobFilterDetails = defaults.blobFilterDetails;
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.filterFileDetails = defaults.filterFileDetails;
+            $ = new TransferFilterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureFileFilterDetails(@Nullable AzureFileFilterDetailsResponse azureFileFilterDetails) {
-            this.azureFileFilterDetails = azureFileFilterDetails;
+            $.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
+
         public Builder blobFilterDetails(@Nullable BlobFilterDetailsResponse blobFilterDetails) {
-            this.blobFilterDetails = blobFilterDetails;
+            $.blobFilterDetails = blobFilterDetails;
             return this;
         }
+
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder filterFileDetails(@Nullable List<FilterFileDetailsResponse> filterFileDetails) {
-            this.filterFileDetails = filterFileDetails;
+            $.filterFileDetails = filterFileDetails;
             return this;
         }
+
         public Builder filterFileDetails(FilterFileDetailsResponse... filterFileDetails) {
             return filterFileDetails(List.of(filterFileDetails));
-        }        public TransferFilterDetailsResponse build() {
-            return new TransferFilterDetailsResponse(azureFileFilterDetails, blobFilterDetails, dataAccountType, filterFileDetails);
+        }
+
+        public TransferFilterDetailsResponse build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").arg($.dataAccountType).def("StorageAccount").require();
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterAccepterArgs;
 import com.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterRequesterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accepter")
-      private final @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter;
+    private @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter;
 
-    public Output<VpcPeeringConnectionAccepterAccepterArgs> accepter() {
-        return this.accepter == null ? Codegen.empty() : this.accepter;
+    public Optional<Output<VpcPeeringConnectionAccepterAccepterArgs>> accepter() {
+        return Optional.ofNullable(this.accepter);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="autoAccept")
-      private final @Nullable Output<Boolean> autoAccept;
+    private @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> autoAccept() {
-        return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
+    public Optional<Output<Boolean>> autoAccept() {
+        return Optional.ofNullable(this.autoAccept);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="requester")
-      private final @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester;
+    private @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester;
 
-    public Output<VpcPeeringConnectionAccepterRequesterArgs> requester() {
-        return this.requester == null ? Codegen.empty() : this.requester;
+    public Optional<Output<VpcPeeringConnectionAccepterRequesterArgs>> requester() {
+        return Optional.ofNullable(this.requester);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -70,102 +70,89 @@ public final class VpcPeeringConnectionAccepterArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vpcPeeringConnectionId", required=true)
-      private final Output<String> vpcPeeringConnectionId;
+    private Output<String> vpcPeeringConnectionId;
 
     public Output<String> vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 
-    public VpcPeeringConnectionAccepterArgs(
-        @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter,
-        @Nullable Output<Boolean> autoAccept,
-        @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vpcPeeringConnectionId) {
-        this.accepter = accepter;
-        this.autoAccept = autoAccept;
-        this.requester = requester;
-        this.tags = tags;
-        this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId, "expected parameter 'vpcPeeringConnectionId' to be non-null");
-    }
+    private VpcPeeringConnectionAccepterArgs() {}
 
-    private VpcPeeringConnectionAccepterArgs() {
-        this.accepter = Codegen.empty();
-        this.autoAccept = Codegen.empty();
-        this.requester = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcPeeringConnectionId = Codegen.empty();
+    private VpcPeeringConnectionAccepterArgs(VpcPeeringConnectionAccepterArgs $) {
+        this.accepter = $.accepter;
+        this.autoAccept = $.autoAccept;
+        this.requester = $.requester;
+        this.tags = $.tags;
+        this.vpcPeeringConnectionId = $.vpcPeeringConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcPeeringConnectionAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter;
-        private @Nullable Output<Boolean> autoAccept;
-        private @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vpcPeeringConnectionId;
+        private VpcPeeringConnectionAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcPeeringConnectionAccepterArgs();
         }
 
         public Builder(VpcPeeringConnectionAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accepter = defaults.accepter;
-    	      this.autoAccept = defaults.autoAccept;
-    	      this.requester = defaults.requester;
-    	      this.tags = defaults.tags;
-    	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
+            $ = new VpcPeeringConnectionAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accepter(@Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter) {
-            this.accepter = accepter;
+            $.accepter = accepter;
             return this;
         }
-        public Builder accepter(@Nullable VpcPeeringConnectionAccepterAccepterArgs accepter) {
-            this.accepter = Codegen.ofNullable(accepter);
-            return this;
+
+        public Builder accepter(VpcPeeringConnectionAccepterAccepterArgs accepter) {
+            return accepter(Output.of(accepter));
         }
+
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
-            this.autoAccept = autoAccept;
+            $.autoAccept = autoAccept;
             return this;
         }
-        public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = Codegen.ofNullable(autoAccept);
-            return this;
+
+        public Builder autoAccept(Boolean autoAccept) {
+            return autoAccept(Output.of(autoAccept));
         }
+
         public Builder requester(@Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester) {
-            this.requester = requester;
+            $.requester = requester;
             return this;
         }
-        public Builder requester(@Nullable VpcPeeringConnectionAccepterRequesterArgs requester) {
-            this.requester = Codegen.ofNullable(requester);
-            return this;
+
+        public Builder requester(VpcPeeringConnectionAccepterRequesterArgs requester) {
+            return requester(Output.of(requester));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcPeeringConnectionId(Output<String> vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
+
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Output.of(Objects.requireNonNull(vpcPeeringConnectionId));
-            return this;
-        }        public VpcPeeringConnectionAccepterArgs build() {
-            return new VpcPeeringConnectionAccepterArgs(accepter, autoAccept, requester, tags, vpcPeeringConnectionId);
+            return vpcPeeringConnectionId(Output.of(vpcPeeringConnectionId));
+        }
+
+        public VpcPeeringConnectionAccepterArgs build() {
+            $.vpcPeeringConnectionId = Objects.requireNonNull($.vpcPeeringConnectionId, "expected parameter 'vpcPeeringConnectionId' to be non-null");
+            return $;
         }
     }
+
 }

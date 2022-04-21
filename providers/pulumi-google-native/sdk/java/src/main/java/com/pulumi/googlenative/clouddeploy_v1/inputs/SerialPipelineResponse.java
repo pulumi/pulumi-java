@@ -22,48 +22,49 @@ public final class SerialPipelineResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="stages", required=true)
-      private final List<StageResponse> stages;
+    private List<StageResponse> stages;
 
     public List<StageResponse> stages() {
         return this.stages;
     }
 
-    public SerialPipelineResponse(List<StageResponse> stages) {
-        this.stages = Objects.requireNonNull(stages, "expected parameter 'stages' to be non-null");
-    }
+    private SerialPipelineResponse() {}
 
-    private SerialPipelineResponse() {
-        this.stages = List.of();
+    private SerialPipelineResponse(SerialPipelineResponse $) {
+        this.stages = $.stages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SerialPipelineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<StageResponse> stages;
+        private SerialPipelineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SerialPipelineResponse();
         }
 
         public Builder(SerialPipelineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stages = defaults.stages;
+            $ = new SerialPipelineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder stages(List<StageResponse> stages) {
-            this.stages = Objects.requireNonNull(stages);
+            $.stages = stages;
             return this;
         }
+
         public Builder stages(StageResponse... stages) {
             return stages(List.of(stages));
-        }        public SerialPipelineResponse build() {
-            return new SerialPipelineResponse(stages);
+        }
+
+        public SerialPipelineResponse build() {
+            $.stages = Objects.requireNonNull($.stages, "expected parameter 'stages' to be non-null");
+            return $;
         }
     }
+
 }

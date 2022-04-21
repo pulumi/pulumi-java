@@ -22,7 +22,7 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glob", required=true)
-      private final String glob;
+    private String glob;
 
     public String glob() {
         return this.glob;
@@ -33,7 +33,7 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -44,7 +44,7 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regex", required=true)
-      private final String regex;
+    private String regex;
 
     public String regex() {
         return this.regex;
@@ -55,73 +55,66 @@ public final class RedirectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="statusCode", required=true)
-      private final Integer statusCode;
+    private Integer statusCode;
 
     public Integer statusCode() {
         return this.statusCode;
     }
 
-    public RedirectResponse(
-        String glob,
-        String location,
-        String regex,
-        Integer statusCode) {
-        this.glob = Objects.requireNonNull(glob, "expected parameter 'glob' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private RedirectResponse() {}
 
-    private RedirectResponse() {
-        this.glob = null;
-        this.location = null;
-        this.regex = null;
-        this.statusCode = null;
+    private RedirectResponse(RedirectResponse $) {
+        this.glob = $.glob;
+        this.location = $.location;
+        this.regex = $.regex;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedirectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String glob;
-        private String location;
-        private String regex;
-        private Integer statusCode;
+        private RedirectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedirectResponse();
         }
 
         public Builder(RedirectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.glob = defaults.glob;
-    	      this.location = defaults.location;
-    	      this.regex = defaults.regex;
-    	      this.statusCode = defaults.statusCode;
+            $ = new RedirectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder glob(String glob) {
-            this.glob = Objects.requireNonNull(glob);
+            $.glob = glob;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder regex(String regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
         }
+
         public Builder statusCode(Integer statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public RedirectResponse build() {
-            return new RedirectResponse(glob, location, regex, statusCode);
+        }
+
+        public RedirectResponse build() {
+            $.glob = Objects.requireNonNull($.glob, "expected parameter 'glob' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

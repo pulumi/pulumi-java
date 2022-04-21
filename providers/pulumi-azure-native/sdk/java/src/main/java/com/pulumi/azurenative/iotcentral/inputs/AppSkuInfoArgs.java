@@ -7,7 +7,6 @@ import com.pulumi.azurenative.iotcentral.enums.AppSku;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class AppSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,AppSku>> name;
+    private Output<Either<String,AppSku>> name;
 
     public Output<Either<String,AppSku>> name() {
         return this.name;
     }
 
-    public AppSkuInfoArgs(Output<Either<String,AppSku>> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AppSkuInfoArgs() {}
 
-    private AppSkuInfoArgs() {
-        this.name = Codegen.empty();
+    private AppSkuInfoArgs(AppSkuInfoArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppSkuInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AppSku>> name;
+        private AppSkuInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppSkuInfoArgs();
         }
 
         public Builder(AppSkuInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new AppSkuInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<Either<String,AppSku>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,AppSku> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public AppSkuInfoArgs build() {
-            return new AppSkuInfoArgs(name);
+            return name(Output.of(name));
+        }
+
+        public AppSkuInfoArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

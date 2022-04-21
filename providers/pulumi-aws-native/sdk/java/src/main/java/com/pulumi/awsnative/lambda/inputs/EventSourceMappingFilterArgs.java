@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EventSourceMappingFilterArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pattern")
-      private final @Nullable Output<String> pattern;
+    private @Nullable Output<String> pattern;
 
-    public Output<String> pattern() {
-        return this.pattern == null ? Codegen.empty() : this.pattern;
+    public Optional<Output<String>> pattern() {
+        return Optional.ofNullable(this.pattern);
     }
 
-    public EventSourceMappingFilterArgs(@Nullable Output<String> pattern) {
-        this.pattern = pattern;
-    }
+    private EventSourceMappingFilterArgs() {}
 
-    private EventSourceMappingFilterArgs() {
-        this.pattern = Codegen.empty();
+    private EventSourceMappingFilterArgs(EventSourceMappingFilterArgs $) {
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pattern;
+        private EventSourceMappingFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingFilterArgs();
         }
 
         public Builder(EventSourceMappingFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pattern = defaults.pattern;
+            $ = new EventSourceMappingFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pattern(@Nullable Output<String> pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
-        public Builder pattern(@Nullable String pattern) {
-            this.pattern = Codegen.ofNullable(pattern);
-            return this;
-        }        public EventSourceMappingFilterArgs build() {
-            return new EventSourceMappingFilterArgs(pattern);
+
+        public Builder pattern(String pattern) {
+            return pattern(Output.of(pattern));
+        }
+
+        public EventSourceMappingFilterArgs build() {
+            return $;
         }
     }
+
 }

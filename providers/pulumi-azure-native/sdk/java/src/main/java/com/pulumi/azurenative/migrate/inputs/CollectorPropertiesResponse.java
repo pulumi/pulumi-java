@@ -16,10 +16,10 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
     public static final CollectorPropertiesResponse Empty = new CollectorPropertiesResponse();
 
     @Import(name="agentProperties")
-      private final @Nullable CollectorAgentPropertiesResponse agentProperties;
+    private @Nullable CollectorAgentPropertiesResponse agentProperties;
 
     public Optional<CollectorAgentPropertiesResponse> agentProperties() {
-        return this.agentProperties == null ? Optional.empty() : Optional.ofNullable(this.agentProperties);
+        return Optional.ofNullable(this.agentProperties);
     }
 
     /**
@@ -27,7 +27,7 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="createdTimestamp", required=true)
-      private final String createdTimestamp;
+    private String createdTimestamp;
 
     public String createdTimestamp() {
         return this.createdTimestamp;
@@ -38,10 +38,10 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="discoverySiteId")
-      private final @Nullable String discoverySiteId;
+    private @Nullable String discoverySiteId;
 
     public Optional<String> discoverySiteId() {
-        return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
+        return Optional.ofNullable(this.discoverySiteId);
     }
 
     /**
@@ -49,73 +49,64 @@ public final class CollectorPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="updatedTimestamp", required=true)
-      private final String updatedTimestamp;
+    private String updatedTimestamp;
 
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 
-    public CollectorPropertiesResponse(
-        @Nullable CollectorAgentPropertiesResponse agentProperties,
-        String createdTimestamp,
-        @Nullable String discoverySiteId,
-        String updatedTimestamp) {
-        this.agentProperties = agentProperties;
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
-        this.discoverySiteId = discoverySiteId;
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
-    }
+    private CollectorPropertiesResponse() {}
 
-    private CollectorPropertiesResponse() {
-        this.agentProperties = null;
-        this.createdTimestamp = null;
-        this.discoverySiteId = null;
-        this.updatedTimestamp = null;
+    private CollectorPropertiesResponse(CollectorPropertiesResponse $) {
+        this.agentProperties = $.agentProperties;
+        this.createdTimestamp = $.createdTimestamp;
+        this.discoverySiteId = $.discoverySiteId;
+        this.updatedTimestamp = $.updatedTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CollectorAgentPropertiesResponse agentProperties;
-        private String createdTimestamp;
-        private @Nullable String discoverySiteId;
-        private String updatedTimestamp;
+        private CollectorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectorPropertiesResponse();
         }
 
         public Builder(CollectorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentProperties = defaults.agentProperties;
-    	      this.createdTimestamp = defaults.createdTimestamp;
-    	      this.discoverySiteId = defaults.discoverySiteId;
-    	      this.updatedTimestamp = defaults.updatedTimestamp;
+            $ = new CollectorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentProperties(@Nullable CollectorAgentPropertiesResponse agentProperties) {
-            this.agentProperties = agentProperties;
+            $.agentProperties = agentProperties;
             return this;
         }
+
         public Builder createdTimestamp(String createdTimestamp) {
-            this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+            $.createdTimestamp = createdTimestamp;
             return this;
         }
+
         public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = discoverySiteId;
+            $.discoverySiteId = discoverySiteId;
             return this;
         }
+
         public Builder updatedTimestamp(String updatedTimestamp) {
-            this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+            $.updatedTimestamp = updatedTimestamp;
             return this;
-        }        public CollectorPropertiesResponse build() {
-            return new CollectorPropertiesResponse(agentProperties, createdTimestamp, discoverySiteId, updatedTimestamp);
+        }
+
+        public CollectorPropertiesResponse build() {
+            $.createdTimestamp = Objects.requireNonNull($.createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
+            $.updatedTimestamp = Objects.requireNonNull($.updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

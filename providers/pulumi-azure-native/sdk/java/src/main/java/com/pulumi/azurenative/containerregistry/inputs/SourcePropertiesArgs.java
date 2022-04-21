@@ -8,9 +8,9 @@ import com.pulumi.azurenative.containerregistry.inputs.AuthInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="repositoryUrl", required=true)
-      private final Output<String> repositoryUrl;
+    private Output<String> repositoryUrl;
 
     public Output<String> repositoryUrl() {
         return this.repositoryUrl;
@@ -50,10 +50,10 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceControlAuthProperties")
-      private final @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
+    private @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
 
-    public Output<AuthInfoArgs> sourceControlAuthProperties() {
-        return this.sourceControlAuthProperties == null ? Codegen.empty() : this.sourceControlAuthProperties;
+    public Optional<Output<AuthInfoArgs>> sourceControlAuthProperties() {
+        return Optional.ofNullable(this.sourceControlAuthProperties);
     }
 
     /**
@@ -61,89 +61,80 @@ public final class SourcePropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceControlType", required=true)
-      private final Output<Either<String,SourceControlType>> sourceControlType;
+    private Output<Either<String,SourceControlType>> sourceControlType;
 
     public Output<Either<String,SourceControlType>> sourceControlType() {
         return this.sourceControlType;
     }
 
-    public SourcePropertiesArgs(
-        @Nullable Output<String> branch,
-        Output<String> repositoryUrl,
-        @Nullable Output<AuthInfoArgs> sourceControlAuthProperties,
-        Output<Either<String,SourceControlType>> sourceControlType) {
-        this.branch = branch;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
-        this.sourceControlAuthProperties = sourceControlAuthProperties;
-        this.sourceControlType = Objects.requireNonNull(sourceControlType, "expected parameter 'sourceControlType' to be non-null");
-    }
+    private SourcePropertiesArgs() {}
 
-    private SourcePropertiesArgs() {
-        this.branch = Codegen.empty();
-        this.repositoryUrl = Codegen.empty();
-        this.sourceControlAuthProperties = Codegen.empty();
-        this.sourceControlType = Codegen.empty();
+    private SourcePropertiesArgs(SourcePropertiesArgs $) {
+        this.branch = $.branch;
+        this.repositoryUrl = $.repositoryUrl;
+        this.sourceControlAuthProperties = $.sourceControlAuthProperties;
+        this.sourceControlType = $.sourceControlType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branch;
-        private Output<String> repositoryUrl;
-        private @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
-        private Output<Either<String,SourceControlType>> sourceControlType;
+        private SourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourcePropertiesArgs();
         }
 
         public Builder(SourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.sourceControlAuthProperties = defaults.sourceControlAuthProperties;
-    	      this.sourceControlType = defaults.sourceControlType;
+            $ = new SourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder repositoryUrl(Output<String> repositoryUrl) {
-            this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
+
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
-            return this;
+            return repositoryUrl(Output.of(repositoryUrl));
         }
+
         public Builder sourceControlAuthProperties(@Nullable Output<AuthInfoArgs> sourceControlAuthProperties) {
-            this.sourceControlAuthProperties = sourceControlAuthProperties;
+            $.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
-        public Builder sourceControlAuthProperties(@Nullable AuthInfoArgs sourceControlAuthProperties) {
-            this.sourceControlAuthProperties = Codegen.ofNullable(sourceControlAuthProperties);
-            return this;
+
+        public Builder sourceControlAuthProperties(AuthInfoArgs sourceControlAuthProperties) {
+            return sourceControlAuthProperties(Output.of(sourceControlAuthProperties));
         }
+
         public Builder sourceControlType(Output<Either<String,SourceControlType>> sourceControlType) {
-            this.sourceControlType = Objects.requireNonNull(sourceControlType);
+            $.sourceControlType = sourceControlType;
             return this;
         }
+
         public Builder sourceControlType(Either<String,SourceControlType> sourceControlType) {
-            this.sourceControlType = Output.of(Objects.requireNonNull(sourceControlType));
-            return this;
-        }        public SourcePropertiesArgs build() {
-            return new SourcePropertiesArgs(branch, repositoryUrl, sourceControlAuthProperties, sourceControlType);
+            return sourceControlType(Output.of(sourceControlType));
+        }
+
+        public SourcePropertiesArgs build() {
+            $.repositoryUrl = Objects.requireNonNull($.repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
+            $.sourceControlType = Objects.requireNonNull($.sourceControlType, "expected parameter 'sourceControlType' to be non-null");
+            return $;
         }
     }
+
 }

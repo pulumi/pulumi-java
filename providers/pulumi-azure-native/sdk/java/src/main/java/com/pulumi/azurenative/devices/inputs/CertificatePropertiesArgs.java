@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
-    public CertificatePropertiesArgs(@Nullable Output<String> certificate) {
-        this.certificate = certificate;
-    }
+    private CertificatePropertiesArgs() {}
 
-    private CertificatePropertiesArgs() {
-        this.certificate = Codegen.empty();
+    private CertificatePropertiesArgs(CertificatePropertiesArgs $) {
+        this.certificate = $.certificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificatePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
+        private CertificatePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificatePropertiesArgs();
         }
 
         public Builder(CertificatePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
+            $ = new CertificatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
-        }        public CertificatePropertiesArgs build() {
-            return new CertificatePropertiesArgs(certificate);
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
+        }
+
+        public CertificatePropertiesArgs build() {
+            return $;
         }
     }
+
 }

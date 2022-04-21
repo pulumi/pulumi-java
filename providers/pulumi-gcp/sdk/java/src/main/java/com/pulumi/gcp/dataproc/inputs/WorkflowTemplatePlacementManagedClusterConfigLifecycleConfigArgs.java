@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * 
      */
     @Import(name="autoDeleteTime")
-      private final @Nullable Output<String> autoDeleteTime;
+    private @Nullable Output<String> autoDeleteTime;
 
-    public Output<String> autoDeleteTime() {
-        return this.autoDeleteTime == null ? Codegen.empty() : this.autoDeleteTime;
+    public Optional<Output<String>> autoDeleteTime() {
+        return Optional.ofNullable(this.autoDeleteTime);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * 
      */
     @Import(name="autoDeleteTtl")
-      private final @Nullable Output<String> autoDeleteTtl;
+    private @Nullable Output<String> autoDeleteTtl;
 
-    public Output<String> autoDeleteTtl() {
-        return this.autoDeleteTtl == null ? Codegen.empty() : this.autoDeleteTtl;
+    public Optional<Output<String>> autoDeleteTtl() {
+        return Optional.ofNullable(this.autoDeleteTtl);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * 
      */
     @Import(name="idleDeleteTtl")
-      private final @Nullable Output<String> idleDeleteTtl;
+    private @Nullable Output<String> idleDeleteTtl;
 
-    public Output<String> idleDeleteTtl() {
-        return this.idleDeleteTtl == null ? Codegen.empty() : this.idleDeleteTtl;
+    public Optional<Output<String>> idleDeleteTtl() {
+        return Optional.ofNullable(this.idleDeleteTtl);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * 
      */
     @Import(name="idleStartTime")
-      private final @Nullable Output<String> idleStartTime;
+    private @Nullable Output<String> idleStartTime;
 
-    public Output<String> idleStartTime() {
-        return this.idleStartTime == null ? Codegen.empty() : this.idleStartTime;
+    public Optional<Output<String>> idleStartTime() {
+        return Optional.ofNullable(this.idleStartTime);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs(
-        @Nullable Output<String> autoDeleteTime,
-        @Nullable Output<String> autoDeleteTtl,
-        @Nullable Output<String> idleDeleteTtl,
-        @Nullable Output<String> idleStartTime) {
-        this.autoDeleteTime = autoDeleteTime;
-        this.autoDeleteTtl = autoDeleteTtl;
-        this.idleDeleteTtl = idleDeleteTtl;
-        this.idleStartTime = idleStartTime;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs() {
-        this.autoDeleteTime = Codegen.empty();
-        this.autoDeleteTtl = Codegen.empty();
-        this.idleDeleteTtl = Codegen.empty();
-        this.idleStartTime = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs(WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs $) {
+        this.autoDeleteTime = $.autoDeleteTime;
+        this.autoDeleteTtl = $.autoDeleteTtl;
+        this.idleDeleteTtl = $.idleDeleteTtl;
+        this.idleStartTime = $.idleStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoDeleteTime;
-        private @Nullable Output<String> autoDeleteTtl;
-        private @Nullable Output<String> idleDeleteTtl;
-        private @Nullable Output<String> idleStartTime;
+        private WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDeleteTime = defaults.autoDeleteTime;
-    	      this.autoDeleteTtl = defaults.autoDeleteTtl;
-    	      this.idleDeleteTtl = defaults.idleDeleteTtl;
-    	      this.idleStartTime = defaults.idleStartTime;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDeleteTime(@Nullable Output<String> autoDeleteTime) {
-            this.autoDeleteTime = autoDeleteTime;
+            $.autoDeleteTime = autoDeleteTime;
             return this;
         }
-        public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
-            this.autoDeleteTime = Codegen.ofNullable(autoDeleteTime);
-            return this;
+
+        public Builder autoDeleteTime(String autoDeleteTime) {
+            return autoDeleteTime(Output.of(autoDeleteTime));
         }
+
         public Builder autoDeleteTtl(@Nullable Output<String> autoDeleteTtl) {
-            this.autoDeleteTtl = autoDeleteTtl;
+            $.autoDeleteTtl = autoDeleteTtl;
             return this;
         }
-        public Builder autoDeleteTtl(@Nullable String autoDeleteTtl) {
-            this.autoDeleteTtl = Codegen.ofNullable(autoDeleteTtl);
-            return this;
+
+        public Builder autoDeleteTtl(String autoDeleteTtl) {
+            return autoDeleteTtl(Output.of(autoDeleteTtl));
         }
+
         public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
-            this.idleDeleteTtl = idleDeleteTtl;
+            $.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
-        public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
-            this.idleDeleteTtl = Codegen.ofNullable(idleDeleteTtl);
-            return this;
+
+        public Builder idleDeleteTtl(String idleDeleteTtl) {
+            return idleDeleteTtl(Output.of(idleDeleteTtl));
         }
+
         public Builder idleStartTime(@Nullable Output<String> idleStartTime) {
-            this.idleStartTime = idleStartTime;
+            $.idleStartTime = idleStartTime;
             return this;
         }
-        public Builder idleStartTime(@Nullable String idleStartTime) {
-            this.idleStartTime = Codegen.ofNullable(idleStartTime);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
+
+        public Builder idleStartTime(String idleStartTime) {
+            return idleStartTime(Output.of(idleStartTime));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs build() {
+            return $;
         }
     }
+
 }

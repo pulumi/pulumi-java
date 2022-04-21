@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2VolumeMountResponse extends com.pulumi.reso
      * 
      */
     @Import(name="mountPath", required=true)
-      private final String mountPath;
+    private String mountPath;
 
     public String mountPath() {
         return this.mountPath;
@@ -32,55 +32,52 @@ public final class GoogleCloudRunOpV2VolumeMountResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleCloudRunOpV2VolumeMountResponse(
-        String mountPath,
-        String name) {
-        this.mountPath = Objects.requireNonNull(mountPath, "expected parameter 'mountPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudRunOpV2VolumeMountResponse() {}
 
-    private GoogleCloudRunOpV2VolumeMountResponse() {
-        this.mountPath = null;
-        this.name = null;
+    private GoogleCloudRunOpV2VolumeMountResponse(GoogleCloudRunOpV2VolumeMountResponse $) {
+        this.mountPath = $.mountPath;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VolumeMountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPath;
-        private String name;
+        private GoogleCloudRunOpV2VolumeMountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VolumeMountResponse();
         }
 
         public Builder(GoogleCloudRunOpV2VolumeMountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudRunOpV2VolumeMountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(String mountPath) {
-            this.mountPath = Objects.requireNonNull(mountPath);
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleCloudRunOpV2VolumeMountResponse build() {
-            return new GoogleCloudRunOpV2VolumeMountResponse(mountPath, name);
+        }
+
+        public GoogleCloudRunOpV2VolumeMountResponse build() {
+            $.mountPath = Objects.requireNonNull($.mountPath, "expected parameter 'mountPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

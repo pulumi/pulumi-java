@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHadoopJobLoggingConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="archiveUris")
-      private final @Nullable Output<List<String>> archiveUris;
+    private @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> archiveUris() {
-        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
+    public Optional<Output<List<String>>> archiveUris() {
+        return Optional.ofNullable(this.archiveUris);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="fileUris")
-      private final @Nullable Output<List<String>> fileUris;
+    private @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> fileUris() {
-        return this.fileUris == null ? Codegen.empty() : this.fileUris;
+    public Optional<Output<List<String>>> fileUris() {
+        return Optional.ofNullable(this.fileUris);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs> loggingConfig;
+    private @Nullable Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="mainClass")
-      private final @Nullable Output<String> mainClass;
+    private @Nullable Output<String> mainClass;
 
-    public Output<String> mainClass() {
-        return this.mainClass == null ? Codegen.empty() : this.mainClass;
+    public Optional<Output<String>> mainClass() {
+        return Optional.ofNullable(this.mainClass);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="mainJarFileUri")
-      private final @Nullable Output<String> mainJarFileUri;
+    private @Nullable Output<String> mainJarFileUri;
 
-    public Output<String> mainJarFileUri() {
-        return this.mainJarFileUri == null ? Codegen.empty() : this.mainJarFileUri;
+    public Optional<Output<String>> mainJarFileUri() {
+        return Optional.ofNullable(this.mainJarFileUri);
     }
 
     /**
@@ -100,153 +100,134 @@ public final class WorkflowTemplateJobHadoopJobArgs extends com.pulumi.resources
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public WorkflowTemplateJobHadoopJobArgs(
-        @Nullable Output<List<String>> archiveUris,
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> fileUris,
-        @Nullable Output<List<String>> jarFileUris,
-        @Nullable Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs> loggingConfig,
-        @Nullable Output<String> mainClass,
-        @Nullable Output<String> mainJarFileUri,
-        @Nullable Output<Map<String,String>> properties) {
-        this.archiveUris = archiveUris;
-        this.args = args;
-        this.fileUris = fileUris;
-        this.jarFileUris = jarFileUris;
-        this.loggingConfig = loggingConfig;
-        this.mainClass = mainClass;
-        this.mainJarFileUri = mainJarFileUri;
-        this.properties = properties;
-    }
+    private WorkflowTemplateJobHadoopJobArgs() {}
 
-    private WorkflowTemplateJobHadoopJobArgs() {
-        this.archiveUris = Codegen.empty();
-        this.args = Codegen.empty();
-        this.fileUris = Codegen.empty();
-        this.jarFileUris = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.mainClass = Codegen.empty();
-        this.mainJarFileUri = Codegen.empty();
-        this.properties = Codegen.empty();
+    private WorkflowTemplateJobHadoopJobArgs(WorkflowTemplateJobHadoopJobArgs $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.jarFileUris = $.jarFileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.mainClass = $.mainClass;
+        this.mainJarFileUri = $.mainJarFileUri;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobHadoopJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> archiveUris;
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> fileUris;
-        private @Nullable Output<List<String>> jarFileUris;
-        private @Nullable Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs> loggingConfig;
-        private @Nullable Output<String> mainClass;
-        private @Nullable Output<String> mainJarFileUri;
-        private @Nullable Output<Map<String,String>> properties;
+        private WorkflowTemplateJobHadoopJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobHadoopJobArgs();
         }
 
         public Builder(WorkflowTemplateJobHadoopJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.mainClass = defaults.mainClass;
-    	      this.mainJarFileUri = defaults.mainJarFileUri;
-    	      this.properties = defaults.properties;
+            $ = new WorkflowTemplateJobHadoopJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
-            this.archiveUris = archiveUris;
+            $.archiveUris = archiveUris;
             return this;
         }
-        public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Codegen.ofNullable(archiveUris);
-            return this;
+
+        public Builder archiveUris(List<String> archiveUris) {
+            return archiveUris(Output.of(archiveUris));
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
-            this.fileUris = fileUris;
+            $.fileUris = fileUris;
             return this;
         }
-        public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Codegen.ofNullable(fileUris);
-            return this;
+
+        public Builder fileUris(List<String> fileUris) {
+            return fileUris(Output.of(fileUris));
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobHadoopJobLoggingConfigArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable WorkflowTemplateJobHadoopJobLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(WorkflowTemplateJobHadoopJobLoggingConfigArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder mainClass(@Nullable Output<String> mainClass) {
-            this.mainClass = mainClass;
+            $.mainClass = mainClass;
             return this;
         }
-        public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Codegen.ofNullable(mainClass);
-            return this;
+
+        public Builder mainClass(String mainClass) {
+            return mainClass(Output.of(mainClass));
         }
+
         public Builder mainJarFileUri(@Nullable Output<String> mainJarFileUri) {
-            this.mainJarFileUri = mainJarFileUri;
+            $.mainJarFileUri = mainJarFileUri;
             return this;
         }
-        public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
-            this.mainJarFileUri = Codegen.ofNullable(mainJarFileUri);
-            return this;
+
+        public Builder mainJarFileUri(String mainJarFileUri) {
+            return mainJarFileUri(Output.of(mainJarFileUri));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public WorkflowTemplateJobHadoopJobArgs build() {
-            return new WorkflowTemplateJobHadoopJobArgs(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public WorkflowTemplateJobHadoopJobArgs build() {
+            return $;
         }
     }
+
 }

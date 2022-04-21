@@ -22,48 +22,49 @@ public final class LanguageCodesSetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="languageCodes", required=true)
-      private final List<String> languageCodes;
+    private List<String> languageCodes;
 
     public List<String> languageCodes() {
         return this.languageCodes;
     }
 
-    public LanguageCodesSetResponse(List<String> languageCodes) {
-        this.languageCodes = Objects.requireNonNull(languageCodes, "expected parameter 'languageCodes' to be non-null");
-    }
+    private LanguageCodesSetResponse() {}
 
-    private LanguageCodesSetResponse() {
-        this.languageCodes = List.of();
+    private LanguageCodesSetResponse(LanguageCodesSetResponse $) {
+        this.languageCodes = $.languageCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LanguageCodesSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> languageCodes;
+        private LanguageCodesSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LanguageCodesSetResponse();
         }
 
         public Builder(LanguageCodesSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.languageCodes = defaults.languageCodes;
+            $ = new LanguageCodesSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder languageCodes(List<String> languageCodes) {
-            this.languageCodes = Objects.requireNonNull(languageCodes);
+            $.languageCodes = languageCodes;
             return this;
         }
+
         public Builder languageCodes(String... languageCodes) {
             return languageCodes(List.of(languageCodes));
-        }        public LanguageCodesSetResponse build() {
-            return new LanguageCodesSetResponse(languageCodes);
+        }
+
+        public LanguageCodesSetResponse build() {
+            $.languageCodes = Objects.requireNonNull($.languageCodes, "expected parameter 'languageCodes' to be non-null");
+            return $;
         }
     }
+
 }

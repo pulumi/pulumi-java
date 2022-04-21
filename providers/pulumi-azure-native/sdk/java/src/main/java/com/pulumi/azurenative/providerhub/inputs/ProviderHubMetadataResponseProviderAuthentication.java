@@ -14,48 +14,49 @@ public final class ProviderHubMetadataResponseProviderAuthentication extends com
     public static final ProviderHubMetadataResponseProviderAuthentication Empty = new ProviderHubMetadataResponseProviderAuthentication();
 
     @Import(name="allowedAudiences", required=true)
-      private final List<String> allowedAudiences;
+    private List<String> allowedAudiences;
 
     public List<String> allowedAudiences() {
         return this.allowedAudiences;
     }
 
-    public ProviderHubMetadataResponseProviderAuthentication(List<String> allowedAudiences) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
-    }
+    private ProviderHubMetadataResponseProviderAuthentication() {}
 
-    private ProviderHubMetadataResponseProviderAuthentication() {
-        this.allowedAudiences = List.of();
+    private ProviderHubMetadataResponseProviderAuthentication(ProviderHubMetadataResponseProviderAuthentication $) {
+        this.allowedAudiences = $.allowedAudiences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderHubMetadataResponseProviderAuthentication defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedAudiences;
+        private ProviderHubMetadataResponseProviderAuthentication $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderHubMetadataResponseProviderAuthentication();
         }
 
         public Builder(ProviderHubMetadataResponseProviderAuthentication defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
+            $ = new ProviderHubMetadataResponseProviderAuthentication(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
-        }        public ProviderHubMetadataResponseProviderAuthentication build() {
-            return new ProviderHubMetadataResponseProviderAuthentication(allowedAudiences);
+        }
+
+        public ProviderHubMetadataResponseProviderAuthentication build() {
+            $.allowedAudiences = Objects.requireNonNull($.allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
+            return $;
         }
     }
+
 }

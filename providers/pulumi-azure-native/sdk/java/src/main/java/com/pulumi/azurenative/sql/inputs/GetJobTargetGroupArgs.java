@@ -17,7 +17,7 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="jobAgentName", required=true)
-      private final String jobAgentName;
+    private String jobAgentName;
 
     public String jobAgentName() {
         return this.jobAgentName;
@@ -28,7 +28,7 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -50,73 +50,66 @@ public final class GetJobTargetGroupArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetGroupName", required=true)
-      private final String targetGroupName;
+    private String targetGroupName;
 
     public String targetGroupName() {
         return this.targetGroupName;
     }
 
-    public GetJobTargetGroupArgs(
-        String jobAgentName,
-        String resourceGroupName,
-        String serverName,
-        String targetGroupName) {
-        this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.targetGroupName = Objects.requireNonNull(targetGroupName, "expected parameter 'targetGroupName' to be non-null");
-    }
+    private GetJobTargetGroupArgs() {}
 
-    private GetJobTargetGroupArgs() {
-        this.jobAgentName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
-        this.targetGroupName = null;
+    private GetJobTargetGroupArgs(GetJobTargetGroupArgs $) {
+        this.jobAgentName = $.jobAgentName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.targetGroupName = $.targetGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobTargetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobAgentName;
-        private String resourceGroupName;
-        private String serverName;
-        private String targetGroupName;
+        private GetJobTargetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobTargetGroupArgs();
         }
 
         public Builder(GetJobTargetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobAgentName = defaults.jobAgentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.targetGroupName = defaults.targetGroupName;
+            $ = new GetJobTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobAgentName(String jobAgentName) {
-            this.jobAgentName = Objects.requireNonNull(jobAgentName);
+            $.jobAgentName = jobAgentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder targetGroupName(String targetGroupName) {
-            this.targetGroupName = Objects.requireNonNull(targetGroupName);
+            $.targetGroupName = targetGroupName;
             return this;
-        }        public GetJobTargetGroupArgs build() {
-            return new GetJobTargetGroupArgs(jobAgentName, resourceGroupName, serverName, targetGroupName);
+        }
+
+        public GetJobTargetGroupArgs build() {
+            $.jobAgentName = Objects.requireNonNull($.jobAgentName, "expected parameter 'jobAgentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.targetGroupName = Objects.requireNonNull($.targetGroupName, "expected parameter 'targetGroupName' to be non-null");
+            return $;
         }
     }
+
 }

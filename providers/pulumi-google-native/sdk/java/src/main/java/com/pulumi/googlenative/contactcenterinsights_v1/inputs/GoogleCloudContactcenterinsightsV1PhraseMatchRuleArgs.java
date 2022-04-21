@@ -5,11 +5,11 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
+    private @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
 
-    public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * 
      */
     @Import(name="negated")
-      private final @Nullable Output<Boolean> negated;
+    private @Nullable Output<Boolean> negated;
 
-    public Output<Boolean> negated() {
-        return this.negated == null ? Codegen.empty() : this.negated;
+    public Optional<Output<Boolean>> negated() {
+        return Optional.ofNullable(this.negated);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(
-        @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config,
-        @Nullable Output<Boolean> negated,
-        Output<String> query) {
-        this.config = config;
-        this.negated = negated;
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs() {
-        this.config = Codegen.empty();
-        this.negated = Codegen.empty();
-        this.query = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs $) {
+        this.config = $.config;
+        this.negated = $.negated;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
-        private @Nullable Output<Boolean> negated;
-        private Output<String> query;
+        private GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.negated = defaults.negated;
-    	      this.query = defaults.query;
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder negated(@Nullable Output<Boolean> negated) {
-            this.negated = negated;
+            $.negated = negated;
             return this;
         }
-        public Builder negated(@Nullable Boolean negated) {
-            this.negated = Codegen.ofNullable(negated);
-            return this;
+
+        public Builder negated(Boolean negated) {
+            return negated(Output.of(negated));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs build() {
-            return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs(config, negated, query);
+            return query(Output.of(query));
+        }
+
+        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

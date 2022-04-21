@@ -27,10 +27,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="groupConnectivityInformation")
-      private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
+    private @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
 
-    public List<GroupConnectivityInformationResponse> groupConnectivityInformation() {
-        return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
+    public Optional<List<GroupConnectivityInformationResponse>> groupConnectivityInformation() {
+        return Optional.ofNullable(this.groupConnectivityInformation);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="remotePrivateEndpointConnection")
-      private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
+    private @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
 
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> remotePrivateEndpointConnection() {
-        return this.remotePrivateEndpointConnection == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateEndpointConnection);
+        return Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class PrivateLinkServiceProxyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="remotePrivateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
+    private @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> remotePrivateLinkServiceConnectionState() {
-        return this.remotePrivateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
+        return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }
 
-    public PrivateLinkServiceProxyResponse(
-        @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
-        @Nullable String id,
-        @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
-        @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
-        this.groupConnectivityInformation = groupConnectivityInformation;
-        this.id = id;
-        this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
-        this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
-    }
+    private PrivateLinkServiceProxyResponse() {}
 
-    private PrivateLinkServiceProxyResponse() {
-        this.groupConnectivityInformation = List.of();
-        this.id = null;
-        this.remotePrivateEndpointConnection = null;
-        this.remotePrivateLinkServiceConnectionState = null;
+    private PrivateLinkServiceProxyResponse(PrivateLinkServiceProxyResponse $) {
+        this.groupConnectivityInformation = $.groupConnectivityInformation;
+        this.id = $.id;
+        this.remotePrivateEndpointConnection = $.remotePrivateEndpointConnection;
+        this.remotePrivateLinkServiceConnectionState = $.remotePrivateLinkServiceConnectionState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceProxyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
-        private @Nullable String id;
-        private @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
-        private @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
+        private PrivateLinkServiceProxyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceProxyResponse();
         }
 
         public Builder(PrivateLinkServiceProxyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupConnectivityInformation = defaults.groupConnectivityInformation;
-    	      this.id = defaults.id;
-    	      this.remotePrivateEndpointConnection = defaults.remotePrivateEndpointConnection;
-    	      this.remotePrivateLinkServiceConnectionState = defaults.remotePrivateLinkServiceConnectionState;
+            $ = new PrivateLinkServiceProxyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation) {
-            this.groupConnectivityInformation = groupConnectivityInformation;
+            $.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
+
         public Builder groupConnectivityInformation(GroupConnectivityInformationResponse... groupConnectivityInformation) {
             return groupConnectivityInformation(List.of(groupConnectivityInformation));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder remotePrivateEndpointConnection(@Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection) {
-            this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
+            $.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
             return this;
         }
+
         public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
-            this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
+            $.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
-        }        public PrivateLinkServiceProxyResponse build() {
-            return new PrivateLinkServiceProxyResponse(groupConnectivityInformation, id, remotePrivateEndpointConnection, remotePrivateLinkServiceConnectionState);
+        }
+
+        public PrivateLinkServiceProxyResponse build() {
+            return $;
         }
     }
+
 }

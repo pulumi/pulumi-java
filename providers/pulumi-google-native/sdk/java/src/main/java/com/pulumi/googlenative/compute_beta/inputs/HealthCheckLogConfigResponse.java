@@ -21,45 +21,45 @@ public final class HealthCheckLogConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
     }
 
-    public HealthCheckLogConfigResponse(Boolean enable) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-    }
+    private HealthCheckLogConfigResponse() {}
 
-    private HealthCheckLogConfigResponse() {
-        this.enable = null;
+    private HealthCheckLogConfigResponse(HealthCheckLogConfigResponse $) {
+        this.enable = $.enable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
+        private HealthCheckLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckLogConfigResponse();
         }
 
         public Builder(HealthCheckLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
+            $ = new HealthCheckLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
-        }        public HealthCheckLogConfigResponse build() {
-            return new HealthCheckLogConfigResponse(enable);
+        }
+
+        public HealthCheckLogConfigResponse build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            return $;
         }
     }
+
 }

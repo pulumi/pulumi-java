@@ -25,10 +25,10 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="datasetParameters")
-      private final @Nullable Object datasetParameters;
+    private @Nullable Object datasetParameters;
 
     public Optional<Object> datasetParameters() {
-        return this.datasetParameters == null ? Optional.empty() : Optional.ofNullable(this.datasetParameters);
+        return Optional.ofNullable(this.datasetParameters);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,Object> parameters;
+    private @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="referenceName", required=true)
-      private final String referenceName;
+    private String referenceName;
 
     public String referenceName() {
         return this.referenceName;
@@ -58,73 +58,64 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DataFlowReferenceResponse(
-        @Nullable Object datasetParameters,
-        @Nullable Map<String,Object> parameters,
-        String referenceName,
-        String type) {
-        this.datasetParameters = datasetParameters;
-        this.parameters = parameters;
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DataFlowReferenceResponse() {}
 
-    private DataFlowReferenceResponse() {
-        this.datasetParameters = null;
-        this.parameters = Map.of();
-        this.referenceName = null;
-        this.type = null;
+    private DataFlowReferenceResponse(DataFlowReferenceResponse $) {
+        this.datasetParameters = $.datasetParameters;
+        this.parameters = $.parameters;
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object datasetParameters;
-        private @Nullable Map<String,Object> parameters;
-        private String referenceName;
-        private String type;
+        private DataFlowReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowReferenceResponse();
         }
 
         public Builder(DataFlowReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetParameters = defaults.datasetParameters;
-    	      this.parameters = defaults.parameters;
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new DataFlowReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetParameters(@Nullable Object datasetParameters) {
-            this.datasetParameters = datasetParameters;
+            $.datasetParameters = datasetParameters;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder referenceName(String referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DataFlowReferenceResponse build() {
-            return new DataFlowReferenceResponse(datasetParameters, parameters, referenceName, type);
+        }
+
+        public DataFlowReferenceResponse build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

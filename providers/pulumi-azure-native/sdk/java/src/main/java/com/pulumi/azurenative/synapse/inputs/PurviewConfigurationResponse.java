@@ -23,45 +23,44 @@ public final class PurviewConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="purviewResourceId")
-      private final @Nullable String purviewResourceId;
+    private @Nullable String purviewResourceId;
 
     public Optional<String> purviewResourceId() {
-        return this.purviewResourceId == null ? Optional.empty() : Optional.ofNullable(this.purviewResourceId);
+        return Optional.ofNullable(this.purviewResourceId);
     }
 
-    public PurviewConfigurationResponse(@Nullable String purviewResourceId) {
-        this.purviewResourceId = purviewResourceId;
-    }
+    private PurviewConfigurationResponse() {}
 
-    private PurviewConfigurationResponse() {
-        this.purviewResourceId = null;
+    private PurviewConfigurationResponse(PurviewConfigurationResponse $) {
+        this.purviewResourceId = $.purviewResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PurviewConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String purviewResourceId;
+        private PurviewConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PurviewConfigurationResponse();
         }
 
         public Builder(PurviewConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.purviewResourceId = defaults.purviewResourceId;
+            $ = new PurviewConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder purviewResourceId(@Nullable String purviewResourceId) {
-            this.purviewResourceId = purviewResourceId;
+            $.purviewResourceId = purviewResourceId;
             return this;
-        }        public PurviewConfigurationResponse build() {
-            return new PurviewConfigurationResponse(purviewResourceId);
+        }
+
+        public PurviewConfigurationResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class DedicatedHostAllocatableVMResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="count")
-      private final @Nullable Double count;
+    private @Nullable Double count;
 
     public Optional<Double> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DedicatedHostAllocatableVMResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public DedicatedHostAllocatableVMResponse(
-        @Nullable Double count,
-        @Nullable String vmSize) {
-        this.count = count;
-        this.vmSize = vmSize;
-    }
+    private DedicatedHostAllocatableVMResponse() {}
 
-    private DedicatedHostAllocatableVMResponse() {
-        this.count = null;
-        this.vmSize = null;
+    private DedicatedHostAllocatableVMResponse(DedicatedHostAllocatableVMResponse $) {
+        this.count = $.count;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHostAllocatableVMResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double count;
-        private @Nullable String vmSize;
+        private DedicatedHostAllocatableVMResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHostAllocatableVMResponse();
         }
 
         public Builder(DedicatedHostAllocatableVMResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.vmSize = defaults.vmSize;
+            $ = new DedicatedHostAllocatableVMResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Double count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public DedicatedHostAllocatableVMResponse build() {
-            return new DedicatedHostAllocatableVMResponse(count, vmSize);
+        }
+
+        public DedicatedHostAllocatableVMResponse build() {
+            return $;
         }
     }
+
 }

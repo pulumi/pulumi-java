@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkPortMirroringArgs extends com.pulumi.resour
      * 
      */
     @Import(name="portMirroringId", required=true)
-      private final String portMirroringId;
+    private String portMirroringId;
 
     public String portMirroringId() {
         return this.portMirroringId;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkPortMirroringArgs extends com.pulumi.resour
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetWorkloadNetworkPortMirroringArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWorkloadNetworkPortMirroringArgs(
-        String portMirroringId,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.portMirroringId = Objects.requireNonNull(portMirroringId, "expected parameter 'portMirroringId' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWorkloadNetworkPortMirroringArgs() {}
 
-    private GetWorkloadNetworkPortMirroringArgs() {
-        this.portMirroringId = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetWorkloadNetworkPortMirroringArgs(GetWorkloadNetworkPortMirroringArgs $) {
+        this.portMirroringId = $.portMirroringId;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadNetworkPortMirroringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String portMirroringId;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetWorkloadNetworkPortMirroringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadNetworkPortMirroringArgs();
         }
 
         public Builder(GetWorkloadNetworkPortMirroringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.portMirroringId = defaults.portMirroringId;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWorkloadNetworkPortMirroringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder portMirroringId(String portMirroringId) {
-            this.portMirroringId = Objects.requireNonNull(portMirroringId);
+            $.portMirroringId = portMirroringId;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWorkloadNetworkPortMirroringArgs build() {
-            return new GetWorkloadNetworkPortMirroringArgs(portMirroringId, privateCloudName, resourceGroupName);
+        }
+
+        public GetWorkloadNetworkPortMirroringArgs build() {
+            $.portMirroringId = Objects.requireNonNull($.portMirroringId, "expected parameter 'portMirroringId' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

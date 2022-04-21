@@ -21,45 +21,45 @@ public final class WebServerConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
     }
 
-    public WebServerConfigResponse(String machineType) {
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-    }
+    private WebServerConfigResponse() {}
 
-    private WebServerConfigResponse() {
-        this.machineType = null;
+    private WebServerConfigResponse(WebServerConfigResponse $) {
+        this.machineType = $.machineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String machineType;
+        private WebServerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServerConfigResponse();
         }
 
         public Builder(WebServerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineType = defaults.machineType;
+            $ = new WebServerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
-        }        public WebServerConfigResponse build() {
-            return new WebServerConfigResponse(machineType);
+        }
+
+        public WebServerConfigResponse build() {
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

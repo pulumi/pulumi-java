@@ -14,81 +14,77 @@ public final class GetConnectionPhysicalConnectionRequirement extends com.pulumi
     public static final GetConnectionPhysicalConnectionRequirement Empty = new GetConnectionPhysicalConnectionRequirement();
 
     @Import(name="availabilityZone", required=true)
-      private final String availabilityZone;
+    private String availabilityZone;
 
     public String availabilityZone() {
         return this.availabilityZone;
     }
 
     @Import(name="securityGroupIdLists", required=true)
-      private final List<String> securityGroupIdLists;
+    private List<String> securityGroupIdLists;
 
     public List<String> securityGroupIdLists() {
         return this.securityGroupIdLists;
     }
 
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
     }
 
-    public GetConnectionPhysicalConnectionRequirement(
-        String availabilityZone,
-        List<String> securityGroupIdLists,
-        String subnetId) {
-        this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
-        this.securityGroupIdLists = Objects.requireNonNull(securityGroupIdLists, "expected parameter 'securityGroupIdLists' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private GetConnectionPhysicalConnectionRequirement() {}
 
-    private GetConnectionPhysicalConnectionRequirement() {
-        this.availabilityZone = null;
-        this.securityGroupIdLists = List.of();
-        this.subnetId = null;
+    private GetConnectionPhysicalConnectionRequirement(GetConnectionPhysicalConnectionRequirement $) {
+        this.availabilityZone = $.availabilityZone;
+        this.securityGroupIdLists = $.securityGroupIdLists;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionPhysicalConnectionRequirement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String availabilityZone;
-        private List<String> securityGroupIdLists;
-        private String subnetId;
+        private GetConnectionPhysicalConnectionRequirement $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionPhysicalConnectionRequirement();
         }
 
         public Builder(GetConnectionPhysicalConnectionRequirement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.securityGroupIdLists = defaults.securityGroupIdLists;
-    	      this.subnetId = defaults.subnetId;
+            $ = new GetConnectionPhysicalConnectionRequirement(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Objects.requireNonNull(availabilityZone);
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder securityGroupIdLists(List<String> securityGroupIdLists) {
-            this.securityGroupIdLists = Objects.requireNonNull(securityGroupIdLists);
+            $.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
+
         public Builder securityGroupIdLists(String... securityGroupIdLists) {
             return securityGroupIdLists(List.of(securityGroupIdLists));
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
-        }        public GetConnectionPhysicalConnectionRequirement build() {
-            return new GetConnectionPhysicalConnectionRequirement(availabilityZone, securityGroupIdLists, subnetId);
+        }
+
+        public GetConnectionPhysicalConnectionRequirement build() {
+            $.availabilityZone = Objects.requireNonNull($.availabilityZone, "expected parameter 'availabilityZone' to be non-null");
+            $.securityGroupIdLists = Objects.requireNonNull($.securityGroupIdLists, "expected parameter 'securityGroupIdLists' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

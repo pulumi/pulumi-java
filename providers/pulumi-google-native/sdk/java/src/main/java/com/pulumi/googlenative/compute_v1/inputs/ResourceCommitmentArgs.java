@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.ResourceCommitmentType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="amount")
-      private final @Nullable Output<String> amount;
+    private @Nullable Output<String> amount;
 
-    public Output<String> amount() {
-        return this.amount == null ? Codegen.empty() : this.amount;
+    public Optional<Output<String>> amount() {
+        return Optional.ofNullable(this.amount);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ResourceCommitmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceCommitmentType> type;
+    private @Nullable Output<ResourceCommitmentType> type;
 
-    public Output<ResourceCommitmentType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceCommitmentType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ResourceCommitmentArgs(
-        @Nullable Output<String> acceleratorType,
-        @Nullable Output<String> amount,
-        @Nullable Output<ResourceCommitmentType> type) {
-        this.acceleratorType = acceleratorType;
-        this.amount = amount;
-        this.type = type;
-    }
+    private ResourceCommitmentArgs() {}
 
-    private ResourceCommitmentArgs() {
-        this.acceleratorType = Codegen.empty();
-        this.amount = Codegen.empty();
-        this.type = Codegen.empty();
+    private ResourceCommitmentArgs(ResourceCommitmentArgs $) {
+        this.acceleratorType = $.acceleratorType;
+        this.amount = $.amount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCommitmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceleratorType;
-        private @Nullable Output<String> amount;
-        private @Nullable Output<ResourceCommitmentType> type;
+        private ResourceCommitmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCommitmentArgs();
         }
 
         public Builder(ResourceCommitmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.amount = defaults.amount;
-    	      this.type = defaults.type;
+            $ = new ResourceCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
         }
+
         public Builder amount(@Nullable Output<String> amount) {
-            this.amount = amount;
+            $.amount = amount;
             return this;
         }
-        public Builder amount(@Nullable String amount) {
-            this.amount = Codegen.ofNullable(amount);
-            return this;
+
+        public Builder amount(String amount) {
+            return amount(Output.of(amount));
         }
+
         public Builder type(@Nullable Output<ResourceCommitmentType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceCommitmentType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ResourceCommitmentArgs build() {
-            return new ResourceCommitmentArgs(acceleratorType, amount, type);
+
+        public Builder type(ResourceCommitmentType type) {
+            return type(Output.of(type));
+        }
+
+        public ResourceCommitmentArgs build() {
+            return $;
         }
     }
+
 }

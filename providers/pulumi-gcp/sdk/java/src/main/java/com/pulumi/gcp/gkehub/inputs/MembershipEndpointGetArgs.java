@@ -5,9 +5,9 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.MembershipEndpointGkeClusterGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class MembershipEndpointGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="gkeCluster")
-      private final @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
+    private @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
-    public Output<MembershipEndpointGkeClusterGetArgs> gkeCluster() {
-        return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
+    public Optional<Output<MembershipEndpointGkeClusterGetArgs>> gkeCluster() {
+        return Optional.ofNullable(this.gkeCluster);
     }
 
-    public MembershipEndpointGetArgs(@Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
-        this.gkeCluster = gkeCluster;
-    }
+    private MembershipEndpointGetArgs() {}
 
-    private MembershipEndpointGetArgs() {
-        this.gkeCluster = Codegen.empty();
+    private MembershipEndpointGetArgs(MembershipEndpointGetArgs $) {
+        this.gkeCluster = $.gkeCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
+        private MembershipEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipEndpointGetArgs();
         }
 
         public Builder(MembershipEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeCluster = defaults.gkeCluster;
+            $ = new MembershipEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeCluster(@Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
-            this.gkeCluster = gkeCluster;
+            $.gkeCluster = gkeCluster;
             return this;
         }
-        public Builder gkeCluster(@Nullable MembershipEndpointGkeClusterGetArgs gkeCluster) {
-            this.gkeCluster = Codegen.ofNullable(gkeCluster);
-            return this;
-        }        public MembershipEndpointGetArgs build() {
-            return new MembershipEndpointGetArgs(gkeCluster);
+
+        public Builder gkeCluster(MembershipEndpointGkeClusterGetArgs gkeCluster) {
+            return gkeCluster(Output.of(gkeCluster));
+        }
+
+        public MembershipEndpointGetArgs build() {
+            return $;
         }
     }
+
 }

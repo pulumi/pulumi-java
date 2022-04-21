@@ -9,10 +9,10 @@ import com.pulumi.azurenative.network.enums.PolicyRequestBodyCheck;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="customBlockResponseBody")
-      private final @Nullable Output<String> customBlockResponseBody;
+    private @Nullable Output<String> customBlockResponseBody;
 
-    public Output<String> customBlockResponseBody() {
-        return this.customBlockResponseBody == null ? Codegen.empty() : this.customBlockResponseBody;
+    public Optional<Output<String>> customBlockResponseBody() {
+        return Optional.ofNullable(this.customBlockResponseBody);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="customBlockResponseStatusCode")
-      private final @Nullable Output<Integer> customBlockResponseStatusCode;
+    private @Nullable Output<Integer> customBlockResponseStatusCode;
 
-    public Output<Integer> customBlockResponseStatusCode() {
-        return this.customBlockResponseStatusCode == null ? Codegen.empty() : this.customBlockResponseStatusCode;
+    public Optional<Output<Integer>> customBlockResponseStatusCode() {
+        return Optional.ofNullable(this.customBlockResponseStatusCode);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
+    private @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
-    public Output<Either<String,PolicyEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,PolicyEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,PolicyMode>> mode;
+    private @Nullable Output<Either<String,PolicyMode>> mode;
 
-    public Output<Either<String,PolicyMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,PolicyMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="redirectUrl")
-      private final @Nullable Output<String> redirectUrl;
+    private @Nullable Output<String> redirectUrl;
 
-    public Output<String> redirectUrl() {
-        return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
+    public Optional<Output<String>> redirectUrl() {
+        return Optional.ofNullable(this.redirectUrl);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="requestBodyCheck")
-      private final @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
+    private @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
 
-    public Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck() {
-        return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
+    public Optional<Output<Either<String,PolicyRequestBodyCheck>>> requestBodyCheck() {
+        return Optional.ofNullable(this.requestBodyCheck);
     }
 
-    public FrontDoorPolicySettingsArgs(
-        @Nullable Output<String> customBlockResponseBody,
-        @Nullable Output<Integer> customBlockResponseStatusCode,
-        @Nullable Output<Either<String,PolicyEnabledState>> enabledState,
-        @Nullable Output<Either<String,PolicyMode>> mode,
-        @Nullable Output<String> redirectUrl,
-        @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
-        this.customBlockResponseBody = customBlockResponseBody;
-        this.customBlockResponseStatusCode = customBlockResponseStatusCode;
-        this.enabledState = enabledState;
-        this.mode = mode;
-        this.redirectUrl = redirectUrl;
-        this.requestBodyCheck = requestBodyCheck;
-    }
+    private FrontDoorPolicySettingsArgs() {}
 
-    private FrontDoorPolicySettingsArgs() {
-        this.customBlockResponseBody = Codegen.empty();
-        this.customBlockResponseStatusCode = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.redirectUrl = Codegen.empty();
-        this.requestBodyCheck = Codegen.empty();
+    private FrontDoorPolicySettingsArgs(FrontDoorPolicySettingsArgs $) {
+        this.customBlockResponseBody = $.customBlockResponseBody;
+        this.customBlockResponseStatusCode = $.customBlockResponseStatusCode;
+        this.enabledState = $.enabledState;
+        this.mode = $.mode;
+        this.redirectUrl = $.redirectUrl;
+        this.requestBodyCheck = $.requestBodyCheck;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorPolicySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customBlockResponseBody;
-        private @Nullable Output<Integer> customBlockResponseStatusCode;
-        private @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
-        private @Nullable Output<Either<String,PolicyMode>> mode;
-        private @Nullable Output<String> redirectUrl;
-        private @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
+        private FrontDoorPolicySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorPolicySettingsArgs();
         }
 
         public Builder(FrontDoorPolicySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customBlockResponseBody = defaults.customBlockResponseBody;
-    	      this.customBlockResponseStatusCode = defaults.customBlockResponseStatusCode;
-    	      this.enabledState = defaults.enabledState;
-    	      this.mode = defaults.mode;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.requestBodyCheck = defaults.requestBodyCheck;
+            $ = new FrontDoorPolicySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customBlockResponseBody(@Nullable Output<String> customBlockResponseBody) {
-            this.customBlockResponseBody = customBlockResponseBody;
+            $.customBlockResponseBody = customBlockResponseBody;
             return this;
         }
-        public Builder customBlockResponseBody(@Nullable String customBlockResponseBody) {
-            this.customBlockResponseBody = Codegen.ofNullable(customBlockResponseBody);
-            return this;
+
+        public Builder customBlockResponseBody(String customBlockResponseBody) {
+            return customBlockResponseBody(Output.of(customBlockResponseBody));
         }
+
         public Builder customBlockResponseStatusCode(@Nullable Output<Integer> customBlockResponseStatusCode) {
-            this.customBlockResponseStatusCode = customBlockResponseStatusCode;
+            $.customBlockResponseStatusCode = customBlockResponseStatusCode;
             return this;
         }
-        public Builder customBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
-            this.customBlockResponseStatusCode = Codegen.ofNullable(customBlockResponseStatusCode);
-            return this;
+
+        public Builder customBlockResponseStatusCode(Integer customBlockResponseStatusCode) {
+            return customBlockResponseStatusCode(Output.of(customBlockResponseStatusCode));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,PolicyEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,PolicyMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,PolicyMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
-            this.redirectUrl = redirectUrl;
+            $.redirectUrl = redirectUrl;
             return this;
         }
-        public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Codegen.ofNullable(redirectUrl);
-            return this;
+
+        public Builder redirectUrl(String redirectUrl) {
+            return redirectUrl(Output.of(redirectUrl));
         }
+
         public Builder requestBodyCheck(@Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
-            this.requestBodyCheck = requestBodyCheck;
+            $.requestBodyCheck = requestBodyCheck;
             return this;
         }
-        public Builder requestBodyCheck(@Nullable Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
-            this.requestBodyCheck = Codegen.ofNullable(requestBodyCheck);
-            return this;
-        }        public FrontDoorPolicySettingsArgs build() {
-            return new FrontDoorPolicySettingsArgs(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);
+
+        public Builder requestBodyCheck(Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
+            return requestBodyCheck(Output.of(requestBodyCheck));
+        }
+
+        public FrontDoorPolicySettingsArgs build() {
+            return $;
         }
     }
+
 }

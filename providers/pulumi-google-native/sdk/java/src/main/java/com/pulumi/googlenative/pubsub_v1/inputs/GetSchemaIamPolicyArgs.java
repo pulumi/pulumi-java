@@ -15,78 +15,71 @@ public final class GetSchemaIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetSchemaIamPolicyArgs Empty = new GetSchemaIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="schemaId", required=true)
-      private final String schemaId;
+    private String schemaId;
 
     public String schemaId() {
         return this.schemaId;
     }
 
-    public GetSchemaIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String schemaId) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.schemaId = Objects.requireNonNull(schemaId, "expected parameter 'schemaId' to be non-null");
-    }
+    private GetSchemaIamPolicyArgs() {}
 
-    private GetSchemaIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.schemaId = null;
+    private GetSchemaIamPolicyArgs(GetSchemaIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.schemaId = $.schemaId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchemaIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String schemaId;
+        private GetSchemaIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchemaIamPolicyArgs();
         }
 
         public Builder(GetSchemaIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.schemaId = defaults.schemaId;
+            $ = new GetSchemaIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder schemaId(String schemaId) {
-            this.schemaId = Objects.requireNonNull(schemaId);
+            $.schemaId = schemaId;
             return this;
-        }        public GetSchemaIamPolicyArgs build() {
-            return new GetSchemaIamPolicyArgs(optionsRequestedPolicyVersion, project, schemaId);
+        }
+
+        public GetSchemaIamPolicyArgs build() {
+            $.schemaId = Objects.requireNonNull($.schemaId, "expected parameter 'schemaId' to be non-null");
+            return $;
         }
     }
+
 }

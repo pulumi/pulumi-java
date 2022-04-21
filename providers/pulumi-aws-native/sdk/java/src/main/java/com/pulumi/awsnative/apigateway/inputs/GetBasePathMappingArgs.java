@@ -17,7 +17,7 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="basePath", required=true)
-      private final String basePath;
+    private String basePath;
 
     public String basePath() {
         return this.basePath;
@@ -28,55 +28,52 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
     }
 
-    public GetBasePathMappingArgs(
-        String basePath,
-        String domainName) {
-        this.basePath = Objects.requireNonNull(basePath, "expected parameter 'basePath' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-    }
+    private GetBasePathMappingArgs() {}
 
-    private GetBasePathMappingArgs() {
-        this.basePath = null;
-        this.domainName = null;
+    private GetBasePathMappingArgs(GetBasePathMappingArgs $) {
+        this.basePath = $.basePath;
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBasePathMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String basePath;
-        private String domainName;
+        private GetBasePathMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBasePathMappingArgs();
         }
 
         public Builder(GetBasePathMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basePath = defaults.basePath;
-    	      this.domainName = defaults.domainName;
+            $ = new GetBasePathMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basePath(String basePath) {
-            this.basePath = Objects.requireNonNull(basePath);
+            $.basePath = basePath;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
-        }        public GetBasePathMappingArgs build() {
-            return new GetBasePathMappingArgs(basePath, domainName);
+        }
+
+        public GetBasePathMappingArgs build() {
+            $.basePath = Objects.requireNonNull($.basePath, "expected parameter 'basePath' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

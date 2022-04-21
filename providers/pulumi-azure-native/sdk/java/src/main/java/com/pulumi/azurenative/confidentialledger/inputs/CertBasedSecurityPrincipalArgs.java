@@ -7,9 +7,9 @@ import com.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="cert")
-      private final @Nullable Output<String> cert;
+    private @Nullable Output<String> cert;
 
-    public Output<String> cert() {
-        return this.cert == null ? Codegen.empty() : this.cert;
+    public Optional<Output<String>> cert() {
+        return Optional.ofNullable(this.cert);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="ledgerRoleName")
-      private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
+    private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
-    public Output<Either<String,LedgerRoleName>> ledgerRoleName() {
-        return this.ledgerRoleName == null ? Codegen.empty() : this.ledgerRoleName;
+    public Optional<Output<Either<String,LedgerRoleName>>> ledgerRoleName() {
+        return Optional.ofNullable(this.ledgerRoleName);
     }
 
-    public CertBasedSecurityPrincipalArgs(
-        @Nullable Output<String> cert,
-        @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
-        this.cert = cert;
-        this.ledgerRoleName = ledgerRoleName;
-    }
+    private CertBasedSecurityPrincipalArgs() {}
 
-    private CertBasedSecurityPrincipalArgs() {
-        this.cert = Codegen.empty();
-        this.ledgerRoleName = Codegen.empty();
+    private CertBasedSecurityPrincipalArgs(CertBasedSecurityPrincipalArgs $) {
+        this.cert = $.cert;
+        this.ledgerRoleName = $.ledgerRoleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertBasedSecurityPrincipalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cert;
-        private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
+        private CertBasedSecurityPrincipalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertBasedSecurityPrincipalArgs();
         }
 
         public Builder(CertBasedSecurityPrincipalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.ledgerRoleName = defaults.ledgerRoleName;
+            $ = new CertBasedSecurityPrincipalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable Output<String> cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
-        public Builder cert(@Nullable String cert) {
-            this.cert = Codegen.ofNullable(cert);
-            return this;
+
+        public Builder cert(String cert) {
+            return cert(Output.of(cert));
         }
+
         public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
-            this.ledgerRoleName = ledgerRoleName;
+            $.ledgerRoleName = ledgerRoleName;
             return this;
         }
-        public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
-            this.ledgerRoleName = Codegen.ofNullable(ledgerRoleName);
-            return this;
-        }        public CertBasedSecurityPrincipalArgs build() {
-            return new CertBasedSecurityPrincipalArgs(cert, ledgerRoleName);
+
+        public Builder ledgerRoleName(Either<String,LedgerRoleName> ledgerRoleName) {
+            return ledgerRoleName(Output.of(ledgerRoleName));
+        }
+
+        public CertBasedSecurityPrincipalArgs build() {
+            return $;
         }
     }
+
 }

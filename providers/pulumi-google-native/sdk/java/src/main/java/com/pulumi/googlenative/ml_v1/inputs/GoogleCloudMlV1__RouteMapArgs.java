@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudMlV1__RouteMapArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="health")
-      private final @Nullable Output<String> health;
+    private @Nullable Output<String> health;
 
-    public Output<String> health() {
-        return this.health == null ? Codegen.empty() : this.health;
+    public Optional<Output<String>> health() {
+        return Optional.ofNullable(this.health);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudMlV1__RouteMapArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="predict")
-      private final @Nullable Output<String> predict;
+    private @Nullable Output<String> predict;
 
-    public Output<String> predict() {
-        return this.predict == null ? Codegen.empty() : this.predict;
+    public Optional<Output<String>> predict() {
+        return Optional.ofNullable(this.predict);
     }
 
-    public GoogleCloudMlV1__RouteMapArgs(
-        @Nullable Output<String> health,
-        @Nullable Output<String> predict) {
-        this.health = health;
-        this.predict = predict;
-    }
+    private GoogleCloudMlV1__RouteMapArgs() {}
 
-    private GoogleCloudMlV1__RouteMapArgs() {
-        this.health = Codegen.empty();
-        this.predict = Codegen.empty();
+    private GoogleCloudMlV1__RouteMapArgs(GoogleCloudMlV1__RouteMapArgs $) {
+        this.health = $.health;
+        this.predict = $.predict;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__RouteMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> health;
-        private @Nullable Output<String> predict;
+        private GoogleCloudMlV1__RouteMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__RouteMapArgs();
         }
 
         public Builder(GoogleCloudMlV1__RouteMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.health = defaults.health;
-    	      this.predict = defaults.predict;
+            $ = new GoogleCloudMlV1__RouteMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder health(@Nullable Output<String> health) {
-            this.health = health;
+            $.health = health;
             return this;
         }
-        public Builder health(@Nullable String health) {
-            this.health = Codegen.ofNullable(health);
-            return this;
+
+        public Builder health(String health) {
+            return health(Output.of(health));
         }
+
         public Builder predict(@Nullable Output<String> predict) {
-            this.predict = predict;
+            $.predict = predict;
             return this;
         }
-        public Builder predict(@Nullable String predict) {
-            this.predict = Codegen.ofNullable(predict);
-            return this;
-        }        public GoogleCloudMlV1__RouteMapArgs build() {
-            return new GoogleCloudMlV1__RouteMapArgs(health, predict);
+
+        public Builder predict(String predict) {
+            return predict(Output.of(predict));
+        }
+
+        public GoogleCloudMlV1__RouteMapArgs build() {
+            return $;
         }
     }
+
 }

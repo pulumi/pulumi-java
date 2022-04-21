@@ -23,7 +23,7 @@ public final class SafetyRuleGatingRule extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gatingControls", required=true)
-      private final List<String> gatingControls;
+    private List<String> gatingControls;
 
     public List<String> gatingControls() {
         return this.gatingControls;
@@ -35,7 +35,7 @@ public final class SafetyRuleGatingRule extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetControls", required=true)
-      private final List<String> targetControls;
+    private List<String> targetControls;
 
     public List<String> targetControls() {
         return this.targetControls;
@@ -46,70 +46,67 @@ public final class SafetyRuleGatingRule extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="waitPeriodMs", required=true)
-      private final Integer waitPeriodMs;
+    private Integer waitPeriodMs;
 
     public Integer waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
-    public SafetyRuleGatingRule(
-        List<String> gatingControls,
-        List<String> targetControls,
-        Integer waitPeriodMs) {
-        this.gatingControls = Objects.requireNonNull(gatingControls, "expected parameter 'gatingControls' to be non-null");
-        this.targetControls = Objects.requireNonNull(targetControls, "expected parameter 'targetControls' to be non-null");
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
-    }
+    private SafetyRuleGatingRule() {}
 
-    private SafetyRuleGatingRule() {
-        this.gatingControls = List.of();
-        this.targetControls = List.of();
-        this.waitPeriodMs = null;
+    private SafetyRuleGatingRule(SafetyRuleGatingRule $) {
+        this.gatingControls = $.gatingControls;
+        this.targetControls = $.targetControls;
+        this.waitPeriodMs = $.waitPeriodMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SafetyRuleGatingRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> gatingControls;
-        private List<String> targetControls;
-        private Integer waitPeriodMs;
+        private SafetyRuleGatingRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new SafetyRuleGatingRule();
         }
 
         public Builder(SafetyRuleGatingRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatingControls = defaults.gatingControls;
-    	      this.targetControls = defaults.targetControls;
-    	      this.waitPeriodMs = defaults.waitPeriodMs;
+            $ = new SafetyRuleGatingRule(Objects.requireNonNull(defaults));
         }
 
         public Builder gatingControls(List<String> gatingControls) {
-            this.gatingControls = Objects.requireNonNull(gatingControls);
+            $.gatingControls = gatingControls;
             return this;
         }
+
         public Builder gatingControls(String... gatingControls) {
             return gatingControls(List.of(gatingControls));
         }
+
         public Builder targetControls(List<String> targetControls) {
-            this.targetControls = Objects.requireNonNull(targetControls);
+            $.targetControls = targetControls;
             return this;
         }
+
         public Builder targetControls(String... targetControls) {
             return targetControls(List.of(targetControls));
         }
+
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+            $.waitPeriodMs = waitPeriodMs;
             return this;
-        }        public SafetyRuleGatingRule build() {
-            return new SafetyRuleGatingRule(gatingControls, targetControls, waitPeriodMs);
+        }
+
+        public SafetyRuleGatingRule build() {
+            $.gatingControls = Objects.requireNonNull($.gatingControls, "expected parameter 'gatingControls' to be non-null");
+            $.targetControls = Objects.requireNonNull($.targetControls, "expected parameter 'targetControls' to be non-null");
+            $.waitPeriodMs = Objects.requireNonNull($.waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class StreamEncryption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionType", required=true)
-      private final StreamEncryptionEncryptionType encryptionType;
+    private StreamEncryptionEncryptionType encryptionType;
 
     public StreamEncryptionEncryptionType encryptionType() {
         return this.encryptionType;
@@ -33,55 +33,52 @@ public final class StreamEncryption extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
-    public StreamEncryption(
-        StreamEncryptionEncryptionType encryptionType,
-        String keyId) {
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private StreamEncryption() {}
 
-    private StreamEncryption() {
-        this.encryptionType = null;
-        this.keyId = null;
+    private StreamEncryption(StreamEncryption $) {
+        this.encryptionType = $.encryptionType;
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private StreamEncryptionEncryptionType encryptionType;
-        private String keyId;
+        private StreamEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamEncryption();
         }
 
         public Builder(StreamEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.keyId = defaults.keyId;
+            $ = new StreamEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
-        }        public StreamEncryption build() {
-            return new StreamEncryption(encryptionType, keyId);
+        }
+
+        public StreamEncryption build() {
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

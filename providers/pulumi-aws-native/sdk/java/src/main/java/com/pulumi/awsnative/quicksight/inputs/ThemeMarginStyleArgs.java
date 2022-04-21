@@ -5,9 +5,9 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ThemeMarginStyleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="show")
-      private final @Nullable Output<Boolean> show;
+    private @Nullable Output<Boolean> show;
 
-    public Output<Boolean> show() {
-        return this.show == null ? Codegen.empty() : this.show;
+    public Optional<Output<Boolean>> show() {
+        return Optional.ofNullable(this.show);
     }
 
-    public ThemeMarginStyleArgs(@Nullable Output<Boolean> show) {
-        this.show = show;
-    }
+    private ThemeMarginStyleArgs() {}
 
-    private ThemeMarginStyleArgs() {
-        this.show = Codegen.empty();
+    private ThemeMarginStyleArgs(ThemeMarginStyleArgs $) {
+        this.show = $.show;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeMarginStyleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> show;
+        private ThemeMarginStyleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeMarginStyleArgs();
         }
 
         public Builder(ThemeMarginStyleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.show = defaults.show;
+            $ = new ThemeMarginStyleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder show(@Nullable Output<Boolean> show) {
-            this.show = show;
+            $.show = show;
             return this;
         }
-        public Builder show(@Nullable Boolean show) {
-            this.show = Codegen.ofNullable(show);
-            return this;
-        }        public ThemeMarginStyleArgs build() {
-            return new ThemeMarginStyleArgs(show);
+
+        public Builder show(Boolean show) {
+            return show(Output.of(show));
+        }
+
+        public ThemeMarginStyleArgs build() {
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class ProjectSample extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Integer size;
+    private @Nullable Integer size;
 
     public Optional<Integer> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -31,55 +31,51 @@ public final class ProjectSample extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final ProjectSampleType type;
+    private ProjectSampleType type;
 
     public ProjectSampleType type() {
         return this.type;
     }
 
-    public ProjectSample(
-        @Nullable Integer size,
-        ProjectSampleType type) {
-        this.size = size;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProjectSample() {}
 
-    private ProjectSample() {
-        this.size = null;
-        this.type = null;
+    private ProjectSample(ProjectSample $) {
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSample defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer size;
-        private ProjectSampleType type;
+        private ProjectSample $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSample();
         }
 
         public Builder(ProjectSample defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new ProjectSample(Objects.requireNonNull(defaults));
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
+
         public Builder type(ProjectSampleType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ProjectSample build() {
-            return new ProjectSample(size, type);
+        }
+
+        public ProjectSample build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class GitHubActionCodeConfigurationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="runtimeStack")
-      private final @Nullable String runtimeStack;
+    private @Nullable String runtimeStack;
 
     public Optional<String> runtimeStack() {
-        return this.runtimeStack == null ? Optional.empty() : Optional.ofNullable(this.runtimeStack);
+        return Optional.ofNullable(this.runtimeStack);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class GitHubActionCodeConfigurationResponse extends com.pulumi.reso
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable String runtimeVersion;
+    private @Nullable String runtimeVersion;
 
     public Optional<String> runtimeVersion() {
-        return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
-    public GitHubActionCodeConfigurationResponse(
-        @Nullable String runtimeStack,
-        @Nullable String runtimeVersion) {
-        this.runtimeStack = runtimeStack;
-        this.runtimeVersion = runtimeVersion;
-    }
+    private GitHubActionCodeConfigurationResponse() {}
 
-    private GitHubActionCodeConfigurationResponse() {
-        this.runtimeStack = null;
-        this.runtimeVersion = null;
+    private GitHubActionCodeConfigurationResponse(GitHubActionCodeConfigurationResponse $) {
+        this.runtimeStack = $.runtimeStack;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubActionCodeConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String runtimeStack;
-        private @Nullable String runtimeVersion;
+        private GitHubActionCodeConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubActionCodeConfigurationResponse();
         }
 
         public Builder(GitHubActionCodeConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.runtimeStack = defaults.runtimeStack;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new GitHubActionCodeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder runtimeStack(@Nullable String runtimeStack) {
-            this.runtimeStack = runtimeStack;
+            $.runtimeStack = runtimeStack;
             return this;
         }
+
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
-        }        public GitHubActionCodeConfigurationResponse build() {
-            return new GitHubActionCodeConfigurationResponse(runtimeStack, runtimeVersion);
+        }
+
+        public GitHubActionCodeConfigurationResponse build() {
+            return $;
         }
     }
+
 }

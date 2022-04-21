@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secretName", required=true)
-      private final Output<Object> secretName;
+    private Output<Object> secretName;
 
     public Output<Object> secretName() {
         return this.secretName;
@@ -37,10 +38,10 @@ public final class AzureKeyVaultSecretReferenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable Output<Object> secretVersion;
+    private @Nullable Output<Object> secretVersion;
 
-    public Output<Object> secretVersion() {
-        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
+    public Optional<Output<Object>> secretVersion() {
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="store", required=true)
-      private final Output<LinkedServiceReferenceArgs> store;
+    private Output<LinkedServiceReferenceArgs> store;
 
     public Output<LinkedServiceReferenceArgs> store() {
         return this.store;
@@ -60,89 +61,81 @@ public final class AzureKeyVaultSecretReferenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureKeyVaultSecretReferenceArgs(
-        Output<Object> secretName,
-        @Nullable Output<Object> secretVersion,
-        Output<LinkedServiceReferenceArgs> store,
-        Output<String> type) {
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-        this.secretVersion = secretVersion;
-        this.store = Objects.requireNonNull(store, "expected parameter 'store' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureKeyVaultSecretReferenceArgs() {}
 
-    private AzureKeyVaultSecretReferenceArgs() {
-        this.secretName = Codegen.empty();
-        this.secretVersion = Codegen.empty();
-        this.store = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureKeyVaultSecretReferenceArgs(AzureKeyVaultSecretReferenceArgs $) {
+        this.secretName = $.secretName;
+        this.secretVersion = $.secretVersion;
+        this.store = $.store;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureKeyVaultSecretReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> secretName;
-        private @Nullable Output<Object> secretVersion;
-        private Output<LinkedServiceReferenceArgs> store;
-        private Output<String> type;
+        private AzureKeyVaultSecretReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureKeyVaultSecretReferenceArgs();
         }
 
         public Builder(AzureKeyVaultSecretReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretName = defaults.secretName;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.store = defaults.store;
-    	      this.type = defaults.type;
+            $ = new AzureKeyVaultSecretReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretName(Output<Object> secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretName(Object secretName) {
-            this.secretName = Output.of(Objects.requireNonNull(secretName));
-            return this;
+            return secretName(Output.of(secretName));
         }
+
         public Builder secretVersion(@Nullable Output<Object> secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
-        public Builder secretVersion(@Nullable Object secretVersion) {
-            this.secretVersion = Codegen.ofNullable(secretVersion);
-            return this;
+
+        public Builder secretVersion(Object secretVersion) {
+            return secretVersion(Output.of(secretVersion));
         }
+
         public Builder store(Output<LinkedServiceReferenceArgs> store) {
-            this.store = Objects.requireNonNull(store);
+            $.store = store;
             return this;
         }
+
         public Builder store(LinkedServiceReferenceArgs store) {
-            this.store = Output.of(Objects.requireNonNull(store));
-            return this;
+            return store(Output.of(store));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureKeyVaultSecretReferenceArgs build() {
-            return new AzureKeyVaultSecretReferenceArgs(secretName, secretVersion, store, type);
+            return type(Output.of(type));
+        }
+
+        public AzureKeyVaultSecretReferenceArgs build() {
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            $.store = Objects.requireNonNull($.store, "expected parameter 'store' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

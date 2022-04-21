@@ -13,78 +13,73 @@ public final class GetCanaryEvaluationArgs extends com.pulumi.resources.InvokeAr
     public static final GetCanaryEvaluationArgs Empty = new GetCanaryEvaluationArgs();
 
     @Import(name="canaryevaluationId", required=true)
-      private final String canaryevaluationId;
+    private String canaryevaluationId;
 
     public String canaryevaluationId() {
         return this.canaryevaluationId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetCanaryEvaluationArgs(
-        String canaryevaluationId,
-        String instanceId,
-        String organizationId) {
-        this.canaryevaluationId = Objects.requireNonNull(canaryevaluationId, "expected parameter 'canaryevaluationId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetCanaryEvaluationArgs() {}
 
-    private GetCanaryEvaluationArgs() {
-        this.canaryevaluationId = null;
-        this.instanceId = null;
-        this.organizationId = null;
+    private GetCanaryEvaluationArgs(GetCanaryEvaluationArgs $) {
+        this.canaryevaluationId = $.canaryevaluationId;
+        this.instanceId = $.instanceId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCanaryEvaluationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canaryevaluationId;
-        private String instanceId;
-        private String organizationId;
+        private GetCanaryEvaluationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCanaryEvaluationArgs();
         }
 
         public Builder(GetCanaryEvaluationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canaryevaluationId = defaults.canaryevaluationId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetCanaryEvaluationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canaryevaluationId(String canaryevaluationId) {
-            this.canaryevaluationId = Objects.requireNonNull(canaryevaluationId);
+            $.canaryevaluationId = canaryevaluationId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetCanaryEvaluationArgs build() {
-            return new GetCanaryEvaluationArgs(canaryevaluationId, instanceId, organizationId);
+        }
+
+        public GetCanaryEvaluationArgs build() {
+            $.canaryevaluationId = Objects.requireNonNull($.canaryevaluationId, "expected parameter 'canaryevaluationId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

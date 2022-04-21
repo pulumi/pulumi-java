@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookConversionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class CustomResourceConversionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="strategy", required=true)
-      private final Output<String> strategy;
+    private Output<String> strategy;
 
     public Output<String> strategy() {
         return this.strategy;
@@ -37,63 +37,59 @@ public final class CustomResourceConversionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="webhook")
-      private final @Nullable Output<WebhookConversionArgs> webhook;
+    private @Nullable Output<WebhookConversionArgs> webhook;
 
-    public Output<WebhookConversionArgs> webhook() {
-        return this.webhook == null ? Codegen.empty() : this.webhook;
+    public Optional<Output<WebhookConversionArgs>> webhook() {
+        return Optional.ofNullable(this.webhook);
     }
 
-    public CustomResourceConversionArgs(
-        Output<String> strategy,
-        @Nullable Output<WebhookConversionArgs> webhook) {
-        this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
-        this.webhook = webhook;
-    }
+    private CustomResourceConversionArgs() {}
 
-    private CustomResourceConversionArgs() {
-        this.strategy = Codegen.empty();
-        this.webhook = Codegen.empty();
+    private CustomResourceConversionArgs(CustomResourceConversionArgs $) {
+        this.strategy = $.strategy;
+        this.webhook = $.webhook;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceConversionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> strategy;
-        private @Nullable Output<WebhookConversionArgs> webhook;
+        private CustomResourceConversionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceConversionArgs();
         }
 
         public Builder(CustomResourceConversionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.strategy = defaults.strategy;
-    	      this.webhook = defaults.webhook;
+            $ = new CustomResourceConversionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder strategy(Output<String> strategy) {
-            this.strategy = Objects.requireNonNull(strategy);
+            $.strategy = strategy;
             return this;
         }
+
         public Builder strategy(String strategy) {
-            this.strategy = Output.of(Objects.requireNonNull(strategy));
-            return this;
+            return strategy(Output.of(strategy));
         }
+
         public Builder webhook(@Nullable Output<WebhookConversionArgs> webhook) {
-            this.webhook = webhook;
+            $.webhook = webhook;
             return this;
         }
-        public Builder webhook(@Nullable WebhookConversionArgs webhook) {
-            this.webhook = Codegen.ofNullable(webhook);
-            return this;
-        }        public CustomResourceConversionArgs build() {
-            return new CustomResourceConversionArgs(strategy, webhook);
+
+        public Builder webhook(WebhookConversionArgs webhook) {
+            return webhook(Output.of(webhook));
+        }
+
+        public CustomResourceConversionArgs build() {
+            $.strategy = Objects.requireNonNull($.strategy, "expected parameter 'strategy' to be non-null");
+            return $;
         }
     }
+
 }

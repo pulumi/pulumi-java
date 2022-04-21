@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +21,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="configurationName", required=true)
-      private final Output<String> configurationName;
+    private Output<String> configurationName;
 
     public Output<String> configurationName() {
         return this.configurationName;
@@ -31,10 +32,10 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="flag")
-      private final @Nullable Output<String> flag;
+    private @Nullable Output<String> flag;
 
-    public Output<String> flag() {
-        return this.flag == null ? Codegen.empty() : this.flag;
+    public Optional<Output<String>> flag() {
+        return Optional.ofNullable(this.flag);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -54,7 +55,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -65,7 +66,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +77,7 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ruleCollectionName", required=true)
-      private final Output<String> ruleCollectionName;
+    private Output<String> ruleCollectionName;
 
     public Output<String> ruleCollectionName() {
         return this.ruleCollectionName;
@@ -87,128 +88,113 @@ public final class DefaultAdminRuleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public DefaultAdminRuleArgs(
-        Output<String> configurationName,
-        @Nullable Output<String> flag,
-        Output<String> kind,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName,
-        Output<String> ruleCollectionName,
-        @Nullable Output<String> ruleName) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.flag = flag;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
-        this.ruleName = ruleName;
-    }
+    private DefaultAdminRuleArgs() {}
 
-    private DefaultAdminRuleArgs() {
-        this.configurationName = Codegen.empty();
-        this.flag = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleCollectionName = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private DefaultAdminRuleArgs(DefaultAdminRuleArgs $) {
+        this.configurationName = $.configurationName;
+        this.flag = $.flag;
+        this.kind = $.kind;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionName = $.ruleCollectionName;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultAdminRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configurationName;
-        private @Nullable Output<String> flag;
-        private Output<String> kind;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
-        private Output<String> ruleCollectionName;
-        private @Nullable Output<String> ruleName;
+        private DefaultAdminRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultAdminRuleArgs();
         }
 
         public Builder(DefaultAdminRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.flag = defaults.flag;
-    	      this.kind = defaults.kind;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionName = defaults.ruleCollectionName;
-    	      this.ruleName = defaults.ruleName;
+            $ = new DefaultAdminRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(Output<String> configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder configurationName(String configurationName) {
-            this.configurationName = Output.of(Objects.requireNonNull(configurationName));
-            return this;
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder flag(@Nullable Output<String> flag) {
-            this.flag = flag;
+            $.flag = flag;
             return this;
         }
-        public Builder flag(@Nullable String flag) {
-            this.flag = Codegen.ofNullable(flag);
-            return this;
+
+        public Builder flag(String flag) {
+            return flag(Output.of(flag));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleCollectionName(Output<String> ruleCollectionName) {
-            this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
+            $.ruleCollectionName = ruleCollectionName;
             return this;
         }
+
         public Builder ruleCollectionName(String ruleCollectionName) {
-            this.ruleCollectionName = Output.of(Objects.requireNonNull(ruleCollectionName));
-            return this;
+            return ruleCollectionName(Output.of(ruleCollectionName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
-        }        public DefaultAdminRuleArgs build() {
-            return new DefaultAdminRuleArgs(configurationName, flag, kind, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
+        }
+
+        public DefaultAdminRuleArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleCollectionName = Objects.requireNonNull($.ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
+            return $;
         }
     }
+
 }

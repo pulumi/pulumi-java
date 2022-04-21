@@ -23,10 +23,10 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dataInconsistency")
-      private final @Nullable Object dataInconsistency;
+    private @Nullable Object dataInconsistency;
 
     public Optional<Object> dataInconsistency() {
-        return this.dataInconsistency == null ? Optional.empty() : Optional.ofNullable(this.dataInconsistency);
+        return Optional.ofNullable(this.dataInconsistency);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SkipErrorFileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fileMissing")
-      private final @Nullable Object fileMissing;
+    private @Nullable Object fileMissing;
 
     public Optional<Object> fileMissing() {
-        return this.fileMissing == null ? Optional.empty() : Optional.ofNullable(this.fileMissing);
+        return Optional.ofNullable(this.fileMissing);
     }
 
-    public SkipErrorFileResponse(
-        @Nullable Object dataInconsistency,
-        @Nullable Object fileMissing) {
-        this.dataInconsistency = dataInconsistency;
-        this.fileMissing = fileMissing;
-    }
+    private SkipErrorFileResponse() {}
 
-    private SkipErrorFileResponse() {
-        this.dataInconsistency = null;
-        this.fileMissing = null;
+    private SkipErrorFileResponse(SkipErrorFileResponse $) {
+        this.dataInconsistency = $.dataInconsistency;
+        this.fileMissing = $.fileMissing;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkipErrorFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object dataInconsistency;
-        private @Nullable Object fileMissing;
+        private SkipErrorFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkipErrorFileResponse();
         }
 
         public Builder(SkipErrorFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataInconsistency = defaults.dataInconsistency;
-    	      this.fileMissing = defaults.fileMissing;
+            $ = new SkipErrorFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataInconsistency(@Nullable Object dataInconsistency) {
-            this.dataInconsistency = dataInconsistency;
+            $.dataInconsistency = dataInconsistency;
             return this;
         }
+
         public Builder fileMissing(@Nullable Object fileMissing) {
-            this.fileMissing = fileMissing;
+            $.fileMissing = fileMissing;
             return this;
-        }        public SkipErrorFileResponse build() {
-            return new SkipErrorFileResponse(dataInconsistency, fileMissing);
+        }
+
+        public SkipErrorFileResponse build() {
+            return $;
         }
     }
+
 }

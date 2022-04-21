@@ -23,45 +23,44 @@ public final class CdnEndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public CdnEndpointResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private CdnEndpointResponse() {}
 
-    private CdnEndpointResponse() {
-        this.id = null;
+    private CdnEndpointResponse(CdnEndpointResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CdnEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private CdnEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CdnEndpointResponse();
         }
 
         public Builder(CdnEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new CdnEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public CdnEndpointResponse build() {
-            return new CdnEndpointResponse(id);
+        }
+
+        public CdnEndpointResponse build() {
+            return $;
         }
     }
+
 }

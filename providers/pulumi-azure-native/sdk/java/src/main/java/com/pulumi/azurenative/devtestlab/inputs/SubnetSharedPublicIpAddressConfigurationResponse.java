@@ -24,48 +24,48 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends com.
      * 
      */
     @Import(name="allowedPorts")
-      private final @Nullable List<PortResponse> allowedPorts;
+    private @Nullable List<PortResponse> allowedPorts;
 
-    public List<PortResponse> allowedPorts() {
-        return this.allowedPorts == null ? List.of() : this.allowedPorts;
+    public Optional<List<PortResponse>> allowedPorts() {
+        return Optional.ofNullable(this.allowedPorts);
     }
 
-    public SubnetSharedPublicIpAddressConfigurationResponse(@Nullable List<PortResponse> allowedPorts) {
-        this.allowedPorts = allowedPorts;
-    }
+    private SubnetSharedPublicIpAddressConfigurationResponse() {}
 
-    private SubnetSharedPublicIpAddressConfigurationResponse() {
-        this.allowedPorts = List.of();
+    private SubnetSharedPublicIpAddressConfigurationResponse(SubnetSharedPublicIpAddressConfigurationResponse $) {
+        this.allowedPorts = $.allowedPorts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetSharedPublicIpAddressConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<PortResponse> allowedPorts;
+        private SubnetSharedPublicIpAddressConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetSharedPublicIpAddressConfigurationResponse();
         }
 
         public Builder(SubnetSharedPublicIpAddressConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPorts = defaults.allowedPorts;
+            $ = new SubnetSharedPublicIpAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPorts(@Nullable List<PortResponse> allowedPorts) {
-            this.allowedPorts = allowedPorts;
+            $.allowedPorts = allowedPorts;
             return this;
         }
+
         public Builder allowedPorts(PortResponse... allowedPorts) {
             return allowedPorts(List.of(allowedPorts));
-        }        public SubnetSharedPublicIpAddressConfigurationResponse build() {
-            return new SubnetSharedPublicIpAddressConfigurationResponse(allowedPorts);
+        }
+
+        public SubnetSharedPublicIpAddressConfigurationResponse build() {
+            return $;
         }
     }
+
 }

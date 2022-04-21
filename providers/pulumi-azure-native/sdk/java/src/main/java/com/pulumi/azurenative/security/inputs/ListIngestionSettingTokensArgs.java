@@ -17,45 +17,45 @@ public final class ListIngestionSettingTokensArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="ingestionSettingName", required=true)
-      private final String ingestionSettingName;
+    private String ingestionSettingName;
 
     public String ingestionSettingName() {
         return this.ingestionSettingName;
     }
 
-    public ListIngestionSettingTokensArgs(String ingestionSettingName) {
-        this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName, "expected parameter 'ingestionSettingName' to be non-null");
-    }
+    private ListIngestionSettingTokensArgs() {}
 
-    private ListIngestionSettingTokensArgs() {
-        this.ingestionSettingName = null;
+    private ListIngestionSettingTokensArgs(ListIngestionSettingTokensArgs $) {
+        this.ingestionSettingName = $.ingestionSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIngestionSettingTokensArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ingestionSettingName;
+        private ListIngestionSettingTokensArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIngestionSettingTokensArgs();
         }
 
         public Builder(ListIngestionSettingTokensArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestionSettingName = defaults.ingestionSettingName;
+            $ = new ListIngestionSettingTokensArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestionSettingName(String ingestionSettingName) {
-            this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
+            $.ingestionSettingName = ingestionSettingName;
             return this;
-        }        public ListIngestionSettingTokensArgs build() {
-            return new ListIngestionSettingTokensArgs(ingestionSettingName);
+        }
+
+        public ListIngestionSettingTokensArgs build() {
+            $.ingestionSettingName = Objects.requireNonNull($.ingestionSettingName, "expected parameter 'ingestionSettingName' to be non-null");
+            return $;
         }
     }
+
 }

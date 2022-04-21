@@ -13,62 +13,59 @@ public final class ListNotebookKeysResultResponse extends com.pulumi.resources.I
     public static final ListNotebookKeysResultResponse Empty = new ListNotebookKeysResultResponse();
 
     @Import(name="primaryAccessKey", required=true)
-      private final String primaryAccessKey;
+    private String primaryAccessKey;
 
     public String primaryAccessKey() {
         return this.primaryAccessKey;
     }
 
     @Import(name="secondaryAccessKey", required=true)
-      private final String secondaryAccessKey;
+    private String secondaryAccessKey;
 
     public String secondaryAccessKey() {
         return this.secondaryAccessKey;
     }
 
-    public ListNotebookKeysResultResponse(
-        String primaryAccessKey,
-        String secondaryAccessKey) {
-        this.primaryAccessKey = Objects.requireNonNull(primaryAccessKey, "expected parameter 'primaryAccessKey' to be non-null");
-        this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey, "expected parameter 'secondaryAccessKey' to be non-null");
-    }
+    private ListNotebookKeysResultResponse() {}
 
-    private ListNotebookKeysResultResponse() {
-        this.primaryAccessKey = null;
-        this.secondaryAccessKey = null;
+    private ListNotebookKeysResultResponse(ListNotebookKeysResultResponse $) {
+        this.primaryAccessKey = $.primaryAccessKey;
+        this.secondaryAccessKey = $.secondaryAccessKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListNotebookKeysResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String primaryAccessKey;
-        private String secondaryAccessKey;
+        private ListNotebookKeysResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListNotebookKeysResultResponse();
         }
 
         public Builder(ListNotebookKeysResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryAccessKey = defaults.primaryAccessKey;
-    	      this.secondaryAccessKey = defaults.secondaryAccessKey;
+            $ = new ListNotebookKeysResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryAccessKey(String primaryAccessKey) {
-            this.primaryAccessKey = Objects.requireNonNull(primaryAccessKey);
+            $.primaryAccessKey = primaryAccessKey;
             return this;
         }
+
         public Builder secondaryAccessKey(String secondaryAccessKey) {
-            this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
+            $.secondaryAccessKey = secondaryAccessKey;
             return this;
-        }        public ListNotebookKeysResultResponse build() {
-            return new ListNotebookKeysResultResponse(primaryAccessKey, secondaryAccessKey);
+        }
+
+        public ListNotebookKeysResultResponse build() {
+            $.primaryAccessKey = Objects.requireNonNull($.primaryAccessKey, "expected parameter 'primaryAccessKey' to be non-null");
+            $.secondaryAccessKey = Objects.requireNonNull($.secondaryAccessKey, "expected parameter 'secondaryAccessKey' to be non-null");
+            return $;
         }
     }
+
 }

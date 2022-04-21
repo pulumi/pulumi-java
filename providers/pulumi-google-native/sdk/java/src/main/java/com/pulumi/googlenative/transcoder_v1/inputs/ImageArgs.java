@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alpha")
-      private final @Nullable Output<Double> alpha;
+    private @Nullable Output<Double> alpha;
 
-    public Output<Double> alpha() {
-        return this.alpha == null ? Codegen.empty() : this.alpha;
+    public Optional<Output<Double>> alpha() {
+        return Optional.ofNullable(this.alpha);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resolution")
-      private final @Nullable Output<NormalizedCoordinateArgs> resolution;
+    private @Nullable Output<NormalizedCoordinateArgs> resolution;
 
-    public Output<NormalizedCoordinateArgs> resolution() {
-        return this.resolution == null ? Codegen.empty() : this.resolution;
+    public Optional<Output<NormalizedCoordinateArgs>> resolution() {
+        return Optional.ofNullable(this.resolution);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public ImageArgs(
-        @Nullable Output<Double> alpha,
-        @Nullable Output<NormalizedCoordinateArgs> resolution,
-        Output<String> uri) {
-        this.alpha = alpha;
-        this.resolution = resolution;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ImageArgs() {}
 
-    private ImageArgs() {
-        this.alpha = Codegen.empty();
-        this.resolution = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ImageArgs(ImageArgs $) {
+        this.alpha = $.alpha;
+        this.resolution = $.resolution;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> alpha;
-        private @Nullable Output<NormalizedCoordinateArgs> resolution;
-        private Output<String> uri;
+        private ImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageArgs();
         }
 
         public Builder(ImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alpha = defaults.alpha;
-    	      this.resolution = defaults.resolution;
-    	      this.uri = defaults.uri;
+            $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alpha(@Nullable Output<Double> alpha) {
-            this.alpha = alpha;
+            $.alpha = alpha;
             return this;
         }
-        public Builder alpha(@Nullable Double alpha) {
-            this.alpha = Codegen.ofNullable(alpha);
-            return this;
+
+        public Builder alpha(Double alpha) {
+            return alpha(Output.of(alpha));
         }
+
         public Builder resolution(@Nullable Output<NormalizedCoordinateArgs> resolution) {
-            this.resolution = resolution;
+            $.resolution = resolution;
             return this;
         }
-        public Builder resolution(@Nullable NormalizedCoordinateArgs resolution) {
-            this.resolution = Codegen.ofNullable(resolution);
-            return this;
+
+        public Builder resolution(NormalizedCoordinateArgs resolution) {
+            return resolution(Output.of(resolution));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public ImageArgs build() {
-            return new ImageArgs(alpha, resolution, uri);
+            return uri(Output.of(uri));
+        }
+
+        public ImageArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

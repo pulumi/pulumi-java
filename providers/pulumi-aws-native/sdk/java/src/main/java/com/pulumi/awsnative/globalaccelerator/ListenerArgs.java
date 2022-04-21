@@ -8,10 +8,10 @@ import com.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import com.pulumi.awsnative.globalaccelerator.inputs.ListenerPortRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorArn", required=true)
-      private final Output<String> acceleratorArn;
+    private Output<String> acceleratorArn;
 
     public Output<String> acceleratorArn() {
         return this.acceleratorArn;
@@ -35,14 +35,14 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientAffinity")
-      private final @Nullable Output<ListenerClientAffinity> clientAffinity;
+    private @Nullable Output<ListenerClientAffinity> clientAffinity;
 
-    public Output<ListenerClientAffinity> clientAffinity() {
-        return this.clientAffinity == null ? Codegen.empty() : this.clientAffinity;
+    public Optional<Output<ListenerClientAffinity>> clientAffinity() {
+        return Optional.ofNullable(this.clientAffinity);
     }
 
     @Import(name="portRanges", required=true)
-      private final Output<List<ListenerPortRangeArgs>> portRanges;
+    private Output<List<ListenerPortRangeArgs>> portRanges;
 
     public Output<List<ListenerPortRangeArgs>> portRanges() {
         return this.portRanges;
@@ -53,92 +53,85 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<ListenerProtocol> protocol;
+    private Output<ListenerProtocol> protocol;
 
     public Output<ListenerProtocol> protocol() {
         return this.protocol;
     }
 
-    public ListenerArgs(
-        Output<String> acceleratorArn,
-        @Nullable Output<ListenerClientAffinity> clientAffinity,
-        Output<List<ListenerPortRangeArgs>> portRanges,
-        Output<ListenerProtocol> protocol) {
-        this.acceleratorArn = Objects.requireNonNull(acceleratorArn, "expected parameter 'acceleratorArn' to be non-null");
-        this.clientAffinity = clientAffinity;
-        this.portRanges = Objects.requireNonNull(portRanges, "expected parameter 'portRanges' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private ListenerArgs() {}
 
-    private ListenerArgs() {
-        this.acceleratorArn = Codegen.empty();
-        this.clientAffinity = Codegen.empty();
-        this.portRanges = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private ListenerArgs(ListenerArgs $) {
+        this.acceleratorArn = $.acceleratorArn;
+        this.clientAffinity = $.clientAffinity;
+        this.portRanges = $.portRanges;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> acceleratorArn;
-        private @Nullable Output<ListenerClientAffinity> clientAffinity;
-        private Output<List<ListenerPortRangeArgs>> portRanges;
-        private Output<ListenerProtocol> protocol;
+        private ListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerArgs();
         }
 
         public Builder(ListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorArn = defaults.acceleratorArn;
-    	      this.clientAffinity = defaults.clientAffinity;
-    	      this.portRanges = defaults.portRanges;
-    	      this.protocol = defaults.protocol;
+            $ = new ListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorArn(Output<String> acceleratorArn) {
-            this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
+            $.acceleratorArn = acceleratorArn;
             return this;
         }
+
         public Builder acceleratorArn(String acceleratorArn) {
-            this.acceleratorArn = Output.of(Objects.requireNonNull(acceleratorArn));
-            return this;
+            return acceleratorArn(Output.of(acceleratorArn));
         }
+
         public Builder clientAffinity(@Nullable Output<ListenerClientAffinity> clientAffinity) {
-            this.clientAffinity = clientAffinity;
+            $.clientAffinity = clientAffinity;
             return this;
         }
-        public Builder clientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
-            this.clientAffinity = Codegen.ofNullable(clientAffinity);
-            return this;
+
+        public Builder clientAffinity(ListenerClientAffinity clientAffinity) {
+            return clientAffinity(Output.of(clientAffinity));
         }
+
         public Builder portRanges(Output<List<ListenerPortRangeArgs>> portRanges) {
-            this.portRanges = Objects.requireNonNull(portRanges);
+            $.portRanges = portRanges;
             return this;
         }
+
         public Builder portRanges(List<ListenerPortRangeArgs> portRanges) {
-            this.portRanges = Output.of(Objects.requireNonNull(portRanges));
-            return this;
+            return portRanges(Output.of(portRanges));
         }
+
         public Builder portRanges(ListenerPortRangeArgs... portRanges) {
             return portRanges(List.of(portRanges));
         }
+
         public Builder protocol(Output<ListenerProtocol> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(ListenerProtocol protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public ListenerArgs build() {
-            return new ListenerArgs(acceleratorArn, clientAffinity, portRanges, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public ListenerArgs build() {
+            $.acceleratorArn = Objects.requireNonNull($.acceleratorArn, "expected parameter 'acceleratorArn' to be non-null");
+            $.portRanges = Objects.requireNonNull($.portRanges, "expected parameter 'portRanges' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

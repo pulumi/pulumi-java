@@ -5,9 +5,9 @@ package com.pulumi.gcp.tags.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespacedName")
-      private final @Nullable Output<String> namespacedName;
+    private @Nullable Output<String> namespacedName;
 
-    public Output<String> namespacedName() {
-        return this.namespacedName == null ? Codegen.empty() : this.namespacedName;
+    public Optional<Output<String>> namespacedName() {
+        return Optional.ofNullable(this.namespacedName);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortName")
-      private final @Nullable Output<String> shortName;
+    private @Nullable Output<String> shortName;
 
-    public Output<String> shortName() {
-        return this.shortName == null ? Codegen.empty() : this.shortName;
+    public Optional<Output<String>> shortName() {
+        return Optional.ofNullable(this.shortName);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class TagKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public TagKeyState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespacedName,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> shortName,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.description = description;
-        this.name = name;
-        this.namespacedName = namespacedName;
-        this.parent = parent;
-        this.shortName = shortName;
-        this.updateTime = updateTime;
-    }
+    private TagKeyState() {}
 
-    private TagKeyState() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespacedName = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.shortName = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private TagKeyState(TagKeyState $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.name = $.name;
+        this.namespacedName = $.namespacedName;
+        this.parent = $.parent;
+        this.shortName = $.shortName;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespacedName;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> shortName;
-        private @Nullable Output<String> updateTime;
+        private TagKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyState();
         }
 
         public Builder(TagKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.namespacedName = defaults.namespacedName;
-    	      this.parent = defaults.parent;
-    	      this.shortName = defaults.shortName;
-    	      this.updateTime = defaults.updateTime;
+            $ = new TagKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespacedName(@Nullable Output<String> namespacedName) {
-            this.namespacedName = namespacedName;
+            $.namespacedName = namespacedName;
             return this;
         }
-        public Builder namespacedName(@Nullable String namespacedName) {
-            this.namespacedName = Codegen.ofNullable(namespacedName);
-            return this;
+
+        public Builder namespacedName(String namespacedName) {
+            return namespacedName(Output.of(namespacedName));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder shortName(@Nullable Output<String> shortName) {
-            this.shortName = shortName;
+            $.shortName = shortName;
             return this;
         }
-        public Builder shortName(@Nullable String shortName) {
-            this.shortName = Codegen.ofNullable(shortName);
-            return this;
+
+        public Builder shortName(String shortName) {
+            return shortName(Output.of(shortName));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public TagKeyState build() {
-            return new TagKeyState(createTime, description, name, namespacedName, parent, shortName, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public TagKeyState build() {
+            return $;
         }
     }
+
 }

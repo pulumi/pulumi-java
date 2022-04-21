@@ -7,10 +7,10 @@ import com.pulumi.azurenative.datafactory.enums.StoredProcedureParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StoredProcedureParameterArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,StoredProcedureParameterType>> type;
+    private @Nullable Output<Either<String,StoredProcedureParameterType>> type;
 
-    public Output<Either<String,StoredProcedureParameterType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,StoredProcedureParameterType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class StoredProcedureParameterArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public StoredProcedureParameterArgs(
-        @Nullable Output<Either<String,StoredProcedureParameterType>> type,
-        @Nullable Output<Object> value) {
-        this.type = type;
-        this.value = value;
-    }
+    private StoredProcedureParameterArgs() {}
 
-    private StoredProcedureParameterArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private StoredProcedureParameterArgs(StoredProcedureParameterArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StoredProcedureParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,StoredProcedureParameterType>> type;
-        private @Nullable Output<Object> value;
+        private StoredProcedureParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StoredProcedureParameterArgs();
         }
 
         public Builder(StoredProcedureParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new StoredProcedureParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,StoredProcedureParameterType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,StoredProcedureParameterType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,StoredProcedureParameterType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public StoredProcedureParameterArgs build() {
-            return new StoredProcedureParameterArgs(type, value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public StoredProcedureParameterArgs build() {
+            return $;
         }
     }
+
 }

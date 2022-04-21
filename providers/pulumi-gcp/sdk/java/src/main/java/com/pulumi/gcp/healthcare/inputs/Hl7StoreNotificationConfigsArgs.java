@@ -5,9 +5,9 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class Hl7StoreNotificationConfigsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -44,63 +44,59 @@ public final class Hl7StoreNotificationConfigsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final Output<String> pubsubTopic;
+    private Output<String> pubsubTopic;
 
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public Hl7StoreNotificationConfigsArgs(
-        @Nullable Output<String> filter,
-        Output<String> pubsubTopic) {
-        this.filter = filter;
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-    }
+    private Hl7StoreNotificationConfigsArgs() {}
 
-    private Hl7StoreNotificationConfigsArgs() {
-        this.filter = Codegen.empty();
-        this.pubsubTopic = Codegen.empty();
+    private Hl7StoreNotificationConfigsArgs(Hl7StoreNotificationConfigsArgs $) {
+        this.filter = $.filter;
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreNotificationConfigsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private Output<String> pubsubTopic;
+        private Hl7StoreNotificationConfigsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreNotificationConfigsArgs();
         }
 
         public Builder(Hl7StoreNotificationConfigsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new Hl7StoreNotificationConfigsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder pubsubTopic(Output<String> pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
+
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
-            return this;
-        }        public Hl7StoreNotificationConfigsArgs build() {
-            return new Hl7StoreNotificationConfigsArgs(filter, pubsubTopic);
+            return pubsubTopic(Output.of(pubsubTopic));
+        }
+
+        public Hl7StoreNotificationConfigsArgs build() {
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            return $;
         }
     }
+
 }

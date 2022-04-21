@@ -15,8 +15,8 @@ import com.pulumi.awsnative.iotanalytics.inputs.PipelineRemoveAttributesArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.PipelineSelectAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,230 +25,201 @@ public final class PipelineActivityArgs extends com.pulumi.resources.ResourceArg
     public static final PipelineActivityArgs Empty = new PipelineActivityArgs();
 
     @Import(name="addAttributes")
-      private final @Nullable Output<PipelineAddAttributesArgs> addAttributes;
+    private @Nullable Output<PipelineAddAttributesArgs> addAttributes;
 
-    public Output<PipelineAddAttributesArgs> addAttributes() {
-        return this.addAttributes == null ? Codegen.empty() : this.addAttributes;
+    public Optional<Output<PipelineAddAttributesArgs>> addAttributes() {
+        return Optional.ofNullable(this.addAttributes);
     }
 
     @Import(name="channel")
-      private final @Nullable Output<PipelineChannelArgs> channel;
+    private @Nullable Output<PipelineChannelArgs> channel;
 
-    public Output<PipelineChannelArgs> channel() {
-        return this.channel == null ? Codegen.empty() : this.channel;
+    public Optional<Output<PipelineChannelArgs>> channel() {
+        return Optional.ofNullable(this.channel);
     }
 
     @Import(name="datastore")
-      private final @Nullable Output<PipelineDatastoreArgs> datastore;
+    private @Nullable Output<PipelineDatastoreArgs> datastore;
 
-    public Output<PipelineDatastoreArgs> datastore() {
-        return this.datastore == null ? Codegen.empty() : this.datastore;
+    public Optional<Output<PipelineDatastoreArgs>> datastore() {
+        return Optional.ofNullable(this.datastore);
     }
 
     @Import(name="deviceRegistryEnrich")
-      private final @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
+    private @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
 
-    public Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich() {
-        return this.deviceRegistryEnrich == null ? Codegen.empty() : this.deviceRegistryEnrich;
+    public Optional<Output<PipelineDeviceRegistryEnrichArgs>> deviceRegistryEnrich() {
+        return Optional.ofNullable(this.deviceRegistryEnrich);
     }
 
     @Import(name="deviceShadowEnrich")
-      private final @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
+    private @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
 
-    public Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich() {
-        return this.deviceShadowEnrich == null ? Codegen.empty() : this.deviceShadowEnrich;
+    public Optional<Output<PipelineDeviceShadowEnrichArgs>> deviceShadowEnrich() {
+        return Optional.ofNullable(this.deviceShadowEnrich);
     }
 
     @Import(name="filter")
-      private final @Nullable Output<PipelineFilterArgs> filter;
+    private @Nullable Output<PipelineFilterArgs> filter;
 
-    public Output<PipelineFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<PipelineFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="lambda")
-      private final @Nullable Output<PipelineLambdaArgs> lambda;
+    private @Nullable Output<PipelineLambdaArgs> lambda;
 
-    public Output<PipelineLambdaArgs> lambda() {
-        return this.lambda == null ? Codegen.empty() : this.lambda;
+    public Optional<Output<PipelineLambdaArgs>> lambda() {
+        return Optional.ofNullable(this.lambda);
     }
 
     @Import(name="math")
-      private final @Nullable Output<PipelineMathArgs> math;
+    private @Nullable Output<PipelineMathArgs> math;
 
-    public Output<PipelineMathArgs> math() {
-        return this.math == null ? Codegen.empty() : this.math;
+    public Optional<Output<PipelineMathArgs>> math() {
+        return Optional.ofNullable(this.math);
     }
 
     @Import(name="removeAttributes")
-      private final @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes;
+    private @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes;
 
-    public Output<PipelineRemoveAttributesArgs> removeAttributes() {
-        return this.removeAttributes == null ? Codegen.empty() : this.removeAttributes;
+    public Optional<Output<PipelineRemoveAttributesArgs>> removeAttributes() {
+        return Optional.ofNullable(this.removeAttributes);
     }
 
     @Import(name="selectAttributes")
-      private final @Nullable Output<PipelineSelectAttributesArgs> selectAttributes;
+    private @Nullable Output<PipelineSelectAttributesArgs> selectAttributes;
 
-    public Output<PipelineSelectAttributesArgs> selectAttributes() {
-        return this.selectAttributes == null ? Codegen.empty() : this.selectAttributes;
+    public Optional<Output<PipelineSelectAttributesArgs>> selectAttributes() {
+        return Optional.ofNullable(this.selectAttributes);
     }
 
-    public PipelineActivityArgs(
-        @Nullable Output<PipelineAddAttributesArgs> addAttributes,
-        @Nullable Output<PipelineChannelArgs> channel,
-        @Nullable Output<PipelineDatastoreArgs> datastore,
-        @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich,
-        @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich,
-        @Nullable Output<PipelineFilterArgs> filter,
-        @Nullable Output<PipelineLambdaArgs> lambda,
-        @Nullable Output<PipelineMathArgs> math,
-        @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes,
-        @Nullable Output<PipelineSelectAttributesArgs> selectAttributes) {
-        this.addAttributes = addAttributes;
-        this.channel = channel;
-        this.datastore = datastore;
-        this.deviceRegistryEnrich = deviceRegistryEnrich;
-        this.deviceShadowEnrich = deviceShadowEnrich;
-        this.filter = filter;
-        this.lambda = lambda;
-        this.math = math;
-        this.removeAttributes = removeAttributes;
-        this.selectAttributes = selectAttributes;
-    }
+    private PipelineActivityArgs() {}
 
-    private PipelineActivityArgs() {
-        this.addAttributes = Codegen.empty();
-        this.channel = Codegen.empty();
-        this.datastore = Codegen.empty();
-        this.deviceRegistryEnrich = Codegen.empty();
-        this.deviceShadowEnrich = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.lambda = Codegen.empty();
-        this.math = Codegen.empty();
-        this.removeAttributes = Codegen.empty();
-        this.selectAttributes = Codegen.empty();
+    private PipelineActivityArgs(PipelineActivityArgs $) {
+        this.addAttributes = $.addAttributes;
+        this.channel = $.channel;
+        this.datastore = $.datastore;
+        this.deviceRegistryEnrich = $.deviceRegistryEnrich;
+        this.deviceShadowEnrich = $.deviceShadowEnrich;
+        this.filter = $.filter;
+        this.lambda = $.lambda;
+        this.math = $.math;
+        this.removeAttributes = $.removeAttributes;
+        this.selectAttributes = $.selectAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PipelineAddAttributesArgs> addAttributes;
-        private @Nullable Output<PipelineChannelArgs> channel;
-        private @Nullable Output<PipelineDatastoreArgs> datastore;
-        private @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
-        private @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
-        private @Nullable Output<PipelineFilterArgs> filter;
-        private @Nullable Output<PipelineLambdaArgs> lambda;
-        private @Nullable Output<PipelineMathArgs> math;
-        private @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes;
-        private @Nullable Output<PipelineSelectAttributesArgs> selectAttributes;
+        private PipelineActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineActivityArgs();
         }
 
         public Builder(PipelineActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addAttributes = defaults.addAttributes;
-    	      this.channel = defaults.channel;
-    	      this.datastore = defaults.datastore;
-    	      this.deviceRegistryEnrich = defaults.deviceRegistryEnrich;
-    	      this.deviceShadowEnrich = defaults.deviceShadowEnrich;
-    	      this.filter = defaults.filter;
-    	      this.lambda = defaults.lambda;
-    	      this.math = defaults.math;
-    	      this.removeAttributes = defaults.removeAttributes;
-    	      this.selectAttributes = defaults.selectAttributes;
+            $ = new PipelineActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addAttributes(@Nullable Output<PipelineAddAttributesArgs> addAttributes) {
-            this.addAttributes = addAttributes;
+            $.addAttributes = addAttributes;
             return this;
         }
-        public Builder addAttributes(@Nullable PipelineAddAttributesArgs addAttributes) {
-            this.addAttributes = Codegen.ofNullable(addAttributes);
-            return this;
+
+        public Builder addAttributes(PipelineAddAttributesArgs addAttributes) {
+            return addAttributes(Output.of(addAttributes));
         }
+
         public Builder channel(@Nullable Output<PipelineChannelArgs> channel) {
-            this.channel = channel;
+            $.channel = channel;
             return this;
         }
-        public Builder channel(@Nullable PipelineChannelArgs channel) {
-            this.channel = Codegen.ofNullable(channel);
-            return this;
+
+        public Builder channel(PipelineChannelArgs channel) {
+            return channel(Output.of(channel));
         }
+
         public Builder datastore(@Nullable Output<PipelineDatastoreArgs> datastore) {
-            this.datastore = datastore;
+            $.datastore = datastore;
             return this;
         }
-        public Builder datastore(@Nullable PipelineDatastoreArgs datastore) {
-            this.datastore = Codegen.ofNullable(datastore);
-            return this;
+
+        public Builder datastore(PipelineDatastoreArgs datastore) {
+            return datastore(Output.of(datastore));
         }
+
         public Builder deviceRegistryEnrich(@Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich) {
-            this.deviceRegistryEnrich = deviceRegistryEnrich;
+            $.deviceRegistryEnrich = deviceRegistryEnrich;
             return this;
         }
-        public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrichArgs deviceRegistryEnrich) {
-            this.deviceRegistryEnrich = Codegen.ofNullable(deviceRegistryEnrich);
-            return this;
+
+        public Builder deviceRegistryEnrich(PipelineDeviceRegistryEnrichArgs deviceRegistryEnrich) {
+            return deviceRegistryEnrich(Output.of(deviceRegistryEnrich));
         }
+
         public Builder deviceShadowEnrich(@Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich) {
-            this.deviceShadowEnrich = deviceShadowEnrich;
+            $.deviceShadowEnrich = deviceShadowEnrich;
             return this;
         }
-        public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrichArgs deviceShadowEnrich) {
-            this.deviceShadowEnrich = Codegen.ofNullable(deviceShadowEnrich);
-            return this;
+
+        public Builder deviceShadowEnrich(PipelineDeviceShadowEnrichArgs deviceShadowEnrich) {
+            return deviceShadowEnrich(Output.of(deviceShadowEnrich));
         }
+
         public Builder filter(@Nullable Output<PipelineFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable PipelineFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(PipelineFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder lambda(@Nullable Output<PipelineLambdaArgs> lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
-        public Builder lambda(@Nullable PipelineLambdaArgs lambda) {
-            this.lambda = Codegen.ofNullable(lambda);
-            return this;
+
+        public Builder lambda(PipelineLambdaArgs lambda) {
+            return lambda(Output.of(lambda));
         }
+
         public Builder math(@Nullable Output<PipelineMathArgs> math) {
-            this.math = math;
+            $.math = math;
             return this;
         }
-        public Builder math(@Nullable PipelineMathArgs math) {
-            this.math = Codegen.ofNullable(math);
-            return this;
+
+        public Builder math(PipelineMathArgs math) {
+            return math(Output.of(math));
         }
+
         public Builder removeAttributes(@Nullable Output<PipelineRemoveAttributesArgs> removeAttributes) {
-            this.removeAttributes = removeAttributes;
+            $.removeAttributes = removeAttributes;
             return this;
         }
-        public Builder removeAttributes(@Nullable PipelineRemoveAttributesArgs removeAttributes) {
-            this.removeAttributes = Codegen.ofNullable(removeAttributes);
-            return this;
+
+        public Builder removeAttributes(PipelineRemoveAttributesArgs removeAttributes) {
+            return removeAttributes(Output.of(removeAttributes));
         }
+
         public Builder selectAttributes(@Nullable Output<PipelineSelectAttributesArgs> selectAttributes) {
-            this.selectAttributes = selectAttributes;
+            $.selectAttributes = selectAttributes;
             return this;
         }
-        public Builder selectAttributes(@Nullable PipelineSelectAttributesArgs selectAttributes) {
-            this.selectAttributes = Codegen.ofNullable(selectAttributes);
-            return this;
-        }        public PipelineActivityArgs build() {
-            return new PipelineActivityArgs(addAttributes, channel, datastore, deviceRegistryEnrich, deviceShadowEnrich, filter, lambda, math, removeAttributes, selectAttributes);
+
+        public Builder selectAttributes(PipelineSelectAttributesArgs selectAttributes) {
+            return selectAttributes(Output.of(selectAttributes));
+        }
+
+        public PipelineActivityArgs build() {
+            return $;
         }
     }
+
 }

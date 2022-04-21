@@ -21,45 +21,45 @@ public final class SourceContextResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fileName", required=true)
-      private final String fileName;
+    private String fileName;
 
     public String fileName() {
         return this.fileName;
     }
 
-    public SourceContextResponse(String fileName) {
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-    }
+    private SourceContextResponse() {}
 
-    private SourceContextResponse() {
-        this.fileName = null;
+    private SourceContextResponse(SourceContextResponse $) {
+        this.fileName = $.fileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileName;
+        private SourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceContextResponse();
         }
 
         public Builder(SourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
+            $ = new SourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
-        }        public SourceContextResponse build() {
-            return new SourceContextResponse(fileName);
+        }
+
+        public SourceContextResponse build() {
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            return $;
         }
     }
+
 }

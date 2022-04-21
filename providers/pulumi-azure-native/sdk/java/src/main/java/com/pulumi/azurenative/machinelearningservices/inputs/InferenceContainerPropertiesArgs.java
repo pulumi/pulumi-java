@@ -6,8 +6,8 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.RouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InferenceContainerPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="livenessRoute")
-      private final @Nullable Output<RouteArgs> livenessRoute;
+    private @Nullable Output<RouteArgs> livenessRoute;
 
-    public Output<RouteArgs> livenessRoute() {
-        return this.livenessRoute == null ? Codegen.empty() : this.livenessRoute;
+    public Optional<Output<RouteArgs>> livenessRoute() {
+        return Optional.ofNullable(this.livenessRoute);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InferenceContainerPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="readinessRoute")
-      private final @Nullable Output<RouteArgs> readinessRoute;
+    private @Nullable Output<RouteArgs> readinessRoute;
 
-    public Output<RouteArgs> readinessRoute() {
-        return this.readinessRoute == null ? Codegen.empty() : this.readinessRoute;
+    public Optional<Output<RouteArgs>> readinessRoute() {
+        return Optional.ofNullable(this.readinessRoute);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class InferenceContainerPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="scoringRoute")
-      private final @Nullable Output<RouteArgs> scoringRoute;
+    private @Nullable Output<RouteArgs> scoringRoute;
 
-    public Output<RouteArgs> scoringRoute() {
-        return this.scoringRoute == null ? Codegen.empty() : this.scoringRoute;
+    public Optional<Output<RouteArgs>> scoringRoute() {
+        return Optional.ofNullable(this.scoringRoute);
     }
 
-    public InferenceContainerPropertiesArgs(
-        @Nullable Output<RouteArgs> livenessRoute,
-        @Nullable Output<RouteArgs> readinessRoute,
-        @Nullable Output<RouteArgs> scoringRoute) {
-        this.livenessRoute = livenessRoute;
-        this.readinessRoute = readinessRoute;
-        this.scoringRoute = scoringRoute;
-    }
+    private InferenceContainerPropertiesArgs() {}
 
-    private InferenceContainerPropertiesArgs() {
-        this.livenessRoute = Codegen.empty();
-        this.readinessRoute = Codegen.empty();
-        this.scoringRoute = Codegen.empty();
+    private InferenceContainerPropertiesArgs(InferenceContainerPropertiesArgs $) {
+        this.livenessRoute = $.livenessRoute;
+        this.readinessRoute = $.readinessRoute;
+        this.scoringRoute = $.scoringRoute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InferenceContainerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouteArgs> livenessRoute;
-        private @Nullable Output<RouteArgs> readinessRoute;
-        private @Nullable Output<RouteArgs> scoringRoute;
+        private InferenceContainerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InferenceContainerPropertiesArgs();
         }
 
         public Builder(InferenceContainerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.livenessRoute = defaults.livenessRoute;
-    	      this.readinessRoute = defaults.readinessRoute;
-    	      this.scoringRoute = defaults.scoringRoute;
+            $ = new InferenceContainerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder livenessRoute(@Nullable Output<RouteArgs> livenessRoute) {
-            this.livenessRoute = livenessRoute;
+            $.livenessRoute = livenessRoute;
             return this;
         }
-        public Builder livenessRoute(@Nullable RouteArgs livenessRoute) {
-            this.livenessRoute = Codegen.ofNullable(livenessRoute);
-            return this;
+
+        public Builder livenessRoute(RouteArgs livenessRoute) {
+            return livenessRoute(Output.of(livenessRoute));
         }
+
         public Builder readinessRoute(@Nullable Output<RouteArgs> readinessRoute) {
-            this.readinessRoute = readinessRoute;
+            $.readinessRoute = readinessRoute;
             return this;
         }
-        public Builder readinessRoute(@Nullable RouteArgs readinessRoute) {
-            this.readinessRoute = Codegen.ofNullable(readinessRoute);
-            return this;
+
+        public Builder readinessRoute(RouteArgs readinessRoute) {
+            return readinessRoute(Output.of(readinessRoute));
         }
+
         public Builder scoringRoute(@Nullable Output<RouteArgs> scoringRoute) {
-            this.scoringRoute = scoringRoute;
+            $.scoringRoute = scoringRoute;
             return this;
         }
-        public Builder scoringRoute(@Nullable RouteArgs scoringRoute) {
-            this.scoringRoute = Codegen.ofNullable(scoringRoute);
-            return this;
-        }        public InferenceContainerPropertiesArgs build() {
-            return new InferenceContainerPropertiesArgs(livenessRoute, readinessRoute, scoringRoute);
+
+        public Builder scoringRoute(RouteArgs scoringRoute) {
+            return scoringRoute(Output.of(scoringRoute));
+        }
+
+        public InferenceContainerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class RouteRequestParameterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requestParameterKey", required=true)
-      private final Output<String> requestParameterKey;
+    private Output<String> requestParameterKey;
 
     public Output<String> requestParameterKey() {
         return this.requestParameterKey;
@@ -31,63 +30,60 @@ public final class RouteRequestParameterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="required", required=true)
-      private final Output<Boolean> required;
+    private Output<Boolean> required;
 
     public Output<Boolean> required() {
         return this.required;
     }
 
-    public RouteRequestParameterArgs(
-        Output<String> requestParameterKey,
-        Output<Boolean> required) {
-        this.requestParameterKey = Objects.requireNonNull(requestParameterKey, "expected parameter 'requestParameterKey' to be non-null");
-        this.required = Objects.requireNonNull(required, "expected parameter 'required' to be non-null");
-    }
+    private RouteRequestParameterArgs() {}
 
-    private RouteRequestParameterArgs() {
-        this.requestParameterKey = Codegen.empty();
-        this.required = Codegen.empty();
+    private RouteRequestParameterArgs(RouteRequestParameterArgs $) {
+        this.requestParameterKey = $.requestParameterKey;
+        this.required = $.required;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteRequestParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> requestParameterKey;
-        private Output<Boolean> required;
+        private RouteRequestParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteRequestParameterArgs();
         }
 
         public Builder(RouteRequestParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestParameterKey = defaults.requestParameterKey;
-    	      this.required = defaults.required;
+            $ = new RouteRequestParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requestParameterKey(Output<String> requestParameterKey) {
-            this.requestParameterKey = Objects.requireNonNull(requestParameterKey);
+            $.requestParameterKey = requestParameterKey;
             return this;
         }
+
         public Builder requestParameterKey(String requestParameterKey) {
-            this.requestParameterKey = Output.of(Objects.requireNonNull(requestParameterKey));
-            return this;
+            return requestParameterKey(Output.of(requestParameterKey));
         }
+
         public Builder required(Output<Boolean> required) {
-            this.required = Objects.requireNonNull(required);
+            $.required = required;
             return this;
         }
+
         public Builder required(Boolean required) {
-            this.required = Output.of(Objects.requireNonNull(required));
-            return this;
-        }        public RouteRequestParameterArgs build() {
-            return new RouteRequestParameterArgs(requestParameterKey, required);
+            return required(Output.of(required));
+        }
+
+        public RouteRequestParameterArgs build() {
+            $.requestParameterKey = Objects.requireNonNull($.requestParameterKey, "expected parameter 'requestParameterKey' to be non-null");
+            $.required = Objects.requireNonNull($.required, "expected parameter 'required' to be non-null");
+            return $;
         }
     }
+
 }

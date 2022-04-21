@@ -7,10 +7,10 @@ import com.pulumi.awsnative.s3outposts.inputs.BucketLifecycleConfigurationArgs;
 import com.pulumi.awsnative.s3outposts.inputs.BucketTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycleConfiguration")
-      private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
+    private @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
-    public Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration() {
-        return this.lifecycleConfiguration == null ? Codegen.empty() : this.lifecycleConfiguration;
+    public Optional<Output<BucketLifecycleConfigurationArgs>> lifecycleConfiguration() {
+        return Optional.ofNullable(this.lifecycleConfiguration);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outpostId", required=true)
-      private final Output<String> outpostId;
+    private Output<String> outpostId;
 
     public Output<String> outpostId() {
         return this.outpostId;
@@ -56,92 +56,83 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<BucketTagArgs>> tags;
+    private @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Output<List<BucketTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<BucketTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public BucketArgs(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration,
-        Output<String> outpostId,
-        @Nullable Output<List<BucketTagArgs>> tags) {
-        this.bucketName = bucketName;
-        this.lifecycleConfiguration = lifecycleConfiguration;
-        this.outpostId = Objects.requireNonNull(outpostId, "expected parameter 'outpostId' to be non-null");
-        this.tags = tags;
-    }
+    private BucketArgs() {}
 
-    private BucketArgs() {
-        this.bucketName = Codegen.empty();
-        this.lifecycleConfiguration = Codegen.empty();
-        this.outpostId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private BucketArgs(BucketArgs $) {
+        this.bucketName = $.bucketName;
+        this.lifecycleConfiguration = $.lifecycleConfiguration;
+        this.outpostId = $.outpostId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
-        private Output<String> outpostId;
-        private @Nullable Output<List<BucketTagArgs>> tags;
+        private BucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketArgs();
         }
 
         public Builder(BucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.lifecycleConfiguration = defaults.lifecycleConfiguration;
-    	      this.outpostId = defaults.outpostId;
-    	      this.tags = defaults.tags;
+            $ = new BucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder lifecycleConfiguration(@Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
-            this.lifecycleConfiguration = lifecycleConfiguration;
+            $.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
-        public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
-            this.lifecycleConfiguration = Codegen.ofNullable(lifecycleConfiguration);
-            return this;
+
+        public Builder lifecycleConfiguration(BucketLifecycleConfigurationArgs lifecycleConfiguration) {
+            return lifecycleConfiguration(Output.of(lifecycleConfiguration));
         }
+
         public Builder outpostId(Output<String> outpostId) {
-            this.outpostId = Objects.requireNonNull(outpostId);
+            $.outpostId = outpostId;
             return this;
         }
+
         public Builder outpostId(String outpostId) {
-            this.outpostId = Output.of(Objects.requireNonNull(outpostId));
-            return this;
+            return outpostId(Output.of(outpostId));
         }
+
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<BucketTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<BucketTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(BucketTagArgs... tags) {
             return tags(List.of(tags));
-        }        public BucketArgs build() {
-            return new BucketArgs(bucketName, lifecycleConfiguration, outpostId, tags);
+        }
+
+        public BucketArgs build() {
+            $.outpostId = Objects.requireNonNull($.outpostId, "expected parameter 'outpostId' to be non-null");
+            return $;
         }
     }
+
 }

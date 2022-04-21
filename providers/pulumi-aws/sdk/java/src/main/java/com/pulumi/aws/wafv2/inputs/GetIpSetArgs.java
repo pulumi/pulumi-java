@@ -17,7 +17,7 @@ public final class GetIpSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetIpSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetIpSetArgs(
-        String name,
-        String scope) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetIpSetArgs() {}
 
-    private GetIpSetArgs() {
-        this.name = null;
-        this.scope = null;
+    private GetIpSetArgs(GetIpSetArgs $) {
+        this.name = $.name;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIpSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String scope;
+        private GetIpSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIpSetArgs();
         }
 
         public Builder(GetIpSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
+            $ = new GetIpSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetIpSetArgs build() {
-            return new GetIpSetArgs(name, scope);
+        }
+
+        public GetIpSetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

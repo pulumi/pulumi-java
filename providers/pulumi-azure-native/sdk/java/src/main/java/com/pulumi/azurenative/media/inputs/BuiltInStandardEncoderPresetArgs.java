@@ -26,7 +26,7 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -37,63 +37,60 @@ public final class BuiltInStandardEncoderPresetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="presetName", required=true)
-      private final Output<Either<String,EncoderNamedPreset>> presetName;
+    private Output<Either<String,EncoderNamedPreset>> presetName;
 
     public Output<Either<String,EncoderNamedPreset>> presetName() {
         return this.presetName;
     }
 
-    public BuiltInStandardEncoderPresetArgs(
-        Output<String> odataType,
-        Output<Either<String,EncoderNamedPreset>> presetName) {
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.presetName = Objects.requireNonNull(presetName, "expected parameter 'presetName' to be non-null");
-    }
+    private BuiltInStandardEncoderPresetArgs() {}
 
-    private BuiltInStandardEncoderPresetArgs() {
-        this.odataType = Codegen.empty();
-        this.presetName = Codegen.empty();
+    private BuiltInStandardEncoderPresetArgs(BuiltInStandardEncoderPresetArgs $) {
+        this.odataType = $.odataType;
+        this.presetName = $.presetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuiltInStandardEncoderPresetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
-        private Output<Either<String,EncoderNamedPreset>> presetName;
+        private BuiltInStandardEncoderPresetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuiltInStandardEncoderPresetArgs();
         }
 
         public Builder(BuiltInStandardEncoderPresetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.presetName = defaults.presetName;
+            $ = new BuiltInStandardEncoderPresetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder presetName(Output<Either<String,EncoderNamedPreset>> presetName) {
-            this.presetName = Objects.requireNonNull(presetName);
+            $.presetName = presetName;
             return this;
         }
+
         public Builder presetName(Either<String,EncoderNamedPreset> presetName) {
-            this.presetName = Output.of(Objects.requireNonNull(presetName));
-            return this;
-        }        public BuiltInStandardEncoderPresetArgs build() {
-            return new BuiltInStandardEncoderPresetArgs(odataType, presetName);
+            return presetName(Output.of(presetName));
+        }
+
+        public BuiltInStandardEncoderPresetArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.presetName = Objects.requireNonNull($.presetName, "expected parameter 'presetName' to be non-null");
+            return $;
         }
     }
+
 }

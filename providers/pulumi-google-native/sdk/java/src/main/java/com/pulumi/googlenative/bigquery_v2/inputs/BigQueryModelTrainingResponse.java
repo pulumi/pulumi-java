@@ -18,7 +18,7 @@ public final class BigQueryModelTrainingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="currentIteration", required=true)
-      private final Integer currentIteration;
+    private Integer currentIteration;
 
     public Integer currentIteration() {
         return this.currentIteration;
@@ -29,55 +29,52 @@ public final class BigQueryModelTrainingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="expectedTotalIterations", required=true)
-      private final String expectedTotalIterations;
+    private String expectedTotalIterations;
 
     public String expectedTotalIterations() {
         return this.expectedTotalIterations;
     }
 
-    public BigQueryModelTrainingResponse(
-        Integer currentIteration,
-        String expectedTotalIterations) {
-        this.currentIteration = Objects.requireNonNull(currentIteration, "expected parameter 'currentIteration' to be non-null");
-        this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations, "expected parameter 'expectedTotalIterations' to be non-null");
-    }
+    private BigQueryModelTrainingResponse() {}
 
-    private BigQueryModelTrainingResponse() {
-        this.currentIteration = null;
-        this.expectedTotalIterations = null;
+    private BigQueryModelTrainingResponse(BigQueryModelTrainingResponse $) {
+        this.currentIteration = $.currentIteration;
+        this.expectedTotalIterations = $.expectedTotalIterations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryModelTrainingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer currentIteration;
-        private String expectedTotalIterations;
+        private BigQueryModelTrainingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryModelTrainingResponse();
         }
 
         public Builder(BigQueryModelTrainingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentIteration = defaults.currentIteration;
-    	      this.expectedTotalIterations = defaults.expectedTotalIterations;
+            $ = new BigQueryModelTrainingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentIteration(Integer currentIteration) {
-            this.currentIteration = Objects.requireNonNull(currentIteration);
+            $.currentIteration = currentIteration;
             return this;
         }
+
         public Builder expectedTotalIterations(String expectedTotalIterations) {
-            this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
+            $.expectedTotalIterations = expectedTotalIterations;
             return this;
-        }        public BigQueryModelTrainingResponse build() {
-            return new BigQueryModelTrainingResponse(currentIteration, expectedTotalIterations);
+        }
+
+        public BigQueryModelTrainingResponse build() {
+            $.currentIteration = Objects.requireNonNull($.currentIteration, "expected parameter 'currentIteration' to be non-null");
+            $.expectedTotalIterations = Objects.requireNonNull($.expectedTotalIterations, "expected parameter 'expectedTotalIterations' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="number", required=true)
-      private final Integer number;
+    private Integer number;
 
     public Integer number() {
         return this.number;
@@ -46,67 +46,63 @@ public final class EnumValueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options", required=true)
-      private final List<OptionResponse> options;
+    private List<OptionResponse> options;
 
     public List<OptionResponse> options() {
         return this.options;
     }
 
-    public EnumValueResponse(
-        String name,
-        Integer number,
-        List<OptionResponse> options) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-    }
+    private EnumValueResponse() {}
 
-    private EnumValueResponse() {
-        this.name = null;
-        this.number = null;
-        this.options = List.of();
+    private EnumValueResponse(EnumValueResponse $) {
+        this.name = $.name;
+        this.number = $.number;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnumValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Integer number;
-        private List<OptionResponse> options;
+        private EnumValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnumValueResponse();
         }
 
         public Builder(EnumValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
-    	      this.options = defaults.options;
+            $ = new EnumValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder number(Integer number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder options(List<OptionResponse> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
-        }        public EnumValueResponse build() {
-            return new EnumValueResponse(name, number, options);
+        }
+
+        public EnumValueResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            return $;
         }
     }
+
 }

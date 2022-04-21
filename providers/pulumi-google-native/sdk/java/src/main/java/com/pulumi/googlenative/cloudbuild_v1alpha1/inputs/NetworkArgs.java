@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
-    public NetworkArgs(
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> subnetwork) {
-        this.network = network;
-        this.project = project;
-        this.subnetwork = subnetwork;
-    }
+    private NetworkArgs() {}
 
-    private NetworkArgs() {
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.subnetwork = Codegen.empty();
+    private NetworkArgs(NetworkArgs $) {
+        this.network = $.network;
+        this.project = $.project;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> subnetwork;
+        private NetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkArgs();
         }
 
         public Builder(NetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
-        }        public NetworkArgs build() {
-            return new NetworkArgs(network, project, subnetwork);
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public NetworkArgs build() {
+            return $;
         }
     }
+
 }

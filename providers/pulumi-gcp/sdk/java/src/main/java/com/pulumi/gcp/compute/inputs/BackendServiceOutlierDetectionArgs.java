@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.BackendServiceOutlierDetectionBaseEjectionTimeArgs;
 import com.pulumi.gcp.compute.inputs.BackendServiceOutlierDetectionIntervalArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="baseEjectionTime")
-      private final @Nullable Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime;
+    private @Nullable Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime;
 
-    public Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime() {
-        return this.baseEjectionTime == null ? Codegen.empty() : this.baseEjectionTime;
+    public Optional<Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs>> baseEjectionTime() {
+        return Optional.ofNullable(this.baseEjectionTime);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="consecutiveErrors")
-      private final @Nullable Output<Integer> consecutiveErrors;
+    private @Nullable Output<Integer> consecutiveErrors;
 
-    public Output<Integer> consecutiveErrors() {
-        return this.consecutiveErrors == null ? Codegen.empty() : this.consecutiveErrors;
+    public Optional<Output<Integer>> consecutiveErrors() {
+        return Optional.ofNullable(this.consecutiveErrors);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="consecutiveGatewayFailure")
-      private final @Nullable Output<Integer> consecutiveGatewayFailure;
+    private @Nullable Output<Integer> consecutiveGatewayFailure;
 
-    public Output<Integer> consecutiveGatewayFailure() {
-        return this.consecutiveGatewayFailure == null ? Codegen.empty() : this.consecutiveGatewayFailure;
+    public Optional<Output<Integer>> consecutiveGatewayFailure() {
+        return Optional.ofNullable(this.consecutiveGatewayFailure);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enforcingConsecutiveErrors")
-      private final @Nullable Output<Integer> enforcingConsecutiveErrors;
+    private @Nullable Output<Integer> enforcingConsecutiveErrors;
 
-    public Output<Integer> enforcingConsecutiveErrors() {
-        return this.enforcingConsecutiveErrors == null ? Codegen.empty() : this.enforcingConsecutiveErrors;
+    public Optional<Output<Integer>> enforcingConsecutiveErrors() {
+        return Optional.ofNullable(this.enforcingConsecutiveErrors);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enforcingConsecutiveGatewayFailure")
-      private final @Nullable Output<Integer> enforcingConsecutiveGatewayFailure;
+    private @Nullable Output<Integer> enforcingConsecutiveGatewayFailure;
 
-    public Output<Integer> enforcingConsecutiveGatewayFailure() {
-        return this.enforcingConsecutiveGatewayFailure == null ? Codegen.empty() : this.enforcingConsecutiveGatewayFailure;
+    public Optional<Output<Integer>> enforcingConsecutiveGatewayFailure() {
+        return Optional.ofNullable(this.enforcingConsecutiveGatewayFailure);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enforcingSuccessRate")
-      private final @Nullable Output<Integer> enforcingSuccessRate;
+    private @Nullable Output<Integer> enforcingSuccessRate;
 
-    public Output<Integer> enforcingSuccessRate() {
-        return this.enforcingSuccessRate == null ? Codegen.empty() : this.enforcingSuccessRate;
+    public Optional<Output<Integer>> enforcingSuccessRate() {
+        return Optional.ofNullable(this.enforcingSuccessRate);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<BackendServiceOutlierDetectionIntervalArgs> interval;
+    private @Nullable Output<BackendServiceOutlierDetectionIntervalArgs> interval;
 
-    public Output<BackendServiceOutlierDetectionIntervalArgs> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<BackendServiceOutlierDetectionIntervalArgs>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="maxEjectionPercent")
-      private final @Nullable Output<Integer> maxEjectionPercent;
+    private @Nullable Output<Integer> maxEjectionPercent;
 
-    public Output<Integer> maxEjectionPercent() {
-        return this.maxEjectionPercent == null ? Codegen.empty() : this.maxEjectionPercent;
+    public Optional<Output<Integer>> maxEjectionPercent() {
+        return Optional.ofNullable(this.maxEjectionPercent);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="successRateMinimumHosts")
-      private final @Nullable Output<Integer> successRateMinimumHosts;
+    private @Nullable Output<Integer> successRateMinimumHosts;
 
-    public Output<Integer> successRateMinimumHosts() {
-        return this.successRateMinimumHosts == null ? Codegen.empty() : this.successRateMinimumHosts;
+    public Optional<Output<Integer>> successRateMinimumHosts() {
+        return Optional.ofNullable(this.successRateMinimumHosts);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="successRateRequestVolume")
-      private final @Nullable Output<Integer> successRateRequestVolume;
+    private @Nullable Output<Integer> successRateRequestVolume;
 
-    public Output<Integer> successRateRequestVolume() {
-        return this.successRateRequestVolume == null ? Codegen.empty() : this.successRateRequestVolume;
+    public Optional<Output<Integer>> successRateRequestVolume() {
+        return Optional.ofNullable(this.successRateRequestVolume);
     }
 
     /**
@@ -160,180 +160,148 @@ public final class BackendServiceOutlierDetectionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="successRateStdevFactor")
-      private final @Nullable Output<Integer> successRateStdevFactor;
+    private @Nullable Output<Integer> successRateStdevFactor;
 
-    public Output<Integer> successRateStdevFactor() {
-        return this.successRateStdevFactor == null ? Codegen.empty() : this.successRateStdevFactor;
+    public Optional<Output<Integer>> successRateStdevFactor() {
+        return Optional.ofNullable(this.successRateStdevFactor);
     }
 
-    public BackendServiceOutlierDetectionArgs(
-        @Nullable Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime,
-        @Nullable Output<Integer> consecutiveErrors,
-        @Nullable Output<Integer> consecutiveGatewayFailure,
-        @Nullable Output<Integer> enforcingConsecutiveErrors,
-        @Nullable Output<Integer> enforcingConsecutiveGatewayFailure,
-        @Nullable Output<Integer> enforcingSuccessRate,
-        @Nullable Output<BackendServiceOutlierDetectionIntervalArgs> interval,
-        @Nullable Output<Integer> maxEjectionPercent,
-        @Nullable Output<Integer> successRateMinimumHosts,
-        @Nullable Output<Integer> successRateRequestVolume,
-        @Nullable Output<Integer> successRateStdevFactor) {
-        this.baseEjectionTime = baseEjectionTime;
-        this.consecutiveErrors = consecutiveErrors;
-        this.consecutiveGatewayFailure = consecutiveGatewayFailure;
-        this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
-        this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
-        this.enforcingSuccessRate = enforcingSuccessRate;
-        this.interval = interval;
-        this.maxEjectionPercent = maxEjectionPercent;
-        this.successRateMinimumHosts = successRateMinimumHosts;
-        this.successRateRequestVolume = successRateRequestVolume;
-        this.successRateStdevFactor = successRateStdevFactor;
-    }
+    private BackendServiceOutlierDetectionArgs() {}
 
-    private BackendServiceOutlierDetectionArgs() {
-        this.baseEjectionTime = Codegen.empty();
-        this.consecutiveErrors = Codegen.empty();
-        this.consecutiveGatewayFailure = Codegen.empty();
-        this.enforcingConsecutiveErrors = Codegen.empty();
-        this.enforcingConsecutiveGatewayFailure = Codegen.empty();
-        this.enforcingSuccessRate = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.maxEjectionPercent = Codegen.empty();
-        this.successRateMinimumHosts = Codegen.empty();
-        this.successRateRequestVolume = Codegen.empty();
-        this.successRateStdevFactor = Codegen.empty();
+    private BackendServiceOutlierDetectionArgs(BackendServiceOutlierDetectionArgs $) {
+        this.baseEjectionTime = $.baseEjectionTime;
+        this.consecutiveErrors = $.consecutiveErrors;
+        this.consecutiveGatewayFailure = $.consecutiveGatewayFailure;
+        this.enforcingConsecutiveErrors = $.enforcingConsecutiveErrors;
+        this.enforcingConsecutiveGatewayFailure = $.enforcingConsecutiveGatewayFailure;
+        this.enforcingSuccessRate = $.enforcingSuccessRate;
+        this.interval = $.interval;
+        this.maxEjectionPercent = $.maxEjectionPercent;
+        this.successRateMinimumHosts = $.successRateMinimumHosts;
+        this.successRateRequestVolume = $.successRateRequestVolume;
+        this.successRateStdevFactor = $.successRateStdevFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceOutlierDetectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime;
-        private @Nullable Output<Integer> consecutiveErrors;
-        private @Nullable Output<Integer> consecutiveGatewayFailure;
-        private @Nullable Output<Integer> enforcingConsecutiveErrors;
-        private @Nullable Output<Integer> enforcingConsecutiveGatewayFailure;
-        private @Nullable Output<Integer> enforcingSuccessRate;
-        private @Nullable Output<BackendServiceOutlierDetectionIntervalArgs> interval;
-        private @Nullable Output<Integer> maxEjectionPercent;
-        private @Nullable Output<Integer> successRateMinimumHosts;
-        private @Nullable Output<Integer> successRateRequestVolume;
-        private @Nullable Output<Integer> successRateStdevFactor;
+        private BackendServiceOutlierDetectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceOutlierDetectionArgs();
         }
 
         public Builder(BackendServiceOutlierDetectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseEjectionTime = defaults.baseEjectionTime;
-    	      this.consecutiveErrors = defaults.consecutiveErrors;
-    	      this.consecutiveGatewayFailure = defaults.consecutiveGatewayFailure;
-    	      this.enforcingConsecutiveErrors = defaults.enforcingConsecutiveErrors;
-    	      this.enforcingConsecutiveGatewayFailure = defaults.enforcingConsecutiveGatewayFailure;
-    	      this.enforcingSuccessRate = defaults.enforcingSuccessRate;
-    	      this.interval = defaults.interval;
-    	      this.maxEjectionPercent = defaults.maxEjectionPercent;
-    	      this.successRateMinimumHosts = defaults.successRateMinimumHosts;
-    	      this.successRateRequestVolume = defaults.successRateRequestVolume;
-    	      this.successRateStdevFactor = defaults.successRateStdevFactor;
+            $ = new BackendServiceOutlierDetectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseEjectionTime(@Nullable Output<BackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime) {
-            this.baseEjectionTime = baseEjectionTime;
+            $.baseEjectionTime = baseEjectionTime;
             return this;
         }
-        public Builder baseEjectionTime(@Nullable BackendServiceOutlierDetectionBaseEjectionTimeArgs baseEjectionTime) {
-            this.baseEjectionTime = Codegen.ofNullable(baseEjectionTime);
-            return this;
+
+        public Builder baseEjectionTime(BackendServiceOutlierDetectionBaseEjectionTimeArgs baseEjectionTime) {
+            return baseEjectionTime(Output.of(baseEjectionTime));
         }
+
         public Builder consecutiveErrors(@Nullable Output<Integer> consecutiveErrors) {
-            this.consecutiveErrors = consecutiveErrors;
+            $.consecutiveErrors = consecutiveErrors;
             return this;
         }
-        public Builder consecutiveErrors(@Nullable Integer consecutiveErrors) {
-            this.consecutiveErrors = Codegen.ofNullable(consecutiveErrors);
-            return this;
+
+        public Builder consecutiveErrors(Integer consecutiveErrors) {
+            return consecutiveErrors(Output.of(consecutiveErrors));
         }
+
         public Builder consecutiveGatewayFailure(@Nullable Output<Integer> consecutiveGatewayFailure) {
-            this.consecutiveGatewayFailure = consecutiveGatewayFailure;
+            $.consecutiveGatewayFailure = consecutiveGatewayFailure;
             return this;
         }
-        public Builder consecutiveGatewayFailure(@Nullable Integer consecutiveGatewayFailure) {
-            this.consecutiveGatewayFailure = Codegen.ofNullable(consecutiveGatewayFailure);
-            return this;
+
+        public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
+            return consecutiveGatewayFailure(Output.of(consecutiveGatewayFailure));
         }
+
         public Builder enforcingConsecutiveErrors(@Nullable Output<Integer> enforcingConsecutiveErrors) {
-            this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
+            $.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
             return this;
         }
-        public Builder enforcingConsecutiveErrors(@Nullable Integer enforcingConsecutiveErrors) {
-            this.enforcingConsecutiveErrors = Codegen.ofNullable(enforcingConsecutiveErrors);
-            return this;
+
+        public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
+            return enforcingConsecutiveErrors(Output.of(enforcingConsecutiveErrors));
         }
+
         public Builder enforcingConsecutiveGatewayFailure(@Nullable Output<Integer> enforcingConsecutiveGatewayFailure) {
-            this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
+            $.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
             return this;
         }
-        public Builder enforcingConsecutiveGatewayFailure(@Nullable Integer enforcingConsecutiveGatewayFailure) {
-            this.enforcingConsecutiveGatewayFailure = Codegen.ofNullable(enforcingConsecutiveGatewayFailure);
-            return this;
+
+        public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
+            return enforcingConsecutiveGatewayFailure(Output.of(enforcingConsecutiveGatewayFailure));
         }
+
         public Builder enforcingSuccessRate(@Nullable Output<Integer> enforcingSuccessRate) {
-            this.enforcingSuccessRate = enforcingSuccessRate;
+            $.enforcingSuccessRate = enforcingSuccessRate;
             return this;
         }
-        public Builder enforcingSuccessRate(@Nullable Integer enforcingSuccessRate) {
-            this.enforcingSuccessRate = Codegen.ofNullable(enforcingSuccessRate);
-            return this;
+
+        public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
+            return enforcingSuccessRate(Output.of(enforcingSuccessRate));
         }
+
         public Builder interval(@Nullable Output<BackendServiceOutlierDetectionIntervalArgs> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable BackendServiceOutlierDetectionIntervalArgs interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(BackendServiceOutlierDetectionIntervalArgs interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder maxEjectionPercent(@Nullable Output<Integer> maxEjectionPercent) {
-            this.maxEjectionPercent = maxEjectionPercent;
+            $.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
-        public Builder maxEjectionPercent(@Nullable Integer maxEjectionPercent) {
-            this.maxEjectionPercent = Codegen.ofNullable(maxEjectionPercent);
-            return this;
+
+        public Builder maxEjectionPercent(Integer maxEjectionPercent) {
+            return maxEjectionPercent(Output.of(maxEjectionPercent));
         }
+
         public Builder successRateMinimumHosts(@Nullable Output<Integer> successRateMinimumHosts) {
-            this.successRateMinimumHosts = successRateMinimumHosts;
+            $.successRateMinimumHosts = successRateMinimumHosts;
             return this;
         }
-        public Builder successRateMinimumHosts(@Nullable Integer successRateMinimumHosts) {
-            this.successRateMinimumHosts = Codegen.ofNullable(successRateMinimumHosts);
-            return this;
+
+        public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
+            return successRateMinimumHosts(Output.of(successRateMinimumHosts));
         }
+
         public Builder successRateRequestVolume(@Nullable Output<Integer> successRateRequestVolume) {
-            this.successRateRequestVolume = successRateRequestVolume;
+            $.successRateRequestVolume = successRateRequestVolume;
             return this;
         }
-        public Builder successRateRequestVolume(@Nullable Integer successRateRequestVolume) {
-            this.successRateRequestVolume = Codegen.ofNullable(successRateRequestVolume);
-            return this;
+
+        public Builder successRateRequestVolume(Integer successRateRequestVolume) {
+            return successRateRequestVolume(Output.of(successRateRequestVolume));
         }
+
         public Builder successRateStdevFactor(@Nullable Output<Integer> successRateStdevFactor) {
-            this.successRateStdevFactor = successRateStdevFactor;
+            $.successRateStdevFactor = successRateStdevFactor;
             return this;
         }
-        public Builder successRateStdevFactor(@Nullable Integer successRateStdevFactor) {
-            this.successRateStdevFactor = Codegen.ofNullable(successRateStdevFactor);
-            return this;
-        }        public BackendServiceOutlierDetectionArgs build() {
-            return new BackendServiceOutlierDetectionArgs(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
+
+        public Builder successRateStdevFactor(Integer successRateStdevFactor) {
+            return successRateStdevFactor(Output.of(successRateStdevFactor));
+        }
+
+        public BackendServiceOutlierDetectionArgs build() {
+            return $;
         }
     }
+
 }

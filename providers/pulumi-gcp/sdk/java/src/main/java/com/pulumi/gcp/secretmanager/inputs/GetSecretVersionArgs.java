@@ -20,10 +20,10 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
@@ -43,64 +43,57 @@ public final class GetSecretVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetSecretVersionArgs(
-        @Nullable String project,
-        String secret,
-        @Nullable String version) {
-        this.project = project;
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.version = version;
-    }
+    private GetSecretVersionArgs() {}
 
-    private GetSecretVersionArgs() {
-        this.project = null;
-        this.secret = null;
-        this.version = null;
+    private GetSecretVersionArgs(GetSecretVersionArgs $) {
+        this.project = $.project;
+        this.secret = $.secret;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String secret;
-        private @Nullable String version;
+        private GetSecretVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretVersionArgs();
         }
 
         public Builder(GetSecretVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.secret = defaults.secret;
-    	      this.version = defaults.version;
+            $ = new GetSecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetSecretVersionArgs build() {
-            return new GetSecretVersionArgs(project, secret, version);
+        }
+
+        public GetSecretVersionArgs build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

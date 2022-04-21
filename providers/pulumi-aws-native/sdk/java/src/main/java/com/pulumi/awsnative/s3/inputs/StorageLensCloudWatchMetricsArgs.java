@@ -5,7 +5,6 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class StorageLensCloudWatchMetricsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
-    public StorageLensCloudWatchMetricsArgs(Output<Boolean> isEnabled) {
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-    }
+    private StorageLensCloudWatchMetricsArgs() {}
 
-    private StorageLensCloudWatchMetricsArgs() {
-        this.isEnabled = Codegen.empty();
+    private StorageLensCloudWatchMetricsArgs(StorageLensCloudWatchMetricsArgs $) {
+        this.isEnabled = $.isEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensCloudWatchMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> isEnabled;
+        private StorageLensCloudWatchMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensCloudWatchMetricsArgs();
         }
 
         public Builder(StorageLensCloudWatchMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
+            $ = new StorageLensCloudWatchMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
-        }        public StorageLensCloudWatchMetricsArgs build() {
-            return new StorageLensCloudWatchMetricsArgs(isEnabled);
+            return isEnabled(Output.of(isEnabled));
+        }
+
+        public StorageLensCloudWatchMetricsArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            return $;
         }
     }
+
 }

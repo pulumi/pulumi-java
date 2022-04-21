@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
      * 
      */
     @Import(name="guestFlush")
-      private final @Nullable Output<Boolean> guestFlush;
+    private @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> guestFlush() {
-        return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
+    public Optional<Output<Boolean>> guestFlush() {
+        return Optional.ofNullable(this.guestFlush);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
      * 
      */
     @Import(name="storageLocations")
-      private final @Nullable Output<String> storageLocations;
+    private @Nullable Output<String> storageLocations;
 
-    public Output<String> storageLocations() {
-        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
+    public Optional<Output<String>> storageLocations() {
+        return Optional.ofNullable(this.storageLocations);
     }
 
-    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs(
-        @Nullable Output<Boolean> guestFlush,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> storageLocations) {
-        this.guestFlush = guestFlush;
-        this.labels = labels;
-        this.storageLocations = storageLocations;
-    }
+    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs() {
-        this.guestFlush = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.storageLocations = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs $) {
+        this.guestFlush = $.guestFlush;
+        this.labels = $.labels;
+        this.storageLocations = $.storageLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> guestFlush;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> storageLocations;
+        private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestFlush = defaults.guestFlush;
-    	      this.labels = defaults.labels;
-    	      this.storageLocations = defaults.storageLocations;
+            $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
-            this.guestFlush = guestFlush;
+            $.guestFlush = guestFlush;
             return this;
         }
-        public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Codegen.ofNullable(guestFlush);
-            return this;
+
+        public Builder guestFlush(Boolean guestFlush) {
+            return guestFlush(Output.of(guestFlush));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder storageLocations(@Nullable Output<String> storageLocations) {
-            this.storageLocations = storageLocations;
+            $.storageLocations = storageLocations;
             return this;
         }
-        public Builder storageLocations(@Nullable String storageLocations) {
-            this.storageLocations = Codegen.ofNullable(storageLocations);
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs(guestFlush, labels, storageLocations);
+
+        public Builder storageLocations(String storageLocations) {
+            return storageLocations(Output.of(storageLocations));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetRegistrationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRegistrationArgs Empty = new GetRegistrationArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="registrationId", required=true)
-      private final String registrationId;
+    private String registrationId;
 
     public String registrationId() {
         return this.registrationId;
     }
 
-    public GetRegistrationArgs(
-        String location,
-        @Nullable String project,
-        String registrationId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.registrationId = Objects.requireNonNull(registrationId, "expected parameter 'registrationId' to be non-null");
-    }
+    private GetRegistrationArgs() {}
 
-    private GetRegistrationArgs() {
-        this.location = null;
-        this.project = null;
-        this.registrationId = null;
+    private GetRegistrationArgs(GetRegistrationArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.registrationId = $.registrationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String registrationId;
+        private GetRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistrationArgs();
         }
 
         public Builder(GetRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.registrationId = defaults.registrationId;
+            $ = new GetRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder registrationId(String registrationId) {
-            this.registrationId = Objects.requireNonNull(registrationId);
+            $.registrationId = registrationId;
             return this;
-        }        public GetRegistrationArgs build() {
-            return new GetRegistrationArgs(location, project, registrationId);
+        }
+
+        public GetRegistrationArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.registrationId = Objects.requireNonNull($.registrationId, "expected parameter 'registrationId' to be non-null");
+            return $;
         }
     }
+
 }

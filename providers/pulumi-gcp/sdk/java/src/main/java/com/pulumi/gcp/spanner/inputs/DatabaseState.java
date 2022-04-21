@@ -5,12 +5,12 @@ package com.pulumi.gcp.spanner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ddls")
-      private final @Nullable Output<List<String>> ddls;
+    private @Nullable Output<List<String>> ddls;
 
-    public Output<List<String>> ddls() {
-        return this.ddls == null ? Codegen.empty() : this.ddls;
+    public Optional<Output<List<String>>> ddls() {
+        return Optional.ofNullable(this.ddls);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig;
+    private @Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig;
 
-    public Output<DatabaseEncryptionConfigGetArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<DatabaseEncryptionConfigGetArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -96,131 +96,112 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public DatabaseState(
-        @Nullable Output<List<String>> ddls,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> state) {
-        this.ddls = ddls;
-        this.deletionProtection = deletionProtection;
-        this.encryptionConfig = encryptionConfig;
-        this.instance = instance;
-        this.name = name;
-        this.project = project;
-        this.state = state;
-    }
+    private DatabaseState() {}
 
-    private DatabaseState() {
-        this.ddls = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
+    private DatabaseState(DatabaseState $) {
+        this.ddls = $.ddls;
+        this.deletionProtection = $.deletionProtection;
+        this.encryptionConfig = $.encryptionConfig;
+        this.instance = $.instance;
+        this.name = $.name;
+        this.project = $.project;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ddls;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> state;
+        private DatabaseState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseState();
         }
 
         public Builder(DatabaseState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddls = defaults.ddls;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
+            $ = new DatabaseState(Objects.requireNonNull(defaults));
         }
 
         public Builder ddls(@Nullable Output<List<String>> ddls) {
-            this.ddls = ddls;
+            $.ddls = ddls;
             return this;
         }
-        public Builder ddls(@Nullable List<String> ddls) {
-            this.ddls = Codegen.ofNullable(ddls);
-            return this;
+
+        public Builder ddls(List<String> ddls) {
+            return ddls(Output.of(ddls));
         }
+
         public Builder ddls(String... ddls) {
             return ddls(List.of(ddls));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigGetArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable DatabaseEncryptionConfigGetArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(DatabaseEncryptionConfigGetArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public DatabaseState build() {
-            return new DatabaseState(ddls, deletionProtection, encryptionConfig, instance, name, project, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public DatabaseState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableDependentServices")
-      private final @Nullable Output<Boolean> disableDependentServices;
+    private @Nullable Output<Boolean> disableDependentServices;
 
-    public Output<Boolean> disableDependentServices() {
-        return this.disableDependentServices == null ? Codegen.empty() : this.disableDependentServices;
+    public Optional<Output<Boolean>> disableDependentServices() {
+        return Optional.ofNullable(this.disableDependentServices);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableOnDestroy")
-      private final @Nullable Output<Boolean> disableOnDestroy;
+    private @Nullable Output<Boolean> disableOnDestroy;
 
-    public Output<Boolean> disableOnDestroy() {
-        return this.disableOnDestroy == null ? Codegen.empty() : this.disableOnDestroy;
+    public Optional<Output<Boolean>> disableOnDestroy() {
+        return Optional.ofNullable(this.disableOnDestroy);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ServiceState(
-        @Nullable Output<Boolean> disableDependentServices,
-        @Nullable Output<Boolean> disableOnDestroy,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.disableDependentServices = disableDependentServices;
-        this.disableOnDestroy = disableOnDestroy;
-        this.project = project;
-        this.service = service;
-    }
+    private ServiceState() {}
 
-    private ServiceState() {
-        this.disableDependentServices = Codegen.empty();
-        this.disableOnDestroy = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private ServiceState(ServiceState $) {
+        this.disableDependentServices = $.disableDependentServices;
+        this.disableOnDestroy = $.disableOnDestroy;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableDependentServices;
-        private @Nullable Output<Boolean> disableOnDestroy;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private ServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceState();
         }
 
         public Builder(ServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableDependentServices = defaults.disableDependentServices;
-    	      this.disableOnDestroy = defaults.disableOnDestroy;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder disableDependentServices(@Nullable Output<Boolean> disableDependentServices) {
-            this.disableDependentServices = disableDependentServices;
+            $.disableDependentServices = disableDependentServices;
             return this;
         }
-        public Builder disableDependentServices(@Nullable Boolean disableDependentServices) {
-            this.disableDependentServices = Codegen.ofNullable(disableDependentServices);
-            return this;
+
+        public Builder disableDependentServices(Boolean disableDependentServices) {
+            return disableDependentServices(Output.of(disableDependentServices));
         }
+
         public Builder disableOnDestroy(@Nullable Output<Boolean> disableOnDestroy) {
-            this.disableOnDestroy = disableOnDestroy;
+            $.disableOnDestroy = disableOnDestroy;
             return this;
         }
-        public Builder disableOnDestroy(@Nullable Boolean disableOnDestroy) {
-            this.disableOnDestroy = Codegen.ofNullable(disableOnDestroy);
-            return this;
+
+        public Builder disableOnDestroy(Boolean disableOnDestroy) {
+            return disableOnDestroy(Output.of(disableOnDestroy));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ServiceState build() {
-            return new ServiceState(disableDependentServices, disableOnDestroy, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ServiceState build() {
+            return $;
         }
     }
+
 }

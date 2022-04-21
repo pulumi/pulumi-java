@@ -6,8 +6,8 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigOnFailureGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EventSourceMappingDestinationConfigGetArgs extends com.pulumi
      * 
      */
     @Import(name="onFailure")
-      private final @Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure;
+    private @Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure;
 
-    public Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure() {
-        return this.onFailure == null ? Codegen.empty() : this.onFailure;
+    public Optional<Output<EventSourceMappingDestinationConfigOnFailureGetArgs>> onFailure() {
+        return Optional.ofNullable(this.onFailure);
     }
 
-    public EventSourceMappingDestinationConfigGetArgs(@Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure) {
-        this.onFailure = onFailure;
-    }
+    private EventSourceMappingDestinationConfigGetArgs() {}
 
-    private EventSourceMappingDestinationConfigGetArgs() {
-        this.onFailure = Codegen.empty();
+    private EventSourceMappingDestinationConfigGetArgs(EventSourceMappingDestinationConfigGetArgs $) {
+        this.onFailure = $.onFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingDestinationConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure;
+        private EventSourceMappingDestinationConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingDestinationConfigGetArgs();
         }
 
         public Builder(EventSourceMappingDestinationConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onFailure = defaults.onFailure;
+            $ = new EventSourceMappingDestinationConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onFailure(@Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure) {
-            this.onFailure = onFailure;
+            $.onFailure = onFailure;
             return this;
         }
-        public Builder onFailure(@Nullable EventSourceMappingDestinationConfigOnFailureGetArgs onFailure) {
-            this.onFailure = Codegen.ofNullable(onFailure);
-            return this;
-        }        public EventSourceMappingDestinationConfigGetArgs build() {
-            return new EventSourceMappingDestinationConfigGetArgs(onFailure);
+
+        public Builder onFailure(EventSourceMappingDestinationConfigOnFailureGetArgs onFailure) {
+            return onFailure(Output.of(onFailure));
+        }
+
+        public EventSourceMappingDestinationConfigGetArgs build() {
+            return $;
         }
     }
+
 }

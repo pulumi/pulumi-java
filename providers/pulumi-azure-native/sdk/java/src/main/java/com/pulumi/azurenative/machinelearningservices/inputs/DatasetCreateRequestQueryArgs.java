@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DatasetCreateRequestQueryArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public DatasetCreateRequestQueryArgs(
-        @Nullable Output<String> datastoreName,
-        @Nullable Output<String> query) {
-        this.datastoreName = datastoreName;
-        this.query = query;
-    }
+    private DatasetCreateRequestQueryArgs() {}
 
-    private DatasetCreateRequestQueryArgs() {
-        this.datastoreName = Codegen.empty();
-        this.query = Codegen.empty();
+    private DatasetCreateRequestQueryArgs(DatasetCreateRequestQueryArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCreateRequestQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datastoreName;
-        private @Nullable Output<String> query;
+        private DatasetCreateRequestQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCreateRequestQueryArgs();
         }
 
         public Builder(DatasetCreateRequestQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.query = defaults.query;
+            $ = new DatasetCreateRequestQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
-        }        public DatasetCreateRequestQueryArgs build() {
-            return new DatasetCreateRequestQueryArgs(datastoreName, query);
+
+        public Builder query(String query) {
+            return query(Output.of(query));
+        }
+
+        public DatasetCreateRequestQueryArgs build() {
+            return $;
         }
     }
+
 }

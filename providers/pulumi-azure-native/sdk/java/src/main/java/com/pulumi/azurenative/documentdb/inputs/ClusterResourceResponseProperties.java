@@ -28,10 +28,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="authenticationMethod")
-      private final @Nullable String authenticationMethod;
+    private @Nullable String authenticationMethod;
 
     public Optional<String> authenticationMethod() {
-        return this.authenticationMethod == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethod);
+        return Optional.ofNullable(this.authenticationMethod);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="cassandraVersion")
-      private final @Nullable String cassandraVersion;
+    private @Nullable String cassandraVersion;
 
     public Optional<String> cassandraVersion() {
-        return this.cassandraVersion == null ? Optional.empty() : Optional.ofNullable(this.cassandraVersion);
+        return Optional.ofNullable(this.cassandraVersion);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="clientCertificates")
-      private final @Nullable List<CertificateResponse> clientCertificates;
+    private @Nullable List<CertificateResponse> clientCertificates;
 
-    public List<CertificateResponse> clientCertificates() {
-        return this.clientCertificates == null ? List.of() : this.clientCertificates;
+    public Optional<List<CertificateResponse>> clientCertificates() {
+        return Optional.ofNullable(this.clientCertificates);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="clusterNameOverride")
-      private final @Nullable String clusterNameOverride;
+    private @Nullable String clusterNameOverride;
 
     public Optional<String> clusterNameOverride() {
-        return this.clusterNameOverride == null ? Optional.empty() : Optional.ofNullable(this.clusterNameOverride);
+        return Optional.ofNullable(this.clusterNameOverride);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="delegatedManagementSubnetId")
-      private final @Nullable String delegatedManagementSubnetId;
+    private @Nullable String delegatedManagementSubnetId;
 
     public Optional<String> delegatedManagementSubnetId() {
-        return this.delegatedManagementSubnetId == null ? Optional.empty() : Optional.ofNullable(this.delegatedManagementSubnetId);
+        return Optional.ofNullable(this.delegatedManagementSubnetId);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="externalGossipCertificates")
-      private final @Nullable List<CertificateResponse> externalGossipCertificates;
+    private @Nullable List<CertificateResponse> externalGossipCertificates;
 
-    public List<CertificateResponse> externalGossipCertificates() {
-        return this.externalGossipCertificates == null ? List.of() : this.externalGossipCertificates;
+    public Optional<List<CertificateResponse>> externalGossipCertificates() {
+        return Optional.ofNullable(this.externalGossipCertificates);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="externalSeedNodes")
-      private final @Nullable List<SeedNodeResponse> externalSeedNodes;
+    private @Nullable List<SeedNodeResponse> externalSeedNodes;
 
-    public List<SeedNodeResponse> externalSeedNodes() {
-        return this.externalSeedNodes == null ? List.of() : this.externalSeedNodes;
+    public Optional<List<SeedNodeResponse>> externalSeedNodes() {
+        return Optional.ofNullable(this.externalSeedNodes);
     }
 
     /**
@@ -105,7 +105,7 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="gossipCertificates", required=true)
-      private final List<CertificateResponse> gossipCertificates;
+    private List<CertificateResponse> gossipCertificates;
 
     public List<CertificateResponse> gossipCertificates() {
         return this.gossipCertificates;
@@ -116,10 +116,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="hoursBetweenBackups")
-      private final @Nullable Integer hoursBetweenBackups;
+    private @Nullable Integer hoursBetweenBackups;
 
     public Optional<Integer> hoursBetweenBackups() {
-        return this.hoursBetweenBackups == null ? Optional.empty() : Optional.ofNullable(this.hoursBetweenBackups);
+        return Optional.ofNullable(this.hoursBetweenBackups);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="prometheusEndpoint")
-      private final @Nullable SeedNodeResponse prometheusEndpoint;
+    private @Nullable SeedNodeResponse prometheusEndpoint;
 
     public Optional<SeedNodeResponse> prometheusEndpoint() {
-        return this.prometheusEndpoint == null ? Optional.empty() : Optional.ofNullable(this.prometheusEndpoint);
+        return Optional.ofNullable(this.prometheusEndpoint);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="repairEnabled")
-      private final @Nullable Boolean repairEnabled;
+    private @Nullable Boolean repairEnabled;
 
     public Optional<Boolean> repairEnabled() {
-        return this.repairEnabled == null ? Optional.empty() : Optional.ofNullable(this.repairEnabled);
+        return Optional.ofNullable(this.repairEnabled);
     }
 
     /**
@@ -160,169 +160,138 @@ public final class ClusterResourceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="seedNodes", required=true)
-      private final List<SeedNodeResponse> seedNodes;
+    private List<SeedNodeResponse> seedNodes;
 
     public List<SeedNodeResponse> seedNodes() {
         return this.seedNodes;
     }
 
-    public ClusterResourceResponseProperties(
-        @Nullable String authenticationMethod,
-        @Nullable String cassandraVersion,
-        @Nullable List<CertificateResponse> clientCertificates,
-        @Nullable String clusterNameOverride,
-        @Nullable String delegatedManagementSubnetId,
-        @Nullable List<CertificateResponse> externalGossipCertificates,
-        @Nullable List<SeedNodeResponse> externalSeedNodes,
-        List<CertificateResponse> gossipCertificates,
-        @Nullable Integer hoursBetweenBackups,
-        @Nullable SeedNodeResponse prometheusEndpoint,
-        @Nullable String provisioningState,
-        @Nullable Boolean repairEnabled,
-        List<SeedNodeResponse> seedNodes) {
-        this.authenticationMethod = authenticationMethod;
-        this.cassandraVersion = cassandraVersion;
-        this.clientCertificates = clientCertificates;
-        this.clusterNameOverride = clusterNameOverride;
-        this.delegatedManagementSubnetId = delegatedManagementSubnetId;
-        this.externalGossipCertificates = externalGossipCertificates;
-        this.externalSeedNodes = externalSeedNodes;
-        this.gossipCertificates = Objects.requireNonNull(gossipCertificates, "expected parameter 'gossipCertificates' to be non-null");
-        this.hoursBetweenBackups = hoursBetweenBackups;
-        this.prometheusEndpoint = prometheusEndpoint;
-        this.provisioningState = provisioningState;
-        this.repairEnabled = repairEnabled;
-        this.seedNodes = Objects.requireNonNull(seedNodes, "expected parameter 'seedNodes' to be non-null");
-    }
+    private ClusterResourceResponseProperties() {}
 
-    private ClusterResourceResponseProperties() {
-        this.authenticationMethod = null;
-        this.cassandraVersion = null;
-        this.clientCertificates = List.of();
-        this.clusterNameOverride = null;
-        this.delegatedManagementSubnetId = null;
-        this.externalGossipCertificates = List.of();
-        this.externalSeedNodes = List.of();
-        this.gossipCertificates = List.of();
-        this.hoursBetweenBackups = null;
-        this.prometheusEndpoint = null;
-        this.provisioningState = null;
-        this.repairEnabled = null;
-        this.seedNodes = List.of();
+    private ClusterResourceResponseProperties(ClusterResourceResponseProperties $) {
+        this.authenticationMethod = $.authenticationMethod;
+        this.cassandraVersion = $.cassandraVersion;
+        this.clientCertificates = $.clientCertificates;
+        this.clusterNameOverride = $.clusterNameOverride;
+        this.delegatedManagementSubnetId = $.delegatedManagementSubnetId;
+        this.externalGossipCertificates = $.externalGossipCertificates;
+        this.externalSeedNodes = $.externalSeedNodes;
+        this.gossipCertificates = $.gossipCertificates;
+        this.hoursBetweenBackups = $.hoursBetweenBackups;
+        this.prometheusEndpoint = $.prometheusEndpoint;
+        this.provisioningState = $.provisioningState;
+        this.repairEnabled = $.repairEnabled;
+        this.seedNodes = $.seedNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterResourceResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authenticationMethod;
-        private @Nullable String cassandraVersion;
-        private @Nullable List<CertificateResponse> clientCertificates;
-        private @Nullable String clusterNameOverride;
-        private @Nullable String delegatedManagementSubnetId;
-        private @Nullable List<CertificateResponse> externalGossipCertificates;
-        private @Nullable List<SeedNodeResponse> externalSeedNodes;
-        private List<CertificateResponse> gossipCertificates;
-        private @Nullable Integer hoursBetweenBackups;
-        private @Nullable SeedNodeResponse prometheusEndpoint;
-        private @Nullable String provisioningState;
-        private @Nullable Boolean repairEnabled;
-        private List<SeedNodeResponse> seedNodes;
+        private ClusterResourceResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterResourceResponseProperties();
         }
 
         public Builder(ClusterResourceResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationMethod = defaults.authenticationMethod;
-    	      this.cassandraVersion = defaults.cassandraVersion;
-    	      this.clientCertificates = defaults.clientCertificates;
-    	      this.clusterNameOverride = defaults.clusterNameOverride;
-    	      this.delegatedManagementSubnetId = defaults.delegatedManagementSubnetId;
-    	      this.externalGossipCertificates = defaults.externalGossipCertificates;
-    	      this.externalSeedNodes = defaults.externalSeedNodes;
-    	      this.gossipCertificates = defaults.gossipCertificates;
-    	      this.hoursBetweenBackups = defaults.hoursBetweenBackups;
-    	      this.prometheusEndpoint = defaults.prometheusEndpoint;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.repairEnabled = defaults.repairEnabled;
-    	      this.seedNodes = defaults.seedNodes;
+            $ = new ClusterResourceResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationMethod(@Nullable String authenticationMethod) {
-            this.authenticationMethod = authenticationMethod;
+            $.authenticationMethod = authenticationMethod;
             return this;
         }
+
         public Builder cassandraVersion(@Nullable String cassandraVersion) {
-            this.cassandraVersion = cassandraVersion;
+            $.cassandraVersion = cassandraVersion;
             return this;
         }
+
         public Builder clientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
-            this.clientCertificates = clientCertificates;
+            $.clientCertificates = clientCertificates;
             return this;
         }
+
         public Builder clientCertificates(CertificateResponse... clientCertificates) {
             return clientCertificates(List.of(clientCertificates));
         }
+
         public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
-            this.clusterNameOverride = clusterNameOverride;
+            $.clusterNameOverride = clusterNameOverride;
             return this;
         }
+
         public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
-            this.delegatedManagementSubnetId = delegatedManagementSubnetId;
+            $.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
+
         public Builder externalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
-            this.externalGossipCertificates = externalGossipCertificates;
+            $.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
+
         public Builder externalGossipCertificates(CertificateResponse... externalGossipCertificates) {
             return externalGossipCertificates(List.of(externalGossipCertificates));
         }
+
         public Builder externalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
-            this.externalSeedNodes = externalSeedNodes;
+            $.externalSeedNodes = externalSeedNodes;
             return this;
         }
+
         public Builder externalSeedNodes(SeedNodeResponse... externalSeedNodes) {
             return externalSeedNodes(List.of(externalSeedNodes));
         }
+
         public Builder gossipCertificates(List<CertificateResponse> gossipCertificates) {
-            this.gossipCertificates = Objects.requireNonNull(gossipCertificates);
+            $.gossipCertificates = gossipCertificates;
             return this;
         }
+
         public Builder gossipCertificates(CertificateResponse... gossipCertificates) {
             return gossipCertificates(List.of(gossipCertificates));
         }
+
         public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
-            this.hoursBetweenBackups = hoursBetweenBackups;
+            $.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
+
         public Builder prometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
-            this.prometheusEndpoint = prometheusEndpoint;
+            $.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder repairEnabled(@Nullable Boolean repairEnabled) {
-            this.repairEnabled = repairEnabled;
+            $.repairEnabled = repairEnabled;
             return this;
         }
+
         public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
-            this.seedNodes = Objects.requireNonNull(seedNodes);
+            $.seedNodes = seedNodes;
             return this;
         }
+
         public Builder seedNodes(SeedNodeResponse... seedNodes) {
             return seedNodes(List.of(seedNodes));
-        }        public ClusterResourceResponseProperties build() {
-            return new ClusterResourceResponseProperties(authenticationMethod, cassandraVersion, clientCertificates, clusterNameOverride, delegatedManagementSubnetId, externalGossipCertificates, externalSeedNodes, gossipCertificates, hoursBetweenBackups, prometheusEndpoint, provisioningState, repairEnabled, seedNodes);
+        }
+
+        public ClusterResourceResponseProperties build() {
+            $.gossipCertificates = Objects.requireNonNull($.gossipCertificates, "expected parameter 'gossipCertificates' to be non-null");
+            $.seedNodes = Objects.requireNonNull($.seedNodes, "expected parameter 'seedNodes' to be non-null");
+            return $;
         }
     }
+
 }

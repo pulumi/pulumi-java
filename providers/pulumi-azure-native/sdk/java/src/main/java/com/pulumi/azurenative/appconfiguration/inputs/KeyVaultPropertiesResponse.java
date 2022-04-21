@@ -23,10 +23,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="identityClientId")
-      private final @Nullable String identityClientId;
+    private @Nullable String identityClientId;
 
     public Optional<String> identityClientId() {
-        return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
+        return Optional.ofNullable(this.identityClientId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="keyIdentifier")
-      private final @Nullable String keyIdentifier;
+    private @Nullable String keyIdentifier;
 
     public Optional<String> keyIdentifier() {
-        return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
+        return Optional.ofNullable(this.keyIdentifier);
     }
 
-    public KeyVaultPropertiesResponse(
-        @Nullable String identityClientId,
-        @Nullable String keyIdentifier) {
-        this.identityClientId = identityClientId;
-        this.keyIdentifier = keyIdentifier;
-    }
+    private KeyVaultPropertiesResponse() {}
 
-    private KeyVaultPropertiesResponse() {
-        this.identityClientId = null;
-        this.keyIdentifier = null;
+    private KeyVaultPropertiesResponse(KeyVaultPropertiesResponse $) {
+        this.identityClientId = $.identityClientId;
+        this.keyIdentifier = $.keyIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String identityClientId;
-        private @Nullable String keyIdentifier;
+        private KeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesResponse();
         }
 
         public Builder(KeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityClientId = defaults.identityClientId;
-    	      this.keyIdentifier = defaults.keyIdentifier;
+            $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = identityClientId;
+            $.identityClientId = identityClientId;
             return this;
         }
+
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = keyIdentifier;
+            $.keyIdentifier = keyIdentifier;
             return this;
-        }        public KeyVaultPropertiesResponse build() {
-            return new KeyVaultPropertiesResponse(identityClientId, keyIdentifier);
+        }
+
+        public KeyVaultPropertiesResponse build() {
+            return $;
         }
     }
+
 }

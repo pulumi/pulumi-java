@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.enums.RouteType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="endAddress")
-      private final @Nullable Output<String> endAddress;
+    private @Nullable Output<String> endAddress;
 
-    public Output<String> endAddress() {
-        return this.endAddress == null ? Codegen.empty() : this.endAddress;
+    public Optional<Output<String>> endAddress() {
+        return Optional.ofNullable(this.endAddress);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -55,7 +55,7 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +66,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="routeName")
-      private final @Nullable Output<String> routeName;
+    private @Nullable Output<String> routeName;
 
-    public Output<String> routeName() {
-        return this.routeName == null ? Codegen.empty() : this.routeName;
+    public Optional<Output<String>> routeName() {
+        return Optional.ofNullable(this.routeName);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="routeType")
-      private final @Nullable Output<Either<String,RouteType>> routeType;
+    private @Nullable Output<Either<String,RouteType>> routeType;
 
-    public Output<Either<String,RouteType>> routeType() {
-        return this.routeType == null ? Codegen.empty() : this.routeType;
+    public Optional<Output<Either<String,RouteType>>> routeType() {
+        return Optional.ofNullable(this.routeType);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="startAddress")
-      private final @Nullable Output<String> startAddress;
+    private @Nullable Output<String> startAddress;
 
-    public Output<String> startAddress() {
-        return this.startAddress == null ? Codegen.empty() : this.startAddress;
+    public Optional<Output<String>> startAddress() {
+        return Optional.ofNullable(this.startAddress);
     }
 
     /**
@@ -104,141 +104,121 @@ public final class AppServicePlanRouteForVnetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="vnetName", required=true)
-      private final Output<String> vnetName;
+    private Output<String> vnetName;
 
     public Output<String> vnetName() {
         return this.vnetName;
     }
 
-    public AppServicePlanRouteForVnetArgs(
-        @Nullable Output<String> endAddress,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> routeName,
-        @Nullable Output<Either<String,RouteType>> routeType,
-        @Nullable Output<String> startAddress,
-        Output<String> vnetName) {
-        this.endAddress = endAddress;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeName = routeName;
-        this.routeType = routeType;
-        this.startAddress = startAddress;
-        this.vnetName = Objects.requireNonNull(vnetName, "expected parameter 'vnetName' to be non-null");
-    }
+    private AppServicePlanRouteForVnetArgs() {}
 
-    private AppServicePlanRouteForVnetArgs() {
-        this.endAddress = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routeName = Codegen.empty();
-        this.routeType = Codegen.empty();
-        this.startAddress = Codegen.empty();
-        this.vnetName = Codegen.empty();
+    private AppServicePlanRouteForVnetArgs(AppServicePlanRouteForVnetArgs $) {
+        this.endAddress = $.endAddress;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeName = $.routeName;
+        this.routeType = $.routeType;
+        this.startAddress = $.startAddress;
+        this.vnetName = $.vnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServicePlanRouteForVnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endAddress;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> routeName;
-        private @Nullable Output<Either<String,RouteType>> routeType;
-        private @Nullable Output<String> startAddress;
-        private Output<String> vnetName;
+        private AppServicePlanRouteForVnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServicePlanRouteForVnetArgs();
         }
 
         public Builder(AppServicePlanRouteForVnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endAddress = defaults.endAddress;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeName = defaults.routeName;
-    	      this.routeType = defaults.routeType;
-    	      this.startAddress = defaults.startAddress;
-    	      this.vnetName = defaults.vnetName;
+            $ = new AppServicePlanRouteForVnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endAddress(@Nullable Output<String> endAddress) {
-            this.endAddress = endAddress;
+            $.endAddress = endAddress;
             return this;
         }
-        public Builder endAddress(@Nullable String endAddress) {
-            this.endAddress = Codegen.ofNullable(endAddress);
-            return this;
+
+        public Builder endAddress(String endAddress) {
+            return endAddress(Output.of(endAddress));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routeName(@Nullable Output<String> routeName) {
-            this.routeName = routeName;
+            $.routeName = routeName;
             return this;
         }
-        public Builder routeName(@Nullable String routeName) {
-            this.routeName = Codegen.ofNullable(routeName);
-            return this;
+
+        public Builder routeName(String routeName) {
+            return routeName(Output.of(routeName));
         }
+
         public Builder routeType(@Nullable Output<Either<String,RouteType>> routeType) {
-            this.routeType = routeType;
+            $.routeType = routeType;
             return this;
         }
-        public Builder routeType(@Nullable Either<String,RouteType> routeType) {
-            this.routeType = Codegen.ofNullable(routeType);
-            return this;
+
+        public Builder routeType(Either<String,RouteType> routeType) {
+            return routeType(Output.of(routeType));
         }
+
         public Builder startAddress(@Nullable Output<String> startAddress) {
-            this.startAddress = startAddress;
+            $.startAddress = startAddress;
             return this;
         }
-        public Builder startAddress(@Nullable String startAddress) {
-            this.startAddress = Codegen.ofNullable(startAddress);
-            return this;
+
+        public Builder startAddress(String startAddress) {
+            return startAddress(Output.of(startAddress));
         }
+
         public Builder vnetName(Output<String> vnetName) {
-            this.vnetName = Objects.requireNonNull(vnetName);
+            $.vnetName = vnetName;
             return this;
         }
+
         public Builder vnetName(String vnetName) {
-            this.vnetName = Output.of(Objects.requireNonNull(vnetName));
-            return this;
-        }        public AppServicePlanRouteForVnetArgs build() {
-            return new AppServicePlanRouteForVnetArgs(endAddress, kind, name, resourceGroupName, routeName, routeType, startAddress, vnetName);
+            return vnetName(Output.of(vnetName));
+        }
+
+        public AppServicePlanRouteForVnetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vnetName = Objects.requireNonNull($.vnetName, "expected parameter 'vnetName' to be non-null");
+            return $;
         }
     }
+
 }

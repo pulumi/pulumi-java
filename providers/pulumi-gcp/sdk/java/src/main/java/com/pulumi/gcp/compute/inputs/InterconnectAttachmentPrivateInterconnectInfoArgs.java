@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends com
     public static final InterconnectAttachmentPrivateInterconnectInfoArgs Empty = new InterconnectAttachmentPrivateInterconnectInfoArgs();
 
     @Import(name="tag8021q")
-      private final @Nullable Output<Integer> tag8021q;
+    private @Nullable Output<Integer> tag8021q;
 
-    public Output<Integer> tag8021q() {
-        return this.tag8021q == null ? Codegen.empty() : this.tag8021q;
+    public Optional<Output<Integer>> tag8021q() {
+        return Optional.ofNullable(this.tag8021q);
     }
 
-    public InterconnectAttachmentPrivateInterconnectInfoArgs(@Nullable Output<Integer> tag8021q) {
-        this.tag8021q = tag8021q;
-    }
+    private InterconnectAttachmentPrivateInterconnectInfoArgs() {}
 
-    private InterconnectAttachmentPrivateInterconnectInfoArgs() {
-        this.tag8021q = Codegen.empty();
+    private InterconnectAttachmentPrivateInterconnectInfoArgs(InterconnectAttachmentPrivateInterconnectInfoArgs $) {
+        this.tag8021q = $.tag8021q;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectAttachmentPrivateInterconnectInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> tag8021q;
+        private InterconnectAttachmentPrivateInterconnectInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectAttachmentPrivateInterconnectInfoArgs();
         }
 
         public Builder(InterconnectAttachmentPrivateInterconnectInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tag8021q = defaults.tag8021q;
+            $ = new InterconnectAttachmentPrivateInterconnectInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tag8021q(@Nullable Output<Integer> tag8021q) {
-            this.tag8021q = tag8021q;
+            $.tag8021q = tag8021q;
             return this;
         }
-        public Builder tag8021q(@Nullable Integer tag8021q) {
-            this.tag8021q = Codegen.ofNullable(tag8021q);
-            return this;
-        }        public InterconnectAttachmentPrivateInterconnectInfoArgs build() {
-            return new InterconnectAttachmentPrivateInterconnectInfoArgs(tag8021q);
+
+        public Builder tag8021q(Integer tag8021q) {
+            return tag8021q(Output.of(tag8021q));
+        }
+
+        public InterconnectAttachmentPrivateInterconnectInfoArgs build() {
+            return $;
         }
     }
+
 }

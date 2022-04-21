@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RequestValidatorState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RequestValidatorState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RequestValidatorState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="validateRequestBody")
-      private final @Nullable Output<Boolean> validateRequestBody;
+    private @Nullable Output<Boolean> validateRequestBody;
 
-    public Output<Boolean> validateRequestBody() {
-        return this.validateRequestBody == null ? Codegen.empty() : this.validateRequestBody;
+    public Optional<Output<Boolean>> validateRequestBody() {
+        return Optional.ofNullable(this.validateRequestBody);
     }
 
     /**
@@ -54,85 +54,78 @@ public final class RequestValidatorState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="validateRequestParameters")
-      private final @Nullable Output<Boolean> validateRequestParameters;
+    private @Nullable Output<Boolean> validateRequestParameters;
 
-    public Output<Boolean> validateRequestParameters() {
-        return this.validateRequestParameters == null ? Codegen.empty() : this.validateRequestParameters;
+    public Optional<Output<Boolean>> validateRequestParameters() {
+        return Optional.ofNullable(this.validateRequestParameters);
     }
 
-    public RequestValidatorState(
-        @Nullable Output<String> name,
-        @Nullable Output<String> restApi,
-        @Nullable Output<Boolean> validateRequestBody,
-        @Nullable Output<Boolean> validateRequestParameters) {
-        this.name = name;
-        this.restApi = restApi;
-        this.validateRequestBody = validateRequestBody;
-        this.validateRequestParameters = validateRequestParameters;
-    }
+    private RequestValidatorState() {}
 
-    private RequestValidatorState() {
-        this.name = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.validateRequestBody = Codegen.empty();
-        this.validateRequestParameters = Codegen.empty();
+    private RequestValidatorState(RequestValidatorState $) {
+        this.name = $.name;
+        this.restApi = $.restApi;
+        this.validateRequestBody = $.validateRequestBody;
+        this.validateRequestParameters = $.validateRequestParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestValidatorState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> restApi;
-        private @Nullable Output<Boolean> validateRequestBody;
-        private @Nullable Output<Boolean> validateRequestParameters;
+        private RequestValidatorState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestValidatorState();
         }
 
         public Builder(RequestValidatorState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.restApi = defaults.restApi;
-    	      this.validateRequestBody = defaults.validateRequestBody;
-    	      this.validateRequestParameters = defaults.validateRequestParameters;
+            $ = new RequestValidatorState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder validateRequestBody(@Nullable Output<Boolean> validateRequestBody) {
-            this.validateRequestBody = validateRequestBody;
+            $.validateRequestBody = validateRequestBody;
             return this;
         }
-        public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
-            this.validateRequestBody = Codegen.ofNullable(validateRequestBody);
-            return this;
+
+        public Builder validateRequestBody(Boolean validateRequestBody) {
+            return validateRequestBody(Output.of(validateRequestBody));
         }
+
         public Builder validateRequestParameters(@Nullable Output<Boolean> validateRequestParameters) {
-            this.validateRequestParameters = validateRequestParameters;
+            $.validateRequestParameters = validateRequestParameters;
             return this;
         }
-        public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
-            this.validateRequestParameters = Codegen.ofNullable(validateRequestParameters);
-            return this;
-        }        public RequestValidatorState build() {
-            return new RequestValidatorState(name, restApi, validateRequestBody, validateRequestParameters);
+
+        public Builder validateRequestParameters(Boolean validateRequestParameters) {
+            return validateRequestParameters(Output.of(validateRequestParameters));
+        }
+
+        public RequestValidatorState build() {
+            return $;
         }
     }
+
 }

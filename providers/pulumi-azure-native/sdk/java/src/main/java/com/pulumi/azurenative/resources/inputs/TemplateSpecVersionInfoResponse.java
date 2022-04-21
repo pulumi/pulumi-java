@@ -21,7 +21,7 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,7 +32,7 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeCreated", required=true)
-      private final String timeCreated;
+    private String timeCreated;
 
     public String timeCreated() {
         return this.timeCreated;
@@ -43,64 +43,59 @@ public final class TemplateSpecVersionInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeModified", required=true)
-      private final String timeModified;
+    private String timeModified;
 
     public String timeModified() {
         return this.timeModified;
     }
 
-    public TemplateSpecVersionInfoResponse(
-        String description,
-        String timeCreated,
-        String timeModified) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.timeCreated = Objects.requireNonNull(timeCreated, "expected parameter 'timeCreated' to be non-null");
-        this.timeModified = Objects.requireNonNull(timeModified, "expected parameter 'timeModified' to be non-null");
-    }
+    private TemplateSpecVersionInfoResponse() {}
 
-    private TemplateSpecVersionInfoResponse() {
-        this.description = null;
-        this.timeCreated = null;
-        this.timeModified = null;
+    private TemplateSpecVersionInfoResponse(TemplateSpecVersionInfoResponse $) {
+        this.description = $.description;
+        this.timeCreated = $.timeCreated;
+        this.timeModified = $.timeModified;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateSpecVersionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String timeCreated;
-        private String timeModified;
+        private TemplateSpecVersionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateSpecVersionInfoResponse();
         }
 
         public Builder(TemplateSpecVersionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.timeCreated = defaults.timeCreated;
-    	      this.timeModified = defaults.timeModified;
+            $ = new TemplateSpecVersionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder timeCreated(String timeCreated) {
-            this.timeCreated = Objects.requireNonNull(timeCreated);
+            $.timeCreated = timeCreated;
             return this;
         }
+
         public Builder timeModified(String timeModified) {
-            this.timeModified = Objects.requireNonNull(timeModified);
+            $.timeModified = timeModified;
             return this;
-        }        public TemplateSpecVersionInfoResponse build() {
-            return new TemplateSpecVersionInfoResponse(description, timeCreated, timeModified);
+        }
+
+        public TemplateSpecVersionInfoResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.timeCreated = Objects.requireNonNull($.timeCreated, "expected parameter 'timeCreated' to be non-null");
+            $.timeModified = Objects.requireNonNull($.timeModified, "expected parameter 'timeModified' to be non-null");
+            return $;
         }
     }
+
 }

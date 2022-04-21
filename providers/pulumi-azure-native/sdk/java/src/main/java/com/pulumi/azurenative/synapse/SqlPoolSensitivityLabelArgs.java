@@ -6,9 +6,9 @@ package com.pulumi.azurenative.synapse;
 import com.pulumi.azurenative.synapse.enums.SensitivityLabelRank;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="columnName", required=true)
-      private final Output<String> columnName;
+    private Output<String> columnName;
 
     public Output<String> columnName() {
         return this.columnName;
@@ -32,10 +32,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="informationType")
-      private final @Nullable Output<String> informationType;
+    private @Nullable Output<String> informationType;
 
-    public Output<String> informationType() {
-        return this.informationType == null ? Codegen.empty() : this.informationType;
+    public Optional<Output<String>> informationType() {
+        return Optional.ofNullable(this.informationType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="informationTypeId")
-      private final @Nullable Output<String> informationTypeId;
+    private @Nullable Output<String> informationTypeId;
 
-    public Output<String> informationTypeId() {
-        return this.informationTypeId == null ? Codegen.empty() : this.informationTypeId;
+    public Optional<Output<String>> informationTypeId() {
+        return Optional.ofNullable(this.informationTypeId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="labelId")
-      private final @Nullable Output<String> labelId;
+    private @Nullable Output<String> labelId;
 
-    public Output<String> labelId() {
-        return this.labelId == null ? Codegen.empty() : this.labelId;
+    public Optional<Output<String>> labelId() {
+        return Optional.ofNullable(this.labelId);
     }
 
     /**
@@ -65,17 +65,17 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="labelName")
-      private final @Nullable Output<String> labelName;
+    private @Nullable Output<String> labelName;
 
-    public Output<String> labelName() {
-        return this.labelName == null ? Codegen.empty() : this.labelName;
+    public Optional<Output<String>> labelName() {
+        return Optional.ofNullable(this.labelName);
     }
 
     @Import(name="rank")
-      private final @Nullable Output<SensitivityLabelRank> rank;
+    private @Nullable Output<SensitivityLabelRank> rank;
 
-    public Output<SensitivityLabelRank> rank() {
-        return this.rank == null ? Codegen.empty() : this.rank;
+    public Optional<Output<SensitivityLabelRank>> rank() {
+        return Optional.ofNullable(this.rank);
     }
 
     /**
@@ -83,7 +83,7 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -94,7 +94,7 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="schemaName", required=true)
-      private final Output<String> schemaName;
+    private Output<String> schemaName;
 
     public Output<String> schemaName() {
         return this.schemaName;
@@ -105,10 +105,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sensitivityLabelSource")
-      private final @Nullable Output<String> sensitivityLabelSource;
+    private @Nullable Output<String> sensitivityLabelSource;
 
-    public Output<String> sensitivityLabelSource() {
-        return this.sensitivityLabelSource == null ? Codegen.empty() : this.sensitivityLabelSource;
+    public Optional<Output<String>> sensitivityLabelSource() {
+        return Optional.ofNullable(this.sensitivityLabelSource);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final Output<String> sqlPoolName;
+    private Output<String> sqlPoolName;
 
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
@@ -127,7 +127,7 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
@@ -138,193 +138,164 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SqlPoolSensitivityLabelArgs(
-        Output<String> columnName,
-        @Nullable Output<String> informationType,
-        @Nullable Output<String> informationTypeId,
-        @Nullable Output<String> labelId,
-        @Nullable Output<String> labelName,
-        @Nullable Output<SensitivityLabelRank> rank,
-        Output<String> resourceGroupName,
-        Output<String> schemaName,
-        @Nullable Output<String> sensitivityLabelSource,
-        Output<String> sqlPoolName,
-        Output<String> tableName,
-        Output<String> workspaceName) {
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.informationType = informationType;
-        this.informationTypeId = informationTypeId;
-        this.labelId = labelId;
-        this.labelName = labelName;
-        this.rank = rank;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.sensitivityLabelSource = sensitivityLabelSource;
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SqlPoolSensitivityLabelArgs() {}
 
-    private SqlPoolSensitivityLabelArgs() {
-        this.columnName = Codegen.empty();
-        this.informationType = Codegen.empty();
-        this.informationTypeId = Codegen.empty();
-        this.labelId = Codegen.empty();
-        this.labelName = Codegen.empty();
-        this.rank = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schemaName = Codegen.empty();
-        this.sensitivityLabelSource = Codegen.empty();
-        this.sqlPoolName = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SqlPoolSensitivityLabelArgs(SqlPoolSensitivityLabelArgs $) {
+        this.columnName = $.columnName;
+        this.informationType = $.informationType;
+        this.informationTypeId = $.informationTypeId;
+        this.labelId = $.labelId;
+        this.labelName = $.labelName;
+        this.rank = $.rank;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
+        this.sensitivityLabelSource = $.sensitivityLabelSource;
+        this.sqlPoolName = $.sqlPoolName;
+        this.tableName = $.tableName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlPoolSensitivityLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> columnName;
-        private @Nullable Output<String> informationType;
-        private @Nullable Output<String> informationTypeId;
-        private @Nullable Output<String> labelId;
-        private @Nullable Output<String> labelName;
-        private @Nullable Output<SensitivityLabelRank> rank;
-        private Output<String> resourceGroupName;
-        private Output<String> schemaName;
-        private @Nullable Output<String> sensitivityLabelSource;
-        private Output<String> sqlPoolName;
-        private Output<String> tableName;
-        private Output<String> workspaceName;
+        private SqlPoolSensitivityLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlPoolSensitivityLabelArgs();
         }
 
         public Builder(SqlPoolSensitivityLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.informationType = defaults.informationType;
-    	      this.informationTypeId = defaults.informationTypeId;
-    	      this.labelId = defaults.labelId;
-    	      this.labelName = defaults.labelName;
-    	      this.rank = defaults.rank;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
-    	      this.sensitivityLabelSource = defaults.sensitivityLabelSource;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.tableName = defaults.tableName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SqlPoolSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(Output<String> columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder columnName(String columnName) {
-            this.columnName = Output.of(Objects.requireNonNull(columnName));
-            return this;
+            return columnName(Output.of(columnName));
         }
+
         public Builder informationType(@Nullable Output<String> informationType) {
-            this.informationType = informationType;
+            $.informationType = informationType;
             return this;
         }
-        public Builder informationType(@Nullable String informationType) {
-            this.informationType = Codegen.ofNullable(informationType);
-            return this;
+
+        public Builder informationType(String informationType) {
+            return informationType(Output.of(informationType));
         }
+
         public Builder informationTypeId(@Nullable Output<String> informationTypeId) {
-            this.informationTypeId = informationTypeId;
+            $.informationTypeId = informationTypeId;
             return this;
         }
-        public Builder informationTypeId(@Nullable String informationTypeId) {
-            this.informationTypeId = Codegen.ofNullable(informationTypeId);
-            return this;
+
+        public Builder informationTypeId(String informationTypeId) {
+            return informationTypeId(Output.of(informationTypeId));
         }
+
         public Builder labelId(@Nullable Output<String> labelId) {
-            this.labelId = labelId;
+            $.labelId = labelId;
             return this;
         }
-        public Builder labelId(@Nullable String labelId) {
-            this.labelId = Codegen.ofNullable(labelId);
-            return this;
+
+        public Builder labelId(String labelId) {
+            return labelId(Output.of(labelId));
         }
+
         public Builder labelName(@Nullable Output<String> labelName) {
-            this.labelName = labelName;
+            $.labelName = labelName;
             return this;
         }
-        public Builder labelName(@Nullable String labelName) {
-            this.labelName = Codegen.ofNullable(labelName);
-            return this;
+
+        public Builder labelName(String labelName) {
+            return labelName(Output.of(labelName));
         }
+
         public Builder rank(@Nullable Output<SensitivityLabelRank> rank) {
-            this.rank = rank;
+            $.rank = rank;
             return this;
         }
-        public Builder rank(@Nullable SensitivityLabelRank rank) {
-            this.rank = Codegen.ofNullable(rank);
-            return this;
+
+        public Builder rank(SensitivityLabelRank rank) {
+            return rank(Output.of(rank));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schemaName(Output<String> schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
-            return this;
+            return schemaName(Output.of(schemaName));
         }
+
         public Builder sensitivityLabelSource(@Nullable Output<String> sensitivityLabelSource) {
-            this.sensitivityLabelSource = sensitivityLabelSource;
+            $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
-        public Builder sensitivityLabelSource(@Nullable String sensitivityLabelSource) {
-            this.sensitivityLabelSource = Codegen.ofNullable(sensitivityLabelSource);
-            return this;
+
+        public Builder sensitivityLabelSource(String sensitivityLabelSource) {
+            return sensitivityLabelSource(Output.of(sensitivityLabelSource));
         }
+
         public Builder sqlPoolName(Output<String> sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
-            return this;
+            return sqlPoolName(Output.of(sqlPoolName));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
+            return tableName(Output.of(tableName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SqlPoolSensitivityLabelArgs build() {
-            return new SqlPoolSensitivityLabelArgs(columnName, informationType, informationTypeId, labelId, labelName, rank, resourceGroupName, schemaName, sensitivityLabelSource, sqlPoolName, tableName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SqlPoolSensitivityLabelArgs build() {
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

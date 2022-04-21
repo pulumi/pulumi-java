@@ -5,9 +5,9 @@ package com.pulumi.aws.quicksight;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -42,10 +42,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamArn")
-      private final @Nullable Output<String> iamArn;
+    private @Nullable Output<String> iamArn;
 
-    public Output<String> iamArn() {
-        return this.iamArn == null ? Codegen.empty() : this.iamArn;
+    public Optional<Output<String>> iamArn() {
+        return Optional.ofNullable(this.iamArn);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityType", required=true)
-      private final Output<String> identityType;
+    private Output<String> identityType;
 
     public Output<String> identityType() {
         return this.identityType;
@@ -64,10 +64,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionName")
-      private final @Nullable Output<String> sessionName;
+    private @Nullable Output<String> sessionName;
 
-    public Output<String> sessionName() {
-        return this.sessionName == null ? Codegen.empty() : this.sessionName;
+    public Optional<Output<String>> sessionName() {
+        return Optional.ofNullable(this.sessionName);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
     /**
@@ -97,141 +97,121 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userRole", required=true)
-      private final Output<String> userRole;
+    private Output<String> userRole;
 
     public Output<String> userRole() {
         return this.userRole;
     }
 
-    public UserArgs(
-        @Nullable Output<String> awsAccountId,
-        Output<String> email,
-        @Nullable Output<String> iamArn,
-        Output<String> identityType,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> sessionName,
-        @Nullable Output<String> userName,
-        Output<String> userRole) {
-        this.awsAccountId = awsAccountId;
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.iamArn = iamArn;
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
-        this.namespace = namespace;
-        this.sessionName = sessionName;
-        this.userName = userName;
-        this.userRole = Objects.requireNonNull(userRole, "expected parameter 'userRole' to be non-null");
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.email = Codegen.empty();
-        this.iamArn = Codegen.empty();
-        this.identityType = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.sessionName = Codegen.empty();
-        this.userName = Codegen.empty();
-        this.userRole = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.email = $.email;
+        this.iamArn = $.iamArn;
+        this.identityType = $.identityType;
+        this.namespace = $.namespace;
+        this.sessionName = $.sessionName;
+        this.userName = $.userName;
+        this.userRole = $.userRole;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsAccountId;
-        private Output<String> email;
-        private @Nullable Output<String> iamArn;
-        private Output<String> identityType;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> sessionName;
-        private @Nullable Output<String> userName;
-        private Output<String> userRole;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.email = defaults.email;
-    	      this.iamArn = defaults.iamArn;
-    	      this.identityType = defaults.identityType;
-    	      this.namespace = defaults.namespace;
-    	      this.sessionName = defaults.sessionName;
-    	      this.userName = defaults.userName;
-    	      this.userRole = defaults.userRole;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder iamArn(@Nullable Output<String> iamArn) {
-            this.iamArn = iamArn;
+            $.iamArn = iamArn;
             return this;
         }
-        public Builder iamArn(@Nullable String iamArn) {
-            this.iamArn = Codegen.ofNullable(iamArn);
-            return this;
+
+        public Builder iamArn(String iamArn) {
+            return iamArn(Output.of(iamArn));
         }
+
         public Builder identityType(Output<String> identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder identityType(String identityType) {
-            this.identityType = Output.of(Objects.requireNonNull(identityType));
-            return this;
+            return identityType(Output.of(identityType));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder sessionName(@Nullable Output<String> sessionName) {
-            this.sessionName = sessionName;
+            $.sessionName = sessionName;
             return this;
         }
-        public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Codegen.ofNullable(sessionName);
-            return this;
+
+        public Builder sessionName(String sessionName) {
+            return sessionName(Output.of(sessionName));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
         }
+
         public Builder userRole(Output<String> userRole) {
-            this.userRole = Objects.requireNonNull(userRole);
+            $.userRole = userRole;
             return this;
         }
+
         public Builder userRole(String userRole) {
-            this.userRole = Output.of(Objects.requireNonNull(userRole));
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(awsAccountId, email, iamArn, identityType, namespace, sessionName, userName, userRole);
+            return userRole(Output.of(userRole));
+        }
+
+        public UserArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.identityType = Objects.requireNonNull($.identityType, "expected parameter 'identityType' to be non-null");
+            $.userRole = Objects.requireNonNull($.userRole, "expected parameter 'userRole' to be non-null");
+            return $;
         }
     }
+
 }

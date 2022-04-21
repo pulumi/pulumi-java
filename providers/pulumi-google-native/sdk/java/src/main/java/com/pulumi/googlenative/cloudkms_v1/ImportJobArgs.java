@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudkms_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudkms_v1.enums.ImportJobImportMethod;
 import com.pulumi.googlenative.cloudkms_v1.enums.ImportJobProtectionLevel;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
     public static final ImportJobArgs Empty = new ImportJobArgs();
 
     @Import(name="importJobId", required=true)
-      private final Output<String> importJobId;
+    private Output<String> importJobId;
 
     public Output<String> importJobId() {
         return this.importJobId;
@@ -29,31 +29,31 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="importMethod", required=true)
-      private final Output<ImportJobImportMethod> importMethod;
+    private Output<ImportJobImportMethod> importMethod;
 
     public Output<ImportJobImportMethod> importMethod() {
         return this.importMethod;
     }
 
     @Import(name="keyRingId", required=true)
-      private final Output<String> keyRingId;
+    private Output<String> keyRingId;
 
     public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,115 +61,102 @@ public final class ImportJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protectionLevel", required=true)
-      private final Output<ImportJobProtectionLevel> protectionLevel;
+    private Output<ImportJobProtectionLevel> protectionLevel;
 
     public Output<ImportJobProtectionLevel> protectionLevel() {
         return this.protectionLevel;
     }
 
-    public ImportJobArgs(
-        Output<String> importJobId,
-        Output<ImportJobImportMethod> importMethod,
-        Output<String> keyRingId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        Output<ImportJobProtectionLevel> protectionLevel) {
-        this.importJobId = Objects.requireNonNull(importJobId, "expected parameter 'importJobId' to be non-null");
-        this.importMethod = Objects.requireNonNull(importMethod, "expected parameter 'importMethod' to be non-null");
-        this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
-        this.location = location;
-        this.project = project;
-        this.protectionLevel = Objects.requireNonNull(protectionLevel, "expected parameter 'protectionLevel' to be non-null");
-    }
+    private ImportJobArgs() {}
 
-    private ImportJobArgs() {
-        this.importJobId = Codegen.empty();
-        this.importMethod = Codegen.empty();
-        this.keyRingId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.protectionLevel = Codegen.empty();
+    private ImportJobArgs(ImportJobArgs $) {
+        this.importJobId = $.importJobId;
+        this.importMethod = $.importMethod;
+        this.keyRingId = $.keyRingId;
+        this.location = $.location;
+        this.project = $.project;
+        this.protectionLevel = $.protectionLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> importJobId;
-        private Output<ImportJobImportMethod> importMethod;
-        private Output<String> keyRingId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private Output<ImportJobProtectionLevel> protectionLevel;
+        private ImportJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportJobArgs();
         }
 
         public Builder(ImportJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importJobId = defaults.importJobId;
-    	      this.importMethod = defaults.importMethod;
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.protectionLevel = defaults.protectionLevel;
+            $ = new ImportJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder importJobId(Output<String> importJobId) {
-            this.importJobId = Objects.requireNonNull(importJobId);
+            $.importJobId = importJobId;
             return this;
         }
+
         public Builder importJobId(String importJobId) {
-            this.importJobId = Output.of(Objects.requireNonNull(importJobId));
-            return this;
+            return importJobId(Output.of(importJobId));
         }
+
         public Builder importMethod(Output<ImportJobImportMethod> importMethod) {
-            this.importMethod = Objects.requireNonNull(importMethod);
+            $.importMethod = importMethod;
             return this;
         }
+
         public Builder importMethod(ImportJobImportMethod importMethod) {
-            this.importMethod = Output.of(Objects.requireNonNull(importMethod));
-            return this;
+            return importMethod(Output.of(importMethod));
         }
+
         public Builder keyRingId(Output<String> keyRingId) {
-            this.keyRingId = Objects.requireNonNull(keyRingId);
+            $.keyRingId = keyRingId;
             return this;
         }
+
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
-            return this;
+            return keyRingId(Output.of(keyRingId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder protectionLevel(Output<ImportJobProtectionLevel> protectionLevel) {
-            this.protectionLevel = Objects.requireNonNull(protectionLevel);
+            $.protectionLevel = protectionLevel;
             return this;
         }
+
         public Builder protectionLevel(ImportJobProtectionLevel protectionLevel) {
-            this.protectionLevel = Output.of(Objects.requireNonNull(protectionLevel));
-            return this;
-        }        public ImportJobArgs build() {
-            return new ImportJobArgs(importJobId, importMethod, keyRingId, location, project, protectionLevel);
+            return protectionLevel(Output.of(protectionLevel));
+        }
+
+        public ImportJobArgs build() {
+            $.importJobId = Objects.requireNonNull($.importJobId, "expected parameter 'importJobId' to be non-null");
+            $.importMethod = Objects.requireNonNull($.importMethod, "expected parameter 'importMethod' to be non-null");
+            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
+            $.protectionLevel = Objects.requireNonNull($.protectionLevel, "expected parameter 'protectionLevel' to be non-null");
+            return $;
         }
     }
+
 }

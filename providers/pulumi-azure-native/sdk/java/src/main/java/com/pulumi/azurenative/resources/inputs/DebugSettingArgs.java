@@ -5,9 +5,9 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DebugSettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detailLevel")
-      private final @Nullable Output<String> detailLevel;
+    private @Nullable Output<String> detailLevel;
 
-    public Output<String> detailLevel() {
-        return this.detailLevel == null ? Codegen.empty() : this.detailLevel;
+    public Optional<Output<String>> detailLevel() {
+        return Optional.ofNullable(this.detailLevel);
     }
 
-    public DebugSettingArgs(@Nullable Output<String> detailLevel) {
-        this.detailLevel = detailLevel;
-    }
+    private DebugSettingArgs() {}
 
-    private DebugSettingArgs() {
-        this.detailLevel = Codegen.empty();
+    private DebugSettingArgs(DebugSettingArgs $) {
+        this.detailLevel = $.detailLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DebugSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> detailLevel;
+        private DebugSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DebugSettingArgs();
         }
 
         public Builder(DebugSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detailLevel = defaults.detailLevel;
+            $ = new DebugSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder detailLevel(@Nullable Output<String> detailLevel) {
-            this.detailLevel = detailLevel;
+            $.detailLevel = detailLevel;
             return this;
         }
-        public Builder detailLevel(@Nullable String detailLevel) {
-            this.detailLevel = Codegen.ofNullable(detailLevel);
-            return this;
-        }        public DebugSettingArgs build() {
-            return new DebugSettingArgs(detailLevel);
+
+        public Builder detailLevel(String detailLevel) {
+            return detailLevel(Output.of(detailLevel));
+        }
+
+        public DebugSettingArgs build() {
+            return $;
         }
     }
+
 }

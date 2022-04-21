@@ -17,7 +17,7 @@ public final class ListDomainSharedAccessKeysArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,55 +28,52 @@ public final class ListDomainSharedAccessKeysArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListDomainSharedAccessKeysArgs(
-        String domainName,
-        String resourceGroupName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListDomainSharedAccessKeysArgs() {}
 
-    private ListDomainSharedAccessKeysArgs() {
-        this.domainName = null;
-        this.resourceGroupName = null;
+    private ListDomainSharedAccessKeysArgs(ListDomainSharedAccessKeysArgs $) {
+        this.domainName = $.domainName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListDomainSharedAccessKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String resourceGroupName;
+        private ListDomainSharedAccessKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListDomainSharedAccessKeysArgs();
         }
 
         public Builder(ListDomainSharedAccessKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListDomainSharedAccessKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListDomainSharedAccessKeysArgs build() {
-            return new ListDomainSharedAccessKeysArgs(domainName, resourceGroupName);
+        }
+
+        public ListDomainSharedAccessKeysArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

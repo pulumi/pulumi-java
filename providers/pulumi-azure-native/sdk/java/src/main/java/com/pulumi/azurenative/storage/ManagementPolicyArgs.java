@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="managementPolicyName")
-      private final @Nullable Output<String> managementPolicyName;
+    private @Nullable Output<String> managementPolicyName;
 
-    public Output<String> managementPolicyName() {
-        return this.managementPolicyName == null ? Codegen.empty() : this.managementPolicyName;
+    public Optional<Output<String>> managementPolicyName() {
+        return Optional.ofNullable(this.managementPolicyName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<ManagementPolicySchemaArgs> policy;
+    private Output<ManagementPolicySchemaArgs> policy;
 
     public Output<ManagementPolicySchemaArgs> policy() {
         return this.policy;
@@ -54,89 +54,81 @@ public final class ManagementPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagementPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> managementPolicyName,
-        Output<ManagementPolicySchemaArgs> policy,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.managementPolicyName = managementPolicyName;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagementPolicyArgs() {}
 
-    private ManagementPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.managementPolicyName = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagementPolicyArgs(ManagementPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.managementPolicyName = $.managementPolicyName;
+        this.policy = $.policy;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> managementPolicyName;
-        private Output<ManagementPolicySchemaArgs> policy;
-        private Output<String> resourceGroupName;
+        private ManagementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyArgs();
         }
 
         public Builder(ManagementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.managementPolicyName = defaults.managementPolicyName;
-    	      this.policy = defaults.policy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder managementPolicyName(@Nullable Output<String> managementPolicyName) {
-            this.managementPolicyName = managementPolicyName;
+            $.managementPolicyName = managementPolicyName;
             return this;
         }
-        public Builder managementPolicyName(@Nullable String managementPolicyName) {
-            this.managementPolicyName = Codegen.ofNullable(managementPolicyName);
-            return this;
+
+        public Builder managementPolicyName(String managementPolicyName) {
+            return managementPolicyName(Output.of(managementPolicyName));
         }
+
         public Builder policy(Output<ManagementPolicySchemaArgs> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(ManagementPolicySchemaArgs policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagementPolicyArgs build() {
-            return new ManagementPolicyArgs(accountName, managementPolicyName, policy, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagementPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

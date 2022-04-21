@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketSseKmsEncryptedObjectsStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class BucketSseKmsEncryptedObjectsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="status", required=true)
-      private final Output<BucketSseKmsEncryptedObjectsStatus> status;
+    private Output<BucketSseKmsEncryptedObjectsStatus> status;
 
     public Output<BucketSseKmsEncryptedObjectsStatus> status() {
         return this.status;
     }
 
-    public BucketSseKmsEncryptedObjectsArgs(Output<BucketSseKmsEncryptedObjectsStatus> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketSseKmsEncryptedObjectsArgs() {}
 
-    private BucketSseKmsEncryptedObjectsArgs() {
-        this.status = Codegen.empty();
+    private BucketSseKmsEncryptedObjectsArgs(BucketSseKmsEncryptedObjectsArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketSseKmsEncryptedObjectsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketSseKmsEncryptedObjectsStatus> status;
+        private BucketSseKmsEncryptedObjectsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketSseKmsEncryptedObjectsArgs();
         }
 
         public Builder(BucketSseKmsEncryptedObjectsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketSseKmsEncryptedObjectsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<BucketSseKmsEncryptedObjectsStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketSseKmsEncryptedObjectsArgs build() {
-            return new BucketSseKmsEncryptedObjectsArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BucketSseKmsEncryptedObjectsArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

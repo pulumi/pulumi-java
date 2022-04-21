@@ -5,12 +5,12 @@ package com.pulumi.googlenative.networkmanagement_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkmanagement_v1beta1.inputs.EndpointArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<EndpointArgs> destination;
+    private Output<EndpointArgs> destination;
 
     public Output<EndpointArgs> destination() {
         return this.destination;
@@ -45,10 +45,10 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="relatedProjects")
-      private final @Nullable Output<List<String>> relatedProjects;
+    private @Nullable Output<List<String>> relatedProjects;
 
-    public Output<List<String>> relatedProjects() {
-        return this.relatedProjects == null ? Codegen.empty() : this.relatedProjects;
+    public Optional<Output<List<String>>> relatedProjects() {
+        return Optional.ofNullable(this.relatedProjects);
     }
 
     /**
@@ -96,164 +96,143 @@ public final class ConnectivityTestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="source", required=true)
-      private final Output<EndpointArgs> source;
+    private Output<EndpointArgs> source;
 
     public Output<EndpointArgs> source() {
         return this.source;
     }
 
     @Import(name="testId", required=true)
-      private final Output<String> testId;
+    private Output<String> testId;
 
     public Output<String> testId() {
         return this.testId;
     }
 
-    public ConnectivityTestArgs(
-        @Nullable Output<String> description,
-        Output<EndpointArgs> destination,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> protocol,
-        @Nullable Output<List<String>> relatedProjects,
-        Output<EndpointArgs> source,
-        Output<String> testId) {
-        this.description = description;
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.labels = labels;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.protocol = protocol;
-        this.relatedProjects = relatedProjects;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.testId = Objects.requireNonNull(testId, "expected parameter 'testId' to be non-null");
-    }
+    private ConnectivityTestArgs() {}
 
-    private ConnectivityTestArgs() {
-        this.description = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.relatedProjects = Codegen.empty();
-        this.source = Codegen.empty();
-        this.testId = Codegen.empty();
+    private ConnectivityTestArgs(ConnectivityTestArgs $) {
+        this.description = $.description;
+        this.destination = $.destination;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.protocol = $.protocol;
+        this.relatedProjects = $.relatedProjects;
+        this.source = $.source;
+        this.testId = $.testId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<EndpointArgs> destination;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<List<String>> relatedProjects;
-        private Output<EndpointArgs> source;
-        private Output<String> testId;
+        private ConnectivityTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityTestArgs();
         }
 
         public Builder(ConnectivityTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destination = defaults.destination;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.protocol = defaults.protocol;
-    	      this.relatedProjects = defaults.relatedProjects;
-    	      this.source = defaults.source;
-    	      this.testId = defaults.testId;
+            $ = new ConnectivityTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destination(Output<EndpointArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(EndpointArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder relatedProjects(@Nullable Output<List<String>> relatedProjects) {
-            this.relatedProjects = relatedProjects;
+            $.relatedProjects = relatedProjects;
             return this;
         }
-        public Builder relatedProjects(@Nullable List<String> relatedProjects) {
-            this.relatedProjects = Codegen.ofNullable(relatedProjects);
-            return this;
+
+        public Builder relatedProjects(List<String> relatedProjects) {
+            return relatedProjects(Output.of(relatedProjects));
         }
+
         public Builder relatedProjects(String... relatedProjects) {
             return relatedProjects(List.of(relatedProjects));
         }
+
         public Builder source(Output<EndpointArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(EndpointArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder testId(Output<String> testId) {
-            this.testId = Objects.requireNonNull(testId);
+            $.testId = testId;
             return this;
         }
+
         public Builder testId(String testId) {
-            this.testId = Output.of(Objects.requireNonNull(testId));
-            return this;
-        }        public ConnectivityTestArgs build() {
-            return new ConnectivityTestArgs(description, destination, labels, name, project, protocol, relatedProjects, source, testId);
+            return testId(Output.of(testId));
+        }
+
+        public ConnectivityTestArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.testId = Objects.requireNonNull($.testId, "expected parameter 'testId' to be non-null");
+            return $;
         }
     }
+
 }

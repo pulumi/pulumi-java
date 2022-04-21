@@ -6,7 +6,6 @@ package com.pulumi.aws.signer.inputs;
 import com.pulumi.aws.signer.inputs.SigningJobDestinationS3GetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class SigningJobDestinationGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="s3", required=true)
-      private final Output<SigningJobDestinationS3GetArgs> s3;
+    private Output<SigningJobDestinationS3GetArgs> s3;
 
     public Output<SigningJobDestinationS3GetArgs> s3() {
         return this.s3;
     }
 
-    public SigningJobDestinationGetArgs(Output<SigningJobDestinationS3GetArgs> s3) {
-        this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
-    }
+    private SigningJobDestinationGetArgs() {}
 
-    private SigningJobDestinationGetArgs() {
-        this.s3 = Codegen.empty();
+    private SigningJobDestinationGetArgs(SigningJobDestinationGetArgs $) {
+        this.s3 = $.s3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningJobDestinationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SigningJobDestinationS3GetArgs> s3;
+        private SigningJobDestinationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningJobDestinationGetArgs();
         }
 
         public Builder(SigningJobDestinationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3 = defaults.s3;
+            $ = new SigningJobDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3(Output<SigningJobDestinationS3GetArgs> s3) {
-            this.s3 = Objects.requireNonNull(s3);
+            $.s3 = s3;
             return this;
         }
+
         public Builder s3(SigningJobDestinationS3GetArgs s3) {
-            this.s3 = Output.of(Objects.requireNonNull(s3));
-            return this;
-        }        public SigningJobDestinationGetArgs build() {
-            return new SigningJobDestinationGetArgs(s3);
+            return s3(Output.of(s3));
+        }
+
+        public SigningJobDestinationGetArgs build() {
+            $.s3 = Objects.requireNonNull($.s3, "expected parameter 's3' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -31,10 +31,10 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-      private final @Nullable String domainOwner;
+    private @Nullable String domainOwner;
 
     public Optional<String> domainOwner() {
-        return this.domainOwner == null ? Optional.empty() : Optional.ofNullable(this.domainOwner);
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class GetAuthorizationTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="durationSeconds")
-      private final @Nullable Integer durationSeconds;
+    private @Nullable Integer durationSeconds;
 
     public Optional<Integer> durationSeconds() {
-        return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
+        return Optional.ofNullable(this.durationSeconds);
     }
 
-    public GetAuthorizationTokenArgs(
-        String domain,
-        @Nullable String domainOwner,
-        @Nullable Integer durationSeconds) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.domainOwner = domainOwner;
-        this.durationSeconds = durationSeconds;
-    }
+    private GetAuthorizationTokenArgs() {}
 
-    private GetAuthorizationTokenArgs() {
-        this.domain = null;
-        this.domainOwner = null;
-        this.durationSeconds = null;
+    private GetAuthorizationTokenArgs(GetAuthorizationTokenArgs $) {
+        this.domain = $.domain;
+        this.domainOwner = $.domainOwner;
+        this.durationSeconds = $.durationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizationTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
-        private @Nullable String domainOwner;
-        private @Nullable Integer durationSeconds;
+        private GetAuthorizationTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizationTokenArgs();
         }
 
         public Builder(GetAuthorizationTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.domainOwner = defaults.domainOwner;
-    	      this.durationSeconds = defaults.durationSeconds;
+            $ = new GetAuthorizationTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = domainOwner;
+            $.domainOwner = domainOwner;
             return this;
         }
+
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = durationSeconds;
+            $.durationSeconds = durationSeconds;
             return this;
-        }        public GetAuthorizationTokenArgs build() {
-            return new GetAuthorizationTokenArgs(domain, domainOwner, durationSeconds);
+        }
+
+        public GetAuthorizationTokenArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

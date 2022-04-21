@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyDocumentationArgs;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertStrategy")
-      private final @Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy;
+    private @Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy;
 
-    public Output<AlertPolicyAlertStrategyArgs> alertStrategy() {
-        return this.alertStrategy == null ? Codegen.empty() : this.alertStrategy;
+    public Optional<Output<AlertPolicyAlertStrategyArgs>> alertStrategy() {
+        return Optional.ofNullable(this.alertStrategy);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="combiner", required=true)
-      private final Output<String> combiner;
+    private Output<String> combiner;
 
     public Output<String> combiner() {
         return this.combiner;
@@ -55,7 +55,7 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<AlertPolicyConditionArgs>> conditions;
+    private Output<List<AlertPolicyConditionArgs>> conditions;
 
     public Output<List<AlertPolicyConditionArgs>> conditions() {
         return this.conditions;
@@ -70,7 +70,7 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -86,10 +86,10 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentation")
-      private final @Nullable Output<AlertPolicyDocumentationArgs> documentation;
+    private @Nullable Output<AlertPolicyDocumentationArgs> documentation;
 
-    public Output<AlertPolicyDocumentationArgs> documentation() {
-        return this.documentation == null ? Codegen.empty() : this.documentation;
+    public Optional<Output<AlertPolicyDocumentationArgs>> documentation() {
+        return Optional.ofNullable(this.documentation);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationChannels")
-      private final @Nullable Output<List<String>> notificationChannels;
+    private @Nullable Output<List<String>> notificationChannels;
 
-    public Output<List<String>> notificationChannels() {
-        return this.notificationChannels == null ? Codegen.empty() : this.notificationChannels;
+    public Optional<Output<List<String>>> notificationChannels() {
+        return Optional.ofNullable(this.notificationChannels);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -141,160 +141,139 @@ public final class AlertPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Output<Map<String,String>> userLabels;
+    private @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> userLabels() {
-        return this.userLabels == null ? Codegen.empty() : this.userLabels;
+    public Optional<Output<Map<String,String>>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
-    public AlertPolicyArgs(
-        @Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy,
-        Output<String> combiner,
-        Output<List<AlertPolicyConditionArgs>> conditions,
-        Output<String> displayName,
-        @Nullable Output<AlertPolicyDocumentationArgs> documentation,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<String>> notificationChannels,
-        @Nullable Output<String> project,
-        @Nullable Output<Map<String,String>> userLabels) {
-        this.alertStrategy = alertStrategy;
-        this.combiner = Objects.requireNonNull(combiner, "expected parameter 'combiner' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.documentation = documentation;
-        this.enabled = enabled;
-        this.notificationChannels = notificationChannels;
-        this.project = project;
-        this.userLabels = userLabels;
-    }
+    private AlertPolicyArgs() {}
 
-    private AlertPolicyArgs() {
-        this.alertStrategy = Codegen.empty();
-        this.combiner = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.documentation = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.notificationChannels = Codegen.empty();
-        this.project = Codegen.empty();
-        this.userLabels = Codegen.empty();
+    private AlertPolicyArgs(AlertPolicyArgs $) {
+        this.alertStrategy = $.alertStrategy;
+        this.combiner = $.combiner;
+        this.conditions = $.conditions;
+        this.displayName = $.displayName;
+        this.documentation = $.documentation;
+        this.enabled = $.enabled;
+        this.notificationChannels = $.notificationChannels;
+        this.project = $.project;
+        this.userLabels = $.userLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy;
-        private Output<String> combiner;
-        private Output<List<AlertPolicyConditionArgs>> conditions;
-        private Output<String> displayName;
-        private @Nullable Output<AlertPolicyDocumentationArgs> documentation;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<String>> notificationChannels;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Map<String,String>> userLabels;
+        private AlertPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyArgs();
         }
 
         public Builder(AlertPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertStrategy = defaults.alertStrategy;
-    	      this.combiner = defaults.combiner;
-    	      this.conditions = defaults.conditions;
-    	      this.displayName = defaults.displayName;
-    	      this.documentation = defaults.documentation;
-    	      this.enabled = defaults.enabled;
-    	      this.notificationChannels = defaults.notificationChannels;
-    	      this.project = defaults.project;
-    	      this.userLabels = defaults.userLabels;
+            $ = new AlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertStrategy(@Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy) {
-            this.alertStrategy = alertStrategy;
+            $.alertStrategy = alertStrategy;
             return this;
         }
-        public Builder alertStrategy(@Nullable AlertPolicyAlertStrategyArgs alertStrategy) {
-            this.alertStrategy = Codegen.ofNullable(alertStrategy);
-            return this;
+
+        public Builder alertStrategy(AlertPolicyAlertStrategyArgs alertStrategy) {
+            return alertStrategy(Output.of(alertStrategy));
         }
+
         public Builder combiner(Output<String> combiner) {
-            this.combiner = Objects.requireNonNull(combiner);
+            $.combiner = combiner;
             return this;
         }
+
         public Builder combiner(String combiner) {
-            this.combiner = Output.of(Objects.requireNonNull(combiner));
-            return this;
+            return combiner(Output.of(combiner));
         }
+
         public Builder conditions(Output<List<AlertPolicyConditionArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<AlertPolicyConditionArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(AlertPolicyConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder documentation(@Nullable Output<AlertPolicyDocumentationArgs> documentation) {
-            this.documentation = documentation;
+            $.documentation = documentation;
             return this;
         }
-        public Builder documentation(@Nullable AlertPolicyDocumentationArgs documentation) {
-            this.documentation = Codegen.ofNullable(documentation);
-            return this;
+
+        public Builder documentation(AlertPolicyDocumentationArgs documentation) {
+            return documentation(Output.of(documentation));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder notificationChannels(@Nullable Output<List<String>> notificationChannels) {
-            this.notificationChannels = notificationChannels;
+            $.notificationChannels = notificationChannels;
             return this;
         }
-        public Builder notificationChannels(@Nullable List<String> notificationChannels) {
-            this.notificationChannels = Codegen.ofNullable(notificationChannels);
-            return this;
+
+        public Builder notificationChannels(List<String> notificationChannels) {
+            return notificationChannels(Output.of(notificationChannels));
         }
+
         public Builder notificationChannels(String... notificationChannels) {
             return notificationChannels(List.of(notificationChannels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
         }
-        public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Codegen.ofNullable(userLabels);
-            return this;
-        }        public AlertPolicyArgs build() {
-            return new AlertPolicyArgs(alertStrategy, combiner, conditions, displayName, documentation, enabled, notificationChannels, project, userLabels);
+
+        public Builder userLabels(Map<String,String> userLabels) {
+            return userLabels(Output.of(userLabels));
+        }
+
+        public AlertPolicyArgs build() {
+            $.combiner = Objects.requireNonNull($.combiner, "expected parameter 'combiner' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

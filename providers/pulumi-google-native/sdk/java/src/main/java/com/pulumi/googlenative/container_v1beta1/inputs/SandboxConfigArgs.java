@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.SandboxConfigType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sandboxType")
-      private final @Nullable Output<String> sandboxType;
+    private @Nullable Output<String> sandboxType;
 
-    public Output<String> sandboxType() {
-        return this.sandboxType == null ? Codegen.empty() : this.sandboxType;
+    public Optional<Output<String>> sandboxType() {
+        return Optional.ofNullable(this.sandboxType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SandboxConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SandboxConfigType> type;
+    private @Nullable Output<SandboxConfigType> type;
 
-    public Output<SandboxConfigType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SandboxConfigType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SandboxConfigArgs(
-        @Nullable Output<String> sandboxType,
-        @Nullable Output<SandboxConfigType> type) {
-        this.sandboxType = sandboxType;
-        this.type = type;
-    }
+    private SandboxConfigArgs() {}
 
-    private SandboxConfigArgs() {
-        this.sandboxType = Codegen.empty();
-        this.type = Codegen.empty();
+    private SandboxConfigArgs(SandboxConfigArgs $) {
+        this.sandboxType = $.sandboxType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SandboxConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sandboxType;
-        private @Nullable Output<SandboxConfigType> type;
+        private SandboxConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SandboxConfigArgs();
         }
 
         public Builder(SandboxConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sandboxType = defaults.sandboxType;
-    	      this.type = defaults.type;
+            $ = new SandboxConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sandboxType(@Nullable Output<String> sandboxType) {
-            this.sandboxType = sandboxType;
+            $.sandboxType = sandboxType;
             return this;
         }
-        public Builder sandboxType(@Nullable String sandboxType) {
-            this.sandboxType = Codegen.ofNullable(sandboxType);
-            return this;
+
+        public Builder sandboxType(String sandboxType) {
+            return sandboxType(Output.of(sandboxType));
         }
+
         public Builder type(@Nullable Output<SandboxConfigType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SandboxConfigType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SandboxConfigArgs build() {
-            return new SandboxConfigArgs(sandboxType, type);
+
+        public Builder type(SandboxConfigType type) {
+            return type(Output.of(type));
+        }
+
+        public SandboxConfigArgs build() {
+            return $;
         }
     }
+
 }

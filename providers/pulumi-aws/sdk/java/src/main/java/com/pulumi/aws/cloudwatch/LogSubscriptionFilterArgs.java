@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class LogSubscriptionFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destinationArn", required=true)
-      private final Output<String> destinationArn;
+    private Output<String> destinationArn;
 
     public Output<String> destinationArn() {
         return this.destinationArn;
@@ -31,10 +31,10 @@ public final class LogSubscriptionFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Output<String> distribution;
+    private @Nullable Output<String> distribution;
 
-    public Output<String> distribution() {
-        return this.distribution == null ? Codegen.empty() : this.distribution;
+    public Optional<Output<String>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class LogSubscriptionFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filterPattern", required=true)
-      private final Output<String> filterPattern;
+    private Output<String> filterPattern;
 
     public Output<String> filterPattern() {
         return this.filterPattern;
@@ -53,7 +53,7 @@ public final class LogSubscriptionFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="logGroup", required=true)
-      private final Output<String> logGroup;
+    private Output<String> logGroup;
 
     public Output<String> logGroup() {
         return this.logGroup;
@@ -64,10 +64,10 @@ public final class LogSubscriptionFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,111 +75,101 @@ public final class LogSubscriptionFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public LogSubscriptionFilterArgs(
-        Output<String> destinationArn,
-        @Nullable Output<String> distribution,
-        Output<String> filterPattern,
-        Output<String> logGroup,
-        @Nullable Output<String> name,
-        @Nullable Output<String> roleArn) {
-        this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
-        this.distribution = distribution;
-        this.filterPattern = Objects.requireNonNull(filterPattern, "expected parameter 'filterPattern' to be non-null");
-        this.logGroup = Objects.requireNonNull(logGroup, "expected parameter 'logGroup' to be non-null");
-        this.name = name;
-        this.roleArn = roleArn;
-    }
+    private LogSubscriptionFilterArgs() {}
 
-    private LogSubscriptionFilterArgs() {
-        this.destinationArn = Codegen.empty();
-        this.distribution = Codegen.empty();
-        this.filterPattern = Codegen.empty();
-        this.logGroup = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private LogSubscriptionFilterArgs(LogSubscriptionFilterArgs $) {
+        this.destinationArn = $.destinationArn;
+        this.distribution = $.distribution;
+        this.filterPattern = $.filterPattern;
+        this.logGroup = $.logGroup;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogSubscriptionFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationArn;
-        private @Nullable Output<String> distribution;
-        private Output<String> filterPattern;
-        private Output<String> logGroup;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> roleArn;
+        private LogSubscriptionFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogSubscriptionFilterArgs();
         }
 
         public Builder(LogSubscriptionFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.distribution = defaults.distribution;
-    	      this.filterPattern = defaults.filterPattern;
-    	      this.logGroup = defaults.logGroup;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
+            $ = new LogSubscriptionFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(Output<String> destinationArn) {
-            this.destinationArn = Objects.requireNonNull(destinationArn);
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
-            return this;
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder distribution(@Nullable Output<String> distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
-        public Builder distribution(@Nullable String distribution) {
-            this.distribution = Codegen.ofNullable(distribution);
-            return this;
+
+        public Builder distribution(String distribution) {
+            return distribution(Output.of(distribution));
         }
+
         public Builder filterPattern(Output<String> filterPattern) {
-            this.filterPattern = Objects.requireNonNull(filterPattern);
+            $.filterPattern = filterPattern;
             return this;
         }
+
         public Builder filterPattern(String filterPattern) {
-            this.filterPattern = Output.of(Objects.requireNonNull(filterPattern));
-            return this;
+            return filterPattern(Output.of(filterPattern));
         }
+
         public Builder logGroup(Output<String> logGroup) {
-            this.logGroup = Objects.requireNonNull(logGroup);
+            $.logGroup = logGroup;
             return this;
         }
+
+        public Builder logGroup(String logGroup) {
+            return logGroup(Output.of(logGroup));
+        }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public LogSubscriptionFilterArgs build() {
-            return new LogSubscriptionFilterArgs(destinationArn, distribution, filterPattern, logGroup, name, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public LogSubscriptionFilterArgs build() {
+            $.destinationArn = Objects.requireNonNull($.destinationArn, "expected parameter 'destinationArn' to be non-null");
+            $.filterPattern = Objects.requireNonNull($.filterPattern, "expected parameter 'filterPattern' to be non-null");
+            $.logGroup = Objects.requireNonNull($.logGroup, "expected parameter 'logGroup' to be non-null");
+            return $;
         }
     }
+
 }

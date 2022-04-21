@@ -5,11 +5,11 @@ package com.pulumi.googlenative.bigqueryreservation_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigqueryreservation_v1.enums.CapacityCommitmentPlan;
 import com.pulumi.googlenative.bigqueryreservation_v1.enums.CapacityCommitmentRenewalPlan;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,24 +18,24 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
     public static final CapacityCommitmentArgs Empty = new CapacityCommitmentArgs();
 
     @Import(name="capacityCommitmentId")
-      private final @Nullable Output<String> capacityCommitmentId;
+    private @Nullable Output<String> capacityCommitmentId;
 
-    public Output<String> capacityCommitmentId() {
-        return this.capacityCommitmentId == null ? Codegen.empty() : this.capacityCommitmentId;
+    public Optional<Output<String>> capacityCommitmentId() {
+        return Optional.ofNullable(this.capacityCommitmentId);
     }
 
     @Import(name="enforceSingleAdminProjectPerOrg")
-      private final @Nullable Output<String> enforceSingleAdminProjectPerOrg;
+    private @Nullable Output<String> enforceSingleAdminProjectPerOrg;
 
-    public Output<String> enforceSingleAdminProjectPerOrg() {
-        return this.enforceSingleAdminProjectPerOrg == null ? Codegen.empty() : this.enforceSingleAdminProjectPerOrg;
+    public Optional<Output<String>> enforceSingleAdminProjectPerOrg() {
+        return Optional.ofNullable(this.enforceSingleAdminProjectPerOrg);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -43,17 +43,17 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="plan")
-      private final @Nullable Output<CapacityCommitmentPlan> plan;
+    private @Nullable Output<CapacityCommitmentPlan> plan;
 
-    public Output<CapacityCommitmentPlan> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<CapacityCommitmentPlan>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="renewalPlan")
-      private final @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
+    private @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
 
-    public Output<CapacityCommitmentRenewalPlan> renewalPlan() {
-        return this.renewalPlan == null ? Codegen.empty() : this.renewalPlan;
+    public Optional<Output<CapacityCommitmentRenewalPlan>> renewalPlan() {
+        return Optional.ofNullable(this.renewalPlan);
     }
 
     /**
@@ -72,128 +72,108 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="slotCount")
-      private final @Nullable Output<String> slotCount;
+    private @Nullable Output<String> slotCount;
 
-    public Output<String> slotCount() {
-        return this.slotCount == null ? Codegen.empty() : this.slotCount;
+    public Optional<Output<String>> slotCount() {
+        return Optional.ofNullable(this.slotCount);
     }
 
-    public CapacityCommitmentArgs(
-        @Nullable Output<String> capacityCommitmentId,
-        @Nullable Output<String> enforceSingleAdminProjectPerOrg,
-        @Nullable Output<String> location,
-        @Nullable Output<CapacityCommitmentPlan> plan,
-        @Nullable Output<String> project,
-        @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan,
-        @Nullable Output<String> slotCount) {
-        this.capacityCommitmentId = capacityCommitmentId;
-        this.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
-        this.location = location;
-        this.plan = plan;
-        this.project = project;
-        this.renewalPlan = renewalPlan;
-        this.slotCount = slotCount;
-    }
+    private CapacityCommitmentArgs() {}
 
-    private CapacityCommitmentArgs() {
-        this.capacityCommitmentId = Codegen.empty();
-        this.enforceSingleAdminProjectPerOrg = Codegen.empty();
-        this.location = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.project = Codegen.empty();
-        this.renewalPlan = Codegen.empty();
-        this.slotCount = Codegen.empty();
+    private CapacityCommitmentArgs(CapacityCommitmentArgs $) {
+        this.capacityCommitmentId = $.capacityCommitmentId;
+        this.enforceSingleAdminProjectPerOrg = $.enforceSingleAdminProjectPerOrg;
+        this.location = $.location;
+        this.plan = $.plan;
+        this.project = $.project;
+        this.renewalPlan = $.renewalPlan;
+        this.slotCount = $.slotCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityCommitmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> capacityCommitmentId;
-        private @Nullable Output<String> enforceSingleAdminProjectPerOrg;
-        private @Nullable Output<String> location;
-        private @Nullable Output<CapacityCommitmentPlan> plan;
-        private @Nullable Output<String> project;
-        private @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
-        private @Nullable Output<String> slotCount;
+        private CapacityCommitmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityCommitmentArgs();
         }
 
         public Builder(CapacityCommitmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityCommitmentId = defaults.capacityCommitmentId;
-    	      this.enforceSingleAdminProjectPerOrg = defaults.enforceSingleAdminProjectPerOrg;
-    	      this.location = defaults.location;
-    	      this.plan = defaults.plan;
-    	      this.project = defaults.project;
-    	      this.renewalPlan = defaults.renewalPlan;
-    	      this.slotCount = defaults.slotCount;
+            $ = new CapacityCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityCommitmentId(@Nullable Output<String> capacityCommitmentId) {
-            this.capacityCommitmentId = capacityCommitmentId;
+            $.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
-        public Builder capacityCommitmentId(@Nullable String capacityCommitmentId) {
-            this.capacityCommitmentId = Codegen.ofNullable(capacityCommitmentId);
-            return this;
+
+        public Builder capacityCommitmentId(String capacityCommitmentId) {
+            return capacityCommitmentId(Output.of(capacityCommitmentId));
         }
+
         public Builder enforceSingleAdminProjectPerOrg(@Nullable Output<String> enforceSingleAdminProjectPerOrg) {
-            this.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
+            $.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
             return this;
         }
-        public Builder enforceSingleAdminProjectPerOrg(@Nullable String enforceSingleAdminProjectPerOrg) {
-            this.enforceSingleAdminProjectPerOrg = Codegen.ofNullable(enforceSingleAdminProjectPerOrg);
-            return this;
+
+        public Builder enforceSingleAdminProjectPerOrg(String enforceSingleAdminProjectPerOrg) {
+            return enforceSingleAdminProjectPerOrg(Output.of(enforceSingleAdminProjectPerOrg));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder plan(@Nullable Output<CapacityCommitmentPlan> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable CapacityCommitmentPlan plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(CapacityCommitmentPlan plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder renewalPlan(@Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan) {
-            this.renewalPlan = renewalPlan;
+            $.renewalPlan = renewalPlan;
             return this;
         }
-        public Builder renewalPlan(@Nullable CapacityCommitmentRenewalPlan renewalPlan) {
-            this.renewalPlan = Codegen.ofNullable(renewalPlan);
-            return this;
+
+        public Builder renewalPlan(CapacityCommitmentRenewalPlan renewalPlan) {
+            return renewalPlan(Output.of(renewalPlan));
         }
+
         public Builder slotCount(@Nullable Output<String> slotCount) {
-            this.slotCount = slotCount;
+            $.slotCount = slotCount;
             return this;
         }
-        public Builder slotCount(@Nullable String slotCount) {
-            this.slotCount = Codegen.ofNullable(slotCount);
-            return this;
-        }        public CapacityCommitmentArgs build() {
-            return new CapacityCommitmentArgs(capacityCommitmentId, enforceSingleAdminProjectPerOrg, location, plan, project, renewalPlan, slotCount);
+
+        public Builder slotCount(String slotCount) {
+            return slotCount(Output.of(slotCount));
+        }
+
+        public CapacityCommitmentArgs build() {
+            return $;
         }
     }
+
 }

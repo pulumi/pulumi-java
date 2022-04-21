@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="copyBehavior")
-      private final @Nullable Output<Object> copyBehavior;
+    private @Nullable Output<Object> copyBehavior;
 
-    public Output<Object> copyBehavior() {
-        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
+    public Optional<Output<Object>> copyBehavior() {
+        return Optional.ofNullable(this.copyBehavior);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -59,89 +60,79 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public FileServerWriteSettingsArgs(
-        @Nullable Output<Object> copyBehavior,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> maxConcurrentConnections,
-        Output<String> type) {
-        this.copyBehavior = copyBehavior;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private FileServerWriteSettingsArgs() {}
 
-    private FileServerWriteSettingsArgs() {
-        this.copyBehavior = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.type = Codegen.empty();
+    private FileServerWriteSettingsArgs(FileServerWriteSettingsArgs $) {
+        this.copyBehavior = $.copyBehavior;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileServerWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> copyBehavior;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private Output<String> type;
+        private FileServerWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileServerWriteSettingsArgs();
         }
 
         public Builder(FileServerWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copyBehavior = defaults.copyBehavior;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.type = defaults.type;
+            $ = new FileServerWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
-            this.copyBehavior = copyBehavior;
+            $.copyBehavior = copyBehavior;
             return this;
         }
-        public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Codegen.ofNullable(copyBehavior);
-            return this;
+
+        public Builder copyBehavior(Object copyBehavior) {
+            return copyBehavior(Output.of(copyBehavior));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public FileServerWriteSettingsArgs build() {
-            return new FileServerWriteSettingsArgs(copyBehavior, disableMetricsCollection, maxConcurrentConnections, type);
+            return type(Output.of(type));
+        }
+
+        public FileServerWriteSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

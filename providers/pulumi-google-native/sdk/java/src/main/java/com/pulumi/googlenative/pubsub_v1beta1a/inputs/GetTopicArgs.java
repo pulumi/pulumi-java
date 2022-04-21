@@ -13,45 +13,45 @@ public final class GetTopicArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTopicArgs Empty = new GetTopicArgs();
 
     @Import(name="topicId", required=true)
-      private final String topicId;
+    private String topicId;
 
     public String topicId() {
         return this.topicId;
     }
 
-    public GetTopicArgs(String topicId) {
-        this.topicId = Objects.requireNonNull(topicId, "expected parameter 'topicId' to be non-null");
-    }
+    private GetTopicArgs() {}
 
-    private GetTopicArgs() {
-        this.topicId = null;
+    private GetTopicArgs(GetTopicArgs $) {
+        this.topicId = $.topicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String topicId;
+        private GetTopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicArgs();
         }
 
         public Builder(GetTopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topicId = defaults.topicId;
+            $ = new GetTopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topicId(String topicId) {
-            this.topicId = Objects.requireNonNull(topicId);
+            $.topicId = topicId;
             return this;
-        }        public GetTopicArgs build() {
-            return new GetTopicArgs(topicId);
+        }
+
+        public GetTopicArgs build() {
+            $.topicId = Objects.requireNonNull($.topicId, "expected parameter 'topicId' to be non-null");
+            return $;
         }
     }
+
 }

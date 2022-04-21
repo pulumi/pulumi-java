@@ -5,12 +5,12 @@ package com.pulumi.gcp.certificateauthority;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuancePolicy")
-      private final @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy;
+    private @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy;
 
-    public Output<CaPoolIssuancePolicyArgs> issuancePolicy() {
-        return this.issuancePolicy == null ? Codegen.empty() : this.issuancePolicy;
+    public Optional<Output<CaPoolIssuancePolicyArgs>> issuancePolicy() {
+        return Optional.ofNullable(this.issuancePolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -59,10 +59,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishingOptions")
-      private final @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions;
+    private @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions;
 
-    public Output<CaPoolPublishingOptionsArgs> publishingOptions() {
-        return this.publishingOptions == null ? Codegen.empty() : this.publishingOptions;
+    public Optional<Output<CaPoolPublishingOptionsArgs>> publishingOptions() {
+        return Optional.ofNullable(this.publishingOptions);
     }
 
     /**
@@ -95,128 +95,110 @@ public final class CaPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<String> tier;
+    private Output<String> tier;
 
     public Output<String> tier() {
         return this.tier;
     }
 
-    public CaPoolArgs(
-        @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions,
-        Output<String> tier) {
-        this.issuancePolicy = issuancePolicy;
-        this.labels = labels;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.publishingOptions = publishingOptions;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private CaPoolArgs() {}
 
-    private CaPoolArgs() {
-        this.issuancePolicy = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.publishingOptions = Codegen.empty();
-        this.tier = Codegen.empty();
+    private CaPoolArgs(CaPoolArgs $) {
+        this.issuancePolicy = $.issuancePolicy;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.publishingOptions = $.publishingOptions;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions;
-        private Output<String> tier;
+        private CaPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolArgs();
         }
 
         public Builder(CaPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuancePolicy = defaults.issuancePolicy;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.publishingOptions = defaults.publishingOptions;
-    	      this.tier = defaults.tier;
+            $ = new CaPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issuancePolicy(@Nullable Output<CaPoolIssuancePolicyArgs> issuancePolicy) {
-            this.issuancePolicy = issuancePolicy;
+            $.issuancePolicy = issuancePolicy;
             return this;
         }
-        public Builder issuancePolicy(@Nullable CaPoolIssuancePolicyArgs issuancePolicy) {
-            this.issuancePolicy = Codegen.ofNullable(issuancePolicy);
-            return this;
+
+        public Builder issuancePolicy(CaPoolIssuancePolicyArgs issuancePolicy) {
+            return issuancePolicy(Output.of(issuancePolicy));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder publishingOptions(@Nullable Output<CaPoolPublishingOptionsArgs> publishingOptions) {
-            this.publishingOptions = publishingOptions;
+            $.publishingOptions = publishingOptions;
             return this;
         }
-        public Builder publishingOptions(@Nullable CaPoolPublishingOptionsArgs publishingOptions) {
-            this.publishingOptions = Codegen.ofNullable(publishingOptions);
-            return this;
+
+        public Builder publishingOptions(CaPoolPublishingOptionsArgs publishingOptions) {
+            return publishingOptions(Output.of(publishingOptions));
         }
+
         public Builder tier(Output<String> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public CaPoolArgs build() {
-            return new CaPoolArgs(issuancePolicy, labels, location, name, project, publishingOptions, tier);
+            return tier(Output.of(tier));
+        }
+
+        public CaPoolArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="recordFormatType", required=true)
-      private final Output<String> recordFormatType;
+    private Output<String> recordFormatType;
 
     public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs(Output<String> recordFormatType) {
-        this.recordFormatType = Objects.requireNonNull(recordFormatType, "expected parameter 'recordFormatType' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs() {
-        this.recordFormatType = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs $) {
+        this.recordFormatType = $.recordFormatType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> recordFormatType;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordFormatType = defaults.recordFormatType;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordFormatType(Output<String> recordFormatType) {
-            this.recordFormatType = Objects.requireNonNull(recordFormatType);
+            $.recordFormatType = recordFormatType;
             return this;
         }
+
         public Builder recordFormatType(String recordFormatType) {
-            this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs(recordFormatType);
+            return recordFormatType(Output.of(recordFormatType));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs build() {
+            $.recordFormatType = Objects.requireNonNull($.recordFormatType, "expected parameter 'recordFormatType' to be non-null");
+            return $;
         }
     }
+
 }

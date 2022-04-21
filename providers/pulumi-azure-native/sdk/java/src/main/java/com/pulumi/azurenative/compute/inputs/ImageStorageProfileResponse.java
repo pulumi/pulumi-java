@@ -26,10 +26,10 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataDisks")
-      private final @Nullable List<ImageDataDiskResponse> dataDisks;
+    private @Nullable List<ImageDataDiskResponse> dataDisks;
 
-    public List<ImageDataDiskResponse> dataDisks() {
-        return this.dataDisks == null ? List.of() : this.dataDisks;
+    public Optional<List<ImageDataDiskResponse>> dataDisks() {
+        return Optional.ofNullable(this.dataDisks);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="osDisk")
-      private final @Nullable ImageOSDiskResponse osDisk;
+    private @Nullable ImageOSDiskResponse osDisk;
 
     public Optional<ImageOSDiskResponse> osDisk() {
-        return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
+        return Optional.ofNullable(this.osDisk);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class ImageStorageProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="zoneResilient")
-      private final @Nullable Boolean zoneResilient;
+    private @Nullable Boolean zoneResilient;
 
     public Optional<Boolean> zoneResilient() {
-        return this.zoneResilient == null ? Optional.empty() : Optional.ofNullable(this.zoneResilient);
+        return Optional.ofNullable(this.zoneResilient);
     }
 
-    public ImageStorageProfileResponse(
-        @Nullable List<ImageDataDiskResponse> dataDisks,
-        @Nullable ImageOSDiskResponse osDisk,
-        @Nullable Boolean zoneResilient) {
-        this.dataDisks = dataDisks;
-        this.osDisk = osDisk;
-        this.zoneResilient = zoneResilient;
-    }
+    private ImageStorageProfileResponse() {}
 
-    private ImageStorageProfileResponse() {
-        this.dataDisks = List.of();
-        this.osDisk = null;
-        this.zoneResilient = null;
+    private ImageStorageProfileResponse(ImageStorageProfileResponse $) {
+        this.dataDisks = $.dataDisks;
+        this.osDisk = $.osDisk;
+        this.zoneResilient = $.zoneResilient;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageStorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ImageDataDiskResponse> dataDisks;
-        private @Nullable ImageOSDiskResponse osDisk;
-        private @Nullable Boolean zoneResilient;
+        private ImageStorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageStorageProfileResponse();
         }
 
         public Builder(ImageStorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.osDisk = defaults.osDisk;
-    	      this.zoneResilient = defaults.zoneResilient;
+            $ = new ImageStorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDisks(@Nullable List<ImageDataDiskResponse> dataDisks) {
-            this.dataDisks = dataDisks;
+            $.dataDisks = dataDisks;
             return this;
         }
+
         public Builder dataDisks(ImageDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder osDisk(@Nullable ImageOSDiskResponse osDisk) {
-            this.osDisk = osDisk;
+            $.osDisk = osDisk;
             return this;
         }
+
         public Builder zoneResilient(@Nullable Boolean zoneResilient) {
-            this.zoneResilient = zoneResilient;
+            $.zoneResilient = zoneResilient;
             return this;
-        }        public ImageStorageProfileResponse build() {
-            return new ImageStorageProfileResponse(dataDisks, osDisk, zoneResilient);
+        }
+
+        public ImageStorageProfileResponse build() {
+            return $;
         }
     }
+
 }

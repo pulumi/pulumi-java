@@ -5,7 +5,6 @@ package com.pulumi.googlenative.billingbudgets_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1FilterArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingB
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allUpdatesRule")
-      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
+    private @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule() {
-        return this.allUpdatesRule == null ? Codegen.empty() : this.allUpdatesRule;
+    public Optional<Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs>> allUpdatesRule() {
+        return Optional.ofNullable(this.allUpdatesRule);
     }
 
     /**
@@ -36,14 +36,14 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amount", required=true)
-      private final Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
+    private Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
 
     public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount() {
         return this.amount;
     }
 
     @Import(name="billingAccountId", required=true)
-      private final Output<String> billingAccountId;
+    private Output<String> billingAccountId;
 
     public Output<String> billingAccountId() {
         return this.billingAccountId;
@@ -54,10 +54,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="budgetFilter")
-      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
+    private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter() {
-        return this.budgetFilter == null ? Codegen.empty() : this.budgetFilter;
+    public Optional<Output<GoogleCloudBillingBudgetsV1beta1FilterArgs>> budgetFilter() {
+        return Optional.ofNullable(this.budgetFilter);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -87,131 +87,114 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thresholdRules")
-      private final @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
+    private @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
 
-    public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules() {
-        return this.thresholdRules == null ? Codegen.empty() : this.thresholdRules;
+    public Optional<Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>>> thresholdRules() {
+        return Optional.ofNullable(this.thresholdRules);
     }
 
-    public BudgetArgs(
-        @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule,
-        Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount,
-        Output<String> billingAccountId,
-        @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
-        this.allUpdatesRule = allUpdatesRule;
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.budgetFilter = budgetFilter;
-        this.displayName = displayName;
-        this.etag = etag;
-        this.thresholdRules = thresholdRules;
-    }
+    private BudgetArgs() {}
 
-    private BudgetArgs() {
-        this.allUpdatesRule = Codegen.empty();
-        this.amount = Codegen.empty();
-        this.billingAccountId = Codegen.empty();
-        this.budgetFilter = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.thresholdRules = Codegen.empty();
+    private BudgetArgs(BudgetArgs $) {
+        this.allUpdatesRule = $.allUpdatesRule;
+        this.amount = $.amount;
+        this.billingAccountId = $.billingAccountId;
+        this.budgetFilter = $.budgetFilter;
+        this.displayName = $.displayName;
+        this.etag = $.etag;
+        this.thresholdRules = $.thresholdRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
-        private Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
-        private Output<String> billingAccountId;
-        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
+        private BudgetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetArgs();
         }
 
         public Builder(BudgetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allUpdatesRule = defaults.allUpdatesRule;
-    	      this.amount = defaults.amount;
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.budgetFilter = defaults.budgetFilter;
-    	      this.displayName = defaults.displayName;
-    	      this.etag = defaults.etag;
-    	      this.thresholdRules = defaults.thresholdRules;
+            $ = new BudgetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allUpdatesRule(@Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule) {
-            this.allUpdatesRule = allUpdatesRule;
+            $.allUpdatesRule = allUpdatesRule;
             return this;
         }
-        public Builder allUpdatesRule(@Nullable GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
-            this.allUpdatesRule = Codegen.ofNullable(allUpdatesRule);
-            return this;
+
+        public Builder allUpdatesRule(GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
+            return allUpdatesRule(Output.of(allUpdatesRule));
         }
+
         public Builder amount(Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder amount(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs amount) {
-            this.amount = Output.of(Objects.requireNonNull(amount));
-            return this;
+            return amount(Output.of(amount));
         }
+
         public Builder billingAccountId(Output<String> billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
-            return this;
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder budgetFilter(@Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
-            this.budgetFilter = budgetFilter;
+            $.budgetFilter = budgetFilter;
             return this;
         }
-        public Builder budgetFilter(@Nullable GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
-            this.budgetFilter = Codegen.ofNullable(budgetFilter);
-            return this;
+
+        public Builder budgetFilter(GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
+            return budgetFilter(Output.of(budgetFilter));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder thresholdRules(@Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
-            this.thresholdRules = thresholdRules;
+            $.thresholdRules = thresholdRules;
             return this;
         }
-        public Builder thresholdRules(@Nullable List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
-            this.thresholdRules = Codegen.ofNullable(thresholdRules);
-            return this;
+
+        public Builder thresholdRules(List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
+            return thresholdRules(Output.of(thresholdRules));
         }
+
         public Builder thresholdRules(GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs... thresholdRules) {
             return thresholdRules(List.of(thresholdRules));
-        }        public BudgetArgs build() {
-            return new BudgetArgs(allUpdatesRule, amount, billingAccountId, budgetFilter, displayName, etag, thresholdRules);
+        }
+
+        public BudgetArgs build() {
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            return $;
         }
     }
+
 }

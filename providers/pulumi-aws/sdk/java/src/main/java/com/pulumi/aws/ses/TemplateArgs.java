@@ -5,9 +5,9 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="html")
-      private final @Nullable Output<String> html;
+    private @Nullable Output<String> html;
 
-    public Output<String> html() {
-        return this.html == null ? Codegen.empty() : this.html;
+    public Optional<Output<String>> html() {
+        return Optional.ofNullable(this.html);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subject")
-      private final @Nullable Output<String> subject;
+    private @Nullable Output<String> subject;
 
-    public Output<String> subject() {
-        return this.subject == null ? Codegen.empty() : this.subject;
+    public Optional<Output<String>> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public TemplateArgs(
-        @Nullable Output<String> html,
-        @Nullable Output<String> name,
-        @Nullable Output<String> subject,
-        @Nullable Output<String> text) {
-        this.html = html;
-        this.name = name;
-        this.subject = subject;
-        this.text = text;
-    }
+    private TemplateArgs() {}
 
-    private TemplateArgs() {
-        this.html = Codegen.empty();
-        this.name = Codegen.empty();
-        this.subject = Codegen.empty();
-        this.text = Codegen.empty();
+    private TemplateArgs(TemplateArgs $) {
+        this.html = $.html;
+        this.name = $.name;
+        this.subject = $.subject;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> html;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> subject;
-        private @Nullable Output<String> text;
+        private TemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateArgs();
         }
 
         public Builder(TemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.html = defaults.html;
-    	      this.name = defaults.name;
-    	      this.subject = defaults.subject;
-    	      this.text = defaults.text;
+            $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder html(@Nullable Output<String> html) {
-            this.html = html;
+            $.html = html;
             return this;
         }
-        public Builder html(@Nullable String html) {
-            this.html = Codegen.ofNullable(html);
-            return this;
+
+        public Builder html(String html) {
+            return html(Output.of(html));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder subject(@Nullable Output<String> subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
-        public Builder subject(@Nullable String subject) {
-            this.subject = Codegen.ofNullable(subject);
-            return this;
+
+        public Builder subject(String subject) {
+            return subject(Output.of(subject));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public TemplateArgs build() {
-            return new TemplateArgs(html, name, subject, text);
+
+        public Builder text(String text) {
+            return text(Output.of(text));
+        }
+
+        public TemplateArgs build() {
+            return $;
         }
     }
+
 }

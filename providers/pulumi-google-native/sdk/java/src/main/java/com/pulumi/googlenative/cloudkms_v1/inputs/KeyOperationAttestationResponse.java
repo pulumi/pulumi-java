@@ -22,7 +22,7 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="certChains", required=true)
-      private final CertificateChainsResponse certChains;
+    private CertificateChainsResponse certChains;
 
     public CertificateChainsResponse certChains() {
         return this.certChains;
@@ -33,7 +33,7 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -44,64 +44,59 @@ public final class KeyOperationAttestationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
     }
 
-    public KeyOperationAttestationResponse(
-        CertificateChainsResponse certChains,
-        String content,
-        String format) {
-        this.certChains = Objects.requireNonNull(certChains, "expected parameter 'certChains' to be non-null");
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-    }
+    private KeyOperationAttestationResponse() {}
 
-    private KeyOperationAttestationResponse() {
-        this.certChains = null;
-        this.content = null;
-        this.format = null;
+    private KeyOperationAttestationResponse(KeyOperationAttestationResponse $) {
+        this.certChains = $.certChains;
+        this.content = $.content;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyOperationAttestationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CertificateChainsResponse certChains;
-        private String content;
-        private String format;
+        private KeyOperationAttestationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyOperationAttestationResponse();
         }
 
         public Builder(KeyOperationAttestationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certChains = defaults.certChains;
-    	      this.content = defaults.content;
-    	      this.format = defaults.format;
+            $ = new KeyOperationAttestationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certChains(CertificateChainsResponse certChains) {
-            this.certChains = Objects.requireNonNull(certChains);
+            $.certChains = certChains;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
-        }        public KeyOperationAttestationResponse build() {
-            return new KeyOperationAttestationResponse(certChains, content, format);
+        }
+
+        public KeyOperationAttestationResponse build() {
+            $.certChains = Objects.requireNonNull($.certChains, "expected parameter 'certChains' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

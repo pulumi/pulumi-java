@@ -5,9 +5,9 @@ package com.pulumi.azurenative.redhatopenshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MasterProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MasterProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public MasterProfileArgs(
-        @Nullable Output<String> subnetId,
-        @Nullable Output<String> vmSize) {
-        this.subnetId = subnetId;
-        this.vmSize = vmSize;
-    }
+    private MasterProfileArgs() {}
 
-    private MasterProfileArgs() {
-        this.subnetId = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private MasterProfileArgs(MasterProfileArgs $) {
+        this.subnetId = $.subnetId;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MasterProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<String> vmSize;
+        private MasterProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MasterProfileArgs();
         }
 
         public Builder(MasterProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
-    	      this.vmSize = defaults.vmSize;
+            $ = new MasterProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public MasterProfileArgs build() {
-            return new MasterProfileArgs(subnetId, vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public MasterProfileArgs build() {
+            return $;
         }
     }
+
 }

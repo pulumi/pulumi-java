@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends com.pulumi.reso
      * 
      */
     @Import(name="namespaceId", required=true)
-      private final String namespaceId;
+    private String namespaceId;
 
     public String namespaceId() {
         return this.namespaceId;
@@ -32,55 +32,52 @@ public final class GooglePrivacyDlpV2PartitionIdResponse extends com.pulumi.reso
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public GooglePrivacyDlpV2PartitionIdResponse(
-        String namespaceId,
-        String project) {
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private GooglePrivacyDlpV2PartitionIdResponse() {}
 
-    private GooglePrivacyDlpV2PartitionIdResponse() {
-        this.namespaceId = null;
-        this.project = null;
+    private GooglePrivacyDlpV2PartitionIdResponse(GooglePrivacyDlpV2PartitionIdResponse $) {
+        this.namespaceId = $.namespaceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2PartitionIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceId;
-        private String project;
+        private GooglePrivacyDlpV2PartitionIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2PartitionIdResponse();
         }
 
         public Builder(GooglePrivacyDlpV2PartitionIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.project = defaults.project;
+            $ = new GooglePrivacyDlpV2PartitionIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public GooglePrivacyDlpV2PartitionIdResponse build() {
-            return new GooglePrivacyDlpV2PartitionIdResponse(namespaceId, project);
+        }
+
+        public GooglePrivacyDlpV2PartitionIdResponse build() {
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

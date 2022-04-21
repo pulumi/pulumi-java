@@ -25,10 +25,10 @@ public final class IsDeviceMatchConditionParametersResponse extends com.pulumi.r
      * 
      */
     @Import(name="matchValues")
-      private final @Nullable List<String> matchValues;
+    private @Nullable List<String> matchValues;
 
-    public List<String> matchValues() {
-        return this.matchValues == null ? List.of() : this.matchValues;
+    public Optional<List<String>> matchValues() {
+        return Optional.ofNullable(this.matchValues);
     }
 
     /**
@@ -36,14 +36,14 @@ public final class IsDeviceMatchConditionParametersResponse extends com.pulumi.r
      * 
      */
     @Import(name="negateCondition")
-      private final @Nullable Boolean negateCondition;
+    private @Nullable Boolean negateCondition;
 
     public Optional<Boolean> negateCondition() {
-        return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
+        return Optional.ofNullable(this.negateCondition);
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -54,7 +54,7 @@ public final class IsDeviceMatchConditionParametersResponse extends com.pulumi.r
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -65,88 +65,78 @@ public final class IsDeviceMatchConditionParametersResponse extends com.pulumi.r
      * 
      */
     @Import(name="transforms")
-      private final @Nullable List<String> transforms;
+    private @Nullable List<String> transforms;
 
-    public List<String> transforms() {
-        return this.transforms == null ? List.of() : this.transforms;
+    public Optional<List<String>> transforms() {
+        return Optional.ofNullable(this.transforms);
     }
 
-    public IsDeviceMatchConditionParametersResponse(
-        @Nullable List<String> matchValues,
-        @Nullable Boolean negateCondition,
-        String odataType,
-        String operator,
-        @Nullable List<String> transforms) {
-        this.matchValues = matchValues;
-        this.negateCondition = negateCondition;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.transforms = transforms;
-    }
+    private IsDeviceMatchConditionParametersResponse() {}
 
-    private IsDeviceMatchConditionParametersResponse() {
-        this.matchValues = List.of();
-        this.negateCondition = null;
-        this.odataType = null;
-        this.operator = null;
-        this.transforms = List.of();
+    private IsDeviceMatchConditionParametersResponse(IsDeviceMatchConditionParametersResponse $) {
+        this.matchValues = $.matchValues;
+        this.negateCondition = $.negateCondition;
+        this.odataType = $.odataType;
+        this.operator = $.operator;
+        this.transforms = $.transforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IsDeviceMatchConditionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> matchValues;
-        private @Nullable Boolean negateCondition;
-        private String odataType;
-        private String operator;
-        private @Nullable List<String> transforms;
+        private IsDeviceMatchConditionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IsDeviceMatchConditionParametersResponse();
         }
 
         public Builder(IsDeviceMatchConditionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchValues = defaults.matchValues;
-    	      this.negateCondition = defaults.negateCondition;
-    	      this.odataType = defaults.odataType;
-    	      this.operator = defaults.operator;
-    	      this.transforms = defaults.transforms;
+            $ = new IsDeviceMatchConditionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = matchValues;
+            $.matchValues = matchValues;
             return this;
         }
+
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
+
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = negateCondition;
+            $.negateCondition = negateCondition;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder transforms(@Nullable List<String> transforms) {
-            this.transforms = transforms;
+            $.transforms = transforms;
             return this;
         }
+
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
-        }        public IsDeviceMatchConditionParametersResponse build() {
-            return new IsDeviceMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, transforms);
+        }
+
+        public IsDeviceMatchConditionParametersResponse build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

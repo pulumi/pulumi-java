@@ -5,9 +5,9 @@ package com.pulumi.aws.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResolverFirewallConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="firewallFailOpen")
-      private final @Nullable Output<String> firewallFailOpen;
+    private @Nullable Output<String> firewallFailOpen;
 
-    public Output<String> firewallFailOpen() {
-        return this.firewallFailOpen == null ? Codegen.empty() : this.firewallFailOpen;
+    public Optional<Output<String>> firewallFailOpen() {
+        return Optional.ofNullable(this.firewallFailOpen);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResolverFirewallConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ResolverFirewallConfigState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public ResolverFirewallConfigState(
-        @Nullable Output<String> firewallFailOpen,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> resourceId) {
-        this.firewallFailOpen = firewallFailOpen;
-        this.ownerId = ownerId;
-        this.resourceId = resourceId;
-    }
+    private ResolverFirewallConfigState() {}
 
-    private ResolverFirewallConfigState() {
-        this.firewallFailOpen = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ResolverFirewallConfigState(ResolverFirewallConfigState $) {
+        this.firewallFailOpen = $.firewallFailOpen;
+        this.ownerId = $.ownerId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverFirewallConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> firewallFailOpen;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> resourceId;
+        private ResolverFirewallConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverFirewallConfigState();
         }
 
         public Builder(ResolverFirewallConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallFailOpen = defaults.firewallFailOpen;
-    	      this.ownerId = defaults.ownerId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ResolverFirewallConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallFailOpen(@Nullable Output<String> firewallFailOpen) {
-            this.firewallFailOpen = firewallFailOpen;
+            $.firewallFailOpen = firewallFailOpen;
             return this;
         }
-        public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
-            this.firewallFailOpen = Codegen.ofNullable(firewallFailOpen);
-            return this;
+
+        public Builder firewallFailOpen(String firewallFailOpen) {
+            return firewallFailOpen(Output.of(firewallFailOpen));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public ResolverFirewallConfigState build() {
-            return new ResolverFirewallConfigState(firewallFailOpen, ownerId, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ResolverFirewallConfigState build() {
+            return $;
         }
     }
+
 }

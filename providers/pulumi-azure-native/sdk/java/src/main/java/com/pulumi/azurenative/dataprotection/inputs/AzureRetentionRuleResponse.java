@@ -23,21 +23,21 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
     public static final AzureRetentionRuleResponse Empty = new AzureRetentionRuleResponse();
 
     @Import(name="isDefault")
-      private final @Nullable Boolean isDefault;
+    private @Nullable Boolean isDefault;
 
     public Optional<Boolean> isDefault() {
-        return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
+        return Optional.ofNullable(this.isDefault);
     }
 
     @Import(name="lifecycles", required=true)
-      private final List<SourceLifeCycleResponse> lifecycles;
+    private List<SourceLifeCycleResponse> lifecycles;
 
     public List<SourceLifeCycleResponse> lifecycles() {
         return this.lifecycles;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -48,76 +48,69 @@ public final class AzureRetentionRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public AzureRetentionRuleResponse(
-        @Nullable Boolean isDefault,
-        List<SourceLifeCycleResponse> lifecycles,
-        String name,
-        String objectType) {
-        this.isDefault = isDefault;
-        this.lifecycles = Objects.requireNonNull(lifecycles, "expected parameter 'lifecycles' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-    }
+    private AzureRetentionRuleResponse() {}
 
-    private AzureRetentionRuleResponse() {
-        this.isDefault = null;
-        this.lifecycles = List.of();
-        this.name = null;
-        this.objectType = null;
+    private AzureRetentionRuleResponse(AzureRetentionRuleResponse $) {
+        this.isDefault = $.isDefault;
+        this.lifecycles = $.lifecycles;
+        this.name = $.name;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureRetentionRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isDefault;
-        private List<SourceLifeCycleResponse> lifecycles;
-        private String name;
-        private String objectType;
+        private AzureRetentionRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureRetentionRuleResponse();
         }
 
         public Builder(AzureRetentionRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isDefault = defaults.isDefault;
-    	      this.lifecycles = defaults.lifecycles;
-    	      this.name = defaults.name;
-    	      this.objectType = defaults.objectType;
+            $ = new AzureRetentionRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = isDefault;
+            $.isDefault = isDefault;
             return this;
         }
+
         public Builder lifecycles(List<SourceLifeCycleResponse> lifecycles) {
-            this.lifecycles = Objects.requireNonNull(lifecycles);
+            $.lifecycles = lifecycles;
             return this;
         }
+
         public Builder lifecycles(SourceLifeCycleResponse... lifecycles) {
             return lifecycles(List.of(lifecycles));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public AzureRetentionRuleResponse build() {
-            return new AzureRetentionRuleResponse(isDefault, lifecycles, name, objectType);
+        }
+
+        public AzureRetentionRuleResponse build() {
+            $.lifecycles = Objects.requireNonNull($.lifecycles, "expected parameter 'lifecycles' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.aws.appstream.inputs.StackStorageConnectorArgs;
 import com.pulumi.aws.appstream.inputs.StackUserSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
     public static final StackArgs Empty = new StackArgs();
 
     @Import(name="accessEndpoints")
-      private final @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
+    private @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
 
-    public Output<List<StackAccessEndpointArgs>> accessEndpoints() {
-        return this.accessEndpoints == null ? Codegen.empty() : this.accessEndpoints;
+    public Optional<Output<List<StackAccessEndpointArgs>>> accessEndpoints() {
+        return Optional.ofNullable(this.accessEndpoints);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationSettings")
-      private final @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
+    private @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
 
-    public Output<StackApplicationSettingsArgs> applicationSettings() {
-        return this.applicationSettings == null ? Codegen.empty() : this.applicationSettings;
+    public Optional<Output<StackApplicationSettingsArgs>> applicationSettings() {
+        return Optional.ofNullable(this.applicationSettings);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="embedHostDomains")
-      private final @Nullable Output<List<String>> embedHostDomains;
+    private @Nullable Output<List<String>> embedHostDomains;
 
-    public Output<List<String>> embedHostDomains() {
-        return this.embedHostDomains == null ? Codegen.empty() : this.embedHostDomains;
+    public Optional<Output<List<String>>> embedHostDomains() {
+        return Optional.ofNullable(this.embedHostDomains);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedbackUrl")
-      private final @Nullable Output<String> feedbackUrl;
+    private @Nullable Output<String> feedbackUrl;
 
-    public Output<String> feedbackUrl() {
-        return this.feedbackUrl == null ? Codegen.empty() : this.feedbackUrl;
+    public Optional<Output<String>> feedbackUrl() {
+        return Optional.ofNullable(this.feedbackUrl);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redirectUrl")
-      private final @Nullable Output<String> redirectUrl;
+    private @Nullable Output<String> redirectUrl;
 
-    public Output<String> redirectUrl() {
-        return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
+    public Optional<Output<String>> redirectUrl() {
+        return Optional.ofNullable(this.redirectUrl);
     }
 
     /**
@@ -110,17 +110,17 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageConnectors")
-      private final @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
+    private @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
 
-    public Output<List<StackStorageConnectorArgs>> storageConnectors() {
-        return this.storageConnectors == null ? Codegen.empty() : this.storageConnectors;
+    public Optional<Output<List<StackStorageConnectorArgs>>> storageConnectors() {
+        return Optional.ofNullable(this.storageConnectors);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -128,192 +128,164 @@ public final class StackArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSettings")
-      private final @Nullable Output<List<StackUserSettingArgs>> userSettings;
+    private @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
-    public Output<List<StackUserSettingArgs>> userSettings() {
-        return this.userSettings == null ? Codegen.empty() : this.userSettings;
+    public Optional<Output<List<StackUserSettingArgs>>> userSettings() {
+        return Optional.ofNullable(this.userSettings);
     }
 
-    public StackArgs(
-        @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints,
-        @Nullable Output<StackApplicationSettingsArgs> applicationSettings,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<String>> embedHostDomains,
-        @Nullable Output<String> feedbackUrl,
-        @Nullable Output<String> name,
-        @Nullable Output<String> redirectUrl,
-        @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<StackUserSettingArgs>> userSettings) {
-        this.accessEndpoints = accessEndpoints;
-        this.applicationSettings = applicationSettings;
-        this.description = description;
-        this.displayName = displayName;
-        this.embedHostDomains = embedHostDomains;
-        this.feedbackUrl = feedbackUrl;
-        this.name = name;
-        this.redirectUrl = redirectUrl;
-        this.storageConnectors = storageConnectors;
-        this.tags = tags;
-        this.userSettings = userSettings;
-    }
+    private StackArgs() {}
 
-    private StackArgs() {
-        this.accessEndpoints = Codegen.empty();
-        this.applicationSettings = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.embedHostDomains = Codegen.empty();
-        this.feedbackUrl = Codegen.empty();
-        this.name = Codegen.empty();
-        this.redirectUrl = Codegen.empty();
-        this.storageConnectors = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userSettings = Codegen.empty();
+    private StackArgs(StackArgs $) {
+        this.accessEndpoints = $.accessEndpoints;
+        this.applicationSettings = $.applicationSettings;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.embedHostDomains = $.embedHostDomains;
+        this.feedbackUrl = $.feedbackUrl;
+        this.name = $.name;
+        this.redirectUrl = $.redirectUrl;
+        this.storageConnectors = $.storageConnectors;
+        this.tags = $.tags;
+        this.userSettings = $.userSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
-        private @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<String>> embedHostDomains;
-        private @Nullable Output<String> feedbackUrl;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> redirectUrl;
-        private @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<StackUserSettingArgs>> userSettings;
+        private StackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackArgs();
         }
 
         public Builder(StackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessEndpoints = defaults.accessEndpoints;
-    	      this.applicationSettings = defaults.applicationSettings;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.embedHostDomains = defaults.embedHostDomains;
-    	      this.feedbackUrl = defaults.feedbackUrl;
-    	      this.name = defaults.name;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.storageConnectors = defaults.storageConnectors;
-    	      this.tags = defaults.tags;
-    	      this.userSettings = defaults.userSettings;
+            $ = new StackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessEndpoints(@Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints) {
-            this.accessEndpoints = accessEndpoints;
+            $.accessEndpoints = accessEndpoints;
             return this;
         }
-        public Builder accessEndpoints(@Nullable List<StackAccessEndpointArgs> accessEndpoints) {
-            this.accessEndpoints = Codegen.ofNullable(accessEndpoints);
-            return this;
+
+        public Builder accessEndpoints(List<StackAccessEndpointArgs> accessEndpoints) {
+            return accessEndpoints(Output.of(accessEndpoints));
         }
+
         public Builder accessEndpoints(StackAccessEndpointArgs... accessEndpoints) {
             return accessEndpoints(List.of(accessEndpoints));
         }
+
         public Builder applicationSettings(@Nullable Output<StackApplicationSettingsArgs> applicationSettings) {
-            this.applicationSettings = applicationSettings;
+            $.applicationSettings = applicationSettings;
             return this;
         }
-        public Builder applicationSettings(@Nullable StackApplicationSettingsArgs applicationSettings) {
-            this.applicationSettings = Codegen.ofNullable(applicationSettings);
-            return this;
+
+        public Builder applicationSettings(StackApplicationSettingsArgs applicationSettings) {
+            return applicationSettings(Output.of(applicationSettings));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder embedHostDomains(@Nullable Output<List<String>> embedHostDomains) {
-            this.embedHostDomains = embedHostDomains;
+            $.embedHostDomains = embedHostDomains;
             return this;
         }
-        public Builder embedHostDomains(@Nullable List<String> embedHostDomains) {
-            this.embedHostDomains = Codegen.ofNullable(embedHostDomains);
-            return this;
+
+        public Builder embedHostDomains(List<String> embedHostDomains) {
+            return embedHostDomains(Output.of(embedHostDomains));
         }
+
         public Builder embedHostDomains(String... embedHostDomains) {
             return embedHostDomains(List.of(embedHostDomains));
         }
+
         public Builder feedbackUrl(@Nullable Output<String> feedbackUrl) {
-            this.feedbackUrl = feedbackUrl;
+            $.feedbackUrl = feedbackUrl;
             return this;
         }
-        public Builder feedbackUrl(@Nullable String feedbackUrl) {
-            this.feedbackUrl = Codegen.ofNullable(feedbackUrl);
-            return this;
+
+        public Builder feedbackUrl(String feedbackUrl) {
+            return feedbackUrl(Output.of(feedbackUrl));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
-            this.redirectUrl = redirectUrl;
+            $.redirectUrl = redirectUrl;
             return this;
         }
-        public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Codegen.ofNullable(redirectUrl);
-            return this;
+
+        public Builder redirectUrl(String redirectUrl) {
+            return redirectUrl(Output.of(redirectUrl));
         }
+
         public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorArgs>> storageConnectors) {
-            this.storageConnectors = storageConnectors;
+            $.storageConnectors = storageConnectors;
             return this;
         }
-        public Builder storageConnectors(@Nullable List<StackStorageConnectorArgs> storageConnectors) {
-            this.storageConnectors = Codegen.ofNullable(storageConnectors);
-            return this;
+
+        public Builder storageConnectors(List<StackStorageConnectorArgs> storageConnectors) {
+            return storageConnectors(Output.of(storageConnectors));
         }
+
         public Builder storageConnectors(StackStorageConnectorArgs... storageConnectors) {
             return storageConnectors(List.of(storageConnectors));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userSettings(@Nullable Output<List<StackUserSettingArgs>> userSettings) {
-            this.userSettings = userSettings;
+            $.userSettings = userSettings;
             return this;
         }
-        public Builder userSettings(@Nullable List<StackUserSettingArgs> userSettings) {
-            this.userSettings = Codegen.ofNullable(userSettings);
-            return this;
+
+        public Builder userSettings(List<StackUserSettingArgs> userSettings) {
+            return userSettings(Output.of(userSettings));
         }
+
         public Builder userSettings(StackUserSettingArgs... userSettings) {
             return userSettings(List.of(userSettings));
-        }        public StackArgs build() {
-            return new StackArgs(accessEndpoints, applicationSettings, description, displayName, embedHostDomains, feedbackUrl, name, redirectUrl, storageConnectors, tags, userSettings);
+        }
+
+        public StackArgs build() {
+            return $;
         }
     }
+
 }

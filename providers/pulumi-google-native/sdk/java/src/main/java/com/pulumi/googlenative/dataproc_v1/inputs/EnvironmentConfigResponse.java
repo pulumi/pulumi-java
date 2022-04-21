@@ -22,7 +22,7 @@ public final class EnvironmentConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="executionConfig", required=true)
-      private final ExecutionConfigResponse executionConfig;
+    private ExecutionConfigResponse executionConfig;
 
     public ExecutionConfigResponse executionConfig() {
         return this.executionConfig;
@@ -33,55 +33,52 @@ public final class EnvironmentConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="peripheralsConfig", required=true)
-      private final PeripheralsConfigResponse peripheralsConfig;
+    private PeripheralsConfigResponse peripheralsConfig;
 
     public PeripheralsConfigResponse peripheralsConfig() {
         return this.peripheralsConfig;
     }
 
-    public EnvironmentConfigResponse(
-        ExecutionConfigResponse executionConfig,
-        PeripheralsConfigResponse peripheralsConfig) {
-        this.executionConfig = Objects.requireNonNull(executionConfig, "expected parameter 'executionConfig' to be non-null");
-        this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig, "expected parameter 'peripheralsConfig' to be non-null");
-    }
+    private EnvironmentConfigResponse() {}
 
-    private EnvironmentConfigResponse() {
-        this.executionConfig = null;
-        this.peripheralsConfig = null;
+    private EnvironmentConfigResponse(EnvironmentConfigResponse $) {
+        this.executionConfig = $.executionConfig;
+        this.peripheralsConfig = $.peripheralsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExecutionConfigResponse executionConfig;
-        private PeripheralsConfigResponse peripheralsConfig;
+        private EnvironmentConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigResponse();
         }
 
         public Builder(EnvironmentConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionConfig = defaults.executionConfig;
-    	      this.peripheralsConfig = defaults.peripheralsConfig;
+            $ = new EnvironmentConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder executionConfig(ExecutionConfigResponse executionConfig) {
-            this.executionConfig = Objects.requireNonNull(executionConfig);
+            $.executionConfig = executionConfig;
             return this;
         }
+
         public Builder peripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
-            this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
+            $.peripheralsConfig = peripheralsConfig;
             return this;
-        }        public EnvironmentConfigResponse build() {
-            return new EnvironmentConfigResponse(executionConfig, peripheralsConfig);
+        }
+
+        public EnvironmentConfigResponse build() {
+            $.executionConfig = Objects.requireNonNull($.executionConfig, "expected parameter 'executionConfig' to be non-null");
+            $.peripheralsConfig = Objects.requireNonNull($.peripheralsConfig, "expected parameter 'peripheralsConfig' to be non-null");
+            return $;
         }
     }
+
 }

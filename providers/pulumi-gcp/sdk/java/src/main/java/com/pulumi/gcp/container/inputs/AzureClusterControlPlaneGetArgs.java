@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneDatabaseEncryptionGetArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneMainVolumeGetArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneProxyConfigGetArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="databaseEncryption")
-      private final @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
+    private @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
-    public Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption() {
-        return this.databaseEncryption == null ? Codegen.empty() : this.databaseEncryption;
+    public Optional<Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs>> databaseEncryption() {
+        return Optional.ofNullable(this.databaseEncryption);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="mainVolume")
-      private final @Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume;
+    private @Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
-    public Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume() {
-        return this.mainVolume == null ? Codegen.empty() : this.mainVolume;
+    public Optional<Output<AzureClusterControlPlaneMainVolumeGetArgs>> mainVolume() {
+        return Optional.ofNullable(this.mainVolume);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="proxyConfig")
-      private final @Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig;
+    private @Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
-    public Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig() {
-        return this.proxyConfig == null ? Codegen.empty() : this.proxyConfig;
+    public Optional<Output<AzureClusterControlPlaneProxyConfigGetArgs>> proxyConfig() {
+        return Optional.ofNullable(this.proxyConfig);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="replicaPlacements")
-      private final @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements;
+    private @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements;
 
-    public Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements() {
-        return this.replicaPlacements == null ? Codegen.empty() : this.replicaPlacements;
+    public Optional<Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>>> replicaPlacements() {
+        return Optional.ofNullable(this.replicaPlacements);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="rootVolume")
-      private final @Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume;
+    private @Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
-    public Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume() {
-        return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
+    public Optional<Output<AzureClusterControlPlaneRootVolumeGetArgs>> rootVolume() {
+        return Optional.ofNullable(this.rootVolume);
     }
 
     /**
@@ -83,7 +83,7 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sshConfig", required=true)
-      private final Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig;
+    private Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig;
 
     public Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig() {
         return this.sshConfig;
@@ -94,7 +94,7 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -105,10 +105,10 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
@@ -127,170 +127,145 @@ public final class AzureClusterControlPlaneGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public AzureClusterControlPlaneGetArgs(
-        @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption,
-        @Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume,
-        @Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig,
-        @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements,
-        @Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume,
-        Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig,
-        Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> version,
-        @Nullable Output<String> vmSize) {
-        this.databaseEncryption = databaseEncryption;
-        this.mainVolume = mainVolume;
-        this.proxyConfig = proxyConfig;
-        this.replicaPlacements = replicaPlacements;
-        this.rootVolume = rootVolume;
-        this.sshConfig = Objects.requireNonNull(sshConfig, "expected parameter 'sshConfig' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.tags = tags;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.vmSize = vmSize;
-    }
+    private AzureClusterControlPlaneGetArgs() {}
 
-    private AzureClusterControlPlaneGetArgs() {
-        this.databaseEncryption = Codegen.empty();
-        this.mainVolume = Codegen.empty();
-        this.proxyConfig = Codegen.empty();
-        this.replicaPlacements = Codegen.empty();
-        this.rootVolume = Codegen.empty();
-        this.sshConfig = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.version = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private AzureClusterControlPlaneGetArgs(AzureClusterControlPlaneGetArgs $) {
+        this.databaseEncryption = $.databaseEncryption;
+        this.mainVolume = $.mainVolume;
+        this.proxyConfig = $.proxyConfig;
+        this.replicaPlacements = $.replicaPlacements;
+        this.rootVolume = $.rootVolume;
+        this.sshConfig = $.sshConfig;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.version = $.version;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterControlPlaneGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
-        private @Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume;
-        private @Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig;
-        private @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements;
-        private @Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume;
-        private Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig;
-        private Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> version;
-        private @Nullable Output<String> vmSize;
+        private AzureClusterControlPlaneGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterControlPlaneGetArgs();
         }
 
         public Builder(AzureClusterControlPlaneGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseEncryption = defaults.databaseEncryption;
-    	      this.mainVolume = defaults.mainVolume;
-    	      this.proxyConfig = defaults.proxyConfig;
-    	      this.replicaPlacements = defaults.replicaPlacements;
-    	      this.rootVolume = defaults.rootVolume;
-    	      this.sshConfig = defaults.sshConfig;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.version = defaults.version;
-    	      this.vmSize = defaults.vmSize;
+            $ = new AzureClusterControlPlaneGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseEncryption(@Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption) {
-            this.databaseEncryption = databaseEncryption;
+            $.databaseEncryption = databaseEncryption;
             return this;
         }
-        public Builder databaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
-            this.databaseEncryption = Codegen.ofNullable(databaseEncryption);
-            return this;
+
+        public Builder databaseEncryption(AzureClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
+            return databaseEncryption(Output.of(databaseEncryption));
         }
+
         public Builder mainVolume(@Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume) {
-            this.mainVolume = mainVolume;
+            $.mainVolume = mainVolume;
             return this;
         }
-        public Builder mainVolume(@Nullable AzureClusterControlPlaneMainVolumeGetArgs mainVolume) {
-            this.mainVolume = Codegen.ofNullable(mainVolume);
-            return this;
+
+        public Builder mainVolume(AzureClusterControlPlaneMainVolumeGetArgs mainVolume) {
+            return mainVolume(Output.of(mainVolume));
         }
+
         public Builder proxyConfig(@Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig) {
-            this.proxyConfig = proxyConfig;
+            $.proxyConfig = proxyConfig;
             return this;
         }
-        public Builder proxyConfig(@Nullable AzureClusterControlPlaneProxyConfigGetArgs proxyConfig) {
-            this.proxyConfig = Codegen.ofNullable(proxyConfig);
-            return this;
+
+        public Builder proxyConfig(AzureClusterControlPlaneProxyConfigGetArgs proxyConfig) {
+            return proxyConfig(Output.of(proxyConfig));
         }
+
         public Builder replicaPlacements(@Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements) {
-            this.replicaPlacements = replicaPlacements;
+            $.replicaPlacements = replicaPlacements;
             return this;
         }
-        public Builder replicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacementGetArgs> replicaPlacements) {
-            this.replicaPlacements = Codegen.ofNullable(replicaPlacements);
-            return this;
+
+        public Builder replicaPlacements(List<AzureClusterControlPlaneReplicaPlacementGetArgs> replicaPlacements) {
+            return replicaPlacements(Output.of(replicaPlacements));
         }
+
         public Builder replicaPlacements(AzureClusterControlPlaneReplicaPlacementGetArgs... replicaPlacements) {
             return replicaPlacements(List.of(replicaPlacements));
         }
+
         public Builder rootVolume(@Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume) {
-            this.rootVolume = rootVolume;
+            $.rootVolume = rootVolume;
             return this;
         }
-        public Builder rootVolume(@Nullable AzureClusterControlPlaneRootVolumeGetArgs rootVolume) {
-            this.rootVolume = Codegen.ofNullable(rootVolume);
-            return this;
+
+        public Builder rootVolume(AzureClusterControlPlaneRootVolumeGetArgs rootVolume) {
+            return rootVolume(Output.of(rootVolume));
         }
+
         public Builder sshConfig(Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig) {
-            this.sshConfig = Objects.requireNonNull(sshConfig);
+            $.sshConfig = sshConfig;
             return this;
         }
+
         public Builder sshConfig(AzureClusterControlPlaneSshConfigGetArgs sshConfig) {
-            this.sshConfig = Output.of(Objects.requireNonNull(sshConfig));
-            return this;
+            return sshConfig(Output.of(sshConfig));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
+            return version(Output.of(version));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public AzureClusterControlPlaneGetArgs build() {
-            return new AzureClusterControlPlaneGetArgs(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public AzureClusterControlPlaneGetArgs build() {
+            $.sshConfig = Objects.requireNonNull($.sshConfig, "expected parameter 'sshConfig' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

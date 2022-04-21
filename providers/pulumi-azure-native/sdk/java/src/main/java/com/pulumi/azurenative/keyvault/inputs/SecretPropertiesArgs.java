@@ -6,9 +6,9 @@ package com.pulumi.azurenative.keyvault.inputs;
 import com.pulumi.azurenative.keyvault.inputs.SecretAttributesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<SecretAttributesArgs> attributes;
+    private @Nullable Output<SecretAttributesArgs> attributes;
 
-    public Output<SecretAttributesArgs> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<SecretAttributesArgs>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class SecretPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public SecretPropertiesArgs(
-        @Nullable Output<SecretAttributesArgs> attributes,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> value) {
-        this.attributes = attributes;
-        this.contentType = contentType;
-        this.value = value;
-    }
+    private SecretPropertiesArgs() {}
 
-    private SecretPropertiesArgs() {
-        this.attributes = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.value = Codegen.empty();
+    private SecretPropertiesArgs(SecretPropertiesArgs $) {
+        this.attributes = $.attributes;
+        this.contentType = $.contentType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecretAttributesArgs> attributes;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> value;
+        private SecretPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretPropertiesArgs();
         }
 
         public Builder(SecretPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.contentType = defaults.contentType;
-    	      this.value = defaults.value;
+            $ = new SecretPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<SecretAttributesArgs> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable SecretAttributesArgs attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(SecretAttributesArgs attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public SecretPropertiesArgs build() {
-            return new SecretPropertiesArgs(attributes, contentType, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public SecretPropertiesArgs build() {
+            return $;
         }
     }
+
 }

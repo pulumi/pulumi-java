@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HttpFaultDelayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fixedDelay")
-      private final @Nullable Output<DurationArgs> fixedDelay;
+    private @Nullable Output<DurationArgs> fixedDelay;
 
-    public Output<DurationArgs> fixedDelay() {
-        return this.fixedDelay == null ? Codegen.empty() : this.fixedDelay;
+    public Optional<Output<DurationArgs>> fixedDelay() {
+        return Optional.ofNullable(this.fixedDelay);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class HttpFaultDelayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Double> percentage;
+    private @Nullable Output<Double> percentage;
 
-    public Output<Double> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Double>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
-    public HttpFaultDelayArgs(
-        @Nullable Output<DurationArgs> fixedDelay,
-        @Nullable Output<Double> percentage) {
-        this.fixedDelay = fixedDelay;
-        this.percentage = percentage;
-    }
+    private HttpFaultDelayArgs() {}
 
-    private HttpFaultDelayArgs() {
-        this.fixedDelay = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private HttpFaultDelayArgs(HttpFaultDelayArgs $) {
+        this.fixedDelay = $.fixedDelay;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpFaultDelayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DurationArgs> fixedDelay;
-        private @Nullable Output<Double> percentage;
+        private HttpFaultDelayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpFaultDelayArgs();
         }
 
         public Builder(HttpFaultDelayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixedDelay = defaults.fixedDelay;
-    	      this.percentage = defaults.percentage;
+            $ = new HttpFaultDelayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fixedDelay(@Nullable Output<DurationArgs> fixedDelay) {
-            this.fixedDelay = fixedDelay;
+            $.fixedDelay = fixedDelay;
             return this;
         }
-        public Builder fixedDelay(@Nullable DurationArgs fixedDelay) {
-            this.fixedDelay = Codegen.ofNullable(fixedDelay);
-            return this;
+
+        public Builder fixedDelay(DurationArgs fixedDelay) {
+            return fixedDelay(Output.of(fixedDelay));
         }
+
         public Builder percentage(@Nullable Output<Double> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
-        }        public HttpFaultDelayArgs build() {
-            return new HttpFaultDelayArgs(fixedDelay, percentage);
+
+        public Builder percentage(Double percentage) {
+            return percentage(Output.of(percentage));
+        }
+
+        public HttpFaultDelayArgs build() {
+            return $;
         }
     }
+
 }

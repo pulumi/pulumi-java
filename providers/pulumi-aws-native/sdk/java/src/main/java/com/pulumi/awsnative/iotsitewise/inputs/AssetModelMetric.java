@@ -20,7 +20,7 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
@@ -31,7 +31,7 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="variables", required=true)
-      private final List<AssetModelExpressionVariable> variables;
+    private List<AssetModelExpressionVariable> variables;
 
     public List<AssetModelExpressionVariable> variables() {
         return this.variables;
@@ -42,67 +42,63 @@ public final class AssetModelMetric extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="window", required=true)
-      private final AssetModelMetricWindow window;
+    private AssetModelMetricWindow window;
 
     public AssetModelMetricWindow window() {
         return this.window;
     }
 
-    public AssetModelMetric(
-        String expression,
-        List<AssetModelExpressionVariable> variables,
-        AssetModelMetricWindow window) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.variables = Objects.requireNonNull(variables, "expected parameter 'variables' to be non-null");
-        this.window = Objects.requireNonNull(window, "expected parameter 'window' to be non-null");
-    }
+    private AssetModelMetric() {}
 
-    private AssetModelMetric() {
-        this.expression = null;
-        this.variables = List.of();
-        this.window = null;
+    private AssetModelMetric(AssetModelMetric $) {
+        this.expression = $.expression;
+        this.variables = $.variables;
+        this.window = $.window;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelMetric defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expression;
-        private List<AssetModelExpressionVariable> variables;
-        private AssetModelMetricWindow window;
+        private AssetModelMetric $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelMetric();
         }
 
         public Builder(AssetModelMetric defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.variables = defaults.variables;
-    	      this.window = defaults.window;
+            $ = new AssetModelMetric(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder variables(List<AssetModelExpressionVariable> variables) {
-            this.variables = Objects.requireNonNull(variables);
+            $.variables = variables;
             return this;
         }
+
         public Builder variables(AssetModelExpressionVariable... variables) {
             return variables(List.of(variables));
         }
+
         public Builder window(AssetModelMetricWindow window) {
-            this.window = Objects.requireNonNull(window);
+            $.window = window;
             return this;
-        }        public AssetModelMetric build() {
-            return new AssetModelMetric(expression, variables, window);
+        }
+
+        public AssetModelMetric build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.variables = Objects.requireNonNull($.variables, "expected parameter 'variables' to be non-null");
+            $.window = Objects.requireNonNull($.window, "expected parameter 'window' to be non-null");
+            return $;
         }
     }
+
 }

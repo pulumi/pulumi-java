@@ -17,45 +17,45 @@ public final class GetVPCArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetVPCArgs(String vpcId) {
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetVPCArgs() {}
 
-    private GetVPCArgs() {
-        this.vpcId = null;
+    private GetVPCArgs(GetVPCArgs $) {
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVPCArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vpcId;
+        private GetVPCArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVPCArgs();
         }
 
         public Builder(GetVPCArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetVPCArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetVPCArgs build() {
-            return new GetVPCArgs(vpcId);
+        }
+
+        public GetVPCArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

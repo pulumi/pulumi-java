@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class StaticIpConnectivityResponse extends com.pulumi.resources.Inv
 
     public static final StaticIpConnectivityResponse Empty = new StaticIpConnectivityResponse();
 
-    public StaticIpConnectivityResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(StaticIpConnectivityResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private StaticIpConnectivityResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(StaticIpConnectivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new StaticIpConnectivityResponse();
         }
         public StaticIpConnectivityResponse build() {
-            return new StaticIpConnectivityResponse();
+            return $;
         }
     }
+
 }

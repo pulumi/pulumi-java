@@ -7,9 +7,9 @@ import com.pulumi.azurenative.managedservices.inputs.PlanArgs;
 import com.pulumi.azurenative.managedservices.inputs.RegistrationDefinitionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="plan")
-      private final @Nullable Output<PlanArgs> plan;
+    private @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<PlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
+    private @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
 
-    public Output<RegistrationDefinitionPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<RegistrationDefinitionPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="registrationDefinitionId")
-      private final @Nullable Output<String> registrationDefinitionId;
+    private @Nullable Output<String> registrationDefinitionId;
 
-    public Output<String> registrationDefinitionId() {
-        return this.registrationDefinitionId == null ? Codegen.empty() : this.registrationDefinitionId;
+    public Optional<Output<String>> registrationDefinitionId() {
+        return Optional.ofNullable(this.registrationDefinitionId);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class RegistrationDefinitionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public RegistrationDefinitionArgs(
-        @Nullable Output<PlanArgs> plan,
-        @Nullable Output<RegistrationDefinitionPropertiesArgs> properties,
-        @Nullable Output<String> registrationDefinitionId,
-        Output<String> scope) {
-        this.plan = plan;
-        this.properties = properties;
-        this.registrationDefinitionId = registrationDefinitionId;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private RegistrationDefinitionArgs() {}
 
-    private RegistrationDefinitionArgs() {
-        this.plan = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.registrationDefinitionId = Codegen.empty();
-        this.scope = Codegen.empty();
+    private RegistrationDefinitionArgs(RegistrationDefinitionArgs $) {
+        this.plan = $.plan;
+        this.properties = $.properties;
+        this.registrationDefinitionId = $.registrationDefinitionId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PlanArgs> plan;
-        private @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
-        private @Nullable Output<String> registrationDefinitionId;
-        private Output<String> scope;
+        private RegistrationDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationDefinitionArgs();
         }
 
         public Builder(RegistrationDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.plan = defaults.plan;
-    	      this.properties = defaults.properties;
-    	      this.registrationDefinitionId = defaults.registrationDefinitionId;
-    	      this.scope = defaults.scope;
+            $ = new RegistrationDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder plan(@Nullable Output<PlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(PlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder properties(@Nullable Output<RegistrationDefinitionPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable RegistrationDefinitionPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(RegistrationDefinitionPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder registrationDefinitionId(@Nullable Output<String> registrationDefinitionId) {
-            this.registrationDefinitionId = registrationDefinitionId;
+            $.registrationDefinitionId = registrationDefinitionId;
             return this;
         }
-        public Builder registrationDefinitionId(@Nullable String registrationDefinitionId) {
-            this.registrationDefinitionId = Codegen.ofNullable(registrationDefinitionId);
-            return this;
+
+        public Builder registrationDefinitionId(String registrationDefinitionId) {
+            return registrationDefinitionId(Output.of(registrationDefinitionId));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public RegistrationDefinitionArgs build() {
-            return new RegistrationDefinitionArgs(plan, properties, registrationDefinitionId, scope);
+            return scope(Output.of(scope));
+        }
+
+        public RegistrationDefinitionArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

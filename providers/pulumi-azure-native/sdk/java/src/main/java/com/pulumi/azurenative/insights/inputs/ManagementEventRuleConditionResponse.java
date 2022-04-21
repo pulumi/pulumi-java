@@ -28,10 +28,10 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable ManagementEventAggregationConditionResponse aggregation;
+    private @Nullable ManagementEventAggregationConditionResponse aggregation;
 
     public Optional<ManagementEventAggregationConditionResponse> aggregation() {
-        return this.aggregation == null ? Optional.empty() : Optional.ofNullable(this.aggregation);
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="dataSource")
-      private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
+    private @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
-    public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource() {
-        return this.dataSource == null ? null : this.dataSource;
+    public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     /**
@@ -51,64 +51,57 @@ public final class ManagementEventRuleConditionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public ManagementEventRuleConditionResponse(
-        @Nullable ManagementEventAggregationConditionResponse aggregation,
-        @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        String odataType) {
-        this.aggregation = aggregation;
-        this.dataSource = dataSource;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private ManagementEventRuleConditionResponse() {}
 
-    private ManagementEventRuleConditionResponse() {
-        this.aggregation = null;
-        this.dataSource = null;
-        this.odataType = null;
+    private ManagementEventRuleConditionResponse(ManagementEventRuleConditionResponse $) {
+        this.aggregation = $.aggregation;
+        this.dataSource = $.dataSource;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementEventRuleConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ManagementEventAggregationConditionResponse aggregation;
-        private @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
-        private String odataType;
+        private ManagementEventRuleConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementEventRuleConditionResponse();
         }
 
         public Builder(ManagementEventRuleConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.dataSource = defaults.dataSource;
-    	      this.odataType = defaults.odataType;
+            $ = new ManagementEventRuleConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable ManagementEventAggregationConditionResponse aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
+
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public ManagementEventRuleConditionResponse build() {
-            return new ManagementEventRuleConditionResponse(aggregation, dataSource, odataType);
+        }
+
+        public ManagementEventRuleConditionResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

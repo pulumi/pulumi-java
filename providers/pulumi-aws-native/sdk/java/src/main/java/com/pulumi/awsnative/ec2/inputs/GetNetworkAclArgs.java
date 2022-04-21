@@ -13,45 +13,45 @@ public final class GetNetworkAclArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNetworkAclArgs Empty = new GetNetworkAclArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetNetworkAclArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetNetworkAclArgs() {}
 
-    private GetNetworkAclArgs() {
-        this.id = null;
+    private GetNetworkAclArgs(GetNetworkAclArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkAclArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetNetworkAclArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkAclArgs();
         }
 
         public Builder(GetNetworkAclArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetNetworkAclArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetNetworkAclArgs build() {
-            return new GetNetworkAclArgs(id);
+        }
+
+        public GetNetworkAclArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

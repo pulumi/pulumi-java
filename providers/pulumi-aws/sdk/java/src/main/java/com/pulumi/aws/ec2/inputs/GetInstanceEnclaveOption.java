@@ -17,45 +17,45 @@ public final class GetInstanceEnclaveOption extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetInstanceEnclaveOption(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetInstanceEnclaveOption() {}
 
-    private GetInstanceEnclaveOption() {
-        this.enabled = null;
+    private GetInstanceEnclaveOption(GetInstanceEnclaveOption $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceEnclaveOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetInstanceEnclaveOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceEnclaveOption();
         }
 
         public Builder(GetInstanceEnclaveOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetInstanceEnclaveOption(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetInstanceEnclaveOption build() {
-            return new GetInstanceEnclaveOption(enabled);
+        }
+
+        public GetInstanceEnclaveOption build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class GatewayCorsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowCredentials")
-      private final @Nullable Boolean allowCredentials;
+    private @Nullable Boolean allowCredentials;
 
     public Optional<Boolean> allowCredentials() {
-        return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
+        return Optional.ofNullable(this.allowCredentials);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GatewayCorsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowedHeaders")
-      private final @Nullable List<String> allowedHeaders;
+    private @Nullable List<String> allowedHeaders;
 
-    public List<String> allowedHeaders() {
-        return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
+    public Optional<List<String>> allowedHeaders() {
+        return Optional.ofNullable(this.allowedHeaders);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GatewayCorsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowedMethods")
-      private final @Nullable List<String> allowedMethods;
+    private @Nullable List<String> allowedMethods;
 
-    public List<String> allowedMethods() {
-        return this.allowedMethods == null ? List.of() : this.allowedMethods;
+    public Optional<List<String>> allowedMethods() {
+        return Optional.ofNullable(this.allowedMethods);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GatewayCorsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowedOrigins")
-      private final @Nullable List<String> allowedOrigins;
+    private @Nullable List<String> allowedOrigins;
 
-    public List<String> allowedOrigins() {
-        return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
+    public Optional<List<String>> allowedOrigins() {
+        return Optional.ofNullable(this.allowedOrigins);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GatewayCorsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="exposedHeaders")
-      private final @Nullable List<String> exposedHeaders;
+    private @Nullable List<String> exposedHeaders;
 
-    public List<String> exposedHeaders() {
-        return this.exposedHeaders == null ? List.of() : this.exposedHeaders;
+    public Optional<List<String>> exposedHeaders() {
+        return Optional.ofNullable(this.exposedHeaders);
     }
 
     /**
@@ -81,103 +81,90 @@ public final class GatewayCorsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxAge")
-      private final @Nullable Integer maxAge;
+    private @Nullable Integer maxAge;
 
     public Optional<Integer> maxAge() {
-        return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
+        return Optional.ofNullable(this.maxAge);
     }
 
-    public GatewayCorsPropertiesResponse(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> allowedHeaders,
-        @Nullable List<String> allowedMethods,
-        @Nullable List<String> allowedOrigins,
-        @Nullable List<String> exposedHeaders,
-        @Nullable Integer maxAge) {
-        this.allowCredentials = allowCredentials;
-        this.allowedHeaders = allowedHeaders;
-        this.allowedMethods = allowedMethods;
-        this.allowedOrigins = allowedOrigins;
-        this.exposedHeaders = exposedHeaders;
-        this.maxAge = maxAge;
-    }
+    private GatewayCorsPropertiesResponse() {}
 
-    private GatewayCorsPropertiesResponse() {
-        this.allowCredentials = null;
-        this.allowedHeaders = List.of();
-        this.allowedMethods = List.of();
-        this.allowedOrigins = List.of();
-        this.exposedHeaders = List.of();
-        this.maxAge = null;
+    private GatewayCorsPropertiesResponse(GatewayCorsPropertiesResponse $) {
+        this.allowCredentials = $.allowCredentials;
+        this.allowedHeaders = $.allowedHeaders;
+        this.allowedMethods = $.allowedMethods;
+        this.allowedOrigins = $.allowedOrigins;
+        this.exposedHeaders = $.exposedHeaders;
+        this.maxAge = $.maxAge;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayCorsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowCredentials;
-        private @Nullable List<String> allowedHeaders;
-        private @Nullable List<String> allowedMethods;
-        private @Nullable List<String> allowedOrigins;
-        private @Nullable List<String> exposedHeaders;
-        private @Nullable Integer maxAge;
+        private GatewayCorsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayCorsPropertiesResponse();
         }
 
         public Builder(GatewayCorsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCredentials = defaults.allowCredentials;
-    	      this.allowedHeaders = defaults.allowedHeaders;
-    	      this.allowedMethods = defaults.allowedMethods;
-    	      this.allowedOrigins = defaults.allowedOrigins;
-    	      this.exposedHeaders = defaults.exposedHeaders;
-    	      this.maxAge = defaults.maxAge;
+            $ = new GatewayCorsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
-            this.allowCredentials = allowCredentials;
+            $.allowCredentials = allowCredentials;
             return this;
         }
+
         public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
-            this.allowedHeaders = allowedHeaders;
+            $.allowedHeaders = allowedHeaders;
             return this;
         }
+
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
+
         public Builder allowedMethods(@Nullable List<String> allowedMethods) {
-            this.allowedMethods = allowedMethods;
+            $.allowedMethods = allowedMethods;
             return this;
         }
+
         public Builder allowedMethods(String... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
+
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = allowedOrigins;
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
+
         public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
-            this.exposedHeaders = exposedHeaders;
+            $.exposedHeaders = exposedHeaders;
             return this;
         }
+
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
+
         public Builder maxAge(@Nullable Integer maxAge) {
-            this.maxAge = maxAge;
+            $.maxAge = maxAge;
             return this;
-        }        public GatewayCorsPropertiesResponse build() {
-            return new GatewayCorsPropertiesResponse(allowCredentials, allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAge);
+        }
+
+        public GatewayCorsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastUpdatedAt", required=true)
-      private final String lastUpdatedAt;
+    private String lastUpdatedAt;
 
     public String lastUpdatedAt() {
         return this.lastUpdatedAt;
@@ -32,7 +32,7 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -43,7 +43,7 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
@@ -54,7 +54,7 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
@@ -65,7 +65,7 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -76,91 +76,80 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourceStatusResponse(
-        String lastUpdatedAt,
-        String message,
-        String reason,
-        String severity,
-        String status,
-        String type) {
-        this.lastUpdatedAt = Objects.requireNonNull(lastUpdatedAt, "expected parameter 'lastUpdatedAt' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceStatusResponse() {}
 
-    private ResourceStatusResponse() {
-        this.lastUpdatedAt = null;
-        this.message = null;
-        this.reason = null;
-        this.severity = null;
-        this.status = null;
-        this.type = null;
+    private ResourceStatusResponse(ResourceStatusResponse $) {
+        this.lastUpdatedAt = $.lastUpdatedAt;
+        this.message = $.message;
+        this.reason = $.reason;
+        this.severity = $.severity;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastUpdatedAt;
-        private String message;
-        private String reason;
-        private String severity;
-        private String status;
-        private String type;
+        private ResourceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceStatusResponse();
         }
 
         public Builder(ResourceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdatedAt = defaults.lastUpdatedAt;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.severity = defaults.severity;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new ResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdatedAt(String lastUpdatedAt) {
-            this.lastUpdatedAt = Objects.requireNonNull(lastUpdatedAt);
+            $.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourceStatusResponse build() {
-            return new ResourceStatusResponse(lastUpdatedAt, message, reason, severity, status, type);
+        }
+
+        public ResourceStatusResponse build() {
+            $.lastUpdatedAt = Objects.requireNonNull($.lastUpdatedAt, "expected parameter 'lastUpdatedAt' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

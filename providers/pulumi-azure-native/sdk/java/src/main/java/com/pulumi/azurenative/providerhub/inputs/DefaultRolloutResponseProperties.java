@@ -21,78 +21,70 @@ public final class DefaultRolloutResponseProperties extends com.pulumi.resources
     public static final DefaultRolloutResponseProperties Empty = new DefaultRolloutResponseProperties();
 
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="specification")
-      private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
+    private @Nullable DefaultRolloutPropertiesResponseSpecification specification;
 
     public Optional<DefaultRolloutPropertiesResponseSpecification> specification() {
-        return this.specification == null ? Optional.empty() : Optional.ofNullable(this.specification);
+        return Optional.ofNullable(this.specification);
     }
 
     @Import(name="status")
-      private final @Nullable DefaultRolloutPropertiesResponseStatus status;
+    private @Nullable DefaultRolloutPropertiesResponseStatus status;
 
     public Optional<DefaultRolloutPropertiesResponseStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public DefaultRolloutResponseProperties(
-        @Nullable String provisioningState,
-        @Nullable DefaultRolloutPropertiesResponseSpecification specification,
-        @Nullable DefaultRolloutPropertiesResponseStatus status) {
-        this.provisioningState = provisioningState;
-        this.specification = specification;
-        this.status = status;
-    }
+    private DefaultRolloutResponseProperties() {}
 
-    private DefaultRolloutResponseProperties() {
-        this.provisioningState = null;
-        this.specification = null;
-        this.status = null;
+    private DefaultRolloutResponseProperties(DefaultRolloutResponseProperties $) {
+        this.provisioningState = $.provisioningState;
+        this.specification = $.specification;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provisioningState;
-        private @Nullable DefaultRolloutPropertiesResponseSpecification specification;
-        private @Nullable DefaultRolloutPropertiesResponseStatus status;
+        private DefaultRolloutResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutResponseProperties();
         }
 
         public Builder(DefaultRolloutResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.specification = defaults.specification;
-    	      this.status = defaults.status;
+            $ = new DefaultRolloutResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder specification(@Nullable DefaultRolloutPropertiesResponseSpecification specification) {
-            this.specification = specification;
+            $.specification = specification;
             return this;
         }
+
         public Builder status(@Nullable DefaultRolloutPropertiesResponseStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public DefaultRolloutResponseProperties build() {
-            return new DefaultRolloutResponseProperties(provisioningState, specification, status);
+        }
+
+        public DefaultRolloutResponseProperties build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="baiduApiKey")
-      private final @Nullable String baiduApiKey;
+    private @Nullable String baiduApiKey;
 
     public Optional<String> baiduApiKey() {
-        return this.baiduApiKey == null ? Optional.empty() : Optional.ofNullable(this.baiduApiKey);
+        return Optional.ofNullable(this.baiduApiKey);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="baiduEndPoint")
-      private final @Nullable String baiduEndPoint;
+    private @Nullable String baiduEndPoint;
 
     public Optional<String> baiduEndPoint() {
-        return this.baiduEndPoint == null ? Optional.empty() : Optional.ofNullable(this.baiduEndPoint);
+        return Optional.ofNullable(this.baiduEndPoint);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class BaiduCredentialResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="baiduSecretKey")
-      private final @Nullable String baiduSecretKey;
+    private @Nullable String baiduSecretKey;
 
     public Optional<String> baiduSecretKey() {
-        return this.baiduSecretKey == null ? Optional.empty() : Optional.ofNullable(this.baiduSecretKey);
+        return Optional.ofNullable(this.baiduSecretKey);
     }
 
-    public BaiduCredentialResponse(
-        @Nullable String baiduApiKey,
-        @Nullable String baiduEndPoint,
-        @Nullable String baiduSecretKey) {
-        this.baiduApiKey = baiduApiKey;
-        this.baiduEndPoint = baiduEndPoint;
-        this.baiduSecretKey = baiduSecretKey;
-    }
+    private BaiduCredentialResponse() {}
 
-    private BaiduCredentialResponse() {
-        this.baiduApiKey = null;
-        this.baiduEndPoint = null;
-        this.baiduSecretKey = null;
+    private BaiduCredentialResponse(BaiduCredentialResponse $) {
+        this.baiduApiKey = $.baiduApiKey;
+        this.baiduEndPoint = $.baiduEndPoint;
+        this.baiduSecretKey = $.baiduSecretKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BaiduCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String baiduApiKey;
-        private @Nullable String baiduEndPoint;
-        private @Nullable String baiduSecretKey;
+        private BaiduCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BaiduCredentialResponse();
         }
 
         public Builder(BaiduCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baiduApiKey = defaults.baiduApiKey;
-    	      this.baiduEndPoint = defaults.baiduEndPoint;
-    	      this.baiduSecretKey = defaults.baiduSecretKey;
+            $ = new BaiduCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baiduApiKey(@Nullable String baiduApiKey) {
-            this.baiduApiKey = baiduApiKey;
+            $.baiduApiKey = baiduApiKey;
             return this;
         }
+
         public Builder baiduEndPoint(@Nullable String baiduEndPoint) {
-            this.baiduEndPoint = baiduEndPoint;
+            $.baiduEndPoint = baiduEndPoint;
             return this;
         }
+
         public Builder baiduSecretKey(@Nullable String baiduSecretKey) {
-            this.baiduSecretKey = baiduSecretKey;
+            $.baiduSecretKey = baiduSecretKey;
             return this;
-        }        public BaiduCredentialResponse build() {
-            return new BaiduCredentialResponse(baiduApiKey, baiduEndPoint, baiduSecretKey);
+        }
+
+        public BaiduCredentialResponse build() {
+            return $;
         }
     }
+
 }

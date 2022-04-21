@@ -17,7 +17,7 @@ public final class ListOperationalizationClusterKeysArgs extends com.pulumi.reso
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,55 +28,52 @@ public final class ListOperationalizationClusterKeysArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListOperationalizationClusterKeysArgs(
-        String clusterName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListOperationalizationClusterKeysArgs() {}
 
-    private ListOperationalizationClusterKeysArgs() {
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private ListOperationalizationClusterKeysArgs(ListOperationalizationClusterKeysArgs $) {
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListOperationalizationClusterKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String resourceGroupName;
+        private ListOperationalizationClusterKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListOperationalizationClusterKeysArgs();
         }
 
         public Builder(ListOperationalizationClusterKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListOperationalizationClusterKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListOperationalizationClusterKeysArgs build() {
-            return new ListOperationalizationClusterKeysArgs(clusterName, resourceGroupName);
+        }
+
+        public ListOperationalizationClusterKeysArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

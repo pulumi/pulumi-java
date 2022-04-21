@@ -21,7 +21,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
      * 
      */
     @Import(name="nextJobTime", required=true)
-      private final String nextJobTime;
+    private String nextJobTime;
 
     public String nextJobTime() {
         return this.nextJobTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
      * 
      */
     @Import(name="schedule", required=true)
-      private final String schedule;
+    private String schedule;
 
     public String schedule() {
         return this.schedule;
@@ -43,64 +43,59 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse extends com.pu
      * 
      */
     @Import(name="timeZone", required=true)
-      private final String timeZone;
+    private String timeZone;
 
     public String timeZone() {
         return this.timeZone;
     }
 
-    public GoogleCloudDatapipelinesV1ScheduleSpecResponse(
-        String nextJobTime,
-        String schedule,
-        String timeZone) {
-        this.nextJobTime = Objects.requireNonNull(nextJobTime, "expected parameter 'nextJobTime' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1ScheduleSpecResponse() {}
 
-    private GoogleCloudDatapipelinesV1ScheduleSpecResponse() {
-        this.nextJobTime = null;
-        this.schedule = null;
-        this.timeZone = null;
+    private GoogleCloudDatapipelinesV1ScheduleSpecResponse(GoogleCloudDatapipelinesV1ScheduleSpecResponse $) {
+        this.nextJobTime = $.nextJobTime;
+        this.schedule = $.schedule;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1ScheduleSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nextJobTime;
-        private String schedule;
-        private String timeZone;
+        private GoogleCloudDatapipelinesV1ScheduleSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1ScheduleSpecResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1ScheduleSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextJobTime = defaults.nextJobTime;
-    	      this.schedule = defaults.schedule;
-    	      this.timeZone = defaults.timeZone;
+            $ = new GoogleCloudDatapipelinesV1ScheduleSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nextJobTime(String nextJobTime) {
-            this.nextJobTime = Objects.requireNonNull(nextJobTime);
+            $.nextJobTime = nextJobTime;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
-        }        public GoogleCloudDatapipelinesV1ScheduleSpecResponse build() {
-            return new GoogleCloudDatapipelinesV1ScheduleSpecResponse(nextJobTime, schedule, timeZone);
+        }
+
+        public GoogleCloudDatapipelinesV1ScheduleSpecResponse build() {
+            $.nextJobTime = Objects.requireNonNull($.nextJobTime, "expected parameter 'nextJobTime' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

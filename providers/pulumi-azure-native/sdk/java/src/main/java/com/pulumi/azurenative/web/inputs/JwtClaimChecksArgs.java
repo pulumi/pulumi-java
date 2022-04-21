@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class JwtClaimChecksArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedClientApplications")
-      private final @Nullable Output<List<String>> allowedClientApplications;
+    private @Nullable Output<List<String>> allowedClientApplications;
 
-    public Output<List<String>> allowedClientApplications() {
-        return this.allowedClientApplications == null ? Codegen.empty() : this.allowedClientApplications;
+    public Optional<Output<List<String>>> allowedClientApplications() {
+        return Optional.ofNullable(this.allowedClientApplications);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class JwtClaimChecksArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowedGroups")
-      private final @Nullable Output<List<String>> allowedGroups;
+    private @Nullable Output<List<String>> allowedGroups;
 
-    public Output<List<String>> allowedGroups() {
-        return this.allowedGroups == null ? Codegen.empty() : this.allowedGroups;
+    public Optional<Output<List<String>>> allowedGroups() {
+        return Optional.ofNullable(this.allowedGroups);
     }
 
-    public JwtClaimChecksArgs(
-        @Nullable Output<List<String>> allowedClientApplications,
-        @Nullable Output<List<String>> allowedGroups) {
-        this.allowedClientApplications = allowedClientApplications;
-        this.allowedGroups = allowedGroups;
-    }
+    private JwtClaimChecksArgs() {}
 
-    private JwtClaimChecksArgs() {
-        this.allowedClientApplications = Codegen.empty();
-        this.allowedGroups = Codegen.empty();
+    private JwtClaimChecksArgs(JwtClaimChecksArgs $) {
+        this.allowedClientApplications = $.allowedClientApplications;
+        this.allowedGroups = $.allowedGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtClaimChecksArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedClientApplications;
-        private @Nullable Output<List<String>> allowedGroups;
+        private JwtClaimChecksArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtClaimChecksArgs();
         }
 
         public Builder(JwtClaimChecksArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedClientApplications = defaults.allowedClientApplications;
-    	      this.allowedGroups = defaults.allowedGroups;
+            $ = new JwtClaimChecksArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedClientApplications(@Nullable Output<List<String>> allowedClientApplications) {
-            this.allowedClientApplications = allowedClientApplications;
+            $.allowedClientApplications = allowedClientApplications;
             return this;
         }
-        public Builder allowedClientApplications(@Nullable List<String> allowedClientApplications) {
-            this.allowedClientApplications = Codegen.ofNullable(allowedClientApplications);
-            return this;
+
+        public Builder allowedClientApplications(List<String> allowedClientApplications) {
+            return allowedClientApplications(Output.of(allowedClientApplications));
         }
+
         public Builder allowedClientApplications(String... allowedClientApplications) {
             return allowedClientApplications(List.of(allowedClientApplications));
         }
+
         public Builder allowedGroups(@Nullable Output<List<String>> allowedGroups) {
-            this.allowedGroups = allowedGroups;
+            $.allowedGroups = allowedGroups;
             return this;
         }
-        public Builder allowedGroups(@Nullable List<String> allowedGroups) {
-            this.allowedGroups = Codegen.ofNullable(allowedGroups);
-            return this;
+
+        public Builder allowedGroups(List<String> allowedGroups) {
+            return allowedGroups(Output.of(allowedGroups));
         }
+
         public Builder allowedGroups(String... allowedGroups) {
             return allowedGroups(List.of(allowedGroups));
-        }        public JwtClaimChecksArgs build() {
-            return new JwtClaimChecksArgs(allowedClientApplications, allowedGroups);
+        }
+
+        public JwtClaimChecksArgs build() {
+            return $;
         }
     }
+
 }

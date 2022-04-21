@@ -5,9 +5,9 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clientApplication")
-      private final @Nullable Output<String> clientApplication;
+    private @Nullable Output<String> clientApplication;
 
-    public Output<String> clientApplication() {
-        return this.clientApplication == null ? Codegen.empty() : this.clientApplication;
+    public Optional<Output<String>> clientApplication() {
+        return Optional.ofNullable(this.clientApplication);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clusterApplication")
-      private final @Nullable Output<String> clusterApplication;
+    private @Nullable Output<String> clusterApplication;
 
-    public Output<String> clusterApplication() {
-        return this.clusterApplication == null ? Codegen.empty() : this.clusterApplication;
+    public Optional<Output<String>> clusterApplication() {
+        return Optional.ofNullable(this.clusterApplication);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AzureActiveDirectoryArgs(
-        @Nullable Output<String> clientApplication,
-        @Nullable Output<String> clusterApplication,
-        @Nullable Output<String> tenantId) {
-        this.clientApplication = clientApplication;
-        this.clusterApplication = clusterApplication;
-        this.tenantId = tenantId;
-    }
+    private AzureActiveDirectoryArgs() {}
 
-    private AzureActiveDirectoryArgs() {
-        this.clientApplication = Codegen.empty();
-        this.clusterApplication = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private AzureActiveDirectoryArgs(AzureActiveDirectoryArgs $) {
+        this.clientApplication = $.clientApplication;
+        this.clusterApplication = $.clusterApplication;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientApplication;
-        private @Nullable Output<String> clusterApplication;
-        private @Nullable Output<String> tenantId;
+        private AzureActiveDirectoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryArgs();
         }
 
         public Builder(AzureActiveDirectoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientApplication = defaults.clientApplication;
-    	      this.clusterApplication = defaults.clusterApplication;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AzureActiveDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientApplication(@Nullable Output<String> clientApplication) {
-            this.clientApplication = clientApplication;
+            $.clientApplication = clientApplication;
             return this;
         }
-        public Builder clientApplication(@Nullable String clientApplication) {
-            this.clientApplication = Codegen.ofNullable(clientApplication);
-            return this;
+
+        public Builder clientApplication(String clientApplication) {
+            return clientApplication(Output.of(clientApplication));
         }
+
         public Builder clusterApplication(@Nullable Output<String> clusterApplication) {
-            this.clusterApplication = clusterApplication;
+            $.clusterApplication = clusterApplication;
             return this;
         }
-        public Builder clusterApplication(@Nullable String clusterApplication) {
-            this.clusterApplication = Codegen.ofNullable(clusterApplication);
-            return this;
+
+        public Builder clusterApplication(String clusterApplication) {
+            return clusterApplication(Output.of(clusterApplication));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public AzureActiveDirectoryArgs build() {
-            return new AzureActiveDirectoryArgs(clientApplication, clusterApplication, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public AzureActiveDirectoryArgs build() {
+            return $;
         }
     }
+
 }

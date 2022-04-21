@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SnapshotCreateVolumePermissionState extends com.pulumi.resour
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SnapshotCreateVolumePermissionState extends com.pulumi.resour
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
-    public SnapshotCreateVolumePermissionState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> snapshotId) {
-        this.accountId = accountId;
-        this.snapshotId = snapshotId;
-    }
+    private SnapshotCreateVolumePermissionState() {}
 
-    private SnapshotCreateVolumePermissionState() {
-        this.accountId = Codegen.empty();
-        this.snapshotId = Codegen.empty();
+    private SnapshotCreateVolumePermissionState(SnapshotCreateVolumePermissionState $) {
+        this.accountId = $.accountId;
+        this.snapshotId = $.snapshotId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotCreateVolumePermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> snapshotId;
+        private SnapshotCreateVolumePermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotCreateVolumePermissionState();
         }
 
         public Builder(SnapshotCreateVolumePermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.snapshotId = defaults.snapshotId;
+            $ = new SnapshotCreateVolumePermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
-        }        public SnapshotCreateVolumePermissionState build() {
-            return new SnapshotCreateVolumePermissionState(accountId, snapshotId);
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
+        }
+
+        public SnapshotCreateVolumePermissionState build() {
+            return $;
         }
     }
+
 }

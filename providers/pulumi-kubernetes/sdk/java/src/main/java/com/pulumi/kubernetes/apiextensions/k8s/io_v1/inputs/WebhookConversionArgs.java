@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WebhookConversionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="clientConfig")
-      private final @Nullable Output<WebhookClientConfigArgs> clientConfig;
+    private @Nullable Output<WebhookClientConfigArgs> clientConfig;
 
-    public Output<WebhookClientConfigArgs> clientConfig() {
-        return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
+    public Optional<Output<WebhookClientConfigArgs>> clientConfig() {
+        return Optional.ofNullable(this.clientConfig);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class WebhookConversionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="conversionReviewVersions", required=true)
-      private final Output<List<String>> conversionReviewVersions;
+    private Output<List<String>> conversionReviewVersions;
 
     public Output<List<String>> conversionReviewVersions() {
         return this.conversionReviewVersions;
     }
 
-    public WebhookConversionArgs(
-        @Nullable Output<WebhookClientConfigArgs> clientConfig,
-        Output<List<String>> conversionReviewVersions) {
-        this.clientConfig = clientConfig;
-        this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions, "expected parameter 'conversionReviewVersions' to be non-null");
-    }
+    private WebhookConversionArgs() {}
 
-    private WebhookConversionArgs() {
-        this.clientConfig = Codegen.empty();
-        this.conversionReviewVersions = Codegen.empty();
+    private WebhookConversionArgs(WebhookConversionArgs $) {
+        this.clientConfig = $.clientConfig;
+        this.conversionReviewVersions = $.conversionReviewVersions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookConversionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebhookClientConfigArgs> clientConfig;
-        private Output<List<String>> conversionReviewVersions;
+        private WebhookConversionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookConversionArgs();
         }
 
         public Builder(WebhookConversionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientConfig = defaults.clientConfig;
-    	      this.conversionReviewVersions = defaults.conversionReviewVersions;
+            $ = new WebhookConversionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientConfig(@Nullable Output<WebhookClientConfigArgs> clientConfig) {
-            this.clientConfig = clientConfig;
+            $.clientConfig = clientConfig;
             return this;
         }
-        public Builder clientConfig(@Nullable WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Codegen.ofNullable(clientConfig);
-            return this;
+
+        public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
+            return clientConfig(Output.of(clientConfig));
         }
+
         public Builder conversionReviewVersions(Output<List<String>> conversionReviewVersions) {
-            this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
+            $.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
+
         public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
-            this.conversionReviewVersions = Output.of(Objects.requireNonNull(conversionReviewVersions));
-            return this;
+            return conversionReviewVersions(Output.of(conversionReviewVersions));
         }
+
         public Builder conversionReviewVersions(String... conversionReviewVersions) {
             return conversionReviewVersions(List.of(conversionReviewVersions));
-        }        public WebhookConversionArgs build() {
-            return new WebhookConversionArgs(clientConfig, conversionReviewVersions);
+        }
+
+        public WebhookConversionArgs build() {
+            $.conversionReviewVersions = Objects.requireNonNull($.conversionReviewVersions, "expected parameter 'conversionReviewVersions' to be non-null");
+            return $;
         }
     }
+
 }

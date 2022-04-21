@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class EntryBigqueryTableSpecTableSpecArgs extends com.pulumi.resour
     public static final EntryBigqueryTableSpecTableSpecArgs Empty = new EntryBigqueryTableSpecTableSpecArgs();
 
     @Import(name="groupedEntry")
-      private final @Nullable Output<String> groupedEntry;
+    private @Nullable Output<String> groupedEntry;
 
-    public Output<String> groupedEntry() {
-        return this.groupedEntry == null ? Codegen.empty() : this.groupedEntry;
+    public Optional<Output<String>> groupedEntry() {
+        return Optional.ofNullable(this.groupedEntry);
     }
 
-    public EntryBigqueryTableSpecTableSpecArgs(@Nullable Output<String> groupedEntry) {
-        this.groupedEntry = groupedEntry;
-    }
+    private EntryBigqueryTableSpecTableSpecArgs() {}
 
-    private EntryBigqueryTableSpecTableSpecArgs() {
-        this.groupedEntry = Codegen.empty();
+    private EntryBigqueryTableSpecTableSpecArgs(EntryBigqueryTableSpecTableSpecArgs $) {
+        this.groupedEntry = $.groupedEntry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryBigqueryTableSpecTableSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupedEntry;
+        private EntryBigqueryTableSpecTableSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryBigqueryTableSpecTableSpecArgs();
         }
 
         public Builder(EntryBigqueryTableSpecTableSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupedEntry = defaults.groupedEntry;
+            $ = new EntryBigqueryTableSpecTableSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupedEntry(@Nullable Output<String> groupedEntry) {
-            this.groupedEntry = groupedEntry;
+            $.groupedEntry = groupedEntry;
             return this;
         }
-        public Builder groupedEntry(@Nullable String groupedEntry) {
-            this.groupedEntry = Codegen.ofNullable(groupedEntry);
-            return this;
-        }        public EntryBigqueryTableSpecTableSpecArgs build() {
-            return new EntryBigqueryTableSpecTableSpecArgs(groupedEntry);
+
+        public Builder groupedEntry(String groupedEntry) {
+            return groupedEntry(Output.of(groupedEntry));
+        }
+
+        public EntryBigqueryTableSpecTableSpecArgs build() {
+            return $;
         }
     }
+
 }

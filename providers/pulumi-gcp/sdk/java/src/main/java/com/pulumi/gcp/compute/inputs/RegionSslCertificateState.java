@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<Integer> certificateId;
+    private @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<Integer>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -133,167 +133,138 @@ public final class RegionSslCertificateState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public RegionSslCertificateState(
-        @Nullable Output<String> certificate,
-        @Nullable Output<Integer> certificateId,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> privateKey,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> selfLink) {
-        this.certificate = certificate;
-        this.certificateId = certificateId;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.privateKey = privateKey;
-        this.project = project;
-        this.region = region;
-        this.selfLink = selfLink;
-    }
+    private RegionSslCertificateState() {}
 
-    private RegionSslCertificateState() {
-        this.certificate = Codegen.empty();
-        this.certificateId = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.privateKey = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private RegionSslCertificateState(RegionSslCertificateState $) {
+        this.certificate = $.certificate;
+        this.certificateId = $.certificateId;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.privateKey = $.privateKey;
+        this.project = $.project;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionSslCertificateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<Integer> certificateId;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> selfLink;
+        private RegionSslCertificateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionSslCertificateState();
         }
 
         public Builder(RegionSslCertificateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.certificateId = defaults.certificateId;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.privateKey = defaults.privateKey;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
+            $ = new RegionSslCertificateState(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(Integer certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public RegionSslCertificateState build() {
-            return new RegionSslCertificateState(certificate, certificateId, creationTimestamp, description, name, namePrefix, privateKey, project, region, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public RegionSslCertificateState build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dataflow_v1b3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.RuntimeEnvironmentArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<RuntimeEnvironmentArgs> environment;
+    private @Nullable Output<RuntimeEnvironmentArgs> environment;
 
-    public Output<RuntimeEnvironmentArgs> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<RuntimeEnvironmentArgs>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsPath", required=true)
-      private final Output<String> gcsPath;
+    private Output<String> gcsPath;
 
     public Output<String> gcsPath() {
         return this.gcsPath;
@@ -44,7 +44,7 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobName", required=true)
-      private final Output<String> jobName;
+    private Output<String> jobName;
 
     public Output<String> jobName() {
         return this.jobName;
@@ -55,10 +55,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -66,122 +66,107 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public TemplateArgs(
-        @Nullable Output<RuntimeEnvironmentArgs> environment,
-        Output<String> gcsPath,
-        Output<String> jobName,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> project) {
-        this.environment = environment;
-        this.gcsPath = Objects.requireNonNull(gcsPath, "expected parameter 'gcsPath' to be non-null");
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.location = location;
-        this.parameters = parameters;
-        this.project = project;
-    }
+    private TemplateArgs() {}
 
-    private TemplateArgs() {
-        this.environment = Codegen.empty();
-        this.gcsPath = Codegen.empty();
-        this.jobName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.project = Codegen.empty();
+    private TemplateArgs(TemplateArgs $) {
+        this.environment = $.environment;
+        this.gcsPath = $.gcsPath;
+        this.jobName = $.jobName;
+        this.location = $.location;
+        this.parameters = $.parameters;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuntimeEnvironmentArgs> environment;
-        private Output<String> gcsPath;
-        private Output<String> jobName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> project;
+        private TemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateArgs();
         }
 
         public Builder(TemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.gcsPath = defaults.gcsPath;
-    	      this.jobName = defaults.jobName;
-    	      this.location = defaults.location;
-    	      this.parameters = defaults.parameters;
-    	      this.project = defaults.project;
+            $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(@Nullable Output<RuntimeEnvironmentArgs> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable RuntimeEnvironmentArgs environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(RuntimeEnvironmentArgs environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder gcsPath(Output<String> gcsPath) {
-            this.gcsPath = Objects.requireNonNull(gcsPath);
+            $.gcsPath = gcsPath;
             return this;
         }
+
         public Builder gcsPath(String gcsPath) {
-            this.gcsPath = Output.of(Objects.requireNonNull(gcsPath));
-            return this;
+            return gcsPath(Output.of(gcsPath));
         }
+
         public Builder jobName(Output<String> jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Output.of(Objects.requireNonNull(jobName));
-            return this;
+            return jobName(Output.of(jobName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public TemplateArgs build() {
-            return new TemplateArgs(environment, gcsPath, jobName, location, parameters, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public TemplateArgs build() {
+            $.gcsPath = Objects.requireNonNull($.gcsPath, "expected parameter 'gcsPath' to be non-null");
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            return $;
         }
     }
+
 }

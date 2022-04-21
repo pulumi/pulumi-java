@@ -6,8 +6,8 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.inputs.WorkspaceKeyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CustomerManagedKeyDetailsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<WorkspaceKeyDetailsArgs> key;
+    private @Nullable Output<WorkspaceKeyDetailsArgs> key;
 
-    public Output<WorkspaceKeyDetailsArgs> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<WorkspaceKeyDetailsArgs>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public CustomerManagedKeyDetailsArgs(@Nullable Output<WorkspaceKeyDetailsArgs> key) {
-        this.key = key;
-    }
+    private CustomerManagedKeyDetailsArgs() {}
 
-    private CustomerManagedKeyDetailsArgs() {
-        this.key = Codegen.empty();
+    private CustomerManagedKeyDetailsArgs(CustomerManagedKeyDetailsArgs $) {
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerManagedKeyDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkspaceKeyDetailsArgs> key;
+        private CustomerManagedKeyDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerManagedKeyDetailsArgs();
         }
 
         public Builder(CustomerManagedKeyDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
+            $ = new CustomerManagedKeyDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<WorkspaceKeyDetailsArgs> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable WorkspaceKeyDetailsArgs key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public CustomerManagedKeyDetailsArgs build() {
-            return new CustomerManagedKeyDetailsArgs(key);
+
+        public Builder key(WorkspaceKeyDetailsArgs key) {
+            return key(Output.of(key));
+        }
+
+        public CustomerManagedKeyDetailsArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class FlowMarketoSourceProperties extends com.pulumi.resources.Invo
     public static final FlowMarketoSourceProperties Empty = new FlowMarketoSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowMarketoSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowMarketoSourceProperties() {}
 
-    private FlowMarketoSourceProperties() {
-        this.object = null;
+    private FlowMarketoSourceProperties(FlowMarketoSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowMarketoSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowMarketoSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowMarketoSourceProperties();
         }
 
         public Builder(FlowMarketoSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowMarketoSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowMarketoSourceProperties build() {
-            return new FlowMarketoSourceProperties(object);
+        }
+
+        public FlowMarketoSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

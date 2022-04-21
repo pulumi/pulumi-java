@@ -26,10 +26,10 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="baseImageTrigger")
-      private final @Nullable BaseImageTriggerResponse baseImageTrigger;
+    private @Nullable BaseImageTriggerResponse baseImageTrigger;
 
     public Optional<BaseImageTriggerResponse> baseImageTrigger() {
-        return this.baseImageTrigger == null ? Optional.empty() : Optional.ofNullable(this.baseImageTrigger);
+        return Optional.ofNullable(this.baseImageTrigger);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sourceTriggers")
-      private final @Nullable List<SourceTriggerResponse> sourceTriggers;
+    private @Nullable List<SourceTriggerResponse> sourceTriggers;
 
-    public List<SourceTriggerResponse> sourceTriggers() {
-        return this.sourceTriggers == null ? List.of() : this.sourceTriggers;
+    public Optional<List<SourceTriggerResponse>> sourceTriggers() {
+        return Optional.ofNullable(this.sourceTriggers);
     }
 
     /**
@@ -48,70 +48,64 @@ public final class TriggerPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timerTriggers")
-      private final @Nullable List<TimerTriggerResponse> timerTriggers;
+    private @Nullable List<TimerTriggerResponse> timerTriggers;
 
-    public List<TimerTriggerResponse> timerTriggers() {
-        return this.timerTriggers == null ? List.of() : this.timerTriggers;
+    public Optional<List<TimerTriggerResponse>> timerTriggers() {
+        return Optional.ofNullable(this.timerTriggers);
     }
 
-    public TriggerPropertiesResponse(
-        @Nullable BaseImageTriggerResponse baseImageTrigger,
-        @Nullable List<SourceTriggerResponse> sourceTriggers,
-        @Nullable List<TimerTriggerResponse> timerTriggers) {
-        this.baseImageTrigger = baseImageTrigger;
-        this.sourceTriggers = sourceTriggers;
-        this.timerTriggers = timerTriggers;
-    }
+    private TriggerPropertiesResponse() {}
 
-    private TriggerPropertiesResponse() {
-        this.baseImageTrigger = null;
-        this.sourceTriggers = List.of();
-        this.timerTriggers = List.of();
+    private TriggerPropertiesResponse(TriggerPropertiesResponse $) {
+        this.baseImageTrigger = $.baseImageTrigger;
+        this.sourceTriggers = $.sourceTriggers;
+        this.timerTriggers = $.timerTriggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BaseImageTriggerResponse baseImageTrigger;
-        private @Nullable List<SourceTriggerResponse> sourceTriggers;
-        private @Nullable List<TimerTriggerResponse> timerTriggers;
+        private TriggerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPropertiesResponse();
         }
 
         public Builder(TriggerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseImageTrigger = defaults.baseImageTrigger;
-    	      this.sourceTriggers = defaults.sourceTriggers;
-    	      this.timerTriggers = defaults.timerTriggers;
+            $ = new TriggerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseImageTrigger(@Nullable BaseImageTriggerResponse baseImageTrigger) {
-            this.baseImageTrigger = baseImageTrigger;
+            $.baseImageTrigger = baseImageTrigger;
             return this;
         }
+
         public Builder sourceTriggers(@Nullable List<SourceTriggerResponse> sourceTriggers) {
-            this.sourceTriggers = sourceTriggers;
+            $.sourceTriggers = sourceTriggers;
             return this;
         }
+
         public Builder sourceTriggers(SourceTriggerResponse... sourceTriggers) {
             return sourceTriggers(List.of(sourceTriggers));
         }
+
         public Builder timerTriggers(@Nullable List<TimerTriggerResponse> timerTriggers) {
-            this.timerTriggers = timerTriggers;
+            $.timerTriggers = timerTriggers;
             return this;
         }
+
         public Builder timerTriggers(TimerTriggerResponse... timerTriggers) {
             return timerTriggers(List.of(timerTriggers));
-        }        public TriggerPropertiesResponse build() {
-            return new TriggerPropertiesResponse(baseImageTrigger, sourceTriggers, timerTriggers);
+        }
+
+        public TriggerPropertiesResponse build() {
+            return $;
         }
     }
+
 }

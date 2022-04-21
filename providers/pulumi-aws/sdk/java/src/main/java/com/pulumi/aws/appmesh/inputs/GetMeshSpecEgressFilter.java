@@ -17,45 +17,45 @@ public final class GetMeshSpecEgressFilter extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetMeshSpecEgressFilter(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetMeshSpecEgressFilter() {}
 
-    private GetMeshSpecEgressFilter() {
-        this.type = null;
+    private GetMeshSpecEgressFilter(GetMeshSpecEgressFilter $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMeshSpecEgressFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private GetMeshSpecEgressFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMeshSpecEgressFilter();
         }
 
         public Builder(GetMeshSpecEgressFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GetMeshSpecEgressFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetMeshSpecEgressFilter build() {
-            return new GetMeshSpecEgressFilter(type);
+        }
+
+        public GetMeshSpecEgressFilter build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

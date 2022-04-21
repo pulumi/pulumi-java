@@ -15,209 +15,189 @@ public final class GetBrokerLdapServerMetadata extends com.pulumi.resources.Invo
     public static final GetBrokerLdapServerMetadata Empty = new GetBrokerLdapServerMetadata();
 
     @Import(name="hosts", required=true)
-      private final List<String> hosts;
+    private List<String> hosts;
 
     public List<String> hosts() {
         return this.hosts;
     }
 
     @Import(name="roleBase", required=true)
-      private final String roleBase;
+    private String roleBase;
 
     public String roleBase() {
         return this.roleBase;
     }
 
     @Import(name="roleName", required=true)
-      private final String roleName;
+    private String roleName;
 
     public String roleName() {
         return this.roleName;
     }
 
     @Import(name="roleSearchMatching", required=true)
-      private final String roleSearchMatching;
+    private String roleSearchMatching;
 
     public String roleSearchMatching() {
         return this.roleSearchMatching;
     }
 
     @Import(name="roleSearchSubtree", required=true)
-      private final Boolean roleSearchSubtree;
+    private Boolean roleSearchSubtree;
 
     public Boolean roleSearchSubtree() {
         return this.roleSearchSubtree;
     }
 
     @Import(name="serviceAccountPassword", required=true)
-      private final String serviceAccountPassword;
+    private String serviceAccountPassword;
 
     public String serviceAccountPassword() {
         return this.serviceAccountPassword;
     }
 
     @Import(name="serviceAccountUsername", required=true)
-      private final String serviceAccountUsername;
+    private String serviceAccountUsername;
 
     public String serviceAccountUsername() {
         return this.serviceAccountUsername;
     }
 
     @Import(name="userBase", required=true)
-      private final String userBase;
+    private String userBase;
 
     public String userBase() {
         return this.userBase;
     }
 
     @Import(name="userRoleName", required=true)
-      private final String userRoleName;
+    private String userRoleName;
 
     public String userRoleName() {
         return this.userRoleName;
     }
 
     @Import(name="userSearchMatching", required=true)
-      private final String userSearchMatching;
+    private String userSearchMatching;
 
     public String userSearchMatching() {
         return this.userSearchMatching;
     }
 
     @Import(name="userSearchSubtree", required=true)
-      private final Boolean userSearchSubtree;
+    private Boolean userSearchSubtree;
 
     public Boolean userSearchSubtree() {
         return this.userSearchSubtree;
     }
 
-    public GetBrokerLdapServerMetadata(
-        List<String> hosts,
-        String roleBase,
-        String roleName,
-        String roleSearchMatching,
-        Boolean roleSearchSubtree,
-        String serviceAccountPassword,
-        String serviceAccountUsername,
-        String userBase,
-        String userRoleName,
-        String userSearchMatching,
-        Boolean userSearchSubtree) {
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.roleBase = Objects.requireNonNull(roleBase, "expected parameter 'roleBase' to be non-null");
-        this.roleName = Objects.requireNonNull(roleName, "expected parameter 'roleName' to be non-null");
-        this.roleSearchMatching = Objects.requireNonNull(roleSearchMatching, "expected parameter 'roleSearchMatching' to be non-null");
-        this.roleSearchSubtree = Objects.requireNonNull(roleSearchSubtree, "expected parameter 'roleSearchSubtree' to be non-null");
-        this.serviceAccountPassword = Objects.requireNonNull(serviceAccountPassword, "expected parameter 'serviceAccountPassword' to be non-null");
-        this.serviceAccountUsername = Objects.requireNonNull(serviceAccountUsername, "expected parameter 'serviceAccountUsername' to be non-null");
-        this.userBase = Objects.requireNonNull(userBase, "expected parameter 'userBase' to be non-null");
-        this.userRoleName = Objects.requireNonNull(userRoleName, "expected parameter 'userRoleName' to be non-null");
-        this.userSearchMatching = Objects.requireNonNull(userSearchMatching, "expected parameter 'userSearchMatching' to be non-null");
-        this.userSearchSubtree = Objects.requireNonNull(userSearchSubtree, "expected parameter 'userSearchSubtree' to be non-null");
-    }
+    private GetBrokerLdapServerMetadata() {}
 
-    private GetBrokerLdapServerMetadata() {
-        this.hosts = List.of();
-        this.roleBase = null;
-        this.roleName = null;
-        this.roleSearchMatching = null;
-        this.roleSearchSubtree = null;
-        this.serviceAccountPassword = null;
-        this.serviceAccountUsername = null;
-        this.userBase = null;
-        this.userRoleName = null;
-        this.userSearchMatching = null;
-        this.userSearchSubtree = null;
+    private GetBrokerLdapServerMetadata(GetBrokerLdapServerMetadata $) {
+        this.hosts = $.hosts;
+        this.roleBase = $.roleBase;
+        this.roleName = $.roleName;
+        this.roleSearchMatching = $.roleSearchMatching;
+        this.roleSearchSubtree = $.roleSearchSubtree;
+        this.serviceAccountPassword = $.serviceAccountPassword;
+        this.serviceAccountUsername = $.serviceAccountUsername;
+        this.userBase = $.userBase;
+        this.userRoleName = $.userRoleName;
+        this.userSearchMatching = $.userSearchMatching;
+        this.userSearchSubtree = $.userSearchSubtree;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerLdapServerMetadata defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> hosts;
-        private String roleBase;
-        private String roleName;
-        private String roleSearchMatching;
-        private Boolean roleSearchSubtree;
-        private String serviceAccountPassword;
-        private String serviceAccountUsername;
-        private String userBase;
-        private String userRoleName;
-        private String userSearchMatching;
-        private Boolean userSearchSubtree;
+        private GetBrokerLdapServerMetadata $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerLdapServerMetadata();
         }
 
         public Builder(GetBrokerLdapServerMetadata defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
-    	      this.roleBase = defaults.roleBase;
-    	      this.roleName = defaults.roleName;
-    	      this.roleSearchMatching = defaults.roleSearchMatching;
-    	      this.roleSearchSubtree = defaults.roleSearchSubtree;
-    	      this.serviceAccountPassword = defaults.serviceAccountPassword;
-    	      this.serviceAccountUsername = defaults.serviceAccountUsername;
-    	      this.userBase = defaults.userBase;
-    	      this.userRoleName = defaults.userRoleName;
-    	      this.userSearchMatching = defaults.userSearchMatching;
-    	      this.userSearchSubtree = defaults.userSearchSubtree;
+            $ = new GetBrokerLdapServerMetadata(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(List<String> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder roleBase(String roleBase) {
-            this.roleBase = Objects.requireNonNull(roleBase);
+            $.roleBase = roleBase;
             return this;
         }
+
         public Builder roleName(String roleName) {
-            this.roleName = Objects.requireNonNull(roleName);
+            $.roleName = roleName;
             return this;
         }
+
         public Builder roleSearchMatching(String roleSearchMatching) {
-            this.roleSearchMatching = Objects.requireNonNull(roleSearchMatching);
+            $.roleSearchMatching = roleSearchMatching;
             return this;
         }
+
         public Builder roleSearchSubtree(Boolean roleSearchSubtree) {
-            this.roleSearchSubtree = Objects.requireNonNull(roleSearchSubtree);
+            $.roleSearchSubtree = roleSearchSubtree;
             return this;
         }
+
         public Builder serviceAccountPassword(String serviceAccountPassword) {
-            this.serviceAccountPassword = Objects.requireNonNull(serviceAccountPassword);
+            $.serviceAccountPassword = serviceAccountPassword;
             return this;
         }
+
         public Builder serviceAccountUsername(String serviceAccountUsername) {
-            this.serviceAccountUsername = Objects.requireNonNull(serviceAccountUsername);
+            $.serviceAccountUsername = serviceAccountUsername;
             return this;
         }
+
         public Builder userBase(String userBase) {
-            this.userBase = Objects.requireNonNull(userBase);
+            $.userBase = userBase;
             return this;
         }
+
         public Builder userRoleName(String userRoleName) {
-            this.userRoleName = Objects.requireNonNull(userRoleName);
+            $.userRoleName = userRoleName;
             return this;
         }
+
         public Builder userSearchMatching(String userSearchMatching) {
-            this.userSearchMatching = Objects.requireNonNull(userSearchMatching);
+            $.userSearchMatching = userSearchMatching;
             return this;
         }
+
         public Builder userSearchSubtree(Boolean userSearchSubtree) {
-            this.userSearchSubtree = Objects.requireNonNull(userSearchSubtree);
+            $.userSearchSubtree = userSearchSubtree;
             return this;
-        }        public GetBrokerLdapServerMetadata build() {
-            return new GetBrokerLdapServerMetadata(hosts, roleBase, roleName, roleSearchMatching, roleSearchSubtree, serviceAccountPassword, serviceAccountUsername, userBase, userRoleName, userSearchMatching, userSearchSubtree);
+        }
+
+        public GetBrokerLdapServerMetadata build() {
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.roleBase = Objects.requireNonNull($.roleBase, "expected parameter 'roleBase' to be non-null");
+            $.roleName = Objects.requireNonNull($.roleName, "expected parameter 'roleName' to be non-null");
+            $.roleSearchMatching = Objects.requireNonNull($.roleSearchMatching, "expected parameter 'roleSearchMatching' to be non-null");
+            $.roleSearchSubtree = Objects.requireNonNull($.roleSearchSubtree, "expected parameter 'roleSearchSubtree' to be non-null");
+            $.serviceAccountPassword = Objects.requireNonNull($.serviceAccountPassword, "expected parameter 'serviceAccountPassword' to be non-null");
+            $.serviceAccountUsername = Objects.requireNonNull($.serviceAccountUsername, "expected parameter 'serviceAccountUsername' to be non-null");
+            $.userBase = Objects.requireNonNull($.userBase, "expected parameter 'userBase' to be non-null");
+            $.userRoleName = Objects.requireNonNull($.userRoleName, "expected parameter 'userRoleName' to be non-null");
+            $.userSearchMatching = Objects.requireNonNull($.userSearchMatching, "expected parameter 'userSearchMatching' to be non-null");
+            $.userSearchSubtree = Objects.requireNonNull($.userSearchSubtree, "expected parameter 'userSearchSubtree' to be non-null");
+            return $;
         }
     }
+
 }

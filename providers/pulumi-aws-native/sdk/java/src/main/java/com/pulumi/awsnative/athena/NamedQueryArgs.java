@@ -5,9 +5,9 @@ package com.pulumi.awsnative.athena;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -31,10 +31,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryString", required=true)
-      private final Output<String> queryString;
+    private Output<String> queryString;
 
     public Output<String> queryString() {
         return this.queryString;
@@ -64,102 +64,90 @@ public final class NamedQueryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workGroup")
-      private final @Nullable Output<String> workGroup;
+    private @Nullable Output<String> workGroup;
 
-    public Output<String> workGroup() {
-        return this.workGroup == null ? Codegen.empty() : this.workGroup;
+    public Optional<Output<String>> workGroup() {
+        return Optional.ofNullable(this.workGroup);
     }
 
-    public NamedQueryArgs(
-        Output<String> database,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<String> queryString,
-        @Nullable Output<String> workGroup) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.queryString = Objects.requireNonNull(queryString, "expected parameter 'queryString' to be non-null");
-        this.workGroup = workGroup;
-    }
+    private NamedQueryArgs() {}
 
-    private NamedQueryArgs() {
-        this.database = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.queryString = Codegen.empty();
-        this.workGroup = Codegen.empty();
+    private NamedQueryArgs(NamedQueryArgs $) {
+        this.database = $.database;
+        this.description = $.description;
+        this.name = $.name;
+        this.queryString = $.queryString;
+        this.workGroup = $.workGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> database;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<String> queryString;
-        private @Nullable Output<String> workGroup;
+        private NamedQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedQueryArgs();
         }
 
         public Builder(NamedQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.queryString = defaults.queryString;
-    	      this.workGroup = defaults.workGroup;
+            $ = new NamedQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder queryString(Output<String> queryString) {
-            this.queryString = Objects.requireNonNull(queryString);
+            $.queryString = queryString;
             return this;
         }
+
         public Builder queryString(String queryString) {
-            this.queryString = Output.of(Objects.requireNonNull(queryString));
-            return this;
+            return queryString(Output.of(queryString));
         }
+
         public Builder workGroup(@Nullable Output<String> workGroup) {
-            this.workGroup = workGroup;
+            $.workGroup = workGroup;
             return this;
         }
-        public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = Codegen.ofNullable(workGroup);
-            return this;
-        }        public NamedQueryArgs build() {
-            return new NamedQueryArgs(database, description, name, queryString, workGroup);
+
+        public Builder workGroup(String workGroup) {
+            return workGroup(Output.of(workGroup));
+        }
+
+        public NamedQueryArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.queryString = Objects.requireNonNull($.queryString, "expected parameter 'queryString' to be non-null");
+            return $;
         }
     }
+
 }

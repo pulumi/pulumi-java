@@ -15,45 +15,44 @@ public final class ConfigDecodeConfig extends com.pulumi.resources.InvokeArgs {
     public static final ConfigDecodeConfig Empty = new ConfigDecodeConfig();
 
     @Import(name="unvalidatedJSON")
-      private final @Nullable String unvalidatedJSON;
+    private @Nullable String unvalidatedJSON;
 
     public Optional<String> unvalidatedJSON() {
-        return this.unvalidatedJSON == null ? Optional.empty() : Optional.ofNullable(this.unvalidatedJSON);
+        return Optional.ofNullable(this.unvalidatedJSON);
     }
 
-    public ConfigDecodeConfig(@Nullable String unvalidatedJSON) {
-        this.unvalidatedJSON = unvalidatedJSON;
-    }
+    private ConfigDecodeConfig() {}
 
-    private ConfigDecodeConfig() {
-        this.unvalidatedJSON = null;
+    private ConfigDecodeConfig(ConfigDecodeConfig $) {
+        this.unvalidatedJSON = $.unvalidatedJSON;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigDecodeConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String unvalidatedJSON;
+        private ConfigDecodeConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigDecodeConfig();
         }
 
         public Builder(ConfigDecodeConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unvalidatedJSON = defaults.unvalidatedJSON;
+            $ = new ConfigDecodeConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
-            this.unvalidatedJSON = unvalidatedJSON;
+            $.unvalidatedJSON = unvalidatedJSON;
             return this;
-        }        public ConfigDecodeConfig build() {
-            return new ConfigDecodeConfig(unvalidatedJSON);
+        }
+
+        public ConfigDecodeConfig build() {
+            return $;
         }
     }
+
 }

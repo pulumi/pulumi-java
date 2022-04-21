@@ -21,45 +21,45 @@ public final class ExportDeliveryInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="destination", required=true)
-      private final ExportDeliveryDestinationResponse destination;
+    private ExportDeliveryDestinationResponse destination;
 
     public ExportDeliveryDestinationResponse destination() {
         return this.destination;
     }
 
-    public ExportDeliveryInfoResponse(ExportDeliveryDestinationResponse destination) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-    }
+    private ExportDeliveryInfoResponse() {}
 
-    private ExportDeliveryInfoResponse() {
-        this.destination = null;
+    private ExportDeliveryInfoResponse(ExportDeliveryInfoResponse $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDeliveryInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExportDeliveryDestinationResponse destination;
+        private ExportDeliveryInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDeliveryInfoResponse();
         }
 
         public Builder(ExportDeliveryInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new ExportDeliveryInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(ExportDeliveryDestinationResponse destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
-        }        public ExportDeliveryInfoResponse build() {
-            return new ExportDeliveryInfoResponse(destination);
+        }
+
+        public ExportDeliveryInfoResponse build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

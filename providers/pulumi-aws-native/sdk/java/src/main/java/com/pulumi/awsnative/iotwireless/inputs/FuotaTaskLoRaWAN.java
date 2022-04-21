@@ -19,7 +19,7 @@ public final class FuotaTaskLoRaWAN extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rfRegion", required=true)
-      private final String rfRegion;
+    private String rfRegion;
 
     public String rfRegion() {
         return this.rfRegion;
@@ -30,55 +30,51 @@ public final class FuotaTaskLoRaWAN extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public FuotaTaskLoRaWAN(
-        String rfRegion,
-        @Nullable String startTime) {
-        this.rfRegion = Objects.requireNonNull(rfRegion, "expected parameter 'rfRegion' to be non-null");
-        this.startTime = startTime;
-    }
+    private FuotaTaskLoRaWAN() {}
 
-    private FuotaTaskLoRaWAN() {
-        this.rfRegion = null;
-        this.startTime = null;
+    private FuotaTaskLoRaWAN(FuotaTaskLoRaWAN $) {
+        this.rfRegion = $.rfRegion;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FuotaTaskLoRaWAN defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String rfRegion;
-        private @Nullable String startTime;
+        private FuotaTaskLoRaWAN $;
 
         public Builder() {
-    	      // Empty
+            $ = new FuotaTaskLoRaWAN();
         }
 
         public Builder(FuotaTaskLoRaWAN defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rfRegion = defaults.rfRegion;
-    	      this.startTime = defaults.startTime;
+            $ = new FuotaTaskLoRaWAN(Objects.requireNonNull(defaults));
         }
 
         public Builder rfRegion(String rfRegion) {
-            this.rfRegion = Objects.requireNonNull(rfRegion);
+            $.rfRegion = rfRegion;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public FuotaTaskLoRaWAN build() {
-            return new FuotaTaskLoRaWAN(rfRegion, startTime);
+        }
+
+        public FuotaTaskLoRaWAN build() {
+            $.rfRegion = Objects.requireNonNull($.rfRegion, "expected parameter 'rfRegion' to be non-null");
+            return $;
         }
     }
+
 }

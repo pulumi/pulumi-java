@@ -21,7 +21,7 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hours", required=true)
-      private final Integer hours;
+    private Integer hours;
 
     public Integer hours() {
         return this.hours;
@@ -32,7 +32,7 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minutes", required=true)
-      private final Integer minutes;
+    private Integer minutes;
 
     public Integer minutes() {
         return this.minutes;
@@ -43,64 +43,59 @@ public final class TimeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="seconds", required=true)
-      private final Integer seconds;
+    private Integer seconds;
 
     public Integer seconds() {
         return this.seconds;
     }
 
-    public TimeResponse(
-        Integer hours,
-        Integer minutes,
-        Integer seconds) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private TimeResponse() {}
 
-    private TimeResponse() {
-        this.hours = null;
-        this.minutes = null;
-        this.seconds = null;
+    private TimeResponse(TimeResponse $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer hours;
-        private Integer minutes;
-        private Integer seconds;
+        private TimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeResponse();
         }
 
         public Builder(TimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.seconds = defaults.seconds;
+            $ = new TimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Integer hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public TimeResponse build() {
-            return new TimeResponse(hours, minutes, seconds);
+        }
+
+        public TimeResponse build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

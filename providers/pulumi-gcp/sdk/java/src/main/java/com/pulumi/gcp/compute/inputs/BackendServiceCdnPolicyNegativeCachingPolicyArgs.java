@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyArgs extends com.
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<Integer> code;
+    private @Nullable Output<Integer> code;
 
-    public Output<Integer> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<Integer>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyArgs extends com.
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<Integer> ttl;
+    private @Nullable Output<Integer> ttl;
 
-    public Output<Integer> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<Integer>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public BackendServiceCdnPolicyNegativeCachingPolicyArgs(
-        @Nullable Output<Integer> code,
-        @Nullable Output<Integer> ttl) {
-        this.code = code;
-        this.ttl = ttl;
-    }
+    private BackendServiceCdnPolicyNegativeCachingPolicyArgs() {}
 
-    private BackendServiceCdnPolicyNegativeCachingPolicyArgs() {
-        this.code = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private BackendServiceCdnPolicyNegativeCachingPolicyArgs(BackendServiceCdnPolicyNegativeCachingPolicyArgs $) {
+        this.code = $.code;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceCdnPolicyNegativeCachingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> code;
-        private @Nullable Output<Integer> ttl;
+        private BackendServiceCdnPolicyNegativeCachingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceCdnPolicyNegativeCachingPolicyArgs();
         }
 
         public Builder(BackendServiceCdnPolicyNegativeCachingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.ttl = defaults.ttl;
+            $ = new BackendServiceCdnPolicyNegativeCachingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<Integer> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable Integer code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(Integer code) {
+            return code(Output.of(code));
         }
+
         public Builder ttl(@Nullable Output<Integer> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public BackendServiceCdnPolicyNegativeCachingPolicyArgs build() {
-            return new BackendServiceCdnPolicyNegativeCachingPolicyArgs(code, ttl);
+
+        public Builder ttl(Integer ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public BackendServiceCdnPolicyNegativeCachingPolicyArgs build() {
+            return $;
         }
     }
+
 }

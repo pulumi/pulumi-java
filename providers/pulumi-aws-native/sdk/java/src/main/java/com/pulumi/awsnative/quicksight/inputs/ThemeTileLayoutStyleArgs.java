@@ -7,8 +7,8 @@ import com.pulumi.awsnative.quicksight.inputs.ThemeGutterStyleArgs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeMarginStyleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ThemeTileLayoutStyleArgs extends com.pulumi.resources.Resourc
     public static final ThemeTileLayoutStyleArgs Empty = new ThemeTileLayoutStyleArgs();
 
     @Import(name="gutter")
-      private final @Nullable Output<ThemeGutterStyleArgs> gutter;
+    private @Nullable Output<ThemeGutterStyleArgs> gutter;
 
-    public Output<ThemeGutterStyleArgs> gutter() {
-        return this.gutter == null ? Codegen.empty() : this.gutter;
+    public Optional<Output<ThemeGutterStyleArgs>> gutter() {
+        return Optional.ofNullable(this.gutter);
     }
 
     @Import(name="margin")
-      private final @Nullable Output<ThemeMarginStyleArgs> margin;
+    private @Nullable Output<ThemeMarginStyleArgs> margin;
 
-    public Output<ThemeMarginStyleArgs> margin() {
-        return this.margin == null ? Codegen.empty() : this.margin;
+    public Optional<Output<ThemeMarginStyleArgs>> margin() {
+        return Optional.ofNullable(this.margin);
     }
 
-    public ThemeTileLayoutStyleArgs(
-        @Nullable Output<ThemeGutterStyleArgs> gutter,
-        @Nullable Output<ThemeMarginStyleArgs> margin) {
-        this.gutter = gutter;
-        this.margin = margin;
-    }
+    private ThemeTileLayoutStyleArgs() {}
 
-    private ThemeTileLayoutStyleArgs() {
-        this.gutter = Codegen.empty();
-        this.margin = Codegen.empty();
+    private ThemeTileLayoutStyleArgs(ThemeTileLayoutStyleArgs $) {
+        this.gutter = $.gutter;
+        this.margin = $.margin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeTileLayoutStyleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ThemeGutterStyleArgs> gutter;
-        private @Nullable Output<ThemeMarginStyleArgs> margin;
+        private ThemeTileLayoutStyleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeTileLayoutStyleArgs();
         }
 
         public Builder(ThemeTileLayoutStyleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gutter = defaults.gutter;
-    	      this.margin = defaults.margin;
+            $ = new ThemeTileLayoutStyleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gutter(@Nullable Output<ThemeGutterStyleArgs> gutter) {
-            this.gutter = gutter;
+            $.gutter = gutter;
             return this;
         }
-        public Builder gutter(@Nullable ThemeGutterStyleArgs gutter) {
-            this.gutter = Codegen.ofNullable(gutter);
-            return this;
+
+        public Builder gutter(ThemeGutterStyleArgs gutter) {
+            return gutter(Output.of(gutter));
         }
+
         public Builder margin(@Nullable Output<ThemeMarginStyleArgs> margin) {
-            this.margin = margin;
+            $.margin = margin;
             return this;
         }
-        public Builder margin(@Nullable ThemeMarginStyleArgs margin) {
-            this.margin = Codegen.ofNullable(margin);
-            return this;
-        }        public ThemeTileLayoutStyleArgs build() {
-            return new ThemeTileLayoutStyleArgs(gutter, margin);
+
+        public Builder margin(ThemeMarginStyleArgs margin) {
+            return margin(Output.of(margin));
+        }
+
+        public ThemeTileLayoutStyleArgs build() {
+            return $;
         }
     }
+
 }

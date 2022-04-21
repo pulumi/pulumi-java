@@ -21,45 +21,45 @@ public final class ShieldedInstanceIntegrityPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="updateAutoLearnPolicy", required=true)
-      private final Boolean updateAutoLearnPolicy;
+    private Boolean updateAutoLearnPolicy;
 
     public Boolean updateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
     }
 
-    public ShieldedInstanceIntegrityPolicyResponse(Boolean updateAutoLearnPolicy) {
-        this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy, "expected parameter 'updateAutoLearnPolicy' to be non-null");
-    }
+    private ShieldedInstanceIntegrityPolicyResponse() {}
 
-    private ShieldedInstanceIntegrityPolicyResponse() {
-        this.updateAutoLearnPolicy = null;
+    private ShieldedInstanceIntegrityPolicyResponse(ShieldedInstanceIntegrityPolicyResponse $) {
+        this.updateAutoLearnPolicy = $.updateAutoLearnPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShieldedInstanceIntegrityPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean updateAutoLearnPolicy;
+        private ShieldedInstanceIntegrityPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShieldedInstanceIntegrityPolicyResponse();
         }
 
         public Builder(ShieldedInstanceIntegrityPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateAutoLearnPolicy = defaults.updateAutoLearnPolicy;
+            $ = new ShieldedInstanceIntegrityPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder updateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
-            this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
+            $.updateAutoLearnPolicy = updateAutoLearnPolicy;
             return this;
-        }        public ShieldedInstanceIntegrityPolicyResponse build() {
-            return new ShieldedInstanceIntegrityPolicyResponse(updateAutoLearnPolicy);
+        }
+
+        public ShieldedInstanceIntegrityPolicyResponse build() {
+            $.updateAutoLearnPolicy = Objects.requireNonNull($.updateAutoLearnPolicy, "expected parameter 'updateAutoLearnPolicy' to be non-null");
+            return $;
         }
     }
+
 }

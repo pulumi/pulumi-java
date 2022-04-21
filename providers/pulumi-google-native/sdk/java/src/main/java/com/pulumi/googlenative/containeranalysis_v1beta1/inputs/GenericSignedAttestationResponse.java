@@ -23,7 +23,7 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
@@ -34,7 +34,7 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="serializedPayload", required=true)
-      private final String serializedPayload;
+    private String serializedPayload;
 
     public String serializedPayload() {
         return this.serializedPayload;
@@ -45,67 +45,63 @@ public final class GenericSignedAttestationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="signatures", required=true)
-      private final List<SignatureResponse> signatures;
+    private List<SignatureResponse> signatures;
 
     public List<SignatureResponse> signatures() {
         return this.signatures;
     }
 
-    public GenericSignedAttestationResponse(
-        String contentType,
-        String serializedPayload,
-        List<SignatureResponse> signatures) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.serializedPayload = Objects.requireNonNull(serializedPayload, "expected parameter 'serializedPayload' to be non-null");
-        this.signatures = Objects.requireNonNull(signatures, "expected parameter 'signatures' to be non-null");
-    }
+    private GenericSignedAttestationResponse() {}
 
-    private GenericSignedAttestationResponse() {
-        this.contentType = null;
-        this.serializedPayload = null;
-        this.signatures = List.of();
+    private GenericSignedAttestationResponse(GenericSignedAttestationResponse $) {
+        this.contentType = $.contentType;
+        this.serializedPayload = $.serializedPayload;
+        this.signatures = $.signatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericSignedAttestationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentType;
-        private String serializedPayload;
-        private List<SignatureResponse> signatures;
+        private GenericSignedAttestationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericSignedAttestationResponse();
         }
 
         public Builder(GenericSignedAttestationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.serializedPayload = defaults.serializedPayload;
-    	      this.signatures = defaults.signatures;
+            $ = new GenericSignedAttestationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder serializedPayload(String serializedPayload) {
-            this.serializedPayload = Objects.requireNonNull(serializedPayload);
+            $.serializedPayload = serializedPayload;
             return this;
         }
+
         public Builder signatures(List<SignatureResponse> signatures) {
-            this.signatures = Objects.requireNonNull(signatures);
+            $.signatures = signatures;
             return this;
         }
+
         public Builder signatures(SignatureResponse... signatures) {
             return signatures(List.of(signatures));
-        }        public GenericSignedAttestationResponse build() {
-            return new GenericSignedAttestationResponse(contentType, serializedPayload, signatures);
+        }
+
+        public GenericSignedAttestationResponse build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.serializedPayload = Objects.requireNonNull($.serializedPayload, "expected parameter 'serializedPayload' to be non-null");
+            $.signatures = Objects.requireNonNull($.signatures, "expected parameter 'signatures' to be non-null");
+            return $;
         }
     }
+
 }

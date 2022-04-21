@@ -6,11 +6,11 @@ package com.pulumi.azurenative.containerinstance.inputs;
 import com.pulumi.azurenative.containerinstance.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ContainerGroupIdentityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class ContainerGroupIdentityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
+    private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ContainerGroupIdentityArgs(
-        @Nullable Output<ResourceIdentityType> type,
-        @Nullable Output<Map<String,Object>> userAssignedIdentities) {
-        this.type = type;
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ContainerGroupIdentityArgs() {}
 
-    private ContainerGroupIdentityArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private ContainerGroupIdentityArgs(ContainerGroupIdentityArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
-        private @Nullable Output<Map<String,Object>> userAssignedIdentities;
+        private ContainerGroupIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupIdentityArgs();
         }
 
         public Builder(ContainerGroupIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ContainerGroupIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public ContainerGroupIdentityArgs build() {
-            return new ContainerGroupIdentityArgs(type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public ContainerGroupIdentityArgs build() {
+            return $;
         }
     }
+
 }

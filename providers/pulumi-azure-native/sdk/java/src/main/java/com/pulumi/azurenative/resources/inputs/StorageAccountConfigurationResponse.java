@@ -23,10 +23,10 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="storageAccountKey")
-      private final @Nullable String storageAccountKey;
+    private @Nullable String storageAccountKey;
 
     public Optional<String> storageAccountKey() {
-        return this.storageAccountKey == null ? Optional.empty() : Optional.ofNullable(this.storageAccountKey);
+        return Optional.ofNullable(this.storageAccountKey);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StorageAccountConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable String storageAccountName;
+    private @Nullable String storageAccountName;
 
     public Optional<String> storageAccountName() {
-        return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);
+        return Optional.ofNullable(this.storageAccountName);
     }
 
-    public StorageAccountConfigurationResponse(
-        @Nullable String storageAccountKey,
-        @Nullable String storageAccountName) {
-        this.storageAccountKey = storageAccountKey;
-        this.storageAccountName = storageAccountName;
-    }
+    private StorageAccountConfigurationResponse() {}
 
-    private StorageAccountConfigurationResponse() {
-        this.storageAccountKey = null;
-        this.storageAccountName = null;
+    private StorageAccountConfigurationResponse(StorageAccountConfigurationResponse $) {
+        this.storageAccountKey = $.storageAccountKey;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String storageAccountKey;
-        private @Nullable String storageAccountName;
+        private StorageAccountConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountConfigurationResponse();
         }
 
         public Builder(StorageAccountConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageAccountKey = defaults.storageAccountKey;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new StorageAccountConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = storageAccountKey;
+            $.storageAccountKey = storageAccountKey;
             return this;
         }
+
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public StorageAccountConfigurationResponse build() {
-            return new StorageAccountConfigurationResponse(storageAccountKey, storageAccountName);
+        }
+
+        public StorageAccountConfigurationResponse build() {
+            return $;
         }
     }
+
 }

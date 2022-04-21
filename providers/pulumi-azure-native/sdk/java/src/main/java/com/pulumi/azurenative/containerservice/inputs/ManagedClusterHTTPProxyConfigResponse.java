@@ -24,10 +24,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="httpProxy")
-      private final @Nullable String httpProxy;
+    private @Nullable String httpProxy;
 
     public Optional<String> httpProxy() {
-        return this.httpProxy == null ? Optional.empty() : Optional.ofNullable(this.httpProxy);
+        return Optional.ofNullable(this.httpProxy);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="httpsProxy")
-      private final @Nullable String httpsProxy;
+    private @Nullable String httpsProxy;
 
     public Optional<String> httpsProxy() {
-        return this.httpsProxy == null ? Optional.empty() : Optional.ofNullable(this.httpsProxy);
+        return Optional.ofNullable(this.httpsProxy);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="noProxy")
-      private final @Nullable List<String> noProxy;
+    private @Nullable List<String> noProxy;
 
-    public List<String> noProxy() {
-        return this.noProxy == null ? List.of() : this.noProxy;
+    public Optional<List<String>> noProxy() {
+        return Optional.ofNullable(this.noProxy);
     }
 
     /**
@@ -57,76 +57,66 @@ public final class ManagedClusterHTTPProxyConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="trustedCa")
-      private final @Nullable String trustedCa;
+    private @Nullable String trustedCa;
 
     public Optional<String> trustedCa() {
-        return this.trustedCa == null ? Optional.empty() : Optional.ofNullable(this.trustedCa);
+        return Optional.ofNullable(this.trustedCa);
     }
 
-    public ManagedClusterHTTPProxyConfigResponse(
-        @Nullable String httpProxy,
-        @Nullable String httpsProxy,
-        @Nullable List<String> noProxy,
-        @Nullable String trustedCa) {
-        this.httpProxy = httpProxy;
-        this.httpsProxy = httpsProxy;
-        this.noProxy = noProxy;
-        this.trustedCa = trustedCa;
-    }
+    private ManagedClusterHTTPProxyConfigResponse() {}
 
-    private ManagedClusterHTTPProxyConfigResponse() {
-        this.httpProxy = null;
-        this.httpsProxy = null;
-        this.noProxy = List.of();
-        this.trustedCa = null;
+    private ManagedClusterHTTPProxyConfigResponse(ManagedClusterHTTPProxyConfigResponse $) {
+        this.httpProxy = $.httpProxy;
+        this.httpsProxy = $.httpsProxy;
+        this.noProxy = $.noProxy;
+        this.trustedCa = $.trustedCa;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterHTTPProxyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String httpProxy;
-        private @Nullable String httpsProxy;
-        private @Nullable List<String> noProxy;
-        private @Nullable String trustedCa;
+        private ManagedClusterHTTPProxyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterHTTPProxyConfigResponse();
         }
 
         public Builder(ManagedClusterHTTPProxyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpProxy = defaults.httpProxy;
-    	      this.httpsProxy = defaults.httpsProxy;
-    	      this.noProxy = defaults.noProxy;
-    	      this.trustedCa = defaults.trustedCa;
+            $ = new ManagedClusterHTTPProxyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpProxy(@Nullable String httpProxy) {
-            this.httpProxy = httpProxy;
+            $.httpProxy = httpProxy;
             return this;
         }
+
         public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = httpsProxy;
+            $.httpsProxy = httpsProxy;
             return this;
         }
+
         public Builder noProxy(@Nullable List<String> noProxy) {
-            this.noProxy = noProxy;
+            $.noProxy = noProxy;
             return this;
         }
+
         public Builder noProxy(String... noProxy) {
             return noProxy(List.of(noProxy));
         }
+
         public Builder trustedCa(@Nullable String trustedCa) {
-            this.trustedCa = trustedCa;
+            $.trustedCa = trustedCa;
             return this;
-        }        public ManagedClusterHTTPProxyConfigResponse build() {
-            return new ManagedClusterHTTPProxyConfigResponse(httpProxy, httpsProxy, noProxy, trustedCa);
+        }
+
+        public ManagedClusterHTTPProxyConfigResponse build() {
+            return $;
         }
     }
+
 }

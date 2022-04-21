@@ -25,7 +25,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -36,10 +36,10 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="labelReferenceInStreamingPolicy")
-      private final @Nullable String labelReferenceInStreamingPolicy;
+    private @Nullable String labelReferenceInStreamingPolicy;
 
     public Optional<String> labelReferenceInStreamingPolicy() {
-        return this.labelReferenceInStreamingPolicy == null ? Optional.empty() : Optional.ofNullable(this.labelReferenceInStreamingPolicy);
+        return Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -58,7 +58,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="tracks", required=true)
-      private final List<TrackSelectionResponse> tracks;
+    private List<TrackSelectionResponse> tracks;
 
     public List<TrackSelectionResponse> tracks() {
         return this.tracks;
@@ -69,7 +69,7 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -80,94 +80,82 @@ public final class StreamingLocatorContentKeyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public StreamingLocatorContentKeyResponse(
-        String id,
-        @Nullable String labelReferenceInStreamingPolicy,
-        String policyName,
-        List<TrackSelectionResponse> tracks,
-        String type,
-        @Nullable String value) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.tracks = Objects.requireNonNull(tracks, "expected parameter 'tracks' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value;
-    }
+    private StreamingLocatorContentKeyResponse() {}
 
-    private StreamingLocatorContentKeyResponse() {
-        this.id = null;
-        this.labelReferenceInStreamingPolicy = null;
-        this.policyName = null;
-        this.tracks = List.of();
-        this.type = null;
-        this.value = null;
+    private StreamingLocatorContentKeyResponse(StreamingLocatorContentKeyResponse $) {
+        this.id = $.id;
+        this.labelReferenceInStreamingPolicy = $.labelReferenceInStreamingPolicy;
+        this.policyName = $.policyName;
+        this.tracks = $.tracks;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingLocatorContentKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String labelReferenceInStreamingPolicy;
-        private String policyName;
-        private List<TrackSelectionResponse> tracks;
-        private String type;
-        private @Nullable String value;
+        private StreamingLocatorContentKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingLocatorContentKeyResponse();
         }
 
         public Builder(StreamingLocatorContentKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.labelReferenceInStreamingPolicy = defaults.labelReferenceInStreamingPolicy;
-    	      this.policyName = defaults.policyName;
-    	      this.tracks = defaults.tracks;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new StreamingLocatorContentKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
-            this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
+            $.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder tracks(List<TrackSelectionResponse> tracks) {
-            this.tracks = Objects.requireNonNull(tracks);
+            $.tracks = tracks;
             return this;
         }
+
         public Builder tracks(TrackSelectionResponse... tracks) {
             return tracks(List.of(tracks));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public StreamingLocatorContentKeyResponse build() {
-            return new StreamingLocatorContentKeyResponse(id, labelReferenceInStreamingPolicy, policyName, tracks, type, value);
+        }
+
+        public StreamingLocatorContentKeyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.tracks = Objects.requireNonNull($.tracks, "expected parameter 'tracks' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,10 +10,10 @@ import com.pulumi.awsnative.timestream.inputs.ScheduledQueryTagArgs;
 import com.pulumi.awsnative.timestream.inputs.ScheduledQueryTargetConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,233 +22,210 @@ public final class ScheduledQueryArgs extends com.pulumi.resources.ResourceArgs 
     public static final ScheduledQueryArgs Empty = new ScheduledQueryArgs();
 
     @Import(name="clientToken")
-      private final @Nullable Output<String> clientToken;
+    private @Nullable Output<String> clientToken;
 
-    public Output<String> clientToken() {
-        return this.clientToken == null ? Codegen.empty() : this.clientToken;
+    public Optional<Output<String>> clientToken() {
+        return Optional.ofNullable(this.clientToken);
     }
 
     @Import(name="errorReportConfiguration", required=true)
-      private final Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
+    private Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
 
     public Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration() {
         return this.errorReportConfiguration;
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="notificationConfiguration", required=true)
-      private final Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
+    private Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
 
     public Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration() {
         return this.notificationConfiguration;
     }
 
     @Import(name="queryString", required=true)
-      private final Output<String> queryString;
+    private Output<String> queryString;
 
     public Output<String> queryString() {
         return this.queryString;
     }
 
     @Import(name="scheduleConfiguration", required=true)
-      private final Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
+    private Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
 
     public Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration() {
         return this.scheduleConfiguration;
     }
 
     @Import(name="scheduledQueryExecutionRoleArn", required=true)
-      private final Output<String> scheduledQueryExecutionRoleArn;
+    private Output<String> scheduledQueryExecutionRoleArn;
 
     public Output<String> scheduledQueryExecutionRoleArn() {
         return this.scheduledQueryExecutionRoleArn;
     }
 
     @Import(name="scheduledQueryName")
-      private final @Nullable Output<String> scheduledQueryName;
+    private @Nullable Output<String> scheduledQueryName;
 
-    public Output<String> scheduledQueryName() {
-        return this.scheduledQueryName == null ? Codegen.empty() : this.scheduledQueryName;
+    public Optional<Output<String>> scheduledQueryName() {
+        return Optional.ofNullable(this.scheduledQueryName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ScheduledQueryTagArgs>> tags;
+    private @Nullable Output<List<ScheduledQueryTagArgs>> tags;
 
-    public Output<List<ScheduledQueryTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ScheduledQueryTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="targetConfiguration")
-      private final @Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
+    private @Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
 
-    public Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration() {
-        return this.targetConfiguration == null ? Codegen.empty() : this.targetConfiguration;
+    public Optional<Output<ScheduledQueryTargetConfigurationArgs>> targetConfiguration() {
+        return Optional.ofNullable(this.targetConfiguration);
     }
 
-    public ScheduledQueryArgs(
-        @Nullable Output<String> clientToken,
-        Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration,
-        @Nullable Output<String> kmsKeyId,
-        Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration,
-        Output<String> queryString,
-        Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration,
-        Output<String> scheduledQueryExecutionRoleArn,
-        @Nullable Output<String> scheduledQueryName,
-        @Nullable Output<List<ScheduledQueryTagArgs>> tags,
-        @Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration) {
-        this.clientToken = clientToken;
-        this.errorReportConfiguration = Objects.requireNonNull(errorReportConfiguration, "expected parameter 'errorReportConfiguration' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-        this.notificationConfiguration = Objects.requireNonNull(notificationConfiguration, "expected parameter 'notificationConfiguration' to be non-null");
-        this.queryString = Objects.requireNonNull(queryString, "expected parameter 'queryString' to be non-null");
-        this.scheduleConfiguration = Objects.requireNonNull(scheduleConfiguration, "expected parameter 'scheduleConfiguration' to be non-null");
-        this.scheduledQueryExecutionRoleArn = Objects.requireNonNull(scheduledQueryExecutionRoleArn, "expected parameter 'scheduledQueryExecutionRoleArn' to be non-null");
-        this.scheduledQueryName = scheduledQueryName;
-        this.tags = tags;
-        this.targetConfiguration = targetConfiguration;
-    }
+    private ScheduledQueryArgs() {}
 
-    private ScheduledQueryArgs() {
-        this.clientToken = Codegen.empty();
-        this.errorReportConfiguration = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.notificationConfiguration = Codegen.empty();
-        this.queryString = Codegen.empty();
-        this.scheduleConfiguration = Codegen.empty();
-        this.scheduledQueryExecutionRoleArn = Codegen.empty();
-        this.scheduledQueryName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetConfiguration = Codegen.empty();
+    private ScheduledQueryArgs(ScheduledQueryArgs $) {
+        this.clientToken = $.clientToken;
+        this.errorReportConfiguration = $.errorReportConfiguration;
+        this.kmsKeyId = $.kmsKeyId;
+        this.notificationConfiguration = $.notificationConfiguration;
+        this.queryString = $.queryString;
+        this.scheduleConfiguration = $.scheduleConfiguration;
+        this.scheduledQueryExecutionRoleArn = $.scheduledQueryExecutionRoleArn;
+        this.scheduledQueryName = $.scheduledQueryName;
+        this.tags = $.tags;
+        this.targetConfiguration = $.targetConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientToken;
-        private Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration;
-        private @Nullable Output<String> kmsKeyId;
-        private Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration;
-        private Output<String> queryString;
-        private Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration;
-        private Output<String> scheduledQueryExecutionRoleArn;
-        private @Nullable Output<String> scheduledQueryName;
-        private @Nullable Output<List<ScheduledQueryTagArgs>> tags;
-        private @Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration;
+        private ScheduledQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQueryArgs();
         }
 
         public Builder(ScheduledQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientToken = defaults.clientToken;
-    	      this.errorReportConfiguration = defaults.errorReportConfiguration;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.notificationConfiguration = defaults.notificationConfiguration;
-    	      this.queryString = defaults.queryString;
-    	      this.scheduleConfiguration = defaults.scheduleConfiguration;
-    	      this.scheduledQueryExecutionRoleArn = defaults.scheduledQueryExecutionRoleArn;
-    	      this.scheduledQueryName = defaults.scheduledQueryName;
-    	      this.tags = defaults.tags;
-    	      this.targetConfiguration = defaults.targetConfiguration;
+            $ = new ScheduledQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientToken(@Nullable Output<String> clientToken) {
-            this.clientToken = clientToken;
+            $.clientToken = clientToken;
             return this;
         }
-        public Builder clientToken(@Nullable String clientToken) {
-            this.clientToken = Codegen.ofNullable(clientToken);
-            return this;
+
+        public Builder clientToken(String clientToken) {
+            return clientToken(Output.of(clientToken));
         }
+
         public Builder errorReportConfiguration(Output<ScheduledQueryErrorReportConfigurationArgs> errorReportConfiguration) {
-            this.errorReportConfiguration = Objects.requireNonNull(errorReportConfiguration);
+            $.errorReportConfiguration = errorReportConfiguration;
             return this;
         }
+
         public Builder errorReportConfiguration(ScheduledQueryErrorReportConfigurationArgs errorReportConfiguration) {
-            this.errorReportConfiguration = Output.of(Objects.requireNonNull(errorReportConfiguration));
-            return this;
+            return errorReportConfiguration(Output.of(errorReportConfiguration));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder notificationConfiguration(Output<ScheduledQueryNotificationConfigurationArgs> notificationConfiguration) {
-            this.notificationConfiguration = Objects.requireNonNull(notificationConfiguration);
+            $.notificationConfiguration = notificationConfiguration;
             return this;
         }
+
         public Builder notificationConfiguration(ScheduledQueryNotificationConfigurationArgs notificationConfiguration) {
-            this.notificationConfiguration = Output.of(Objects.requireNonNull(notificationConfiguration));
-            return this;
+            return notificationConfiguration(Output.of(notificationConfiguration));
         }
+
         public Builder queryString(Output<String> queryString) {
-            this.queryString = Objects.requireNonNull(queryString);
+            $.queryString = queryString;
             return this;
         }
+
         public Builder queryString(String queryString) {
-            this.queryString = Output.of(Objects.requireNonNull(queryString));
-            return this;
+            return queryString(Output.of(queryString));
         }
+
         public Builder scheduleConfiguration(Output<ScheduledQueryScheduleConfigurationArgs> scheduleConfiguration) {
-            this.scheduleConfiguration = Objects.requireNonNull(scheduleConfiguration);
+            $.scheduleConfiguration = scheduleConfiguration;
             return this;
         }
+
         public Builder scheduleConfiguration(ScheduledQueryScheduleConfigurationArgs scheduleConfiguration) {
-            this.scheduleConfiguration = Output.of(Objects.requireNonNull(scheduleConfiguration));
-            return this;
+            return scheduleConfiguration(Output.of(scheduleConfiguration));
         }
+
         public Builder scheduledQueryExecutionRoleArn(Output<String> scheduledQueryExecutionRoleArn) {
-            this.scheduledQueryExecutionRoleArn = Objects.requireNonNull(scheduledQueryExecutionRoleArn);
+            $.scheduledQueryExecutionRoleArn = scheduledQueryExecutionRoleArn;
             return this;
         }
+
         public Builder scheduledQueryExecutionRoleArn(String scheduledQueryExecutionRoleArn) {
-            this.scheduledQueryExecutionRoleArn = Output.of(Objects.requireNonNull(scheduledQueryExecutionRoleArn));
-            return this;
+            return scheduledQueryExecutionRoleArn(Output.of(scheduledQueryExecutionRoleArn));
         }
+
         public Builder scheduledQueryName(@Nullable Output<String> scheduledQueryName) {
-            this.scheduledQueryName = scheduledQueryName;
+            $.scheduledQueryName = scheduledQueryName;
             return this;
         }
-        public Builder scheduledQueryName(@Nullable String scheduledQueryName) {
-            this.scheduledQueryName = Codegen.ofNullable(scheduledQueryName);
-            return this;
+
+        public Builder scheduledQueryName(String scheduledQueryName) {
+            return scheduledQueryName(Output.of(scheduledQueryName));
         }
+
         public Builder tags(@Nullable Output<List<ScheduledQueryTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ScheduledQueryTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ScheduledQueryTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ScheduledQueryTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder targetConfiguration(@Nullable Output<ScheduledQueryTargetConfigurationArgs> targetConfiguration) {
-            this.targetConfiguration = targetConfiguration;
+            $.targetConfiguration = targetConfiguration;
             return this;
         }
-        public Builder targetConfiguration(@Nullable ScheduledQueryTargetConfigurationArgs targetConfiguration) {
-            this.targetConfiguration = Codegen.ofNullable(targetConfiguration);
-            return this;
-        }        public ScheduledQueryArgs build() {
-            return new ScheduledQueryArgs(clientToken, errorReportConfiguration, kmsKeyId, notificationConfiguration, queryString, scheduleConfiguration, scheduledQueryExecutionRoleArn, scheduledQueryName, tags, targetConfiguration);
+
+        public Builder targetConfiguration(ScheduledQueryTargetConfigurationArgs targetConfiguration) {
+            return targetConfiguration(Output.of(targetConfiguration));
+        }
+
+        public ScheduledQueryArgs build() {
+            $.errorReportConfiguration = Objects.requireNonNull($.errorReportConfiguration, "expected parameter 'errorReportConfiguration' to be non-null");
+            $.notificationConfiguration = Objects.requireNonNull($.notificationConfiguration, "expected parameter 'notificationConfiguration' to be non-null");
+            $.queryString = Objects.requireNonNull($.queryString, "expected parameter 'queryString' to be non-null");
+            $.scheduleConfiguration = Objects.requireNonNull($.scheduleConfiguration, "expected parameter 'scheduleConfiguration' to be non-null");
+            $.scheduledQueryExecutionRoleArn = Objects.requireNonNull($.scheduledQueryExecutionRoleArn, "expected parameter 'scheduledQueryExecutionRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,62 +16,57 @@ public final class SchedulingPolicyShareAttributes extends com.pulumi.resources.
     public static final SchedulingPolicyShareAttributes Empty = new SchedulingPolicyShareAttributes();
 
     @Import(name="shareIdentifier")
-      private final @Nullable String shareIdentifier;
+    private @Nullable String shareIdentifier;
 
     public Optional<String> shareIdentifier() {
-        return this.shareIdentifier == null ? Optional.empty() : Optional.ofNullable(this.shareIdentifier);
+        return Optional.ofNullable(this.shareIdentifier);
     }
 
     @Import(name="weightFactor")
-      private final @Nullable Double weightFactor;
+    private @Nullable Double weightFactor;
 
     public Optional<Double> weightFactor() {
-        return this.weightFactor == null ? Optional.empty() : Optional.ofNullable(this.weightFactor);
+        return Optional.ofNullable(this.weightFactor);
     }
 
-    public SchedulingPolicyShareAttributes(
-        @Nullable String shareIdentifier,
-        @Nullable Double weightFactor) {
-        this.shareIdentifier = shareIdentifier;
-        this.weightFactor = weightFactor;
-    }
+    private SchedulingPolicyShareAttributes() {}
 
-    private SchedulingPolicyShareAttributes() {
-        this.shareIdentifier = null;
-        this.weightFactor = null;
+    private SchedulingPolicyShareAttributes(SchedulingPolicyShareAttributes $) {
+        this.shareIdentifier = $.shareIdentifier;
+        this.weightFactor = $.weightFactor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingPolicyShareAttributes defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String shareIdentifier;
-        private @Nullable Double weightFactor;
+        private SchedulingPolicyShareAttributes $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingPolicyShareAttributes();
         }
 
         public Builder(SchedulingPolicyShareAttributes defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shareIdentifier = defaults.shareIdentifier;
-    	      this.weightFactor = defaults.weightFactor;
+            $ = new SchedulingPolicyShareAttributes(Objects.requireNonNull(defaults));
         }
 
         public Builder shareIdentifier(@Nullable String shareIdentifier) {
-            this.shareIdentifier = shareIdentifier;
+            $.shareIdentifier = shareIdentifier;
             return this;
         }
+
         public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = weightFactor;
+            $.weightFactor = weightFactor;
             return this;
-        }        public SchedulingPolicyShareAttributes build() {
-            return new SchedulingPolicyShareAttributes(shareIdentifier, weightFactor);
+        }
+
+        public SchedulingPolicyShareAttributes build() {
+            return $;
         }
     }
+
 }

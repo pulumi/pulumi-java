@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appsync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DomainNameApiAssociationArgs extends com.pulumi.resources.Res
     public static final DomainNameApiAssociationArgs Empty = new DomainNameApiAssociationArgs();
 
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
     }
 
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
     }
 
-    public DomainNameApiAssociationArgs(
-        Output<String> apiId,
-        Output<String> domainName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-    }
+    private DomainNameApiAssociationArgs() {}
 
-    private DomainNameApiAssociationArgs() {
-        this.apiId = Codegen.empty();
-        this.domainName = Codegen.empty();
+    private DomainNameApiAssociationArgs(DomainNameApiAssociationArgs $) {
+        this.apiId = $.apiId;
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameApiAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private Output<String> domainName;
+        private DomainNameApiAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameApiAssociationArgs();
         }
 
         public Builder(DomainNameApiAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.domainName = defaults.domainName;
+            $ = new DomainNameApiAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
-        }        public DomainNameApiAssociationArgs build() {
-            return new DomainNameApiAssociationArgs(apiId, domainName);
+            return domainName(Output.of(domainName));
+        }
+
+        public DomainNameApiAssociationArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

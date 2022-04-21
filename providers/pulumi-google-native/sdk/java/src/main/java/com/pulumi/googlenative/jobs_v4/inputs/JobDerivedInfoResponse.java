@@ -23,7 +23,7 @@ public final class JobDerivedInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="jobCategories", required=true)
-      private final List<String> jobCategories;
+    private List<String> jobCategories;
 
     public List<String> jobCategories() {
         return this.jobCategories;
@@ -34,61 +34,60 @@ public final class JobDerivedInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="locations", required=true)
-      private final List<LocationResponse> locations;
+    private List<LocationResponse> locations;
 
     public List<LocationResponse> locations() {
         return this.locations;
     }
 
-    public JobDerivedInfoResponse(
-        List<String> jobCategories,
-        List<LocationResponse> locations) {
-        this.jobCategories = Objects.requireNonNull(jobCategories, "expected parameter 'jobCategories' to be non-null");
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-    }
+    private JobDerivedInfoResponse() {}
 
-    private JobDerivedInfoResponse() {
-        this.jobCategories = List.of();
-        this.locations = List.of();
+    private JobDerivedInfoResponse(JobDerivedInfoResponse $) {
+        this.jobCategories = $.jobCategories;
+        this.locations = $.locations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDerivedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> jobCategories;
-        private List<LocationResponse> locations;
+        private JobDerivedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDerivedInfoResponse();
         }
 
         public Builder(JobDerivedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobCategories = defaults.jobCategories;
-    	      this.locations = defaults.locations;
+            $ = new JobDerivedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobCategories(List<String> jobCategories) {
-            this.jobCategories = Objects.requireNonNull(jobCategories);
+            $.jobCategories = jobCategories;
             return this;
         }
+
         public Builder jobCategories(String... jobCategories) {
             return jobCategories(List.of(jobCategories));
         }
+
         public Builder locations(List<LocationResponse> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(LocationResponse... locations) {
             return locations(List.of(locations));
-        }        public JobDerivedInfoResponse build() {
-            return new JobDerivedInfoResponse(jobCategories, locations);
+        }
+
+        public JobDerivedInfoResponse build() {
+            $.jobCategories = Objects.requireNonNull($.jobCategories, "expected parameter 'jobCategories' to be non-null");
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            return $;
         }
     }
+
 }

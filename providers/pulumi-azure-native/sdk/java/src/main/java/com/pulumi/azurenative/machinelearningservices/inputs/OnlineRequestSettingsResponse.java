@@ -24,10 +24,10 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxConcurrentRequestsPerInstance")
-      private final @Nullable Integer maxConcurrentRequestsPerInstance;
+    private @Nullable Integer maxConcurrentRequestsPerInstance;
 
     public Optional<Integer> maxConcurrentRequestsPerInstance() {
-        return this.maxConcurrentRequestsPerInstance == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
+        return Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxQueueWait")
-      private final @Nullable String maxQueueWait;
+    private @Nullable String maxQueueWait;
 
     public Optional<String> maxQueueWait() {
-        return this.maxQueueWait == null ? Optional.empty() : Optional.ofNullable(this.maxQueueWait);
+        return Optional.ofNullable(this.maxQueueWait);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class OnlineRequestSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="requestTimeout")
-      private final @Nullable String requestTimeout;
+    private @Nullable String requestTimeout;
 
     public Optional<String> requestTimeout() {
-        return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
+        return Optional.ofNullable(this.requestTimeout);
     }
 
-    public OnlineRequestSettingsResponse(
-        @Nullable Integer maxConcurrentRequestsPerInstance,
-        @Nullable String maxQueueWait,
-        @Nullable String requestTimeout) {
-        this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
-        this.maxQueueWait = maxQueueWait;
-        this.requestTimeout = requestTimeout;
-    }
+    private OnlineRequestSettingsResponse() {}
 
-    private OnlineRequestSettingsResponse() {
-        this.maxConcurrentRequestsPerInstance = null;
-        this.maxQueueWait = null;
-        this.requestTimeout = null;
+    private OnlineRequestSettingsResponse(OnlineRequestSettingsResponse $) {
+        this.maxConcurrentRequestsPerInstance = $.maxConcurrentRequestsPerInstance;
+        this.maxQueueWait = $.maxQueueWait;
+        this.requestTimeout = $.requestTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnlineRequestSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxConcurrentRequestsPerInstance;
-        private @Nullable String maxQueueWait;
-        private @Nullable String requestTimeout;
+        private OnlineRequestSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnlineRequestSettingsResponse();
         }
 
         public Builder(OnlineRequestSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConcurrentRequestsPerInstance = defaults.maxConcurrentRequestsPerInstance;
-    	      this.maxQueueWait = defaults.maxQueueWait;
-    	      this.requestTimeout = defaults.requestTimeout;
+            $ = new OnlineRequestSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
-            this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
+            $.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
             return this;
         }
+
         public Builder maxQueueWait(@Nullable String maxQueueWait) {
-            this.maxQueueWait = maxQueueWait;
+            $.maxQueueWait = maxQueueWait;
             return this;
         }
+
         public Builder requestTimeout(@Nullable String requestTimeout) {
-            this.requestTimeout = requestTimeout;
+            $.requestTimeout = requestTimeout;
             return this;
-        }        public OnlineRequestSettingsResponse build() {
-            return new OnlineRequestSettingsResponse(maxConcurrentRequestsPerInstance, maxQueueWait, requestTimeout);
+        }
+
+        public OnlineRequestSettingsResponse build() {
+            return $;
         }
     }
+
 }

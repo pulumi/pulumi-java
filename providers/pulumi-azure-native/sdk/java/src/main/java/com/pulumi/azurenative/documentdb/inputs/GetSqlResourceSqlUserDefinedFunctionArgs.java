@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends com.pulumi.r
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends com.pulumi.r
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends com.pulumi.r
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetSqlResourceSqlUserDefinedFunctionArgs extends com.pulumi.r
      * 
      */
     @Import(name="userDefinedFunctionName", required=true)
-      private final String userDefinedFunctionName;
+    private String userDefinedFunctionName;
 
     public String userDefinedFunctionName() {
         return this.userDefinedFunctionName;
     }
 
-    public GetSqlResourceSqlUserDefinedFunctionArgs(
-        String accountName,
-        String containerName,
-        String databaseName,
-        String resourceGroupName,
-        String userDefinedFunctionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userDefinedFunctionName = Objects.requireNonNull(userDefinedFunctionName, "expected parameter 'userDefinedFunctionName' to be non-null");
-    }
+    private GetSqlResourceSqlUserDefinedFunctionArgs() {}
 
-    private GetSqlResourceSqlUserDefinedFunctionArgs() {
-        this.accountName = null;
-        this.containerName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.userDefinedFunctionName = null;
+    private GetSqlResourceSqlUserDefinedFunctionArgs(GetSqlResourceSqlUserDefinedFunctionArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userDefinedFunctionName = $.userDefinedFunctionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlResourceSqlUserDefinedFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String containerName;
-        private String databaseName;
-        private String resourceGroupName;
-        private String userDefinedFunctionName;
+        private GetSqlResourceSqlUserDefinedFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlResourceSqlUserDefinedFunctionArgs();
         }
 
         public Builder(GetSqlResourceSqlUserDefinedFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userDefinedFunctionName = defaults.userDefinedFunctionName;
+            $ = new GetSqlResourceSqlUserDefinedFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder userDefinedFunctionName(String userDefinedFunctionName) {
-            this.userDefinedFunctionName = Objects.requireNonNull(userDefinedFunctionName);
+            $.userDefinedFunctionName = userDefinedFunctionName;
             return this;
-        }        public GetSqlResourceSqlUserDefinedFunctionArgs build() {
-            return new GetSqlResourceSqlUserDefinedFunctionArgs(accountName, containerName, databaseName, resourceGroupName, userDefinedFunctionName);
+        }
+
+        public GetSqlResourceSqlUserDefinedFunctionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userDefinedFunctionName = Objects.requireNonNull($.userDefinedFunctionName, "expected parameter 'userDefinedFunctionName' to be non-null");
+            return $;
         }
     }
+
 }

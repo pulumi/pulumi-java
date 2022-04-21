@@ -22,7 +22,7 @@ public final class PipelineReadyConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="status", required=true)
-      private final Boolean status;
+    private Boolean status;
 
     public Boolean status() {
         return this.status;
@@ -33,55 +33,52 @@ public final class PipelineReadyConditionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public PipelineReadyConditionResponse(
-        Boolean status,
-        String updateTime) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private PipelineReadyConditionResponse() {}
 
-    private PipelineReadyConditionResponse() {
-        this.status = null;
-        this.updateTime = null;
+    private PipelineReadyConditionResponse(PipelineReadyConditionResponse $) {
+        this.status = $.status;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineReadyConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean status;
-        private String updateTime;
+        private PipelineReadyConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineReadyConditionResponse();
         }
 
         public Builder(PipelineReadyConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.updateTime = defaults.updateTime;
+            $ = new PipelineReadyConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Boolean status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public PipelineReadyConditionResponse build() {
-            return new PipelineReadyConditionResponse(status, updateTime);
+        }
+
+        public PipelineReadyConditionResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

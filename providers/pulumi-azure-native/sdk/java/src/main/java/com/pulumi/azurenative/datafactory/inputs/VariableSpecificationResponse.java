@@ -24,10 +24,10 @@ public final class VariableSpecificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Object defaultValue;
+    private @Nullable Object defaultValue;
 
     public Optional<Object> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class VariableSpecificationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VariableSpecificationResponse(
-        @Nullable Object defaultValue,
-        String type) {
-        this.defaultValue = defaultValue;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VariableSpecificationResponse() {}
 
-    private VariableSpecificationResponse() {
-        this.defaultValue = null;
-        this.type = null;
+    private VariableSpecificationResponse(VariableSpecificationResponse $) {
+        this.defaultValue = $.defaultValue;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object defaultValue;
-        private String type;
+        private VariableSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableSpecificationResponse();
         }
 
         public Builder(VariableSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.type = defaults.type;
+            $ = new VariableSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VariableSpecificationResponse build() {
-            return new VariableSpecificationResponse(defaultValue, type);
+        }
+
+        public VariableSpecificationResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

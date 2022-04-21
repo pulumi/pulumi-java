@@ -8,8 +8,8 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="checkpointConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration() {
-        return this.checkpointConfiguration == null ? Codegen.empty() : this.checkpointConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs>> checkpointConfiguration() {
+        return Optional.ofNullable(this.checkpointConfiguration);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="monitoringConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration() {
-        return this.monitoringConfiguration == null ? Codegen.empty() : this.monitoringConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs>> monitoringConfiguration() {
+        return Optional.ofNullable(this.monitoringConfiguration);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="parallelismConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration;
 
-    public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration() {
-        return this.parallelismConfiguration == null ? Codegen.empty() : this.parallelismConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs>> parallelismConfiguration() {
+        return Optional.ofNullable(this.parallelismConfiguration);
     }
 
-    public ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs(
-        @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration) {
-        this.checkpointConfiguration = checkpointConfiguration;
-        this.monitoringConfiguration = monitoringConfiguration;
-        this.parallelismConfiguration = parallelismConfiguration;
-    }
+    private ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs() {
-        this.checkpointConfiguration = Codegen.empty();
-        this.monitoringConfiguration = Codegen.empty();
-        this.parallelismConfiguration = Codegen.empty();
+    private ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs(ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs $) {
+        this.checkpointConfiguration = $.checkpointConfiguration;
+        this.monitoringConfiguration = $.monitoringConfiguration;
+        this.parallelismConfiguration = $.parallelismConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration;
+        private ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkpointConfiguration = defaults.checkpointConfiguration;
-    	      this.monitoringConfiguration = defaults.monitoringConfiguration;
-    	      this.parallelismConfiguration = defaults.parallelismConfiguration;
+            $ = new ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkpointConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration) {
-            this.checkpointConfiguration = checkpointConfiguration;
+            $.checkpointConfiguration = checkpointConfiguration;
             return this;
         }
-        public Builder checkpointConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs checkpointConfiguration) {
-            this.checkpointConfiguration = Codegen.ofNullable(checkpointConfiguration);
-            return this;
+
+        public Builder checkpointConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs checkpointConfiguration) {
+            return checkpointConfiguration(Output.of(checkpointConfiguration));
         }
+
         public Builder monitoringConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration) {
-            this.monitoringConfiguration = monitoringConfiguration;
+            $.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
-        public Builder monitoringConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs monitoringConfiguration) {
-            this.monitoringConfiguration = Codegen.ofNullable(monitoringConfiguration);
-            return this;
+
+        public Builder monitoringConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs monitoringConfiguration) {
+            return monitoringConfiguration(Output.of(monitoringConfiguration));
         }
+
         public Builder parallelismConfiguration(@Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration) {
-            this.parallelismConfiguration = parallelismConfiguration;
+            $.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
-        public Builder parallelismConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs parallelismConfiguration) {
-            this.parallelismConfiguration = Codegen.ofNullable(parallelismConfiguration);
-            return this;
-        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs(checkpointConfiguration, monitoringConfiguration, parallelismConfiguration);
+
+        public Builder parallelismConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs parallelismConfiguration) {
+            return parallelismConfiguration(Output.of(parallelismConfiguration));
+        }
+
+        public ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs build() {
+            return $;
         }
     }
+
 }

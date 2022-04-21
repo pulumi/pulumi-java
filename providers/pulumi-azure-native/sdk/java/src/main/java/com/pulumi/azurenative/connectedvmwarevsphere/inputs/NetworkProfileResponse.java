@@ -24,48 +24,48 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+    private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
-    public NetworkProfileResponse(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
-        this.networkInterfaces = networkInterfaces;
-    }
+    private NetworkProfileResponse() {}
 
-    private NetworkProfileResponse() {
-        this.networkInterfaces = List.of();
+    private NetworkProfileResponse(NetworkProfileResponse $) {
+        this.networkInterfaces = $.networkInterfaces;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+        private NetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponse();
         }
 
         public Builder(NetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
+            $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
-        }        public NetworkProfileResponse build() {
-            return new NetworkProfileResponse(networkInterfaces);
+        }
+
+        public NetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

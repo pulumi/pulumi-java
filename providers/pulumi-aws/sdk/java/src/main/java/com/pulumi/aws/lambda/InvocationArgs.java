@@ -5,10 +5,10 @@ package com.pulumi.aws.lambda;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class InvocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionName", required=true)
-      private final Output<String> functionName;
+    private Output<String> functionName;
 
     public Output<String> functionName() {
         return this.functionName;
@@ -32,7 +32,7 @@ public final class InvocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="input", required=true)
-      private final Output<String> input;
+    private Output<String> input;
 
     public Output<String> input() {
         return this.input;
@@ -43,96 +43,87 @@ public final class InvocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable Output<String> qualifier;
+    private @Nullable Output<String> qualifier;
 
-    public Output<String> qualifier() {
-        return this.qualifier == null ? Codegen.empty() : this.qualifier;
+    public Optional<Output<String>> qualifier() {
+        return Optional.ofNullable(this.qualifier);
     }
 
     @Import(name="triggers")
-      private final @Nullable Output<Map<String,String>> triggers;
+    private @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<Map<String,String>>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
-    public InvocationArgs(
-        Output<String> functionName,
-        Output<String> input,
-        @Nullable Output<String> qualifier,
-        @Nullable Output<Map<String,String>> triggers) {
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
-        this.qualifier = qualifier;
-        this.triggers = triggers;
-    }
+    private InvocationArgs() {}
 
-    private InvocationArgs() {
-        this.functionName = Codegen.empty();
-        this.input = Codegen.empty();
-        this.qualifier = Codegen.empty();
-        this.triggers = Codegen.empty();
+    private InvocationArgs(InvocationArgs $) {
+        this.functionName = $.functionName;
+        this.input = $.input;
+        this.qualifier = $.qualifier;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> functionName;
-        private Output<String> input;
-        private @Nullable Output<String> qualifier;
-        private @Nullable Output<Map<String,String>> triggers;
+        private InvocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvocationArgs();
         }
 
         public Builder(InvocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionName = defaults.functionName;
-    	      this.input = defaults.input;
-    	      this.qualifier = defaults.qualifier;
-    	      this.triggers = defaults.triggers;
+            $ = new InvocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionName(Output<String> functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder functionName(String functionName) {
-            this.functionName = Output.of(Objects.requireNonNull(functionName));
-            return this;
+            return functionName(Output.of(functionName));
         }
+
         public Builder input(Output<String> input) {
-            this.input = Objects.requireNonNull(input);
+            $.input = input;
             return this;
         }
+
         public Builder input(String input) {
-            this.input = Output.of(Objects.requireNonNull(input));
-            return this;
+            return input(Output.of(input));
         }
+
         public Builder qualifier(@Nullable Output<String> qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
         }
-        public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Codegen.ofNullable(qualifier);
-            return this;
+
+        public Builder qualifier(String qualifier) {
+            return qualifier(Output.of(qualifier));
         }
+
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
-        }        public InvocationArgs build() {
-            return new InvocationArgs(functionName, input, qualifier, triggers);
+
+        public Builder triggers(Map<String,String> triggers) {
+            return triggers(Output.of(triggers));
+        }
+
+        public InvocationArgs build() {
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            $.input = Objects.requireNonNull($.input, "expected parameter 'input' to be non-null");
+            return $;
         }
     }
+
 }

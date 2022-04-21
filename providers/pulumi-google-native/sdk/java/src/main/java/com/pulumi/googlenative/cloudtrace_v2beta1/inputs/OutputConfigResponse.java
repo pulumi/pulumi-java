@@ -21,45 +21,45 @@ public final class OutputConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="destination", required=true)
-      private final String destination;
+    private String destination;
 
     public String destination() {
         return this.destination;
     }
 
-    public OutputConfigResponse(String destination) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-    }
+    private OutputConfigResponse() {}
 
-    private OutputConfigResponse() {
-        this.destination = null;
+    private OutputConfigResponse(OutputConfigResponse $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destination;
+        private OutputConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputConfigResponse();
         }
 
         public Builder(OutputConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new OutputConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(String destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
-        }        public OutputConfigResponse build() {
-            return new OutputConfigResponse(destination);
+        }
+
+        public OutputConfigResponse build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

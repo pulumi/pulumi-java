@@ -5,12 +5,12 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentMessageGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CxPageEntryFulfillmentGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="messages")
-      private final @Nullable Output<List<CxPageEntryFulfillmentMessageGetArgs>> messages;
+    private @Nullable Output<List<CxPageEntryFulfillmentMessageGetArgs>> messages;
 
-    public Output<List<CxPageEntryFulfillmentMessageGetArgs>> messages() {
-        return this.messages == null ? Codegen.empty() : this.messages;
+    public Optional<Output<List<CxPageEntryFulfillmentMessageGetArgs>>> messages() {
+        return Optional.ofNullable(this.messages);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CxPageEntryFulfillmentGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="returnPartialResponses")
-      private final @Nullable Output<Boolean> returnPartialResponses;
+    private @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> returnPartialResponses() {
-        return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
+    public Optional<Output<Boolean>> returnPartialResponses() {
+        return Optional.ofNullable(this.returnPartialResponses);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CxPageEntryFulfillmentGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class CxPageEntryFulfillmentGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="webhook")
-      private final @Nullable Output<String> webhook;
+    private @Nullable Output<String> webhook;
 
-    public Output<String> webhook() {
-        return this.webhook == null ? Codegen.empty() : this.webhook;
+    public Optional<Output<String>> webhook() {
+        return Optional.ofNullable(this.webhook);
     }
 
-    public CxPageEntryFulfillmentGetArgs(
-        @Nullable Output<List<CxPageEntryFulfillmentMessageGetArgs>> messages,
-        @Nullable Output<Boolean> returnPartialResponses,
-        @Nullable Output<String> tag,
-        @Nullable Output<String> webhook) {
-        this.messages = messages;
-        this.returnPartialResponses = returnPartialResponses;
-        this.tag = tag;
-        this.webhook = webhook;
-    }
+    private CxPageEntryFulfillmentGetArgs() {}
 
-    private CxPageEntryFulfillmentGetArgs() {
-        this.messages = Codegen.empty();
-        this.returnPartialResponses = Codegen.empty();
-        this.tag = Codegen.empty();
-        this.webhook = Codegen.empty();
+    private CxPageEntryFulfillmentGetArgs(CxPageEntryFulfillmentGetArgs $) {
+        this.messages = $.messages;
+        this.returnPartialResponses = $.returnPartialResponses;
+        this.tag = $.tag;
+        this.webhook = $.webhook;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageEntryFulfillmentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CxPageEntryFulfillmentMessageGetArgs>> messages;
-        private @Nullable Output<Boolean> returnPartialResponses;
-        private @Nullable Output<String> tag;
-        private @Nullable Output<String> webhook;
+        private CxPageEntryFulfillmentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageEntryFulfillmentGetArgs();
         }
 
         public Builder(CxPageEntryFulfillmentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messages = defaults.messages;
-    	      this.returnPartialResponses = defaults.returnPartialResponses;
-    	      this.tag = defaults.tag;
-    	      this.webhook = defaults.webhook;
+            $ = new CxPageEntryFulfillmentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messages(@Nullable Output<List<CxPageEntryFulfillmentMessageGetArgs>> messages) {
-            this.messages = messages;
+            $.messages = messages;
             return this;
         }
-        public Builder messages(@Nullable List<CxPageEntryFulfillmentMessageGetArgs> messages) {
-            this.messages = Codegen.ofNullable(messages);
-            return this;
+
+        public Builder messages(List<CxPageEntryFulfillmentMessageGetArgs> messages) {
+            return messages(Output.of(messages));
         }
+
         public Builder messages(CxPageEntryFulfillmentMessageGetArgs... messages) {
             return messages(List.of(messages));
         }
+
         public Builder returnPartialResponses(@Nullable Output<Boolean> returnPartialResponses) {
-            this.returnPartialResponses = returnPartialResponses;
+            $.returnPartialResponses = returnPartialResponses;
             return this;
         }
-        public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
-            this.returnPartialResponses = Codegen.ofNullable(returnPartialResponses);
-            return this;
+
+        public Builder returnPartialResponses(Boolean returnPartialResponses) {
+            return returnPartialResponses(Output.of(returnPartialResponses));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
         }
+
         public Builder webhook(@Nullable Output<String> webhook) {
-            this.webhook = webhook;
+            $.webhook = webhook;
             return this;
         }
-        public Builder webhook(@Nullable String webhook) {
-            this.webhook = Codegen.ofNullable(webhook);
-            return this;
-        }        public CxPageEntryFulfillmentGetArgs build() {
-            return new CxPageEntryFulfillmentGetArgs(messages, returnPartialResponses, tag, webhook);
+
+        public Builder webhook(String webhook) {
+            return webhook(Output.of(webhook));
+        }
+
+        public CxPageEntryFulfillmentGetArgs build() {
+            return $;
         }
     }
+
 }

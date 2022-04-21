@@ -23,10 +23,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="remoteDnsIps")
-      private final @Nullable String remoteDnsIps;
+    private @Nullable String remoteDnsIps;
 
     public Optional<String> remoteDnsIps() {
-        return this.remoteDnsIps == null ? Optional.empty() : Optional.ofNullable(this.remoteDnsIps);
+        return Optional.ofNullable(this.remoteDnsIps);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustDirection")
-      private final @Nullable String trustDirection;
+    private @Nullable String trustDirection;
 
     public Optional<String> trustDirection() {
-        return this.trustDirection == null ? Optional.empty() : Optional.ofNullable(this.trustDirection);
+        return Optional.ofNullable(this.trustDirection);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustPassword")
-      private final @Nullable String trustPassword;
+    private @Nullable String trustPassword;
 
     public Optional<String> trustPassword() {
-        return this.trustPassword == null ? Optional.empty() : Optional.ofNullable(this.trustPassword);
+        return Optional.ofNullable(this.trustPassword);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class ForestTrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustedDomainFqdn")
-      private final @Nullable String trustedDomainFqdn;
+    private @Nullable String trustedDomainFqdn;
 
     public Optional<String> trustedDomainFqdn() {
-        return this.trustedDomainFqdn == null ? Optional.empty() : Optional.ofNullable(this.trustedDomainFqdn);
+        return Optional.ofNullable(this.trustedDomainFqdn);
     }
 
-    public ForestTrustResponse(
-        @Nullable String friendlyName,
-        @Nullable String remoteDnsIps,
-        @Nullable String trustDirection,
-        @Nullable String trustPassword,
-        @Nullable String trustedDomainFqdn) {
-        this.friendlyName = friendlyName;
-        this.remoteDnsIps = remoteDnsIps;
-        this.trustDirection = trustDirection;
-        this.trustPassword = trustPassword;
-        this.trustedDomainFqdn = trustedDomainFqdn;
-    }
+    private ForestTrustResponse() {}
 
-    private ForestTrustResponse() {
-        this.friendlyName = null;
-        this.remoteDnsIps = null;
-        this.trustDirection = null;
-        this.trustPassword = null;
-        this.trustedDomainFqdn = null;
+    private ForestTrustResponse(ForestTrustResponse $) {
+        this.friendlyName = $.friendlyName;
+        this.remoteDnsIps = $.remoteDnsIps;
+        this.trustDirection = $.trustDirection;
+        this.trustPassword = $.trustPassword;
+        this.trustedDomainFqdn = $.trustedDomainFqdn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForestTrustResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String friendlyName;
-        private @Nullable String remoteDnsIps;
-        private @Nullable String trustDirection;
-        private @Nullable String trustPassword;
-        private @Nullable String trustedDomainFqdn;
+        private ForestTrustResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForestTrustResponse();
         }
 
         public Builder(ForestTrustResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.remoteDnsIps = defaults.remoteDnsIps;
-    	      this.trustDirection = defaults.trustDirection;
-    	      this.trustPassword = defaults.trustPassword;
-    	      this.trustedDomainFqdn = defaults.trustedDomainFqdn;
+            $ = new ForestTrustResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
-            this.remoteDnsIps = remoteDnsIps;
+            $.remoteDnsIps = remoteDnsIps;
             return this;
         }
+
         public Builder trustDirection(@Nullable String trustDirection) {
-            this.trustDirection = trustDirection;
+            $.trustDirection = trustDirection;
             return this;
         }
+
         public Builder trustPassword(@Nullable String trustPassword) {
-            this.trustPassword = trustPassword;
+            $.trustPassword = trustPassword;
             return this;
         }
+
         public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
-            this.trustedDomainFqdn = trustedDomainFqdn;
+            $.trustedDomainFqdn = trustedDomainFqdn;
             return this;
-        }        public ForestTrustResponse build() {
-            return new ForestTrustResponse(friendlyName, remoteDnsIps, trustDirection, trustPassword, trustedDomainFqdn);
+        }
+
+        public ForestTrustResponse build() {
+            return $;
         }
     }
+
 }

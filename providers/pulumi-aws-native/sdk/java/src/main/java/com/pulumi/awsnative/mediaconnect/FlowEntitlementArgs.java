@@ -7,11 +7,11 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowEntitlementEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dataTransferSubscriberFeePercent")
-      private final @Nullable Output<Integer> dataTransferSubscriberFeePercent;
+    private @Nullable Output<Integer> dataTransferSubscriberFeePercent;
 
-    public Output<Integer> dataTransferSubscriberFeePercent() {
-        return this.dataTransferSubscriberFeePercent == null ? Codegen.empty() : this.dataTransferSubscriberFeePercent;
+    public Optional<Output<Integer>> dataTransferSubscriberFeePercent() {
+        return Optional.ofNullable(this.dataTransferSubscriberFeePercent);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -46,10 +46,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
+    private @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
 
-    public Output<FlowEntitlementEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<FlowEntitlementEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="entitlementStatus")
-      private final @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
+    private @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
 
-    public Output<FlowEntitlementEntitlementStatus> entitlementStatus() {
-        return this.entitlementStatus == null ? Codegen.empty() : this.entitlementStatus;
+    public Optional<Output<FlowEntitlementEntitlementStatus>> entitlementStatus() {
+        return Optional.ofNullable(this.entitlementStatus);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="flowArn", required=true)
-      private final Output<String> flowArn;
+    private Output<String> flowArn;
 
     public Output<String> flowArn() {
         return this.flowArn;
@@ -79,10 +79,10 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,131 +90,115 @@ public final class FlowEntitlementArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="subscribers", required=true)
-      private final Output<List<String>> subscribers;
+    private Output<List<String>> subscribers;
 
     public Output<List<String>> subscribers() {
         return this.subscribers;
     }
 
-    public FlowEntitlementArgs(
-        @Nullable Output<Integer> dataTransferSubscriberFeePercent,
-        Output<String> description,
-        @Nullable Output<FlowEntitlementEncryptionArgs> encryption,
-        @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus,
-        Output<String> flowArn,
-        @Nullable Output<String> name,
-        Output<List<String>> subscribers) {
-        this.dataTransferSubscriberFeePercent = dataTransferSubscriberFeePercent;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.encryption = encryption;
-        this.entitlementStatus = entitlementStatus;
-        this.flowArn = Objects.requireNonNull(flowArn, "expected parameter 'flowArn' to be non-null");
-        this.name = name;
-        this.subscribers = Objects.requireNonNull(subscribers, "expected parameter 'subscribers' to be non-null");
-    }
+    private FlowEntitlementArgs() {}
 
-    private FlowEntitlementArgs() {
-        this.dataTransferSubscriberFeePercent = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.entitlementStatus = Codegen.empty();
-        this.flowArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.subscribers = Codegen.empty();
+    private FlowEntitlementArgs(FlowEntitlementArgs $) {
+        this.dataTransferSubscriberFeePercent = $.dataTransferSubscriberFeePercent;
+        this.description = $.description;
+        this.encryption = $.encryption;
+        this.entitlementStatus = $.entitlementStatus;
+        this.flowArn = $.flowArn;
+        this.name = $.name;
+        this.subscribers = $.subscribers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowEntitlementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> dataTransferSubscriberFeePercent;
-        private Output<String> description;
-        private @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
-        private @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
-        private Output<String> flowArn;
-        private @Nullable Output<String> name;
-        private Output<List<String>> subscribers;
+        private FlowEntitlementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowEntitlementArgs();
         }
 
         public Builder(FlowEntitlementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTransferSubscriberFeePercent = defaults.dataTransferSubscriberFeePercent;
-    	      this.description = defaults.description;
-    	      this.encryption = defaults.encryption;
-    	      this.entitlementStatus = defaults.entitlementStatus;
-    	      this.flowArn = defaults.flowArn;
-    	      this.name = defaults.name;
-    	      this.subscribers = defaults.subscribers;
+            $ = new FlowEntitlementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTransferSubscriberFeePercent(@Nullable Output<Integer> dataTransferSubscriberFeePercent) {
-            this.dataTransferSubscriberFeePercent = dataTransferSubscriberFeePercent;
+            $.dataTransferSubscriberFeePercent = dataTransferSubscriberFeePercent;
             return this;
         }
-        public Builder dataTransferSubscriberFeePercent(@Nullable Integer dataTransferSubscriberFeePercent) {
-            this.dataTransferSubscriberFeePercent = Codegen.ofNullable(dataTransferSubscriberFeePercent);
-            return this;
+
+        public Builder dataTransferSubscriberFeePercent(Integer dataTransferSubscriberFeePercent) {
+            return dataTransferSubscriberFeePercent(Output.of(dataTransferSubscriberFeePercent));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder encryption(@Nullable Output<FlowEntitlementEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable FlowEntitlementEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(FlowEntitlementEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder entitlementStatus(@Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus) {
-            this.entitlementStatus = entitlementStatus;
+            $.entitlementStatus = entitlementStatus;
             return this;
         }
-        public Builder entitlementStatus(@Nullable FlowEntitlementEntitlementStatus entitlementStatus) {
-            this.entitlementStatus = Codegen.ofNullable(entitlementStatus);
-            return this;
+
+        public Builder entitlementStatus(FlowEntitlementEntitlementStatus entitlementStatus) {
+            return entitlementStatus(Output.of(entitlementStatus));
         }
+
         public Builder flowArn(Output<String> flowArn) {
-            this.flowArn = Objects.requireNonNull(flowArn);
+            $.flowArn = flowArn;
             return this;
         }
+
         public Builder flowArn(String flowArn) {
-            this.flowArn = Output.of(Objects.requireNonNull(flowArn));
-            return this;
+            return flowArn(Output.of(flowArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder subscribers(Output<List<String>> subscribers) {
-            this.subscribers = Objects.requireNonNull(subscribers);
+            $.subscribers = subscribers;
             return this;
         }
+
         public Builder subscribers(List<String> subscribers) {
-            this.subscribers = Output.of(Objects.requireNonNull(subscribers));
-            return this;
+            return subscribers(Output.of(subscribers));
         }
+
         public Builder subscribers(String... subscribers) {
             return subscribers(List.of(subscribers));
-        }        public FlowEntitlementArgs build() {
-            return new FlowEntitlementArgs(dataTransferSubscriberFeePercent, description, encryption, entitlementStatus, flowArn, name, subscribers);
+        }
+
+        public FlowEntitlementArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.flowArn = Objects.requireNonNull($.flowArn, "expected parameter 'flowArn' to be non-null");
+            $.subscribers = Objects.requireNonNull($.subscribers, "expected parameter 'subscribers' to be non-null");
+            return $;
         }
     }
+
 }

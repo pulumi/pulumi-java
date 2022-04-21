@@ -5,11 +5,11 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.WebBackendServiceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class WebBackendServiceIamBindingArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<WebBackendServiceIamBindingConditionArgs> condition;
+    private @Nullable Output<WebBackendServiceIamBindingConditionArgs> condition;
 
-    public Output<WebBackendServiceIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<WebBackendServiceIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -42,10 +42,10 @@ public final class WebBackendServiceIamBindingArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class WebBackendServiceIamBindingArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -66,105 +66,95 @@ public final class WebBackendServiceIamBindingArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="webBackendService", required=true)
-      private final Output<String> webBackendService;
+    private Output<String> webBackendService;
 
     public Output<String> webBackendService() {
         return this.webBackendService;
     }
 
-    public WebBackendServiceIamBindingArgs(
-        @Nullable Output<WebBackendServiceIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role,
-        Output<String> webBackendService) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.webBackendService = Objects.requireNonNull(webBackendService, "expected parameter 'webBackendService' to be non-null");
-    }
+    private WebBackendServiceIamBindingArgs() {}
 
-    private WebBackendServiceIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.webBackendService = Codegen.empty();
+    private WebBackendServiceIamBindingArgs(WebBackendServiceIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
+        this.webBackendService = $.webBackendService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebBackendServiceIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebBackendServiceIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private Output<String> webBackendService;
+        private WebBackendServiceIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebBackendServiceIamBindingArgs();
         }
 
         public Builder(WebBackendServiceIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.webBackendService = defaults.webBackendService;
+            $ = new WebBackendServiceIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<WebBackendServiceIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable WebBackendServiceIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(WebBackendServiceIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder webBackendService(Output<String> webBackendService) {
-            this.webBackendService = Objects.requireNonNull(webBackendService);
+            $.webBackendService = webBackendService;
             return this;
         }
+
         public Builder webBackendService(String webBackendService) {
-            this.webBackendService = Output.of(Objects.requireNonNull(webBackendService));
-            return this;
-        }        public WebBackendServiceIamBindingArgs build() {
-            return new WebBackendServiceIamBindingArgs(condition, members, project, role, webBackendService);
+            return webBackendService(Output.of(webBackendService));
+        }
+
+        public WebBackendServiceIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.webBackendService = Objects.requireNonNull($.webBackendService, "expected parameter 'webBackendService' to be non-null");
+            return $;
         }
     }
+
 }

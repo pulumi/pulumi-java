@@ -6,10 +6,10 @@ package com.pulumi.aws.cloudformation.inputs;
 import com.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="defaultVersionId")
-      private final @Nullable Output<String> defaultVersionId;
+    private @Nullable Output<String> defaultVersionId;
 
-    public Output<String> defaultVersionId() {
-        return this.defaultVersionId == null ? Codegen.empty() : this.defaultVersionId;
+    public Optional<Output<String>> defaultVersionId() {
+        return Optional.ofNullable(this.defaultVersionId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deprecatedStatus")
-      private final @Nullable Output<String> deprecatedStatus;
+    private @Nullable Output<String> deprecatedStatus;
 
-    public Output<String> deprecatedStatus() {
-        return this.deprecatedStatus == null ? Codegen.empty() : this.deprecatedStatus;
+    public Optional<Output<String>> deprecatedStatus() {
+        return Optional.ofNullable(this.deprecatedStatus);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="documentationUrl")
-      private final @Nullable Output<String> documentationUrl;
+    private @Nullable Output<String> documentationUrl;
 
-    public Output<String> documentationUrl() {
-        return this.documentationUrl == null ? Codegen.empty() : this.documentationUrl;
+    public Optional<Output<String>> documentationUrl() {
+        return Optional.ofNullable(this.documentationUrl);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="executionRoleArn")
-      private final @Nullable Output<String> executionRoleArn;
+    private @Nullable Output<String> executionRoleArn;
 
-    public Output<String> executionRoleArn() {
-        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
+    public Optional<Output<String>> executionRoleArn() {
+        return Optional.ofNullable(this.executionRoleArn);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="isDefaultVersion")
-      private final @Nullable Output<Boolean> isDefaultVersion;
+    private @Nullable Output<Boolean> isDefaultVersion;
 
-    public Output<Boolean> isDefaultVersion() {
-        return this.isDefaultVersion == null ? Codegen.empty() : this.isDefaultVersion;
+    public Optional<Output<Boolean>> isDefaultVersion() {
+        return Optional.ofNullable(this.isDefaultVersion);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
 
-    public Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<CloudFormationTypeLoggingConfigGetArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="provisioningType")
-      private final @Nullable Output<String> provisioningType;
+    private @Nullable Output<String> provisioningType;
 
-    public Output<String> provisioningType() {
-        return this.provisioningType == null ? Codegen.empty() : this.provisioningType;
+    public Optional<Output<String>> provisioningType() {
+        return Optional.ofNullable(this.provisioningType);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schemaHandlerPackage")
-      private final @Nullable Output<String> schemaHandlerPackage;
+    private @Nullable Output<String> schemaHandlerPackage;
 
-    public Output<String> schemaHandlerPackage() {
-        return this.schemaHandlerPackage == null ? Codegen.empty() : this.schemaHandlerPackage;
+    public Optional<Output<String>> schemaHandlerPackage() {
+        return Optional.ofNullable(this.schemaHandlerPackage);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceUrl")
-      private final @Nullable Output<String> sourceUrl;
+    private @Nullable Output<String> sourceUrl;
 
-    public Output<String> sourceUrl() {
-        return this.sourceUrl == null ? Codegen.empty() : this.sourceUrl;
+    public Optional<Output<String>> sourceUrl() {
+        return Optional.ofNullable(this.sourceUrl);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="typeArn")
-      private final @Nullable Output<String> typeArn;
+    private @Nullable Output<String> typeArn;
 
-    public Output<String> typeArn() {
-        return this.typeArn == null ? Codegen.empty() : this.typeArn;
+    public Optional<Output<String>> typeArn() {
+        return Optional.ofNullable(this.typeArn);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="typeName")
-      private final @Nullable Output<String> typeName;
+    private @Nullable Output<String> typeName;
 
-    public Output<String> typeName() {
-        return this.typeName == null ? Codegen.empty() : this.typeName;
+    public Optional<Output<String>> typeName() {
+        return Optional.ofNullable(this.typeName);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     /**
@@ -198,258 +198,208 @@ public final class CloudFormationTypeState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="visibility")
-      private final @Nullable Output<String> visibility;
+    private @Nullable Output<String> visibility;
 
-    public Output<String> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    public Optional<Output<String>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public CloudFormationTypeState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> defaultVersionId,
-        @Nullable Output<String> deprecatedStatus,
-        @Nullable Output<String> description,
-        @Nullable Output<String> documentationUrl,
-        @Nullable Output<String> executionRoleArn,
-        @Nullable Output<Boolean> isDefaultVersion,
-        @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig,
-        @Nullable Output<String> provisioningType,
-        @Nullable Output<String> schema,
-        @Nullable Output<String> schemaHandlerPackage,
-        @Nullable Output<String> sourceUrl,
-        @Nullable Output<String> type,
-        @Nullable Output<String> typeArn,
-        @Nullable Output<String> typeName,
-        @Nullable Output<String> versionId,
-        @Nullable Output<String> visibility) {
-        this.arn = arn;
-        this.defaultVersionId = defaultVersionId;
-        this.deprecatedStatus = deprecatedStatus;
-        this.description = description;
-        this.documentationUrl = documentationUrl;
-        this.executionRoleArn = executionRoleArn;
-        this.isDefaultVersion = isDefaultVersion;
-        this.loggingConfig = loggingConfig;
-        this.provisioningType = provisioningType;
-        this.schema = schema;
-        this.schemaHandlerPackage = schemaHandlerPackage;
-        this.sourceUrl = sourceUrl;
-        this.type = type;
-        this.typeArn = typeArn;
-        this.typeName = typeName;
-        this.versionId = versionId;
-        this.visibility = visibility;
-    }
+    private CloudFormationTypeState() {}
 
-    private CloudFormationTypeState() {
-        this.arn = Codegen.empty();
-        this.defaultVersionId = Codegen.empty();
-        this.deprecatedStatus = Codegen.empty();
-        this.description = Codegen.empty();
-        this.documentationUrl = Codegen.empty();
-        this.executionRoleArn = Codegen.empty();
-        this.isDefaultVersion = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.provisioningType = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.schemaHandlerPackage = Codegen.empty();
-        this.sourceUrl = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeArn = Codegen.empty();
-        this.typeName = Codegen.empty();
-        this.versionId = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private CloudFormationTypeState(CloudFormationTypeState $) {
+        this.arn = $.arn;
+        this.defaultVersionId = $.defaultVersionId;
+        this.deprecatedStatus = $.deprecatedStatus;
+        this.description = $.description;
+        this.documentationUrl = $.documentationUrl;
+        this.executionRoleArn = $.executionRoleArn;
+        this.isDefaultVersion = $.isDefaultVersion;
+        this.loggingConfig = $.loggingConfig;
+        this.provisioningType = $.provisioningType;
+        this.schema = $.schema;
+        this.schemaHandlerPackage = $.schemaHandlerPackage;
+        this.sourceUrl = $.sourceUrl;
+        this.type = $.type;
+        this.typeArn = $.typeArn;
+        this.typeName = $.typeName;
+        this.versionId = $.versionId;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFormationTypeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> defaultVersionId;
-        private @Nullable Output<String> deprecatedStatus;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> documentationUrl;
-        private @Nullable Output<String> executionRoleArn;
-        private @Nullable Output<Boolean> isDefaultVersion;
-        private @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
-        private @Nullable Output<String> provisioningType;
-        private @Nullable Output<String> schema;
-        private @Nullable Output<String> schemaHandlerPackage;
-        private @Nullable Output<String> sourceUrl;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> typeArn;
-        private @Nullable Output<String> typeName;
-        private @Nullable Output<String> versionId;
-        private @Nullable Output<String> visibility;
+        private CloudFormationTypeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFormationTypeState();
         }
 
         public Builder(CloudFormationTypeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.defaultVersionId = defaults.defaultVersionId;
-    	      this.deprecatedStatus = defaults.deprecatedStatus;
-    	      this.description = defaults.description;
-    	      this.documentationUrl = defaults.documentationUrl;
-    	      this.executionRoleArn = defaults.executionRoleArn;
-    	      this.isDefaultVersion = defaults.isDefaultVersion;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.provisioningType = defaults.provisioningType;
-    	      this.schema = defaults.schema;
-    	      this.schemaHandlerPackage = defaults.schemaHandlerPackage;
-    	      this.sourceUrl = defaults.sourceUrl;
-    	      this.type = defaults.type;
-    	      this.typeArn = defaults.typeArn;
-    	      this.typeName = defaults.typeName;
-    	      this.versionId = defaults.versionId;
-    	      this.visibility = defaults.visibility;
+            $ = new CloudFormationTypeState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder defaultVersionId(@Nullable Output<String> defaultVersionId) {
-            this.defaultVersionId = defaultVersionId;
+            $.defaultVersionId = defaultVersionId;
             return this;
         }
-        public Builder defaultVersionId(@Nullable String defaultVersionId) {
-            this.defaultVersionId = Codegen.ofNullable(defaultVersionId);
-            return this;
+
+        public Builder defaultVersionId(String defaultVersionId) {
+            return defaultVersionId(Output.of(defaultVersionId));
         }
+
         public Builder deprecatedStatus(@Nullable Output<String> deprecatedStatus) {
-            this.deprecatedStatus = deprecatedStatus;
+            $.deprecatedStatus = deprecatedStatus;
             return this;
         }
-        public Builder deprecatedStatus(@Nullable String deprecatedStatus) {
-            this.deprecatedStatus = Codegen.ofNullable(deprecatedStatus);
-            return this;
+
+        public Builder deprecatedStatus(String deprecatedStatus) {
+            return deprecatedStatus(Output.of(deprecatedStatus));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentationUrl(@Nullable Output<String> documentationUrl) {
-            this.documentationUrl = documentationUrl;
+            $.documentationUrl = documentationUrl;
             return this;
         }
-        public Builder documentationUrl(@Nullable String documentationUrl) {
-            this.documentationUrl = Codegen.ofNullable(documentationUrl);
-            return this;
+
+        public Builder documentationUrl(String documentationUrl) {
+            return documentationUrl(Output.of(documentationUrl));
         }
+
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
-            this.executionRoleArn = executionRoleArn;
+            $.executionRoleArn = executionRoleArn;
             return this;
         }
-        public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
-            return this;
+
+        public Builder executionRoleArn(String executionRoleArn) {
+            return executionRoleArn(Output.of(executionRoleArn));
         }
+
         public Builder isDefaultVersion(@Nullable Output<Boolean> isDefaultVersion) {
-            this.isDefaultVersion = isDefaultVersion;
+            $.isDefaultVersion = isDefaultVersion;
             return this;
         }
-        public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
-            this.isDefaultVersion = Codegen.ofNullable(isDefaultVersion);
-            return this;
+
+        public Builder isDefaultVersion(Boolean isDefaultVersion) {
+            return isDefaultVersion(Output.of(isDefaultVersion));
         }
+
         public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(CloudFormationTypeLoggingConfigGetArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder provisioningType(@Nullable Output<String> provisioningType) {
-            this.provisioningType = provisioningType;
+            $.provisioningType = provisioningType;
             return this;
         }
-        public Builder provisioningType(@Nullable String provisioningType) {
-            this.provisioningType = Codegen.ofNullable(provisioningType);
-            return this;
+
+        public Builder provisioningType(String provisioningType) {
+            return provisioningType(Output.of(provisioningType));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder schemaHandlerPackage(@Nullable Output<String> schemaHandlerPackage) {
-            this.schemaHandlerPackage = schemaHandlerPackage;
+            $.schemaHandlerPackage = schemaHandlerPackage;
             return this;
         }
-        public Builder schemaHandlerPackage(@Nullable String schemaHandlerPackage) {
-            this.schemaHandlerPackage = Codegen.ofNullable(schemaHandlerPackage);
-            return this;
+
+        public Builder schemaHandlerPackage(String schemaHandlerPackage) {
+            return schemaHandlerPackage(Output.of(schemaHandlerPackage));
         }
+
         public Builder sourceUrl(@Nullable Output<String> sourceUrl) {
-            this.sourceUrl = sourceUrl;
+            $.sourceUrl = sourceUrl;
             return this;
         }
-        public Builder sourceUrl(@Nullable String sourceUrl) {
-            this.sourceUrl = Codegen.ofNullable(sourceUrl);
-            return this;
+
+        public Builder sourceUrl(String sourceUrl) {
+            return sourceUrl(Output.of(sourceUrl));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder typeArn(@Nullable Output<String> typeArn) {
-            this.typeArn = typeArn;
+            $.typeArn = typeArn;
             return this;
         }
-        public Builder typeArn(@Nullable String typeArn) {
-            this.typeArn = Codegen.ofNullable(typeArn);
-            return this;
+
+        public Builder typeArn(String typeArn) {
+            return typeArn(Output.of(typeArn));
         }
+
         public Builder typeName(@Nullable Output<String> typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
-        public Builder typeName(@Nullable String typeName) {
-            this.typeName = Codegen.ofNullable(typeName);
-            return this;
+
+        public Builder typeName(String typeName) {
+            return typeName(Output.of(typeName));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
+
         public Builder visibility(@Nullable Output<String> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable String visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
-        }        public CloudFormationTypeState build() {
-            return new CloudFormationTypeState(arn, defaultVersionId, deprecatedStatus, description, documentationUrl, executionRoleArn, isDefaultVersion, loggingConfig, provisioningType, schema, schemaHandlerPackage, sourceUrl, type, typeArn, typeName, versionId, visibility);
+
+        public Builder visibility(String visibility) {
+            return visibility(Output.of(visibility));
+        }
+
+        public CloudFormationTypeState build() {
+            return $;
         }
     }
+
 }

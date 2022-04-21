@@ -17,7 +17,7 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="partnerRegistrationName", required=true)
-      private final String partnerRegistrationName;
+    private String partnerRegistrationName;
 
     public String partnerRegistrationName() {
         return this.partnerRegistrationName;
@@ -28,55 +28,52 @@ public final class GetPartnerRegistrationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPartnerRegistrationArgs(
-        String partnerRegistrationName,
-        String resourceGroupName) {
-        this.partnerRegistrationName = Objects.requireNonNull(partnerRegistrationName, "expected parameter 'partnerRegistrationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPartnerRegistrationArgs() {}
 
-    private GetPartnerRegistrationArgs() {
-        this.partnerRegistrationName = null;
-        this.resourceGroupName = null;
+    private GetPartnerRegistrationArgs(GetPartnerRegistrationArgs $) {
+        this.partnerRegistrationName = $.partnerRegistrationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPartnerRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partnerRegistrationName;
-        private String resourceGroupName;
+        private GetPartnerRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPartnerRegistrationArgs();
         }
 
         public Builder(GetPartnerRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerRegistrationName = defaults.partnerRegistrationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPartnerRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerRegistrationName(String partnerRegistrationName) {
-            this.partnerRegistrationName = Objects.requireNonNull(partnerRegistrationName);
+            $.partnerRegistrationName = partnerRegistrationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPartnerRegistrationArgs build() {
-            return new GetPartnerRegistrationArgs(partnerRegistrationName, resourceGroupName);
+        }
+
+        public GetPartnerRegistrationArgs build() {
+            $.partnerRegistrationName = Objects.requireNonNull($.partnerRegistrationName, "expected parameter 'partnerRegistrationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

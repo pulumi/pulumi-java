@@ -21,45 +21,45 @@ public final class IdentitySelectorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="identity", required=true)
-      private final String identity;
+    private String identity;
 
     public String identity() {
         return this.identity;
     }
 
-    public IdentitySelectorResponse(String identity) {
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-    }
+    private IdentitySelectorResponse() {}
 
-    private IdentitySelectorResponse() {
-        this.identity = null;
+    private IdentitySelectorResponse(IdentitySelectorResponse $) {
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentitySelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identity;
+        private IdentitySelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentitySelectorResponse();
         }
 
         public Builder(IdentitySelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
+            $ = new IdentitySelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(String identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
-        }        public IdentitySelectorResponse build() {
-            return new IdentitySelectorResponse(identity);
+        }
+
+        public IdentitySelectorResponse build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            return $;
         }
     }
+
 }

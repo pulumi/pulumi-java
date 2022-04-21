@@ -24,7 +24,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="corsPolicy", required=true)
-      private final CorsPolicyResponse corsPolicy;
+    private CorsPolicyResponse corsPolicy;
 
     public CorsPolicyResponse corsPolicy() {
         return this.corsPolicy;
@@ -35,7 +35,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="faultInjectionPolicy", required=true)
-      private final HttpFaultInjectionResponse faultInjectionPolicy;
+    private HttpFaultInjectionResponse faultInjectionPolicy;
 
     public HttpFaultInjectionResponse faultInjectionPolicy() {
         return this.faultInjectionPolicy;
@@ -46,7 +46,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxStreamDuration", required=true)
-      private final DurationResponse maxStreamDuration;
+    private DurationResponse maxStreamDuration;
 
     public DurationResponse maxStreamDuration() {
         return this.maxStreamDuration;
@@ -57,7 +57,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="requestMirrorPolicy", required=true)
-      private final RequestMirrorPolicyResponse requestMirrorPolicy;
+    private RequestMirrorPolicyResponse requestMirrorPolicy;
 
     public RequestMirrorPolicyResponse requestMirrorPolicy() {
         return this.requestMirrorPolicy;
@@ -68,7 +68,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="retryPolicy", required=true)
-      private final HttpRetryPolicyResponse retryPolicy;
+    private HttpRetryPolicyResponse retryPolicy;
 
     public HttpRetryPolicyResponse retryPolicy() {
         return this.retryPolicy;
@@ -79,7 +79,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timeout", required=true)
-      private final DurationResponse timeout;
+    private DurationResponse timeout;
 
     public DurationResponse timeout() {
         return this.timeout;
@@ -90,7 +90,7 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="urlRewrite", required=true)
-      private final UrlRewriteResponse urlRewrite;
+    private UrlRewriteResponse urlRewrite;
 
     public UrlRewriteResponse urlRewrite() {
         return this.urlRewrite;
@@ -101,112 +101,98 @@ public final class HttpRouteActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="weightedBackendServices", required=true)
-      private final List<WeightedBackendServiceResponse> weightedBackendServices;
+    private List<WeightedBackendServiceResponse> weightedBackendServices;
 
     public List<WeightedBackendServiceResponse> weightedBackendServices() {
         return this.weightedBackendServices;
     }
 
-    public HttpRouteActionResponse(
-        CorsPolicyResponse corsPolicy,
-        HttpFaultInjectionResponse faultInjectionPolicy,
-        DurationResponse maxStreamDuration,
-        RequestMirrorPolicyResponse requestMirrorPolicy,
-        HttpRetryPolicyResponse retryPolicy,
-        DurationResponse timeout,
-        UrlRewriteResponse urlRewrite,
-        List<WeightedBackendServiceResponse> weightedBackendServices) {
-        this.corsPolicy = Objects.requireNonNull(corsPolicy, "expected parameter 'corsPolicy' to be non-null");
-        this.faultInjectionPolicy = Objects.requireNonNull(faultInjectionPolicy, "expected parameter 'faultInjectionPolicy' to be non-null");
-        this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration, "expected parameter 'maxStreamDuration' to be non-null");
-        this.requestMirrorPolicy = Objects.requireNonNull(requestMirrorPolicy, "expected parameter 'requestMirrorPolicy' to be non-null");
-        this.retryPolicy = Objects.requireNonNull(retryPolicy, "expected parameter 'retryPolicy' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-        this.urlRewrite = Objects.requireNonNull(urlRewrite, "expected parameter 'urlRewrite' to be non-null");
-        this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices, "expected parameter 'weightedBackendServices' to be non-null");
-    }
+    private HttpRouteActionResponse() {}
 
-    private HttpRouteActionResponse() {
-        this.corsPolicy = null;
-        this.faultInjectionPolicy = null;
-        this.maxStreamDuration = null;
-        this.requestMirrorPolicy = null;
-        this.retryPolicy = null;
-        this.timeout = null;
-        this.urlRewrite = null;
-        this.weightedBackendServices = List.of();
+    private HttpRouteActionResponse(HttpRouteActionResponse $) {
+        this.corsPolicy = $.corsPolicy;
+        this.faultInjectionPolicy = $.faultInjectionPolicy;
+        this.maxStreamDuration = $.maxStreamDuration;
+        this.requestMirrorPolicy = $.requestMirrorPolicy;
+        this.retryPolicy = $.retryPolicy;
+        this.timeout = $.timeout;
+        this.urlRewrite = $.urlRewrite;
+        this.weightedBackendServices = $.weightedBackendServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CorsPolicyResponse corsPolicy;
-        private HttpFaultInjectionResponse faultInjectionPolicy;
-        private DurationResponse maxStreamDuration;
-        private RequestMirrorPolicyResponse requestMirrorPolicy;
-        private HttpRetryPolicyResponse retryPolicy;
-        private DurationResponse timeout;
-        private UrlRewriteResponse urlRewrite;
-        private List<WeightedBackendServiceResponse> weightedBackendServices;
+        private HttpRouteActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteActionResponse();
         }
 
         public Builder(HttpRouteActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsPolicy = defaults.corsPolicy;
-    	      this.faultInjectionPolicy = defaults.faultInjectionPolicy;
-    	      this.maxStreamDuration = defaults.maxStreamDuration;
-    	      this.requestMirrorPolicy = defaults.requestMirrorPolicy;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.timeout = defaults.timeout;
-    	      this.urlRewrite = defaults.urlRewrite;
-    	      this.weightedBackendServices = defaults.weightedBackendServices;
+            $ = new HttpRouteActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder corsPolicy(CorsPolicyResponse corsPolicy) {
-            this.corsPolicy = Objects.requireNonNull(corsPolicy);
+            $.corsPolicy = corsPolicy;
             return this;
         }
+
         public Builder faultInjectionPolicy(HttpFaultInjectionResponse faultInjectionPolicy) {
-            this.faultInjectionPolicy = Objects.requireNonNull(faultInjectionPolicy);
+            $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
+
         public Builder maxStreamDuration(DurationResponse maxStreamDuration) {
-            this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration);
+            $.maxStreamDuration = maxStreamDuration;
             return this;
         }
+
         public Builder requestMirrorPolicy(RequestMirrorPolicyResponse requestMirrorPolicy) {
-            this.requestMirrorPolicy = Objects.requireNonNull(requestMirrorPolicy);
+            $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
+
         public Builder retryPolicy(HttpRetryPolicyResponse retryPolicy) {
-            this.retryPolicy = Objects.requireNonNull(retryPolicy);
+            $.retryPolicy = retryPolicy;
             return this;
         }
+
         public Builder timeout(DurationResponse timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
         }
+
         public Builder urlRewrite(UrlRewriteResponse urlRewrite) {
-            this.urlRewrite = Objects.requireNonNull(urlRewrite);
+            $.urlRewrite = urlRewrite;
             return this;
         }
+
         public Builder weightedBackendServices(List<WeightedBackendServiceResponse> weightedBackendServices) {
-            this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
+            $.weightedBackendServices = weightedBackendServices;
             return this;
         }
+
         public Builder weightedBackendServices(WeightedBackendServiceResponse... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
-        }        public HttpRouteActionResponse build() {
-            return new HttpRouteActionResponse(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
+        }
+
+        public HttpRouteActionResponse build() {
+            $.corsPolicy = Objects.requireNonNull($.corsPolicy, "expected parameter 'corsPolicy' to be non-null");
+            $.faultInjectionPolicy = Objects.requireNonNull($.faultInjectionPolicy, "expected parameter 'faultInjectionPolicy' to be non-null");
+            $.maxStreamDuration = Objects.requireNonNull($.maxStreamDuration, "expected parameter 'maxStreamDuration' to be non-null");
+            $.requestMirrorPolicy = Objects.requireNonNull($.requestMirrorPolicy, "expected parameter 'requestMirrorPolicy' to be non-null");
+            $.retryPolicy = Objects.requireNonNull($.retryPolicy, "expected parameter 'retryPolicy' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            $.urlRewrite = Objects.requireNonNull($.urlRewrite, "expected parameter 'urlRewrite' to be non-null");
+            $.weightedBackendServices = Objects.requireNonNull($.weightedBackendServices, "expected parameter 'weightedBackendServices' to be non-null");
+            return $;
         }
     }
+
 }

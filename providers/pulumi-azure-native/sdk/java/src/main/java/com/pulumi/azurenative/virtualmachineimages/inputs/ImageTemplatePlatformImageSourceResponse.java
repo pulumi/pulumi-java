@@ -25,10 +25,10 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="offer")
-      private final @Nullable String offer;
+    private @Nullable String offer;
 
     public Optional<String> offer() {
-        return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="planInfo")
-      private final @Nullable PlatformImagePurchasePlanResponse planInfo;
+    private @Nullable PlatformImagePurchasePlanResponse planInfo;
 
     public Optional<PlatformImagePurchasePlanResponse> planInfo() {
-        return this.planInfo == null ? Optional.empty() : Optional.ofNullable(this.planInfo);
+        return Optional.ofNullable(this.planInfo);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="sku")
-      private final @Nullable String sku;
+    private @Nullable String sku;
 
     public Optional<String> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -81,91 +81,75 @@ public final class ImageTemplatePlatformImageSourceResponse extends com.pulumi.r
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ImageTemplatePlatformImageSourceResponse(
-        @Nullable String offer,
-        @Nullable PlatformImagePurchasePlanResponse planInfo,
-        @Nullable String publisher,
-        @Nullable String sku,
-        String type,
-        @Nullable String version) {
-        this.offer = offer;
-        this.planInfo = planInfo;
-        this.publisher = publisher;
-        this.sku = sku;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.version = version;
-    }
+    private ImageTemplatePlatformImageSourceResponse() {}
 
-    private ImageTemplatePlatformImageSourceResponse() {
-        this.offer = null;
-        this.planInfo = null;
-        this.publisher = null;
-        this.sku = null;
-        this.type = null;
-        this.version = null;
+    private ImageTemplatePlatformImageSourceResponse(ImageTemplatePlatformImageSourceResponse $) {
+        this.offer = $.offer;
+        this.planInfo = $.planInfo;
+        this.publisher = $.publisher;
+        this.sku = $.sku;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplatePlatformImageSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String offer;
-        private @Nullable PlatformImagePurchasePlanResponse planInfo;
-        private @Nullable String publisher;
-        private @Nullable String sku;
-        private String type;
-        private @Nullable String version;
+        private ImageTemplatePlatformImageSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplatePlatformImageSourceResponse();
         }
 
         public Builder(ImageTemplatePlatformImageSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offer = defaults.offer;
-    	      this.planInfo = defaults.planInfo;
-    	      this.publisher = defaults.publisher;
-    	      this.sku = defaults.sku;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new ImageTemplatePlatformImageSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder offer(@Nullable String offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
+
         public Builder planInfo(@Nullable PlatformImagePurchasePlanResponse planInfo) {
-            this.planInfo = planInfo;
+            $.planInfo = planInfo;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
+
         public Builder sku(@Nullable String sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ImageTemplatePlatformImageSourceResponse build() {
-            return new ImageTemplatePlatformImageSourceResponse(offer, planInfo, publisher, sku, type, version);
+        }
+
+        public ImageTemplatePlatformImageSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

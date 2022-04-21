@@ -17,7 +17,7 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="virtualMachineName", required=true)
-      private final String virtualMachineName;
+    private String virtualMachineName;
 
     public String virtualMachineName() {
         return this.virtualMachineName;
     }
 
-    public GetVirtualMachineArgs(
-        String resourceGroupName,
-        String virtualMachineName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachineName = Objects.requireNonNull(virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
-    }
+    private GetVirtualMachineArgs() {}
 
-    private GetVirtualMachineArgs() {
-        this.resourceGroupName = null;
-        this.virtualMachineName = null;
+    private GetVirtualMachineArgs(GetVirtualMachineArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachineName = $.virtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualMachineName;
+        private GetVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineArgs();
         }
 
         public Builder(GetVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachineName = defaults.virtualMachineName;
+            $ = new GetVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualMachineName(String virtualMachineName) {
-            this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
+            $.virtualMachineName = virtualMachineName;
             return this;
-        }        public GetVirtualMachineArgs build() {
-            return new GetVirtualMachineArgs(resourceGroupName, virtualMachineName);
+        }
+
+        public GetVirtualMachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachineName = Objects.requireNonNull($.virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
+            return $;
         }
     }
+
 }

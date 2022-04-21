@@ -5,12 +5,12 @@ package com.pulumi.gcp.identityplatform;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigArgs;
 import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -34,10 +34,10 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="idpConfig", required=true)
-      private final Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
+    private Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
     public Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig() {
         return this.idpConfig;
@@ -59,10 +59,10 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="spConfig", required=true)
-      private final Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
+    private Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
     public Output<TenantInboundSamlConfigSpConfigArgs> spConfig() {
         return this.spConfig;
@@ -95,128 +95,112 @@ public final class TenantInboundSamlConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tenant", required=true)
-      private final Output<String> tenant;
+    private Output<String> tenant;
 
     public Output<String> tenant() {
         return this.tenant;
     }
 
-    public TenantInboundSamlConfigArgs(
-        Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<TenantInboundSamlConfigSpConfigArgs> spConfig,
-        Output<String> tenant) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabled = enabled;
-        this.idpConfig = Objects.requireNonNull(idpConfig, "expected parameter 'idpConfig' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.spConfig = Objects.requireNonNull(spConfig, "expected parameter 'spConfig' to be non-null");
-        this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-    }
+    private TenantInboundSamlConfigArgs() {}
 
-    private TenantInboundSamlConfigArgs() {
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.idpConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.spConfig = Codegen.empty();
-        this.tenant = Codegen.empty();
+    private TenantInboundSamlConfigArgs(TenantInboundSamlConfigArgs $) {
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.idpConfig = $.idpConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.spConfig = $.spConfig;
+        this.tenant = $.tenant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantInboundSamlConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
-        private Output<String> tenant;
+        private TenantInboundSamlConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantInboundSamlConfigArgs();
         }
 
         public Builder(TenantInboundSamlConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.idpConfig = defaults.idpConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.spConfig = defaults.spConfig;
-    	      this.tenant = defaults.tenant;
+            $ = new TenantInboundSamlConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder idpConfig(Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
-            this.idpConfig = Objects.requireNonNull(idpConfig);
+            $.idpConfig = idpConfig;
             return this;
         }
+
         public Builder idpConfig(TenantInboundSamlConfigIdpConfigArgs idpConfig) {
-            this.idpConfig = Output.of(Objects.requireNonNull(idpConfig));
-            return this;
+            return idpConfig(Output.of(idpConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder spConfig(Output<TenantInboundSamlConfigSpConfigArgs> spConfig) {
-            this.spConfig = Objects.requireNonNull(spConfig);
+            $.spConfig = spConfig;
             return this;
         }
+
         public Builder spConfig(TenantInboundSamlConfigSpConfigArgs spConfig) {
-            this.spConfig = Output.of(Objects.requireNonNull(spConfig));
-            return this;
+            return spConfig(Output.of(spConfig));
         }
+
         public Builder tenant(Output<String> tenant) {
-            this.tenant = Objects.requireNonNull(tenant);
+            $.tenant = tenant;
             return this;
         }
+
         public Builder tenant(String tenant) {
-            this.tenant = Output.of(Objects.requireNonNull(tenant));
-            return this;
-        }        public TenantInboundSamlConfigArgs build() {
-            return new TenantInboundSamlConfigArgs(displayName, enabled, idpConfig, name, project, spConfig, tenant);
+            return tenant(Output.of(tenant));
+        }
+
+        public TenantInboundSamlConfigArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.idpConfig = Objects.requireNonNull($.idpConfig, "expected parameter 'idpConfig' to be non-null");
+            $.spConfig = Objects.requireNonNull($.spConfig, "expected parameter 'spConfig' to be non-null");
+            $.tenant = Objects.requireNonNull($.tenant, "expected parameter 'tenant' to be non-null");
+            return $;
         }
     }
+
 }

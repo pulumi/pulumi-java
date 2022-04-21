@@ -15,62 +15,58 @@ public final class GetBillingAccountIamPolicyArgs extends com.pulumi.resources.I
     public static final GetBillingAccountIamPolicyArgs Empty = new GetBillingAccountIamPolicyArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    public GetBillingAccountIamPolicyArgs(
-        String billingAccountId,
-        @Nullable String optionsRequestedPolicyVersion) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-    }
+    private GetBillingAccountIamPolicyArgs() {}
 
-    private GetBillingAccountIamPolicyArgs() {
-        this.billingAccountId = null;
-        this.optionsRequestedPolicyVersion = null;
+    private GetBillingAccountIamPolicyArgs(GetBillingAccountIamPolicyArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingAccountIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
-        private @Nullable String optionsRequestedPolicyVersion;
+        private GetBillingAccountIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingAccountIamPolicyArgs();
         }
 
         public Builder(GetBillingAccountIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
+            $ = new GetBillingAccountIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
-        }        public GetBillingAccountIamPolicyArgs build() {
-            return new GetBillingAccountIamPolicyArgs(billingAccountId, optionsRequestedPolicyVersion);
+        }
+
+        public GetBillingAccountIamPolicyArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enableCrossZoneUpgrade")
-      private final @Nullable Output<Boolean> enableCrossZoneUpgrade;
+    private @Nullable Output<Boolean> enableCrossZoneUpgrade;
 
-    public Output<Boolean> enableCrossZoneUpgrade() {
-        return this.enableCrossZoneUpgrade == null ? Codegen.empty() : this.enableCrossZoneUpgrade;
+    public Optional<Output<Boolean>> enableCrossZoneUpgrade() {
+        return Optional.ofNullable(this.enableCrossZoneUpgrade);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxBatchInstancePercent")
-      private final @Nullable Output<Integer> maxBatchInstancePercent;
+    private @Nullable Output<Integer> maxBatchInstancePercent;
 
-    public Output<Integer> maxBatchInstancePercent() {
-        return this.maxBatchInstancePercent == null ? Codegen.empty() : this.maxBatchInstancePercent;
+    public Optional<Output<Integer>> maxBatchInstancePercent() {
+        return Optional.ofNullable(this.maxBatchInstancePercent);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxUnhealthyInstancePercent")
-      private final @Nullable Output<Integer> maxUnhealthyInstancePercent;
+    private @Nullable Output<Integer> maxUnhealthyInstancePercent;
 
-    public Output<Integer> maxUnhealthyInstancePercent() {
-        return this.maxUnhealthyInstancePercent == null ? Codegen.empty() : this.maxUnhealthyInstancePercent;
+    public Optional<Output<Integer>> maxUnhealthyInstancePercent() {
+        return Optional.ofNullable(this.maxUnhealthyInstancePercent);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxUnhealthyUpgradedInstancePercent")
-      private final @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
+    private @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
 
-    public Output<Integer> maxUnhealthyUpgradedInstancePercent() {
-        return this.maxUnhealthyUpgradedInstancePercent == null ? Codegen.empty() : this.maxUnhealthyUpgradedInstancePercent;
+    public Optional<Output<Integer>> maxUnhealthyUpgradedInstancePercent() {
+        return Optional.ofNullable(this.maxUnhealthyUpgradedInstancePercent);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="pauseTimeBetweenBatches")
-      private final @Nullable Output<String> pauseTimeBetweenBatches;
+    private @Nullable Output<String> pauseTimeBetweenBatches;
 
-    public Output<String> pauseTimeBetweenBatches() {
-        return this.pauseTimeBetweenBatches == null ? Codegen.empty() : this.pauseTimeBetweenBatches;
+    public Optional<Output<String>> pauseTimeBetweenBatches() {
+        return Optional.ofNullable(this.pauseTimeBetweenBatches);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class RollingUpgradePolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="prioritizeUnhealthyInstances")
-      private final @Nullable Output<Boolean> prioritizeUnhealthyInstances;
+    private @Nullable Output<Boolean> prioritizeUnhealthyInstances;
 
-    public Output<Boolean> prioritizeUnhealthyInstances() {
-        return this.prioritizeUnhealthyInstances == null ? Codegen.empty() : this.prioritizeUnhealthyInstances;
+    public Optional<Output<Boolean>> prioritizeUnhealthyInstances() {
+        return Optional.ofNullable(this.prioritizeUnhealthyInstances);
     }
 
-    public RollingUpgradePolicyArgs(
-        @Nullable Output<Boolean> enableCrossZoneUpgrade,
-        @Nullable Output<Integer> maxBatchInstancePercent,
-        @Nullable Output<Integer> maxUnhealthyInstancePercent,
-        @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent,
-        @Nullable Output<String> pauseTimeBetweenBatches,
-        @Nullable Output<Boolean> prioritizeUnhealthyInstances) {
-        this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
-        this.maxBatchInstancePercent = maxBatchInstancePercent;
-        this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
-        this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
-        this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
-        this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
-    }
+    private RollingUpgradePolicyArgs() {}
 
-    private RollingUpgradePolicyArgs() {
-        this.enableCrossZoneUpgrade = Codegen.empty();
-        this.maxBatchInstancePercent = Codegen.empty();
-        this.maxUnhealthyInstancePercent = Codegen.empty();
-        this.maxUnhealthyUpgradedInstancePercent = Codegen.empty();
-        this.pauseTimeBetweenBatches = Codegen.empty();
-        this.prioritizeUnhealthyInstances = Codegen.empty();
+    private RollingUpgradePolicyArgs(RollingUpgradePolicyArgs $) {
+        this.enableCrossZoneUpgrade = $.enableCrossZoneUpgrade;
+        this.maxBatchInstancePercent = $.maxBatchInstancePercent;
+        this.maxUnhealthyInstancePercent = $.maxUnhealthyInstancePercent;
+        this.maxUnhealthyUpgradedInstancePercent = $.maxUnhealthyUpgradedInstancePercent;
+        this.pauseTimeBetweenBatches = $.pauseTimeBetweenBatches;
+        this.prioritizeUnhealthyInstances = $.prioritizeUnhealthyInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RollingUpgradePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableCrossZoneUpgrade;
-        private @Nullable Output<Integer> maxBatchInstancePercent;
-        private @Nullable Output<Integer> maxUnhealthyInstancePercent;
-        private @Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent;
-        private @Nullable Output<String> pauseTimeBetweenBatches;
-        private @Nullable Output<Boolean> prioritizeUnhealthyInstances;
+        private RollingUpgradePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RollingUpgradePolicyArgs();
         }
 
         public Builder(RollingUpgradePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableCrossZoneUpgrade = defaults.enableCrossZoneUpgrade;
-    	      this.maxBatchInstancePercent = defaults.maxBatchInstancePercent;
-    	      this.maxUnhealthyInstancePercent = defaults.maxUnhealthyInstancePercent;
-    	      this.maxUnhealthyUpgradedInstancePercent = defaults.maxUnhealthyUpgradedInstancePercent;
-    	      this.pauseTimeBetweenBatches = defaults.pauseTimeBetweenBatches;
-    	      this.prioritizeUnhealthyInstances = defaults.prioritizeUnhealthyInstances;
+            $ = new RollingUpgradePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableCrossZoneUpgrade(@Nullable Output<Boolean> enableCrossZoneUpgrade) {
-            this.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
+            $.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
-        public Builder enableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
-            this.enableCrossZoneUpgrade = Codegen.ofNullable(enableCrossZoneUpgrade);
-            return this;
+
+        public Builder enableCrossZoneUpgrade(Boolean enableCrossZoneUpgrade) {
+            return enableCrossZoneUpgrade(Output.of(enableCrossZoneUpgrade));
         }
+
         public Builder maxBatchInstancePercent(@Nullable Output<Integer> maxBatchInstancePercent) {
-            this.maxBatchInstancePercent = maxBatchInstancePercent;
+            $.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
-        public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
-            this.maxBatchInstancePercent = Codegen.ofNullable(maxBatchInstancePercent);
-            return this;
+
+        public Builder maxBatchInstancePercent(Integer maxBatchInstancePercent) {
+            return maxBatchInstancePercent(Output.of(maxBatchInstancePercent));
         }
+
         public Builder maxUnhealthyInstancePercent(@Nullable Output<Integer> maxUnhealthyInstancePercent) {
-            this.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
+            $.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
-        public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
-            this.maxUnhealthyInstancePercent = Codegen.ofNullable(maxUnhealthyInstancePercent);
-            return this;
+
+        public Builder maxUnhealthyInstancePercent(Integer maxUnhealthyInstancePercent) {
+            return maxUnhealthyInstancePercent(Output.of(maxUnhealthyInstancePercent));
         }
+
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Output<Integer> maxUnhealthyUpgradedInstancePercent) {
-            this.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
+            $.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
-        public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
-            this.maxUnhealthyUpgradedInstancePercent = Codegen.ofNullable(maxUnhealthyUpgradedInstancePercent);
-            return this;
+
+        public Builder maxUnhealthyUpgradedInstancePercent(Integer maxUnhealthyUpgradedInstancePercent) {
+            return maxUnhealthyUpgradedInstancePercent(Output.of(maxUnhealthyUpgradedInstancePercent));
         }
+
         public Builder pauseTimeBetweenBatches(@Nullable Output<String> pauseTimeBetweenBatches) {
-            this.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
+            $.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
-        public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
-            this.pauseTimeBetweenBatches = Codegen.ofNullable(pauseTimeBetweenBatches);
-            return this;
+
+        public Builder pauseTimeBetweenBatches(String pauseTimeBetweenBatches) {
+            return pauseTimeBetweenBatches(Output.of(pauseTimeBetweenBatches));
         }
+
         public Builder prioritizeUnhealthyInstances(@Nullable Output<Boolean> prioritizeUnhealthyInstances) {
-            this.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
+            $.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;
         }
-        public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
-            this.prioritizeUnhealthyInstances = Codegen.ofNullable(prioritizeUnhealthyInstances);
-            return this;
-        }        public RollingUpgradePolicyArgs build() {
-            return new RollingUpgradePolicyArgs(enableCrossZoneUpgrade, maxBatchInstancePercent, maxUnhealthyInstancePercent, maxUnhealthyUpgradedInstancePercent, pauseTimeBetweenBatches, prioritizeUnhealthyInstances);
+
+        public Builder prioritizeUnhealthyInstances(Boolean prioritizeUnhealthyInstances) {
+            return prioritizeUnhealthyInstances(Output.of(prioritizeUnhealthyInstances));
+        }
+
+        public RollingUpgradePolicyArgs build() {
+            return $;
         }
     }
+
 }

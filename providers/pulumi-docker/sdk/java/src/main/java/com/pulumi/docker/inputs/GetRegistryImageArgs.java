@@ -16,62 +16,58 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
     @Import(name="insecureSkipVerify")
-      private final @Nullable Boolean insecureSkipVerify;
+    private @Nullable Boolean insecureSkipVerify;
 
     public Optional<Boolean> insecureSkipVerify() {
-        return this.insecureSkipVerify == null ? Optional.empty() : Optional.ofNullable(this.insecureSkipVerify);
+        return Optional.ofNullable(this.insecureSkipVerify);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetRegistryImageArgs(
-        @Nullable Boolean insecureSkipVerify,
-        String name) {
-        this.insecureSkipVerify = insecureSkipVerify;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetRegistryImageArgs() {}
 
-    private GetRegistryImageArgs() {
-        this.insecureSkipVerify = null;
-        this.name = null;
+    private GetRegistryImageArgs(GetRegistryImageArgs $) {
+        this.insecureSkipVerify = $.insecureSkipVerify;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistryImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean insecureSkipVerify;
-        private String name;
+        private GetRegistryImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistryImageArgs();
         }
 
         public Builder(GetRegistryImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insecureSkipVerify = defaults.insecureSkipVerify;
-    	      this.name = defaults.name;
+            $ = new GetRegistryImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
-            this.insecureSkipVerify = insecureSkipVerify;
+            $.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetRegistryImageArgs build() {
-            return new GetRegistryImageArgs(insecureSkipVerify, name);
+        }
+
+        public GetRegistryImageArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

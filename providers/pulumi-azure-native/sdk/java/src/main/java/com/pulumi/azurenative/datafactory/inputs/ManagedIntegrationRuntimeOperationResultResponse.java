@@ -22,7 +22,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
      * 
      */
     @Import(name="activityId", required=true)
-      private final String activityId;
+    private String activityId;
 
     public String activityId() {
         return this.activityId;
@@ -33,7 +33,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
      * 
      */
     @Import(name="errorCode", required=true)
-      private final String errorCode;
+    private String errorCode;
 
     public String errorCode() {
         return this.errorCode;
@@ -44,7 +44,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<String> parameters;
+    private List<String> parameters;
 
     public List<String> parameters() {
         return this.parameters;
@@ -55,7 +55,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
      * 
      */
     @Import(name="result", required=true)
-      private final String result;
+    private String result;
 
     public String result() {
         return this.result;
@@ -66,7 +66,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -77,94 +77,84 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends com.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedIntegrationRuntimeOperationResultResponse(
-        String activityId,
-        String errorCode,
-        List<String> parameters,
-        String result,
-        String startTime,
-        String type) {
-        this.activityId = Objects.requireNonNull(activityId, "expected parameter 'activityId' to be non-null");
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.result = Objects.requireNonNull(result, "expected parameter 'result' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagedIntegrationRuntimeOperationResultResponse() {}
 
-    private ManagedIntegrationRuntimeOperationResultResponse() {
-        this.activityId = null;
-        this.errorCode = null;
-        this.parameters = List.of();
-        this.result = null;
-        this.startTime = null;
-        this.type = null;
+    private ManagedIntegrationRuntimeOperationResultResponse(ManagedIntegrationRuntimeOperationResultResponse $) {
+        this.activityId = $.activityId;
+        this.errorCode = $.errorCode;
+        this.parameters = $.parameters;
+        this.result = $.result;
+        this.startTime = $.startTime;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIntegrationRuntimeOperationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activityId;
-        private String errorCode;
-        private List<String> parameters;
-        private String result;
-        private String startTime;
-        private String type;
+        private ManagedIntegrationRuntimeOperationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIntegrationRuntimeOperationResultResponse();
         }
 
         public Builder(ManagedIntegrationRuntimeOperationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activityId = defaults.activityId;
-    	      this.errorCode = defaults.errorCode;
-    	      this.parameters = defaults.parameters;
-    	      this.result = defaults.result;
-    	      this.startTime = defaults.startTime;
-    	      this.type = defaults.type;
+            $ = new ManagedIntegrationRuntimeOperationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activityId(String activityId) {
-            this.activityId = Objects.requireNonNull(activityId);
+            $.activityId = activityId;
             return this;
         }
+
         public Builder errorCode(String errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder parameters(List<String> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(String... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder result(String result) {
-            this.result = Objects.requireNonNull(result);
+            $.result = result;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedIntegrationRuntimeOperationResultResponse build() {
-            return new ManagedIntegrationRuntimeOperationResultResponse(activityId, errorCode, parameters, result, startTime, type);
+        }
+
+        public ManagedIntegrationRuntimeOperationResultResponse build() {
+            $.activityId = Objects.requireNonNull($.activityId, "expected parameter 'activityId' to be non-null");
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.result = Objects.requireNonNull($.result, "expected parameter 'result' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

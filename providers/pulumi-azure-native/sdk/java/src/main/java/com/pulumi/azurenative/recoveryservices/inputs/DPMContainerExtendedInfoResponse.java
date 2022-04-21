@@ -23,45 +23,44 @@ public final class DPMContainerExtendedInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastRefreshedAt")
-      private final @Nullable String lastRefreshedAt;
+    private @Nullable String lastRefreshedAt;
 
     public Optional<String> lastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
+        return Optional.ofNullable(this.lastRefreshedAt);
     }
 
-    public DPMContainerExtendedInfoResponse(@Nullable String lastRefreshedAt) {
-        this.lastRefreshedAt = lastRefreshedAt;
-    }
+    private DPMContainerExtendedInfoResponse() {}
 
-    private DPMContainerExtendedInfoResponse() {
-        this.lastRefreshedAt = null;
+    private DPMContainerExtendedInfoResponse(DPMContainerExtendedInfoResponse $) {
+        this.lastRefreshedAt = $.lastRefreshedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DPMContainerExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lastRefreshedAt;
+        private DPMContainerExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DPMContainerExtendedInfoResponse();
         }
 
         public Builder(DPMContainerExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastRefreshedAt = defaults.lastRefreshedAt;
+            $ = new DPMContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = lastRefreshedAt;
+            $.lastRefreshedAt = lastRefreshedAt;
             return this;
-        }        public DPMContainerExtendedInfoResponse build() {
-            return new DPMContainerExtendedInfoResponse(lastRefreshedAt);
+        }
+
+        public DPMContainerExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

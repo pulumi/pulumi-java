@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="associateCarrierIpAddress")
-      private final @Nullable Output<String> associateCarrierIpAddress;
+    private @Nullable Output<String> associateCarrierIpAddress;
 
-    public Output<String> associateCarrierIpAddress() {
-        return this.associateCarrierIpAddress == null ? Codegen.empty() : this.associateCarrierIpAddress;
+    public Optional<Output<String>> associateCarrierIpAddress() {
+        return Optional.ofNullable(this.associateCarrierIpAddress);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="associatePublicIpAddress")
-      private final @Nullable Output<String> associatePublicIpAddress;
+    private @Nullable Output<String> associatePublicIpAddress;
 
-    public Output<String> associatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
+    public Optional<Output<String>> associatePublicIpAddress() {
+        return Optional.ofNullable(this.associatePublicIpAddress);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<String> deleteOnTermination;
+    private @Nullable Output<String> deleteOnTermination;
 
-    public Output<String> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<String>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="deviceIndex")
-      private final @Nullable Output<Integer> deviceIndex;
+    private @Nullable Output<Integer> deviceIndex;
 
-    public Output<Integer> deviceIndex() {
-        return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
+    public Optional<Output<Integer>> deviceIndex() {
+        return Optional.ofNullable(this.deviceIndex);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="interfaceType")
-      private final @Nullable Output<String> interfaceType;
+    private @Nullable Output<String> interfaceType;
 
-    public Output<String> interfaceType() {
-        return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
+    public Optional<Output<String>> interfaceType() {
+        return Optional.ofNullable(this.interfaceType);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ipv4AddressCount")
-      private final @Nullable Output<Integer> ipv4AddressCount;
+    private @Nullable Output<Integer> ipv4AddressCount;
 
-    public Output<Integer> ipv4AddressCount() {
-        return this.ipv4AddressCount == null ? Codegen.empty() : this.ipv4AddressCount;
+    public Optional<Output<Integer>> ipv4AddressCount() {
+        return Optional.ofNullable(this.ipv4AddressCount);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ipv4Addresses")
-      private final @Nullable Output<List<String>> ipv4Addresses;
+    private @Nullable Output<List<String>> ipv4Addresses;
 
-    public Output<List<String>> ipv4Addresses() {
-        return this.ipv4Addresses == null ? Codegen.empty() : this.ipv4Addresses;
+    public Optional<Output<List<String>>> ipv4Addresses() {
+        return Optional.ofNullable(this.ipv4Addresses);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ipv6AddressCount")
-      private final @Nullable Output<Integer> ipv6AddressCount;
+    private @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> ipv6AddressCount() {
-        return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
+    public Optional<Output<Integer>> ipv6AddressCount() {
+        return Optional.ofNullable(this.ipv6AddressCount);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ipv6Addresses")
-      private final @Nullable Output<List<String>> ipv6Addresses;
+    private @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> ipv6Addresses() {
-        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
+    public Optional<Output<List<String>>> ipv6Addresses() {
+        return Optional.ofNullable(this.ipv6Addresses);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="networkCardIndex")
-      private final @Nullable Output<Integer> networkCardIndex;
+    private @Nullable Output<Integer> networkCardIndex;
 
-    public Output<Integer> networkCardIndex() {
-        return this.networkCardIndex == null ? Codegen.empty() : this.networkCardIndex;
+    public Optional<Output<Integer>> networkCardIndex() {
+        return Optional.ofNullable(this.networkCardIndex);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable Output<String> privateIpAddress;
+    private @Nullable Output<String> privateIpAddress;
 
-    public Output<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
+    public Optional<Output<String>> privateIpAddress() {
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -176,241 +176,200 @@ public final class LaunchTemplateNetworkInterfaceArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public LaunchTemplateNetworkInterfaceArgs(
-        @Nullable Output<String> associateCarrierIpAddress,
-        @Nullable Output<String> associatePublicIpAddress,
-        @Nullable Output<String> deleteOnTermination,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> deviceIndex,
-        @Nullable Output<String> interfaceType,
-        @Nullable Output<Integer> ipv4AddressCount,
-        @Nullable Output<List<String>> ipv4Addresses,
-        @Nullable Output<Integer> ipv6AddressCount,
-        @Nullable Output<List<String>> ipv6Addresses,
-        @Nullable Output<Integer> networkCardIndex,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<String> privateIpAddress,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<String> subnetId) {
-        this.associateCarrierIpAddress = associateCarrierIpAddress;
-        this.associatePublicIpAddress = associatePublicIpAddress;
-        this.deleteOnTermination = deleteOnTermination;
-        this.description = description;
-        this.deviceIndex = deviceIndex;
-        this.interfaceType = interfaceType;
-        this.ipv4AddressCount = ipv4AddressCount;
-        this.ipv4Addresses = ipv4Addresses;
-        this.ipv6AddressCount = ipv6AddressCount;
-        this.ipv6Addresses = ipv6Addresses;
-        this.networkCardIndex = networkCardIndex;
-        this.networkInterfaceId = networkInterfaceId;
-        this.privateIpAddress = privateIpAddress;
-        this.securityGroups = securityGroups;
-        this.subnetId = subnetId;
-    }
+    private LaunchTemplateNetworkInterfaceArgs() {}
 
-    private LaunchTemplateNetworkInterfaceArgs() {
-        this.associateCarrierIpAddress = Codegen.empty();
-        this.associatePublicIpAddress = Codegen.empty();
-        this.deleteOnTermination = Codegen.empty();
-        this.description = Codegen.empty();
-        this.deviceIndex = Codegen.empty();
-        this.interfaceType = Codegen.empty();
-        this.ipv4AddressCount = Codegen.empty();
-        this.ipv4Addresses = Codegen.empty();
-        this.ipv6AddressCount = Codegen.empty();
-        this.ipv6Addresses = Codegen.empty();
-        this.networkCardIndex = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private LaunchTemplateNetworkInterfaceArgs(LaunchTemplateNetworkInterfaceArgs $) {
+        this.associateCarrierIpAddress = $.associateCarrierIpAddress;
+        this.associatePublicIpAddress = $.associatePublicIpAddress;
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.description = $.description;
+        this.deviceIndex = $.deviceIndex;
+        this.interfaceType = $.interfaceType;
+        this.ipv4AddressCount = $.ipv4AddressCount;
+        this.ipv4Addresses = $.ipv4Addresses;
+        this.ipv6AddressCount = $.ipv6AddressCount;
+        this.ipv6Addresses = $.ipv6Addresses;
+        this.networkCardIndex = $.networkCardIndex;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.privateIpAddress = $.privateIpAddress;
+        this.securityGroups = $.securityGroups;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateNetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> associateCarrierIpAddress;
-        private @Nullable Output<String> associatePublicIpAddress;
-        private @Nullable Output<String> deleteOnTermination;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> deviceIndex;
-        private @Nullable Output<String> interfaceType;
-        private @Nullable Output<Integer> ipv4AddressCount;
-        private @Nullable Output<List<String>> ipv4Addresses;
-        private @Nullable Output<Integer> ipv6AddressCount;
-        private @Nullable Output<List<String>> ipv6Addresses;
-        private @Nullable Output<Integer> networkCardIndex;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<String> privateIpAddress;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<String> subnetId;
+        private LaunchTemplateNetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateNetworkInterfaceArgs();
         }
 
         public Builder(LaunchTemplateNetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associateCarrierIpAddress = defaults.associateCarrierIpAddress;
-    	      this.associatePublicIpAddress = defaults.associatePublicIpAddress;
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.description = defaults.description;
-    	      this.deviceIndex = defaults.deviceIndex;
-    	      this.interfaceType = defaults.interfaceType;
-    	      this.ipv4AddressCount = defaults.ipv4AddressCount;
-    	      this.ipv4Addresses = defaults.ipv4Addresses;
-    	      this.ipv6AddressCount = defaults.ipv6AddressCount;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
-    	      this.networkCardIndex = defaults.networkCardIndex;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetId = defaults.subnetId;
+            $ = new LaunchTemplateNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associateCarrierIpAddress(@Nullable Output<String> associateCarrierIpAddress) {
-            this.associateCarrierIpAddress = associateCarrierIpAddress;
+            $.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
-        public Builder associateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
-            this.associateCarrierIpAddress = Codegen.ofNullable(associateCarrierIpAddress);
-            return this;
+
+        public Builder associateCarrierIpAddress(String associateCarrierIpAddress) {
+            return associateCarrierIpAddress(Output.of(associateCarrierIpAddress));
         }
+
         public Builder associatePublicIpAddress(@Nullable Output<String> associatePublicIpAddress) {
-            this.associatePublicIpAddress = associatePublicIpAddress;
+            $.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
-        public Builder associatePublicIpAddress(@Nullable String associatePublicIpAddress) {
-            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
-            return this;
+
+        public Builder associatePublicIpAddress(String associatePublicIpAddress) {
+            return associatePublicIpAddress(Output.of(associatePublicIpAddress));
         }
+
         public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(String deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
-            this.deviceIndex = deviceIndex;
+            $.deviceIndex = deviceIndex;
             return this;
         }
-        public Builder deviceIndex(@Nullable Integer deviceIndex) {
-            this.deviceIndex = Codegen.ofNullable(deviceIndex);
-            return this;
+
+        public Builder deviceIndex(Integer deviceIndex) {
+            return deviceIndex(Output.of(deviceIndex));
         }
+
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
-            this.interfaceType = interfaceType;
+            $.interfaceType = interfaceType;
             return this;
         }
-        public Builder interfaceType(@Nullable String interfaceType) {
-            this.interfaceType = Codegen.ofNullable(interfaceType);
-            return this;
+
+        public Builder interfaceType(String interfaceType) {
+            return interfaceType(Output.of(interfaceType));
         }
+
         public Builder ipv4AddressCount(@Nullable Output<Integer> ipv4AddressCount) {
-            this.ipv4AddressCount = ipv4AddressCount;
+            $.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
-        public Builder ipv4AddressCount(@Nullable Integer ipv4AddressCount) {
-            this.ipv4AddressCount = Codegen.ofNullable(ipv4AddressCount);
-            return this;
+
+        public Builder ipv4AddressCount(Integer ipv4AddressCount) {
+            return ipv4AddressCount(Output.of(ipv4AddressCount));
         }
+
         public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
-            this.ipv4Addresses = ipv4Addresses;
+            $.ipv4Addresses = ipv4Addresses;
             return this;
         }
-        public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Codegen.ofNullable(ipv4Addresses);
-            return this;
+
+        public Builder ipv4Addresses(List<String> ipv4Addresses) {
+            return ipv4Addresses(Output.of(ipv4Addresses));
         }
+
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
+
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
-            this.ipv6AddressCount = ipv6AddressCount;
+            $.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Codegen.ofNullable(ipv6AddressCount);
-            return this;
+
+        public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+            return ipv6AddressCount(Output.of(ipv6AddressCount));
         }
+
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
-            this.ipv6Addresses = ipv6Addresses;
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
-        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
-            return this;
+
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
+            return ipv6Addresses(Output.of(ipv6Addresses));
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
+
         public Builder networkCardIndex(@Nullable Output<Integer> networkCardIndex) {
-            this.networkCardIndex = networkCardIndex;
+            $.networkCardIndex = networkCardIndex;
             return this;
         }
-        public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
-            this.networkCardIndex = Codegen.ofNullable(networkCardIndex);
-            return this;
+
+        public Builder networkCardIndex(Integer networkCardIndex) {
+            return networkCardIndex(Output.of(networkCardIndex));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
-        public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
-            return this;
+
+        public Builder privateIpAddress(String privateIpAddress) {
+            return privateIpAddress(Output.of(privateIpAddress));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public LaunchTemplateNetworkInterfaceArgs build() {
-            return new LaunchTemplateNetworkInterfaceArgs(associateCarrierIpAddress, associatePublicIpAddress, deleteOnTermination, description, deviceIndex, interfaceType, ipv4AddressCount, ipv4Addresses, ipv6AddressCount, ipv6Addresses, networkCardIndex, networkInterfaceId, privateIpAddress, securityGroups, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public LaunchTemplateNetworkInterfaceArgs build() {
+            return $;
         }
     }
+
 }

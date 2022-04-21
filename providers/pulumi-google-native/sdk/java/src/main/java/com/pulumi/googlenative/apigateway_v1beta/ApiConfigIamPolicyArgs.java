@@ -5,13 +5,13 @@ package com.pulumi.googlenative.apigateway_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayAuditConfigArgs;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
     public static final ApiConfigIamPolicyArgs Empty = new ApiConfigIamPolicyArgs();
 
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,10 +31,10 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="auditConfigs")
-      private final @Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs;
+    private @Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs;
 
-    public Output<List<ApigatewayAuditConfigArgs>> auditConfigs() {
-        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
+    public Optional<Output<List<ApigatewayAuditConfigArgs>>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -42,14 +42,14 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<ApigatewayBindingArgs>> bindings;
+    private @Nullable Output<List<ApigatewayBindingArgs>> bindings;
 
-    public Output<List<ApigatewayBindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<ApigatewayBindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     @Import(name="configId", required=true)
-      private final Output<String> configId;
+    private Output<String> configId;
 
     public Output<String> configId() {
         return this.configId;
@@ -60,24 +60,24 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="updateMask")
-      private final @Nullable Output<String> updateMask;
+    private @Nullable Output<String> updateMask;
 
-    public Output<String> updateMask() {
-        return this.updateMask == null ? Codegen.empty() : this.updateMask;
+    public Optional<Output<String>> updateMask() {
+        return Optional.ofNullable(this.updateMask);
     }
 
     /**
@@ -96,160 +96,138 @@ public final class ApiConfigIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ApiConfigIamPolicyArgs(
-        Output<String> apiId,
-        @Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs,
-        @Nullable Output<List<ApigatewayBindingArgs>> bindings,
-        Output<String> configId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> updateMask,
-        @Nullable Output<Integer> version) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.auditConfigs = auditConfigs;
-        this.bindings = bindings;
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.etag = etag;
-        this.location = location;
-        this.project = project;
-        this.updateMask = updateMask;
-        this.version = version;
-    }
+    private ApiConfigIamPolicyArgs() {}
 
-    private ApiConfigIamPolicyArgs() {
-        this.apiId = Codegen.empty();
-        this.auditConfigs = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.configId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.updateMask = Codegen.empty();
-        this.version = Codegen.empty();
+    private ApiConfigIamPolicyArgs(ApiConfigIamPolicyArgs $) {
+        this.apiId = $.apiId;
+        this.auditConfigs = $.auditConfigs;
+        this.bindings = $.bindings;
+        this.configId = $.configId;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.project = $.project;
+        this.updateMask = $.updateMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs;
-        private @Nullable Output<List<ApigatewayBindingArgs>> bindings;
-        private Output<String> configId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> updateMask;
-        private @Nullable Output<Integer> version;
+        private ApiConfigIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigIamPolicyArgs();
         }
 
         public Builder(ApiConfigIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.auditConfigs = defaults.auditConfigs;
-    	      this.bindings = defaults.bindings;
-    	      this.configId = defaults.configId;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.updateMask = defaults.updateMask;
-    	      this.version = defaults.version;
+            $ = new ApiConfigIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder auditConfigs(@Nullable Output<List<ApigatewayAuditConfigArgs>> auditConfigs) {
-            this.auditConfigs = auditConfigs;
+            $.auditConfigs = auditConfigs;
             return this;
         }
-        public Builder auditConfigs(@Nullable List<ApigatewayAuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Codegen.ofNullable(auditConfigs);
-            return this;
+
+        public Builder auditConfigs(List<ApigatewayAuditConfigArgs> auditConfigs) {
+            return auditConfigs(Output.of(auditConfigs));
         }
+
         public Builder auditConfigs(ApigatewayAuditConfigArgs... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
+
         public Builder bindings(@Nullable Output<List<ApigatewayBindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<ApigatewayBindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<ApigatewayBindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(ApigatewayBindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder configId(Output<String> configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Output.of(Objects.requireNonNull(configId));
-            return this;
+            return configId(Output.of(configId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder updateMask(@Nullable Output<String> updateMask) {
-            this.updateMask = updateMask;
+            $.updateMask = updateMask;
             return this;
         }
-        public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Codegen.ofNullable(updateMask);
-            return this;
+
+        public Builder updateMask(String updateMask) {
+            return updateMask(Output.of(updateMask));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ApiConfigIamPolicyArgs build() {
-            return new ApiConfigIamPolicyArgs(apiId, auditConfigs, bindings, configId, etag, location, project, updateMask, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ApiConfigIamPolicyArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            return $;
         }
     }
+
 }

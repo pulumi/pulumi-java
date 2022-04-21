@@ -21,7 +21,7 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="config", required=true)
-      private final String config;
+    private String config;
 
     public String config() {
         return this.config;
@@ -32,7 +32,7 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="configTypeUrl", required=true)
-      private final String configTypeUrl;
+    private String configTypeUrl;
 
     public String configTypeUrl() {
         return this.configTypeUrl;
@@ -43,64 +43,59 @@ public final class HttpFilterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filterName", required=true)
-      private final String filterName;
+    private String filterName;
 
     public String filterName() {
         return this.filterName;
     }
 
-    public HttpFilterConfigResponse(
-        String config,
-        String configTypeUrl,
-        String filterName) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.configTypeUrl = Objects.requireNonNull(configTypeUrl, "expected parameter 'configTypeUrl' to be non-null");
-        this.filterName = Objects.requireNonNull(filterName, "expected parameter 'filterName' to be non-null");
-    }
+    private HttpFilterConfigResponse() {}
 
-    private HttpFilterConfigResponse() {
-        this.config = null;
-        this.configTypeUrl = null;
-        this.filterName = null;
+    private HttpFilterConfigResponse(HttpFilterConfigResponse $) {
+        this.config = $.config;
+        this.configTypeUrl = $.configTypeUrl;
+        this.filterName = $.filterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpFilterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String config;
-        private String configTypeUrl;
-        private String filterName;
+        private HttpFilterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpFilterConfigResponse();
         }
 
         public Builder(HttpFilterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.configTypeUrl = defaults.configTypeUrl;
-    	      this.filterName = defaults.filterName;
+            $ = new HttpFilterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(String config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder configTypeUrl(String configTypeUrl) {
-            this.configTypeUrl = Objects.requireNonNull(configTypeUrl);
+            $.configTypeUrl = configTypeUrl;
             return this;
         }
+
         public Builder filterName(String filterName) {
-            this.filterName = Objects.requireNonNull(filterName);
+            $.filterName = filterName;
             return this;
-        }        public HttpFilterConfigResponse build() {
-            return new HttpFilterConfigResponse(config, configTypeUrl, filterName);
+        }
+
+        public HttpFilterConfigResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.configTypeUrl = Objects.requireNonNull($.configTypeUrl, "expected parameter 'configTypeUrl' to be non-null");
+            $.filterName = Objects.requireNonNull($.filterName, "expected parameter 'filterName' to be non-null");
+            return $;
         }
     }
+
 }

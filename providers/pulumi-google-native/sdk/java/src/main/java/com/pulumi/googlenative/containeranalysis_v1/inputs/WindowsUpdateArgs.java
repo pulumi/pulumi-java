@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.CategoryArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.IdentityArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<List<CategoryArgs>> categories;
+    private @Nullable Output<List<CategoryArgs>> categories;
 
-    public Output<List<CategoryArgs>> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<List<CategoryArgs>>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kbArticleIds")
-      private final @Nullable Output<List<String>> kbArticleIds;
+    private @Nullable Output<List<String>> kbArticleIds;
 
-    public Output<List<String>> kbArticleIds() {
-        return this.kbArticleIds == null ? Codegen.empty() : this.kbArticleIds;
+    public Optional<Output<List<String>>> kbArticleIds() {
+        return Optional.ofNullable(this.kbArticleIds);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastPublishedTimestamp")
-      private final @Nullable Output<String> lastPublishedTimestamp;
+    private @Nullable Output<String> lastPublishedTimestamp;
 
-    public Output<String> lastPublishedTimestamp() {
-        return this.lastPublishedTimestamp == null ? Codegen.empty() : this.lastPublishedTimestamp;
+    public Optional<Output<String>> lastPublishedTimestamp() {
+        return Optional.ofNullable(this.lastPublishedTimestamp);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportUrl")
-      private final @Nullable Output<String> supportUrl;
+    private @Nullable Output<String> supportUrl;
 
-    public Output<String> supportUrl() {
-        return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
+    public Optional<Output<String>> supportUrl() {
+        return Optional.ofNullable(this.supportUrl);
     }
 
     /**
@@ -93,134 +93,116 @@ public final class WindowsUpdateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public WindowsUpdateArgs(
-        @Nullable Output<List<CategoryArgs>> categories,
-        @Nullable Output<String> description,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<List<String>> kbArticleIds,
-        @Nullable Output<String> lastPublishedTimestamp,
-        @Nullable Output<String> supportUrl,
-        @Nullable Output<String> title) {
-        this.categories = categories;
-        this.description = description;
-        this.identity = identity;
-        this.kbArticleIds = kbArticleIds;
-        this.lastPublishedTimestamp = lastPublishedTimestamp;
-        this.supportUrl = supportUrl;
-        this.title = title;
-    }
+    private WindowsUpdateArgs() {}
 
-    private WindowsUpdateArgs() {
-        this.categories = Codegen.empty();
-        this.description = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kbArticleIds = Codegen.empty();
-        this.lastPublishedTimestamp = Codegen.empty();
-        this.supportUrl = Codegen.empty();
-        this.title = Codegen.empty();
+    private WindowsUpdateArgs(WindowsUpdateArgs $) {
+        this.categories = $.categories;
+        this.description = $.description;
+        this.identity = $.identity;
+        this.kbArticleIds = $.kbArticleIds;
+        this.lastPublishedTimestamp = $.lastPublishedTimestamp;
+        this.supportUrl = $.supportUrl;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsUpdateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CategoryArgs>> categories;
-        private @Nullable Output<String> description;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<List<String>> kbArticleIds;
-        private @Nullable Output<String> lastPublishedTimestamp;
-        private @Nullable Output<String> supportUrl;
-        private @Nullable Output<String> title;
+        private WindowsUpdateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsUpdateArgs();
         }
 
         public Builder(WindowsUpdateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.description = defaults.description;
-    	      this.identity = defaults.identity;
-    	      this.kbArticleIds = defaults.kbArticleIds;
-    	      this.lastPublishedTimestamp = defaults.lastPublishedTimestamp;
-    	      this.supportUrl = defaults.supportUrl;
-    	      this.title = defaults.title;
+            $ = new WindowsUpdateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(@Nullable Output<List<CategoryArgs>> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable List<CategoryArgs> categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(List<CategoryArgs> categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder categories(CategoryArgs... categories) {
             return categories(List.of(categories));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kbArticleIds(@Nullable Output<List<String>> kbArticleIds) {
-            this.kbArticleIds = kbArticleIds;
+            $.kbArticleIds = kbArticleIds;
             return this;
         }
-        public Builder kbArticleIds(@Nullable List<String> kbArticleIds) {
-            this.kbArticleIds = Codegen.ofNullable(kbArticleIds);
-            return this;
+
+        public Builder kbArticleIds(List<String> kbArticleIds) {
+            return kbArticleIds(Output.of(kbArticleIds));
         }
+
         public Builder kbArticleIds(String... kbArticleIds) {
             return kbArticleIds(List.of(kbArticleIds));
         }
+
         public Builder lastPublishedTimestamp(@Nullable Output<String> lastPublishedTimestamp) {
-            this.lastPublishedTimestamp = lastPublishedTimestamp;
+            $.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
-        public Builder lastPublishedTimestamp(@Nullable String lastPublishedTimestamp) {
-            this.lastPublishedTimestamp = Codegen.ofNullable(lastPublishedTimestamp);
-            return this;
+
+        public Builder lastPublishedTimestamp(String lastPublishedTimestamp) {
+            return lastPublishedTimestamp(Output.of(lastPublishedTimestamp));
         }
+
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
-            this.supportUrl = supportUrl;
+            $.supportUrl = supportUrl;
             return this;
         }
-        public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Codegen.ofNullable(supportUrl);
-            return this;
+
+        public Builder supportUrl(String supportUrl) {
+            return supportUrl(Output.of(supportUrl));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public WindowsUpdateArgs build() {
-            return new WindowsUpdateArgs(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public WindowsUpdateArgs build() {
+            return $;
         }
     }
+
 }

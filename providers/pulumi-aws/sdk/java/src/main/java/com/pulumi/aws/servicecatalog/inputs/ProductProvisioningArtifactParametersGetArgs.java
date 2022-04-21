@@ -5,10 +5,10 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
      * 
      */
     @Import(name="disableTemplateValidation")
-      private final @Nullable Output<Boolean> disableTemplateValidation;
+    private @Nullable Output<Boolean> disableTemplateValidation;
 
-    public Output<Boolean> disableTemplateValidation() {
-        return this.disableTemplateValidation == null ? Codegen.empty() : this.disableTemplateValidation;
+    public Optional<Output<Boolean>> disableTemplateValidation() {
+        return Optional.ofNullable(this.disableTemplateValidation);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
      * 
      */
     @Import(name="templatePhysicalId")
-      private final @Nullable Output<String> templatePhysicalId;
+    private @Nullable Output<String> templatePhysicalId;
 
-    public Output<String> templatePhysicalId() {
-        return this.templatePhysicalId == null ? Codegen.empty() : this.templatePhysicalId;
+    public Optional<Output<String>> templatePhysicalId() {
+        return Optional.ofNullable(this.templatePhysicalId);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
      * 
      */
     @Import(name="templateUrl")
-      private final @Nullable Output<String> templateUrl;
+    private @Nullable Output<String> templateUrl;
 
-    public Output<String> templateUrl() {
-        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
+    public Optional<Output<String>> templateUrl() {
+        return Optional.ofNullable(this.templateUrl);
     }
 
     /**
@@ -76,115 +76,98 @@ public final class ProductProvisioningArtifactParametersGetArgs extends com.pulu
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProductProvisioningArtifactParametersGetArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disableTemplateValidation,
-        @Nullable Output<String> name,
-        @Nullable Output<String> templatePhysicalId,
-        @Nullable Output<String> templateUrl,
-        @Nullable Output<String> type) {
-        this.description = description;
-        this.disableTemplateValidation = disableTemplateValidation;
-        this.name = name;
-        this.templatePhysicalId = templatePhysicalId;
-        this.templateUrl = templateUrl;
-        this.type = type;
-    }
+    private ProductProvisioningArtifactParametersGetArgs() {}
 
-    private ProductProvisioningArtifactParametersGetArgs() {
-        this.description = Codegen.empty();
-        this.disableTemplateValidation = Codegen.empty();
-        this.name = Codegen.empty();
-        this.templatePhysicalId = Codegen.empty();
-        this.templateUrl = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProductProvisioningArtifactParametersGetArgs(ProductProvisioningArtifactParametersGetArgs $) {
+        this.description = $.description;
+        this.disableTemplateValidation = $.disableTemplateValidation;
+        this.name = $.name;
+        this.templatePhysicalId = $.templatePhysicalId;
+        this.templateUrl = $.templateUrl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductProvisioningArtifactParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disableTemplateValidation;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> templatePhysicalId;
-        private @Nullable Output<String> templateUrl;
-        private @Nullable Output<String> type;
+        private ProductProvisioningArtifactParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductProvisioningArtifactParametersGetArgs();
         }
 
         public Builder(ProductProvisioningArtifactParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disableTemplateValidation = defaults.disableTemplateValidation;
-    	      this.name = defaults.name;
-    	      this.templatePhysicalId = defaults.templatePhysicalId;
-    	      this.templateUrl = defaults.templateUrl;
-    	      this.type = defaults.type;
+            $ = new ProductProvisioningArtifactParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disableTemplateValidation(@Nullable Output<Boolean> disableTemplateValidation) {
-            this.disableTemplateValidation = disableTemplateValidation;
+            $.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
-        public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
-            this.disableTemplateValidation = Codegen.ofNullable(disableTemplateValidation);
-            return this;
+
+        public Builder disableTemplateValidation(Boolean disableTemplateValidation) {
+            return disableTemplateValidation(Output.of(disableTemplateValidation));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder templatePhysicalId(@Nullable Output<String> templatePhysicalId) {
-            this.templatePhysicalId = templatePhysicalId;
+            $.templatePhysicalId = templatePhysicalId;
             return this;
         }
-        public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
-            this.templatePhysicalId = Codegen.ofNullable(templatePhysicalId);
-            return this;
+
+        public Builder templatePhysicalId(String templatePhysicalId) {
+            return templatePhysicalId(Output.of(templatePhysicalId));
         }
+
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
-            this.templateUrl = templateUrl;
+            $.templateUrl = templateUrl;
             return this;
         }
-        public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Codegen.ofNullable(templateUrl);
-            return this;
+
+        public Builder templateUrl(String templateUrl) {
+            return templateUrl(Output.of(templateUrl));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProductProvisioningArtifactParametersGetArgs build() {
-            return new ProductProvisioningArtifactParametersGetArgs(description, disableTemplateValidation, name, templatePhysicalId, templateUrl, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProductProvisioningArtifactParametersGetArgs build() {
+            return $;
         }
     }
+
 }

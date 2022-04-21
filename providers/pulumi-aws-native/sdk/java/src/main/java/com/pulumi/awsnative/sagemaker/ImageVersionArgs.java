@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sagemaker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ImageVersionArgs extends com.pulumi.resources.ResourceArgs {
     public static final ImageVersionArgs Empty = new ImageVersionArgs();
 
     @Import(name="baseImage", required=true)
-      private final Output<String> baseImage;
+    private Output<String> baseImage;
 
     public Output<String> baseImage() {
         return this.baseImage;
     }
 
     @Import(name="imageName", required=true)
-      private final Output<String> imageName;
+    private Output<String> imageName;
 
     public Output<String> imageName() {
         return this.imageName;
     }
 
-    public ImageVersionArgs(
-        Output<String> baseImage,
-        Output<String> imageName) {
-        this.baseImage = Objects.requireNonNull(baseImage, "expected parameter 'baseImage' to be non-null");
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-    }
+    private ImageVersionArgs() {}
 
-    private ImageVersionArgs() {
-        this.baseImage = Codegen.empty();
-        this.imageName = Codegen.empty();
+    private ImageVersionArgs(ImageVersionArgs $) {
+        this.baseImage = $.baseImage;
+        this.imageName = $.imageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> baseImage;
-        private Output<String> imageName;
+        private ImageVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageVersionArgs();
         }
 
         public Builder(ImageVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseImage = defaults.baseImage;
-    	      this.imageName = defaults.imageName;
+            $ = new ImageVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseImage(Output<String> baseImage) {
-            this.baseImage = Objects.requireNonNull(baseImage);
+            $.baseImage = baseImage;
             return this;
         }
+
         public Builder baseImage(String baseImage) {
-            this.baseImage = Output.of(Objects.requireNonNull(baseImage));
-            return this;
+            return baseImage(Output.of(baseImage));
         }
+
         public Builder imageName(Output<String> imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Output.of(Objects.requireNonNull(imageName));
-            return this;
-        }        public ImageVersionArgs build() {
-            return new ImageVersionArgs(baseImage, imageName);
+            return imageName(Output.of(imageName));
+        }
+
+        public ImageVersionArgs build() {
+            $.baseImage = Objects.requireNonNull($.baseImage, "expected parameter 'baseImage' to be non-null");
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            return $;
         }
     }
+
 }

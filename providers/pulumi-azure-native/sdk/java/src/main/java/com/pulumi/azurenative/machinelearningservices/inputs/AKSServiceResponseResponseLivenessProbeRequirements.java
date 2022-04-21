@@ -23,10 +23,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Integer failureThreshold;
+    private @Nullable Integer failureThreshold;
 
     public Optional<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Optional.empty() : Optional.ofNullable(this.failureThreshold);
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
      * 
      */
     @Import(name="initialDelaySeconds")
-      private final @Nullable Integer initialDelaySeconds;
+    private @Nullable Integer initialDelaySeconds;
 
     public Optional<Integer> initialDelaySeconds() {
-        return this.initialDelaySeconds == null ? Optional.empty() : Optional.ofNullable(this.initialDelaySeconds);
+        return Optional.ofNullable(this.initialDelaySeconds);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
      * 
      */
     @Import(name="periodSeconds")
-      private final @Nullable Integer periodSeconds;
+    private @Nullable Integer periodSeconds;
 
     public Optional<Integer> periodSeconds() {
-        return this.periodSeconds == null ? Optional.empty() : Optional.ofNullable(this.periodSeconds);
+        return Optional.ofNullable(this.periodSeconds);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable Integer successThreshold;
+    private @Nullable Integer successThreshold;
 
     public Optional<Integer> successThreshold() {
-        return this.successThreshold == null ? Optional.empty() : Optional.ofNullable(this.successThreshold);
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Integer timeoutSeconds;
+    private @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public AKSServiceResponseResponseLivenessProbeRequirements(
-        @Nullable Integer failureThreshold,
-        @Nullable Integer initialDelaySeconds,
-        @Nullable Integer periodSeconds,
-        @Nullable Integer successThreshold,
-        @Nullable Integer timeoutSeconds) {
-        this.failureThreshold = failureThreshold;
-        this.initialDelaySeconds = initialDelaySeconds;
-        this.periodSeconds = periodSeconds;
-        this.successThreshold = successThreshold;
-        this.timeoutSeconds = timeoutSeconds;
-    }
+    private AKSServiceResponseResponseLivenessProbeRequirements() {}
 
-    private AKSServiceResponseResponseLivenessProbeRequirements() {
-        this.failureThreshold = null;
-        this.initialDelaySeconds = null;
-        this.periodSeconds = null;
-        this.successThreshold = null;
-        this.timeoutSeconds = null;
+    private AKSServiceResponseResponseLivenessProbeRequirements(AKSServiceResponseResponseLivenessProbeRequirements $) {
+        this.failureThreshold = $.failureThreshold;
+        this.initialDelaySeconds = $.initialDelaySeconds;
+        this.periodSeconds = $.periodSeconds;
+        this.successThreshold = $.successThreshold;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSServiceResponseResponseLivenessProbeRequirements defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer failureThreshold;
-        private @Nullable Integer initialDelaySeconds;
-        private @Nullable Integer periodSeconds;
-        private @Nullable Integer successThreshold;
-        private @Nullable Integer timeoutSeconds;
+        private AKSServiceResponseResponseLivenessProbeRequirements $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSServiceResponseResponseLivenessProbeRequirements();
         }
 
         public Builder(AKSServiceResponseResponseLivenessProbeRequirements defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.initialDelaySeconds = defaults.initialDelaySeconds;
-    	      this.periodSeconds = defaults.periodSeconds;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new AKSServiceResponseResponseLivenessProbeRequirements(Objects.requireNonNull(defaults));
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
-            this.initialDelaySeconds = initialDelaySeconds;
+            $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
+
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
-            this.periodSeconds = periodSeconds;
+            $.periodSeconds = periodSeconds;
             return this;
         }
+
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
-        }        public AKSServiceResponseResponseLivenessProbeRequirements build() {
-            return new AKSServiceResponseResponseLivenessProbeRequirements(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
+        }
+
+        public AKSServiceResponseResponseLivenessProbeRequirements build() {
+            return $;
         }
     }
+
 }

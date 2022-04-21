@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="mcuCount")
-      private final @Nullable Output<Integer> mcuCount;
+    private @Nullable Output<Integer> mcuCount;
 
-    public Output<Integer> mcuCount() {
-        return this.mcuCount == null ? Codegen.empty() : this.mcuCount;
+    public Optional<Output<Integer>> mcuCount() {
+        return Optional.ofNullable(this.mcuCount);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class ConnectorProvisionedCapacityArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workerCount", required=true)
-      private final Output<Integer> workerCount;
+    private Output<Integer> workerCount;
 
     public Output<Integer> workerCount() {
         return this.workerCount;
     }
 
-    public ConnectorProvisionedCapacityArgs(
-        @Nullable Output<Integer> mcuCount,
-        Output<Integer> workerCount) {
-        this.mcuCount = mcuCount;
-        this.workerCount = Objects.requireNonNull(workerCount, "expected parameter 'workerCount' to be non-null");
-    }
+    private ConnectorProvisionedCapacityArgs() {}
 
-    private ConnectorProvisionedCapacityArgs() {
-        this.mcuCount = Codegen.empty();
-        this.workerCount = Codegen.empty();
+    private ConnectorProvisionedCapacityArgs(ConnectorProvisionedCapacityArgs $) {
+        this.mcuCount = $.mcuCount;
+        this.workerCount = $.workerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProvisionedCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> mcuCount;
-        private Output<Integer> workerCount;
+        private ConnectorProvisionedCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProvisionedCapacityArgs();
         }
 
         public Builder(ConnectorProvisionedCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mcuCount = defaults.mcuCount;
-    	      this.workerCount = defaults.workerCount;
+            $ = new ConnectorProvisionedCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mcuCount(@Nullable Output<Integer> mcuCount) {
-            this.mcuCount = mcuCount;
+            $.mcuCount = mcuCount;
             return this;
         }
-        public Builder mcuCount(@Nullable Integer mcuCount) {
-            this.mcuCount = Codegen.ofNullable(mcuCount);
-            return this;
+
+        public Builder mcuCount(Integer mcuCount) {
+            return mcuCount(Output.of(mcuCount));
         }
+
         public Builder workerCount(Output<Integer> workerCount) {
-            this.workerCount = Objects.requireNonNull(workerCount);
+            $.workerCount = workerCount;
             return this;
         }
+
         public Builder workerCount(Integer workerCount) {
-            this.workerCount = Output.of(Objects.requireNonNull(workerCount));
-            return this;
-        }        public ConnectorProvisionedCapacityArgs build() {
-            return new ConnectorProvisionedCapacityArgs(mcuCount, workerCount);
+            return workerCount(Output.of(workerCount));
+        }
+
+        public ConnectorProvisionedCapacityArgs build() {
+            $.workerCount = Objects.requireNonNull($.workerCount, "expected parameter 'workerCount' to be non-null");
+            return $;
         }
     }
+
 }

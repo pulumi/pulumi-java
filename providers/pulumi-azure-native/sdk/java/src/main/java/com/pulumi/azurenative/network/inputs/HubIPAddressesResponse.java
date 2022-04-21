@@ -24,10 +24,10 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class HubIPAddressesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="publicIPs")
-      private final @Nullable HubPublicIPAddressesResponse publicIPs;
+    private @Nullable HubPublicIPAddressesResponse publicIPs;
 
     public Optional<HubPublicIPAddressesResponse> publicIPs() {
-        return this.publicIPs == null ? Optional.empty() : Optional.ofNullable(this.publicIPs);
+        return Optional.ofNullable(this.publicIPs);
     }
 
-    public HubIPAddressesResponse(
-        @Nullable String privateIPAddress,
-        @Nullable HubPublicIPAddressesResponse publicIPs) {
-        this.privateIPAddress = privateIPAddress;
-        this.publicIPs = publicIPs;
-    }
+    private HubIPAddressesResponse() {}
 
-    private HubIPAddressesResponse() {
-        this.privateIPAddress = null;
-        this.publicIPs = null;
+    private HubIPAddressesResponse(HubIPAddressesResponse $) {
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicIPs = $.publicIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubIPAddressesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String privateIPAddress;
-        private @Nullable HubPublicIPAddressesResponse publicIPs;
+        private HubIPAddressesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubIPAddressesResponse();
         }
 
         public Builder(HubIPAddressesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicIPs = defaults.publicIPs;
+            $ = new HubIPAddressesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder publicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
-            this.publicIPs = publicIPs;
+            $.publicIPs = publicIPs;
             return this;
-        }        public HubIPAddressesResponse build() {
-            return new HubIPAddressesResponse(privateIPAddress, publicIPs);
+        }
+
+        public HubIPAddressesResponse build() {
+            return $;
         }
     }
+
 }

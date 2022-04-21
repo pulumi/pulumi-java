@@ -22,48 +22,49 @@ public final class TrafficPortSelectorResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ports", required=true)
-      private final List<String> ports;
+    private List<String> ports;
 
     public List<String> ports() {
         return this.ports;
     }
 
-    public TrafficPortSelectorResponse(List<String> ports) {
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private TrafficPortSelectorResponse() {}
 
-    private TrafficPortSelectorResponse() {
-        this.ports = List.of();
+    private TrafficPortSelectorResponse(TrafficPortSelectorResponse $) {
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficPortSelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ports;
+        private TrafficPortSelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficPortSelectorResponse();
         }
 
         public Builder(TrafficPortSelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ports = defaults.ports;
+            $ = new TrafficPortSelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ports(List<String> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
-        }        public TrafficPortSelectorResponse build() {
-            return new TrafficPortSelectorResponse(ports);
+        }
+
+        public TrafficPortSelectorResponse build() {
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

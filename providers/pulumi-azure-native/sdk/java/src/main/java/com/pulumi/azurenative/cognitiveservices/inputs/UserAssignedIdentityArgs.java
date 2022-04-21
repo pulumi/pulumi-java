@@ -5,9 +5,9 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
-    public UserAssignedIdentityArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> principalId) {
-        this.clientId = clientId;
-        this.principalId = principalId;
-    }
+    private UserAssignedIdentityArgs() {}
 
-    private UserAssignedIdentityArgs() {
-        this.clientId = Codegen.empty();
-        this.principalId = Codegen.empty();
+    private UserAssignedIdentityArgs(UserAssignedIdentityArgs $) {
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> principalId;
+        private UserAssignedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityArgs();
         }
 
         public Builder(UserAssignedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
+            $ = new UserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
-        }        public UserAssignedIdentityArgs build() {
-            return new UserAssignedIdentityArgs(clientId, principalId);
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
+        }
+
+        public UserAssignedIdentityArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,62 +15,57 @@ public final class EncryptionConfigProperties extends com.pulumi.resources.Invok
     public static final EncryptionConfigProperties Empty = new EncryptionConfigProperties();
 
     @Import(name="kmsKeyArn")
-      private final @Nullable String kmsKeyArn;
+    private @Nullable String kmsKeyArn;
 
     public Optional<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyArn);
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public EncryptionConfigProperties(
-        @Nullable String kmsKeyArn,
-        @Nullable String roleArn) {
-        this.kmsKeyArn = kmsKeyArn;
-        this.roleArn = roleArn;
-    }
+    private EncryptionConfigProperties() {}
 
-    private EncryptionConfigProperties() {
-        this.kmsKeyArn = null;
-        this.roleArn = null;
+    private EncryptionConfigProperties(EncryptionConfigProperties $) {
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kmsKeyArn;
-        private @Nullable String roleArn;
+        private EncryptionConfigProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigProperties();
         }
 
         public Builder(EncryptionConfigProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EncryptionConfigProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
-        }        public EncryptionConfigProperties build() {
-            return new EncryptionConfigProperties(kmsKeyArn, roleArn);
+        }
+
+        public EncryptionConfigProperties build() {
+            return $;
         }
     }
+
 }

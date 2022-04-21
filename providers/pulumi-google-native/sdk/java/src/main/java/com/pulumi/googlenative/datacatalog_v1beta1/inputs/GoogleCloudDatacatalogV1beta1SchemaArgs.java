@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1ColumnSchemaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudDatacatalogV1beta1SchemaArgs extends com.pulumi.re
      * 
      */
     @Import(name="columns", required=true)
-      private final Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
+    private Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
 
     public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns() {
         return this.columns;
     }
 
-    public GoogleCloudDatacatalogV1beta1SchemaArgs(Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1beta1SchemaArgs() {}
 
-    private GoogleCloudDatacatalogV1beta1SchemaArgs() {
-        this.columns = Codegen.empty();
+    private GoogleCloudDatacatalogV1beta1SchemaArgs(GoogleCloudDatacatalogV1beta1SchemaArgs $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1beta1SchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns;
+        private GoogleCloudDatacatalogV1beta1SchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1beta1SchemaArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1beta1SchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new GoogleCloudDatacatalogV1beta1SchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs> columns) {
-            this.columns = Output.of(Objects.requireNonNull(columns));
-            return this;
+            return columns(Output.of(columns));
         }
+
         public Builder columns(GoogleCloudDatacatalogV1beta1ColumnSchemaArgs... columns) {
             return columns(List.of(columns));
-        }        public GoogleCloudDatacatalogV1beta1SchemaArgs build() {
-            return new GoogleCloudDatacatalogV1beta1SchemaArgs(columns);
+        }
+
+        public GoogleCloudDatacatalogV1beta1SchemaArgs build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            return $;
         }
     }
+
 }

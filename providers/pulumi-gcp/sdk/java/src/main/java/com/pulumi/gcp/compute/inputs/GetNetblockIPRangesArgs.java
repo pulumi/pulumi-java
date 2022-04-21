@@ -19,45 +19,44 @@ public final class GetNetblockIPRangesArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rangeType")
-      private final @Nullable String rangeType;
+    private @Nullable String rangeType;
 
     public Optional<String> rangeType() {
-        return this.rangeType == null ? Optional.empty() : Optional.ofNullable(this.rangeType);
+        return Optional.ofNullable(this.rangeType);
     }
 
-    public GetNetblockIPRangesArgs(@Nullable String rangeType) {
-        this.rangeType = rangeType;
-    }
+    private GetNetblockIPRangesArgs() {}
 
-    private GetNetblockIPRangesArgs() {
-        this.rangeType = null;
+    private GetNetblockIPRangesArgs(GetNetblockIPRangesArgs $) {
+        this.rangeType = $.rangeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetblockIPRangesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String rangeType;
+        private GetNetblockIPRangesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetblockIPRangesArgs();
         }
 
         public Builder(GetNetblockIPRangesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rangeType = defaults.rangeType;
+            $ = new GetNetblockIPRangesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rangeType(@Nullable String rangeType) {
-            this.rangeType = rangeType;
+            $.rangeType = rangeType;
             return this;
-        }        public GetNetblockIPRangesArgs build() {
-            return new GetNetblockIPRangesArgs(rangeType);
+        }
+
+        public GetNetblockIPRangesArgs build() {
+            return $;
         }
     }
+
 }

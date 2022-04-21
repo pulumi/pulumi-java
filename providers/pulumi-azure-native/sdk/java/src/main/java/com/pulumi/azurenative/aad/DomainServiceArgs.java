@@ -12,11 +12,11 @@ import com.pulumi.azurenative.aad.inputs.ResourceForestSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainConfigurationType")
-      private final @Nullable Output<String> domainConfigurationType;
+    private @Nullable Output<String> domainConfigurationType;
 
-    public Output<String> domainConfigurationType() {
-        return this.domainConfigurationType == null ? Codegen.empty() : this.domainConfigurationType;
+    public Optional<Output<String>> domainConfigurationType() {
+        return Optional.ofNullable(this.domainConfigurationType);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainSecuritySettings")
-      private final @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
+    private @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
 
-    public Output<DomainSecuritySettingsArgs> domainSecuritySettings() {
-        return this.domainSecuritySettings == null ? Codegen.empty() : this.domainSecuritySettings;
+    public Optional<Output<DomainSecuritySettingsArgs>> domainSecuritySettings() {
+        return Optional.ofNullable(this.domainSecuritySettings);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainServiceName")
-      private final @Nullable Output<String> domainServiceName;
+    private @Nullable Output<String> domainServiceName;
 
-    public Output<String> domainServiceName() {
-        return this.domainServiceName == null ? Codegen.empty() : this.domainServiceName;
+    public Optional<Output<String>> domainServiceName() {
+        return Optional.ofNullable(this.domainServiceName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filteredSync")
-      private final @Nullable Output<Either<String,FilteredSync>> filteredSync;
+    private @Nullable Output<Either<String,FilteredSync>> filteredSync;
 
-    public Output<Either<String,FilteredSync>> filteredSync() {
-        return this.filteredSync == null ? Codegen.empty() : this.filteredSync;
+    public Optional<Output<Either<String,FilteredSync>>> filteredSync() {
+        return Optional.ofNullable(this.filteredSync);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ldapsSettings")
-      private final @Nullable Output<LdapsSettingsArgs> ldapsSettings;
+    private @Nullable Output<LdapsSettingsArgs> ldapsSettings;
 
-    public Output<LdapsSettingsArgs> ldapsSettings() {
-        return this.ldapsSettings == null ? Codegen.empty() : this.ldapsSettings;
+    public Optional<Output<LdapsSettingsArgs>> ldapsSettings() {
+        return Optional.ofNullable(this.ldapsSettings);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationSettings")
-      private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
+    private @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Output<NotificationSettingsArgs> notificationSettings() {
-        return this.notificationSettings == null ? Codegen.empty() : this.notificationSettings;
+    public Optional<Output<NotificationSettingsArgs>> notificationSettings() {
+        return Optional.ofNullable(this.notificationSettings);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicaSets")
-      private final @Nullable Output<List<ReplicaSetArgs>> replicaSets;
+    private @Nullable Output<List<ReplicaSetArgs>> replicaSets;
 
-    public Output<List<ReplicaSetArgs>> replicaSets() {
-        return this.replicaSets == null ? Codegen.empty() : this.replicaSets;
+    public Optional<Output<List<ReplicaSetArgs>>> replicaSets() {
+        return Optional.ofNullable(this.replicaSets);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceForestSettings")
-      private final @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
+    private @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
 
-    public Output<ResourceForestSettingsArgs> resourceForestSettings() {
-        return this.resourceForestSettings == null ? Codegen.empty() : this.resourceForestSettings;
+    public Optional<Output<ResourceForestSettingsArgs>> resourceForestSettings() {
+        return Optional.ofNullable(this.resourceForestSettings);
     }
 
     /**
@@ -139,7 +139,7 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -150,10 +150,10 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -161,209 +161,173 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DomainServiceArgs(
-        @Nullable Output<String> domainConfigurationType,
-        @Nullable Output<String> domainName,
-        @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings,
-        @Nullable Output<String> domainServiceName,
-        @Nullable Output<Either<String,FilteredSync>> filteredSync,
-        @Nullable Output<LdapsSettingsArgs> ldapsSettings,
-        @Nullable Output<String> location,
-        @Nullable Output<NotificationSettingsArgs> notificationSettings,
-        @Nullable Output<List<ReplicaSetArgs>> replicaSets,
-        @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.domainConfigurationType = domainConfigurationType;
-        this.domainName = domainName;
-        this.domainSecuritySettings = domainSecuritySettings;
-        this.domainServiceName = domainServiceName;
-        this.filteredSync = filteredSync;
-        this.ldapsSettings = ldapsSettings;
-        this.location = location;
-        this.notificationSettings = notificationSettings;
-        this.replicaSets = replicaSets;
-        this.resourceForestSettings = resourceForestSettings;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private DomainServiceArgs() {}
 
-    private DomainServiceArgs() {
-        this.domainConfigurationType = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.domainSecuritySettings = Codegen.empty();
-        this.domainServiceName = Codegen.empty();
-        this.filteredSync = Codegen.empty();
-        this.ldapsSettings = Codegen.empty();
-        this.location = Codegen.empty();
-        this.notificationSettings = Codegen.empty();
-        this.replicaSets = Codegen.empty();
-        this.resourceForestSettings = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DomainServiceArgs(DomainServiceArgs $) {
+        this.domainConfigurationType = $.domainConfigurationType;
+        this.domainName = $.domainName;
+        this.domainSecuritySettings = $.domainSecuritySettings;
+        this.domainServiceName = $.domainServiceName;
+        this.filteredSync = $.filteredSync;
+        this.ldapsSettings = $.ldapsSettings;
+        this.location = $.location;
+        this.notificationSettings = $.notificationSettings;
+        this.replicaSets = $.replicaSets;
+        this.resourceForestSettings = $.resourceForestSettings;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainConfigurationType;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
-        private @Nullable Output<String> domainServiceName;
-        private @Nullable Output<Either<String,FilteredSync>> filteredSync;
-        private @Nullable Output<LdapsSettingsArgs> ldapsSettings;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NotificationSettingsArgs> notificationSettings;
-        private @Nullable Output<List<ReplicaSetArgs>> replicaSets;
-        private @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private DomainServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainServiceArgs();
         }
 
         public Builder(DomainServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainConfigurationType = defaults.domainConfigurationType;
-    	      this.domainName = defaults.domainName;
-    	      this.domainSecuritySettings = defaults.domainSecuritySettings;
-    	      this.domainServiceName = defaults.domainServiceName;
-    	      this.filteredSync = defaults.filteredSync;
-    	      this.ldapsSettings = defaults.ldapsSettings;
-    	      this.location = defaults.location;
-    	      this.notificationSettings = defaults.notificationSettings;
-    	      this.replicaSets = defaults.replicaSets;
-    	      this.resourceForestSettings = defaults.resourceForestSettings;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new DomainServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainConfigurationType(@Nullable Output<String> domainConfigurationType) {
-            this.domainConfigurationType = domainConfigurationType;
+            $.domainConfigurationType = domainConfigurationType;
             return this;
         }
-        public Builder domainConfigurationType(@Nullable String domainConfigurationType) {
-            this.domainConfigurationType = Codegen.ofNullable(domainConfigurationType);
-            return this;
+
+        public Builder domainConfigurationType(String domainConfigurationType) {
+            return domainConfigurationType(Output.of(domainConfigurationType));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder domainSecuritySettings(@Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings) {
-            this.domainSecuritySettings = domainSecuritySettings;
+            $.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
-        public Builder domainSecuritySettings(@Nullable DomainSecuritySettingsArgs domainSecuritySettings) {
-            this.domainSecuritySettings = Codegen.ofNullable(domainSecuritySettings);
-            return this;
+
+        public Builder domainSecuritySettings(DomainSecuritySettingsArgs domainSecuritySettings) {
+            return domainSecuritySettings(Output.of(domainSecuritySettings));
         }
+
         public Builder domainServiceName(@Nullable Output<String> domainServiceName) {
-            this.domainServiceName = domainServiceName;
+            $.domainServiceName = domainServiceName;
             return this;
         }
-        public Builder domainServiceName(@Nullable String domainServiceName) {
-            this.domainServiceName = Codegen.ofNullable(domainServiceName);
-            return this;
+
+        public Builder domainServiceName(String domainServiceName) {
+            return domainServiceName(Output.of(domainServiceName));
         }
+
         public Builder filteredSync(@Nullable Output<Either<String,FilteredSync>> filteredSync) {
-            this.filteredSync = filteredSync;
+            $.filteredSync = filteredSync;
             return this;
         }
-        public Builder filteredSync(@Nullable Either<String,FilteredSync> filteredSync) {
-            this.filteredSync = Codegen.ofNullable(filteredSync);
-            return this;
+
+        public Builder filteredSync(Either<String,FilteredSync> filteredSync) {
+            return filteredSync(Output.of(filteredSync));
         }
+
         public Builder ldapsSettings(@Nullable Output<LdapsSettingsArgs> ldapsSettings) {
-            this.ldapsSettings = ldapsSettings;
+            $.ldapsSettings = ldapsSettings;
             return this;
         }
-        public Builder ldapsSettings(@Nullable LdapsSettingsArgs ldapsSettings) {
-            this.ldapsSettings = Codegen.ofNullable(ldapsSettings);
-            return this;
+
+        public Builder ldapsSettings(LdapsSettingsArgs ldapsSettings) {
+            return ldapsSettings(Output.of(ldapsSettings));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
-            this.notificationSettings = notificationSettings;
+            $.notificationSettings = notificationSettings;
             return this;
         }
-        public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
-            this.notificationSettings = Codegen.ofNullable(notificationSettings);
-            return this;
+
+        public Builder notificationSettings(NotificationSettingsArgs notificationSettings) {
+            return notificationSettings(Output.of(notificationSettings));
         }
+
         public Builder replicaSets(@Nullable Output<List<ReplicaSetArgs>> replicaSets) {
-            this.replicaSets = replicaSets;
+            $.replicaSets = replicaSets;
             return this;
         }
-        public Builder replicaSets(@Nullable List<ReplicaSetArgs> replicaSets) {
-            this.replicaSets = Codegen.ofNullable(replicaSets);
-            return this;
+
+        public Builder replicaSets(List<ReplicaSetArgs> replicaSets) {
+            return replicaSets(Output.of(replicaSets));
         }
+
         public Builder replicaSets(ReplicaSetArgs... replicaSets) {
             return replicaSets(List.of(replicaSets));
         }
+
         public Builder resourceForestSettings(@Nullable Output<ResourceForestSettingsArgs> resourceForestSettings) {
-            this.resourceForestSettings = resourceForestSettings;
+            $.resourceForestSettings = resourceForestSettings;
             return this;
         }
-        public Builder resourceForestSettings(@Nullable ResourceForestSettingsArgs resourceForestSettings) {
-            this.resourceForestSettings = Codegen.ofNullable(resourceForestSettings);
-            return this;
+
+        public Builder resourceForestSettings(ResourceForestSettingsArgs resourceForestSettings) {
+            return resourceForestSettings(Output.of(resourceForestSettings));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DomainServiceArgs build() {
-            return new DomainServiceArgs(domainConfigurationType, domainName, domainSecuritySettings, domainServiceName, filteredSync, ldapsSettings, location, notificationSettings, replicaSets, resourceForestSettings, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DomainServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

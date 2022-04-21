@@ -17,7 +17,7 @@ public final class GetExpressRouteCircuitArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="circuitName", required=true)
-      private final String circuitName;
+    private String circuitName;
 
     public String circuitName() {
         return this.circuitName;
@@ -28,55 +28,52 @@ public final class GetExpressRouteCircuitArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteCircuitArgs(
-        String circuitName,
-        String resourceGroupName) {
-        this.circuitName = Objects.requireNonNull(circuitName, "expected parameter 'circuitName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteCircuitArgs() {}
 
-    private GetExpressRouteCircuitArgs() {
-        this.circuitName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteCircuitArgs(GetExpressRouteCircuitArgs $) {
+        this.circuitName = $.circuitName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteCircuitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String circuitName;
-        private String resourceGroupName;
+        private GetExpressRouteCircuitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteCircuitArgs();
         }
 
         public Builder(GetExpressRouteCircuitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.circuitName = defaults.circuitName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteCircuitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder circuitName(String circuitName) {
-            this.circuitName = Objects.requireNonNull(circuitName);
+            $.circuitName = circuitName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteCircuitArgs build() {
-            return new GetExpressRouteCircuitArgs(circuitName, resourceGroupName);
+        }
+
+        public GetExpressRouteCircuitArgs build() {
+            $.circuitName = Objects.requireNonNull($.circuitName, "expected parameter 'circuitName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

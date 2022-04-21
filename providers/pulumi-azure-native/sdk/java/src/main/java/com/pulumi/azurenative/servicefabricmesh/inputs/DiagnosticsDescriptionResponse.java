@@ -26,10 +26,10 @@ public final class DiagnosticsDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="defaultSinkRefs")
-      private final @Nullable List<String> defaultSinkRefs;
+    private @Nullable List<String> defaultSinkRefs;
 
-    public List<String> defaultSinkRefs() {
-        return this.defaultSinkRefs == null ? List.of() : this.defaultSinkRefs;
+    public Optional<List<String>> defaultSinkRefs() {
+        return Optional.ofNullable(this.defaultSinkRefs);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DiagnosticsDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -48,70 +48,64 @@ public final class DiagnosticsDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="sinks")
-      private final @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
+    private @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
 
-    public List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks() {
-        return this.sinks == null ? List.of() : this.sinks;
+    public Optional<List<AzureInternalMonitoringPipelineSinkDescriptionResponse>> sinks() {
+        return Optional.ofNullable(this.sinks);
     }
 
-    public DiagnosticsDescriptionResponse(
-        @Nullable List<String> defaultSinkRefs,
-        @Nullable Boolean enabled,
-        @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
-        this.defaultSinkRefs = defaultSinkRefs;
-        this.enabled = enabled;
-        this.sinks = sinks;
-    }
+    private DiagnosticsDescriptionResponse() {}
 
-    private DiagnosticsDescriptionResponse() {
-        this.defaultSinkRefs = List.of();
-        this.enabled = null;
-        this.sinks = List.of();
+    private DiagnosticsDescriptionResponse(DiagnosticsDescriptionResponse $) {
+        this.defaultSinkRefs = $.defaultSinkRefs;
+        this.enabled = $.enabled;
+        this.sinks = $.sinks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> defaultSinkRefs;
-        private @Nullable Boolean enabled;
-        private @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
+        private DiagnosticsDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsDescriptionResponse();
         }
 
         public Builder(DiagnosticsDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultSinkRefs = defaults.defaultSinkRefs;
-    	      this.enabled = defaults.enabled;
-    	      this.sinks = defaults.sinks;
+            $ = new DiagnosticsDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
-            this.defaultSinkRefs = defaultSinkRefs;
+            $.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
+
         public Builder defaultSinkRefs(String... defaultSinkRefs) {
             return defaultSinkRefs(List.of(defaultSinkRefs));
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
-            this.sinks = sinks;
+            $.sinks = sinks;
             return this;
         }
+
         public Builder sinks(AzureInternalMonitoringPipelineSinkDescriptionResponse... sinks) {
             return sinks(List.of(sinks));
-        }        public DiagnosticsDescriptionResponse build() {
-            return new DiagnosticsDescriptionResponse(defaultSinkRefs, enabled, sinks);
+        }
+
+        public DiagnosticsDescriptionResponse build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalContexts", required=true)
-      private final List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
+    private List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
 
     public List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts() {
         return this.additionalContexts;
@@ -37,7 +37,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifactStorageSource", required=true)
-      private final StorageSourceResponse artifactStorageSource;
+    private StorageSourceResponse artifactStorageSource;
 
     public StorageSourceResponse artifactStorageSource() {
         return this.artifactStorageSource;
@@ -48,7 +48,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
+    private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
 
     public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context() {
         return this.context;
@@ -59,7 +59,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileHashes", required=true)
-      private final Map<String,String> fileHashes;
+    private Map<String,String> fileHashes;
 
     public Map<String,String> fileHashes() {
         return this.fileHashes;
@@ -70,7 +70,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repoSource", required=true)
-      private final RepoSourceResponse repoSource;
+    private RepoSourceResponse repoSource;
 
     public RepoSourceResponse repoSource() {
         return this.repoSource;
@@ -81,94 +81,84 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSource", required=true)
-      private final StorageSourceResponse storageSource;
+    private StorageSourceResponse storageSource;
 
     public StorageSourceResponse storageSource() {
         return this.storageSource;
     }
 
-    public SourceResponse(
-        List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
-        StorageSourceResponse artifactStorageSource,
-        GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
-        Map<String,String> fileHashes,
-        RepoSourceResponse repoSource,
-        StorageSourceResponse storageSource) {
-        this.additionalContexts = Objects.requireNonNull(additionalContexts, "expected parameter 'additionalContexts' to be non-null");
-        this.artifactStorageSource = Objects.requireNonNull(artifactStorageSource, "expected parameter 'artifactStorageSource' to be non-null");
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.fileHashes = Objects.requireNonNull(fileHashes, "expected parameter 'fileHashes' to be non-null");
-        this.repoSource = Objects.requireNonNull(repoSource, "expected parameter 'repoSource' to be non-null");
-        this.storageSource = Objects.requireNonNull(storageSource, "expected parameter 'storageSource' to be non-null");
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.additionalContexts = List.of();
-        this.artifactStorageSource = null;
-        this.context = null;
-        this.fileHashes = Map.of();
-        this.repoSource = null;
-        this.storageSource = null;
+    private SourceResponse(SourceResponse $) {
+        this.additionalContexts = $.additionalContexts;
+        this.artifactStorageSource = $.artifactStorageSource;
+        this.context = $.context;
+        this.fileHashes = $.fileHashes;
+        this.repoSource = $.repoSource;
+        this.storageSource = $.storageSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
-        private StorageSourceResponse artifactStorageSource;
-        private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
-        private Map<String,String> fileHashes;
-        private RepoSourceResponse repoSource;
-        private StorageSourceResponse storageSource;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalContexts = defaults.additionalContexts;
-    	      this.artifactStorageSource = defaults.artifactStorageSource;
-    	      this.context = defaults.context;
-    	      this.fileHashes = defaults.fileHashes;
-    	      this.repoSource = defaults.repoSource;
-    	      this.storageSource = defaults.storageSource;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalContexts(List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts) {
-            this.additionalContexts = Objects.requireNonNull(additionalContexts);
+            $.additionalContexts = additionalContexts;
             return this;
         }
+
         public Builder additionalContexts(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse... additionalContexts) {
             return additionalContexts(List.of(additionalContexts));
         }
+
         public Builder artifactStorageSource(StorageSourceResponse artifactStorageSource) {
-            this.artifactStorageSource = Objects.requireNonNull(artifactStorageSource);
+            $.artifactStorageSource = artifactStorageSource;
             return this;
         }
+
         public Builder context(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder fileHashes(Map<String,String> fileHashes) {
-            this.fileHashes = Objects.requireNonNull(fileHashes);
+            $.fileHashes = fileHashes;
             return this;
         }
+
         public Builder repoSource(RepoSourceResponse repoSource) {
-            this.repoSource = Objects.requireNonNull(repoSource);
+            $.repoSource = repoSource;
             return this;
         }
+
         public Builder storageSource(StorageSourceResponse storageSource) {
-            this.storageSource = Objects.requireNonNull(storageSource);
+            $.storageSource = storageSource;
             return this;
-        }        public SourceResponse build() {
-            return new SourceResponse(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
+        }
+
+        public SourceResponse build() {
+            $.additionalContexts = Objects.requireNonNull($.additionalContexts, "expected parameter 'additionalContexts' to be non-null");
+            $.artifactStorageSource = Objects.requireNonNull($.artifactStorageSource, "expected parameter 'artifactStorageSource' to be non-null");
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            $.fileHashes = Objects.requireNonNull($.fileHashes, "expected parameter 'fileHashes' to be non-null");
+            $.repoSource = Objects.requireNonNull($.repoSource, "expected parameter 'repoSource' to be non-null");
+            $.storageSource = Objects.requireNonNull($.storageSource, "expected parameter 'storageSource' to be non-null");
+            return $;
         }
     }
+
 }

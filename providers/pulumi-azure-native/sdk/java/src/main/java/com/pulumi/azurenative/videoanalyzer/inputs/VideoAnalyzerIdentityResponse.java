@@ -25,7 +25,7 @@ public final class VideoAnalyzerIdentityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -36,55 +36,51 @@ public final class VideoAnalyzerIdentityResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
+    private @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
-    public Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
+    public Optional<Map<String,UserAssignedManagedIdentityResponse>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public VideoAnalyzerIdentityResponse(
-        String type,
-        @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private VideoAnalyzerIdentityResponse() {}
 
-    private VideoAnalyzerIdentityResponse() {
-        this.type = null;
-        this.userAssignedIdentities = Map.of();
+    private VideoAnalyzerIdentityResponse(VideoAnalyzerIdentityResponse $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoAnalyzerIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
+        private VideoAnalyzerIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoAnalyzerIdentityResponse();
         }
 
         public Builder(VideoAnalyzerIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new VideoAnalyzerIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public VideoAnalyzerIdentityResponse build() {
-            return new VideoAnalyzerIdentityResponse(type, userAssignedIdentities);
+        }
+
+        public VideoAnalyzerIdentityResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

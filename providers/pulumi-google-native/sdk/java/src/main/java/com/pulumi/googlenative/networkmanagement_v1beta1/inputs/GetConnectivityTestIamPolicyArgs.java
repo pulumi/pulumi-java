@@ -15,78 +15,71 @@ public final class GetConnectivityTestIamPolicyArgs extends com.pulumi.resources
     public static final GetConnectivityTestIamPolicyArgs Empty = new GetConnectivityTestIamPolicyArgs();
 
     @Import(name="connectivityTestId", required=true)
-      private final String connectivityTestId;
+    private String connectivityTestId;
 
     public String connectivityTestId() {
         return this.connectivityTestId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConnectivityTestIamPolicyArgs(
-        String connectivityTestId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.connectivityTestId = Objects.requireNonNull(connectivityTestId, "expected parameter 'connectivityTestId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetConnectivityTestIamPolicyArgs() {}
 
-    private GetConnectivityTestIamPolicyArgs() {
-        this.connectivityTestId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetConnectivityTestIamPolicyArgs(GetConnectivityTestIamPolicyArgs $) {
+        this.connectivityTestId = $.connectivityTestId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectivityTestIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectivityTestId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetConnectivityTestIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectivityTestIamPolicyArgs();
         }
 
         public Builder(GetConnectivityTestIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectivityTestId = defaults.connectivityTestId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetConnectivityTestIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectivityTestId(String connectivityTestId) {
-            this.connectivityTestId = Objects.requireNonNull(connectivityTestId);
+            $.connectivityTestId = connectivityTestId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConnectivityTestIamPolicyArgs build() {
-            return new GetConnectivityTestIamPolicyArgs(connectivityTestId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetConnectivityTestIamPolicyArgs build() {
+            $.connectivityTestId = Objects.requireNonNull($.connectivityTestId, "expected parameter 'connectivityTestId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -31,7 +31,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubAccessCode", required=true)
-      private final String gitHubAccessCode;
+    private String gitHubAccessCode;
 
     public String gitHubAccessCode() {
         return this.gitHubAccessCode;
@@ -42,7 +42,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubAccessTokenBaseUrl", required=true)
-      private final String gitHubAccessTokenBaseUrl;
+    private String gitHubAccessTokenBaseUrl;
 
     public String gitHubAccessTokenBaseUrl() {
         return this.gitHubAccessTokenBaseUrl;
@@ -53,10 +53,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubClientId")
-      private final @Nullable String gitHubClientId;
+    private @Nullable String gitHubClientId;
 
     public Optional<String> gitHubClientId() {
-        return this.gitHubClientId == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientId);
+        return Optional.ofNullable(this.gitHubClientId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="gitHubClientSecret")
-      private final @Nullable GitHubClientSecret gitHubClientSecret;
+    private @Nullable GitHubClientSecret gitHubClientSecret;
 
     public Optional<GitHubClientSecret> gitHubClientSecret() {
-        return this.gitHubClientSecret == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientSecret);
+        return Optional.ofNullable(this.gitHubClientSecret);
     }
 
     /**
@@ -75,91 +75,78 @@ public final class GetFactoryGitHubAccessTokenArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetFactoryGitHubAccessTokenArgs(
-        String factoryName,
-        String gitHubAccessCode,
-        String gitHubAccessTokenBaseUrl,
-        @Nullable String gitHubClientId,
-        @Nullable GitHubClientSecret gitHubClientSecret,
-        String resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.gitHubAccessCode = Objects.requireNonNull(gitHubAccessCode, "expected parameter 'gitHubAccessCode' to be non-null");
-        this.gitHubAccessTokenBaseUrl = Objects.requireNonNull(gitHubAccessTokenBaseUrl, "expected parameter 'gitHubAccessTokenBaseUrl' to be non-null");
-        this.gitHubClientId = gitHubClientId;
-        this.gitHubClientSecret = gitHubClientSecret;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetFactoryGitHubAccessTokenArgs() {}
 
-    private GetFactoryGitHubAccessTokenArgs() {
-        this.factoryName = null;
-        this.gitHubAccessCode = null;
-        this.gitHubAccessTokenBaseUrl = null;
-        this.gitHubClientId = null;
-        this.gitHubClientSecret = null;
-        this.resourceGroupName = null;
+    private GetFactoryGitHubAccessTokenArgs(GetFactoryGitHubAccessTokenArgs $) {
+        this.factoryName = $.factoryName;
+        this.gitHubAccessCode = $.gitHubAccessCode;
+        this.gitHubAccessTokenBaseUrl = $.gitHubAccessTokenBaseUrl;
+        this.gitHubClientId = $.gitHubClientId;
+        this.gitHubClientSecret = $.gitHubClientSecret;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFactoryGitHubAccessTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private String gitHubAccessCode;
-        private String gitHubAccessTokenBaseUrl;
-        private @Nullable String gitHubClientId;
-        private @Nullable GitHubClientSecret gitHubClientSecret;
-        private String resourceGroupName;
+        private GetFactoryGitHubAccessTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFactoryGitHubAccessTokenArgs();
         }
 
         public Builder(GetFactoryGitHubAccessTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.gitHubAccessCode = defaults.gitHubAccessCode;
-    	      this.gitHubAccessTokenBaseUrl = defaults.gitHubAccessTokenBaseUrl;
-    	      this.gitHubClientId = defaults.gitHubClientId;
-    	      this.gitHubClientSecret = defaults.gitHubClientSecret;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetFactoryGitHubAccessTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder gitHubAccessCode(String gitHubAccessCode) {
-            this.gitHubAccessCode = Objects.requireNonNull(gitHubAccessCode);
+            $.gitHubAccessCode = gitHubAccessCode;
             return this;
         }
+
         public Builder gitHubAccessTokenBaseUrl(String gitHubAccessTokenBaseUrl) {
-            this.gitHubAccessTokenBaseUrl = Objects.requireNonNull(gitHubAccessTokenBaseUrl);
+            $.gitHubAccessTokenBaseUrl = gitHubAccessTokenBaseUrl;
             return this;
         }
+
         public Builder gitHubClientId(@Nullable String gitHubClientId) {
-            this.gitHubClientId = gitHubClientId;
+            $.gitHubClientId = gitHubClientId;
             return this;
         }
+
         public Builder gitHubClientSecret(@Nullable GitHubClientSecret gitHubClientSecret) {
-            this.gitHubClientSecret = gitHubClientSecret;
+            $.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetFactoryGitHubAccessTokenArgs build() {
-            return new GetFactoryGitHubAccessTokenArgs(factoryName, gitHubAccessCode, gitHubAccessTokenBaseUrl, gitHubClientId, gitHubClientSecret, resourceGroupName);
+        }
+
+        public GetFactoryGitHubAccessTokenArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.gitHubAccessCode = Objects.requireNonNull($.gitHubAccessCode, "expected parameter 'gitHubAccessCode' to be non-null");
+            $.gitHubAccessTokenBaseUrl = Objects.requireNonNull($.gitHubAccessTokenBaseUrl, "expected parameter 'gitHubAccessTokenBaseUrl' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

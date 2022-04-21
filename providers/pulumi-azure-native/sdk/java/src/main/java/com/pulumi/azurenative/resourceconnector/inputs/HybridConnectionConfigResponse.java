@@ -22,7 +22,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="expirationTime", required=true)
-      private final Double expirationTime;
+    private Double expirationTime;
 
     public Double expirationTime() {
         return this.expirationTime;
@@ -33,7 +33,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="hybridConnectionName", required=true)
-      private final String hybridConnectionName;
+    private String hybridConnectionName;
 
     public String hybridConnectionName() {
         return this.hybridConnectionName;
@@ -44,7 +44,7 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="relay", required=true)
-      private final String relay;
+    private String relay;
 
     public String relay() {
         return this.relay;
@@ -55,73 +55,66 @@ public final class HybridConnectionConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="token", required=true)
-      private final String token;
+    private String token;
 
     public String token() {
         return this.token;
     }
 
-    public HybridConnectionConfigResponse(
-        Double expirationTime,
-        String hybridConnectionName,
-        String relay,
-        String token) {
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName, "expected parameter 'hybridConnectionName' to be non-null");
-        this.relay = Objects.requireNonNull(relay, "expected parameter 'relay' to be non-null");
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-    }
+    private HybridConnectionConfigResponse() {}
 
-    private HybridConnectionConfigResponse() {
-        this.expirationTime = null;
-        this.hybridConnectionName = null;
-        this.relay = null;
-        this.token = null;
+    private HybridConnectionConfigResponse(HybridConnectionConfigResponse $) {
+        this.expirationTime = $.expirationTime;
+        this.hybridConnectionName = $.hybridConnectionName;
+        this.relay = $.relay;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridConnectionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double expirationTime;
-        private String hybridConnectionName;
-        private String relay;
-        private String token;
+        private HybridConnectionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridConnectionConfigResponse();
         }
 
         public Builder(HybridConnectionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.hybridConnectionName = defaults.hybridConnectionName;
-    	      this.relay = defaults.relay;
-    	      this.token = defaults.token;
+            $ = new HybridConnectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(Double expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder hybridConnectionName(String hybridConnectionName) {
-            this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
+            $.hybridConnectionName = hybridConnectionName;
             return this;
         }
+
         public Builder relay(String relay) {
-            this.relay = Objects.requireNonNull(relay);
+            $.relay = relay;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
-        }        public HybridConnectionConfigResponse build() {
-            return new HybridConnectionConfigResponse(expirationTime, hybridConnectionName, relay, token);
+        }
+
+        public HybridConnectionConfigResponse build() {
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.hybridConnectionName = Objects.requireNonNull($.hybridConnectionName, "expected parameter 'hybridConnectionName' to be non-null");
+            $.relay = Objects.requireNonNull($.relay, "expected parameter 'relay' to be non-null");
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            return $;
         }
     }
+
 }

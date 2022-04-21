@@ -23,7 +23,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,10 +34,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable String keyVaultId;
+    private @Nullable String keyVaultId;
 
     public Optional<String> keyVaultId() {
-        return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable String keyVaultUri;
+    private @Nullable String keyVaultUri;
 
     public Optional<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="lastHeartBeatUtc", required=true)
-      private final String lastHeartBeatUtc;
+    private String lastHeartBeatUtc;
 
     public String lastHeartBeatUtc() {
         return this.lastHeartBeatUtc;
@@ -67,82 +67,71 @@ public final class SiteAgentPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SiteAgentPropertiesResponse(
-        String id,
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultUri,
-        String lastHeartBeatUtc,
-        String version) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.keyVaultId = keyVaultId;
-        this.keyVaultUri = keyVaultUri;
-        this.lastHeartBeatUtc = Objects.requireNonNull(lastHeartBeatUtc, "expected parameter 'lastHeartBeatUtc' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SiteAgentPropertiesResponse() {}
 
-    private SiteAgentPropertiesResponse() {
-        this.id = null;
-        this.keyVaultId = null;
-        this.keyVaultUri = null;
-        this.lastHeartBeatUtc = null;
-        this.version = null;
+    private SiteAgentPropertiesResponse(SiteAgentPropertiesResponse $) {
+        this.id = $.id;
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultUri = $.keyVaultUri;
+        this.lastHeartBeatUtc = $.lastHeartBeatUtc;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteAgentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String keyVaultId;
-        private @Nullable String keyVaultUri;
-        private String lastHeartBeatUtc;
-        private String version;
+        private SiteAgentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteAgentPropertiesResponse();
         }
 
         public Builder(SiteAgentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.lastHeartBeatUtc = defaults.lastHeartBeatUtc;
-    	      this.version = defaults.version;
+            $ = new SiteAgentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
+
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder lastHeartBeatUtc(String lastHeartBeatUtc) {
-            this.lastHeartBeatUtc = Objects.requireNonNull(lastHeartBeatUtc);
+            $.lastHeartBeatUtc = lastHeartBeatUtc;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SiteAgentPropertiesResponse build() {
-            return new SiteAgentPropertiesResponse(id, keyVaultId, keyVaultUri, lastHeartBeatUtc, version);
+        }
+
+        public SiteAgentPropertiesResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.lastHeartBeatUtc = Objects.requireNonNull($.lastHeartBeatUtc, "expected parameter 'lastHeartBeatUtc' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

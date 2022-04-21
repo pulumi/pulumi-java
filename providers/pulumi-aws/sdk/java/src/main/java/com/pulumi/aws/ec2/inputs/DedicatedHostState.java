@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoPlacement")
-      private final @Nullable Output<String> autoPlacement;
+    private @Nullable Output<String> autoPlacement;
 
-    public Output<String> autoPlacement() {
-        return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
+    public Optional<Output<String>> autoPlacement() {
+        return Optional.ofNullable(this.autoPlacement);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hostRecovery")
-      private final @Nullable Output<String> hostRecovery;
+    private @Nullable Output<String> hostRecovery;
 
-    public Output<String> hostRecovery() {
-        return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
+    public Optional<Output<String>> hostRecovery() {
+        return Optional.ofNullable(this.hostRecovery);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceFamily")
-      private final @Nullable Output<String> instanceFamily;
+    private @Nullable Output<String> instanceFamily;
 
-    public Output<String> instanceFamily() {
-        return this.instanceFamily == null ? Codegen.empty() : this.instanceFamily;
+    public Optional<Output<String>> instanceFamily() {
+        return Optional.ofNullable(this.instanceFamily);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -109,154 +109,128 @@ public final class DedicatedHostState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public DedicatedHostState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> autoPlacement,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> hostRecovery,
-        @Nullable Output<String> instanceFamily,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.autoPlacement = autoPlacement;
-        this.availabilityZone = availabilityZone;
-        this.hostRecovery = hostRecovery;
-        this.instanceFamily = instanceFamily;
-        this.instanceType = instanceType;
-        this.ownerId = ownerId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private DedicatedHostState() {}
 
-    private DedicatedHostState() {
-        this.arn = Codegen.empty();
-        this.autoPlacement = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.hostRecovery = Codegen.empty();
-        this.instanceFamily = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private DedicatedHostState(DedicatedHostState $) {
+        this.arn = $.arn;
+        this.autoPlacement = $.autoPlacement;
+        this.availabilityZone = $.availabilityZone;
+        this.hostRecovery = $.hostRecovery;
+        this.instanceFamily = $.instanceFamily;
+        this.instanceType = $.instanceType;
+        this.ownerId = $.ownerId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHostState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> autoPlacement;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> hostRecovery;
-        private @Nullable Output<String> instanceFamily;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private DedicatedHostState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHostState();
         }
 
         public Builder(DedicatedHostState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.autoPlacement = defaults.autoPlacement;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.hostRecovery = defaults.hostRecovery;
-    	      this.instanceFamily = defaults.instanceFamily;
-    	      this.instanceType = defaults.instanceType;
-    	      this.ownerId = defaults.ownerId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new DedicatedHostState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoPlacement(@Nullable Output<String> autoPlacement) {
-            this.autoPlacement = autoPlacement;
+            $.autoPlacement = autoPlacement;
             return this;
         }
-        public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Codegen.ofNullable(autoPlacement);
-            return this;
+
+        public Builder autoPlacement(String autoPlacement) {
+            return autoPlacement(Output.of(autoPlacement));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder hostRecovery(@Nullable Output<String> hostRecovery) {
-            this.hostRecovery = hostRecovery;
+            $.hostRecovery = hostRecovery;
             return this;
         }
-        public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Codegen.ofNullable(hostRecovery);
-            return this;
+
+        public Builder hostRecovery(String hostRecovery) {
+            return hostRecovery(Output.of(hostRecovery));
         }
+
         public Builder instanceFamily(@Nullable Output<String> instanceFamily) {
-            this.instanceFamily = instanceFamily;
+            $.instanceFamily = instanceFamily;
             return this;
         }
-        public Builder instanceFamily(@Nullable String instanceFamily) {
-            this.instanceFamily = Codegen.ofNullable(instanceFamily);
-            return this;
+
+        public Builder instanceFamily(String instanceFamily) {
+            return instanceFamily(Output.of(instanceFamily));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public DedicatedHostState build() {
-            return new DedicatedHostState(arn, autoPlacement, availabilityZone, hostRecovery, instanceFamily, instanceType, ownerId, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public DedicatedHostState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="detectSentiment", required=true)
-      private final Output<Boolean> detectSentiment;
+    private Output<Boolean> detectSentiment;
 
     public Output<Boolean> detectSentiment() {
         return this.detectSentiment;
     }
 
-    public SentimentAnalysisSettingsPropertiesArgs(Output<Boolean> detectSentiment) {
-        this.detectSentiment = Objects.requireNonNull(detectSentiment, "expected parameter 'detectSentiment' to be non-null");
-    }
+    private SentimentAnalysisSettingsPropertiesArgs() {}
 
-    private SentimentAnalysisSettingsPropertiesArgs() {
-        this.detectSentiment = Codegen.empty();
+    private SentimentAnalysisSettingsPropertiesArgs(SentimentAnalysisSettingsPropertiesArgs $) {
+        this.detectSentiment = $.detectSentiment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SentimentAnalysisSettingsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> detectSentiment;
+        private SentimentAnalysisSettingsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SentimentAnalysisSettingsPropertiesArgs();
         }
 
         public Builder(SentimentAnalysisSettingsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detectSentiment = defaults.detectSentiment;
+            $ = new SentimentAnalysisSettingsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder detectSentiment(Output<Boolean> detectSentiment) {
-            this.detectSentiment = Objects.requireNonNull(detectSentiment);
+            $.detectSentiment = detectSentiment;
             return this;
         }
+
         public Builder detectSentiment(Boolean detectSentiment) {
-            this.detectSentiment = Output.of(Objects.requireNonNull(detectSentiment));
-            return this;
-        }        public SentimentAnalysisSettingsPropertiesArgs build() {
-            return new SentimentAnalysisSettingsPropertiesArgs(detectSentiment);
+            return detectSentiment(Output.of(detectSentiment));
+        }
+
+        public SentimentAnalysisSettingsPropertiesArgs build() {
+            $.detectSentiment = Objects.requireNonNull($.detectSentiment, "expected parameter 'detectSentiment' to be non-null");
+            return $;
         }
     }
+
 }

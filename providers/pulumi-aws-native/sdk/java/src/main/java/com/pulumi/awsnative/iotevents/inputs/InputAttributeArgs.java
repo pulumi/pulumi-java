@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class InputAttributeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="jsonPath", required=true)
-      private final Output<String> jsonPath;
+    private Output<String> jsonPath;
 
     public Output<String> jsonPath() {
         return this.jsonPath;
     }
 
-    public InputAttributeArgs(Output<String> jsonPath) {
-        this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
-    }
+    private InputAttributeArgs() {}
 
-    private InputAttributeArgs() {
-        this.jsonPath = Codegen.empty();
+    private InputAttributeArgs(InputAttributeArgs $) {
+        this.jsonPath = $.jsonPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputAttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> jsonPath;
+        private InputAttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputAttributeArgs();
         }
 
         public Builder(InputAttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonPath = defaults.jsonPath;
+            $ = new InputAttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonPath(Output<String> jsonPath) {
-            this.jsonPath = Objects.requireNonNull(jsonPath);
+            $.jsonPath = jsonPath;
             return this;
         }
+
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
-            return this;
-        }        public InputAttributeArgs build() {
-            return new InputAttributeArgs(jsonPath);
+            return jsonPath(Output.of(jsonPath));
+        }
+
+        public InputAttributeArgs build() {
+            $.jsonPath = Objects.requireNonNull($.jsonPath, "expected parameter 'jsonPath' to be non-null");
+            return $;
         }
     }
+
 }

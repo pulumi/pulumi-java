@@ -8,11 +8,11 @@ import com.pulumi.aws.s3.inputs.BucketNotificationQueueArgs;
 import com.pulumi.aws.s3.inputs.BucketNotificationTopicArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class BucketNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -36,10 +36,10 @@ public final class BucketNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="eventbridge")
-      private final @Nullable Output<Boolean> eventbridge;
+    private @Nullable Output<Boolean> eventbridge;
 
-    public Output<Boolean> eventbridge() {
-        return this.eventbridge == null ? Codegen.empty() : this.eventbridge;
+    public Optional<Output<Boolean>> eventbridge() {
+        return Optional.ofNullable(this.eventbridge);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BucketNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="lambdaFunctions")
-      private final @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
+    private @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
 
-    public Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions() {
-        return this.lambdaFunctions == null ? Codegen.empty() : this.lambdaFunctions;
+    public Optional<Output<List<BucketNotificationLambdaFunctionArgs>>> lambdaFunctions() {
+        return Optional.ofNullable(this.lambdaFunctions);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BucketNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="queues")
-      private final @Nullable Output<List<BucketNotificationQueueArgs>> queues;
+    private @Nullable Output<List<BucketNotificationQueueArgs>> queues;
 
-    public Output<List<BucketNotificationQueueArgs>> queues() {
-        return this.queues == null ? Codegen.empty() : this.queues;
+    public Optional<Output<List<BucketNotificationQueueArgs>>> queues() {
+        return Optional.ofNullable(this.queues);
     }
 
     /**
@@ -69,111 +69,101 @@ public final class BucketNotificationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="topics")
-      private final @Nullable Output<List<BucketNotificationTopicArgs>> topics;
+    private @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
-    public Output<List<BucketNotificationTopicArgs>> topics() {
-        return this.topics == null ? Codegen.empty() : this.topics;
+    public Optional<Output<List<BucketNotificationTopicArgs>>> topics() {
+        return Optional.ofNullable(this.topics);
     }
 
-    public BucketNotificationArgs(
-        Output<String> bucket,
-        @Nullable Output<Boolean> eventbridge,
-        @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions,
-        @Nullable Output<List<BucketNotificationQueueArgs>> queues,
-        @Nullable Output<List<BucketNotificationTopicArgs>> topics) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.eventbridge = eventbridge;
-        this.lambdaFunctions = lambdaFunctions;
-        this.queues = queues;
-        this.topics = topics;
-    }
+    private BucketNotificationArgs() {}
 
-    private BucketNotificationArgs() {
-        this.bucket = Codegen.empty();
-        this.eventbridge = Codegen.empty();
-        this.lambdaFunctions = Codegen.empty();
-        this.queues = Codegen.empty();
-        this.topics = Codegen.empty();
+    private BucketNotificationArgs(BucketNotificationArgs $) {
+        this.bucket = $.bucket;
+        this.eventbridge = $.eventbridge;
+        this.lambdaFunctions = $.lambdaFunctions;
+        this.queues = $.queues;
+        this.topics = $.topics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNotificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<Boolean> eventbridge;
-        private @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
-        private @Nullable Output<List<BucketNotificationQueueArgs>> queues;
-        private @Nullable Output<List<BucketNotificationTopicArgs>> topics;
+        private BucketNotificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNotificationArgs();
         }
 
         public Builder(BucketNotificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.eventbridge = defaults.eventbridge;
-    	      this.lambdaFunctions = defaults.lambdaFunctions;
-    	      this.queues = defaults.queues;
-    	      this.topics = defaults.topics;
+            $ = new BucketNotificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder eventbridge(@Nullable Output<Boolean> eventbridge) {
-            this.eventbridge = eventbridge;
+            $.eventbridge = eventbridge;
             return this;
         }
-        public Builder eventbridge(@Nullable Boolean eventbridge) {
-            this.eventbridge = Codegen.ofNullable(eventbridge);
-            return this;
+
+        public Builder eventbridge(Boolean eventbridge) {
+            return eventbridge(Output.of(eventbridge));
         }
+
         public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions) {
-            this.lambdaFunctions = lambdaFunctions;
+            $.lambdaFunctions = lambdaFunctions;
             return this;
         }
-        public Builder lambdaFunctions(@Nullable List<BucketNotificationLambdaFunctionArgs> lambdaFunctions) {
-            this.lambdaFunctions = Codegen.ofNullable(lambdaFunctions);
-            return this;
+
+        public Builder lambdaFunctions(List<BucketNotificationLambdaFunctionArgs> lambdaFunctions) {
+            return lambdaFunctions(Output.of(lambdaFunctions));
         }
+
         public Builder lambdaFunctions(BucketNotificationLambdaFunctionArgs... lambdaFunctions) {
             return lambdaFunctions(List.of(lambdaFunctions));
         }
+
         public Builder queues(@Nullable Output<List<BucketNotificationQueueArgs>> queues) {
-            this.queues = queues;
+            $.queues = queues;
             return this;
         }
-        public Builder queues(@Nullable List<BucketNotificationQueueArgs> queues) {
-            this.queues = Codegen.ofNullable(queues);
-            return this;
+
+        public Builder queues(List<BucketNotificationQueueArgs> queues) {
+            return queues(Output.of(queues));
         }
+
         public Builder queues(BucketNotificationQueueArgs... queues) {
             return queues(List.of(queues));
         }
+
         public Builder topics(@Nullable Output<List<BucketNotificationTopicArgs>> topics) {
-            this.topics = topics;
+            $.topics = topics;
             return this;
         }
-        public Builder topics(@Nullable List<BucketNotificationTopicArgs> topics) {
-            this.topics = Codegen.ofNullable(topics);
-            return this;
+
+        public Builder topics(List<BucketNotificationTopicArgs> topics) {
+            return topics(Output.of(topics));
         }
+
         public Builder topics(BucketNotificationTopicArgs... topics) {
             return topics(List.of(topics));
-        }        public BucketNotificationArgs build() {
-            return new BucketNotificationArgs(bucket, eventbridge, lambdaFunctions, queues, topics);
+        }
+
+        public BucketNotificationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

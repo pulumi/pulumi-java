@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesArgs exten
     public static final ServiceTaskSpecResourcesReservationGenericResourcesArgs Empty = new ServiceTaskSpecResourcesReservationGenericResourcesArgs();
 
     @Import(name="discreteResourcesSpecs")
-      private final @Nullable Output<List<String>> discreteResourcesSpecs;
+    private @Nullable Output<List<String>> discreteResourcesSpecs;
 
-    public Output<List<String>> discreteResourcesSpecs() {
-        return this.discreteResourcesSpecs == null ? Codegen.empty() : this.discreteResourcesSpecs;
+    public Optional<Output<List<String>>> discreteResourcesSpecs() {
+        return Optional.ofNullable(this.discreteResourcesSpecs);
     }
 
     @Import(name="namedResourcesSpecs")
-      private final @Nullable Output<List<String>> namedResourcesSpecs;
+    private @Nullable Output<List<String>> namedResourcesSpecs;
 
-    public Output<List<String>> namedResourcesSpecs() {
-        return this.namedResourcesSpecs == null ? Codegen.empty() : this.namedResourcesSpecs;
+    public Optional<Output<List<String>>> namedResourcesSpecs() {
+        return Optional.ofNullable(this.namedResourcesSpecs);
     }
 
-    public ServiceTaskSpecResourcesReservationGenericResourcesArgs(
-        @Nullable Output<List<String>> discreteResourcesSpecs,
-        @Nullable Output<List<String>> namedResourcesSpecs) {
-        this.discreteResourcesSpecs = discreteResourcesSpecs;
-        this.namedResourcesSpecs = namedResourcesSpecs;
-    }
+    private ServiceTaskSpecResourcesReservationGenericResourcesArgs() {}
 
-    private ServiceTaskSpecResourcesReservationGenericResourcesArgs() {
-        this.discreteResourcesSpecs = Codegen.empty();
-        this.namedResourcesSpecs = Codegen.empty();
+    private ServiceTaskSpecResourcesReservationGenericResourcesArgs(ServiceTaskSpecResourcesReservationGenericResourcesArgs $) {
+        this.discreteResourcesSpecs = $.discreteResourcesSpecs;
+        this.namedResourcesSpecs = $.namedResourcesSpecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecResourcesReservationGenericResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> discreteResourcesSpecs;
-        private @Nullable Output<List<String>> namedResourcesSpecs;
+        private ServiceTaskSpecResourcesReservationGenericResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecResourcesReservationGenericResourcesArgs();
         }
 
         public Builder(ServiceTaskSpecResourcesReservationGenericResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.discreteResourcesSpecs = defaults.discreteResourcesSpecs;
-    	      this.namedResourcesSpecs = defaults.namedResourcesSpecs;
+            $ = new ServiceTaskSpecResourcesReservationGenericResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder discreteResourcesSpecs(@Nullable Output<List<String>> discreteResourcesSpecs) {
-            this.discreteResourcesSpecs = discreteResourcesSpecs;
+            $.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
-        public Builder discreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
-            this.discreteResourcesSpecs = Codegen.ofNullable(discreteResourcesSpecs);
-            return this;
+
+        public Builder discreteResourcesSpecs(List<String> discreteResourcesSpecs) {
+            return discreteResourcesSpecs(Output.of(discreteResourcesSpecs));
         }
+
         public Builder discreteResourcesSpecs(String... discreteResourcesSpecs) {
             return discreteResourcesSpecs(List.of(discreteResourcesSpecs));
         }
+
         public Builder namedResourcesSpecs(@Nullable Output<List<String>> namedResourcesSpecs) {
-            this.namedResourcesSpecs = namedResourcesSpecs;
+            $.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }
-        public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
-            this.namedResourcesSpecs = Codegen.ofNullable(namedResourcesSpecs);
-            return this;
+
+        public Builder namedResourcesSpecs(List<String> namedResourcesSpecs) {
+            return namedResourcesSpecs(Output.of(namedResourcesSpecs));
         }
+
         public Builder namedResourcesSpecs(String... namedResourcesSpecs) {
             return namedResourcesSpecs(List.of(namedResourcesSpecs));
-        }        public ServiceTaskSpecResourcesReservationGenericResourcesArgs build() {
-            return new ServiceTaskSpecResourcesReservationGenericResourcesArgs(discreteResourcesSpecs, namedResourcesSpecs);
+        }
+
+        public ServiceTaskSpecResourcesReservationGenericResourcesArgs build() {
+            return $;
         }
     }
+
 }

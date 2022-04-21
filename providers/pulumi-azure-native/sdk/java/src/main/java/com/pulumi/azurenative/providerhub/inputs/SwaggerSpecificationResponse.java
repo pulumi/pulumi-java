@@ -16,65 +16,61 @@ public final class SwaggerSpecificationResponse extends com.pulumi.resources.Inv
     public static final SwaggerSpecificationResponse Empty = new SwaggerSpecificationResponse();
 
     @Import(name="apiVersions")
-      private final @Nullable List<String> apiVersions;
+    private @Nullable List<String> apiVersions;
 
-    public List<String> apiVersions() {
-        return this.apiVersions == null ? List.of() : this.apiVersions;
+    public Optional<List<String>> apiVersions() {
+        return Optional.ofNullable(this.apiVersions);
     }
 
     @Import(name="swaggerSpecFolderUri")
-      private final @Nullable String swaggerSpecFolderUri;
+    private @Nullable String swaggerSpecFolderUri;
 
     public Optional<String> swaggerSpecFolderUri() {
-        return this.swaggerSpecFolderUri == null ? Optional.empty() : Optional.ofNullable(this.swaggerSpecFolderUri);
+        return Optional.ofNullable(this.swaggerSpecFolderUri);
     }
 
-    public SwaggerSpecificationResponse(
-        @Nullable List<String> apiVersions,
-        @Nullable String swaggerSpecFolderUri) {
-        this.apiVersions = apiVersions;
-        this.swaggerSpecFolderUri = swaggerSpecFolderUri;
-    }
+    private SwaggerSpecificationResponse() {}
 
-    private SwaggerSpecificationResponse() {
-        this.apiVersions = List.of();
-        this.swaggerSpecFolderUri = null;
+    private SwaggerSpecificationResponse(SwaggerSpecificationResponse $) {
+        this.apiVersions = $.apiVersions;
+        this.swaggerSpecFolderUri = $.swaggerSpecFolderUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SwaggerSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> apiVersions;
-        private @Nullable String swaggerSpecFolderUri;
+        private SwaggerSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SwaggerSpecificationResponse();
         }
 
         public Builder(SwaggerSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersions = defaults.apiVersions;
-    	      this.swaggerSpecFolderUri = defaults.swaggerSpecFolderUri;
+            $ = new SwaggerSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = apiVersions;
+            $.apiVersions = apiVersions;
             return this;
         }
+
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
+
         public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
-            this.swaggerSpecFolderUri = swaggerSpecFolderUri;
+            $.swaggerSpecFolderUri = swaggerSpecFolderUri;
             return this;
-        }        public SwaggerSpecificationResponse build() {
-            return new SwaggerSpecificationResponse(apiVersions, swaggerSpecFolderUri);
+        }
+
+        public SwaggerSpecificationResponse build() {
+            return $;
         }
     }
+
 }

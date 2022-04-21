@@ -7,12 +7,12 @@ import com.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurat
 import com.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="device")
-      private final @Nullable Output<SubResourceArgs> device;
+    private @Nullable Output<SubResourceArgs> device;
 
-    public Output<SubResourceArgs> device() {
-        return this.device == null ? Codegen.empty() : this.device;
+    public Optional<Output<SubResourceArgs>> device() {
+        return Optional.ofNullable(this.device);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="managedApplicationParameters")
-      private final @Nullable Output<Object> managedApplicationParameters;
+    private @Nullable Output<Object> managedApplicationParameters;
 
-    public Output<Object> managedApplicationParameters() {
-        return this.managedApplicationParameters == null ? Codegen.empty() : this.managedApplicationParameters;
+    public Optional<Output<Object>> managedApplicationParameters() {
+        return Optional.ofNullable(this.managedApplicationParameters);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkFunctionName")
-      private final @Nullable Output<String> networkFunctionName;
+    private @Nullable Output<String> networkFunctionName;
 
-    public Output<String> networkFunctionName() {
-        return this.networkFunctionName == null ? Codegen.empty() : this.networkFunctionName;
+    public Optional<Output<String>> networkFunctionName() {
+        return Optional.ofNullable(this.networkFunctionName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkFunctionUserConfigurations")
-      private final @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
+    private @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
-    public Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations() {
-        return this.networkFunctionUserConfigurations == null ? Codegen.empty() : this.networkFunctionUserConfigurations;
+    public Optional<Output<List<NetworkFunctionUserConfigurationArgs>>> networkFunctionUserConfigurations() {
+        return Optional.ofNullable(this.networkFunctionUserConfigurations);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,10 +91,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="skuName")
-      private final @Nullable Output<String> skuName;
+    private @Nullable Output<String> skuName;
 
-    public Output<String> skuName() {
-        return this.skuName == null ? Codegen.empty() : this.skuName;
+    public Optional<Output<String>> skuName() {
+        return Optional.ofNullable(this.skuName);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,157 +113,133 @@ public final class NetworkFunctionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vendorName")
-      private final @Nullable Output<String> vendorName;
+    private @Nullable Output<String> vendorName;
 
-    public Output<String> vendorName() {
-        return this.vendorName == null ? Codegen.empty() : this.vendorName;
+    public Optional<Output<String>> vendorName() {
+        return Optional.ofNullable(this.vendorName);
     }
 
-    public NetworkFunctionArgs(
-        @Nullable Output<SubResourceArgs> device,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> managedApplicationParameters,
-        @Nullable Output<String> networkFunctionName,
-        @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> skuName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vendorName) {
-        this.device = device;
-        this.location = location;
-        this.managedApplicationParameters = managedApplicationParameters;
-        this.networkFunctionName = networkFunctionName;
-        this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skuName = skuName;
-        this.tags = tags;
-        this.vendorName = vendorName;
-    }
+    private NetworkFunctionArgs() {}
 
-    private NetworkFunctionArgs() {
-        this.device = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedApplicationParameters = Codegen.empty();
-        this.networkFunctionName = Codegen.empty();
-        this.networkFunctionUserConfigurations = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.skuName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vendorName = Codegen.empty();
+    private NetworkFunctionArgs(NetworkFunctionArgs $) {
+        this.device = $.device;
+        this.location = $.location;
+        this.managedApplicationParameters = $.managedApplicationParameters;
+        this.networkFunctionName = $.networkFunctionName;
+        this.networkFunctionUserConfigurations = $.networkFunctionUserConfigurations;
+        this.resourceGroupName = $.resourceGroupName;
+        this.skuName = $.skuName;
+        this.tags = $.tags;
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> device;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> managedApplicationParameters;
-        private @Nullable Output<String> networkFunctionName;
-        private @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> skuName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vendorName;
+        private NetworkFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionArgs();
         }
 
         public Builder(NetworkFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.device = defaults.device;
-    	      this.location = defaults.location;
-    	      this.managedApplicationParameters = defaults.managedApplicationParameters;
-    	      this.networkFunctionName = defaults.networkFunctionName;
-    	      this.networkFunctionUserConfigurations = defaults.networkFunctionUserConfigurations;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skuName = defaults.skuName;
-    	      this.tags = defaults.tags;
-    	      this.vendorName = defaults.vendorName;
+            $ = new NetworkFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder device(@Nullable Output<SubResourceArgs> device) {
-            this.device = device;
+            $.device = device;
             return this;
         }
-        public Builder device(@Nullable SubResourceArgs device) {
-            this.device = Codegen.ofNullable(device);
-            return this;
+
+        public Builder device(SubResourceArgs device) {
+            return device(Output.of(device));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
-            this.managedApplicationParameters = managedApplicationParameters;
+            $.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
-        public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
-            this.managedApplicationParameters = Codegen.ofNullable(managedApplicationParameters);
-            return this;
+
+        public Builder managedApplicationParameters(Object managedApplicationParameters) {
+            return managedApplicationParameters(Output.of(managedApplicationParameters));
         }
+
         public Builder networkFunctionName(@Nullable Output<String> networkFunctionName) {
-            this.networkFunctionName = networkFunctionName;
+            $.networkFunctionName = networkFunctionName;
             return this;
         }
-        public Builder networkFunctionName(@Nullable String networkFunctionName) {
-            this.networkFunctionName = Codegen.ofNullable(networkFunctionName);
-            return this;
+
+        public Builder networkFunctionName(String networkFunctionName) {
+            return networkFunctionName(Output.of(networkFunctionName));
         }
+
         public Builder networkFunctionUserConfigurations(@Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
-            this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
+            $.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
             return this;
         }
-        public Builder networkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
-            this.networkFunctionUserConfigurations = Codegen.ofNullable(networkFunctionUserConfigurations);
-            return this;
+
+        public Builder networkFunctionUserConfigurations(List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
+            return networkFunctionUserConfigurations(Output.of(networkFunctionUserConfigurations));
         }
+
         public Builder networkFunctionUserConfigurations(NetworkFunctionUserConfigurationArgs... networkFunctionUserConfigurations) {
             return networkFunctionUserConfigurations(List.of(networkFunctionUserConfigurations));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder skuName(@Nullable Output<String> skuName) {
-            this.skuName = skuName;
+            $.skuName = skuName;
             return this;
         }
-        public Builder skuName(@Nullable String skuName) {
-            this.skuName = Codegen.ofNullable(skuName);
-            return this;
+
+        public Builder skuName(String skuName) {
+            return skuName(Output.of(skuName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vendorName(@Nullable Output<String> vendorName) {
-            this.vendorName = vendorName;
+            $.vendorName = vendorName;
             return this;
         }
-        public Builder vendorName(@Nullable String vendorName) {
-            this.vendorName = Codegen.ofNullable(vendorName);
-            return this;
-        }        public NetworkFunctionArgs build() {
-            return new NetworkFunctionArgs(device, location, managedApplicationParameters, networkFunctionName, networkFunctionUserConfigurations, resourceGroupName, skuName, tags, vendorName);
+
+        public Builder vendorName(String vendorName) {
+            return vendorName(Output.of(vendorName));
+        }
+
+        public NetworkFunctionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

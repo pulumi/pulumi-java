@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datalakestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
      * 
      */
     @Import(name="idProvider", required=true)
-      private final Output<String> idProvider;
+    private Output<String> idProvider;
 
     public Output<String> idProvider() {
         return this.idProvider;
@@ -34,63 +33,60 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends com.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public CreateTrustedIdProviderWithAccountParametersArgs(
-        Output<String> idProvider,
-        Output<String> name) {
-        this.idProvider = Objects.requireNonNull(idProvider, "expected parameter 'idProvider' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private CreateTrustedIdProviderWithAccountParametersArgs() {}
 
-    private CreateTrustedIdProviderWithAccountParametersArgs() {
-        this.idProvider = Codegen.empty();
-        this.name = Codegen.empty();
+    private CreateTrustedIdProviderWithAccountParametersArgs(CreateTrustedIdProviderWithAccountParametersArgs $) {
+        this.idProvider = $.idProvider;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateTrustedIdProviderWithAccountParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> idProvider;
-        private Output<String> name;
+        private CreateTrustedIdProviderWithAccountParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateTrustedIdProviderWithAccountParametersArgs();
         }
 
         public Builder(CreateTrustedIdProviderWithAccountParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idProvider = defaults.idProvider;
-    	      this.name = defaults.name;
+            $ = new CreateTrustedIdProviderWithAccountParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idProvider(Output<String> idProvider) {
-            this.idProvider = Objects.requireNonNull(idProvider);
+            $.idProvider = idProvider;
             return this;
         }
+
         public Builder idProvider(String idProvider) {
-            this.idProvider = Output.of(Objects.requireNonNull(idProvider));
-            return this;
+            return idProvider(Output.of(idProvider));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public CreateTrustedIdProviderWithAccountParametersArgs build() {
-            return new CreateTrustedIdProviderWithAccountParametersArgs(idProvider, name);
+            return name(Output.of(name));
+        }
+
+        public CreateTrustedIdProviderWithAccountParametersArgs build() {
+            $.idProvider = Objects.requireNonNull($.idProvider, "expected parameter 'idProvider' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

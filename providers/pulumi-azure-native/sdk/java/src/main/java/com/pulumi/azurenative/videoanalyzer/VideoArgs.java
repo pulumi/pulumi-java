@@ -5,9 +5,9 @@ package com.pulumi.azurenative.videoanalyzer;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="videoName")
-      private final @Nullable Output<String> videoName;
+    private @Nullable Output<String> videoName;
 
-    public Output<String> videoName() {
-        return this.videoName == null ? Codegen.empty() : this.videoName;
+    public Optional<Output<String>> videoName() {
+        return Optional.ofNullable(this.videoName);
     }
 
-    public VideoArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> title,
-        @Nullable Output<String> videoName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.title = title;
-        this.videoName = videoName;
-    }
+    private VideoArgs() {}
 
-    private VideoArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.title = Codegen.empty();
-        this.videoName = Codegen.empty();
+    private VideoArgs(VideoArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.resourceGroupName = $.resourceGroupName;
+        this.title = $.title;
+        this.videoName = $.videoName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> title;
-        private @Nullable Output<String> videoName;
+        private VideoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoArgs();
         }
 
         public Builder(VideoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.title = defaults.title;
-    	      this.videoName = defaults.videoName;
+            $ = new VideoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder videoName(@Nullable Output<String> videoName) {
-            this.videoName = videoName;
+            $.videoName = videoName;
             return this;
         }
-        public Builder videoName(@Nullable String videoName) {
-            this.videoName = Codegen.ofNullable(videoName);
-            return this;
-        }        public VideoArgs build() {
-            return new VideoArgs(accountName, description, resourceGroupName, title, videoName);
+
+        public Builder videoName(String videoName) {
+            return videoName(Output.of(videoName));
+        }
+
+        public VideoArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

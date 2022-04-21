@@ -19,7 +19,7 @@ public final class RouteWarningsItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -30,7 +30,7 @@ public final class RouteWarningsItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="data", required=true)
-      private final List<RouteWarningsItemDataItemResponse> data;
+    private List<RouteWarningsItemDataItemResponse> data;
 
     public List<RouteWarningsItemDataItemResponse> data() {
         return this.data;
@@ -41,67 +41,63 @@ public final class RouteWarningsItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public RouteWarningsItemResponse(
-        String code,
-        List<RouteWarningsItemDataItemResponse> data,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private RouteWarningsItemResponse() {}
 
-    private RouteWarningsItemResponse() {
-        this.code = null;
-        this.data = List.of();
-        this.message = null;
+    private RouteWarningsItemResponse(RouteWarningsItemResponse $) {
+        this.code = $.code;
+        this.data = $.data;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteWarningsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private List<RouteWarningsItemDataItemResponse> data;
-        private String message;
+        private RouteWarningsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteWarningsItemResponse();
         }
 
         public Builder(RouteWarningsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.data = defaults.data;
-    	      this.message = defaults.message;
+            $ = new RouteWarningsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder data(List<RouteWarningsItemDataItemResponse> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(RouteWarningsItemDataItemResponse... data) {
             return data(List.of(data));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public RouteWarningsItemResponse build() {
-            return new RouteWarningsItemResponse(code, data, message);
+        }
+
+        public RouteWarningsItemResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

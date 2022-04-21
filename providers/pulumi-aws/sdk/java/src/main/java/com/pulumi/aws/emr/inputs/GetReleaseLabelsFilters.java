@@ -19,10 +19,10 @@ public final class GetReleaseLabelsFilters extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="application")
-      private final @Nullable String application;
+    private @Nullable String application;
 
     public Optional<String> application() {
-        return this.application == null ? Optional.empty() : Optional.ofNullable(this.application);
+        return Optional.ofNullable(this.application);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetReleaseLabelsFilters extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
-    public GetReleaseLabelsFilters(
-        @Nullable String application,
-        @Nullable String prefix) {
-        this.application = application;
-        this.prefix = prefix;
-    }
+    private GetReleaseLabelsFilters() {}
 
-    private GetReleaseLabelsFilters() {
-        this.application = null;
-        this.prefix = null;
+    private GetReleaseLabelsFilters(GetReleaseLabelsFilters $) {
+        this.application = $.application;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReleaseLabelsFilters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String application;
-        private @Nullable String prefix;
+        private GetReleaseLabelsFilters $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReleaseLabelsFilters();
         }
 
         public Builder(GetReleaseLabelsFilters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.application = defaults.application;
-    	      this.prefix = defaults.prefix;
+            $ = new GetReleaseLabelsFilters(Objects.requireNonNull(defaults));
         }
 
         public Builder application(@Nullable String application) {
-            this.application = application;
+            $.application = application;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
-        }        public GetReleaseLabelsFilters build() {
-            return new GetReleaseLabelsFilters(application, prefix);
+        }
+
+        public GetReleaseLabelsFilters build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="managedInstanceResourceId", required=true)
-      private final String managedInstanceResourceId;
+    private String managedInstanceResourceId;
 
     public String managedInstanceResourceId() {
         return this.managedInstanceResourceId;
@@ -35,10 +35,10 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -58,73 +58,64 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public MiSqlConnectionInfoResponse(
-        String managedInstanceResourceId,
-        @Nullable String password,
-        String type,
-        @Nullable String userName) {
-        this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
-        this.password = password;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private MiSqlConnectionInfoResponse() {}
 
-    private MiSqlConnectionInfoResponse() {
-        this.managedInstanceResourceId = null;
-        this.password = null;
-        this.type = null;
-        this.userName = null;
+    private MiSqlConnectionInfoResponse(MiSqlConnectionInfoResponse $) {
+        this.managedInstanceResourceId = $.managedInstanceResourceId;
+        this.password = $.password;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MiSqlConnectionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managedInstanceResourceId;
-        private @Nullable String password;
-        private String type;
-        private @Nullable String userName;
+        private MiSqlConnectionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MiSqlConnectionInfoResponse();
         }
 
         public Builder(MiSqlConnectionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedInstanceResourceId = defaults.managedInstanceResourceId;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new MiSqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder managedInstanceResourceId(String managedInstanceResourceId) {
-            this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
+            $.managedInstanceResourceId = managedInstanceResourceId;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public MiSqlConnectionInfoResponse build() {
-            return new MiSqlConnectionInfoResponse(managedInstanceResourceId, password, type, userName);
+        }
+
+        public MiSqlConnectionInfoResponse build() {
+            $.managedInstanceResourceId = Objects.requireNonNull($.managedInstanceResourceId, "expected parameter 'managedInstanceResourceId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

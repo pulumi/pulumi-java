@@ -23,7 +23,7 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableOnpremGcsTransferLogs", required=true)
-      private final Boolean enableOnpremGcsTransferLogs;
+    private Boolean enableOnpremGcsTransferLogs;
 
     public Boolean enableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs;
@@ -34,7 +34,7 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="logActionStates", required=true)
-      private final List<String> logActionStates;
+    private List<String> logActionStates;
 
     public List<String> logActionStates() {
         return this.logActionStates;
@@ -45,70 +45,67 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="logActions", required=true)
-      private final List<String> logActions;
+    private List<String> logActions;
 
     public List<String> logActions() {
         return this.logActions;
     }
 
-    public LoggingConfigResponse(
-        Boolean enableOnpremGcsTransferLogs,
-        List<String> logActionStates,
-        List<String> logActions) {
-        this.enableOnpremGcsTransferLogs = Objects.requireNonNull(enableOnpremGcsTransferLogs, "expected parameter 'enableOnpremGcsTransferLogs' to be non-null");
-        this.logActionStates = Objects.requireNonNull(logActionStates, "expected parameter 'logActionStates' to be non-null");
-        this.logActions = Objects.requireNonNull(logActions, "expected parameter 'logActions' to be non-null");
-    }
+    private LoggingConfigResponse() {}
 
-    private LoggingConfigResponse() {
-        this.enableOnpremGcsTransferLogs = null;
-        this.logActionStates = List.of();
-        this.logActions = List.of();
+    private LoggingConfigResponse(LoggingConfigResponse $) {
+        this.enableOnpremGcsTransferLogs = $.enableOnpremGcsTransferLogs;
+        this.logActionStates = $.logActionStates;
+        this.logActions = $.logActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableOnpremGcsTransferLogs;
-        private List<String> logActionStates;
-        private List<String> logActions;
+        private LoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigResponse();
         }
 
         public Builder(LoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableOnpremGcsTransferLogs = defaults.enableOnpremGcsTransferLogs;
-    	      this.logActionStates = defaults.logActionStates;
-    	      this.logActions = defaults.logActions;
+            $ = new LoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableOnpremGcsTransferLogs(Boolean enableOnpremGcsTransferLogs) {
-            this.enableOnpremGcsTransferLogs = Objects.requireNonNull(enableOnpremGcsTransferLogs);
+            $.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
             return this;
         }
+
         public Builder logActionStates(List<String> logActionStates) {
-            this.logActionStates = Objects.requireNonNull(logActionStates);
+            $.logActionStates = logActionStates;
             return this;
         }
+
         public Builder logActionStates(String... logActionStates) {
             return logActionStates(List.of(logActionStates));
         }
+
         public Builder logActions(List<String> logActions) {
-            this.logActions = Objects.requireNonNull(logActions);
+            $.logActions = logActions;
             return this;
         }
+
         public Builder logActions(String... logActions) {
             return logActions(List.of(logActions));
-        }        public LoggingConfigResponse build() {
-            return new LoggingConfigResponse(enableOnpremGcsTransferLogs, logActionStates, logActions);
+        }
+
+        public LoggingConfigResponse build() {
+            $.enableOnpremGcsTransferLogs = Objects.requireNonNull($.enableOnpremGcsTransferLogs, "expected parameter 'enableOnpremGcsTransferLogs' to be non-null");
+            $.logActionStates = Objects.requireNonNull($.logActionStates, "expected parameter 'logActionStates' to be non-null");
+            $.logActions = Objects.requireNonNull($.logActions, "expected parameter 'logActions' to be non-null");
+            return $;
         }
     }
+
 }

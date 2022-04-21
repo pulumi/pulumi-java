@@ -13,62 +13,59 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow extends com
     public static final GetClusterMaintenancePolicyDailyMaintenanceWindow Empty = new GetClusterMaintenancePolicyDailyMaintenanceWindow();
 
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GetClusterMaintenancePolicyDailyMaintenanceWindow(
-        String duration,
-        String startTime) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GetClusterMaintenancePolicyDailyMaintenanceWindow() {}
 
-    private GetClusterMaintenancePolicyDailyMaintenanceWindow() {
-        this.duration = null;
-        this.startTime = null;
+    private GetClusterMaintenancePolicyDailyMaintenanceWindow(GetClusterMaintenancePolicyDailyMaintenanceWindow $) {
+        this.duration = $.duration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMaintenancePolicyDailyMaintenanceWindow defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String duration;
-        private String startTime;
+        private GetClusterMaintenancePolicyDailyMaintenanceWindow $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMaintenancePolicyDailyMaintenanceWindow();
         }
 
         public Builder(GetClusterMaintenancePolicyDailyMaintenanceWindow defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.startTime = defaults.startTime;
+            $ = new GetClusterMaintenancePolicyDailyMaintenanceWindow(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GetClusterMaintenancePolicyDailyMaintenanceWindow build() {
-            return new GetClusterMaintenancePolicyDailyMaintenanceWindow(duration, startTime);
+        }
+
+        public GetClusterMaintenancePolicyDailyMaintenanceWindow build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

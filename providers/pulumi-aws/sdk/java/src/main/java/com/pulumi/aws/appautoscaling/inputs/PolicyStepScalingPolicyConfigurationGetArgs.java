@@ -6,11 +6,11 @@ package com.pulumi.aws.appautoscaling.inputs;
 import com.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="adjustmentType")
-      private final @Nullable Output<String> adjustmentType;
+    private @Nullable Output<String> adjustmentType;
 
-    public Output<String> adjustmentType() {
-        return this.adjustmentType == null ? Codegen.empty() : this.adjustmentType;
+    public Optional<Output<String>> adjustmentType() {
+        return Optional.ofNullable(this.adjustmentType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="cooldown")
-      private final @Nullable Output<Integer> cooldown;
+    private @Nullable Output<Integer> cooldown;
 
-    public Output<Integer> cooldown() {
-        return this.cooldown == null ? Codegen.empty() : this.cooldown;
+    public Optional<Output<Integer>> cooldown() {
+        return Optional.ofNullable(this.cooldown);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="metricAggregationType")
-      private final @Nullable Output<String> metricAggregationType;
+    private @Nullable Output<String> metricAggregationType;
 
-    public Output<String> metricAggregationType() {
-        return this.metricAggregationType == null ? Codegen.empty() : this.metricAggregationType;
+    public Optional<Output<String>> metricAggregationType() {
+        return Optional.ofNullable(this.metricAggregationType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="minAdjustmentMagnitude")
-      private final @Nullable Output<Integer> minAdjustmentMagnitude;
+    private @Nullable Output<Integer> minAdjustmentMagnitude;
 
-    public Output<Integer> minAdjustmentMagnitude() {
-        return this.minAdjustmentMagnitude == null ? Codegen.empty() : this.minAdjustmentMagnitude;
+    public Optional<Output<Integer>> minAdjustmentMagnitude() {
+        return Optional.ofNullable(this.minAdjustmentMagnitude);
     }
 
     /**
@@ -67,105 +67,92 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends com.pulum
      * 
      */
     @Import(name="stepAdjustments")
-      private final @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
+    private @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
 
-    public Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments() {
-        return this.stepAdjustments == null ? Codegen.empty() : this.stepAdjustments;
+    public Optional<Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>>> stepAdjustments() {
+        return Optional.ofNullable(this.stepAdjustments);
     }
 
-    public PolicyStepScalingPolicyConfigurationGetArgs(
-        @Nullable Output<String> adjustmentType,
-        @Nullable Output<Integer> cooldown,
-        @Nullable Output<String> metricAggregationType,
-        @Nullable Output<Integer> minAdjustmentMagnitude,
-        @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments) {
-        this.adjustmentType = adjustmentType;
-        this.cooldown = cooldown;
-        this.metricAggregationType = metricAggregationType;
-        this.minAdjustmentMagnitude = minAdjustmentMagnitude;
-        this.stepAdjustments = stepAdjustments;
-    }
+    private PolicyStepScalingPolicyConfigurationGetArgs() {}
 
-    private PolicyStepScalingPolicyConfigurationGetArgs() {
-        this.adjustmentType = Codegen.empty();
-        this.cooldown = Codegen.empty();
-        this.metricAggregationType = Codegen.empty();
-        this.minAdjustmentMagnitude = Codegen.empty();
-        this.stepAdjustments = Codegen.empty();
+    private PolicyStepScalingPolicyConfigurationGetArgs(PolicyStepScalingPolicyConfigurationGetArgs $) {
+        this.adjustmentType = $.adjustmentType;
+        this.cooldown = $.cooldown;
+        this.metricAggregationType = $.metricAggregationType;
+        this.minAdjustmentMagnitude = $.minAdjustmentMagnitude;
+        this.stepAdjustments = $.stepAdjustments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyStepScalingPolicyConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adjustmentType;
-        private @Nullable Output<Integer> cooldown;
-        private @Nullable Output<String> metricAggregationType;
-        private @Nullable Output<Integer> minAdjustmentMagnitude;
-        private @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
+        private PolicyStepScalingPolicyConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyStepScalingPolicyConfigurationGetArgs();
         }
 
         public Builder(PolicyStepScalingPolicyConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adjustmentType = defaults.adjustmentType;
-    	      this.cooldown = defaults.cooldown;
-    	      this.metricAggregationType = defaults.metricAggregationType;
-    	      this.minAdjustmentMagnitude = defaults.minAdjustmentMagnitude;
-    	      this.stepAdjustments = defaults.stepAdjustments;
+            $ = new PolicyStepScalingPolicyConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adjustmentType(@Nullable Output<String> adjustmentType) {
-            this.adjustmentType = adjustmentType;
+            $.adjustmentType = adjustmentType;
             return this;
         }
-        public Builder adjustmentType(@Nullable String adjustmentType) {
-            this.adjustmentType = Codegen.ofNullable(adjustmentType);
-            return this;
+
+        public Builder adjustmentType(String adjustmentType) {
+            return adjustmentType(Output.of(adjustmentType));
         }
+
         public Builder cooldown(@Nullable Output<Integer> cooldown) {
-            this.cooldown = cooldown;
+            $.cooldown = cooldown;
             return this;
         }
-        public Builder cooldown(@Nullable Integer cooldown) {
-            this.cooldown = Codegen.ofNullable(cooldown);
-            return this;
+
+        public Builder cooldown(Integer cooldown) {
+            return cooldown(Output.of(cooldown));
         }
+
         public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
-            this.metricAggregationType = metricAggregationType;
+            $.metricAggregationType = metricAggregationType;
             return this;
         }
-        public Builder metricAggregationType(@Nullable String metricAggregationType) {
-            this.metricAggregationType = Codegen.ofNullable(metricAggregationType);
-            return this;
+
+        public Builder metricAggregationType(String metricAggregationType) {
+            return metricAggregationType(Output.of(metricAggregationType));
         }
+
         public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
-            this.minAdjustmentMagnitude = minAdjustmentMagnitude;
+            $.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
-        public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
-            this.minAdjustmentMagnitude = Codegen.ofNullable(minAdjustmentMagnitude);
-            return this;
+
+        public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
+            return minAdjustmentMagnitude(Output.of(minAdjustmentMagnitude));
         }
+
         public Builder stepAdjustments(@Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments) {
-            this.stepAdjustments = stepAdjustments;
+            $.stepAdjustments = stepAdjustments;
             return this;
         }
-        public Builder stepAdjustments(@Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs> stepAdjustments) {
-            this.stepAdjustments = Codegen.ofNullable(stepAdjustments);
-            return this;
+
+        public Builder stepAdjustments(List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs> stepAdjustments) {
+            return stepAdjustments(Output.of(stepAdjustments));
         }
+
         public Builder stepAdjustments(PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs... stepAdjustments) {
             return stepAdjustments(List.of(stepAdjustments));
-        }        public PolicyStepScalingPolicyConfigurationGetArgs build() {
-            return new PolicyStepScalingPolicyConfigurationGetArgs(adjustmentType, cooldown, metricAggregationType, minAdjustmentMagnitude, stepAdjustments);
+        }
+
+        public PolicyStepScalingPolicyConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

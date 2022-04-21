@@ -6,7 +6,6 @@ package com.pulumi.aws.lightsail;
 import com.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class InstancePublicPortsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceName", required=true)
-      private final Output<String> instanceName;
+    private Output<String> instanceName;
 
     public Output<String> instanceName() {
         return this.instanceName;
@@ -32,66 +31,64 @@ public final class InstancePublicPortsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="portInfos", required=true)
-      private final Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
+    private Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
     public Output<List<InstancePublicPortsPortInfoArgs>> portInfos() {
         return this.portInfos;
     }
 
-    public InstancePublicPortsArgs(
-        Output<String> instanceName,
-        Output<List<InstancePublicPortsPortInfoArgs>> portInfos) {
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.portInfos = Objects.requireNonNull(portInfos, "expected parameter 'portInfos' to be non-null");
-    }
+    private InstancePublicPortsArgs() {}
 
-    private InstancePublicPortsArgs() {
-        this.instanceName = Codegen.empty();
-        this.portInfos = Codegen.empty();
+    private InstancePublicPortsArgs(InstancePublicPortsArgs $) {
+        this.instanceName = $.instanceName;
+        this.portInfos = $.portInfos;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstancePublicPortsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceName;
-        private Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
+        private InstancePublicPortsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstancePublicPortsArgs();
         }
 
         public Builder(InstancePublicPortsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
-    	      this.portInfos = defaults.portInfos;
+            $ = new InstancePublicPortsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(Output<String> instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder instanceName(String instanceName) {
-            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
-            return this;
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder portInfos(Output<List<InstancePublicPortsPortInfoArgs>> portInfos) {
-            this.portInfos = Objects.requireNonNull(portInfos);
+            $.portInfos = portInfos;
             return this;
         }
+
         public Builder portInfos(List<InstancePublicPortsPortInfoArgs> portInfos) {
-            this.portInfos = Output.of(Objects.requireNonNull(portInfos));
-            return this;
+            return portInfos(Output.of(portInfos));
         }
+
         public Builder portInfos(InstancePublicPortsPortInfoArgs... portInfos) {
             return portInfos(List.of(portInfos));
-        }        public InstancePublicPortsArgs build() {
-            return new InstancePublicPortsArgs(instanceName, portInfos);
+        }
+
+        public InstancePublicPortsArgs build() {
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            $.portInfos = Objects.requireNonNull($.portInfos, "expected parameter 'portInfos' to be non-null");
+            return $;
         }
     }
+
 }

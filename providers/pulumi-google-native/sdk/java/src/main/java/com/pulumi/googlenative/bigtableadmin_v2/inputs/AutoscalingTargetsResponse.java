@@ -21,45 +21,45 @@ public final class AutoscalingTargetsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cpuUtilizationPercent", required=true)
-      private final Integer cpuUtilizationPercent;
+    private Integer cpuUtilizationPercent;
 
     public Integer cpuUtilizationPercent() {
         return this.cpuUtilizationPercent;
     }
 
-    public AutoscalingTargetsResponse(Integer cpuUtilizationPercent) {
-        this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent, "expected parameter 'cpuUtilizationPercent' to be non-null");
-    }
+    private AutoscalingTargetsResponse() {}
 
-    private AutoscalingTargetsResponse() {
-        this.cpuUtilizationPercent = null;
+    private AutoscalingTargetsResponse(AutoscalingTargetsResponse $) {
+        this.cpuUtilizationPercent = $.cpuUtilizationPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingTargetsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cpuUtilizationPercent;
+        private AutoscalingTargetsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingTargetsResponse();
         }
 
         public Builder(AutoscalingTargetsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuUtilizationPercent = defaults.cpuUtilizationPercent;
+            $ = new AutoscalingTargetsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuUtilizationPercent(Integer cpuUtilizationPercent) {
-            this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent);
+            $.cpuUtilizationPercent = cpuUtilizationPercent;
             return this;
-        }        public AutoscalingTargetsResponse build() {
-            return new AutoscalingTargetsResponse(cpuUtilizationPercent);
+        }
+
+        public AutoscalingTargetsResponse build() {
+            $.cpuUtilizationPercent = Objects.requireNonNull($.cpuUtilizationPercent, "expected parameter 'cpuUtilizationPercent' to be non-null");
+            return $;
         }
     }
+
 }

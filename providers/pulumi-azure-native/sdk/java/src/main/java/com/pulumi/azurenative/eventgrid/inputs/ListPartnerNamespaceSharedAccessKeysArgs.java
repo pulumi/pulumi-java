@@ -17,7 +17,7 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends com.pulumi.r
      * 
      */
     @Import(name="partnerNamespaceName", required=true)
-      private final String partnerNamespaceName;
+    private String partnerNamespaceName;
 
     public String partnerNamespaceName() {
         return this.partnerNamespaceName;
@@ -28,55 +28,52 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListPartnerNamespaceSharedAccessKeysArgs(
-        String partnerNamespaceName,
-        String resourceGroupName) {
-        this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName, "expected parameter 'partnerNamespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListPartnerNamespaceSharedAccessKeysArgs() {}
 
-    private ListPartnerNamespaceSharedAccessKeysArgs() {
-        this.partnerNamespaceName = null;
-        this.resourceGroupName = null;
+    private ListPartnerNamespaceSharedAccessKeysArgs(ListPartnerNamespaceSharedAccessKeysArgs $) {
+        this.partnerNamespaceName = $.partnerNamespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListPartnerNamespaceSharedAccessKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partnerNamespaceName;
-        private String resourceGroupName;
+        private ListPartnerNamespaceSharedAccessKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListPartnerNamespaceSharedAccessKeysArgs();
         }
 
         public Builder(ListPartnerNamespaceSharedAccessKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerNamespaceName = defaults.partnerNamespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListPartnerNamespaceSharedAccessKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerNamespaceName(String partnerNamespaceName) {
-            this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
+            $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListPartnerNamespaceSharedAccessKeysArgs build() {
-            return new ListPartnerNamespaceSharedAccessKeysArgs(partnerNamespaceName, resourceGroupName);
+        }
+
+        public ListPartnerNamespaceSharedAccessKeysArgs build() {
+            $.partnerNamespaceName = Objects.requireNonNull($.partnerNamespaceName, "expected parameter 'partnerNamespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

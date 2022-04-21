@@ -20,10 +20,10 @@ public final class SubResourceWithColocationStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="colocationStatus")
-      private final @Nullable InstanceViewStatusResponse colocationStatus;
+    private @Nullable InstanceViewStatusResponse colocationStatus;
 
     public Optional<InstanceViewStatusResponse> colocationStatus() {
-        return this.colocationStatus == null ? Optional.empty() : Optional.ofNullable(this.colocationStatus);
+        return Optional.ofNullable(this.colocationStatus);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class SubResourceWithColocationStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public SubResourceWithColocationStatusResponse(
-        @Nullable InstanceViewStatusResponse colocationStatus,
-        @Nullable String id) {
-        this.colocationStatus = colocationStatus;
-        this.id = id;
-    }
+    private SubResourceWithColocationStatusResponse() {}
 
-    private SubResourceWithColocationStatusResponse() {
-        this.colocationStatus = null;
-        this.id = null;
+    private SubResourceWithColocationStatusResponse(SubResourceWithColocationStatusResponse $) {
+        this.colocationStatus = $.colocationStatus;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubResourceWithColocationStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable InstanceViewStatusResponse colocationStatus;
-        private @Nullable String id;
+        private SubResourceWithColocationStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubResourceWithColocationStatusResponse();
         }
 
         public Builder(SubResourceWithColocationStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.colocationStatus = defaults.colocationStatus;
-    	      this.id = defaults.id;
+            $ = new SubResourceWithColocationStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder colocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
-            this.colocationStatus = colocationStatus;
+            $.colocationStatus = colocationStatus;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public SubResourceWithColocationStatusResponse build() {
-            return new SubResourceWithColocationStatusResponse(colocationStatus, id);
+        }
+
+        public SubResourceWithColocationStatusResponse build() {
+            return $;
         }
     }
+
 }

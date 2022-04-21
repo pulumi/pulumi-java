@@ -23,10 +23,10 @@ public final class ArtifactParameterPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ArtifactParameterPropertiesResponse extends com.pulumi.resour
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ArtifactParameterPropertiesResponse(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private ArtifactParameterPropertiesResponse() {}
 
-    private ArtifactParameterPropertiesResponse() {
-        this.name = null;
-        this.value = null;
+    private ArtifactParameterPropertiesResponse(ArtifactParameterPropertiesResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactParameterPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private ArtifactParameterPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactParameterPropertiesResponse();
         }
 
         public Builder(ArtifactParameterPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ArtifactParameterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ArtifactParameterPropertiesResponse build() {
-            return new ArtifactParameterPropertiesResponse(name, value);
+        }
+
+        public ArtifactParameterPropertiesResponse build() {
+            return $;
         }
     }
+
 }

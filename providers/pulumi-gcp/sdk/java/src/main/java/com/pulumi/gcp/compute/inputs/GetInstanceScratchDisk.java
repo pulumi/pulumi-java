@@ -17,45 +17,45 @@ public final class GetInstanceScratchDisk extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="interface", required=true)
-      private final String interface_;
+    private String interface_;
 
     public String interface_() {
         return this.interface_;
     }
 
-    public GetInstanceScratchDisk(String interface_) {
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-    }
+    private GetInstanceScratchDisk() {}
 
-    private GetInstanceScratchDisk() {
-        this.interface_ = null;
+    private GetInstanceScratchDisk(GetInstanceScratchDisk $) {
+        this.interface_ = $.interface_;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceScratchDisk defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interface_;
+        private GetInstanceScratchDisk $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceScratchDisk();
         }
 
         public Builder(GetInstanceScratchDisk defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interface_ = defaults.interface_;
+            $ = new GetInstanceScratchDisk(Objects.requireNonNull(defaults));
         }
 
         public Builder interface_(String interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
-        }        public GetInstanceScratchDisk build() {
-            return new GetInstanceScratchDisk(interface_);
+        }
+
+        public GetInstanceScratchDisk build() {
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            return $;
         }
     }
+
 }

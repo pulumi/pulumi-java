@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageSchedulingNodeAffinityArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,133 +20,120 @@ public final class InstanceFromMachineImageSchedulingArgs extends com.pulumi.res
     public static final InstanceFromMachineImageSchedulingArgs Empty = new InstanceFromMachineImageSchedulingArgs();
 
     @Import(name="automaticRestart")
-      private final @Nullable Output<Boolean> automaticRestart;
+    private @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> automaticRestart() {
-        return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
+    public Optional<Output<Boolean>> automaticRestart() {
+        return Optional.ofNullable(this.automaticRestart);
     }
 
     @Import(name="minNodeCpus")
-      private final @Nullable Output<Integer> minNodeCpus;
+    private @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> minNodeCpus() {
-        return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
+    public Optional<Output<Integer>> minNodeCpus() {
+        return Optional.ofNullable(this.minNodeCpus);
     }
 
     @Import(name="nodeAffinities")
-      private final @Nullable Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities;
+    private @Nullable Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities() {
-        return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
+    public Optional<Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>>> nodeAffinities() {
+        return Optional.ofNullable(this.nodeAffinities);
     }
 
     @Import(name="onHostMaintenance")
-      private final @Nullable Output<String> onHostMaintenance;
+    private @Nullable Output<String> onHostMaintenance;
 
-    public Output<String> onHostMaintenance() {
-        return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
+    public Optional<Output<String>> onHostMaintenance() {
+        return Optional.ofNullable(this.onHostMaintenance);
     }
 
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
-    public InstanceFromMachineImageSchedulingArgs(
-        @Nullable Output<Boolean> automaticRestart,
-        @Nullable Output<Integer> minNodeCpus,
-        @Nullable Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities,
-        @Nullable Output<String> onHostMaintenance,
-        @Nullable Output<Boolean> preemptible) {
-        this.automaticRestart = automaticRestart;
-        this.minNodeCpus = minNodeCpus;
-        this.nodeAffinities = nodeAffinities;
-        this.onHostMaintenance = onHostMaintenance;
-        this.preemptible = preemptible;
-    }
+    private InstanceFromMachineImageSchedulingArgs() {}
 
-    private InstanceFromMachineImageSchedulingArgs() {
-        this.automaticRestart = Codegen.empty();
-        this.minNodeCpus = Codegen.empty();
-        this.nodeAffinities = Codegen.empty();
-        this.onHostMaintenance = Codegen.empty();
-        this.preemptible = Codegen.empty();
+    private InstanceFromMachineImageSchedulingArgs(InstanceFromMachineImageSchedulingArgs $) {
+        this.automaticRestart = $.automaticRestart;
+        this.minNodeCpus = $.minNodeCpus;
+        this.nodeAffinities = $.nodeAffinities;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.preemptible = $.preemptible;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageSchedulingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automaticRestart;
-        private @Nullable Output<Integer> minNodeCpus;
-        private @Nullable Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities;
-        private @Nullable Output<String> onHostMaintenance;
-        private @Nullable Output<Boolean> preemptible;
+        private InstanceFromMachineImageSchedulingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageSchedulingArgs();
         }
 
         public Builder(InstanceFromMachineImageSchedulingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticRestart = defaults.automaticRestart;
-    	      this.minNodeCpus = defaults.minNodeCpus;
-    	      this.nodeAffinities = defaults.nodeAffinities;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.preemptible = defaults.preemptible;
+            $ = new InstanceFromMachineImageSchedulingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
-            this.automaticRestart = automaticRestart;
+            $.automaticRestart = automaticRestart;
             return this;
         }
-        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Codegen.ofNullable(automaticRestart);
-            return this;
+
+        public Builder automaticRestart(Boolean automaticRestart) {
+            return automaticRestart(Output.of(automaticRestart));
         }
+
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
-            this.minNodeCpus = minNodeCpus;
+            $.minNodeCpus = minNodeCpus;
             return this;
         }
-        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Codegen.ofNullable(minNodeCpus);
-            return this;
+
+        public Builder minNodeCpus(Integer minNodeCpus) {
+            return minNodeCpus(Output.of(minNodeCpus));
         }
+
         public Builder nodeAffinities(@Nullable Output<List<InstanceFromMachineImageSchedulingNodeAffinityArgs>> nodeAffinities) {
-            this.nodeAffinities = nodeAffinities;
+            $.nodeAffinities = nodeAffinities;
             return this;
         }
-        public Builder nodeAffinities(@Nullable List<InstanceFromMachineImageSchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Codegen.ofNullable(nodeAffinities);
-            return this;
+
+        public Builder nodeAffinities(List<InstanceFromMachineImageSchedulingNodeAffinityArgs> nodeAffinities) {
+            return nodeAffinities(Output.of(nodeAffinities));
         }
+
         public Builder nodeAffinities(InstanceFromMachineImageSchedulingNodeAffinityArgs... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
+
         public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
-            this.onHostMaintenance = onHostMaintenance;
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
-        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
-            this.onHostMaintenance = Codegen.ofNullable(onHostMaintenance);
-            return this;
+
+        public Builder onHostMaintenance(String onHostMaintenance) {
+            return onHostMaintenance(Output.of(onHostMaintenance));
         }
+
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
-        }        public InstanceFromMachineImageSchedulingArgs build() {
-            return new InstanceFromMachineImageSchedulingArgs(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
+        }
+
+        public InstanceFromMachineImageSchedulingArgs build() {
+            return $;
         }
     }
+
 }

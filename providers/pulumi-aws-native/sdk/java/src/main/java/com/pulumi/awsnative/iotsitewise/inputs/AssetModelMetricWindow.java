@@ -19,45 +19,44 @@ public final class AssetModelMetricWindow extends com.pulumi.resources.InvokeArg
     public static final AssetModelMetricWindow Empty = new AssetModelMetricWindow();
 
     @Import(name="tumbling")
-      private final @Nullable AssetModelTumblingWindow tumbling;
+    private @Nullable AssetModelTumblingWindow tumbling;
 
     public Optional<AssetModelTumblingWindow> tumbling() {
-        return this.tumbling == null ? Optional.empty() : Optional.ofNullable(this.tumbling);
+        return Optional.ofNullable(this.tumbling);
     }
 
-    public AssetModelMetricWindow(@Nullable AssetModelTumblingWindow tumbling) {
-        this.tumbling = tumbling;
-    }
+    private AssetModelMetricWindow() {}
 
-    private AssetModelMetricWindow() {
-        this.tumbling = null;
+    private AssetModelMetricWindow(AssetModelMetricWindow $) {
+        this.tumbling = $.tumbling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelMetricWindow defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AssetModelTumblingWindow tumbling;
+        private AssetModelMetricWindow $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelMetricWindow();
         }
 
         public Builder(AssetModelMetricWindow defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tumbling = defaults.tumbling;
+            $ = new AssetModelMetricWindow(Objects.requireNonNull(defaults));
         }
 
         public Builder tumbling(@Nullable AssetModelTumblingWindow tumbling) {
-            this.tumbling = tumbling;
+            $.tumbling = tumbling;
             return this;
-        }        public AssetModelMetricWindow build() {
-            return new AssetModelMetricWindow(tumbling);
+        }
+
+        public AssetModelMetricWindow build() {
+            return $;
         }
     }
+
 }

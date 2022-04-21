@@ -24,10 +24,10 @@ public final class DomainSharingSettings extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="notebookOutputOption")
-      private final @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption;
+    private @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption;
 
     public Optional<DomainSharingSettingsNotebookOutputOption> notebookOutputOption() {
-        return this.notebookOutputOption == null ? Optional.empty() : Optional.ofNullable(this.notebookOutputOption);
+        return Optional.ofNullable(this.notebookOutputOption);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DomainSharingSettings extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="s3KmsKeyId")
-      private final @Nullable String s3KmsKeyId;
+    private @Nullable String s3KmsKeyId;
 
     public Optional<String> s3KmsKeyId() {
-        return this.s3KmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.s3KmsKeyId);
+        return Optional.ofNullable(this.s3KmsKeyId);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class DomainSharingSettings extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="s3OutputPath")
-      private final @Nullable String s3OutputPath;
+    private @Nullable String s3OutputPath;
 
     public Optional<String> s3OutputPath() {
-        return this.s3OutputPath == null ? Optional.empty() : Optional.ofNullable(this.s3OutputPath);
+        return Optional.ofNullable(this.s3OutputPath);
     }
 
-    public DomainSharingSettings(
-        @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption,
-        @Nullable String s3KmsKeyId,
-        @Nullable String s3OutputPath) {
-        this.notebookOutputOption = notebookOutputOption;
-        this.s3KmsKeyId = s3KmsKeyId;
-        this.s3OutputPath = s3OutputPath;
-    }
+    private DomainSharingSettings() {}
 
-    private DomainSharingSettings() {
-        this.notebookOutputOption = null;
-        this.s3KmsKeyId = null;
-        this.s3OutputPath = null;
+    private DomainSharingSettings(DomainSharingSettings $) {
+        this.notebookOutputOption = $.notebookOutputOption;
+        this.s3KmsKeyId = $.s3KmsKeyId;
+        this.s3OutputPath = $.s3OutputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainSharingSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption;
-        private @Nullable String s3KmsKeyId;
-        private @Nullable String s3OutputPath;
+        private DomainSharingSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainSharingSettings();
         }
 
         public Builder(DomainSharingSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notebookOutputOption = defaults.notebookOutputOption;
-    	      this.s3KmsKeyId = defaults.s3KmsKeyId;
-    	      this.s3OutputPath = defaults.s3OutputPath;
+            $ = new DomainSharingSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder notebookOutputOption(@Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
-            this.notebookOutputOption = notebookOutputOption;
+            $.notebookOutputOption = notebookOutputOption;
             return this;
         }
+
         public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
-            this.s3KmsKeyId = s3KmsKeyId;
+            $.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
+
         public Builder s3OutputPath(@Nullable String s3OutputPath) {
-            this.s3OutputPath = s3OutputPath;
+            $.s3OutputPath = s3OutputPath;
             return this;
-        }        public DomainSharingSettings build() {
-            return new DomainSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
+        }
+
+        public DomainSharingSettings build() {
+            return $;
         }
     }
+
 }

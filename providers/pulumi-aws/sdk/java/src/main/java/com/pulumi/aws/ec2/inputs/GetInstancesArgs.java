@@ -24,10 +24,10 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInstancesFilter> filters;
+    private @Nullable List<GetInstancesFilter> filters;
 
-    public List<GetInstancesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInstancesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceStateNames")
-      private final @Nullable List<String> instanceStateNames;
+    private @Nullable List<String> instanceStateNames;
 
-    public List<String> instanceStateNames() {
-        return this.instanceStateNames == null ? List.of() : this.instanceStateNames;
+    public Optional<List<String>> instanceStateNames() {
+        return Optional.ofNullable(this.instanceStateNames);
     }
 
     /**
@@ -47,70 +47,64 @@ public final class GetInstancesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceTags")
-      private final @Nullable Map<String,String> instanceTags;
+    private @Nullable Map<String,String> instanceTags;
 
-    public Map<String,String> instanceTags() {
-        return this.instanceTags == null ? Map.of() : this.instanceTags;
+    public Optional<Map<String,String>> instanceTags() {
+        return Optional.ofNullable(this.instanceTags);
     }
 
-    public GetInstancesArgs(
-        @Nullable List<GetInstancesFilter> filters,
-        @Nullable List<String> instanceStateNames,
-        @Nullable Map<String,String> instanceTags) {
-        this.filters = filters;
-        this.instanceStateNames = instanceStateNames;
-        this.instanceTags = instanceTags;
-    }
+    private GetInstancesArgs() {}
 
-    private GetInstancesArgs() {
-        this.filters = List.of();
-        this.instanceStateNames = List.of();
-        this.instanceTags = Map.of();
+    private GetInstancesArgs(GetInstancesArgs $) {
+        this.filters = $.filters;
+        this.instanceStateNames = $.instanceStateNames;
+        this.instanceTags = $.instanceTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstancesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInstancesFilter> filters;
-        private @Nullable List<String> instanceStateNames;
-        private @Nullable Map<String,String> instanceTags;
+        private GetInstancesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstancesArgs();
         }
 
         public Builder(GetInstancesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.instanceStateNames = defaults.instanceStateNames;
-    	      this.instanceTags = defaults.instanceTags;
+            $ = new GetInstancesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInstancesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInstancesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
-            this.instanceStateNames = instanceStateNames;
+            $.instanceStateNames = instanceStateNames;
             return this;
         }
+
         public Builder instanceStateNames(String... instanceStateNames) {
             return instanceStateNames(List.of(instanceStateNames));
         }
+
         public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
-            this.instanceTags = instanceTags;
+            $.instanceTags = instanceTags;
             return this;
-        }        public GetInstancesArgs build() {
-            return new GetInstancesArgs(filters, instanceStateNames, instanceTags);
+        }
+
+        public GetInstancesArgs build() {
+            return $;
         }
     }
+
 }

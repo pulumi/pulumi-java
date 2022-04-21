@@ -37,10 +37,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable String addressPrefix;
+    private @Nullable String addressPrefix;
 
     public Optional<String> addressPrefix() {
-        return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable List<String> addressPrefixes;
+    private @Nullable List<String> addressPrefixes;
 
-    public List<String> addressPrefixes() {
-        return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
+    public Optional<List<String>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationGatewayIpConfigurations")
-      private final @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
+    private @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
 
-    public List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations() {
-        return this.applicationGatewayIpConfigurations == null ? List.of() : this.applicationGatewayIpConfigurations;
+    public Optional<List<ApplicationGatewayIPConfigurationResponse>> applicationGatewayIpConfigurations() {
+        return Optional.ofNullable(this.applicationGatewayIpConfigurations);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="delegations")
-      private final @Nullable List<DelegationResponse> delegations;
+    private @Nullable List<DelegationResponse> delegations;
 
-    public List<DelegationResponse> delegations() {
-        return this.delegations == null ? List.of() : this.delegations;
+    public Optional<List<DelegationResponse>> delegations() {
+        return Optional.ofNullable(this.delegations);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -92,10 +92,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAllocations")
-      private final @Nullable List<SubResourceResponse> ipAllocations;
+    private @Nullable List<SubResourceResponse> ipAllocations;
 
-    public List<SubResourceResponse> ipAllocations() {
-        return this.ipAllocations == null ? List.of() : this.ipAllocations;
+    public Optional<List<SubResourceResponse>> ipAllocations() {
+        return Optional.ofNullable(this.ipAllocations);
     }
 
     /**
@@ -114,7 +114,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipConfigurationProfiles", required=true)
-      private final List<IPConfigurationProfileResponse> ipConfigurationProfiles;
+    private List<IPConfigurationProfileResponse> ipConfigurationProfiles;
 
     public List<IPConfigurationProfileResponse> ipConfigurationProfiles() {
         return this.ipConfigurationProfiles;
@@ -125,7 +125,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipConfigurations", required=true)
-      private final List<IPConfigurationResponse> ipConfigurations;
+    private List<IPConfigurationResponse> ipConfigurations;
 
     public List<IPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
@@ -136,10 +136,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGateway")
-      private final @Nullable SubResourceResponse natGateway;
+    private @Nullable SubResourceResponse natGateway;
 
     public Optional<SubResourceResponse> natGateway() {
-        return this.natGateway == null ? Optional.empty() : Optional.ofNullable(this.natGateway);
+        return Optional.ofNullable(this.natGateway);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
+    private @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
     public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateEndpointNetworkPolicies")
-      private final @Nullable String privateEndpointNetworkPolicies;
+    private @Nullable String privateEndpointNetworkPolicies;
 
     public Optional<String> privateEndpointNetworkPolicies() {
-        return this.privateEndpointNetworkPolicies == null ? Optional.empty() : Optional.ofNullable(this.privateEndpointNetworkPolicies);
+        return Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
 
     /**
@@ -180,7 +180,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateEndpoints", required=true)
-      private final List<PrivateEndpointResponse> privateEndpoints;
+    private List<PrivateEndpointResponse> privateEndpoints;
 
     public List<PrivateEndpointResponse> privateEndpoints() {
         return this.privateEndpoints;
@@ -191,10 +191,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateLinkServiceNetworkPolicies")
-      private final @Nullable String privateLinkServiceNetworkPolicies;
+    private @Nullable String privateLinkServiceNetworkPolicies;
 
     public Optional<String> privateLinkServiceNetworkPolicies() {
-        return this.privateLinkServiceNetworkPolicies == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
+        return Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
 
     /**
@@ -202,7 +202,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -213,7 +213,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="purpose", required=true)
-      private final String purpose;
+    private String purpose;
 
     public String purpose() {
         return this.purpose;
@@ -224,7 +224,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceNavigationLinks", required=true)
-      private final List<ResourceNavigationLinkResponse> resourceNavigationLinks;
+    private List<ResourceNavigationLinkResponse> resourceNavigationLinks;
 
     public List<ResourceNavigationLinkResponse> resourceNavigationLinks() {
         return this.resourceNavigationLinks;
@@ -235,10 +235,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeTable")
-      private final @Nullable RouteTableResponse routeTable;
+    private @Nullable RouteTableResponse routeTable;
 
     public Optional<RouteTableResponse> routeTable() {
-        return this.routeTable == null ? Optional.empty() : Optional.ofNullable(this.routeTable);
+        return Optional.ofNullable(this.routeTable);
     }
 
     /**
@@ -246,7 +246,7 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAssociationLinks", required=true)
-      private final List<ServiceAssociationLinkResponse> serviceAssociationLinks;
+    private List<ServiceAssociationLinkResponse> serviceAssociationLinks;
 
     public List<ServiceAssociationLinkResponse> serviceAssociationLinks() {
         return this.serviceAssociationLinks;
@@ -257,10 +257,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceEndpointPolicies")
-      private final @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
+    private @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
 
-    public List<ServiceEndpointPolicyResponse> serviceEndpointPolicies() {
-        return this.serviceEndpointPolicies == null ? List.of() : this.serviceEndpointPolicies;
+    public Optional<List<ServiceEndpointPolicyResponse>> serviceEndpointPolicies() {
+        return Optional.ofNullable(this.serviceEndpointPolicies);
     }
 
     /**
@@ -268,10 +268,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceEndpoints")
-      private final @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
+    private @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
 
-    public List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints() {
-        return this.serviceEndpoints == null ? List.of() : this.serviceEndpoints;
+    public Optional<List<ServiceEndpointPropertiesFormatResponse>> serviceEndpoints() {
+        return Optional.ofNullable(this.serviceEndpoints);
     }
 
     /**
@@ -279,277 +279,230 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public SubnetResponse(
-        @Nullable String addressPrefix,
-        @Nullable List<String> addressPrefixes,
-        @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations,
-        @Nullable List<DelegationResponse> delegations,
-        String etag,
-        @Nullable String id,
-        @Nullable List<SubResourceResponse> ipAllocations,
-        List<IPConfigurationProfileResponse> ipConfigurationProfiles,
-        List<IPConfigurationResponse> ipConfigurations,
-        @Nullable String name,
-        @Nullable SubResourceResponse natGateway,
-        @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
-        @Nullable String privateEndpointNetworkPolicies,
-        List<PrivateEndpointResponse> privateEndpoints,
-        @Nullable String privateLinkServiceNetworkPolicies,
-        String provisioningState,
-        String purpose,
-        List<ResourceNavigationLinkResponse> resourceNavigationLinks,
-        @Nullable RouteTableResponse routeTable,
-        List<ServiceAssociationLinkResponse> serviceAssociationLinks,
-        @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies,
-        @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints,
-        @Nullable String type) {
-        this.addressPrefix = addressPrefix;
-        this.addressPrefixes = addressPrefixes;
-        this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
-        this.delegations = delegations;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.ipAllocations = ipAllocations;
-        this.ipConfigurationProfiles = Objects.requireNonNull(ipConfigurationProfiles, "expected parameter 'ipConfigurationProfiles' to be non-null");
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
-        this.name = name;
-        this.natGateway = natGateway;
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.privateEndpointNetworkPolicies = Codegen.stringProp("privateEndpointNetworkPolicies").arg(privateEndpointNetworkPolicies).def("Enabled").getNullable();
-        this.privateEndpoints = Objects.requireNonNull(privateEndpoints, "expected parameter 'privateEndpoints' to be non-null");
-        this.privateLinkServiceNetworkPolicies = Codegen.stringProp("privateLinkServiceNetworkPolicies").arg(privateLinkServiceNetworkPolicies).def("Enabled").getNullable();
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.purpose = Objects.requireNonNull(purpose, "expected parameter 'purpose' to be non-null");
-        this.resourceNavigationLinks = Objects.requireNonNull(resourceNavigationLinks, "expected parameter 'resourceNavigationLinks' to be non-null");
-        this.routeTable = routeTable;
-        this.serviceAssociationLinks = Objects.requireNonNull(serviceAssociationLinks, "expected parameter 'serviceAssociationLinks' to be non-null");
-        this.serviceEndpointPolicies = serviceEndpointPolicies;
-        this.serviceEndpoints = serviceEndpoints;
-        this.type = type;
-    }
+    private SubnetResponse() {}
 
-    private SubnetResponse() {
-        this.addressPrefix = null;
-        this.addressPrefixes = List.of();
-        this.applicationGatewayIpConfigurations = List.of();
-        this.delegations = List.of();
-        this.etag = null;
-        this.id = null;
-        this.ipAllocations = List.of();
-        this.ipConfigurationProfiles = List.of();
-        this.ipConfigurations = List.of();
-        this.name = null;
-        this.natGateway = null;
-        this.networkSecurityGroup = null;
-        this.privateEndpointNetworkPolicies = null;
-        this.privateEndpoints = List.of();
-        this.privateLinkServiceNetworkPolicies = null;
-        this.provisioningState = null;
-        this.purpose = null;
-        this.resourceNavigationLinks = List.of();
-        this.routeTable = null;
-        this.serviceAssociationLinks = List.of();
-        this.serviceEndpointPolicies = List.of();
-        this.serviceEndpoints = List.of();
-        this.type = null;
+    private SubnetResponse(SubnetResponse $) {
+        this.addressPrefix = $.addressPrefix;
+        this.addressPrefixes = $.addressPrefixes;
+        this.applicationGatewayIpConfigurations = $.applicationGatewayIpConfigurations;
+        this.delegations = $.delegations;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.ipAllocations = $.ipAllocations;
+        this.ipConfigurationProfiles = $.ipConfigurationProfiles;
+        this.ipConfigurations = $.ipConfigurations;
+        this.name = $.name;
+        this.natGateway = $.natGateway;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.privateEndpointNetworkPolicies = $.privateEndpointNetworkPolicies;
+        this.privateEndpoints = $.privateEndpoints;
+        this.privateLinkServiceNetworkPolicies = $.privateLinkServiceNetworkPolicies;
+        this.provisioningState = $.provisioningState;
+        this.purpose = $.purpose;
+        this.resourceNavigationLinks = $.resourceNavigationLinks;
+        this.routeTable = $.routeTable;
+        this.serviceAssociationLinks = $.serviceAssociationLinks;
+        this.serviceEndpointPolicies = $.serviceEndpointPolicies;
+        this.serviceEndpoints = $.serviceEndpoints;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressPrefix;
-        private @Nullable List<String> addressPrefixes;
-        private @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
-        private @Nullable List<DelegationResponse> delegations;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable List<SubResourceResponse> ipAllocations;
-        private List<IPConfigurationProfileResponse> ipConfigurationProfiles;
-        private List<IPConfigurationResponse> ipConfigurations;
-        private @Nullable String name;
-        private @Nullable SubResourceResponse natGateway;
-        private @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
-        private @Nullable String privateEndpointNetworkPolicies;
-        private List<PrivateEndpointResponse> privateEndpoints;
-        private @Nullable String privateLinkServiceNetworkPolicies;
-        private String provisioningState;
-        private String purpose;
-        private List<ResourceNavigationLinkResponse> resourceNavigationLinks;
-        private @Nullable RouteTableResponse routeTable;
-        private List<ServiceAssociationLinkResponse> serviceAssociationLinks;
-        private @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
-        private @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
-        private @Nullable String type;
+        private SubnetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetResponse();
         }
 
         public Builder(SubnetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.addressPrefixes = defaults.addressPrefixes;
-    	      this.applicationGatewayIpConfigurations = defaults.applicationGatewayIpConfigurations;
-    	      this.delegations = defaults.delegations;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.ipAllocations = defaults.ipAllocations;
-    	      this.ipConfigurationProfiles = defaults.ipConfigurationProfiles;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.name = defaults.name;
-    	      this.natGateway = defaults.natGateway;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.privateEndpointNetworkPolicies = defaults.privateEndpointNetworkPolicies;
-    	      this.privateEndpoints = defaults.privateEndpoints;
-    	      this.privateLinkServiceNetworkPolicies = defaults.privateLinkServiceNetworkPolicies;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.purpose = defaults.purpose;
-    	      this.resourceNavigationLinks = defaults.resourceNavigationLinks;
-    	      this.routeTable = defaults.routeTable;
-    	      this.serviceAssociationLinks = defaults.serviceAssociationLinks;
-    	      this.serviceEndpointPolicies = defaults.serviceEndpointPolicies;
-    	      this.serviceEndpoints = defaults.serviceEndpoints;
-    	      this.type = defaults.type;
+            $ = new SubnetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
+
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
+
         public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations) {
-            this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
+            $.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
+
         public Builder applicationGatewayIpConfigurations(ApplicationGatewayIPConfigurationResponse... applicationGatewayIpConfigurations) {
             return applicationGatewayIpConfigurations(List.of(applicationGatewayIpConfigurations));
         }
+
         public Builder delegations(@Nullable List<DelegationResponse> delegations) {
-            this.delegations = delegations;
+            $.delegations = delegations;
             return this;
         }
+
         public Builder delegations(DelegationResponse... delegations) {
             return delegations(List.of(delegations));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
-            this.ipAllocations = ipAllocations;
+            $.ipAllocations = ipAllocations;
             return this;
         }
+
         public Builder ipAllocations(SubResourceResponse... ipAllocations) {
             return ipAllocations(List.of(ipAllocations));
         }
+
         public Builder ipConfigurationProfiles(List<IPConfigurationProfileResponse> ipConfigurationProfiles) {
-            this.ipConfigurationProfiles = Objects.requireNonNull(ipConfigurationProfiles);
+            $.ipConfigurationProfiles = ipConfigurationProfiles;
             return this;
         }
+
         public Builder ipConfigurationProfiles(IPConfigurationProfileResponse... ipConfigurationProfiles) {
             return ipConfigurationProfiles(List.of(ipConfigurationProfiles));
         }
+
         public Builder ipConfigurations(List<IPConfigurationResponse> ipConfigurations) {
-            this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(IPConfigurationResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder natGateway(@Nullable SubResourceResponse natGateway) {
-            this.natGateway = natGateway;
+            $.natGateway = natGateway;
             return this;
         }
+
         public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupResponse networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
+
         public Builder privateEndpointNetworkPolicies(@Nullable String privateEndpointNetworkPolicies) {
-            this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
+            $.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
+
         public Builder privateEndpoints(List<PrivateEndpointResponse> privateEndpoints) {
-            this.privateEndpoints = Objects.requireNonNull(privateEndpoints);
+            $.privateEndpoints = privateEndpoints;
             return this;
         }
+
         public Builder privateEndpoints(PrivateEndpointResponse... privateEndpoints) {
             return privateEndpoints(List.of(privateEndpoints));
         }
+
         public Builder privateLinkServiceNetworkPolicies(@Nullable String privateLinkServiceNetworkPolicies) {
-            this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
+            $.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder purpose(String purpose) {
-            this.purpose = Objects.requireNonNull(purpose);
+            $.purpose = purpose;
             return this;
         }
+
         public Builder resourceNavigationLinks(List<ResourceNavigationLinkResponse> resourceNavigationLinks) {
-            this.resourceNavigationLinks = Objects.requireNonNull(resourceNavigationLinks);
+            $.resourceNavigationLinks = resourceNavigationLinks;
             return this;
         }
+
         public Builder resourceNavigationLinks(ResourceNavigationLinkResponse... resourceNavigationLinks) {
             return resourceNavigationLinks(List.of(resourceNavigationLinks));
         }
+
         public Builder routeTable(@Nullable RouteTableResponse routeTable) {
-            this.routeTable = routeTable;
+            $.routeTable = routeTable;
             return this;
         }
+
         public Builder serviceAssociationLinks(List<ServiceAssociationLinkResponse> serviceAssociationLinks) {
-            this.serviceAssociationLinks = Objects.requireNonNull(serviceAssociationLinks);
+            $.serviceAssociationLinks = serviceAssociationLinks;
             return this;
         }
+
         public Builder serviceAssociationLinks(ServiceAssociationLinkResponse... serviceAssociationLinks) {
             return serviceAssociationLinks(List.of(serviceAssociationLinks));
         }
+
         public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies) {
-            this.serviceEndpointPolicies = serviceEndpointPolicies;
+            $.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
+
         public Builder serviceEndpointPolicies(ServiceEndpointPolicyResponse... serviceEndpointPolicies) {
             return serviceEndpointPolicies(List.of(serviceEndpointPolicies));
         }
+
         public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints) {
-            this.serviceEndpoints = serviceEndpoints;
+            $.serviceEndpoints = serviceEndpoints;
             return this;
         }
+
         public Builder serviceEndpoints(ServiceEndpointPropertiesFormatResponse... serviceEndpoints) {
             return serviceEndpoints(List.of(serviceEndpoints));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public SubnetResponse build() {
-            return new SubnetResponse(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, etag, id, ipAllocations, ipConfigurationProfiles, ipConfigurations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateEndpoints, privateLinkServiceNetworkPolicies, provisioningState, purpose, resourceNavigationLinks, routeTable, serviceAssociationLinks, serviceEndpointPolicies, serviceEndpoints, type);
+        }
+
+        public SubnetResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.ipConfigurationProfiles = Objects.requireNonNull($.ipConfigurationProfiles, "expected parameter 'ipConfigurationProfiles' to be non-null");
+            $.ipConfigurations = Objects.requireNonNull($.ipConfigurations, "expected parameter 'ipConfigurations' to be non-null");
+            $.privateEndpointNetworkPolicies = Codegen.stringProp("privateEndpointNetworkPolicies").arg($.privateEndpointNetworkPolicies).def("Enabled").getNullable();
+            $.privateEndpoints = Objects.requireNonNull($.privateEndpoints, "expected parameter 'privateEndpoints' to be non-null");
+            $.privateLinkServiceNetworkPolicies = Codegen.stringProp("privateLinkServiceNetworkPolicies").arg($.privateLinkServiceNetworkPolicies).def("Enabled").getNullable();
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.purpose = Objects.requireNonNull($.purpose, "expected parameter 'purpose' to be non-null");
+            $.resourceNavigationLinks = Objects.requireNonNull($.resourceNavigationLinks, "expected parameter 'resourceNavigationLinks' to be non-null");
+            $.serviceAssociationLinks = Objects.requireNonNull($.serviceAssociationLinks, "expected parameter 'serviceAssociationLinks' to be non-null");
+            return $;
         }
     }
+
 }

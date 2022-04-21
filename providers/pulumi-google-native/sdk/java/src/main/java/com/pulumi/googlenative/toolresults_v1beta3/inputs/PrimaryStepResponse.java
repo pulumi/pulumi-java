@@ -23,7 +23,7 @@ public final class PrimaryStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="individualOutcome", required=true)
-      private final List<IndividualOutcomeResponse> individualOutcome;
+    private List<IndividualOutcomeResponse> individualOutcome;
 
     public List<IndividualOutcomeResponse> individualOutcome() {
         return this.individualOutcome;
@@ -34,58 +34,56 @@ public final class PrimaryStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rollUp", required=true)
-      private final String rollUp;
+    private String rollUp;
 
     public String rollUp() {
         return this.rollUp;
     }
 
-    public PrimaryStepResponse(
-        List<IndividualOutcomeResponse> individualOutcome,
-        String rollUp) {
-        this.individualOutcome = Objects.requireNonNull(individualOutcome, "expected parameter 'individualOutcome' to be non-null");
-        this.rollUp = Objects.requireNonNull(rollUp, "expected parameter 'rollUp' to be non-null");
-    }
+    private PrimaryStepResponse() {}
 
-    private PrimaryStepResponse() {
-        this.individualOutcome = List.of();
-        this.rollUp = null;
+    private PrimaryStepResponse(PrimaryStepResponse $) {
+        this.individualOutcome = $.individualOutcome;
+        this.rollUp = $.rollUp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrimaryStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<IndividualOutcomeResponse> individualOutcome;
-        private String rollUp;
+        private PrimaryStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrimaryStepResponse();
         }
 
         public Builder(PrimaryStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.individualOutcome = defaults.individualOutcome;
-    	      this.rollUp = defaults.rollUp;
+            $ = new PrimaryStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder individualOutcome(List<IndividualOutcomeResponse> individualOutcome) {
-            this.individualOutcome = Objects.requireNonNull(individualOutcome);
+            $.individualOutcome = individualOutcome;
             return this;
         }
+
         public Builder individualOutcome(IndividualOutcomeResponse... individualOutcome) {
             return individualOutcome(List.of(individualOutcome));
         }
+
         public Builder rollUp(String rollUp) {
-            this.rollUp = Objects.requireNonNull(rollUp);
+            $.rollUp = rollUp;
             return this;
-        }        public PrimaryStepResponse build() {
-            return new PrimaryStepResponse(individualOutcome, rollUp);
+        }
+
+        public PrimaryStepResponse build() {
+            $.individualOutcome = Objects.requireNonNull($.individualOutcome, "expected parameter 'individualOutcome' to be non-null");
+            $.rollUp = Objects.requireNonNull($.rollUp, "expected parameter 'rollUp' to be non-null");
+            return $;
         }
     }
+
 }

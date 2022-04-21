@@ -22,7 +22,7 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endTimeOffset", required=true)
-      private final String endTimeOffset;
+    private String endTimeOffset;
 
     public String endTimeOffset() {
         return this.endTimeOffset;
@@ -33,7 +33,7 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fadeType", required=true)
-      private final String fadeType;
+    private String fadeType;
 
     public String fadeType() {
         return this.fadeType;
@@ -44,7 +44,7 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startTimeOffset", required=true)
-      private final String startTimeOffset;
+    private String startTimeOffset;
 
     public String startTimeOffset() {
         return this.startTimeOffset;
@@ -55,73 +55,66 @@ public final class AnimationFadeResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="xy", required=true)
-      private final NormalizedCoordinateResponse xy;
+    private NormalizedCoordinateResponse xy;
 
     public NormalizedCoordinateResponse xy() {
         return this.xy;
     }
 
-    public AnimationFadeResponse(
-        String endTimeOffset,
-        String fadeType,
-        String startTimeOffset,
-        NormalizedCoordinateResponse xy) {
-        this.endTimeOffset = Objects.requireNonNull(endTimeOffset, "expected parameter 'endTimeOffset' to be non-null");
-        this.fadeType = Objects.requireNonNull(fadeType, "expected parameter 'fadeType' to be non-null");
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
-        this.xy = Objects.requireNonNull(xy, "expected parameter 'xy' to be non-null");
-    }
+    private AnimationFadeResponse() {}
 
-    private AnimationFadeResponse() {
-        this.endTimeOffset = null;
-        this.fadeType = null;
-        this.startTimeOffset = null;
-        this.xy = null;
+    private AnimationFadeResponse(AnimationFadeResponse $) {
+        this.endTimeOffset = $.endTimeOffset;
+        this.fadeType = $.fadeType;
+        this.startTimeOffset = $.startTimeOffset;
+        this.xy = $.xy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationFadeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTimeOffset;
-        private String fadeType;
-        private String startTimeOffset;
-        private NormalizedCoordinateResponse xy;
+        private AnimationFadeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationFadeResponse();
         }
 
         public Builder(AnimationFadeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeOffset = defaults.endTimeOffset;
-    	      this.fadeType = defaults.fadeType;
-    	      this.startTimeOffset = defaults.startTimeOffset;
-    	      this.xy = defaults.xy;
+            $ = new AnimationFadeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeOffset(String endTimeOffset) {
-            this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
+            $.endTimeOffset = endTimeOffset;
             return this;
         }
+
         public Builder fadeType(String fadeType) {
-            this.fadeType = Objects.requireNonNull(fadeType);
+            $.fadeType = fadeType;
             return this;
         }
+
         public Builder startTimeOffset(String startTimeOffset) {
-            this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
+
         public Builder xy(NormalizedCoordinateResponse xy) {
-            this.xy = Objects.requireNonNull(xy);
+            $.xy = xy;
             return this;
-        }        public AnimationFadeResponse build() {
-            return new AnimationFadeResponse(endTimeOffset, fadeType, startTimeOffset, xy);
+        }
+
+        public AnimationFadeResponse build() {
+            $.endTimeOffset = Objects.requireNonNull($.endTimeOffset, "expected parameter 'endTimeOffset' to be non-null");
+            $.fadeType = Objects.requireNonNull($.fadeType, "expected parameter 'fadeType' to be non-null");
+            $.startTimeOffset = Objects.requireNonNull($.startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
+            $.xy = Objects.requireNonNull($.xy, "expected parameter 'xy' to be non-null");
+            return $;
         }
     }
+
 }

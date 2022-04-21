@@ -5,10 +5,10 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.ManualShardingArgs;
 import com.pulumi.googlenative.testing_v1.inputs.UniformShardingArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ShardingOptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="manualSharding")
-      private final @Nullable Output<ManualShardingArgs> manualSharding;
+    private @Nullable Output<ManualShardingArgs> manualSharding;
 
-    public Output<ManualShardingArgs> manualSharding() {
-        return this.manualSharding == null ? Codegen.empty() : this.manualSharding;
+    public Optional<Output<ManualShardingArgs>> manualSharding() {
+        return Optional.ofNullable(this.manualSharding);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ShardingOptionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="uniformSharding")
-      private final @Nullable Output<UniformShardingArgs> uniformSharding;
+    private @Nullable Output<UniformShardingArgs> uniformSharding;
 
-    public Output<UniformShardingArgs> uniformSharding() {
-        return this.uniformSharding == null ? Codegen.empty() : this.uniformSharding;
+    public Optional<Output<UniformShardingArgs>> uniformSharding() {
+        return Optional.ofNullable(this.uniformSharding);
     }
 
-    public ShardingOptionArgs(
-        @Nullable Output<ManualShardingArgs> manualSharding,
-        @Nullable Output<UniformShardingArgs> uniformSharding) {
-        this.manualSharding = manualSharding;
-        this.uniformSharding = uniformSharding;
-    }
+    private ShardingOptionArgs() {}
 
-    private ShardingOptionArgs() {
-        this.manualSharding = Codegen.empty();
-        this.uniformSharding = Codegen.empty();
+    private ShardingOptionArgs(ShardingOptionArgs $) {
+        this.manualSharding = $.manualSharding;
+        this.uniformSharding = $.uniformSharding;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShardingOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManualShardingArgs> manualSharding;
-        private @Nullable Output<UniformShardingArgs> uniformSharding;
+        private ShardingOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShardingOptionArgs();
         }
 
         public Builder(ShardingOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manualSharding = defaults.manualSharding;
-    	      this.uniformSharding = defaults.uniformSharding;
+            $ = new ShardingOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder manualSharding(@Nullable Output<ManualShardingArgs> manualSharding) {
-            this.manualSharding = manualSharding;
+            $.manualSharding = manualSharding;
             return this;
         }
-        public Builder manualSharding(@Nullable ManualShardingArgs manualSharding) {
-            this.manualSharding = Codegen.ofNullable(manualSharding);
-            return this;
+
+        public Builder manualSharding(ManualShardingArgs manualSharding) {
+            return manualSharding(Output.of(manualSharding));
         }
+
         public Builder uniformSharding(@Nullable Output<UniformShardingArgs> uniformSharding) {
-            this.uniformSharding = uniformSharding;
+            $.uniformSharding = uniformSharding;
             return this;
         }
-        public Builder uniformSharding(@Nullable UniformShardingArgs uniformSharding) {
-            this.uniformSharding = Codegen.ofNullable(uniformSharding);
-            return this;
-        }        public ShardingOptionArgs build() {
-            return new ShardingOptionArgs(manualSharding, uniformSharding);
+
+        public Builder uniformSharding(UniformShardingArgs uniformSharding) {
+            return uniformSharding(Output.of(uniformSharding));
+        }
+
+        public ShardingOptionArgs build() {
+            return $;
         }
     }
+
 }

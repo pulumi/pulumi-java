@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="accessKeyId", required=true)
-      private final Output<String> accessKeyId;
+    private Output<String> accessKeyId;
 
     public Output<String> accessKeyId() {
         return this.accessKeyId;
@@ -30,7 +29,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="datakey", required=true)
-      private final Output<String> datakey;
+    private Output<String> datakey;
 
     public Output<String> datakey() {
         return this.datakey;
@@ -41,7 +40,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="secretAccessKey", required=true)
-      private final Output<String> secretAccessKey;
+    private Output<String> secretAccessKey;
 
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
@@ -52,89 +51,82 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public ConnectorProfileInforNexusConnectorProfileCredentialsArgs(
-        Output<String> accessKeyId,
-        Output<String> datakey,
-        Output<String> secretAccessKey,
-        Output<String> userId) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId, "expected parameter 'accessKeyId' to be non-null");
-        this.datakey = Objects.requireNonNull(datakey, "expected parameter 'datakey' to be non-null");
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private ConnectorProfileInforNexusConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileInforNexusConnectorProfileCredentialsArgs() {
-        this.accessKeyId = Codegen.empty();
-        this.datakey = Codegen.empty();
-        this.secretAccessKey = Codegen.empty();
-        this.userId = Codegen.empty();
+    private ConnectorProfileInforNexusConnectorProfileCredentialsArgs(ConnectorProfileInforNexusConnectorProfileCredentialsArgs $) {
+        this.accessKeyId = $.accessKeyId;
+        this.datakey = $.datakey;
+        this.secretAccessKey = $.secretAccessKey;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileInforNexusConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessKeyId;
-        private Output<String> datakey;
-        private Output<String> secretAccessKey;
-        private Output<String> userId;
+        private ConnectorProfileInforNexusConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileInforNexusConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileInforNexusConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKeyId = defaults.accessKeyId;
-    	      this.datakey = defaults.datakey;
-    	      this.secretAccessKey = defaults.secretAccessKey;
-    	      this.userId = defaults.userId;
+            $ = new ConnectorProfileInforNexusConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKeyId(Output<String> accessKeyId) {
-            this.accessKeyId = Objects.requireNonNull(accessKeyId);
+            $.accessKeyId = accessKeyId;
             return this;
         }
+
         public Builder accessKeyId(String accessKeyId) {
-            this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
-            return this;
+            return accessKeyId(Output.of(accessKeyId));
         }
+
         public Builder datakey(Output<String> datakey) {
-            this.datakey = Objects.requireNonNull(datakey);
+            $.datakey = datakey;
             return this;
         }
+
         public Builder datakey(String datakey) {
-            this.datakey = Output.of(Objects.requireNonNull(datakey));
-            return this;
+            return datakey(Output.of(datakey));
         }
+
         public Builder secretAccessKey(Output<String> secretAccessKey) {
-            this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+            $.secretAccessKey = secretAccessKey;
             return this;
         }
+
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
-            return this;
+            return secretAccessKey(Output.of(secretAccessKey));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public ConnectorProfileInforNexusConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileInforNexusConnectorProfileCredentialsArgs(accessKeyId, datakey, secretAccessKey, userId);
+            return userId(Output.of(userId));
+        }
+
+        public ConnectorProfileInforNexusConnectorProfileCredentialsArgs build() {
+            $.accessKeyId = Objects.requireNonNull($.accessKeyId, "expected parameter 'accessKeyId' to be non-null");
+            $.datakey = Objects.requireNonNull($.datakey, "expected parameter 'datakey' to be non-null");
+            $.secretAccessKey = Objects.requireNonNull($.secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

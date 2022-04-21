@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProjectRepoIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ProjectRepoIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoName")
-      private final @Nullable Output<String> repoName;
+    private @Nullable Output<String> repoName;
 
-    public Output<String> repoName() {
-        return this.repoName == null ? Codegen.empty() : this.repoName;
+    public Optional<Output<String>> repoName() {
+        return Optional.ofNullable(this.repoName);
     }
 
-    public ProjectRepoIdArgs(
-        @Nullable Output<String> project,
-        @Nullable Output<String> repoName) {
-        this.project = project;
-        this.repoName = repoName;
-    }
+    private ProjectRepoIdArgs() {}
 
-    private ProjectRepoIdArgs() {
-        this.project = Codegen.empty();
-        this.repoName = Codegen.empty();
+    private ProjectRepoIdArgs(ProjectRepoIdArgs $) {
+        this.project = $.project;
+        this.repoName = $.repoName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectRepoIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> repoName;
+        private ProjectRepoIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectRepoIdArgs();
         }
 
         public Builder(ProjectRepoIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.repoName = defaults.repoName;
+            $ = new ProjectRepoIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repoName(@Nullable Output<String> repoName) {
-            this.repoName = repoName;
+            $.repoName = repoName;
             return this;
         }
-        public Builder repoName(@Nullable String repoName) {
-            this.repoName = Codegen.ofNullable(repoName);
-            return this;
-        }        public ProjectRepoIdArgs build() {
-            return new ProjectRepoIdArgs(project, repoName);
+
+        public Builder repoName(String repoName) {
+            return repoName(Output.of(repoName));
+        }
+
+        public ProjectRepoIdArgs build() {
+            return $;
         }
     }
+
 }

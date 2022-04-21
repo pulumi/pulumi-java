@@ -22,48 +22,49 @@ public final class TestTargetsForShardResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="testTargets", required=true)
-      private final List<String> testTargets;
+    private List<String> testTargets;
 
     public List<String> testTargets() {
         return this.testTargets;
     }
 
-    public TestTargetsForShardResponse(List<String> testTargets) {
-        this.testTargets = Objects.requireNonNull(testTargets, "expected parameter 'testTargets' to be non-null");
-    }
+    private TestTargetsForShardResponse() {}
 
-    private TestTargetsForShardResponse() {
-        this.testTargets = List.of();
+    private TestTargetsForShardResponse(TestTargetsForShardResponse $) {
+        this.testTargets = $.testTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestTargetsForShardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> testTargets;
+        private TestTargetsForShardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestTargetsForShardResponse();
         }
 
         public Builder(TestTargetsForShardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testTargets = defaults.testTargets;
+            $ = new TestTargetsForShardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder testTargets(List<String> testTargets) {
-            this.testTargets = Objects.requireNonNull(testTargets);
+            $.testTargets = testTargets;
             return this;
         }
+
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
-        }        public TestTargetsForShardResponse build() {
-            return new TestTargetsForShardResponse(testTargets);
+        }
+
+        public TestTargetsForShardResponse build() {
+            $.testTargets = Objects.requireNonNull($.testTargets, "expected parameter 'testTargets' to be non-null");
+            return $;
         }
     }
+
 }

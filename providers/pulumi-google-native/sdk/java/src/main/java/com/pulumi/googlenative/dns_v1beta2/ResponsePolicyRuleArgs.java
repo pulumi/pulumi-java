@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dns_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.enums.ResponsePolicyRuleBehavior;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyRuleLocalDataArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="behavior")
-      private final @Nullable Output<ResponsePolicyRuleBehavior> behavior;
+    private @Nullable Output<ResponsePolicyRuleBehavior> behavior;
 
-    public Output<ResponsePolicyRuleBehavior> behavior() {
-        return this.behavior == null ? Codegen.empty() : this.behavior;
+    public Optional<Output<ResponsePolicyRuleBehavior>> behavior() {
+        return Optional.ofNullable(this.behavior);
     }
 
     @Import(name="clientOperationId")
-      private final @Nullable Output<String> clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Output<String> clientOperationId() {
-        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
+    public Optional<Output<String>> clientOperationId() {
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     /**
@@ -40,17 +40,17 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dnsName")
-      private final @Nullable Output<String> dnsName;
+    private @Nullable Output<String> dnsName;
 
-    public Output<String> dnsName() {
-        return this.dnsName == null ? Codegen.empty() : this.dnsName;
+    public Optional<Output<String>> dnsName() {
+        return Optional.ofNullable(this.dnsName);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -58,21 +58,21 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="localData")
-      private final @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
+    private @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
 
-    public Output<ResponsePolicyRuleLocalDataArgs> localData() {
-        return this.localData == null ? Codegen.empty() : this.localData;
+    public Optional<Output<ResponsePolicyRuleLocalDataArgs>> localData() {
+        return Optional.ofNullable(this.localData);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="responsePolicy", required=true)
-      private final Output<String> responsePolicy;
+    private Output<String> responsePolicy;
 
     public Output<String> responsePolicy() {
         return this.responsePolicy;
@@ -83,141 +83,119 @@ public final class ResponsePolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public ResponsePolicyRuleArgs(
-        @Nullable Output<ResponsePolicyRuleBehavior> behavior,
-        @Nullable Output<String> clientOperationId,
-        @Nullable Output<String> dnsName,
-        @Nullable Output<String> kind,
-        @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData,
-        @Nullable Output<String> project,
-        Output<String> responsePolicy,
-        @Nullable Output<String> ruleName) {
-        this.behavior = behavior;
-        this.clientOperationId = clientOperationId;
-        this.dnsName = dnsName;
-        this.kind = kind;
-        this.localData = localData;
-        this.project = project;
-        this.responsePolicy = Objects.requireNonNull(responsePolicy, "expected parameter 'responsePolicy' to be non-null");
-        this.ruleName = ruleName;
-    }
+    private ResponsePolicyRuleArgs() {}
 
-    private ResponsePolicyRuleArgs() {
-        this.behavior = Codegen.empty();
-        this.clientOperationId = Codegen.empty();
-        this.dnsName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.localData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.responsePolicy = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private ResponsePolicyRuleArgs(ResponsePolicyRuleArgs $) {
+        this.behavior = $.behavior;
+        this.clientOperationId = $.clientOperationId;
+        this.dnsName = $.dnsName;
+        this.kind = $.kind;
+        this.localData = $.localData;
+        this.project = $.project;
+        this.responsePolicy = $.responsePolicy;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResponsePolicyRuleBehavior> behavior;
-        private @Nullable Output<String> clientOperationId;
-        private @Nullable Output<String> dnsName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
-        private @Nullable Output<String> project;
-        private Output<String> responsePolicy;
-        private @Nullable Output<String> ruleName;
+        private ResponsePolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePolicyRuleArgs();
         }
 
         public Builder(ResponsePolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.behavior = defaults.behavior;
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.dnsName = defaults.dnsName;
-    	      this.kind = defaults.kind;
-    	      this.localData = defaults.localData;
-    	      this.project = defaults.project;
-    	      this.responsePolicy = defaults.responsePolicy;
-    	      this.ruleName = defaults.ruleName;
+            $ = new ResponsePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder behavior(@Nullable Output<ResponsePolicyRuleBehavior> behavior) {
-            this.behavior = behavior;
+            $.behavior = behavior;
             return this;
         }
-        public Builder behavior(@Nullable ResponsePolicyRuleBehavior behavior) {
-            this.behavior = Codegen.ofNullable(behavior);
-            return this;
+
+        public Builder behavior(ResponsePolicyRuleBehavior behavior) {
+            return behavior(Output.of(behavior));
         }
+
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
-        public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Codegen.ofNullable(clientOperationId);
-            return this;
+
+        public Builder clientOperationId(String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
         }
+
         public Builder dnsName(@Nullable Output<String> dnsName) {
-            this.dnsName = dnsName;
+            $.dnsName = dnsName;
             return this;
         }
-        public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Codegen.ofNullable(dnsName);
-            return this;
+
+        public Builder dnsName(String dnsName) {
+            return dnsName(Output.of(dnsName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder localData(@Nullable Output<ResponsePolicyRuleLocalDataArgs> localData) {
-            this.localData = localData;
+            $.localData = localData;
             return this;
         }
-        public Builder localData(@Nullable ResponsePolicyRuleLocalDataArgs localData) {
-            this.localData = Codegen.ofNullable(localData);
-            return this;
+
+        public Builder localData(ResponsePolicyRuleLocalDataArgs localData) {
+            return localData(Output.of(localData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder responsePolicy(Output<String> responsePolicy) {
-            this.responsePolicy = Objects.requireNonNull(responsePolicy);
+            $.responsePolicy = responsePolicy;
             return this;
         }
+
         public Builder responsePolicy(String responsePolicy) {
-            this.responsePolicy = Output.of(Objects.requireNonNull(responsePolicy));
-            return this;
+            return responsePolicy(Output.of(responsePolicy));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
-        }        public ResponsePolicyRuleArgs build() {
-            return new ResponsePolicyRuleArgs(behavior, clientOperationId, dnsName, kind, localData, project, responsePolicy, ruleName);
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
+        }
+
+        public ResponsePolicyRuleArgs build() {
+            $.responsePolicy = Objects.requireNonNull($.responsePolicy, "expected parameter 'responsePolicy' to be non-null");
+            return $;
         }
     }
+
 }

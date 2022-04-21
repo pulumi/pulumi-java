@@ -5,9 +5,9 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class GatewayGatewayNetworkInterfaceGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="ipv4Address")
-      private final @Nullable Output<String> ipv4Address;
+    private @Nullable Output<String> ipv4Address;
 
-    public Output<String> ipv4Address() {
-        return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
+    public Optional<Output<String>> ipv4Address() {
+        return Optional.ofNullable(this.ipv4Address);
     }
 
-    public GatewayGatewayNetworkInterfaceGetArgs(@Nullable Output<String> ipv4Address) {
-        this.ipv4Address = ipv4Address;
-    }
+    private GatewayGatewayNetworkInterfaceGetArgs() {}
 
-    private GatewayGatewayNetworkInterfaceGetArgs() {
-        this.ipv4Address = Codegen.empty();
+    private GatewayGatewayNetworkInterfaceGetArgs(GatewayGatewayNetworkInterfaceGetArgs $) {
+        this.ipv4Address = $.ipv4Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayGatewayNetworkInterfaceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipv4Address;
+        private GatewayGatewayNetworkInterfaceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayGatewayNetworkInterfaceGetArgs();
         }
 
         public Builder(GatewayGatewayNetworkInterfaceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv4Address = defaults.ipv4Address;
+            $ = new GatewayGatewayNetworkInterfaceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
-            this.ipv4Address = ipv4Address;
+            $.ipv4Address = ipv4Address;
             return this;
         }
-        public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Codegen.ofNullable(ipv4Address);
-            return this;
-        }        public GatewayGatewayNetworkInterfaceGetArgs build() {
-            return new GatewayGatewayNetworkInterfaceGetArgs(ipv4Address);
+
+        public Builder ipv4Address(String ipv4Address) {
+            return ipv4Address(Output.of(ipv4Address));
+        }
+
+        public GatewayGatewayNetworkInterfaceGetArgs build() {
+            return $;
         }
     }
+
 }

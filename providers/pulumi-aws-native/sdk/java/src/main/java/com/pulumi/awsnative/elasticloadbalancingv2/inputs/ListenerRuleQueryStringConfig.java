@@ -16,48 +16,48 @@ public final class ListenerRuleQueryStringConfig extends com.pulumi.resources.In
     public static final ListenerRuleQueryStringConfig Empty = new ListenerRuleQueryStringConfig();
 
     @Import(name="values")
-      private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
+    private @Nullable List<ListenerRuleQueryStringKeyValue> values;
 
-    public List<ListenerRuleQueryStringKeyValue> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<ListenerRuleQueryStringKeyValue>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRuleQueryStringConfig(@Nullable List<ListenerRuleQueryStringKeyValue> values) {
-        this.values = values;
-    }
+    private ListenerRuleQueryStringConfig() {}
 
-    private ListenerRuleQueryStringConfig() {
-        this.values = List.of();
+    private ListenerRuleQueryStringConfig(ListenerRuleQueryStringConfig $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleQueryStringConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ListenerRuleQueryStringKeyValue> values;
+        private ListenerRuleQueryStringConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleQueryStringConfig();
         }
 
         public Builder(ListenerRuleQueryStringConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleQueryStringConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable List<ListenerRuleQueryStringKeyValue> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(ListenerRuleQueryStringKeyValue... values) {
             return values(List.of(values));
-        }        public ListenerRuleQueryStringConfig build() {
-            return new ListenerRuleQueryStringConfig(values);
+        }
+
+        public ListenerRuleQueryStringConfig build() {
+            return $;
         }
     }
+
 }

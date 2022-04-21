@@ -15,78 +15,72 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetKeyArgs(
-        String keyId,
-        String location,
-        @Nullable String project) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetKeyArgs() {}
 
-    private GetKeyArgs() {
-        this.keyId = null;
-        this.location = null;
-        this.project = null;
+    private GetKeyArgs(GetKeyArgs $) {
+        this.keyId = $.keyId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private String location;
-        private @Nullable String project;
+        private GetKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyArgs();
         }
 
         public Builder(GetKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetKeyArgs build() {
-            return new GetKeyArgs(keyId, location, project);
+        }
+
+        public GetKeyArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

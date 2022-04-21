@@ -29,7 +29,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="computeType", required=true)
-      private final String computeType;
+    private String computeType;
 
     public String computeType() {
         return this.computeType;
@@ -40,10 +40,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deploymentType")
-      private final @Nullable String deploymentType;
+    private @Nullable String deploymentType;
 
     public Optional<String> deploymentType() {
-        return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
+        return Optional.ofNullable(this.deploymentType);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="error", required=true)
-      private final ServiceResponseBaseResponseError error;
+    private ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError error() {
         return this.error;
@@ -73,10 +73,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isDefault")
-      private final @Nullable Boolean isDefault;
+    private @Nullable Boolean isDefault;
 
     public Optional<Boolean> isDefault() {
-        return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
+        return Optional.ofNullable(this.isDefault);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Map<String,String> kvTags;
+    private @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> kvTags() {
-        return this.kvTags == null ? Map.of() : this.kvTags;
+    public Optional<Map<String,String>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -117,10 +117,10 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="trafficPercentile")
-      private final @Nullable Double trafficPercentile;
+    private @Nullable Double trafficPercentile;
 
     public Optional<Double> trafficPercentile() {
-        return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
+        return Optional.ofNullable(this.trafficPercentile);
     }
 
     /**
@@ -128,127 +128,101 @@ public final class AKSVariantResponseResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AKSVariantResponseResponse(
-        String computeType,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        ServiceResponseBaseResponseError error,
-        @Nullable Boolean isDefault,
-        @Nullable Map<String,String> kvTags,
-        @Nullable Map<String,String> properties,
-        String state,
-        @Nullable Double trafficPercentile,
-        @Nullable String type) {
-        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
-        this.deploymentType = deploymentType;
-        this.description = description;
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.isDefault = isDefault;
-        this.kvTags = kvTags;
-        this.properties = properties;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.trafficPercentile = trafficPercentile;
-        this.type = type;
-    }
+    private AKSVariantResponseResponse() {}
 
-    private AKSVariantResponseResponse() {
-        this.computeType = null;
-        this.deploymentType = null;
-        this.description = null;
-        this.error = null;
-        this.isDefault = null;
-        this.kvTags = Map.of();
-        this.properties = Map.of();
-        this.state = null;
-        this.trafficPercentile = null;
-        this.type = null;
+    private AKSVariantResponseResponse(AKSVariantResponseResponse $) {
+        this.computeType = $.computeType;
+        this.deploymentType = $.deploymentType;
+        this.description = $.description;
+        this.error = $.error;
+        this.isDefault = $.isDefault;
+        this.kvTags = $.kvTags;
+        this.properties = $.properties;
+        this.state = $.state;
+        this.trafficPercentile = $.trafficPercentile;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSVariantResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computeType;
-        private @Nullable String deploymentType;
-        private @Nullable String description;
-        private ServiceResponseBaseResponseError error;
-        private @Nullable Boolean isDefault;
-        private @Nullable Map<String,String> kvTags;
-        private @Nullable Map<String,String> properties;
-        private String state;
-        private @Nullable Double trafficPercentile;
-        private @Nullable String type;
+        private AKSVariantResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSVariantResponseResponse();
         }
 
         public Builder(AKSVariantResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.deploymentType = defaults.deploymentType;
-    	      this.description = defaults.description;
-    	      this.error = defaults.error;
-    	      this.isDefault = defaults.isDefault;
-    	      this.kvTags = defaults.kvTags;
-    	      this.properties = defaults.properties;
-    	      this.state = defaults.state;
-    	      this.trafficPercentile = defaults.trafficPercentile;
-    	      this.type = defaults.type;
+            $ = new AKSVariantResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(String computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = deploymentType;
+            $.deploymentType = deploymentType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder error(ServiceResponseBaseResponseError error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = isDefault;
+            $.isDefault = isDefault;
             return this;
         }
+
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
-            this.trafficPercentile = trafficPercentile;
+            $.trafficPercentile = trafficPercentile;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AKSVariantResponseResponse build() {
-            return new AKSVariantResponseResponse(computeType, deploymentType, description, error, isDefault, kvTags, properties, state, trafficPercentile, type);
+        }
+
+        public AKSVariantResponseResponse build() {
+            $.computeType = Codegen.stringProp("computeType").arg($.computeType).require();
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

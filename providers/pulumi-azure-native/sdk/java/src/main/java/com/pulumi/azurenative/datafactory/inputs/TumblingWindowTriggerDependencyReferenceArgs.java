@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
      * 
      */
     @Import(name="offset")
-      private final @Nullable Output<String> offset;
+    private @Nullable Output<String> offset;
 
-    public Output<String> offset() {
-        return this.offset == null ? Codegen.empty() : this.offset;
+    public Optional<Output<String>> offset() {
+        return Optional.ofNullable(this.offset);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
      * 
      */
     @Import(name="referenceTrigger", required=true)
-      private final Output<TriggerReferenceArgs> referenceTrigger;
+    private Output<TriggerReferenceArgs> referenceTrigger;
 
     public Output<TriggerReferenceArgs> referenceTrigger() {
         return this.referenceTrigger;
@@ -47,10 +48,10 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -59,89 +60,80 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends com.pulu
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TumblingWindowTriggerDependencyReferenceArgs(
-        @Nullable Output<String> offset,
-        Output<TriggerReferenceArgs> referenceTrigger,
-        @Nullable Output<String> size,
-        Output<String> type) {
-        this.offset = offset;
-        this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
-        this.size = size;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private TumblingWindowTriggerDependencyReferenceArgs() {}
 
-    private TumblingWindowTriggerDependencyReferenceArgs() {
-        this.offset = Codegen.empty();
-        this.referenceTrigger = Codegen.empty();
-        this.size = Codegen.empty();
-        this.type = Codegen.empty();
+    private TumblingWindowTriggerDependencyReferenceArgs(TumblingWindowTriggerDependencyReferenceArgs $) {
+        this.offset = $.offset;
+        this.referenceTrigger = $.referenceTrigger;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TumblingWindowTriggerDependencyReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> offset;
-        private Output<TriggerReferenceArgs> referenceTrigger;
-        private @Nullable Output<String> size;
-        private Output<String> type;
+        private TumblingWindowTriggerDependencyReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TumblingWindowTriggerDependencyReferenceArgs();
         }
 
         public Builder(TumblingWindowTriggerDependencyReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offset = defaults.offset;
-    	      this.referenceTrigger = defaults.referenceTrigger;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new TumblingWindowTriggerDependencyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offset(@Nullable Output<String> offset) {
-            this.offset = offset;
+            $.offset = offset;
             return this;
         }
-        public Builder offset(@Nullable String offset) {
-            this.offset = Codegen.ofNullable(offset);
-            return this;
+
+        public Builder offset(String offset) {
+            return offset(Output.of(offset));
         }
+
         public Builder referenceTrigger(Output<TriggerReferenceArgs> referenceTrigger) {
-            this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
+            $.referenceTrigger = referenceTrigger;
             return this;
         }
+
         public Builder referenceTrigger(TriggerReferenceArgs referenceTrigger) {
-            this.referenceTrigger = Output.of(Objects.requireNonNull(referenceTrigger));
-            return this;
+            return referenceTrigger(Output.of(referenceTrigger));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TumblingWindowTriggerDependencyReferenceArgs build() {
-            return new TumblingWindowTriggerDependencyReferenceArgs(offset, referenceTrigger, size, type);
+            return type(Output.of(type));
+        }
+
+        public TumblingWindowTriggerDependencyReferenceArgs build() {
+            $.referenceTrigger = Objects.requireNonNull($.referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

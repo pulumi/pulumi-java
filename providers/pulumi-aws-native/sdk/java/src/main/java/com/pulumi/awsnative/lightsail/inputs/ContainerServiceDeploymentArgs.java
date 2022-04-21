@@ -7,9 +7,9 @@ import com.pulumi.awsnative.lightsail.inputs.ContainerArgs;
 import com.pulumi.awsnative.lightsail.inputs.ContainerPublicEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContainerServiceDeploymentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<ContainerArgs>> containers;
+    private @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<ContainerArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ContainerServiceDeploymentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="publicEndpoint")
-      private final @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
+    private @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
-    public Output<ContainerPublicEndpointArgs> publicEndpoint() {
-        return this.publicEndpoint == null ? Codegen.empty() : this.publicEndpoint;
+    public Optional<Output<ContainerPublicEndpointArgs>> publicEndpoint() {
+        return Optional.ofNullable(this.publicEndpoint);
     }
 
-    public ContainerServiceDeploymentArgs(
-        @Nullable Output<List<ContainerArgs>> containers,
-        @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint) {
-        this.containers = containers;
-        this.publicEndpoint = publicEndpoint;
-    }
+    private ContainerServiceDeploymentArgs() {}
 
-    private ContainerServiceDeploymentArgs() {
-        this.containers = Codegen.empty();
-        this.publicEndpoint = Codegen.empty();
+    private ContainerServiceDeploymentArgs(ContainerServiceDeploymentArgs $) {
+        this.containers = $.containers;
+        this.publicEndpoint = $.publicEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ContainerArgs>> containers;
-        private @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
+        private ContainerServiceDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceDeploymentArgs();
         }
 
         public Builder(ContainerServiceDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containers = defaults.containers;
-    	      this.publicEndpoint = defaults.publicEndpoint;
+            $ = new ContainerServiceDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<ContainerArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder publicEndpoint(@Nullable Output<ContainerPublicEndpointArgs> publicEndpoint) {
-            this.publicEndpoint = publicEndpoint;
+            $.publicEndpoint = publicEndpoint;
             return this;
         }
-        public Builder publicEndpoint(@Nullable ContainerPublicEndpointArgs publicEndpoint) {
-            this.publicEndpoint = Codegen.ofNullable(publicEndpoint);
-            return this;
-        }        public ContainerServiceDeploymentArgs build() {
-            return new ContainerServiceDeploymentArgs(containers, publicEndpoint);
+
+        public Builder publicEndpoint(ContainerPublicEndpointArgs publicEndpoint) {
+            return publicEndpoint(Output.of(publicEndpoint));
+        }
+
+        public ContainerServiceDeploymentArgs build() {
+            return $;
         }
     }
+
 }

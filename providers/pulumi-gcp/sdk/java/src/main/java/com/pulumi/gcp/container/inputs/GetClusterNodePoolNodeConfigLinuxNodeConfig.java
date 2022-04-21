@@ -14,45 +14,45 @@ public final class GetClusterNodePoolNodeConfigLinuxNodeConfig extends com.pulum
     public static final GetClusterNodePoolNodeConfigLinuxNodeConfig Empty = new GetClusterNodePoolNodeConfigLinuxNodeConfig();
 
     @Import(name="sysctls", required=true)
-      private final Map<String,String> sysctls;
+    private Map<String,String> sysctls;
 
     public Map<String,String> sysctls() {
         return this.sysctls;
     }
 
-    public GetClusterNodePoolNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
-        this.sysctls = Objects.requireNonNull(sysctls, "expected parameter 'sysctls' to be non-null");
-    }
+    private GetClusterNodePoolNodeConfigLinuxNodeConfig() {}
 
-    private GetClusterNodePoolNodeConfigLinuxNodeConfig() {
-        this.sysctls = Map.of();
+    private GetClusterNodePoolNodeConfigLinuxNodeConfig(GetClusterNodePoolNodeConfigLinuxNodeConfig $) {
+        this.sysctls = $.sysctls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNodeConfigLinuxNodeConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> sysctls;
+        private GetClusterNodePoolNodeConfigLinuxNodeConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNodeConfigLinuxNodeConfig();
         }
 
         public Builder(GetClusterNodePoolNodeConfigLinuxNodeConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sysctls = defaults.sysctls;
+            $ = new GetClusterNodePoolNodeConfigLinuxNodeConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder sysctls(Map<String,String> sysctls) {
-            this.sysctls = Objects.requireNonNull(sysctls);
+            $.sysctls = sysctls;
             return this;
-        }        public GetClusterNodePoolNodeConfigLinuxNodeConfig build() {
-            return new GetClusterNodePoolNodeConfigLinuxNodeConfig(sysctls);
+        }
+
+        public GetClusterNodePoolNodeConfigLinuxNodeConfig build() {
+            $.sysctls = Objects.requireNonNull($.sysctls, "expected parameter 'sysctls' to be non-null");
+            return $;
         }
     }
+
 }

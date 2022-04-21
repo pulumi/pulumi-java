@@ -22,7 +22,7 @@ public final class MetadataIntegrationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataCatalogConfig", required=true)
-      private final DataCatalogConfigResponse dataCatalogConfig;
+    private DataCatalogConfigResponse dataCatalogConfig;
 
     public DataCatalogConfigResponse dataCatalogConfig() {
         return this.dataCatalogConfig;
@@ -33,55 +33,52 @@ public final class MetadataIntegrationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="dataplexConfig", required=true)
-      private final DataplexConfigResponse dataplexConfig;
+    private DataplexConfigResponse dataplexConfig;
 
     public DataplexConfigResponse dataplexConfig() {
         return this.dataplexConfig;
     }
 
-    public MetadataIntegrationResponse(
-        DataCatalogConfigResponse dataCatalogConfig,
-        DataplexConfigResponse dataplexConfig) {
-        this.dataCatalogConfig = Objects.requireNonNull(dataCatalogConfig, "expected parameter 'dataCatalogConfig' to be non-null");
-        this.dataplexConfig = Objects.requireNonNull(dataplexConfig, "expected parameter 'dataplexConfig' to be non-null");
-    }
+    private MetadataIntegrationResponse() {}
 
-    private MetadataIntegrationResponse() {
-        this.dataCatalogConfig = null;
-        this.dataplexConfig = null;
+    private MetadataIntegrationResponse(MetadataIntegrationResponse $) {
+        this.dataCatalogConfig = $.dataCatalogConfig;
+        this.dataplexConfig = $.dataplexConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataIntegrationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DataCatalogConfigResponse dataCatalogConfig;
-        private DataplexConfigResponse dataplexConfig;
+        private MetadataIntegrationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataIntegrationResponse();
         }
 
         public Builder(MetadataIntegrationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCatalogConfig = defaults.dataCatalogConfig;
-    	      this.dataplexConfig = defaults.dataplexConfig;
+            $ = new MetadataIntegrationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCatalogConfig(DataCatalogConfigResponse dataCatalogConfig) {
-            this.dataCatalogConfig = Objects.requireNonNull(dataCatalogConfig);
+            $.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
+
         public Builder dataplexConfig(DataplexConfigResponse dataplexConfig) {
-            this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
+            $.dataplexConfig = dataplexConfig;
             return this;
-        }        public MetadataIntegrationResponse build() {
-            return new MetadataIntegrationResponse(dataCatalogConfig, dataplexConfig);
+        }
+
+        public MetadataIntegrationResponse build() {
+            $.dataCatalogConfig = Objects.requireNonNull($.dataCatalogConfig, "expected parameter 'dataCatalogConfig' to be non-null");
+            $.dataplexConfig = Objects.requireNonNull($.dataplexConfig, "expected parameter 'dataplexConfig' to be non-null");
+            return $;
         }
     }
+
 }

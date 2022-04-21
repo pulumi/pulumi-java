@@ -23,10 +23,10 @@ public final class PublicIPAddressDnsSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="domainNameLabel")
-      private final @Nullable String domainNameLabel;
+    private @Nullable String domainNameLabel;
 
     public Optional<String> domainNameLabel() {
-        return this.domainNameLabel == null ? Optional.empty() : Optional.ofNullable(this.domainNameLabel);
+        return Optional.ofNullable(this.domainNameLabel);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PublicIPAddressDnsSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class PublicIPAddressDnsSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="reverseFqdn")
-      private final @Nullable String reverseFqdn;
+    private @Nullable String reverseFqdn;
 
     public Optional<String> reverseFqdn() {
-        return this.reverseFqdn == null ? Optional.empty() : Optional.ofNullable(this.reverseFqdn);
+        return Optional.ofNullable(this.reverseFqdn);
     }
 
-    public PublicIPAddressDnsSettingsResponse(
-        @Nullable String domainNameLabel,
-        @Nullable String fqdn,
-        @Nullable String reverseFqdn) {
-        this.domainNameLabel = domainNameLabel;
-        this.fqdn = fqdn;
-        this.reverseFqdn = reverseFqdn;
-    }
+    private PublicIPAddressDnsSettingsResponse() {}
 
-    private PublicIPAddressDnsSettingsResponse() {
-        this.domainNameLabel = null;
-        this.fqdn = null;
-        this.reverseFqdn = null;
+    private PublicIPAddressDnsSettingsResponse(PublicIPAddressDnsSettingsResponse $) {
+        this.domainNameLabel = $.domainNameLabel;
+        this.fqdn = $.fqdn;
+        this.reverseFqdn = $.reverseFqdn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressDnsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String domainNameLabel;
-        private @Nullable String fqdn;
-        private @Nullable String reverseFqdn;
+        private PublicIPAddressDnsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressDnsSettingsResponse();
         }
 
         public Builder(PublicIPAddressDnsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainNameLabel = defaults.domainNameLabel;
-    	      this.fqdn = defaults.fqdn;
-    	      this.reverseFqdn = defaults.reverseFqdn;
+            $ = new PublicIPAddressDnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainNameLabel(@Nullable String domainNameLabel) {
-            this.domainNameLabel = domainNameLabel;
+            $.domainNameLabel = domainNameLabel;
             return this;
         }
+
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder reverseFqdn(@Nullable String reverseFqdn) {
-            this.reverseFqdn = reverseFqdn;
+            $.reverseFqdn = reverseFqdn;
             return this;
-        }        public PublicIPAddressDnsSettingsResponse build() {
-            return new PublicIPAddressDnsSettingsResponse(domainNameLabel, fqdn, reverseFqdn);
+        }
+
+        public PublicIPAddressDnsSettingsResponse build() {
+            return $;
         }
     }
+
 }

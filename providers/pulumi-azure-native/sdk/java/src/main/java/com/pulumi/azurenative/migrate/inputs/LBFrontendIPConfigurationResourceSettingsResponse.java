@@ -24,10 +24,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable String privateIpAddress;
+    private @Nullable String privateIpAddress;
 
     public Optional<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
      * 
      */
     @Import(name="privateIpAllocationMethod")
-      private final @Nullable String privateIpAllocationMethod;
+    private @Nullable String privateIpAllocationMethod;
 
     public Optional<String> privateIpAllocationMethod() {
-        return this.privateIpAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIpAllocationMethod);
+        return Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubnetReferenceResponse subnet;
+    private @Nullable SubnetReferenceResponse subnet;
 
     public Optional<SubnetReferenceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends com
      * 
      */
     @Import(name="zones")
-      private final @Nullable String zones;
+    private @Nullable String zones;
 
     public Optional<String> zones() {
-        return this.zones == null ? Optional.empty() : Optional.ofNullable(this.zones);
+        return Optional.ofNullable(this.zones);
     }
 
-    public LBFrontendIPConfigurationResourceSettingsResponse(
-        @Nullable String name,
-        @Nullable String privateIpAddress,
-        @Nullable String privateIpAllocationMethod,
-        @Nullable SubnetReferenceResponse subnet,
-        @Nullable String zones) {
-        this.name = name;
-        this.privateIpAddress = privateIpAddress;
-        this.privateIpAllocationMethod = privateIpAllocationMethod;
-        this.subnet = subnet;
-        this.zones = zones;
-    }
+    private LBFrontendIPConfigurationResourceSettingsResponse() {}
 
-    private LBFrontendIPConfigurationResourceSettingsResponse() {
-        this.name = null;
-        this.privateIpAddress = null;
-        this.privateIpAllocationMethod = null;
-        this.subnet = null;
-        this.zones = null;
+    private LBFrontendIPConfigurationResourceSettingsResponse(LBFrontendIPConfigurationResourceSettingsResponse $) {
+        this.name = $.name;
+        this.privateIpAddress = $.privateIpAddress;
+        this.privateIpAllocationMethod = $.privateIpAllocationMethod;
+        this.subnet = $.subnet;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LBFrontendIPConfigurationResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String privateIpAddress;
-        private @Nullable String privateIpAllocationMethod;
-        private @Nullable SubnetReferenceResponse subnet;
-        private @Nullable String zones;
+        private LBFrontendIPConfigurationResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LBFrontendIPConfigurationResourceSettingsResponse();
         }
 
         public Builder(LBFrontendIPConfigurationResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.privateIpAllocationMethod = defaults.privateIpAllocationMethod;
-    	      this.subnet = defaults.subnet;
-    	      this.zones = defaults.zones;
+            $ = new LBFrontendIPConfigurationResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = privateIpAllocationMethod;
+            $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
+
         public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder zones(@Nullable String zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
-        }        public LBFrontendIPConfigurationResourceSettingsResponse build() {
-            return new LBFrontendIPConfigurationResourceSettingsResponse(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);
+        }
+
+        public LBFrontendIPConfigurationResourceSettingsResponse build() {
+            return $;
         }
     }
+
 }

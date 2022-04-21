@@ -23,7 +23,7 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="interactionFieldName", required=true)
-      private final String interactionFieldName;
+    private String interactionFieldName;
 
     public String interactionFieldName() {
         return this.interactionFieldName;
@@ -34,10 +34,10 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="linkType")
-      private final @Nullable String linkType;
+    private @Nullable String linkType;
 
     public Optional<String> linkType() {
-        return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
+        return Optional.ofNullable(this.linkType);
     }
 
     /**
@@ -45,64 +45,58 @@ public final class RelationshipLinkFieldMappingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="relationshipFieldName", required=true)
-      private final String relationshipFieldName;
+    private String relationshipFieldName;
 
     public String relationshipFieldName() {
         return this.relationshipFieldName;
     }
 
-    public RelationshipLinkFieldMappingResponse(
-        String interactionFieldName,
-        @Nullable String linkType,
-        String relationshipFieldName) {
-        this.interactionFieldName = Objects.requireNonNull(interactionFieldName, "expected parameter 'interactionFieldName' to be non-null");
-        this.linkType = linkType;
-        this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName, "expected parameter 'relationshipFieldName' to be non-null");
-    }
+    private RelationshipLinkFieldMappingResponse() {}
 
-    private RelationshipLinkFieldMappingResponse() {
-        this.interactionFieldName = null;
-        this.linkType = null;
-        this.relationshipFieldName = null;
+    private RelationshipLinkFieldMappingResponse(RelationshipLinkFieldMappingResponse $) {
+        this.interactionFieldName = $.interactionFieldName;
+        this.linkType = $.linkType;
+        this.relationshipFieldName = $.relationshipFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipLinkFieldMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interactionFieldName;
-        private @Nullable String linkType;
-        private String relationshipFieldName;
+        private RelationshipLinkFieldMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipLinkFieldMappingResponse();
         }
 
         public Builder(RelationshipLinkFieldMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interactionFieldName = defaults.interactionFieldName;
-    	      this.linkType = defaults.linkType;
-    	      this.relationshipFieldName = defaults.relationshipFieldName;
+            $ = new RelationshipLinkFieldMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interactionFieldName(String interactionFieldName) {
-            this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
+            $.interactionFieldName = interactionFieldName;
             return this;
         }
+
         public Builder linkType(@Nullable String linkType) {
-            this.linkType = linkType;
+            $.linkType = linkType;
             return this;
         }
+
         public Builder relationshipFieldName(String relationshipFieldName) {
-            this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
+            $.relationshipFieldName = relationshipFieldName;
             return this;
-        }        public RelationshipLinkFieldMappingResponse build() {
-            return new RelationshipLinkFieldMappingResponse(interactionFieldName, linkType, relationshipFieldName);
+        }
+
+        public RelationshipLinkFieldMappingResponse build() {
+            $.interactionFieldName = Objects.requireNonNull($.interactionFieldName, "expected parameter 'interactionFieldName' to be non-null");
+            $.relationshipFieldName = Objects.requireNonNull($.relationshipFieldName, "expected parameter 'relationshipFieldName' to be non-null");
+            return $;
         }
     }
+
 }

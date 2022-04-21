@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.enums.SparkChartViewSparkChartType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SparkChartViewArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minAlignmentPeriod")
-      private final @Nullable Output<String> minAlignmentPeriod;
+    private @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> minAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
+    public Optional<Output<String>> minAlignmentPeriod() {
+        return Optional.ofNullable(this.minAlignmentPeriod);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class SparkChartViewArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sparkChartType", required=true)
-      private final Output<SparkChartViewSparkChartType> sparkChartType;
+    private Output<SparkChartViewSparkChartType> sparkChartType;
 
     public Output<SparkChartViewSparkChartType> sparkChartType() {
         return this.sparkChartType;
     }
 
-    public SparkChartViewArgs(
-        @Nullable Output<String> minAlignmentPeriod,
-        Output<SparkChartViewSparkChartType> sparkChartType) {
-        this.minAlignmentPeriod = minAlignmentPeriod;
-        this.sparkChartType = Objects.requireNonNull(sparkChartType, "expected parameter 'sparkChartType' to be non-null");
-    }
+    private SparkChartViewArgs() {}
 
-    private SparkChartViewArgs() {
-        this.minAlignmentPeriod = Codegen.empty();
-        this.sparkChartType = Codegen.empty();
+    private SparkChartViewArgs(SparkChartViewArgs $) {
+        this.minAlignmentPeriod = $.minAlignmentPeriod;
+        this.sparkChartType = $.sparkChartType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkChartViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minAlignmentPeriod;
-        private Output<SparkChartViewSparkChartType> sparkChartType;
+        private SparkChartViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkChartViewArgs();
         }
 
         public Builder(SparkChartViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minAlignmentPeriod = defaults.minAlignmentPeriod;
-    	      this.sparkChartType = defaults.sparkChartType;
+            $ = new SparkChartViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
-            this.minAlignmentPeriod = minAlignmentPeriod;
+            $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
-        public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Codegen.ofNullable(minAlignmentPeriod);
-            return this;
+
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
+            return minAlignmentPeriod(Output.of(minAlignmentPeriod));
         }
+
         public Builder sparkChartType(Output<SparkChartViewSparkChartType> sparkChartType) {
-            this.sparkChartType = Objects.requireNonNull(sparkChartType);
+            $.sparkChartType = sparkChartType;
             return this;
         }
+
         public Builder sparkChartType(SparkChartViewSparkChartType sparkChartType) {
-            this.sparkChartType = Output.of(Objects.requireNonNull(sparkChartType));
-            return this;
-        }        public SparkChartViewArgs build() {
-            return new SparkChartViewArgs(minAlignmentPeriod, sparkChartType);
+            return sparkChartType(Output.of(sparkChartType));
+        }
+
+        public SparkChartViewArgs build() {
+            $.sparkChartType = Objects.requireNonNull($.sparkChartType, "expected parameter 'sparkChartType' to be non-null");
+            return $;
         }
     }
+
 }

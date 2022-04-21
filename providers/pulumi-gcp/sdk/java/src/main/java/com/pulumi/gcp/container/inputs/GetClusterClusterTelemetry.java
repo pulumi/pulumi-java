@@ -13,45 +13,45 @@ public final class GetClusterClusterTelemetry extends com.pulumi.resources.Invok
     public static final GetClusterClusterTelemetry Empty = new GetClusterClusterTelemetry();
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetClusterClusterTelemetry(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetClusterClusterTelemetry() {}
 
-    private GetClusterClusterTelemetry() {
-        this.type = null;
+    private GetClusterClusterTelemetry(GetClusterClusterTelemetry $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterClusterTelemetry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private GetClusterClusterTelemetry $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterClusterTelemetry();
         }
 
         public Builder(GetClusterClusterTelemetry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GetClusterClusterTelemetry(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetClusterClusterTelemetry build() {
-            return new GetClusterClusterTelemetry(type);
+        }
+
+        public GetClusterClusterTelemetry build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

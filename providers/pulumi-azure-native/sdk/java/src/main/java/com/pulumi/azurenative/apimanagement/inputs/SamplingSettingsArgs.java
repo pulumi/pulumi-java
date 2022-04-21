@@ -7,10 +7,10 @@ import com.pulumi.azurenative.apimanagement.enums.SamplingType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Double> percentage;
+    private @Nullable Output<Double> percentage;
 
-    public Output<Double> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Double>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class SamplingSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="samplingType")
-      private final @Nullable Output<Either<String,SamplingType>> samplingType;
+    private @Nullable Output<Either<String,SamplingType>> samplingType;
 
-    public Output<Either<String,SamplingType>> samplingType() {
-        return this.samplingType == null ? Codegen.empty() : this.samplingType;
+    public Optional<Output<Either<String,SamplingType>>> samplingType() {
+        return Optional.ofNullable(this.samplingType);
     }
 
-    public SamplingSettingsArgs(
-        @Nullable Output<Double> percentage,
-        @Nullable Output<Either<String,SamplingType>> samplingType) {
-        this.percentage = percentage;
-        this.samplingType = samplingType;
-    }
+    private SamplingSettingsArgs() {}
 
-    private SamplingSettingsArgs() {
-        this.percentage = Codegen.empty();
-        this.samplingType = Codegen.empty();
+    private SamplingSettingsArgs(SamplingSettingsArgs $) {
+        this.percentage = $.percentage;
+        this.samplingType = $.samplingType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SamplingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> percentage;
-        private @Nullable Output<Either<String,SamplingType>> samplingType;
+        private SamplingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SamplingSettingsArgs();
         }
 
         public Builder(SamplingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percentage = defaults.percentage;
-    	      this.samplingType = defaults.samplingType;
+            $ = new SamplingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder percentage(@Nullable Output<Double> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
+
+        public Builder percentage(Double percentage) {
+            return percentage(Output.of(percentage));
         }
+
         public Builder samplingType(@Nullable Output<Either<String,SamplingType>> samplingType) {
-            this.samplingType = samplingType;
+            $.samplingType = samplingType;
             return this;
         }
-        public Builder samplingType(@Nullable Either<String,SamplingType> samplingType) {
-            this.samplingType = Codegen.ofNullable(samplingType);
-            return this;
-        }        public SamplingSettingsArgs build() {
-            return new SamplingSettingsArgs(percentage, samplingType);
+
+        public Builder samplingType(Either<String,SamplingType> samplingType) {
+            return samplingType(Output.of(samplingType));
+        }
+
+        public SamplingSettingsArgs build() {
+            return $;
         }
     }
+
 }

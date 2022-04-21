@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceServiceRegistriesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceServiceRegistriesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="containerPort")
-      private final @Nullable Output<Integer> containerPort;
+    private @Nullable Output<Integer> containerPort;
 
-    public Output<Integer> containerPort() {
-        return this.containerPort == null ? Codegen.empty() : this.containerPort;
+    public Optional<Output<Integer>> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceServiceRegistriesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class ServiceServiceRegistriesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="registryArn", required=true)
-      private final Output<String> registryArn;
+    private Output<String> registryArn;
 
     public Output<String> registryArn() {
         return this.registryArn;
     }
 
-    public ServiceServiceRegistriesArgs(
-        @Nullable Output<String> containerName,
-        @Nullable Output<Integer> containerPort,
-        @Nullable Output<Integer> port,
-        Output<String> registryArn) {
-        this.containerName = containerName;
-        this.containerPort = containerPort;
-        this.port = port;
-        this.registryArn = Objects.requireNonNull(registryArn, "expected parameter 'registryArn' to be non-null");
-    }
+    private ServiceServiceRegistriesArgs() {}
 
-    private ServiceServiceRegistriesArgs() {
-        this.containerName = Codegen.empty();
-        this.containerPort = Codegen.empty();
-        this.port = Codegen.empty();
-        this.registryArn = Codegen.empty();
+    private ServiceServiceRegistriesArgs(ServiceServiceRegistriesArgs $) {
+        this.containerName = $.containerName;
+        this.containerPort = $.containerPort;
+        this.port = $.port;
+        this.registryArn = $.registryArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceServiceRegistriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerName;
-        private @Nullable Output<Integer> containerPort;
-        private @Nullable Output<Integer> port;
-        private Output<String> registryArn;
+        private ServiceServiceRegistriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceServiceRegistriesArgs();
         }
 
         public Builder(ServiceServiceRegistriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.containerPort = defaults.containerPort;
-    	      this.port = defaults.port;
-    	      this.registryArn = defaults.registryArn;
+            $ = new ServiceServiceRegistriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
-            this.containerPort = containerPort;
+            $.containerPort = containerPort;
             return this;
         }
-        public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Codegen.ofNullable(containerPort);
-            return this;
+
+        public Builder containerPort(Integer containerPort) {
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder registryArn(Output<String> registryArn) {
-            this.registryArn = Objects.requireNonNull(registryArn);
+            $.registryArn = registryArn;
             return this;
         }
+
         public Builder registryArn(String registryArn) {
-            this.registryArn = Output.of(Objects.requireNonNull(registryArn));
-            return this;
-        }        public ServiceServiceRegistriesArgs build() {
-            return new ServiceServiceRegistriesArgs(containerName, containerPort, port, registryArn);
+            return registryArn(Output.of(registryArn));
+        }
+
+        public ServiceServiceRegistriesArgs build() {
+            $.registryArn = Objects.requireNonNull($.registryArn, "expected parameter 'registryArn' to be non-null");
+            return $;
         }
     }
+
 }

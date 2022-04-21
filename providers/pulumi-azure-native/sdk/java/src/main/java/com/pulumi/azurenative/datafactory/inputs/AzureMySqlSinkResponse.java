@@ -25,10 +25,10 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="preCopyScript")
-      private final @Nullable Object preCopyScript;
+    private @Nullable Object preCopyScript;
 
     public Optional<Object> preCopyScript() {
-        return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
+        return Optional.ofNullable(this.preCopyScript);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Object sinkRetryCount;
+    private @Nullable Object sinkRetryCount;
 
     public Optional<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Object sinkRetryWait;
+    private @Nullable Object sinkRetryWait;
 
     public Optional<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -92,10 +92,10 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Object writeBatchSize;
+    private @Nullable Object writeBatchSize;
 
     public Optional<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -103,109 +103,87 @@ public final class AzureMySqlSinkResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Object writeBatchTimeout;
+    private @Nullable Object writeBatchTimeout;
 
     public Optional<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    public AzureMySqlSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.preCopyScript = preCopyScript;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-    }
+    private AzureMySqlSinkResponse() {}
 
-    private AzureMySqlSinkResponse() {
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.preCopyScript = null;
-        this.sinkRetryCount = null;
-        this.sinkRetryWait = null;
-        this.type = null;
-        this.writeBatchSize = null;
-        this.writeBatchTimeout = null;
+    private AzureMySqlSinkResponse(AzureMySqlSinkResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.preCopyScript = $.preCopyScript;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMySqlSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object preCopyScript;
-        private @Nullable Object sinkRetryCount;
-        private @Nullable Object sinkRetryWait;
-        private String type;
-        private @Nullable Object writeBatchSize;
-        private @Nullable Object writeBatchTimeout;
+        private AzureMySqlSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMySqlSinkResponse();
         }
 
         public Builder(AzureMySqlSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.preCopyScript = defaults.preCopyScript;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
+            $ = new AzureMySqlSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder preCopyScript(@Nullable Object preCopyScript) {
-            this.preCopyScript = preCopyScript;
+            $.preCopyScript = preCopyScript;
             return this;
         }
+
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
+
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
+
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
-        }        public AzureMySqlSinkResponse build() {
-            return new AzureMySqlSinkResponse(disableMetricsCollection, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
+        }
+
+        public AzureMySqlSinkResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

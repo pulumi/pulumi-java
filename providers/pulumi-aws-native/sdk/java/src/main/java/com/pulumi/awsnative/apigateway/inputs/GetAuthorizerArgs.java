@@ -13,7 +13,7 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
     @Import(name="authorizerId", required=true)
-      private final String authorizerId;
+    private String authorizerId;
 
     public String authorizerId() {
         return this.authorizerId;
@@ -24,55 +24,52 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetAuthorizerArgs(
-        String authorizerId,
-        String restApiId) {
-        this.authorizerId = Objects.requireNonNull(authorizerId, "expected parameter 'authorizerId' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetAuthorizerArgs() {}
 
-    private GetAuthorizerArgs() {
-        this.authorizerId = null;
-        this.restApiId = null;
+    private GetAuthorizerArgs(GetAuthorizerArgs $) {
+        this.authorizerId = $.authorizerId;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizerId;
-        private String restApiId;
+        private GetAuthorizerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizerArgs();
         }
 
         public Builder(GetAuthorizerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizerId = defaults.authorizerId;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetAuthorizerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizerId(String authorizerId) {
-            this.authorizerId = Objects.requireNonNull(authorizerId);
+            $.authorizerId = authorizerId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetAuthorizerArgs build() {
-            return new GetAuthorizerArgs(authorizerId, restApiId);
+        }
+
+        public GetAuthorizerArgs build() {
+            $.authorizerId = Objects.requireNonNull($.authorizerId, "expected parameter 'authorizerId' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

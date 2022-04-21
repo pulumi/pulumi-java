@@ -23,10 +23,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<FilterItems> filters;
+    private @Nullable List<FilterItems> filters;
 
-    public List<FilterItems> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<FilterItems>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="firewallPolicyName", required=true)
-      private final String firewallPolicyName;
+    private String firewallPolicyName;
 
     public String firewallPolicyName() {
         return this.firewallPolicyName;
@@ -45,10 +45,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="orderBy")
-      private final @Nullable OrderBy orderBy;
+    private @Nullable OrderBy orderBy;
 
     public Optional<OrderBy> orderBy() {
-        return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
+        return Optional.ofNullable(this.orderBy);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resultsPerPage")
-      private final @Nullable Integer resultsPerPage;
+    private @Nullable Integer resultsPerPage;
 
     public Optional<Integer> resultsPerPage() {
-        return this.resultsPerPage == null ? Optional.empty() : Optional.ofNullable(this.resultsPerPage);
+        return Optional.ofNullable(this.resultsPerPage);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="search")
-      private final @Nullable String search;
+    private @Nullable String search;
 
     public Optional<String> search() {
-        return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
+        return Optional.ofNullable(this.search);
     }
 
     /**
@@ -89,103 +89,86 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends com.pulumi.resour
      * 
      */
     @Import(name="skip")
-      private final @Nullable Integer skip;
+    private @Nullable Integer skip;
 
     public Optional<Integer> skip() {
-        return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
+        return Optional.ofNullable(this.skip);
     }
 
-    public ListFirewallPolicyIdpsSignatureArgs(
-        @Nullable List<FilterItems> filters,
-        String firewallPolicyName,
-        @Nullable OrderBy orderBy,
-        String resourceGroupName,
-        @Nullable Integer resultsPerPage,
-        @Nullable String search,
-        @Nullable Integer skip) {
-        this.filters = filters;
-        this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
-        this.orderBy = orderBy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resultsPerPage = resultsPerPage;
-        this.search = search;
-        this.skip = skip;
-    }
+    private ListFirewallPolicyIdpsSignatureArgs() {}
 
-    private ListFirewallPolicyIdpsSignatureArgs() {
-        this.filters = List.of();
-        this.firewallPolicyName = null;
-        this.orderBy = null;
-        this.resourceGroupName = null;
-        this.resultsPerPage = null;
-        this.search = null;
-        this.skip = null;
+    private ListFirewallPolicyIdpsSignatureArgs(ListFirewallPolicyIdpsSignatureArgs $) {
+        this.filters = $.filters;
+        this.firewallPolicyName = $.firewallPolicyName;
+        this.orderBy = $.orderBy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resultsPerPage = $.resultsPerPage;
+        this.search = $.search;
+        this.skip = $.skip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListFirewallPolicyIdpsSignatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FilterItems> filters;
-        private String firewallPolicyName;
-        private @Nullable OrderBy orderBy;
-        private String resourceGroupName;
-        private @Nullable Integer resultsPerPage;
-        private @Nullable String search;
-        private @Nullable Integer skip;
+        private ListFirewallPolicyIdpsSignatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListFirewallPolicyIdpsSignatureArgs();
         }
 
         public Builder(ListFirewallPolicyIdpsSignatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.firewallPolicyName = defaults.firewallPolicyName;
-    	      this.orderBy = defaults.orderBy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resultsPerPage = defaults.resultsPerPage;
-    	      this.search = defaults.search;
-    	      this.skip = defaults.skip;
+            $ = new ListFirewallPolicyIdpsSignatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<FilterItems> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(FilterItems... filters) {
             return filters(List.of(filters));
         }
+
         public Builder firewallPolicyName(String firewallPolicyName) {
-            this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
+            $.firewallPolicyName = firewallPolicyName;
             return this;
         }
+
         public Builder orderBy(@Nullable OrderBy orderBy) {
-            this.orderBy = orderBy;
+            $.orderBy = orderBy;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resultsPerPage(@Nullable Integer resultsPerPage) {
-            this.resultsPerPage = resultsPerPage;
+            $.resultsPerPage = resultsPerPage;
             return this;
         }
+
         public Builder search(@Nullable String search) {
-            this.search = search;
+            $.search = search;
             return this;
         }
+
         public Builder skip(@Nullable Integer skip) {
-            this.skip = skip;
+            $.skip = skip;
             return this;
-        }        public ListFirewallPolicyIdpsSignatureArgs build() {
-            return new ListFirewallPolicyIdpsSignatureArgs(filters, firewallPolicyName, orderBy, resourceGroupName, resultsPerPage, search, skip);
+        }
+
+        public ListFirewallPolicyIdpsSignatureArgs build() {
+            $.firewallPolicyName = Objects.requireNonNull($.firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

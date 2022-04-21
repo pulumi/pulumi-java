@@ -6,11 +6,11 @@ package com.pulumi.aws.guardduty;
 import com.pulumi.aws.guardduty.inputs.DetectorDatasourcesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasources")
-      private final @Nullable Output<DetectorDatasourcesArgs> datasources;
+    private @Nullable Output<DetectorDatasourcesArgs> datasources;
 
-    public Output<DetectorDatasourcesArgs> datasources() {
-        return this.datasources == null ? Codegen.empty() : this.datasources;
+    public Optional<Output<DetectorDatasourcesArgs>> datasources() {
+        return Optional.ofNullable(this.datasources);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="findingPublishingFrequency")
-      private final @Nullable Output<String> findingPublishingFrequency;
+    private @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> findingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
+    public Optional<Output<String>> findingPublishingFrequency() {
+        return Optional.ofNullable(this.findingPublishingFrequency);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class DetectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DetectorArgs(
-        @Nullable Output<DetectorDatasourcesArgs> datasources,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> findingPublishingFrequency,
-        @Nullable Output<Map<String,String>> tags) {
-        this.datasources = datasources;
-        this.enable = enable;
-        this.findingPublishingFrequency = findingPublishingFrequency;
-        this.tags = tags;
-    }
+    private DetectorArgs() {}
 
-    private DetectorArgs() {
-        this.datasources = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.findingPublishingFrequency = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DetectorArgs(DetectorArgs $) {
+        this.datasources = $.datasources;
+        this.enable = $.enable;
+        this.findingPublishingFrequency = $.findingPublishingFrequency;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DetectorDatasourcesArgs> datasources;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> findingPublishingFrequency;
-        private @Nullable Output<Map<String,String>> tags;
+        private DetectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorArgs();
         }
 
         public Builder(DetectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasources = defaults.datasources;
-    	      this.enable = defaults.enable;
-    	      this.findingPublishingFrequency = defaults.findingPublishingFrequency;
-    	      this.tags = defaults.tags;
+            $ = new DetectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasources(@Nullable Output<DetectorDatasourcesArgs> datasources) {
-            this.datasources = datasources;
+            $.datasources = datasources;
             return this;
         }
-        public Builder datasources(@Nullable DetectorDatasourcesArgs datasources) {
-            this.datasources = Codegen.ofNullable(datasources);
-            return this;
+
+        public Builder datasources(DetectorDatasourcesArgs datasources) {
+            return datasources(Output.of(datasources));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
-            this.findingPublishingFrequency = findingPublishingFrequency;
+            $.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-        public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
-            return this;
+
+        public Builder findingPublishingFrequency(String findingPublishingFrequency) {
+            return findingPublishingFrequency(Output.of(findingPublishingFrequency));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DetectorArgs build() {
-            return new DetectorArgs(datasources, enable, findingPublishingFrequency, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DetectorArgs build() {
+            return $;
         }
     }
+
 }

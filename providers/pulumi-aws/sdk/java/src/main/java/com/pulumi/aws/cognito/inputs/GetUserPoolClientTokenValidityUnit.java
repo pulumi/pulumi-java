@@ -17,7 +17,7 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
      * 
      */
     @Import(name="accessToken", required=true)
-      private final String accessToken;
+    private String accessToken;
 
     public String accessToken() {
         return this.accessToken;
@@ -28,7 +28,7 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
      * 
      */
     @Import(name="idToken", required=true)
-      private final String idToken;
+    private String idToken;
 
     public String idToken() {
         return this.idToken;
@@ -39,64 +39,59 @@ public final class GetUserPoolClientTokenValidityUnit extends com.pulumi.resourc
      * 
      */
     @Import(name="refreshToken", required=true)
-      private final String refreshToken;
+    private String refreshToken;
 
     public String refreshToken() {
         return this.refreshToken;
     }
 
-    public GetUserPoolClientTokenValidityUnit(
-        String accessToken,
-        String idToken,
-        String refreshToken) {
-        this.accessToken = Objects.requireNonNull(accessToken, "expected parameter 'accessToken' to be non-null");
-        this.idToken = Objects.requireNonNull(idToken, "expected parameter 'idToken' to be non-null");
-        this.refreshToken = Objects.requireNonNull(refreshToken, "expected parameter 'refreshToken' to be non-null");
-    }
+    private GetUserPoolClientTokenValidityUnit() {}
 
-    private GetUserPoolClientTokenValidityUnit() {
-        this.accessToken = null;
-        this.idToken = null;
-        this.refreshToken = null;
+    private GetUserPoolClientTokenValidityUnit(GetUserPoolClientTokenValidityUnit $) {
+        this.accessToken = $.accessToken;
+        this.idToken = $.idToken;
+        this.refreshToken = $.refreshToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserPoolClientTokenValidityUnit defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessToken;
-        private String idToken;
-        private String refreshToken;
+        private GetUserPoolClientTokenValidityUnit $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserPoolClientTokenValidityUnit();
         }
 
         public Builder(GetUserPoolClientTokenValidityUnit defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.idToken = defaults.idToken;
-    	      this.refreshToken = defaults.refreshToken;
+            $ = new GetUserPoolClientTokenValidityUnit(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(String accessToken) {
-            this.accessToken = Objects.requireNonNull(accessToken);
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder idToken(String idToken) {
-            this.idToken = Objects.requireNonNull(idToken);
+            $.idToken = idToken;
             return this;
         }
+
         public Builder refreshToken(String refreshToken) {
-            this.refreshToken = Objects.requireNonNull(refreshToken);
+            $.refreshToken = refreshToken;
             return this;
-        }        public GetUserPoolClientTokenValidityUnit build() {
-            return new GetUserPoolClientTokenValidityUnit(accessToken, idToken, refreshToken);
+        }
+
+        public GetUserPoolClientTokenValidityUnit build() {
+            $.accessToken = Objects.requireNonNull($.accessToken, "expected parameter 'accessToken' to be non-null");
+            $.idToken = Objects.requireNonNull($.idToken, "expected parameter 'idToken' to be non-null");
+            $.refreshToken = Objects.requireNonNull($.refreshToken, "expected parameter 'refreshToken' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,12 +8,12 @@ import com.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoGetArgs;
 import com.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessEndpoints")
-      private final @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
+    private @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
 
-    public Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints() {
-        return this.accessEndpoints == null ? Codegen.empty() : this.accessEndpoints;
+    public Optional<Output<List<ImageBuilderAccessEndpointGetArgs>>> accessEndpoints() {
+        return Optional.ofNullable(this.accessEndpoints);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appstreamAgentVersion")
-      private final @Nullable Output<String> appstreamAgentVersion;
+    private @Nullable Output<String> appstreamAgentVersion;
 
-    public Output<String> appstreamAgentVersion() {
-        return this.appstreamAgentVersion == null ? Codegen.empty() : this.appstreamAgentVersion;
+    public Optional<Output<String>> appstreamAgentVersion() {
+        return Optional.ofNullable(this.appstreamAgentVersion);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainJoinInfo")
-      private final @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
+    private @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
 
-    public Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo() {
-        return this.domainJoinInfo == null ? Codegen.empty() : this.domainJoinInfo;
+    public Optional<Output<ImageBuilderDomainJoinInfoGetArgs>> domainJoinInfo() {
+        return Optional.ofNullable(this.domainJoinInfo);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDefaultInternetAccess")
-      private final @Nullable Output<Boolean> enableDefaultInternetAccess;
+    private @Nullable Output<Boolean> enableDefaultInternetAccess;
 
-    public Output<Boolean> enableDefaultInternetAccess() {
-        return this.enableDefaultInternetAccess == null ? Codegen.empty() : this.enableDefaultInternetAccess;
+    public Optional<Output<Boolean>> enableDefaultInternetAccess() {
+        return Optional.ofNullable(this.enableDefaultInternetAccess);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRoleArn")
-      private final @Nullable Output<String> iamRoleArn;
+    private @Nullable Output<String> iamRoleArn;
 
-    public Output<String> iamRoleArn() {
-        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
+    public Optional<Output<String>> iamRoleArn() {
+        return Optional.ofNullable(this.iamRoleArn);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageArn")
-      private final @Nullable Output<String> imageArn;
+    private @Nullable Output<String> imageArn;
 
-    public Output<String> imageArn() {
-        return this.imageArn == null ? Codegen.empty() : this.imageArn;
+    public Optional<Output<String>> imageArn() {
+        return Optional.ofNullable(this.imageArn);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -202,261 +202,212 @@ public final class ImageBuilderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfig")
-      private final @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
+    private @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
 
-    public Output<ImageBuilderVpcConfigGetArgs> vpcConfig() {
-        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
+    public Optional<Output<ImageBuilderVpcConfigGetArgs>> vpcConfig() {
+        return Optional.ofNullable(this.vpcConfig);
     }
 
-    public ImageBuilderState(
-        @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints,
-        @Nullable Output<String> appstreamAgentVersion,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo,
-        @Nullable Output<Boolean> enableDefaultInternetAccess,
-        @Nullable Output<String> iamRoleArn,
-        @Nullable Output<String> imageArn,
-        @Nullable Output<String> imageName,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> state,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
-        this.accessEndpoints = accessEndpoints;
-        this.appstreamAgentVersion = appstreamAgentVersion;
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.displayName = displayName;
-        this.domainJoinInfo = domainJoinInfo;
-        this.enableDefaultInternetAccess = enableDefaultInternetAccess;
-        this.iamRoleArn = iamRoleArn;
-        this.imageArn = imageArn;
-        this.imageName = imageName;
-        this.instanceType = instanceType;
-        this.name = name;
-        this.state = state;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcConfig = vpcConfig;
-    }
+    private ImageBuilderState() {}
 
-    private ImageBuilderState() {
-        this.accessEndpoints = Codegen.empty();
-        this.appstreamAgentVersion = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.domainJoinInfo = Codegen.empty();
-        this.enableDefaultInternetAccess = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.imageArn = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcConfig = Codegen.empty();
+    private ImageBuilderState(ImageBuilderState $) {
+        this.accessEndpoints = $.accessEndpoints;
+        this.appstreamAgentVersion = $.appstreamAgentVersion;
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.domainJoinInfo = $.domainJoinInfo;
+        this.enableDefaultInternetAccess = $.enableDefaultInternetAccess;
+        this.iamRoleArn = $.iamRoleArn;
+        this.imageArn = $.imageArn;
+        this.imageName = $.imageName;
+        this.instanceType = $.instanceType;
+        this.name = $.name;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageBuilderState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
-        private @Nullable Output<String> appstreamAgentVersion;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
-        private @Nullable Output<Boolean> enableDefaultInternetAccess;
-        private @Nullable Output<String> iamRoleArn;
-        private @Nullable Output<String> imageArn;
-        private @Nullable Output<String> imageName;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
+        private ImageBuilderState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageBuilderState();
         }
 
         public Builder(ImageBuilderState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessEndpoints = defaults.accessEndpoints;
-    	      this.appstreamAgentVersion = defaults.appstreamAgentVersion;
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.domainJoinInfo = defaults.domainJoinInfo;
-    	      this.enableDefaultInternetAccess = defaults.enableDefaultInternetAccess;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.imageArn = defaults.imageArn;
-    	      this.imageName = defaults.imageName;
-    	      this.instanceType = defaults.instanceType;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new ImageBuilderState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessEndpoints(@Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints) {
-            this.accessEndpoints = accessEndpoints;
+            $.accessEndpoints = accessEndpoints;
             return this;
         }
-        public Builder accessEndpoints(@Nullable List<ImageBuilderAccessEndpointGetArgs> accessEndpoints) {
-            this.accessEndpoints = Codegen.ofNullable(accessEndpoints);
-            return this;
+
+        public Builder accessEndpoints(List<ImageBuilderAccessEndpointGetArgs> accessEndpoints) {
+            return accessEndpoints(Output.of(accessEndpoints));
         }
+
         public Builder accessEndpoints(ImageBuilderAccessEndpointGetArgs... accessEndpoints) {
             return accessEndpoints(List.of(accessEndpoints));
         }
+
         public Builder appstreamAgentVersion(@Nullable Output<String> appstreamAgentVersion) {
-            this.appstreamAgentVersion = appstreamAgentVersion;
+            $.appstreamAgentVersion = appstreamAgentVersion;
             return this;
         }
-        public Builder appstreamAgentVersion(@Nullable String appstreamAgentVersion) {
-            this.appstreamAgentVersion = Codegen.ofNullable(appstreamAgentVersion);
-            return this;
+
+        public Builder appstreamAgentVersion(String appstreamAgentVersion) {
+            return appstreamAgentVersion(Output.of(appstreamAgentVersion));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo) {
-            this.domainJoinInfo = domainJoinInfo;
+            $.domainJoinInfo = domainJoinInfo;
             return this;
         }
-        public Builder domainJoinInfo(@Nullable ImageBuilderDomainJoinInfoGetArgs domainJoinInfo) {
-            this.domainJoinInfo = Codegen.ofNullable(domainJoinInfo);
-            return this;
+
+        public Builder domainJoinInfo(ImageBuilderDomainJoinInfoGetArgs domainJoinInfo) {
+            return domainJoinInfo(Output.of(domainJoinInfo));
         }
+
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = enableDefaultInternetAccess;
+            $.enableDefaultInternetAccess = enableDefaultInternetAccess;
             return this;
         }
-        public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = Codegen.ofNullable(enableDefaultInternetAccess);
-            return this;
+
+        public Builder enableDefaultInternetAccess(Boolean enableDefaultInternetAccess) {
+            return enableDefaultInternetAccess(Output.of(enableDefaultInternetAccess));
         }
+
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
-            this.iamRoleArn = iamRoleArn;
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
-        public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
-            return this;
+
+        public Builder iamRoleArn(String iamRoleArn) {
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder imageArn(@Nullable Output<String> imageArn) {
-            this.imageArn = imageArn;
+            $.imageArn = imageArn;
             return this;
         }
-        public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Codegen.ofNullable(imageArn);
-            return this;
+
+        public Builder imageArn(String imageArn) {
+            return imageArn(Output.of(imageArn));
         }
+
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
-            this.vpcConfig = vpcConfig;
+            $.vpcConfig = vpcConfig;
             return this;
         }
-        public Builder vpcConfig(@Nullable ImageBuilderVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Codegen.ofNullable(vpcConfig);
-            return this;
-        }        public ImageBuilderState build() {
-            return new ImageBuilderState(accessEndpoints, appstreamAgentVersion, arn, createdTime, description, displayName, domainJoinInfo, enableDefaultInternetAccess, iamRoleArn, imageArn, imageName, instanceType, name, state, tags, tagsAll, vpcConfig);
+
+        public Builder vpcConfig(ImageBuilderVpcConfigGetArgs vpcConfig) {
+            return vpcConfig(Output.of(vpcConfig));
+        }
+
+        public ImageBuilderState build() {
+            return $;
         }
     }
+
 }

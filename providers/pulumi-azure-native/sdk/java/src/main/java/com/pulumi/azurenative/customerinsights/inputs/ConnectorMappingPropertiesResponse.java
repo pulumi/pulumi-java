@@ -30,7 +30,7 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="availability", required=true)
-      private final ConnectorMappingAvailabilityResponse availability;
+    private ConnectorMappingAvailabilityResponse availability;
 
     public ConnectorMappingAvailabilityResponse availability() {
         return this.availability;
@@ -41,7 +41,7 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="completeOperation", required=true)
-      private final ConnectorMappingCompleteOperationResponse completeOperation;
+    private ConnectorMappingCompleteOperationResponse completeOperation;
 
     public ConnectorMappingCompleteOperationResponse completeOperation() {
         return this.completeOperation;
@@ -52,7 +52,7 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="errorManagement", required=true)
-      private final ConnectorMappingErrorManagementResponse errorManagement;
+    private ConnectorMappingErrorManagementResponse errorManagement;
 
     public ConnectorMappingErrorManagementResponse errorManagement() {
         return this.errorManagement;
@@ -63,10 +63,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="fileFilter")
-      private final @Nullable String fileFilter;
+    private @Nullable String fileFilter;
 
     public Optional<String> fileFilter() {
-        return this.fileFilter == null ? Optional.empty() : Optional.ofNullable(this.fileFilter);
+        return Optional.ofNullable(this.fileFilter);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable String folderPath;
+    private @Nullable String folderPath;
 
     public Optional<String> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -85,7 +85,7 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="format", required=true)
-      private final ConnectorMappingFormatResponse format;
+    private ConnectorMappingFormatResponse format;
 
     public ConnectorMappingFormatResponse format() {
         return this.format;
@@ -96,10 +96,10 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="hasHeader")
-      private final @Nullable Boolean hasHeader;
+    private @Nullable Boolean hasHeader;
 
     public Optional<Boolean> hasHeader() {
-        return this.hasHeader == null ? Optional.empty() : Optional.ofNullable(this.hasHeader);
+        return Optional.ofNullable(this.hasHeader);
     }
 
     /**
@@ -107,112 +107,95 @@ public final class ConnectorMappingPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="structure", required=true)
-      private final List<ConnectorMappingStructureResponse> structure;
+    private List<ConnectorMappingStructureResponse> structure;
 
     public List<ConnectorMappingStructureResponse> structure() {
         return this.structure;
     }
 
-    public ConnectorMappingPropertiesResponse(
-        ConnectorMappingAvailabilityResponse availability,
-        ConnectorMappingCompleteOperationResponse completeOperation,
-        ConnectorMappingErrorManagementResponse errorManagement,
-        @Nullable String fileFilter,
-        @Nullable String folderPath,
-        ConnectorMappingFormatResponse format,
-        @Nullable Boolean hasHeader,
-        List<ConnectorMappingStructureResponse> structure) {
-        this.availability = Objects.requireNonNull(availability, "expected parameter 'availability' to be non-null");
-        this.completeOperation = Objects.requireNonNull(completeOperation, "expected parameter 'completeOperation' to be non-null");
-        this.errorManagement = Objects.requireNonNull(errorManagement, "expected parameter 'errorManagement' to be non-null");
-        this.fileFilter = fileFilter;
-        this.folderPath = folderPath;
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.hasHeader = hasHeader;
-        this.structure = Objects.requireNonNull(structure, "expected parameter 'structure' to be non-null");
-    }
+    private ConnectorMappingPropertiesResponse() {}
 
-    private ConnectorMappingPropertiesResponse() {
-        this.availability = null;
-        this.completeOperation = null;
-        this.errorManagement = null;
-        this.fileFilter = null;
-        this.folderPath = null;
-        this.format = null;
-        this.hasHeader = null;
-        this.structure = List.of();
+    private ConnectorMappingPropertiesResponse(ConnectorMappingPropertiesResponse $) {
+        this.availability = $.availability;
+        this.completeOperation = $.completeOperation;
+        this.errorManagement = $.errorManagement;
+        this.fileFilter = $.fileFilter;
+        this.folderPath = $.folderPath;
+        this.format = $.format;
+        this.hasHeader = $.hasHeader;
+        this.structure = $.structure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConnectorMappingAvailabilityResponse availability;
-        private ConnectorMappingCompleteOperationResponse completeOperation;
-        private ConnectorMappingErrorManagementResponse errorManagement;
-        private @Nullable String fileFilter;
-        private @Nullable String folderPath;
-        private ConnectorMappingFormatResponse format;
-        private @Nullable Boolean hasHeader;
-        private List<ConnectorMappingStructureResponse> structure;
+        private ConnectorMappingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingPropertiesResponse();
         }
 
         public Builder(ConnectorMappingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availability = defaults.availability;
-    	      this.completeOperation = defaults.completeOperation;
-    	      this.errorManagement = defaults.errorManagement;
-    	      this.fileFilter = defaults.fileFilter;
-    	      this.folderPath = defaults.folderPath;
-    	      this.format = defaults.format;
-    	      this.hasHeader = defaults.hasHeader;
-    	      this.structure = defaults.structure;
+            $ = new ConnectorMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availability(ConnectorMappingAvailabilityResponse availability) {
-            this.availability = Objects.requireNonNull(availability);
+            $.availability = availability;
             return this;
         }
+
         public Builder completeOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
-            this.completeOperation = Objects.requireNonNull(completeOperation);
+            $.completeOperation = completeOperation;
             return this;
         }
+
         public Builder errorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
-            this.errorManagement = Objects.requireNonNull(errorManagement);
+            $.errorManagement = errorManagement;
             return this;
         }
+
         public Builder fileFilter(@Nullable String fileFilter) {
-            this.fileFilter = fileFilter;
+            $.fileFilter = fileFilter;
             return this;
         }
+
         public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder format(ConnectorMappingFormatResponse format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder hasHeader(@Nullable Boolean hasHeader) {
-            this.hasHeader = hasHeader;
+            $.hasHeader = hasHeader;
             return this;
         }
+
         public Builder structure(List<ConnectorMappingStructureResponse> structure) {
-            this.structure = Objects.requireNonNull(structure);
+            $.structure = structure;
             return this;
         }
+
         public Builder structure(ConnectorMappingStructureResponse... structure) {
             return structure(List.of(structure));
-        }        public ConnectorMappingPropertiesResponse build() {
-            return new ConnectorMappingPropertiesResponse(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
+        }
+
+        public ConnectorMappingPropertiesResponse build() {
+            $.availability = Objects.requireNonNull($.availability, "expected parameter 'availability' to be non-null");
+            $.completeOperation = Objects.requireNonNull($.completeOperation, "expected parameter 'completeOperation' to be non-null");
+            $.errorManagement = Objects.requireNonNull($.errorManagement, "expected parameter 'errorManagement' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.structure = Objects.requireNonNull($.structure, "expected parameter 'structure' to be non-null");
+            return $;
         }
     }
+
 }

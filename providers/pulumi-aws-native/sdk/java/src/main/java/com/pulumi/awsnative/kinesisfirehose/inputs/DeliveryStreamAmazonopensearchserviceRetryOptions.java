@@ -15,45 +15,44 @@ public final class DeliveryStreamAmazonopensearchserviceRetryOptions extends com
     public static final DeliveryStreamAmazonopensearchserviceRetryOptions Empty = new DeliveryStreamAmazonopensearchserviceRetryOptions();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Integer durationInSeconds;
+    private @Nullable Integer durationInSeconds;
 
     public Optional<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamAmazonopensearchserviceRetryOptions(@Nullable Integer durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamAmazonopensearchserviceRetryOptions() {}
 
-    private DeliveryStreamAmazonopensearchserviceRetryOptions() {
-        this.durationInSeconds = null;
+    private DeliveryStreamAmazonopensearchserviceRetryOptions(DeliveryStreamAmazonopensearchserviceRetryOptions $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamAmazonopensearchserviceRetryOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer durationInSeconds;
+        private DeliveryStreamAmazonopensearchserviceRetryOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamAmazonopensearchserviceRetryOptions();
         }
 
         public Builder(DeliveryStreamAmazonopensearchserviceRetryOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamAmazonopensearchserviceRetryOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
-        }        public DeliveryStreamAmazonopensearchserviceRetryOptions build() {
-            return new DeliveryStreamAmazonopensearchserviceRetryOptions(durationInSeconds);
+        }
+
+        public DeliveryStreamAmazonopensearchserviceRetryOptions build() {
+            return $;
         }
     }
+
 }

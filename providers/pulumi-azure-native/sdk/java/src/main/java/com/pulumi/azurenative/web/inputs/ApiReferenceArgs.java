@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brandColor")
-      private final @Nullable Output<String> brandColor;
+    private @Nullable Output<String> brandColor;
 
-    public Output<String> brandColor() {
-        return this.brandColor == null ? Codegen.empty() : this.brandColor;
+    public Optional<Output<String>> brandColor() {
+        return Optional.ofNullable(this.brandColor);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iconUri")
-      private final @Nullable Output<String> iconUri;
+    private @Nullable Output<String> iconUri;
 
-    public Output<String> iconUri() {
-        return this.iconUri == null ? Codegen.empty() : this.iconUri;
+    public Optional<Output<String>> iconUri() {
+        return Optional.ofNullable(this.iconUri);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="swagger")
-      private final @Nullable Output<Object> swagger;
+    private @Nullable Output<Object> swagger;
 
-    public Output<Object> swagger() {
-        return this.swagger == null ? Codegen.empty() : this.swagger;
+    public Optional<Output<Object>> swagger() {
+        return Optional.ofNullable(this.swagger);
     }
 
     /**
@@ -98,141 +98,118 @@ public final class ApiReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ApiReferenceArgs(
-        @Nullable Output<String> brandColor,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> iconUri,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Object> swagger,
-        @Nullable Output<String> type) {
-        this.brandColor = brandColor;
-        this.description = description;
-        this.displayName = displayName;
-        this.iconUri = iconUri;
-        this.id = id;
-        this.name = name;
-        this.swagger = swagger;
-        this.type = type;
-    }
+    private ApiReferenceArgs() {}
 
-    private ApiReferenceArgs() {
-        this.brandColor = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.iconUri = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.swagger = Codegen.empty();
-        this.type = Codegen.empty();
+    private ApiReferenceArgs(ApiReferenceArgs $) {
+        this.brandColor = $.brandColor;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.iconUri = $.iconUri;
+        this.id = $.id;
+        this.name = $.name;
+        this.swagger = $.swagger;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> brandColor;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> iconUri;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Object> swagger;
-        private @Nullable Output<String> type;
+        private ApiReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiReferenceArgs();
         }
 
         public Builder(ApiReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brandColor = defaults.brandColor;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.iconUri = defaults.iconUri;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.swagger = defaults.swagger;
-    	      this.type = defaults.type;
+            $ = new ApiReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brandColor(@Nullable Output<String> brandColor) {
-            this.brandColor = brandColor;
+            $.brandColor = brandColor;
             return this;
         }
-        public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = Codegen.ofNullable(brandColor);
-            return this;
+
+        public Builder brandColor(String brandColor) {
+            return brandColor(Output.of(brandColor));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder iconUri(@Nullable Output<String> iconUri) {
-            this.iconUri = iconUri;
+            $.iconUri = iconUri;
             return this;
         }
-        public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = Codegen.ofNullable(iconUri);
-            return this;
+
+        public Builder iconUri(String iconUri) {
+            return iconUri(Output.of(iconUri));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder swagger(@Nullable Output<Object> swagger) {
-            this.swagger = swagger;
+            $.swagger = swagger;
             return this;
         }
-        public Builder swagger(@Nullable Object swagger) {
-            this.swagger = Codegen.ofNullable(swagger);
-            return this;
+
+        public Builder swagger(Object swagger) {
+            return swagger(Output.of(swagger));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ApiReferenceArgs build() {
-            return new ApiReferenceArgs(brandColor, description, displayName, iconUri, id, name, swagger, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ApiReferenceArgs build() {
+            return $;
         }
     }
+
 }

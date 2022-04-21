@@ -18,45 +18,45 @@ public final class PipelineSourceTriggerPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public PipelineSourceTriggerPropertiesResponse(String status) {
-        this.status = Codegen.stringProp("status").arg(status).def("Enabled").require();
-    }
+    private PipelineSourceTriggerPropertiesResponse() {}
 
-    private PipelineSourceTriggerPropertiesResponse() {
-        this.status = null;
+    private PipelineSourceTriggerPropertiesResponse(PipelineSourceTriggerPropertiesResponse $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineSourceTriggerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String status;
+        private PipelineSourceTriggerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineSourceTriggerPropertiesResponse();
         }
 
         public Builder(PipelineSourceTriggerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new PipelineSourceTriggerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public PipelineSourceTriggerPropertiesResponse build() {
-            return new PipelineSourceTriggerPropertiesResponse(status);
+        }
+
+        public PipelineSourceTriggerPropertiesResponse build() {
+            $.status = Codegen.stringProp("status").arg($.status).def("Enabled").require();
+            return $;
         }
     }
+
 }

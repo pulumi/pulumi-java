@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends com.p
      * 
      */
     @Import(name="starTime", required=true)
-      private final String starTime;
+    private String starTime;
 
     public String starTime() {
         return this.starTime;
@@ -33,55 +33,52 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends com.p
      * 
      */
     @Import(name="starred", required=true)
-      private final Boolean starred;
+    private Boolean starred;
 
     public Boolean starred() {
         return this.starred;
     }
 
-    public GoogleCloudDatacatalogV1PersonalDetailsResponse(
-        String starTime,
-        Boolean starred) {
-        this.starTime = Objects.requireNonNull(starTime, "expected parameter 'starTime' to be non-null");
-        this.starred = Objects.requireNonNull(starred, "expected parameter 'starred' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1PersonalDetailsResponse() {}
 
-    private GoogleCloudDatacatalogV1PersonalDetailsResponse() {
-        this.starTime = null;
-        this.starred = null;
+    private GoogleCloudDatacatalogV1PersonalDetailsResponse(GoogleCloudDatacatalogV1PersonalDetailsResponse $) {
+        this.starTime = $.starTime;
+        this.starred = $.starred;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1PersonalDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String starTime;
-        private Boolean starred;
+        private GoogleCloudDatacatalogV1PersonalDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1PersonalDetailsResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1PersonalDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.starTime = defaults.starTime;
-    	      this.starred = defaults.starred;
+            $ = new GoogleCloudDatacatalogV1PersonalDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder starTime(String starTime) {
-            this.starTime = Objects.requireNonNull(starTime);
+            $.starTime = starTime;
             return this;
         }
+
         public Builder starred(Boolean starred) {
-            this.starred = Objects.requireNonNull(starred);
+            $.starred = starred;
             return this;
-        }        public GoogleCloudDatacatalogV1PersonalDetailsResponse build() {
-            return new GoogleCloudDatacatalogV1PersonalDetailsResponse(starTime, starred);
+        }
+
+        public GoogleCloudDatacatalogV1PersonalDetailsResponse build() {
+            $.starTime = Objects.requireNonNull($.starTime, "expected parameter 'starTime' to be non-null");
+            $.starred = Objects.requireNonNull($.starred, "expected parameter 'starred' to be non-null");
+            return $;
         }
     }
+
 }

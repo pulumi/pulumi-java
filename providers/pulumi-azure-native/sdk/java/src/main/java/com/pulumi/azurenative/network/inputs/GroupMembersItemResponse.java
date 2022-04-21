@@ -23,45 +23,44 @@ public final class GroupMembersItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public GroupMembersItemResponse(@Nullable String resourceId) {
-        this.resourceId = resourceId;
-    }
+    private GroupMembersItemResponse() {}
 
-    private GroupMembersItemResponse() {
-        this.resourceId = null;
+    private GroupMembersItemResponse(GroupMembersItemResponse $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMembersItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
+        private GroupMembersItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMembersItemResponse();
         }
 
         public Builder(GroupMembersItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new GroupMembersItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public GroupMembersItemResponse build() {
-            return new GroupMembersItemResponse(resourceId);
+        }
+
+        public GroupMembersItemResponse build() {
+            return $;
         }
     }
+
 }

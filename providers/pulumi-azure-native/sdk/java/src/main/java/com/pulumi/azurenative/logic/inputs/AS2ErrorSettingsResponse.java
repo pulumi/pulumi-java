@@ -21,7 +21,7 @@ public final class AS2ErrorSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resendIfMDNNotReceived", required=true)
-      private final Boolean resendIfMDNNotReceived;
+    private Boolean resendIfMDNNotReceived;
 
     public Boolean resendIfMDNNotReceived() {
         return this.resendIfMDNNotReceived;
@@ -32,55 +32,52 @@ public final class AS2ErrorSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="suspendDuplicateMessage", required=true)
-      private final Boolean suspendDuplicateMessage;
+    private Boolean suspendDuplicateMessage;
 
     public Boolean suspendDuplicateMessage() {
         return this.suspendDuplicateMessage;
     }
 
-    public AS2ErrorSettingsResponse(
-        Boolean resendIfMDNNotReceived,
-        Boolean suspendDuplicateMessage) {
-        this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived, "expected parameter 'resendIfMDNNotReceived' to be non-null");
-        this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage, "expected parameter 'suspendDuplicateMessage' to be non-null");
-    }
+    private AS2ErrorSettingsResponse() {}
 
-    private AS2ErrorSettingsResponse() {
-        this.resendIfMDNNotReceived = null;
-        this.suspendDuplicateMessage = null;
+    private AS2ErrorSettingsResponse(AS2ErrorSettingsResponse $) {
+        this.resendIfMDNNotReceived = $.resendIfMDNNotReceived;
+        this.suspendDuplicateMessage = $.suspendDuplicateMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2ErrorSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean resendIfMDNNotReceived;
-        private Boolean suspendDuplicateMessage;
+        private AS2ErrorSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2ErrorSettingsResponse();
         }
 
         public Builder(AS2ErrorSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resendIfMDNNotReceived = defaults.resendIfMDNNotReceived;
-    	      this.suspendDuplicateMessage = defaults.suspendDuplicateMessage;
+            $ = new AS2ErrorSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resendIfMDNNotReceived(Boolean resendIfMDNNotReceived) {
-            this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived);
+            $.resendIfMDNNotReceived = resendIfMDNNotReceived;
             return this;
         }
+
         public Builder suspendDuplicateMessage(Boolean suspendDuplicateMessage) {
-            this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
+            $.suspendDuplicateMessage = suspendDuplicateMessage;
             return this;
-        }        public AS2ErrorSettingsResponse build() {
-            return new AS2ErrorSettingsResponse(resendIfMDNNotReceived, suspendDuplicateMessage);
+        }
+
+        public AS2ErrorSettingsResponse build() {
+            $.resendIfMDNNotReceived = Objects.requireNonNull($.resendIfMDNNotReceived, "expected parameter 'resendIfMDNNotReceived' to be non-null");
+            $.suspendDuplicateMessage = Objects.requireNonNull($.suspendDuplicateMessage, "expected parameter 'suspendDuplicateMessage' to be non-null");
+            return $;
         }
     }
+
 }

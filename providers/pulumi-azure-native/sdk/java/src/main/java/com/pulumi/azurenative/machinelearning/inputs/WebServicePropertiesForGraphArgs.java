@@ -22,6 +22,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -38,10 +39,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="assets")
-      private final @Nullable Output<Map<String,AssetItemArgs>> assets;
+    private @Nullable Output<Map<String,AssetItemArgs>> assets;
 
-    public Output<Map<String,AssetItemArgs>> assets() {
-        return this.assets == null ? Codegen.empty() : this.assets;
+    public Optional<Output<Map<String,AssetItemArgs>>> assets() {
+        return Optional.ofNullable(this.assets);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="commitmentPlan")
-      private final @Nullable Output<CommitmentPlanArgs> commitmentPlan;
+    private @Nullable Output<CommitmentPlanArgs> commitmentPlan;
 
-    public Output<CommitmentPlanArgs> commitmentPlan() {
-        return this.commitmentPlan == null ? Codegen.empty() : this.commitmentPlan;
+    public Optional<Output<CommitmentPlanArgs>> commitmentPlan() {
+        return Optional.ofNullable(this.commitmentPlan);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable Output<DiagnosticsConfigurationArgs> diagnostics;
+    private @Nullable Output<DiagnosticsConfigurationArgs> diagnostics;
 
-    public Output<DiagnosticsConfigurationArgs> diagnostics() {
-        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
+    public Optional<Output<DiagnosticsConfigurationArgs>> diagnostics() {
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="exampleRequest")
-      private final @Nullable Output<ExampleRequestArgs> exampleRequest;
+    private @Nullable Output<ExampleRequestArgs> exampleRequest;
 
-    public Output<ExampleRequestArgs> exampleRequest() {
-        return this.exampleRequest == null ? Codegen.empty() : this.exampleRequest;
+    public Optional<Output<ExampleRequestArgs>> exampleRequest() {
+        return Optional.ofNullable(this.exampleRequest);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="exposeSampleData")
-      private final @Nullable Output<Boolean> exposeSampleData;
+    private @Nullable Output<Boolean> exposeSampleData;
 
-    public Output<Boolean> exposeSampleData() {
-        return this.exposeSampleData == null ? Codegen.empty() : this.exposeSampleData;
+    public Optional<Output<Boolean>> exposeSampleData() {
+        return Optional.ofNullable(this.exposeSampleData);
     }
 
     /**
@@ -104,10 +105,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<ServiceInputOutputSpecificationArgs> input;
+    private @Nullable Output<ServiceInputOutputSpecificationArgs> input;
 
-    public Output<ServiceInputOutputSpecificationArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<ServiceInputOutputSpecificationArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -115,10 +116,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<WebServiceKeysArgs> keys;
+    private @Nullable Output<WebServiceKeysArgs> keys;
 
-    public Output<WebServiceKeysArgs> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<WebServiceKeysArgs>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -126,10 +127,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="machineLearningWorkspace")
-      private final @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
+    private @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
 
-    public Output<MachineLearningWorkspaceArgs> machineLearningWorkspace() {
-        return this.machineLearningWorkspace == null ? Codegen.empty() : this.machineLearningWorkspace;
+    public Optional<Output<MachineLearningWorkspaceArgs>> machineLearningWorkspace() {
+        return Optional.ofNullable(this.machineLearningWorkspace);
     }
 
     /**
@@ -137,10 +138,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="output")
-      private final @Nullable Output<ServiceInputOutputSpecificationArgs> output;
+    private @Nullable Output<ServiceInputOutputSpecificationArgs> output;
 
-    public Output<ServiceInputOutputSpecificationArgs> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<ServiceInputOutputSpecificationArgs>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -148,10 +149,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<GraphPackageArgs> package_;
+    private @Nullable Output<GraphPackageArgs> package_;
 
-    public Output<GraphPackageArgs> package_() {
-        return this.package_ == null ? Codegen.empty() : this.package_;
+    public Optional<Output<GraphPackageArgs>> package_() {
+        return Optional.ofNullable(this.package_);
     }
 
     /**
@@ -160,7 +161,7 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="packageType", required=true)
-      private final Output<String> packageType;
+    private Output<String> packageType;
 
     public Output<String> packageType() {
         return this.packageType;
@@ -171,10 +172,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
+    private @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
-    public Output<Map<String,WebServiceParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,WebServiceParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -182,10 +183,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="payloadsInBlobStorage")
-      private final @Nullable Output<Boolean> payloadsInBlobStorage;
+    private @Nullable Output<Boolean> payloadsInBlobStorage;
 
-    public Output<Boolean> payloadsInBlobStorage() {
-        return this.payloadsInBlobStorage == null ? Codegen.empty() : this.payloadsInBlobStorage;
+    public Optional<Output<Boolean>> payloadsInBlobStorage() {
+        return Optional.ofNullable(this.payloadsInBlobStorage);
     }
 
     /**
@@ -193,10 +194,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="payloadsLocation")
-      private final @Nullable Output<BlobLocationArgs> payloadsLocation;
+    private @Nullable Output<BlobLocationArgs> payloadsLocation;
 
-    public Output<BlobLocationArgs> payloadsLocation() {
-        return this.payloadsLocation == null ? Codegen.empty() : this.payloadsLocation;
+    public Optional<Output<BlobLocationArgs>> payloadsLocation() {
+        return Optional.ofNullable(this.payloadsLocation);
     }
 
     /**
@@ -204,10 +205,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -215,10 +216,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="realtimeConfiguration")
-      private final @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration;
+    private @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration;
 
-    public Output<RealtimeConfigurationArgs> realtimeConfiguration() {
-        return this.realtimeConfiguration == null ? Codegen.empty() : this.realtimeConfiguration;
+    public Optional<Output<RealtimeConfigurationArgs>> realtimeConfiguration() {
+        return Optional.ofNullable(this.realtimeConfiguration);
     }
 
     /**
@@ -226,10 +227,10 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable Output<StorageAccountArgs> storageAccount;
+    private @Nullable Output<StorageAccountArgs> storageAccount;
 
-    public Output<StorageAccountArgs> storageAccount() {
-        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
+    public Optional<Output<StorageAccountArgs>> storageAccount() {
+        return Optional.ofNullable(this.storageAccount);
     }
 
     /**
@@ -237,284 +238,229 @@ public final class WebServicePropertiesForGraphArgs extends com.pulumi.resources
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public WebServicePropertiesForGraphArgs(
-        @Nullable Output<Map<String,AssetItemArgs>> assets,
-        @Nullable Output<CommitmentPlanArgs> commitmentPlan,
-        @Nullable Output<String> description,
-        @Nullable Output<DiagnosticsConfigurationArgs> diagnostics,
-        @Nullable Output<ExampleRequestArgs> exampleRequest,
-        @Nullable Output<Boolean> exposeSampleData,
-        @Nullable Output<ServiceInputOutputSpecificationArgs> input,
-        @Nullable Output<WebServiceKeysArgs> keys,
-        @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace,
-        @Nullable Output<ServiceInputOutputSpecificationArgs> output,
-        @Nullable Output<GraphPackageArgs> package_,
-        Output<String> packageType,
-        @Nullable Output<Map<String,WebServiceParameterArgs>> parameters,
-        @Nullable Output<Boolean> payloadsInBlobStorage,
-        @Nullable Output<BlobLocationArgs> payloadsLocation,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration,
-        @Nullable Output<StorageAccountArgs> storageAccount,
-        @Nullable Output<String> title) {
-        this.assets = assets;
-        this.commitmentPlan = commitmentPlan;
-        this.description = description;
-        this.diagnostics = diagnostics;
-        this.exampleRequest = exampleRequest;
-        this.exposeSampleData = exposeSampleData;
-        this.input = input;
-        this.keys = keys;
-        this.machineLearningWorkspace = machineLearningWorkspace;
-        this.output = output;
-        this.package_ = package_;
-        this.packageType = Codegen.stringProp("packageType").output().arg(packageType).require();
-        this.parameters = parameters;
-        this.payloadsInBlobStorage = payloadsInBlobStorage;
-        this.payloadsLocation = payloadsLocation;
-        this.readOnly = readOnly;
-        this.realtimeConfiguration = realtimeConfiguration;
-        this.storageAccount = storageAccount;
-        this.title = title;
-    }
+    private WebServicePropertiesForGraphArgs() {}
 
-    private WebServicePropertiesForGraphArgs() {
-        this.assets = Codegen.empty();
-        this.commitmentPlan = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diagnostics = Codegen.empty();
-        this.exampleRequest = Codegen.empty();
-        this.exposeSampleData = Codegen.empty();
-        this.input = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.machineLearningWorkspace = Codegen.empty();
-        this.output = Codegen.empty();
-        this.package_ = Codegen.empty();
-        this.packageType = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.payloadsInBlobStorage = Codegen.empty();
-        this.payloadsLocation = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.realtimeConfiguration = Codegen.empty();
-        this.storageAccount = Codegen.empty();
-        this.title = Codegen.empty();
+    private WebServicePropertiesForGraphArgs(WebServicePropertiesForGraphArgs $) {
+        this.assets = $.assets;
+        this.commitmentPlan = $.commitmentPlan;
+        this.description = $.description;
+        this.diagnostics = $.diagnostics;
+        this.exampleRequest = $.exampleRequest;
+        this.exposeSampleData = $.exposeSampleData;
+        this.input = $.input;
+        this.keys = $.keys;
+        this.machineLearningWorkspace = $.machineLearningWorkspace;
+        this.output = $.output;
+        this.package_ = $.package_;
+        this.packageType = $.packageType;
+        this.parameters = $.parameters;
+        this.payloadsInBlobStorage = $.payloadsInBlobStorage;
+        this.payloadsLocation = $.payloadsLocation;
+        this.readOnly = $.readOnly;
+        this.realtimeConfiguration = $.realtimeConfiguration;
+        this.storageAccount = $.storageAccount;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServicePropertiesForGraphArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,AssetItemArgs>> assets;
-        private @Nullable Output<CommitmentPlanArgs> commitmentPlan;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DiagnosticsConfigurationArgs> diagnostics;
-        private @Nullable Output<ExampleRequestArgs> exampleRequest;
-        private @Nullable Output<Boolean> exposeSampleData;
-        private @Nullable Output<ServiceInputOutputSpecificationArgs> input;
-        private @Nullable Output<WebServiceKeysArgs> keys;
-        private @Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace;
-        private @Nullable Output<ServiceInputOutputSpecificationArgs> output;
-        private @Nullable Output<GraphPackageArgs> package_;
-        private Output<String> packageType;
-        private @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
-        private @Nullable Output<Boolean> payloadsInBlobStorage;
-        private @Nullable Output<BlobLocationArgs> payloadsLocation;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration;
-        private @Nullable Output<StorageAccountArgs> storageAccount;
-        private @Nullable Output<String> title;
+        private WebServicePropertiesForGraphArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServicePropertiesForGraphArgs();
         }
 
         public Builder(WebServicePropertiesForGraphArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assets = defaults.assets;
-    	      this.commitmentPlan = defaults.commitmentPlan;
-    	      this.description = defaults.description;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.exampleRequest = defaults.exampleRequest;
-    	      this.exposeSampleData = defaults.exposeSampleData;
-    	      this.input = defaults.input;
-    	      this.keys = defaults.keys;
-    	      this.machineLearningWorkspace = defaults.machineLearningWorkspace;
-    	      this.output = defaults.output;
-    	      this.package_ = defaults.package_;
-    	      this.packageType = defaults.packageType;
-    	      this.parameters = defaults.parameters;
-    	      this.payloadsInBlobStorage = defaults.payloadsInBlobStorage;
-    	      this.payloadsLocation = defaults.payloadsLocation;
-    	      this.readOnly = defaults.readOnly;
-    	      this.realtimeConfiguration = defaults.realtimeConfiguration;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.title = defaults.title;
+            $ = new WebServicePropertiesForGraphArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assets(@Nullable Output<Map<String,AssetItemArgs>> assets) {
-            this.assets = assets;
+            $.assets = assets;
             return this;
         }
-        public Builder assets(@Nullable Map<String,AssetItemArgs> assets) {
-            this.assets = Codegen.ofNullable(assets);
-            return this;
+
+        public Builder assets(Map<String,AssetItemArgs> assets) {
+            return assets(Output.of(assets));
         }
+
         public Builder commitmentPlan(@Nullable Output<CommitmentPlanArgs> commitmentPlan) {
-            this.commitmentPlan = commitmentPlan;
+            $.commitmentPlan = commitmentPlan;
             return this;
         }
-        public Builder commitmentPlan(@Nullable CommitmentPlanArgs commitmentPlan) {
-            this.commitmentPlan = Codegen.ofNullable(commitmentPlan);
-            return this;
+
+        public Builder commitmentPlan(CommitmentPlanArgs commitmentPlan) {
+            return commitmentPlan(Output.of(commitmentPlan));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diagnostics(@Nullable Output<DiagnosticsConfigurationArgs> diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
-        public Builder diagnostics(@Nullable DiagnosticsConfigurationArgs diagnostics) {
-            this.diagnostics = Codegen.ofNullable(diagnostics);
-            return this;
+
+        public Builder diagnostics(DiagnosticsConfigurationArgs diagnostics) {
+            return diagnostics(Output.of(diagnostics));
         }
+
         public Builder exampleRequest(@Nullable Output<ExampleRequestArgs> exampleRequest) {
-            this.exampleRequest = exampleRequest;
+            $.exampleRequest = exampleRequest;
             return this;
         }
-        public Builder exampleRequest(@Nullable ExampleRequestArgs exampleRequest) {
-            this.exampleRequest = Codegen.ofNullable(exampleRequest);
-            return this;
+
+        public Builder exampleRequest(ExampleRequestArgs exampleRequest) {
+            return exampleRequest(Output.of(exampleRequest));
         }
+
         public Builder exposeSampleData(@Nullable Output<Boolean> exposeSampleData) {
-            this.exposeSampleData = exposeSampleData;
+            $.exposeSampleData = exposeSampleData;
             return this;
         }
-        public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
-            this.exposeSampleData = Codegen.ofNullable(exposeSampleData);
-            return this;
+
+        public Builder exposeSampleData(Boolean exposeSampleData) {
+            return exposeSampleData(Output.of(exposeSampleData));
         }
+
         public Builder input(@Nullable Output<ServiceInputOutputSpecificationArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable ServiceInputOutputSpecificationArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(ServiceInputOutputSpecificationArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder keys(@Nullable Output<WebServiceKeysArgs> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable WebServiceKeysArgs keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(WebServiceKeysArgs keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder machineLearningWorkspace(@Nullable Output<MachineLearningWorkspaceArgs> machineLearningWorkspace) {
-            this.machineLearningWorkspace = machineLearningWorkspace;
+            $.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
-        public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceArgs machineLearningWorkspace) {
-            this.machineLearningWorkspace = Codegen.ofNullable(machineLearningWorkspace);
-            return this;
+
+        public Builder machineLearningWorkspace(MachineLearningWorkspaceArgs machineLearningWorkspace) {
+            return machineLearningWorkspace(Output.of(machineLearningWorkspace));
         }
+
         public Builder output(@Nullable Output<ServiceInputOutputSpecificationArgs> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable ServiceInputOutputSpecificationArgs output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(ServiceInputOutputSpecificationArgs output) {
+            return output(Output.of(output));
         }
+
         public Builder package_(@Nullable Output<GraphPackageArgs> package_) {
-            this.package_ = package_;
+            $.package_ = package_;
             return this;
         }
-        public Builder package_(@Nullable GraphPackageArgs package_) {
-            this.package_ = Codegen.ofNullable(package_);
-            return this;
+
+        public Builder package_(GraphPackageArgs package_) {
+            return package_(Output.of(package_));
         }
+
         public Builder packageType(Output<String> packageType) {
-            this.packageType = Objects.requireNonNull(packageType);
+            $.packageType = packageType;
             return this;
         }
+
         public Builder packageType(String packageType) {
-            this.packageType = Output.of(Objects.requireNonNull(packageType));
-            return this;
+            return packageType(Output.of(packageType));
         }
+
         public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,WebServiceParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder payloadsInBlobStorage(@Nullable Output<Boolean> payloadsInBlobStorage) {
-            this.payloadsInBlobStorage = payloadsInBlobStorage;
+            $.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
-        public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
-            this.payloadsInBlobStorage = Codegen.ofNullable(payloadsInBlobStorage);
-            return this;
+
+        public Builder payloadsInBlobStorage(Boolean payloadsInBlobStorage) {
+            return payloadsInBlobStorage(Output.of(payloadsInBlobStorage));
         }
+
         public Builder payloadsLocation(@Nullable Output<BlobLocationArgs> payloadsLocation) {
-            this.payloadsLocation = payloadsLocation;
+            $.payloadsLocation = payloadsLocation;
             return this;
         }
-        public Builder payloadsLocation(@Nullable BlobLocationArgs payloadsLocation) {
-            this.payloadsLocation = Codegen.ofNullable(payloadsLocation);
-            return this;
+
+        public Builder payloadsLocation(BlobLocationArgs payloadsLocation) {
+            return payloadsLocation(Output.of(payloadsLocation));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder realtimeConfiguration(@Nullable Output<RealtimeConfigurationArgs> realtimeConfiguration) {
-            this.realtimeConfiguration = realtimeConfiguration;
+            $.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
-        public Builder realtimeConfiguration(@Nullable RealtimeConfigurationArgs realtimeConfiguration) {
-            this.realtimeConfiguration = Codegen.ofNullable(realtimeConfiguration);
-            return this;
+
+        public Builder realtimeConfiguration(RealtimeConfigurationArgs realtimeConfiguration) {
+            return realtimeConfiguration(Output.of(realtimeConfiguration));
         }
+
         public Builder storageAccount(@Nullable Output<StorageAccountArgs> storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
         }
-        public Builder storageAccount(@Nullable StorageAccountArgs storageAccount) {
-            this.storageAccount = Codegen.ofNullable(storageAccount);
-            return this;
+
+        public Builder storageAccount(StorageAccountArgs storageAccount) {
+            return storageAccount(Output.of(storageAccount));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public WebServicePropertiesForGraphArgs build() {
-            return new WebServicePropertiesForGraphArgs(assets, commitmentPlan, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, output, package_, packageType, parameters, payloadsInBlobStorage, payloadsLocation, readOnly, realtimeConfiguration, storageAccount, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public WebServicePropertiesForGraphArgs build() {
+            $.packageType = Codegen.stringProp("packageType").output().arg($.packageType).require();
+            return $;
         }
     }
+
 }

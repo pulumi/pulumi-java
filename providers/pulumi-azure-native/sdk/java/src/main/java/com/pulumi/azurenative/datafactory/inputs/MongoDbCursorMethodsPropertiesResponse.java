@@ -23,10 +23,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="limit")
-      private final @Nullable Object limit;
+    private @Nullable Object limit;
 
     public Optional<Object> limit() {
-        return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="project")
-      private final @Nullable Object project;
+    private @Nullable Object project;
 
     public Optional<Object> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="skip")
-      private final @Nullable Object skip;
+    private @Nullable Object skip;
 
     public Optional<Object> skip() {
-        return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
+        return Optional.ofNullable(this.skip);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class MongoDbCursorMethodsPropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="sort")
-      private final @Nullable Object sort;
+    private @Nullable Object sort;
 
     public Optional<Object> sort() {
-        return this.sort == null ? Optional.empty() : Optional.ofNullable(this.sort);
+        return Optional.ofNullable(this.sort);
     }
 
-    public MongoDbCursorMethodsPropertiesResponse(
-        @Nullable Object limit,
-        @Nullable Object project,
-        @Nullable Object skip,
-        @Nullable Object sort) {
-        this.limit = limit;
-        this.project = project;
-        this.skip = skip;
-        this.sort = sort;
-    }
+    private MongoDbCursorMethodsPropertiesResponse() {}
 
-    private MongoDbCursorMethodsPropertiesResponse() {
-        this.limit = null;
-        this.project = null;
-        this.skip = null;
-        this.sort = null;
+    private MongoDbCursorMethodsPropertiesResponse(MongoDbCursorMethodsPropertiesResponse $) {
+        this.limit = $.limit;
+        this.project = $.project;
+        this.skip = $.skip;
+        this.sort = $.sort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDbCursorMethodsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object limit;
-        private @Nullable Object project;
-        private @Nullable Object skip;
-        private @Nullable Object sort;
+        private MongoDbCursorMethodsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDbCursorMethodsPropertiesResponse();
         }
 
         public Builder(MongoDbCursorMethodsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limit = defaults.limit;
-    	      this.project = defaults.project;
-    	      this.skip = defaults.skip;
-    	      this.sort = defaults.sort;
+            $ = new MongoDbCursorMethodsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder limit(@Nullable Object limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
+
         public Builder project(@Nullable Object project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder skip(@Nullable Object skip) {
-            this.skip = skip;
+            $.skip = skip;
             return this;
         }
+
         public Builder sort(@Nullable Object sort) {
-            this.sort = sort;
+            $.sort = sort;
             return this;
-        }        public MongoDbCursorMethodsPropertiesResponse build() {
-            return new MongoDbCursorMethodsPropertiesResponse(limit, project, skip, sort);
+        }
+
+        public MongoDbCursorMethodsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

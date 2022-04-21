@@ -5,10 +5,10 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ObjectACLState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ObjectACLState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="object")
-      private final @Nullable Output<String> object;
+    private @Nullable Output<String> object;
 
-    public Output<String> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<String>> object() {
+        return Optional.ofNullable(this.object);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ObjectACLState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predefinedAcl")
-      private final @Nullable Output<String> predefinedAcl;
+    private @Nullable Output<String> predefinedAcl;
 
-    public Output<String> predefinedAcl() {
-        return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
+    public Optional<Output<String>> predefinedAcl() {
+        return Optional.ofNullable(this.predefinedAcl);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class ObjectACLState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleEntities")
-      private final @Nullable Output<List<String>> roleEntities;
+    private @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> roleEntities() {
-        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
+    public Optional<Output<List<String>>> roleEntities() {
+        return Optional.ofNullable(this.roleEntities);
     }
 
-    public ObjectACLState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> object,
-        @Nullable Output<String> predefinedAcl,
-        @Nullable Output<List<String>> roleEntities) {
-        this.bucket = bucket;
-        this.object = object;
-        this.predefinedAcl = predefinedAcl;
-        this.roleEntities = roleEntities;
-    }
+    private ObjectACLState() {}
 
-    private ObjectACLState() {
-        this.bucket = Codegen.empty();
-        this.object = Codegen.empty();
-        this.predefinedAcl = Codegen.empty();
-        this.roleEntities = Codegen.empty();
+    private ObjectACLState(ObjectACLState $) {
+        this.bucket = $.bucket;
+        this.object = $.object;
+        this.predefinedAcl = $.predefinedAcl;
+        this.roleEntities = $.roleEntities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectACLState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> object;
-        private @Nullable Output<String> predefinedAcl;
-        private @Nullable Output<List<String>> roleEntities;
+        private ObjectACLState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectACLState();
         }
 
         public Builder(ObjectACLState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.object = defaults.object;
-    	      this.predefinedAcl = defaults.predefinedAcl;
-    	      this.roleEntities = defaults.roleEntities;
+            $ = new ObjectACLState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder object(@Nullable Output<String> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable String object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
+
+        public Builder object(String object) {
+            return object(Output.of(object));
         }
+
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
-            this.predefinedAcl = predefinedAcl;
+            $.predefinedAcl = predefinedAcl;
             return this;
         }
-        public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Codegen.ofNullable(predefinedAcl);
-            return this;
+
+        public Builder predefinedAcl(String predefinedAcl) {
+            return predefinedAcl(Output.of(predefinedAcl));
         }
+
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
-            this.roleEntities = roleEntities;
+            $.roleEntities = roleEntities;
             return this;
         }
-        public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Codegen.ofNullable(roleEntities);
-            return this;
+
+        public Builder roleEntities(List<String> roleEntities) {
+            return roleEntities(Output.of(roleEntities));
         }
+
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
-        }        public ObjectACLState build() {
-            return new ObjectACLState(bucket, object, predefinedAcl, roleEntities);
+        }
+
+        public ObjectACLState build() {
+            return $;
         }
     }
+
 }

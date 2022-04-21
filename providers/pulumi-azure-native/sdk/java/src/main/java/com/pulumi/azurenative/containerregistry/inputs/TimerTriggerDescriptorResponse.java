@@ -19,10 +19,10 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="scheduleOccurrence")
-      private final @Nullable String scheduleOccurrence;
+    private @Nullable String scheduleOccurrence;
 
     public Optional<String> scheduleOccurrence() {
-        return this.scheduleOccurrence == null ? Optional.empty() : Optional.ofNullable(this.scheduleOccurrence);
+        return Optional.ofNullable(this.scheduleOccurrence);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class TimerTriggerDescriptorResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="timerTriggerName")
-      private final @Nullable String timerTriggerName;
+    private @Nullable String timerTriggerName;
 
     public Optional<String> timerTriggerName() {
-        return this.timerTriggerName == null ? Optional.empty() : Optional.ofNullable(this.timerTriggerName);
+        return Optional.ofNullable(this.timerTriggerName);
     }
 
-    public TimerTriggerDescriptorResponse(
-        @Nullable String scheduleOccurrence,
-        @Nullable String timerTriggerName) {
-        this.scheduleOccurrence = scheduleOccurrence;
-        this.timerTriggerName = timerTriggerName;
-    }
+    private TimerTriggerDescriptorResponse() {}
 
-    private TimerTriggerDescriptorResponse() {
-        this.scheduleOccurrence = null;
-        this.timerTriggerName = null;
+    private TimerTriggerDescriptorResponse(TimerTriggerDescriptorResponse $) {
+        this.scheduleOccurrence = $.scheduleOccurrence;
+        this.timerTriggerName = $.timerTriggerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimerTriggerDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String scheduleOccurrence;
-        private @Nullable String timerTriggerName;
+        private TimerTriggerDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimerTriggerDescriptorResponse();
         }
 
         public Builder(TimerTriggerDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleOccurrence = defaults.scheduleOccurrence;
-    	      this.timerTriggerName = defaults.timerTriggerName;
+            $ = new TimerTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleOccurrence(@Nullable String scheduleOccurrence) {
-            this.scheduleOccurrence = scheduleOccurrence;
+            $.scheduleOccurrence = scheduleOccurrence;
             return this;
         }
+
         public Builder timerTriggerName(@Nullable String timerTriggerName) {
-            this.timerTriggerName = timerTriggerName;
+            $.timerTriggerName = timerTriggerName;
             return this;
-        }        public TimerTriggerDescriptorResponse build() {
-            return new TimerTriggerDescriptorResponse(scheduleOccurrence, timerTriggerName);
+        }
+
+        public TimerTriggerDescriptorResponse build() {
+            return $;
         }
     }
+
 }

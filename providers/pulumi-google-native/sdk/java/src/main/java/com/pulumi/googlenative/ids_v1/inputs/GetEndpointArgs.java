@@ -15,78 +15,72 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEndpointArgs Empty = new GetEndpointArgs();
 
     @Import(name="endpointId", required=true)
-      private final String endpointId;
+    private String endpointId;
 
     public String endpointId() {
         return this.endpointId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetEndpointArgs(
-        String endpointId,
-        String location,
-        @Nullable String project) {
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetEndpointArgs() {}
 
-    private GetEndpointArgs() {
-        this.endpointId = null;
-        this.location = null;
-        this.project = null;
+    private GetEndpointArgs(GetEndpointArgs $) {
+        this.endpointId = $.endpointId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointId;
-        private String location;
-        private @Nullable String project;
+        private GetEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointArgs();
         }
 
         public Builder(GetEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointId = defaults.endpointId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointId(String endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetEndpointArgs build() {
-            return new GetEndpointArgs(endpointId, location, project);
+        }
+
+        public GetEndpointArgs build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

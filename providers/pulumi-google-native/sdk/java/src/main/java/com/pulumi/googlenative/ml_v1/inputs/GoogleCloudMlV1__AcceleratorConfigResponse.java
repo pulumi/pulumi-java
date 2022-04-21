@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends com.pulumi
      * 
      */
     @Import(name="count", required=true)
-      private final String count;
+    private String count;
 
     public String count() {
         return this.count;
@@ -32,55 +32,52 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends com.pulumi
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudMlV1__AcceleratorConfigResponse(
-        String count,
-        String type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudMlV1__AcceleratorConfigResponse() {}
 
-    private GoogleCloudMlV1__AcceleratorConfigResponse() {
-        this.count = null;
-        this.type = null;
+    private GoogleCloudMlV1__AcceleratorConfigResponse(GoogleCloudMlV1__AcceleratorConfigResponse $) {
+        this.count = $.count;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__AcceleratorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String count;
-        private String type;
+        private GoogleCloudMlV1__AcceleratorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__AcceleratorConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__AcceleratorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudMlV1__AcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(String count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudMlV1__AcceleratorConfigResponse build() {
-            return new GoogleCloudMlV1__AcceleratorConfigResponse(count, type);
+        }
+
+        public GoogleCloudMlV1__AcceleratorConfigResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

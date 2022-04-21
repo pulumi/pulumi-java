@@ -15,78 +15,72 @@ public final class GetPhraseSetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPhraseSetArgs Empty = new GetPhraseSetArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="phraseSetId", required=true)
-      private final String phraseSetId;
+    private String phraseSetId;
 
     public String phraseSetId() {
         return this.phraseSetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPhraseSetArgs(
-        String location,
-        String phraseSetId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.phraseSetId = Objects.requireNonNull(phraseSetId, "expected parameter 'phraseSetId' to be non-null");
-        this.project = project;
-    }
+    private GetPhraseSetArgs() {}
 
-    private GetPhraseSetArgs() {
-        this.location = null;
-        this.phraseSetId = null;
-        this.project = null;
+    private GetPhraseSetArgs(GetPhraseSetArgs $) {
+        this.location = $.location;
+        this.phraseSetId = $.phraseSetId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPhraseSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String phraseSetId;
-        private @Nullable String project;
+        private GetPhraseSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPhraseSetArgs();
         }
 
         public Builder(GetPhraseSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.phraseSetId = defaults.phraseSetId;
-    	      this.project = defaults.project;
+            $ = new GetPhraseSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder phraseSetId(String phraseSetId) {
-            this.phraseSetId = Objects.requireNonNull(phraseSetId);
+            $.phraseSetId = phraseSetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPhraseSetArgs build() {
-            return new GetPhraseSetArgs(location, phraseSetId, project);
+        }
+
+        public GetPhraseSetArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.phraseSetId = Objects.requireNonNull($.phraseSetId, "expected parameter 'phraseSetId' to be non-null");
+            return $;
         }
     }
+
 }

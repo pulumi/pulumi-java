@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class ChannelCustomerManagedS3Args extends com.pulumi.resources.Res
     public static final ChannelCustomerManagedS3Args Empty = new ChannelCustomerManagedS3Args();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="keyPrefix")
-      private final @Nullable Output<String> keyPrefix;
+    private @Nullable Output<String> keyPrefix;
 
-    public Output<String> keyPrefix() {
-        return this.keyPrefix == null ? Codegen.empty() : this.keyPrefix;
+    public Optional<Output<String>> keyPrefix() {
+        return Optional.ofNullable(this.keyPrefix);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public ChannelCustomerManagedS3Args(
-        Output<String> bucket,
-        @Nullable Output<String> keyPrefix,
-        Output<String> roleArn) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.keyPrefix = keyPrefix;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private ChannelCustomerManagedS3Args() {}
 
-    private ChannelCustomerManagedS3Args() {
-        this.bucket = Codegen.empty();
-        this.keyPrefix = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ChannelCustomerManagedS3Args(ChannelCustomerManagedS3Args $) {
+        this.bucket = $.bucket;
+        this.keyPrefix = $.keyPrefix;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelCustomerManagedS3Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> keyPrefix;
-        private Output<String> roleArn;
+        private ChannelCustomerManagedS3Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelCustomerManagedS3Args();
         }
 
         public Builder(ChannelCustomerManagedS3Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.keyPrefix = defaults.keyPrefix;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ChannelCustomerManagedS3Args(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder keyPrefix(@Nullable Output<String> keyPrefix) {
-            this.keyPrefix = keyPrefix;
+            $.keyPrefix = keyPrefix;
             return this;
         }
-        public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = Codegen.ofNullable(keyPrefix);
-            return this;
+
+        public Builder keyPrefix(String keyPrefix) {
+            return keyPrefix(Output.of(keyPrefix));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public ChannelCustomerManagedS3Args build() {
-            return new ChannelCustomerManagedS3Args(bucket, keyPrefix, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ChannelCustomerManagedS3Args build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

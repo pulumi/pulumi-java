@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="customContextTag")
-      private final @Nullable Output<String> customContextTag;
+    private @Nullable Output<String> customContextTag;
 
-    public Output<String> customContextTag() {
-        return this.customContextTag == null ? Codegen.empty() : this.customContextTag;
+    public Optional<Output<String>> customContextTag() {
+        return Optional.ofNullable(this.customContextTag);
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -45,7 +46,7 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -56,10 +57,10 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +79,7 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sinkInfo", required=true)
-      private final Output<RoleSinkInfoArgs> sinkInfo;
+    private Output<RoleSinkInfoArgs> sinkInfo;
 
     public Output<RoleSinkInfoArgs> sinkInfo() {
         return this.sinkInfo;
@@ -89,128 +90,113 @@ public final class PeriodicTimerEventTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sourceInfo", required=true)
-      private final Output<PeriodicTimerSourceInfoArgs> sourceInfo;
+    private Output<PeriodicTimerSourceInfoArgs> sourceInfo;
 
     public Output<PeriodicTimerSourceInfoArgs> sourceInfo() {
         return this.sourceInfo;
     }
 
-    public PeriodicTimerEventTriggerArgs(
-        @Nullable Output<String> customContextTag,
-        Output<String> deviceName,
-        Output<String> kind,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<RoleSinkInfoArgs> sinkInfo,
-        Output<PeriodicTimerSourceInfoArgs> sourceInfo) {
-        this.customContextTag = customContextTag;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sinkInfo = Objects.requireNonNull(sinkInfo, "expected parameter 'sinkInfo' to be non-null");
-        this.sourceInfo = Objects.requireNonNull(sourceInfo, "expected parameter 'sourceInfo' to be non-null");
-    }
+    private PeriodicTimerEventTriggerArgs() {}
 
-    private PeriodicTimerEventTriggerArgs() {
-        this.customContextTag = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sinkInfo = Codegen.empty();
-        this.sourceInfo = Codegen.empty();
+    private PeriodicTimerEventTriggerArgs(PeriodicTimerEventTriggerArgs $) {
+        this.customContextTag = $.customContextTag;
+        this.deviceName = $.deviceName;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sinkInfo = $.sinkInfo;
+        this.sourceInfo = $.sourceInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicTimerEventTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customContextTag;
-        private Output<String> deviceName;
-        private Output<String> kind;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<RoleSinkInfoArgs> sinkInfo;
-        private Output<PeriodicTimerSourceInfoArgs> sourceInfo;
+        private PeriodicTimerEventTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicTimerEventTriggerArgs();
         }
 
         public Builder(PeriodicTimerEventTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customContextTag = defaults.customContextTag;
-    	      this.deviceName = defaults.deviceName;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sinkInfo = defaults.sinkInfo;
-    	      this.sourceInfo = defaults.sourceInfo;
+            $ = new PeriodicTimerEventTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customContextTag(@Nullable Output<String> customContextTag) {
-            this.customContextTag = customContextTag;
+            $.customContextTag = customContextTag;
             return this;
         }
-        public Builder customContextTag(@Nullable String customContextTag) {
-            this.customContextTag = Codegen.ofNullable(customContextTag);
-            return this;
+
+        public Builder customContextTag(String customContextTag) {
+            return customContextTag(Output.of(customContextTag));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sinkInfo(Output<RoleSinkInfoArgs> sinkInfo) {
-            this.sinkInfo = Objects.requireNonNull(sinkInfo);
+            $.sinkInfo = sinkInfo;
             return this;
         }
+
         public Builder sinkInfo(RoleSinkInfoArgs sinkInfo) {
-            this.sinkInfo = Output.of(Objects.requireNonNull(sinkInfo));
-            return this;
+            return sinkInfo(Output.of(sinkInfo));
         }
+
         public Builder sourceInfo(Output<PeriodicTimerSourceInfoArgs> sourceInfo) {
-            this.sourceInfo = Objects.requireNonNull(sourceInfo);
+            $.sourceInfo = sourceInfo;
             return this;
         }
+
         public Builder sourceInfo(PeriodicTimerSourceInfoArgs sourceInfo) {
-            this.sourceInfo = Output.of(Objects.requireNonNull(sourceInfo));
-            return this;
-        }        public PeriodicTimerEventTriggerArgs build() {
-            return new PeriodicTimerEventTriggerArgs(customContextTag, deviceName, kind, name, resourceGroupName, sinkInfo, sourceInfo);
+            return sourceInfo(Output.of(sourceInfo));
+        }
+
+        public PeriodicTimerEventTriggerArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sinkInfo = Objects.requireNonNull($.sinkInfo, "expected parameter 'sinkInfo' to be non-null");
+            $.sourceInfo = Objects.requireNonNull($.sourceInfo, "expected parameter 'sourceInfo' to be non-null");
+            return $;
         }
     }
+
 }

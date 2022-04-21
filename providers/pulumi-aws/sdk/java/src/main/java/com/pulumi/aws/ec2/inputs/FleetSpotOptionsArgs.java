@@ -6,10 +6,10 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="allocationStrategy")
-      private final @Nullable Output<String> allocationStrategy;
+    private @Nullable Output<String> allocationStrategy;
 
-    public Output<String> allocationStrategy() {
-        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
+    public Optional<Output<String>> allocationStrategy() {
+        return Optional.ofNullable(this.allocationStrategy);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceInterruptionBehavior")
-      private final @Nullable Output<String> instanceInterruptionBehavior;
+    private @Nullable Output<String> instanceInterruptionBehavior;
 
-    public Output<String> instanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
+    public Optional<Output<String>> instanceInterruptionBehavior() {
+        return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instancePoolsToUseCount")
-      private final @Nullable Output<Integer> instancePoolsToUseCount;
+    private @Nullable Output<Integer> instancePoolsToUseCount;
 
-    public Output<Integer> instancePoolsToUseCount() {
-        return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
+    public Optional<Output<Integer>> instancePoolsToUseCount() {
+        return Optional.ofNullable(this.instancePoolsToUseCount);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class FleetSpotOptionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maintenanceStrategies")
-      private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
+    private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
 
-    public Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies() {
-        return this.maintenanceStrategies == null ? Codegen.empty() : this.maintenanceStrategies;
+    public Optional<Output<FleetSpotOptionsMaintenanceStrategiesArgs>> maintenanceStrategies() {
+        return Optional.ofNullable(this.maintenanceStrategies);
     }
 
-    public FleetSpotOptionsArgs(
-        @Nullable Output<String> allocationStrategy,
-        @Nullable Output<String> instanceInterruptionBehavior,
-        @Nullable Output<Integer> instancePoolsToUseCount,
-        @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
-        this.allocationStrategy = allocationStrategy;
-        this.instanceInterruptionBehavior = instanceInterruptionBehavior;
-        this.instancePoolsToUseCount = instancePoolsToUseCount;
-        this.maintenanceStrategies = maintenanceStrategies;
-    }
+    private FleetSpotOptionsArgs() {}
 
-    private FleetSpotOptionsArgs() {
-        this.allocationStrategy = Codegen.empty();
-        this.instanceInterruptionBehavior = Codegen.empty();
-        this.instancePoolsToUseCount = Codegen.empty();
-        this.maintenanceStrategies = Codegen.empty();
+    private FleetSpotOptionsArgs(FleetSpotOptionsArgs $) {
+        this.allocationStrategy = $.allocationStrategy;
+        this.instanceInterruptionBehavior = $.instanceInterruptionBehavior;
+        this.instancePoolsToUseCount = $.instancePoolsToUseCount;
+        this.maintenanceStrategies = $.maintenanceStrategies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetSpotOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationStrategy;
-        private @Nullable Output<String> instanceInterruptionBehavior;
-        private @Nullable Output<Integer> instancePoolsToUseCount;
-        private @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
+        private FleetSpotOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetSpotOptionsArgs();
         }
 
         public Builder(FleetSpotOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationStrategy = defaults.allocationStrategy;
-    	      this.instanceInterruptionBehavior = defaults.instanceInterruptionBehavior;
-    	      this.instancePoolsToUseCount = defaults.instancePoolsToUseCount;
-    	      this.maintenanceStrategies = defaults.maintenanceStrategies;
+            $ = new FleetSpotOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationStrategy(@Nullable Output<String> allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
+            $.allocationStrategy = allocationStrategy;
             return this;
         }
-        public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
-            return this;
+
+        public Builder allocationStrategy(String allocationStrategy) {
+            return allocationStrategy(Output.of(allocationStrategy));
         }
+
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = instanceInterruptionBehavior;
+            $.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
-        public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Codegen.ofNullable(instanceInterruptionBehavior);
-            return this;
+
+        public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
+            return instanceInterruptionBehavior(Output.of(instanceInterruptionBehavior));
         }
+
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = instancePoolsToUseCount;
+            $.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
-        public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = Codegen.ofNullable(instancePoolsToUseCount);
-            return this;
+
+        public Builder instancePoolsToUseCount(Integer instancePoolsToUseCount) {
+            return instancePoolsToUseCount(Output.of(instancePoolsToUseCount));
         }
+
         public Builder maintenanceStrategies(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
-            this.maintenanceStrategies = maintenanceStrategies;
+            $.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
-        public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
-            this.maintenanceStrategies = Codegen.ofNullable(maintenanceStrategies);
-            return this;
-        }        public FleetSpotOptionsArgs build() {
-            return new FleetSpotOptionsArgs(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies);
+
+        public Builder maintenanceStrategies(FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
+            return maintenanceStrategies(Output.of(maintenanceStrategies));
+        }
+
+        public FleetSpotOptionsArgs build() {
+            return $;
         }
     }
+
 }

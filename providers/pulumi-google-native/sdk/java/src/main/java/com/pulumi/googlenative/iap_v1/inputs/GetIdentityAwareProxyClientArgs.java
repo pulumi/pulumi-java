@@ -15,78 +15,72 @@ public final class GetIdentityAwareProxyClientArgs extends com.pulumi.resources.
     public static final GetIdentityAwareProxyClientArgs Empty = new GetIdentityAwareProxyClientArgs();
 
     @Import(name="brandId", required=true)
-      private final String brandId;
+    private String brandId;
 
     public String brandId() {
         return this.brandId;
     }
 
     @Import(name="identityAwareProxyClientId", required=true)
-      private final String identityAwareProxyClientId;
+    private String identityAwareProxyClientId;
 
     public String identityAwareProxyClientId() {
         return this.identityAwareProxyClientId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetIdentityAwareProxyClientArgs(
-        String brandId,
-        String identityAwareProxyClientId,
-        @Nullable String project) {
-        this.brandId = Objects.requireNonNull(brandId, "expected parameter 'brandId' to be non-null");
-        this.identityAwareProxyClientId = Objects.requireNonNull(identityAwareProxyClientId, "expected parameter 'identityAwareProxyClientId' to be non-null");
-        this.project = project;
-    }
+    private GetIdentityAwareProxyClientArgs() {}
 
-    private GetIdentityAwareProxyClientArgs() {
-        this.brandId = null;
-        this.identityAwareProxyClientId = null;
-        this.project = null;
+    private GetIdentityAwareProxyClientArgs(GetIdentityAwareProxyClientArgs $) {
+        this.brandId = $.brandId;
+        this.identityAwareProxyClientId = $.identityAwareProxyClientId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIdentityAwareProxyClientArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String brandId;
-        private String identityAwareProxyClientId;
-        private @Nullable String project;
+        private GetIdentityAwareProxyClientArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIdentityAwareProxyClientArgs();
         }
 
         public Builder(GetIdentityAwareProxyClientArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brandId = defaults.brandId;
-    	      this.identityAwareProxyClientId = defaults.identityAwareProxyClientId;
-    	      this.project = defaults.project;
+            $ = new GetIdentityAwareProxyClientArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brandId(String brandId) {
-            this.brandId = Objects.requireNonNull(brandId);
+            $.brandId = brandId;
             return this;
         }
+
         public Builder identityAwareProxyClientId(String identityAwareProxyClientId) {
-            this.identityAwareProxyClientId = Objects.requireNonNull(identityAwareProxyClientId);
+            $.identityAwareProxyClientId = identityAwareProxyClientId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetIdentityAwareProxyClientArgs build() {
-            return new GetIdentityAwareProxyClientArgs(brandId, identityAwareProxyClientId, project);
+        }
+
+        public GetIdentityAwareProxyClientArgs build() {
+            $.brandId = Objects.requireNonNull($.brandId, "expected parameter 'brandId' to be non-null");
+            $.identityAwareProxyClientId = Objects.requireNonNull($.identityAwareProxyClientId, "expected parameter 'identityAwareProxyClientId' to be non-null");
+            return $;
         }
     }
+
 }

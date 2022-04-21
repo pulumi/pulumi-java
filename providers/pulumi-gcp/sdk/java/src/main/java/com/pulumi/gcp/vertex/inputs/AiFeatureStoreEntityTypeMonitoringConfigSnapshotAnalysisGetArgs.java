@@ -5,10 +5,10 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * 
      */
     @Import(name="monitoringInterval")
-      private final @Nullable Output<String> monitoringInterval;
+    private @Nullable Output<String> monitoringInterval;
 
-    public Output<String> monitoringInterval() {
-        return this.monitoringInterval == null ? Codegen.empty() : this.monitoringInterval;
+    public Optional<Output<String>> monitoringInterval() {
+        return Optional.ofNullable(this.monitoringInterval);
     }
 
-    public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs(
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> monitoringInterval) {
-        this.disabled = disabled;
-        this.monitoringInterval = monitoringInterval;
-    }
+    private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs() {}
 
-    private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs() {
-        this.disabled = Codegen.empty();
-        this.monitoringInterval = Codegen.empty();
+    private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs(AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs $) {
+        this.disabled = $.disabled;
+        this.monitoringInterval = $.monitoringInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> monitoringInterval;
+        private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs();
         }
 
         public Builder(AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
-    	      this.monitoringInterval = defaults.monitoringInterval;
+            $ = new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder monitoringInterval(@Nullable Output<String> monitoringInterval) {
-            this.monitoringInterval = monitoringInterval;
+            $.monitoringInterval = monitoringInterval;
             return this;
         }
-        public Builder monitoringInterval(@Nullable String monitoringInterval) {
-            this.monitoringInterval = Codegen.ofNullable(monitoringInterval);
-            return this;
-        }        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs build() {
-            return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs(disabled, monitoringInterval);
+
+        public Builder monitoringInterval(String monitoringInterval) {
+            return monitoringInterval(Output.of(monitoringInterval));
+        }
+
+        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs build() {
+            return $;
         }
     }
+
 }

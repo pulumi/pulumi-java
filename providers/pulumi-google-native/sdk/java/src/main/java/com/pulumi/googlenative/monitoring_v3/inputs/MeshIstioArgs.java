@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="meshUid")
-      private final @Nullable Output<String> meshUid;
+    private @Nullable Output<String> meshUid;
 
-    public Output<String> meshUid() {
-        return this.meshUid == null ? Codegen.empty() : this.meshUid;
+    public Optional<Output<String>> meshUid() {
+        return Optional.ofNullable(this.meshUid);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MeshIstioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceNamespace")
-      private final @Nullable Output<String> serviceNamespace;
+    private @Nullable Output<String> serviceNamespace;
 
-    public Output<String> serviceNamespace() {
-        return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
+    public Optional<Output<String>> serviceNamespace() {
+        return Optional.ofNullable(this.serviceNamespace);
     }
 
-    public MeshIstioArgs(
-        @Nullable Output<String> meshUid,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<String> serviceNamespace) {
-        this.meshUid = meshUid;
-        this.serviceName = serviceName;
-        this.serviceNamespace = serviceNamespace;
-    }
+    private MeshIstioArgs() {}
 
-    private MeshIstioArgs() {
-        this.meshUid = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceNamespace = Codegen.empty();
+    private MeshIstioArgs(MeshIstioArgs $) {
+        this.meshUid = $.meshUid;
+        this.serviceName = $.serviceName;
+        this.serviceNamespace = $.serviceNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MeshIstioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> meshUid;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<String> serviceNamespace;
+        private MeshIstioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MeshIstioArgs();
         }
 
         public Builder(MeshIstioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.meshUid = defaults.meshUid;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceNamespace = defaults.serviceNamespace;
+            $ = new MeshIstioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder meshUid(@Nullable Output<String> meshUid) {
-            this.meshUid = meshUid;
+            $.meshUid = meshUid;
             return this;
         }
-        public Builder meshUid(@Nullable String meshUid) {
-            this.meshUid = Codegen.ofNullable(meshUid);
-            return this;
+
+        public Builder meshUid(String meshUid) {
+            return meshUid(Output.of(meshUid));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
-            this.serviceNamespace = serviceNamespace;
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
-        public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Codegen.ofNullable(serviceNamespace);
-            return this;
-        }        public MeshIstioArgs build() {
-            return new MeshIstioArgs(meshUid, serviceName, serviceNamespace);
+
+        public Builder serviceNamespace(String serviceNamespace) {
+            return serviceNamespace(Output.of(serviceNamespace));
+        }
+
+        public MeshIstioArgs build() {
+            return $;
         }
     }
+
 }

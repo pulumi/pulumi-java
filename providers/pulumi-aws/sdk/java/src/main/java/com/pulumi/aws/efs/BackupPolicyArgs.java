@@ -6,7 +6,6 @@ package com.pulumi.aws.efs;
 import com.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupPolicy", required=true)
-      private final Output<BackupPolicyBackupPolicyArgs> backupPolicy;
+    private Output<BackupPolicyBackupPolicyArgs> backupPolicy;
 
     public Output<BackupPolicyBackupPolicyArgs> backupPolicy() {
         return this.backupPolicy;
@@ -31,63 +30,60 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemId", required=true)
-      private final Output<String> fileSystemId;
+    private Output<String> fileSystemId;
 
     public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
 
-    public BackupPolicyArgs(
-        Output<BackupPolicyBackupPolicyArgs> backupPolicy,
-        Output<String> fileSystemId) {
-        this.backupPolicy = Objects.requireNonNull(backupPolicy, "expected parameter 'backupPolicy' to be non-null");
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-    }
+    private BackupPolicyArgs() {}
 
-    private BackupPolicyArgs() {
-        this.backupPolicy = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
+    private BackupPolicyArgs(BackupPolicyArgs $) {
+        this.backupPolicy = $.backupPolicy;
+        this.fileSystemId = $.fileSystemId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BackupPolicyBackupPolicyArgs> backupPolicy;
-        private Output<String> fileSystemId;
+        private BackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyArgs();
         }
 
         public Builder(BackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPolicy = defaults.backupPolicy;
-    	      this.fileSystemId = defaults.fileSystemId;
+            $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPolicy(Output<BackupPolicyBackupPolicyArgs> backupPolicy) {
-            this.backupPolicy = Objects.requireNonNull(backupPolicy);
+            $.backupPolicy = backupPolicy;
             return this;
         }
+
         public Builder backupPolicy(BackupPolicyBackupPolicyArgs backupPolicy) {
-            this.backupPolicy = Output.of(Objects.requireNonNull(backupPolicy));
-            return this;
+            return backupPolicy(Output.of(backupPolicy));
         }
+
         public Builder fileSystemId(Output<String> fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
-            return this;
-        }        public BackupPolicyArgs build() {
-            return new BackupPolicyArgs(backupPolicy, fileSystemId);
+            return fileSystemId(Output.of(fileSystemId));
+        }
+
+        public BackupPolicyArgs build() {
+            $.backupPolicy = Objects.requireNonNull($.backupPolicy, "expected parameter 'backupPolicy' to be non-null");
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.enums.DataSetPlotType;
 import com.pulumi.googlenative.monitoring_v1.enums.DataSetTargetAxis;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="legendTemplate")
-      private final @Nullable Output<String> legendTemplate;
+    private @Nullable Output<String> legendTemplate;
 
-    public Output<String> legendTemplate() {
-        return this.legendTemplate == null ? Codegen.empty() : this.legendTemplate;
+    public Optional<Output<String>> legendTemplate() {
+        return Optional.ofNullable(this.legendTemplate);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minAlignmentPeriod")
-      private final @Nullable Output<String> minAlignmentPeriod;
+    private @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> minAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
+    public Optional<Output<String>> minAlignmentPeriod() {
+        return Optional.ofNullable(this.minAlignmentPeriod);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="plotType")
-      private final @Nullable Output<DataSetPlotType> plotType;
+    private @Nullable Output<DataSetPlotType> plotType;
 
-    public Output<DataSetPlotType> plotType() {
-        return this.plotType == null ? Codegen.empty() : this.plotType;
+    public Optional<Output<DataSetPlotType>> plotType() {
+        return Optional.ofNullable(this.plotType);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetAxis")
-      private final @Nullable Output<DataSetTargetAxis> targetAxis;
+    private @Nullable Output<DataSetTargetAxis> targetAxis;
 
-    public Output<DataSetTargetAxis> targetAxis() {
-        return this.targetAxis == null ? Codegen.empty() : this.targetAxis;
+    public Optional<Output<DataSetTargetAxis>> targetAxis() {
+        return Optional.ofNullable(this.targetAxis);
     }
 
     /**
@@ -71,102 +71,89 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeSeriesQuery", required=true)
-      private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
+    private Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
     public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
-    public DataSetArgs(
-        @Nullable Output<String> legendTemplate,
-        @Nullable Output<String> minAlignmentPeriod,
-        @Nullable Output<DataSetPlotType> plotType,
-        @Nullable Output<DataSetTargetAxis> targetAxis,
-        Output<TimeSeriesQueryArgs> timeSeriesQuery) {
-        this.legendTemplate = legendTemplate;
-        this.minAlignmentPeriod = minAlignmentPeriod;
-        this.plotType = plotType;
-        this.targetAxis = targetAxis;
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
-    }
+    private DataSetArgs() {}
 
-    private DataSetArgs() {
-        this.legendTemplate = Codegen.empty();
-        this.minAlignmentPeriod = Codegen.empty();
-        this.plotType = Codegen.empty();
-        this.targetAxis = Codegen.empty();
-        this.timeSeriesQuery = Codegen.empty();
+    private DataSetArgs(DataSetArgs $) {
+        this.legendTemplate = $.legendTemplate;
+        this.minAlignmentPeriod = $.minAlignmentPeriod;
+        this.plotType = $.plotType;
+        this.targetAxis = $.targetAxis;
+        this.timeSeriesQuery = $.timeSeriesQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> legendTemplate;
-        private @Nullable Output<String> minAlignmentPeriod;
-        private @Nullable Output<DataSetPlotType> plotType;
-        private @Nullable Output<DataSetTargetAxis> targetAxis;
-        private Output<TimeSeriesQueryArgs> timeSeriesQuery;
+        private DataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetArgs();
         }
 
         public Builder(DataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.legendTemplate = defaults.legendTemplate;
-    	      this.minAlignmentPeriod = defaults.minAlignmentPeriod;
-    	      this.plotType = defaults.plotType;
-    	      this.targetAxis = defaults.targetAxis;
-    	      this.timeSeriesQuery = defaults.timeSeriesQuery;
+            $ = new DataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder legendTemplate(@Nullable Output<String> legendTemplate) {
-            this.legendTemplate = legendTemplate;
+            $.legendTemplate = legendTemplate;
             return this;
         }
-        public Builder legendTemplate(@Nullable String legendTemplate) {
-            this.legendTemplate = Codegen.ofNullable(legendTemplate);
-            return this;
+
+        public Builder legendTemplate(String legendTemplate) {
+            return legendTemplate(Output.of(legendTemplate));
         }
+
         public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
-            this.minAlignmentPeriod = minAlignmentPeriod;
+            $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
-        public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Codegen.ofNullable(minAlignmentPeriod);
-            return this;
+
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
+            return minAlignmentPeriod(Output.of(minAlignmentPeriod));
         }
+
         public Builder plotType(@Nullable Output<DataSetPlotType> plotType) {
-            this.plotType = plotType;
+            $.plotType = plotType;
             return this;
         }
-        public Builder plotType(@Nullable DataSetPlotType plotType) {
-            this.plotType = Codegen.ofNullable(plotType);
-            return this;
+
+        public Builder plotType(DataSetPlotType plotType) {
+            return plotType(Output.of(plotType));
         }
+
         public Builder targetAxis(@Nullable Output<DataSetTargetAxis> targetAxis) {
-            this.targetAxis = targetAxis;
+            $.targetAxis = targetAxis;
             return this;
         }
-        public Builder targetAxis(@Nullable DataSetTargetAxis targetAxis) {
-            this.targetAxis = Codegen.ofNullable(targetAxis);
-            return this;
+
+        public Builder targetAxis(DataSetTargetAxis targetAxis) {
+            return targetAxis(Output.of(targetAxis));
         }
+
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
-            this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+            $.timeSeriesQuery = timeSeriesQuery;
             return this;
         }
+
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
-            this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
-            return this;
-        }        public DataSetArgs build() {
-            return new DataSetArgs(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
+            return timeSeriesQuery(Output.of(timeSeriesQuery));
+        }
+
+        public DataSetArgs build() {
+            $.timeSeriesQuery = Objects.requireNonNull($.timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
+            return $;
         }
     }
+
 }

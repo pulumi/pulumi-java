@@ -6,8 +6,8 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.SmbSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ProtocolSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="smb")
-      private final @Nullable Output<SmbSettingArgs> smb;
+    private @Nullable Output<SmbSettingArgs> smb;
 
-    public Output<SmbSettingArgs> smb() {
-        return this.smb == null ? Codegen.empty() : this.smb;
+    public Optional<Output<SmbSettingArgs>> smb() {
+        return Optional.ofNullable(this.smb);
     }
 
-    public ProtocolSettingsArgs(@Nullable Output<SmbSettingArgs> smb) {
-        this.smb = smb;
-    }
+    private ProtocolSettingsArgs() {}
 
-    private ProtocolSettingsArgs() {
-        this.smb = Codegen.empty();
+    private ProtocolSettingsArgs(ProtocolSettingsArgs $) {
+        this.smb = $.smb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtocolSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SmbSettingArgs> smb;
+        private ProtocolSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtocolSettingsArgs();
         }
 
         public Builder(ProtocolSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.smb = defaults.smb;
+            $ = new ProtocolSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder smb(@Nullable Output<SmbSettingArgs> smb) {
-            this.smb = smb;
+            $.smb = smb;
             return this;
         }
-        public Builder smb(@Nullable SmbSettingArgs smb) {
-            this.smb = Codegen.ofNullable(smb);
-            return this;
-        }        public ProtocolSettingsArgs build() {
-            return new ProtocolSettingsArgs(smb);
+
+        public Builder smb(SmbSettingArgs smb) {
+            return smb(Output.of(smb));
+        }
+
+        public ProtocolSettingsArgs build() {
+            return $;
         }
     }
+
 }

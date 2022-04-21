@@ -5,10 +5,10 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TagTemplateFieldTypeGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enumType")
-      private final @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType;
+    private @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType;
 
-    public Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType() {
-        return this.enumType == null ? Codegen.empty() : this.enumType;
+    public Optional<Output<TagTemplateFieldTypeEnumTypeGetArgs>> enumType() {
+        return Optional.ofNullable(this.enumType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TagTemplateFieldTypeGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="primitiveType")
-      private final @Nullable Output<String> primitiveType;
+    private @Nullable Output<String> primitiveType;
 
-    public Output<String> primitiveType() {
-        return this.primitiveType == null ? Codegen.empty() : this.primitiveType;
+    public Optional<Output<String>> primitiveType() {
+        return Optional.ofNullable(this.primitiveType);
     }
 
-    public TagTemplateFieldTypeGetArgs(
-        @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType,
-        @Nullable Output<String> primitiveType) {
-        this.enumType = enumType;
-        this.primitiveType = primitiveType;
-    }
+    private TagTemplateFieldTypeGetArgs() {}
 
-    private TagTemplateFieldTypeGetArgs() {
-        this.enumType = Codegen.empty();
-        this.primitiveType = Codegen.empty();
+    private TagTemplateFieldTypeGetArgs(TagTemplateFieldTypeGetArgs $) {
+        this.enumType = $.enumType;
+        this.primitiveType = $.primitiveType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateFieldTypeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType;
-        private @Nullable Output<String> primitiveType;
+        private TagTemplateFieldTypeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateFieldTypeGetArgs();
         }
 
         public Builder(TagTemplateFieldTypeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enumType = defaults.enumType;
-    	      this.primitiveType = defaults.primitiveType;
+            $ = new TagTemplateFieldTypeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enumType(@Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType) {
-            this.enumType = enumType;
+            $.enumType = enumType;
             return this;
         }
-        public Builder enumType(@Nullable TagTemplateFieldTypeEnumTypeGetArgs enumType) {
-            this.enumType = Codegen.ofNullable(enumType);
-            return this;
+
+        public Builder enumType(TagTemplateFieldTypeEnumTypeGetArgs enumType) {
+            return enumType(Output.of(enumType));
         }
+
         public Builder primitiveType(@Nullable Output<String> primitiveType) {
-            this.primitiveType = primitiveType;
+            $.primitiveType = primitiveType;
             return this;
         }
-        public Builder primitiveType(@Nullable String primitiveType) {
-            this.primitiveType = Codegen.ofNullable(primitiveType);
-            return this;
-        }        public TagTemplateFieldTypeGetArgs build() {
-            return new TagTemplateFieldTypeGetArgs(enumType, primitiveType);
+
+        public Builder primitiveType(String primitiveType) {
+            return primitiveType(Output.of(primitiveType));
+        }
+
+        public TagTemplateFieldTypeGetArgs build() {
+            return $;
         }
     }
+
 }

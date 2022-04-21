@@ -17,45 +17,45 @@ public final class ConnectionPropertiesResponsePrivateEndpoint extends com.pulum
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public ConnectionPropertiesResponsePrivateEndpoint(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private ConnectionPropertiesResponsePrivateEndpoint() {}
 
-    private ConnectionPropertiesResponsePrivateEndpoint() {
-        this.id = null;
+    private ConnectionPropertiesResponsePrivateEndpoint(ConnectionPropertiesResponsePrivateEndpoint $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionPropertiesResponsePrivateEndpoint defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private ConnectionPropertiesResponsePrivateEndpoint $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionPropertiesResponsePrivateEndpoint();
         }
 
         public Builder(ConnectionPropertiesResponsePrivateEndpoint defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ConnectionPropertiesResponsePrivateEndpoint(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public ConnectionPropertiesResponsePrivateEndpoint build() {
-            return new ConnectionPropertiesResponsePrivateEndpoint(id);
+        }
+
+        public ConnectionPropertiesResponsePrivateEndpoint build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

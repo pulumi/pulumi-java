@@ -17,7 +17,7 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="configurationName", required=true)
-      private final String configurationName;
+    private String configurationName;
 
     public String configurationName() {
         return this.configurationName;
@@ -39,64 +39,59 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDscConfigurationArgs(
-        String automationAccountName,
-        String configurationName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDscConfigurationArgs() {}
 
-    private GetDscConfigurationArgs() {
-        this.automationAccountName = null;
-        this.configurationName = null;
-        this.resourceGroupName = null;
+    private GetDscConfigurationArgs(GetDscConfigurationArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.configurationName = $.configurationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDscConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String configurationName;
-        private String resourceGroupName;
+        private GetDscConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDscConfigurationArgs();
         }
 
         public Builder(GetDscConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.configurationName = defaults.configurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDscConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder configurationName(String configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDscConfigurationArgs build() {
-            return new GetDscConfigurationArgs(automationAccountName, configurationName, resourceGroupName);
+        }
+
+        public GetDscConfigurationArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

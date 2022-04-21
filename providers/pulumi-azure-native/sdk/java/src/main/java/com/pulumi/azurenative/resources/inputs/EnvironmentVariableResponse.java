@@ -23,7 +23,7 @@ public final class EnvironmentVariableResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,10 +34,10 @@ public final class EnvironmentVariableResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="secureValue")
-      private final @Nullable String secureValue;
+    private @Nullable String secureValue;
 
     public Optional<String> secureValue() {
-        return this.secureValue == null ? Optional.empty() : Optional.ofNullable(this.secureValue);
+        return Optional.ofNullable(this.secureValue);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class EnvironmentVariableResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public EnvironmentVariableResponse(
-        String name,
-        @Nullable String secureValue,
-        @Nullable String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secureValue = secureValue;
-        this.value = value;
-    }
+    private EnvironmentVariableResponse() {}
 
-    private EnvironmentVariableResponse() {
-        this.name = null;
-        this.secureValue = null;
-        this.value = null;
+    private EnvironmentVariableResponse(EnvironmentVariableResponse $) {
+        this.name = $.name;
+        this.secureValue = $.secureValue;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentVariableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String secureValue;
-        private @Nullable String value;
+        private EnvironmentVariableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentVariableResponse();
         }
 
         public Builder(EnvironmentVariableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secureValue = defaults.secureValue;
-    	      this.value = defaults.value;
+            $ = new EnvironmentVariableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secureValue(@Nullable String secureValue) {
-            this.secureValue = secureValue;
+            $.secureValue = secureValue;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public EnvironmentVariableResponse build() {
-            return new EnvironmentVariableResponse(name, secureValue, value);
+        }
+
+        public EnvironmentVariableResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

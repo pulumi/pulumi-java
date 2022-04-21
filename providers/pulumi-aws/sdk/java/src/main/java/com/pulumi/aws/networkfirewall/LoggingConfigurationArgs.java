@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall;
 import com.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="firewallArn", required=true)
-      private final Output<String> firewallArn;
+    private Output<String> firewallArn;
 
     public Output<String> firewallArn() {
         return this.firewallArn;
@@ -31,63 +30,60 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="loggingConfiguration", required=true)
-      private final Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
+    private Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
 
     public Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 
-    public LoggingConfigurationArgs(
-        Output<String> firewallArn,
-        Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
-        this.firewallArn = Objects.requireNonNull(firewallArn, "expected parameter 'firewallArn' to be non-null");
-        this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration, "expected parameter 'loggingConfiguration' to be non-null");
-    }
+    private LoggingConfigurationArgs() {}
 
-    private LoggingConfigurationArgs() {
-        this.firewallArn = Codegen.empty();
-        this.loggingConfiguration = Codegen.empty();
+    private LoggingConfigurationArgs(LoggingConfigurationArgs $) {
+        this.firewallArn = $.firewallArn;
+        this.loggingConfiguration = $.loggingConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> firewallArn;
-        private Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration;
+        private LoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationArgs();
         }
 
         public Builder(LoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallArn = defaults.firewallArn;
-    	      this.loggingConfiguration = defaults.loggingConfiguration;
+            $ = new LoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallArn(Output<String> firewallArn) {
-            this.firewallArn = Objects.requireNonNull(firewallArn);
+            $.firewallArn = firewallArn;
             return this;
         }
+
         public Builder firewallArn(String firewallArn) {
-            this.firewallArn = Output.of(Objects.requireNonNull(firewallArn));
-            return this;
+            return firewallArn(Output.of(firewallArn));
         }
+
         public Builder loggingConfiguration(Output<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
-            this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration);
+            $.loggingConfiguration = loggingConfiguration;
             return this;
         }
+
         public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.of(Objects.requireNonNull(loggingConfiguration));
-            return this;
-        }        public LoggingConfigurationArgs build() {
-            return new LoggingConfigurationArgs(firewallArn, loggingConfiguration);
+            return loggingConfiguration(Output.of(loggingConfiguration));
+        }
+
+        public LoggingConfigurationArgs build() {
+            $.firewallArn = Objects.requireNonNull($.firewallArn, "expected parameter 'firewallArn' to be non-null");
+            $.loggingConfiguration = Objects.requireNonNull($.loggingConfiguration, "expected parameter 'loggingConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

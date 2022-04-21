@@ -8,7 +8,6 @@ import com.pulumi.azurenative.iotsecurity.inputs.DefenderSettingsPropertiesMdeIn
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +23,7 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deviceQuota", required=true)
-      private final Output<Integer> deviceQuota;
+    private Output<Integer> deviceQuota;
 
     public Output<Integer> deviceQuota() {
         return this.deviceQuota;
@@ -35,7 +34,7 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="mdeIntegration", required=true)
-      private final Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
+    private Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
 
     public Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration() {
         return this.mdeIntegration;
@@ -46,7 +45,7 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="onboardingKind", required=true)
-      private final Output<Either<String,OnboardingKind>> onboardingKind;
+    private Output<Either<String,OnboardingKind>> onboardingKind;
 
     public Output<Either<String,OnboardingKind>> onboardingKind() {
         return this.onboardingKind;
@@ -57,92 +56,86 @@ public final class DefenderSettingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sentinelWorkspaceResourceIds", required=true)
-      private final Output<List<String>> sentinelWorkspaceResourceIds;
+    private Output<List<String>> sentinelWorkspaceResourceIds;
 
     public Output<List<String>> sentinelWorkspaceResourceIds() {
         return this.sentinelWorkspaceResourceIds;
     }
 
-    public DefenderSettingArgs(
-        Output<Integer> deviceQuota,
-        Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration,
-        Output<Either<String,OnboardingKind>> onboardingKind,
-        Output<List<String>> sentinelWorkspaceResourceIds) {
-        this.deviceQuota = Objects.requireNonNull(deviceQuota, "expected parameter 'deviceQuota' to be non-null");
-        this.mdeIntegration = Objects.requireNonNull(mdeIntegration, "expected parameter 'mdeIntegration' to be non-null");
-        this.onboardingKind = Objects.requireNonNull(onboardingKind, "expected parameter 'onboardingKind' to be non-null");
-        this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds, "expected parameter 'sentinelWorkspaceResourceIds' to be non-null");
-    }
+    private DefenderSettingArgs() {}
 
-    private DefenderSettingArgs() {
-        this.deviceQuota = Codegen.empty();
-        this.mdeIntegration = Codegen.empty();
-        this.onboardingKind = Codegen.empty();
-        this.sentinelWorkspaceResourceIds = Codegen.empty();
+    private DefenderSettingArgs(DefenderSettingArgs $) {
+        this.deviceQuota = $.deviceQuota;
+        this.mdeIntegration = $.mdeIntegration;
+        this.onboardingKind = $.onboardingKind;
+        this.sentinelWorkspaceResourceIds = $.sentinelWorkspaceResourceIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> deviceQuota;
-        private Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
-        private Output<Either<String,OnboardingKind>> onboardingKind;
-        private Output<List<String>> sentinelWorkspaceResourceIds;
+        private DefenderSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderSettingArgs();
         }
 
         public Builder(DefenderSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceQuota = defaults.deviceQuota;
-    	      this.mdeIntegration = defaults.mdeIntegration;
-    	      this.onboardingKind = defaults.onboardingKind;
-    	      this.sentinelWorkspaceResourceIds = defaults.sentinelWorkspaceResourceIds;
+            $ = new DefenderSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceQuota(Output<Integer> deviceQuota) {
-            this.deviceQuota = Objects.requireNonNull(deviceQuota);
+            $.deviceQuota = deviceQuota;
             return this;
         }
+
         public Builder deviceQuota(Integer deviceQuota) {
-            this.deviceQuota = Output.of(Objects.requireNonNull(deviceQuota));
-            return this;
+            return deviceQuota(Output.of(deviceQuota));
         }
+
         public Builder mdeIntegration(Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration) {
-            this.mdeIntegration = Objects.requireNonNull(mdeIntegration);
+            $.mdeIntegration = mdeIntegration;
             return this;
         }
+
         public Builder mdeIntegration(DefenderSettingsPropertiesMdeIntegrationArgs mdeIntegration) {
-            this.mdeIntegration = Output.of(Objects.requireNonNull(mdeIntegration));
-            return this;
+            return mdeIntegration(Output.of(mdeIntegration));
         }
+
         public Builder onboardingKind(Output<Either<String,OnboardingKind>> onboardingKind) {
-            this.onboardingKind = Objects.requireNonNull(onboardingKind);
+            $.onboardingKind = onboardingKind;
             return this;
         }
+
         public Builder onboardingKind(Either<String,OnboardingKind> onboardingKind) {
-            this.onboardingKind = Output.of(Objects.requireNonNull(onboardingKind));
-            return this;
+            return onboardingKind(Output.of(onboardingKind));
         }
+
         public Builder sentinelWorkspaceResourceIds(Output<List<String>> sentinelWorkspaceResourceIds) {
-            this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds);
+            $.sentinelWorkspaceResourceIds = sentinelWorkspaceResourceIds;
             return this;
         }
+
         public Builder sentinelWorkspaceResourceIds(List<String> sentinelWorkspaceResourceIds) {
-            this.sentinelWorkspaceResourceIds = Output.of(Objects.requireNonNull(sentinelWorkspaceResourceIds));
-            return this;
+            return sentinelWorkspaceResourceIds(Output.of(sentinelWorkspaceResourceIds));
         }
+
         public Builder sentinelWorkspaceResourceIds(String... sentinelWorkspaceResourceIds) {
             return sentinelWorkspaceResourceIds(List.of(sentinelWorkspaceResourceIds));
-        }        public DefenderSettingArgs build() {
-            return new DefenderSettingArgs(deviceQuota, mdeIntegration, onboardingKind, sentinelWorkspaceResourceIds);
+        }
+
+        public DefenderSettingArgs build() {
+            $.deviceQuota = Objects.requireNonNull($.deviceQuota, "expected parameter 'deviceQuota' to be non-null");
+            $.mdeIntegration = Objects.requireNonNull($.mdeIntegration, "expected parameter 'mdeIntegration' to be non-null");
+            $.onboardingKind = Objects.requireNonNull($.onboardingKind, "expected parameter 'onboardingKind' to be non-null");
+            $.sentinelWorkspaceResourceIds = Objects.requireNonNull($.sentinelWorkspaceResourceIds, "expected parameter 'sentinelWorkspaceResourceIds' to be non-null");
+            return $;
         }
     }
+
 }

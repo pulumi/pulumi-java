@@ -18,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +35,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="accessKey")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey() {
-        return this.accessKey == null ? Codegen.empty() : this.accessKey;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> accessKey() {
+        return Optional.ofNullable(this.accessKey);
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<Object> accountName;
+    private Output<Object> accountName;
 
     public Output<Object> accountName() {
         return this.accountName;
@@ -56,10 +57,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -67,7 +68,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="batchUri", required=true)
-      private final Output<Object> batchUri;
+    private Output<Object> batchUri;
 
     public Output<Object> batchUri() {
         return this.batchUri;
@@ -78,10 +79,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="credential")
-      private final @Nullable Output<CredentialReferenceArgs> credential;
+    private @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> credential() {
-        return this.credential == null ? Codegen.empty() : this.credential;
+    public Optional<Output<CredentialReferenceArgs>> credential() {
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -111,10 +112,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -122,7 +123,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
@@ -133,10 +134,10 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -144,7 +145,7 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="poolName", required=true)
-      private final Output<Object> poolName;
+    private Output<Object> poolName;
 
     public Output<Object> poolName() {
         return this.poolName;
@@ -156,196 +157,167 @@ public final class AzureBatchLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureBatchLinkedServiceArgs(
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey,
-        Output<Object> accountName,
-        @Nullable Output<List<Object>> annotations,
-        Output<Object> batchUri,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<CredentialReferenceArgs> credential,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        Output<Object> poolName,
-        Output<String> type) {
-        this.accessKey = accessKey;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.annotations = annotations;
-        this.batchUri = Objects.requireNonNull(batchUri, "expected parameter 'batchUri' to be non-null");
-        this.connectVia = connectVia;
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureBatchLinkedServiceArgs() {}
 
-    private AzureBatchLinkedServiceArgs() {
-        this.accessKey = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.batchUri = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.credential = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.poolName = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureBatchLinkedServiceArgs(AzureBatchLinkedServiceArgs $) {
+        this.accessKey = $.accessKey;
+        this.accountName = $.accountName;
+        this.annotations = $.annotations;
+        this.batchUri = $.batchUri;
+        this.connectVia = $.connectVia;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.poolName = $.poolName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBatchLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey;
-        private Output<Object> accountName;
-        private @Nullable Output<List<Object>> annotations;
-        private Output<Object> batchUri;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<CredentialReferenceArgs> credential;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private Output<Object> poolName;
-        private Output<String> type;
+        private AzureBatchLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBatchLinkedServiceArgs();
         }
 
         public Builder(AzureBatchLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.accountName = defaults.accountName;
-    	      this.annotations = defaults.annotations;
-    	      this.batchUri = defaults.batchUri;
-    	      this.connectVia = defaults.connectVia;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.poolName = defaults.poolName;
-    	      this.type = defaults.type;
+            $ = new AzureBatchLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessKey) {
-            this.accessKey = accessKey;
+            $.accessKey = accessKey;
             return this;
         }
-        public Builder accessKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessKey) {
-            this.accessKey = Codegen.ofNullable(accessKey);
-            return this;
+
+        public Builder accessKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accessKey) {
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder accountName(Output<Object> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(Object accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder batchUri(Output<Object> batchUri) {
-            this.batchUri = Objects.requireNonNull(batchUri);
+            $.batchUri = batchUri;
             return this;
         }
+
         public Builder batchUri(Object batchUri) {
-            this.batchUri = Output.of(Objects.requireNonNull(batchUri));
-            return this;
+            return batchUri(Output.of(batchUri));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
-        public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Codegen.ofNullable(credential);
-            return this;
+
+        public Builder credential(CredentialReferenceArgs credential) {
+            return credential(Output.of(credential));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
-            return this;
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder poolName(Output<Object> poolName) {
-            this.poolName = Objects.requireNonNull(poolName);
+            $.poolName = poolName;
             return this;
         }
+
         public Builder poolName(Object poolName) {
-            this.poolName = Output.of(Objects.requireNonNull(poolName));
-            return this;
+            return poolName(Output.of(poolName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureBatchLinkedServiceArgs build() {
-            return new AzureBatchLinkedServiceArgs(accessKey, accountName, annotations, batchUri, connectVia, credential, description, encryptedCredential, linkedServiceName, parameters, poolName, type);
+            return type(Output.of(type));
+        }
+
+        public AzureBatchLinkedServiceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.batchUri = Objects.requireNonNull($.batchUri, "expected parameter 'batchUri' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.poolName = Objects.requireNonNull($.poolName, "expected parameter 'poolName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

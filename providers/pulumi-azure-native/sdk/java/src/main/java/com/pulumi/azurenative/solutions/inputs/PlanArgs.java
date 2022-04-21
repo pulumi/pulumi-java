@@ -5,9 +5,9 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="product", required=true)
-      private final Output<String> product;
+    private Output<String> product;
 
     public Output<String> product() {
         return this.product;
@@ -46,10 +46,10 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="promotionCode")
-      private final @Nullable Output<String> promotionCode;
+    private @Nullable Output<String> promotionCode;
 
-    public Output<String> promotionCode() {
-        return this.promotionCode == null ? Codegen.empty() : this.promotionCode;
+    public Optional<Output<String>> promotionCode() {
+        return Optional.ofNullable(this.promotionCode);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publisher", required=true)
-      private final Output<String> publisher;
+    private Output<String> publisher;
 
     public Output<String> publisher() {
         return this.publisher;
@@ -68,102 +68,92 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public PlanArgs(
-        Output<String> name,
-        Output<String> product,
-        @Nullable Output<String> promotionCode,
-        Output<String> publisher,
-        Output<String> version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.product = Objects.requireNonNull(product, "expected parameter 'product' to be non-null");
-        this.promotionCode = promotionCode;
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private PlanArgs() {}
 
-    private PlanArgs() {
-        this.name = Codegen.empty();
-        this.product = Codegen.empty();
-        this.promotionCode = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.version = Codegen.empty();
+    private PlanArgs(PlanArgs $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.promotionCode = $.promotionCode;
+        this.publisher = $.publisher;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> product;
-        private @Nullable Output<String> promotionCode;
-        private Output<String> publisher;
-        private Output<String> version;
+        private PlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanArgs();
         }
 
         public Builder(PlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.promotionCode = defaults.promotionCode;
-    	      this.publisher = defaults.publisher;
-    	      this.version = defaults.version;
+            $ = new PlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder product(Output<String> product) {
-            this.product = Objects.requireNonNull(product);
+            $.product = product;
             return this;
         }
+
         public Builder product(String product) {
-            this.product = Output.of(Objects.requireNonNull(product));
-            return this;
+            return product(Output.of(product));
         }
+
         public Builder promotionCode(@Nullable Output<String> promotionCode) {
-            this.promotionCode = promotionCode;
+            $.promotionCode = promotionCode;
             return this;
         }
-        public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = Codegen.ofNullable(promotionCode);
-            return this;
+
+        public Builder promotionCode(String promotionCode) {
+            return promotionCode(Output.of(promotionCode));
         }
+
         public Builder publisher(Output<String> publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Output.of(Objects.requireNonNull(publisher));
-            return this;
+            return publisher(Output.of(publisher));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public PlanArgs build() {
-            return new PlanArgs(name, product, promotionCode, publisher, version);
+            return version(Output.of(version));
+        }
+
+        public PlanArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.product = Objects.requireNonNull($.product, "expected parameter 'product' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

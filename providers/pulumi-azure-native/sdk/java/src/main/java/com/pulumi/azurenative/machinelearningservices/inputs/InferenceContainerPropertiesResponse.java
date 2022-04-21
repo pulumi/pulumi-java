@@ -19,10 +19,10 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="livenessRoute")
-      private final @Nullable RouteResponse livenessRoute;
+    private @Nullable RouteResponse livenessRoute;
 
     public Optional<RouteResponse> livenessRoute() {
-        return this.livenessRoute == null ? Optional.empty() : Optional.ofNullable(this.livenessRoute);
+        return Optional.ofNullable(this.livenessRoute);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="readinessRoute")
-      private final @Nullable RouteResponse readinessRoute;
+    private @Nullable RouteResponse readinessRoute;
 
     public Optional<RouteResponse> readinessRoute() {
-        return this.readinessRoute == null ? Optional.empty() : Optional.ofNullable(this.readinessRoute);
+        return Optional.ofNullable(this.readinessRoute);
     }
 
     /**
@@ -41,64 +41,56 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="scoringRoute")
-      private final @Nullable RouteResponse scoringRoute;
+    private @Nullable RouteResponse scoringRoute;
 
     public Optional<RouteResponse> scoringRoute() {
-        return this.scoringRoute == null ? Optional.empty() : Optional.ofNullable(this.scoringRoute);
+        return Optional.ofNullable(this.scoringRoute);
     }
 
-    public InferenceContainerPropertiesResponse(
-        @Nullable RouteResponse livenessRoute,
-        @Nullable RouteResponse readinessRoute,
-        @Nullable RouteResponse scoringRoute) {
-        this.livenessRoute = livenessRoute;
-        this.readinessRoute = readinessRoute;
-        this.scoringRoute = scoringRoute;
-    }
+    private InferenceContainerPropertiesResponse() {}
 
-    private InferenceContainerPropertiesResponse() {
-        this.livenessRoute = null;
-        this.readinessRoute = null;
-        this.scoringRoute = null;
+    private InferenceContainerPropertiesResponse(InferenceContainerPropertiesResponse $) {
+        this.livenessRoute = $.livenessRoute;
+        this.readinessRoute = $.readinessRoute;
+        this.scoringRoute = $.scoringRoute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InferenceContainerPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RouteResponse livenessRoute;
-        private @Nullable RouteResponse readinessRoute;
-        private @Nullable RouteResponse scoringRoute;
+        private InferenceContainerPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InferenceContainerPropertiesResponse();
         }
 
         public Builder(InferenceContainerPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.livenessRoute = defaults.livenessRoute;
-    	      this.readinessRoute = defaults.readinessRoute;
-    	      this.scoringRoute = defaults.scoringRoute;
+            $ = new InferenceContainerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder livenessRoute(@Nullable RouteResponse livenessRoute) {
-            this.livenessRoute = livenessRoute;
+            $.livenessRoute = livenessRoute;
             return this;
         }
+
         public Builder readinessRoute(@Nullable RouteResponse readinessRoute) {
-            this.readinessRoute = readinessRoute;
+            $.readinessRoute = readinessRoute;
             return this;
         }
+
         public Builder scoringRoute(@Nullable RouteResponse scoringRoute) {
-            this.scoringRoute = scoringRoute;
+            $.scoringRoute = scoringRoute;
             return this;
-        }        public InferenceContainerPropertiesResponse build() {
-            return new InferenceContainerPropertiesResponse(livenessRoute, readinessRoute, scoringRoute);
+        }
+
+        public InferenceContainerPropertiesResponse build() {
+            return $;
         }
     }
+
 }

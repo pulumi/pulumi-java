@@ -5,12 +5,12 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ContainerPortArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EnvVarArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env;
+    private @Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env;
 
-    public Output<List<GoogleCloudMlV1__EnvVarArgs>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<GoogleCloudMlV1__EnvVarArgs>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -71,114 +71,104 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
+    private @Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
 
-    public Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<GoogleCloudMlV1__ContainerPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public GoogleCloudMlV1__ContainerSpecArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env,
-        @Nullable Output<String> image,
-        @Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports) {
-        this.args = args;
-        this.command = command;
-        this.env = env;
-        this.image = image;
-        this.ports = ports;
-    }
+    private GoogleCloudMlV1__ContainerSpecArgs() {}
 
-    private GoogleCloudMlV1__ContainerSpecArgs() {
-        this.args = Codegen.empty();
-        this.command = Codegen.empty();
-        this.env = Codegen.empty();
-        this.image = Codegen.empty();
-        this.ports = Codegen.empty();
+    private GoogleCloudMlV1__ContainerSpecArgs(GoogleCloudMlV1__ContainerSpecArgs $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.image = $.image;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ContainerSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env;
-        private @Nullable Output<String> image;
-        private @Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
+        private GoogleCloudMlV1__ContainerSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ContainerSpecArgs();
         }
 
         public Builder(GoogleCloudMlV1__ContainerSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.image = defaults.image;
-    	      this.ports = defaults.ports;
+            $ = new GoogleCloudMlV1__ContainerSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(@Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<GoogleCloudMlV1__EnvVarArgs> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<GoogleCloudMlV1__EnvVarArgs> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(GoogleCloudMlV1__EnvVarArgs... env) {
             return env(List.of(env));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder ports(@Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<GoogleCloudMlV1__ContainerPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<GoogleCloudMlV1__ContainerPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(GoogleCloudMlV1__ContainerPortArgs... ports) {
             return ports(List.of(ports));
-        }        public GoogleCloudMlV1__ContainerSpecArgs build() {
-            return new GoogleCloudMlV1__ContainerSpecArgs(args, command, env, image, ports);
+        }
+
+        public GoogleCloudMlV1__ContainerSpecArgs build() {
+            return $;
         }
     }
+
 }

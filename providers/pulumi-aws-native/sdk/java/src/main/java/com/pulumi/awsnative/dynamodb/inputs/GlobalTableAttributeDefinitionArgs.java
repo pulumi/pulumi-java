@@ -5,7 +5,6 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class GlobalTableAttributeDefinitionArgs extends com.pulumi.resourc
     public static final GlobalTableAttributeDefinitionArgs Empty = new GlobalTableAttributeDefinitionArgs();
 
     @Import(name="attributeName", required=true)
-      private final Output<String> attributeName;
+    private Output<String> attributeName;
 
     public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeType", required=true)
-      private final Output<String> attributeType;
+    private Output<String> attributeType;
 
     public Output<String> attributeType() {
         return this.attributeType;
     }
 
-    public GlobalTableAttributeDefinitionArgs(
-        Output<String> attributeName,
-        Output<String> attributeType) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.attributeType = Objects.requireNonNull(attributeType, "expected parameter 'attributeType' to be non-null");
-    }
+    private GlobalTableAttributeDefinitionArgs() {}
 
-    private GlobalTableAttributeDefinitionArgs() {
-        this.attributeName = Codegen.empty();
-        this.attributeType = Codegen.empty();
+    private GlobalTableAttributeDefinitionArgs(GlobalTableAttributeDefinitionArgs $) {
+        this.attributeName = $.attributeName;
+        this.attributeType = $.attributeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableAttributeDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attributeName;
-        private Output<String> attributeType;
+        private GlobalTableAttributeDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableAttributeDefinitionArgs();
         }
 
         public Builder(GlobalTableAttributeDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.attributeType = defaults.attributeType;
+            $ = new GlobalTableAttributeDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(Output<String> attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeName(String attributeName) {
-            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
-            return this;
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder attributeType(Output<String> attributeType) {
-            this.attributeType = Objects.requireNonNull(attributeType);
+            $.attributeType = attributeType;
             return this;
         }
+
         public Builder attributeType(String attributeType) {
-            this.attributeType = Output.of(Objects.requireNonNull(attributeType));
-            return this;
-        }        public GlobalTableAttributeDefinitionArgs build() {
-            return new GlobalTableAttributeDefinitionArgs(attributeName, attributeType);
+            return attributeType(Output.of(attributeType));
+        }
+
+        public GlobalTableAttributeDefinitionArgs build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.attributeType = Objects.requireNonNull($.attributeType, "expected parameter 'attributeType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetEnterprisePolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enterprisePolicyName", required=true)
-      private final String enterprisePolicyName;
+    private String enterprisePolicyName;
 
     public String enterprisePolicyName() {
         return this.enterprisePolicyName;
@@ -28,55 +28,52 @@ public final class GetEnterprisePolicyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetEnterprisePolicyArgs(
-        String enterprisePolicyName,
-        String resourceGroupName) {
-        this.enterprisePolicyName = Objects.requireNonNull(enterprisePolicyName, "expected parameter 'enterprisePolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetEnterprisePolicyArgs() {}
 
-    private GetEnterprisePolicyArgs() {
-        this.enterprisePolicyName = null;
-        this.resourceGroupName = null;
+    private GetEnterprisePolicyArgs(GetEnterprisePolicyArgs $) {
+        this.enterprisePolicyName = $.enterprisePolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnterprisePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String enterprisePolicyName;
-        private String resourceGroupName;
+        private GetEnterprisePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnterprisePolicyArgs();
         }
 
         public Builder(GetEnterprisePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enterprisePolicyName = defaults.enterprisePolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetEnterprisePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enterprisePolicyName(String enterprisePolicyName) {
-            this.enterprisePolicyName = Objects.requireNonNull(enterprisePolicyName);
+            $.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetEnterprisePolicyArgs build() {
-            return new GetEnterprisePolicyArgs(enterprisePolicyName, resourceGroupName);
+        }
+
+        public GetEnterprisePolicyArgs build() {
+            $.enterprisePolicyName = Objects.requireNonNull($.enterprisePolicyName, "expected parameter 'enterprisePolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

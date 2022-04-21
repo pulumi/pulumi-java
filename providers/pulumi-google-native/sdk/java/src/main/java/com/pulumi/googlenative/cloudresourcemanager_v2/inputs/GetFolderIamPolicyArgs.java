@@ -13,45 +13,45 @@ public final class GetFolderIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetFolderIamPolicyArgs Empty = new GetFolderIamPolicyArgs();
 
     @Import(name="folderId", required=true)
-      private final String folderId;
+    private String folderId;
 
     public String folderId() {
         return this.folderId;
     }
 
-    public GetFolderIamPolicyArgs(String folderId) {
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-    }
+    private GetFolderIamPolicyArgs() {}
 
-    private GetFolderIamPolicyArgs() {
-        this.folderId = null;
+    private GetFolderIamPolicyArgs(GetFolderIamPolicyArgs $) {
+        this.folderId = $.folderId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFolderIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String folderId;
+        private GetFolderIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFolderIamPolicyArgs();
         }
 
         public Builder(GetFolderIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderId = defaults.folderId;
+            $ = new GetFolderIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folderId(String folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
-        }        public GetFolderIamPolicyArgs build() {
-            return new GetFolderIamPolicyArgs(folderId);
+        }
+
+        public GetFolderIamPolicyArgs build() {
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            return $;
         }
     }
+
 }

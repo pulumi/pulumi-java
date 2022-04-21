@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceArgs;
 import com.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
+    private @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
-    public Output<KeyVaultSecretReferenceArgs> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
+    public Optional<Output<KeyVaultSecretReferenceArgs>> diskEncryptionKey() {
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class DiskEncryptionSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+    private @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultKeyReferenceArgs> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
+    public Optional<Output<KeyVaultKeyReferenceArgs>> keyEncryptionKey() {
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
-    public DiskEncryptionSettingsArgs(
-        @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.enabled = enabled;
-        this.keyEncryptionKey = keyEncryptionKey;
-    }
+    private DiskEncryptionSettingsArgs() {}
 
-    private DiskEncryptionSettingsArgs() {
-        this.diskEncryptionKey = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.keyEncryptionKey = Codegen.empty();
+    private DiskEncryptionSettingsArgs(DiskEncryptionSettingsArgs $) {
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.enabled = $.enabled;
+        this.keyEncryptionKey = $.keyEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+        private DiskEncryptionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionSettingsArgs();
         }
 
         public Builder(DiskEncryptionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.enabled = defaults.enabled;
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
+            $ = new DiskEncryptionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKey(@Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-        public Builder diskEncryptionKey(@Nullable KeyVaultSecretReferenceArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
-            return this;
+
+        public Builder diskEncryptionKey(KeyVaultSecretReferenceArgs diskEncryptionKey) {
+            return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-        public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
-            return this;
-        }        public DiskEncryptionSettingsArgs build() {
-            return new DiskEncryptionSettingsArgs(diskEncryptionKey, enabled, keyEncryptionKey);
+
+        public Builder keyEncryptionKey(KeyVaultKeyReferenceArgs keyEncryptionKey) {
+            return keyEncryptionKey(Output.of(keyEncryptionKey));
+        }
+
+        public DiskEncryptionSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfiguration
 import com.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,86 @@ public final class StateMachineLoggingConfigurationArgs extends com.pulumi.resou
     public static final StateMachineLoggingConfigurationArgs Empty = new StateMachineLoggingConfigurationArgs();
 
     @Import(name="destinations")
-      private final @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
+    private @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
 
-    public Output<List<StateMachineLogDestinationArgs>> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<List<StateMachineLogDestinationArgs>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     @Import(name="includeExecutionData")
-      private final @Nullable Output<Boolean> includeExecutionData;
+    private @Nullable Output<Boolean> includeExecutionData;
 
-    public Output<Boolean> includeExecutionData() {
-        return this.includeExecutionData == null ? Codegen.empty() : this.includeExecutionData;
+    public Optional<Output<Boolean>> includeExecutionData() {
+        return Optional.ofNullable(this.includeExecutionData);
     }
 
     @Import(name="level")
-      private final @Nullable Output<StateMachineLoggingConfigurationLevel> level;
+    private @Nullable Output<StateMachineLoggingConfigurationLevel> level;
 
-    public Output<StateMachineLoggingConfigurationLevel> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<StateMachineLoggingConfigurationLevel>> level() {
+        return Optional.ofNullable(this.level);
     }
 
-    public StateMachineLoggingConfigurationArgs(
-        @Nullable Output<List<StateMachineLogDestinationArgs>> destinations,
-        @Nullable Output<Boolean> includeExecutionData,
-        @Nullable Output<StateMachineLoggingConfigurationLevel> level) {
-        this.destinations = destinations;
-        this.includeExecutionData = includeExecutionData;
-        this.level = level;
-    }
+    private StateMachineLoggingConfigurationArgs() {}
 
-    private StateMachineLoggingConfigurationArgs() {
-        this.destinations = Codegen.empty();
-        this.includeExecutionData = Codegen.empty();
-        this.level = Codegen.empty();
+    private StateMachineLoggingConfigurationArgs(StateMachineLoggingConfigurationArgs $) {
+        this.destinations = $.destinations;
+        this.includeExecutionData = $.includeExecutionData;
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineLoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
-        private @Nullable Output<Boolean> includeExecutionData;
-        private @Nullable Output<StateMachineLoggingConfigurationLevel> level;
+        private StateMachineLoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineLoggingConfigurationArgs();
         }
 
         public Builder(StateMachineLoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.includeExecutionData = defaults.includeExecutionData;
-    	      this.level = defaults.level;
+            $ = new StateMachineLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(@Nullable Output<List<StateMachineLogDestinationArgs>> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable List<StateMachineLogDestinationArgs> destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(List<StateMachineLogDestinationArgs> destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(StateMachineLogDestinationArgs... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder includeExecutionData(@Nullable Output<Boolean> includeExecutionData) {
-            this.includeExecutionData = includeExecutionData;
+            $.includeExecutionData = includeExecutionData;
             return this;
         }
-        public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
-            this.includeExecutionData = Codegen.ofNullable(includeExecutionData);
-            return this;
+
+        public Builder includeExecutionData(Boolean includeExecutionData) {
+            return includeExecutionData(Output.of(includeExecutionData));
         }
+
         public Builder level(@Nullable Output<StateMachineLoggingConfigurationLevel> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
-        }        public StateMachineLoggingConfigurationArgs build() {
-            return new StateMachineLoggingConfigurationArgs(destinations, includeExecutionData, level);
+
+        public Builder level(StateMachineLoggingConfigurationLevel level) {
+            return level(Output.of(level));
+        }
+
+        public StateMachineLoggingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -9,9 +9,9 @@ import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputLambdaGetArgs;
 import com.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputSchemaGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kinesisFirehose")
-      private final @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
+    private @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
 
-    public Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose() {
-        return this.kinesisFirehose == null ? Codegen.empty() : this.kinesisFirehose;
+    public Optional<Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs>> kinesisFirehose() {
+        return Optional.ofNullable(this.kinesisFirehose);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kinesisStream")
-      private final @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
+    private @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
 
-    public Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream() {
-        return this.kinesisStream == null ? Codegen.empty() : this.kinesisStream;
+    public Optional<Output<AnalyticsApplicationOutputKinesisStreamGetArgs>> kinesisStream() {
+        return Optional.ofNullable(this.kinesisStream);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="lambda")
-      private final @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
+    private @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
 
-    public Output<AnalyticsApplicationOutputLambdaGetArgs> lambda() {
-        return this.lambda == null ? Codegen.empty() : this.lambda;
+    public Optional<Output<AnalyticsApplicationOutputLambdaGetArgs>> lambda() {
+        return Optional.ofNullable(this.lambda);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -81,115 +81,100 @@ public final class AnalyticsApplicationOutputGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="schema", required=true)
-      private final Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
+    private Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
 
     public Output<AnalyticsApplicationOutputSchemaGetArgs> schema() {
         return this.schema;
     }
 
-    public AnalyticsApplicationOutputGetArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose,
-        @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream,
-        @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda,
-        Output<String> name,
-        Output<AnalyticsApplicationOutputSchemaGetArgs> schema) {
-        this.id = id;
-        this.kinesisFirehose = kinesisFirehose;
-        this.kinesisStream = kinesisStream;
-        this.lambda = lambda;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-    }
+    private AnalyticsApplicationOutputGetArgs() {}
 
-    private AnalyticsApplicationOutputGetArgs() {
-        this.id = Codegen.empty();
-        this.kinesisFirehose = Codegen.empty();
-        this.kinesisStream = Codegen.empty();
-        this.lambda = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schema = Codegen.empty();
+    private AnalyticsApplicationOutputGetArgs(AnalyticsApplicationOutputGetArgs $) {
+        this.id = $.id;
+        this.kinesisFirehose = $.kinesisFirehose;
+        this.kinesisStream = $.kinesisStream;
+        this.lambda = $.lambda;
+        this.name = $.name;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationOutputGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose;
-        private @Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream;
-        private @Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda;
-        private Output<String> name;
-        private Output<AnalyticsApplicationOutputSchemaGetArgs> schema;
+        private AnalyticsApplicationOutputGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationOutputGetArgs();
         }
 
         public Builder(AnalyticsApplicationOutputGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.kinesisFirehose = defaults.kinesisFirehose;
-    	      this.kinesisStream = defaults.kinesisStream;
-    	      this.lambda = defaults.lambda;
-    	      this.name = defaults.name;
-    	      this.schema = defaults.schema;
+            $ = new AnalyticsApplicationOutputGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kinesisFirehose(@Nullable Output<AnalyticsApplicationOutputKinesisFirehoseGetArgs> kinesisFirehose) {
-            this.kinesisFirehose = kinesisFirehose;
+            $.kinesisFirehose = kinesisFirehose;
             return this;
         }
-        public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehoseGetArgs kinesisFirehose) {
-            this.kinesisFirehose = Codegen.ofNullable(kinesisFirehose);
-            return this;
+
+        public Builder kinesisFirehose(AnalyticsApplicationOutputKinesisFirehoseGetArgs kinesisFirehose) {
+            return kinesisFirehose(Output.of(kinesisFirehose));
         }
+
         public Builder kinesisStream(@Nullable Output<AnalyticsApplicationOutputKinesisStreamGetArgs> kinesisStream) {
-            this.kinesisStream = kinesisStream;
+            $.kinesisStream = kinesisStream;
             return this;
         }
-        public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStreamGetArgs kinesisStream) {
-            this.kinesisStream = Codegen.ofNullable(kinesisStream);
-            return this;
+
+        public Builder kinesisStream(AnalyticsApplicationOutputKinesisStreamGetArgs kinesisStream) {
+            return kinesisStream(Output.of(kinesisStream));
         }
+
         public Builder lambda(@Nullable Output<AnalyticsApplicationOutputLambdaGetArgs> lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
-        public Builder lambda(@Nullable AnalyticsApplicationOutputLambdaGetArgs lambda) {
-            this.lambda = Codegen.ofNullable(lambda);
-            return this;
+
+        public Builder lambda(AnalyticsApplicationOutputLambdaGetArgs lambda) {
+            return lambda(Output.of(lambda));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder schema(Output<AnalyticsApplicationOutputSchemaGetArgs> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(AnalyticsApplicationOutputSchemaGetArgs schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
-        }        public AnalyticsApplicationOutputGetArgs build() {
-            return new AnalyticsApplicationOutputGetArgs(id, kinesisFirehose, kinesisStream, lambda, name, schema);
+            return schema(Output.of(schema));
+        }
+
+        public AnalyticsApplicationOutputGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * 
      */
     @Import(name="dataset", required=true)
-      private final String dataset;
+    private String dataset;
 
     public String dataset() {
         return this.dataset;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * 
      */
     @Import(name="shardCount", required=true)
-      private final String shardCount;
+    private String shardCount;
 
     public String shardCount() {
         return this.shardCount;
@@ -43,64 +43,59 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * 
      */
     @Import(name="tablePrefix", required=true)
-      private final String tablePrefix;
+    private String tablePrefix;
 
     public String tablePrefix() {
         return this.tablePrefix;
     }
 
-    public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(
-        String dataset,
-        String shardCount,
-        String tablePrefix) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.shardCount = Objects.requireNonNull(shardCount, "expected parameter 'shardCount' to be non-null");
-        this.tablePrefix = Objects.requireNonNull(tablePrefix, "expected parameter 'tablePrefix' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse() {
-        this.dataset = null;
-        this.shardCount = null;
-        this.tablePrefix = null;
+    private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse $) {
+        this.dataset = $.dataset;
+        this.shardCount = $.shardCount;
+        this.tablePrefix = $.tablePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataset;
-        private String shardCount;
-        private String tablePrefix;
+        private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.shardCount = defaults.shardCount;
-    	      this.tablePrefix = defaults.tablePrefix;
+            $ = new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(String dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder shardCount(String shardCount) {
-            this.shardCount = Objects.requireNonNull(shardCount);
+            $.shardCount = shardCount;
             return this;
         }
+
         public Builder tablePrefix(String tablePrefix) {
-            this.tablePrefix = Objects.requireNonNull(tablePrefix);
+            $.tablePrefix = tablePrefix;
             return this;
-        }        public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse build() {
-            return new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(dataset, shardCount, tablePrefix);
+        }
+
+        public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.shardCount = Objects.requireNonNull($.shardCount, "expected parameter 'shardCount' to be non-null");
+            $.tablePrefix = Objects.requireNonNull($.tablePrefix, "expected parameter 'tablePrefix' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="affectedLocation", required=true)
-      private final VulnerabilityLocationResponse affectedLocation;
+    private VulnerabilityLocationResponse affectedLocation;
 
     public VulnerabilityLocationResponse affectedLocation() {
         return this.affectedLocation;
@@ -33,7 +33,7 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="effectiveSeverity", required=true)
-      private final String effectiveSeverity;
+    private String effectiveSeverity;
 
     public String effectiveSeverity() {
         return this.effectiveSeverity;
@@ -44,7 +44,7 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fixedLocation", required=true)
-      private final VulnerabilityLocationResponse fixedLocation;
+    private VulnerabilityLocationResponse fixedLocation;
 
     public VulnerabilityLocationResponse fixedLocation() {
         return this.fixedLocation;
@@ -55,73 +55,66 @@ public final class PackageIssueResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="packageType", required=true)
-      private final String packageType;
+    private String packageType;
 
     public String packageType() {
         return this.packageType;
     }
 
-    public PackageIssueResponse(
-        VulnerabilityLocationResponse affectedLocation,
-        String effectiveSeverity,
-        VulnerabilityLocationResponse fixedLocation,
-        String packageType) {
-        this.affectedLocation = Objects.requireNonNull(affectedLocation, "expected parameter 'affectedLocation' to be non-null");
-        this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity, "expected parameter 'effectiveSeverity' to be non-null");
-        this.fixedLocation = Objects.requireNonNull(fixedLocation, "expected parameter 'fixedLocation' to be non-null");
-        this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
-    }
+    private PackageIssueResponse() {}
 
-    private PackageIssueResponse() {
-        this.affectedLocation = null;
-        this.effectiveSeverity = null;
-        this.fixedLocation = null;
-        this.packageType = null;
+    private PackageIssueResponse(PackageIssueResponse $) {
+        this.affectedLocation = $.affectedLocation;
+        this.effectiveSeverity = $.effectiveSeverity;
+        this.fixedLocation = $.fixedLocation;
+        this.packageType = $.packageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageIssueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private VulnerabilityLocationResponse affectedLocation;
-        private String effectiveSeverity;
-        private VulnerabilityLocationResponse fixedLocation;
-        private String packageType;
+        private PackageIssueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageIssueResponse();
         }
 
         public Builder(PackageIssueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedLocation = defaults.affectedLocation;
-    	      this.effectiveSeverity = defaults.effectiveSeverity;
-    	      this.fixedLocation = defaults.fixedLocation;
-    	      this.packageType = defaults.packageType;
+            $ = new PackageIssueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedLocation(VulnerabilityLocationResponse affectedLocation) {
-            this.affectedLocation = Objects.requireNonNull(affectedLocation);
+            $.affectedLocation = affectedLocation;
             return this;
         }
+
         public Builder effectiveSeverity(String effectiveSeverity) {
-            this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
+            $.effectiveSeverity = effectiveSeverity;
             return this;
         }
+
         public Builder fixedLocation(VulnerabilityLocationResponse fixedLocation) {
-            this.fixedLocation = Objects.requireNonNull(fixedLocation);
+            $.fixedLocation = fixedLocation;
             return this;
         }
+
         public Builder packageType(String packageType) {
-            this.packageType = Objects.requireNonNull(packageType);
+            $.packageType = packageType;
             return this;
-        }        public PackageIssueResponse build() {
-            return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType);
+        }
+
+        public PackageIssueResponse build() {
+            $.affectedLocation = Objects.requireNonNull($.affectedLocation, "expected parameter 'affectedLocation' to be non-null");
+            $.effectiveSeverity = Objects.requireNonNull($.effectiveSeverity, "expected parameter 'effectiveSeverity' to be non-null");
+            $.fixedLocation = Objects.requireNonNull($.fixedLocation, "expected parameter 'fixedLocation' to be non-null");
+            $.packageType = Objects.requireNonNull($.packageType, "expected parameter 'packageType' to be non-null");
+            return $;
         }
     }
+
 }

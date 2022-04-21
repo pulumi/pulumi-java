@@ -20,6 +20,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="additionalLocations")
-      private final @Nullable Output<List<AdditionalLocationArgs>> additionalLocations;
+    private @Nullable Output<List<AdditionalLocationArgs>> additionalLocations;
 
-    public Output<List<AdditionalLocationArgs>> additionalLocations() {
-        return this.additionalLocations == null ? Codegen.empty() : this.additionalLocations;
+    public Optional<Output<List<AdditionalLocationArgs>>> additionalLocations() {
+        return Optional.ofNullable(this.additionalLocations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="apiVersionConstraint")
-      private final @Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint;
+    private @Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint;
 
-    public Output<ApiVersionConstraintArgs> apiVersionConstraint() {
-        return this.apiVersionConstraint == null ? Codegen.empty() : this.apiVersionConstraint;
+    public Optional<Output<ApiVersionConstraintArgs>> apiVersionConstraint() {
+        return Optional.ofNullable(this.apiVersionConstraint);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="certificates")
-      private final @Nullable Output<List<CertificateConfigurationArgs>> certificates;
+    private @Nullable Output<List<CertificateConfigurationArgs>> certificates;
 
-    public Output<List<CertificateConfigurationArgs>> certificates() {
-        return this.certificates == null ? Codegen.empty() : this.certificates;
+    public Optional<Output<List<CertificateConfigurationArgs>>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="customProperties")
-      private final @Nullable Output<Map<String,String>> customProperties;
+    private @Nullable Output<Map<String,String>> customProperties;
 
-    public Output<Map<String,String>> customProperties() {
-        return this.customProperties == null ? Codegen.empty() : this.customProperties;
+    public Optional<Output<Map<String,String>>> customProperties() {
+        return Optional.ofNullable(this.customProperties);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="disableGateway")
-      private final @Nullable Output<Boolean> disableGateway;
+    private @Nullable Output<Boolean> disableGateway;
 
-    public Output<Boolean> disableGateway() {
-        return this.disableGateway == null ? Codegen.empty() : this.disableGateway;
+    public Optional<Output<Boolean>> disableGateway() {
+        return Optional.ofNullable(this.disableGateway);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enableClientCertificate")
-      private final @Nullable Output<Boolean> enableClientCertificate;
+    private @Nullable Output<Boolean> enableClientCertificate;
 
-    public Output<Boolean> enableClientCertificate() {
-        return this.enableClientCertificate == null ? Codegen.empty() : this.enableClientCertificate;
+    public Optional<Output<Boolean>> enableClientCertificate() {
+        return Optional.ofNullable(this.enableClientCertificate);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="hostnameConfigurations")
-      private final @Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations;
+    private @Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations;
 
-    public Output<List<HostnameConfigurationArgs>> hostnameConfigurations() {
-        return this.hostnameConfigurations == null ? Codegen.empty() : this.hostnameConfigurations;
+    public Optional<Output<List<HostnameConfigurationArgs>>> hostnameConfigurations() {
+        return Optional.ofNullable(this.hostnameConfigurations);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ApiManagementServiceIdentityArgs> identity;
+    private @Nullable Output<ApiManagementServiceIdentityArgs> identity;
 
-    public Output<ApiManagementServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ApiManagementServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="notificationSenderEmail")
-      private final @Nullable Output<String> notificationSenderEmail;
+    private @Nullable Output<String> notificationSenderEmail;
 
-    public Output<String> notificationSenderEmail() {
-        return this.notificationSenderEmail == null ? Codegen.empty() : this.notificationSenderEmail;
+    public Optional<Output<String>> notificationSenderEmail() {
+        return Optional.ofNullable(this.notificationSenderEmail);
     }
 
     /**
@@ -142,7 +143,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="publisherEmail", required=true)
-      private final Output<String> publisherEmail;
+    private Output<String> publisherEmail;
 
     public Output<String> publisherEmail() {
         return this.publisherEmail;
@@ -153,7 +154,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="publisherName", required=true)
-      private final Output<String> publisherName;
+    private Output<String> publisherName;
 
     public Output<String> publisherName() {
         return this.publisherName;
@@ -164,7 +165,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -175,10 +176,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="restore")
-      private final @Nullable Output<Boolean> restore;
+    private @Nullable Output<Boolean> restore;
 
-    public Output<Boolean> restore() {
-        return this.restore == null ? Codegen.empty() : this.restore;
+    public Optional<Output<Boolean>> restore() {
+        return Optional.ofNullable(this.restore);
     }
 
     /**
@@ -186,10 +187,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -197,7 +198,7 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
+    private Output<ApiManagementServiceSkuPropertiesArgs> sku;
 
     public Output<ApiManagementServiceSkuPropertiesArgs> sku() {
         return this.sku;
@@ -208,10 +209,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -219,10 +220,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="virtualNetworkConfiguration")
-      private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+    private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
+    public Optional<Output<VirtualNetworkConfigurationArgs>> virtualNetworkConfiguration() {
+        return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
 
     /**
@@ -230,10 +231,10 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="virtualNetworkType")
-      private final @Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType;
+    private @Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType;
 
-    public Output<Either<String,VirtualNetworkType>> virtualNetworkType() {
-        return this.virtualNetworkType == null ? Codegen.empty() : this.virtualNetworkType;
+    public Optional<Output<Either<String,VirtualNetworkType>>> virtualNetworkType() {
+        return Optional.ofNullable(this.virtualNetworkType);
     }
 
     /**
@@ -241,309 +242,262 @@ public final class ApiManagementServiceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public ApiManagementServiceArgs(
-        @Nullable Output<List<AdditionalLocationArgs>> additionalLocations,
-        @Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint,
-        @Nullable Output<List<CertificateConfigurationArgs>> certificates,
-        @Nullable Output<Map<String,String>> customProperties,
-        @Nullable Output<Boolean> disableGateway,
-        @Nullable Output<Boolean> enableClientCertificate,
-        @Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations,
-        @Nullable Output<ApiManagementServiceIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<String> notificationSenderEmail,
-        Output<String> publisherEmail,
-        Output<String> publisherName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> restore,
-        @Nullable Output<String> serviceName,
-        Output<ApiManagementServiceSkuPropertiesArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
-        @Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType,
-        @Nullable Output<List<String>> zones) {
-        this.additionalLocations = additionalLocations;
-        this.apiVersionConstraint = apiVersionConstraint;
-        this.certificates = certificates;
-        this.customProperties = customProperties;
-        this.disableGateway = Codegen.booleanProp("disableGateway").output().arg(disableGateway).def(false).getNullable();
-        this.enableClientCertificate = Codegen.booleanProp("enableClientCertificate").output().arg(enableClientCertificate).def(false).getNullable();
-        this.hostnameConfigurations = hostnameConfigurations;
-        this.identity = identity;
-        this.location = location;
-        this.notificationSenderEmail = notificationSenderEmail;
-        this.publisherEmail = Objects.requireNonNull(publisherEmail, "expected parameter 'publisherEmail' to be non-null");
-        this.publisherName = Objects.requireNonNull(publisherName, "expected parameter 'publisherName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restore = Codegen.booleanProp("restore").output().arg(restore).def(false).getNullable();
-        this.serviceName = serviceName;
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-        this.virtualNetworkConfiguration = virtualNetworkConfiguration;
-        this.virtualNetworkType = Codegen.stringProp("virtualNetworkType").left(VirtualNetworkType.class).output().arg(virtualNetworkType).def("None").getNullable();
-        this.zones = zones;
-    }
+    private ApiManagementServiceArgs() {}
 
-    private ApiManagementServiceArgs() {
-        this.additionalLocations = Codegen.empty();
-        this.apiVersionConstraint = Codegen.empty();
-        this.certificates = Codegen.empty();
-        this.customProperties = Codegen.empty();
-        this.disableGateway = Codegen.empty();
-        this.enableClientCertificate = Codegen.empty();
-        this.hostnameConfigurations = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.notificationSenderEmail = Codegen.empty();
-        this.publisherEmail = Codegen.empty();
-        this.publisherName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restore = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualNetworkConfiguration = Codegen.empty();
-        this.virtualNetworkType = Codegen.empty();
-        this.zones = Codegen.empty();
+    private ApiManagementServiceArgs(ApiManagementServiceArgs $) {
+        this.additionalLocations = $.additionalLocations;
+        this.apiVersionConstraint = $.apiVersionConstraint;
+        this.certificates = $.certificates;
+        this.customProperties = $.customProperties;
+        this.disableGateway = $.disableGateway;
+        this.enableClientCertificate = $.enableClientCertificate;
+        this.hostnameConfigurations = $.hostnameConfigurations;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.notificationSenderEmail = $.notificationSenderEmail;
+        this.publisherEmail = $.publisherEmail;
+        this.publisherName = $.publisherName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restore = $.restore;
+        this.serviceName = $.serviceName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.virtualNetworkConfiguration = $.virtualNetworkConfiguration;
+        this.virtualNetworkType = $.virtualNetworkType;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiManagementServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AdditionalLocationArgs>> additionalLocations;
-        private @Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint;
-        private @Nullable Output<List<CertificateConfigurationArgs>> certificates;
-        private @Nullable Output<Map<String,String>> customProperties;
-        private @Nullable Output<Boolean> disableGateway;
-        private @Nullable Output<Boolean> enableClientCertificate;
-        private @Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations;
-        private @Nullable Output<ApiManagementServiceIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> notificationSenderEmail;
-        private Output<String> publisherEmail;
-        private Output<String> publisherName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> restore;
-        private @Nullable Output<String> serviceName;
-        private Output<ApiManagementServiceSkuPropertiesArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
-        private @Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType;
-        private @Nullable Output<List<String>> zones;
+        private ApiManagementServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiManagementServiceArgs();
         }
 
         public Builder(ApiManagementServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalLocations = defaults.additionalLocations;
-    	      this.apiVersionConstraint = defaults.apiVersionConstraint;
-    	      this.certificates = defaults.certificates;
-    	      this.customProperties = defaults.customProperties;
-    	      this.disableGateway = defaults.disableGateway;
-    	      this.enableClientCertificate = defaults.enableClientCertificate;
-    	      this.hostnameConfigurations = defaults.hostnameConfigurations;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.notificationSenderEmail = defaults.notificationSenderEmail;
-    	      this.publisherEmail = defaults.publisherEmail;
-    	      this.publisherName = defaults.publisherName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restore = defaults.restore;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.virtualNetworkConfiguration = defaults.virtualNetworkConfiguration;
-    	      this.virtualNetworkType = defaults.virtualNetworkType;
-    	      this.zones = defaults.zones;
+            $ = new ApiManagementServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalLocations(@Nullable Output<List<AdditionalLocationArgs>> additionalLocations) {
-            this.additionalLocations = additionalLocations;
+            $.additionalLocations = additionalLocations;
             return this;
         }
-        public Builder additionalLocations(@Nullable List<AdditionalLocationArgs> additionalLocations) {
-            this.additionalLocations = Codegen.ofNullable(additionalLocations);
-            return this;
+
+        public Builder additionalLocations(List<AdditionalLocationArgs> additionalLocations) {
+            return additionalLocations(Output.of(additionalLocations));
         }
+
         public Builder additionalLocations(AdditionalLocationArgs... additionalLocations) {
             return additionalLocations(List.of(additionalLocations));
         }
+
         public Builder apiVersionConstraint(@Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint) {
-            this.apiVersionConstraint = apiVersionConstraint;
+            $.apiVersionConstraint = apiVersionConstraint;
             return this;
         }
-        public Builder apiVersionConstraint(@Nullable ApiVersionConstraintArgs apiVersionConstraint) {
-            this.apiVersionConstraint = Codegen.ofNullable(apiVersionConstraint);
-            return this;
+
+        public Builder apiVersionConstraint(ApiVersionConstraintArgs apiVersionConstraint) {
+            return apiVersionConstraint(Output.of(apiVersionConstraint));
         }
+
         public Builder certificates(@Nullable Output<List<CertificateConfigurationArgs>> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
-        public Builder certificates(@Nullable List<CertificateConfigurationArgs> certificates) {
-            this.certificates = Codegen.ofNullable(certificates);
-            return this;
+
+        public Builder certificates(List<CertificateConfigurationArgs> certificates) {
+            return certificates(Output.of(certificates));
         }
+
         public Builder certificates(CertificateConfigurationArgs... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder customProperties(@Nullable Output<Map<String,String>> customProperties) {
-            this.customProperties = customProperties;
+            $.customProperties = customProperties;
             return this;
         }
-        public Builder customProperties(@Nullable Map<String,String> customProperties) {
-            this.customProperties = Codegen.ofNullable(customProperties);
-            return this;
+
+        public Builder customProperties(Map<String,String> customProperties) {
+            return customProperties(Output.of(customProperties));
         }
+
         public Builder disableGateway(@Nullable Output<Boolean> disableGateway) {
-            this.disableGateway = disableGateway;
+            $.disableGateway = disableGateway;
             return this;
         }
-        public Builder disableGateway(@Nullable Boolean disableGateway) {
-            this.disableGateway = Codegen.ofNullable(disableGateway);
-            return this;
+
+        public Builder disableGateway(Boolean disableGateway) {
+            return disableGateway(Output.of(disableGateway));
         }
+
         public Builder enableClientCertificate(@Nullable Output<Boolean> enableClientCertificate) {
-            this.enableClientCertificate = enableClientCertificate;
+            $.enableClientCertificate = enableClientCertificate;
             return this;
         }
-        public Builder enableClientCertificate(@Nullable Boolean enableClientCertificate) {
-            this.enableClientCertificate = Codegen.ofNullable(enableClientCertificate);
-            return this;
+
+        public Builder enableClientCertificate(Boolean enableClientCertificate) {
+            return enableClientCertificate(Output.of(enableClientCertificate));
         }
+
         public Builder hostnameConfigurations(@Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations) {
-            this.hostnameConfigurations = hostnameConfigurations;
+            $.hostnameConfigurations = hostnameConfigurations;
             return this;
         }
-        public Builder hostnameConfigurations(@Nullable List<HostnameConfigurationArgs> hostnameConfigurations) {
-            this.hostnameConfigurations = Codegen.ofNullable(hostnameConfigurations);
-            return this;
+
+        public Builder hostnameConfigurations(List<HostnameConfigurationArgs> hostnameConfigurations) {
+            return hostnameConfigurations(Output.of(hostnameConfigurations));
         }
+
         public Builder hostnameConfigurations(HostnameConfigurationArgs... hostnameConfigurations) {
             return hostnameConfigurations(List.of(hostnameConfigurations));
         }
+
         public Builder identity(@Nullable Output<ApiManagementServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ApiManagementServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ApiManagementServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
-            this.notificationSenderEmail = notificationSenderEmail;
+            $.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
-        public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
-            this.notificationSenderEmail = Codegen.ofNullable(notificationSenderEmail);
-            return this;
+
+        public Builder notificationSenderEmail(String notificationSenderEmail) {
+            return notificationSenderEmail(Output.of(notificationSenderEmail));
         }
+
         public Builder publisherEmail(Output<String> publisherEmail) {
-            this.publisherEmail = Objects.requireNonNull(publisherEmail);
+            $.publisherEmail = publisherEmail;
             return this;
         }
+
         public Builder publisherEmail(String publisherEmail) {
-            this.publisherEmail = Output.of(Objects.requireNonNull(publisherEmail));
-            return this;
+            return publisherEmail(Output.of(publisherEmail));
         }
+
         public Builder publisherName(Output<String> publisherName) {
-            this.publisherName = Objects.requireNonNull(publisherName);
+            $.publisherName = publisherName;
             return this;
         }
+
         public Builder publisherName(String publisherName) {
-            this.publisherName = Output.of(Objects.requireNonNull(publisherName));
-            return this;
+            return publisherName(Output.of(publisherName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restore(@Nullable Output<Boolean> restore) {
-            this.restore = restore;
+            $.restore = restore;
             return this;
         }
-        public Builder restore(@Nullable Boolean restore) {
-            this.restore = Codegen.ofNullable(restore);
-            return this;
+
+        public Builder restore(Boolean restore) {
+            return restore(Output.of(restore));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sku(Output<ApiManagementServiceSkuPropertiesArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = virtualNetworkConfiguration;
+            $.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Codegen.ofNullable(virtualNetworkConfiguration);
-            return this;
+
+        public Builder virtualNetworkConfiguration(VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
+            return virtualNetworkConfiguration(Output.of(virtualNetworkConfiguration));
         }
+
         public Builder virtualNetworkType(@Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType) {
-            this.virtualNetworkType = virtualNetworkType;
+            $.virtualNetworkType = virtualNetworkType;
             return this;
         }
-        public Builder virtualNetworkType(@Nullable Either<String,VirtualNetworkType> virtualNetworkType) {
-            this.virtualNetworkType = Codegen.ofNullable(virtualNetworkType);
-            return this;
+
+        public Builder virtualNetworkType(Either<String,VirtualNetworkType> virtualNetworkType) {
+            return virtualNetworkType(Output.of(virtualNetworkType));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public ApiManagementServiceArgs build() {
-            return new ApiManagementServiceArgs(additionalLocations, apiVersionConstraint, certificates, customProperties, disableGateway, enableClientCertificate, hostnameConfigurations, identity, location, notificationSenderEmail, publisherEmail, publisherName, resourceGroupName, restore, serviceName, sku, tags, virtualNetworkConfiguration, virtualNetworkType, zones);
+        }
+
+        public ApiManagementServiceArgs build() {
+            $.disableGateway = Codegen.booleanProp("disableGateway").output().arg($.disableGateway).def(false).getNullable();
+            $.enableClientCertificate = Codegen.booleanProp("enableClientCertificate").output().arg($.enableClientCertificate).def(false).getNullable();
+            $.publisherEmail = Objects.requireNonNull($.publisherEmail, "expected parameter 'publisherEmail' to be non-null");
+            $.publisherName = Objects.requireNonNull($.publisherName, "expected parameter 'publisherName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.restore = Codegen.booleanProp("restore").output().arg($.restore).def(false).getNullable();
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            $.virtualNetworkType = Codegen.stringProp("virtualNetworkType").left(VirtualNetworkType.class).output().arg($.virtualNetworkType).def("None").getNullable();
+            return $;
         }
     }
+
 }

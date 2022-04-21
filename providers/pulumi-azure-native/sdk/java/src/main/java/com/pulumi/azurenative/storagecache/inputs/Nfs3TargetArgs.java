@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storagecache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class Nfs3TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class Nfs3TargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usageModel")
-      private final @Nullable Output<String> usageModel;
+    private @Nullable Output<String> usageModel;
 
-    public Output<String> usageModel() {
-        return this.usageModel == null ? Codegen.empty() : this.usageModel;
+    public Optional<Output<String>> usageModel() {
+        return Optional.ofNullable(this.usageModel);
     }
 
-    public Nfs3TargetArgs(
-        @Nullable Output<String> target,
-        @Nullable Output<String> usageModel) {
-        this.target = target;
-        this.usageModel = usageModel;
-    }
+    private Nfs3TargetArgs() {}
 
-    private Nfs3TargetArgs() {
-        this.target = Codegen.empty();
-        this.usageModel = Codegen.empty();
+    private Nfs3TargetArgs(Nfs3TargetArgs $) {
+        this.target = $.target;
+        this.usageModel = $.usageModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Nfs3TargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> target;
-        private @Nullable Output<String> usageModel;
+        private Nfs3TargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Nfs3TargetArgs();
         }
 
         public Builder(Nfs3TargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
-    	      this.usageModel = defaults.usageModel;
+            $ = new Nfs3TargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder usageModel(@Nullable Output<String> usageModel) {
-            this.usageModel = usageModel;
+            $.usageModel = usageModel;
             return this;
         }
-        public Builder usageModel(@Nullable String usageModel) {
-            this.usageModel = Codegen.ofNullable(usageModel);
-            return this;
-        }        public Nfs3TargetArgs build() {
-            return new Nfs3TargetArgs(target, usageModel);
+
+        public Builder usageModel(String usageModel) {
+            return usageModel(Output.of(usageModel));
+        }
+
+        public Nfs3TargetArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetMultiRegionAccessPointPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="mrapName", required=true)
-      private final String mrapName;
+    private String mrapName;
 
     public String mrapName() {
         return this.mrapName;
     }
 
-    public GetMultiRegionAccessPointPolicyArgs(String mrapName) {
-        this.mrapName = Objects.requireNonNull(mrapName, "expected parameter 'mrapName' to be non-null");
-    }
+    private GetMultiRegionAccessPointPolicyArgs() {}
 
-    private GetMultiRegionAccessPointPolicyArgs() {
-        this.mrapName = null;
+    private GetMultiRegionAccessPointPolicyArgs(GetMultiRegionAccessPointPolicyArgs $) {
+        this.mrapName = $.mrapName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMultiRegionAccessPointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mrapName;
+        private GetMultiRegionAccessPointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMultiRegionAccessPointPolicyArgs();
         }
 
         public Builder(GetMultiRegionAccessPointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mrapName = defaults.mrapName;
+            $ = new GetMultiRegionAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mrapName(String mrapName) {
-            this.mrapName = Objects.requireNonNull(mrapName);
+            $.mrapName = mrapName;
             return this;
-        }        public GetMultiRegionAccessPointPolicyArgs build() {
-            return new GetMultiRegionAccessPointPolicyArgs(mrapName);
+        }
+
+        public GetMultiRegionAccessPointPolicyArgs build() {
+            $.mrapName = Objects.requireNonNull($.mrapName, "expected parameter 'mrapName' to be non-null");
+            return $;
         }
     }
+
 }

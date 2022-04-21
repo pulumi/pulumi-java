@@ -6,10 +6,10 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceConfluenceAttachmentToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class DataSourceConfluenceAttachmentConfigurationArgs extends com.p
     public static final DataSourceConfluenceAttachmentConfigurationArgs Empty = new DataSourceConfluenceAttachmentConfigurationArgs();
 
     @Import(name="attachmentFieldMappings")
-      private final @Nullable Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings;
+    private @Nullable Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings;
 
-    public Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings() {
-        return this.attachmentFieldMappings == null ? Codegen.empty() : this.attachmentFieldMappings;
+    public Optional<Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>>> attachmentFieldMappings() {
+        return Optional.ofNullable(this.attachmentFieldMappings);
     }
 
     @Import(name="crawlAttachments")
-      private final @Nullable Output<Boolean> crawlAttachments;
+    private @Nullable Output<Boolean> crawlAttachments;
 
-    public Output<Boolean> crawlAttachments() {
-        return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
+    public Optional<Output<Boolean>> crawlAttachments() {
+        return Optional.ofNullable(this.crawlAttachments);
     }
 
-    public DataSourceConfluenceAttachmentConfigurationArgs(
-        @Nullable Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings,
-        @Nullable Output<Boolean> crawlAttachments) {
-        this.attachmentFieldMappings = attachmentFieldMappings;
-        this.crawlAttachments = crawlAttachments;
-    }
+    private DataSourceConfluenceAttachmentConfigurationArgs() {}
 
-    private DataSourceConfluenceAttachmentConfigurationArgs() {
-        this.attachmentFieldMappings = Codegen.empty();
-        this.crawlAttachments = Codegen.empty();
+    private DataSourceConfluenceAttachmentConfigurationArgs(DataSourceConfluenceAttachmentConfigurationArgs $) {
+        this.attachmentFieldMappings = $.attachmentFieldMappings;
+        this.crawlAttachments = $.crawlAttachments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceAttachmentConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings;
-        private @Nullable Output<Boolean> crawlAttachments;
+        private DataSourceConfluenceAttachmentConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceAttachmentConfigurationArgs();
         }
 
         public Builder(DataSourceConfluenceAttachmentConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentFieldMappings = defaults.attachmentFieldMappings;
-    	      this.crawlAttachments = defaults.crawlAttachments;
+            $ = new DataSourceConfluenceAttachmentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentFieldMappings(@Nullable Output<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings) {
-            this.attachmentFieldMappings = attachmentFieldMappings;
+            $.attachmentFieldMappings = attachmentFieldMappings;
             return this;
         }
-        public Builder attachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs> attachmentFieldMappings) {
-            this.attachmentFieldMappings = Codegen.ofNullable(attachmentFieldMappings);
-            return this;
+
+        public Builder attachmentFieldMappings(List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs> attachmentFieldMappings) {
+            return attachmentFieldMappings(Output.of(attachmentFieldMappings));
         }
+
         public Builder attachmentFieldMappings(DataSourceConfluenceAttachmentToIndexFieldMappingArgs... attachmentFieldMappings) {
             return attachmentFieldMappings(List.of(attachmentFieldMappings));
         }
+
         public Builder crawlAttachments(@Nullable Output<Boolean> crawlAttachments) {
-            this.crawlAttachments = crawlAttachments;
+            $.crawlAttachments = crawlAttachments;
             return this;
         }
-        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = Codegen.ofNullable(crawlAttachments);
-            return this;
-        }        public DataSourceConfluenceAttachmentConfigurationArgs build() {
-            return new DataSourceConfluenceAttachmentConfigurationArgs(attachmentFieldMappings, crawlAttachments);
+
+        public Builder crawlAttachments(Boolean crawlAttachments) {
+            return crawlAttachments(Output.of(crawlAttachments));
+        }
+
+        public DataSourceConfluenceAttachmentConfigurationArgs build() {
+            return $;
         }
     }
+
 }

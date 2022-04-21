@@ -16,10 +16,10 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="basePolicy")
-      private final @Nullable Output<SubResourceArgs> basePolicy;
+    private @Nullable Output<SubResourceArgs> basePolicy;
 
-    public Output<SubResourceArgs> basePolicy() {
-        return this.basePolicy == null ? Codegen.empty() : this.basePolicy;
+    public Optional<Output<SubResourceArgs>> basePolicy() {
+        return Optional.ofNullable(this.basePolicy);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable Output<DnsSettingsArgs> dnsSettings;
+    private @Nullable Output<DnsSettingsArgs> dnsSettings;
 
-    public Output<DnsSettingsArgs> dnsSettings() {
-        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
+    public Optional<Output<DnsSettingsArgs>> dnsSettings() {
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="firewallPolicyName")
-      private final @Nullable Output<String> firewallPolicyName;
+    private @Nullable Output<String> firewallPolicyName;
 
-    public Output<String> firewallPolicyName() {
-        return this.firewallPolicyName == null ? Codegen.empty() : this.firewallPolicyName;
+    public Optional<Output<String>> firewallPolicyName() {
+        return Optional.ofNullable(this.firewallPolicyName);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
+    private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="insights")
-      private final @Nullable Output<FirewallPolicyInsightsArgs> insights;
+    private @Nullable Output<FirewallPolicyInsightsArgs> insights;
 
-    public Output<FirewallPolicyInsightsArgs> insights() {
-        return this.insights == null ? Codegen.empty() : this.insights;
+    public Optional<Output<FirewallPolicyInsightsArgs>> insights() {
+        return Optional.ofNullable(this.insights);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="intrusionDetection")
-      private final @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
+    private @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
-    public Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection() {
-        return this.intrusionDetection == null ? Codegen.empty() : this.intrusionDetection;
+    public Optional<Output<FirewallPolicyIntrusionDetectionArgs>> intrusionDetection() {
+        return Optional.ofNullable(this.intrusionDetection);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -131,10 +131,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<FirewallPolicySkuArgs> sku;
+    private @Nullable Output<FirewallPolicySkuArgs> sku;
 
-    public Output<FirewallPolicySkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<FirewallPolicySkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="snat")
-      private final @Nullable Output<FirewallPolicySNATArgs> snat;
+    private @Nullable Output<FirewallPolicySNATArgs> snat;
 
-    public Output<FirewallPolicySNATArgs> snat() {
-        return this.snat == null ? Codegen.empty() : this.snat;
+    public Optional<Output<FirewallPolicySNATArgs>> snat() {
+        return Optional.ofNullable(this.snat);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelMode")
-      private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
+    private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
-    public Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode() {
-        return this.threatIntelMode == null ? Codegen.empty() : this.threatIntelMode;
+    public Optional<Output<Either<String,AzureFirewallThreatIntelMode>>> threatIntelMode() {
+        return Optional.ofNullable(this.threatIntelMode);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="threatIntelWhitelist")
-      private final @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
+    private @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
-    public Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist() {
-        return this.threatIntelWhitelist == null ? Codegen.empty() : this.threatIntelWhitelist;
+    public Optional<Output<FirewallPolicyThreatIntelWhitelistArgs>> threatIntelWhitelist() {
+        return Optional.ofNullable(this.threatIntelWhitelist);
     }
 
     /**
@@ -186,232 +186,189 @@ public final class FirewallPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="transportSecurity")
-      private final @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
+    private @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
-    public Output<FirewallPolicyTransportSecurityArgs> transportSecurity() {
-        return this.transportSecurity == null ? Codegen.empty() : this.transportSecurity;
+    public Optional<Output<FirewallPolicyTransportSecurityArgs>> transportSecurity() {
+        return Optional.ofNullable(this.transportSecurity);
     }
 
-    public FirewallPolicyArgs(
-        @Nullable Output<SubResourceArgs> basePolicy,
-        @Nullable Output<DnsSettingsArgs> dnsSettings,
-        @Nullable Output<String> firewallPolicyName,
-        @Nullable Output<String> id,
-        @Nullable Output<ManagedServiceIdentityArgs> identity,
-        @Nullable Output<FirewallPolicyInsightsArgs> insights,
-        @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<FirewallPolicySkuArgs> sku,
-        @Nullable Output<FirewallPolicySNATArgs> snat,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode,
-        @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist,
-        @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity) {
-        this.basePolicy = basePolicy;
-        this.dnsSettings = dnsSettings;
-        this.firewallPolicyName = firewallPolicyName;
-        this.id = id;
-        this.identity = identity;
-        this.insights = insights;
-        this.intrusionDetection = intrusionDetection;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.snat = snat;
-        this.tags = tags;
-        this.threatIntelMode = threatIntelMode;
-        this.threatIntelWhitelist = threatIntelWhitelist;
-        this.transportSecurity = transportSecurity;
-    }
+    private FirewallPolicyArgs() {}
 
-    private FirewallPolicyArgs() {
-        this.basePolicy = Codegen.empty();
-        this.dnsSettings = Codegen.empty();
-        this.firewallPolicyName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.insights = Codegen.empty();
-        this.intrusionDetection = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.snat = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.threatIntelMode = Codegen.empty();
-        this.threatIntelWhitelist = Codegen.empty();
-        this.transportSecurity = Codegen.empty();
+    private FirewallPolicyArgs(FirewallPolicyArgs $) {
+        this.basePolicy = $.basePolicy;
+        this.dnsSettings = $.dnsSettings;
+        this.firewallPolicyName = $.firewallPolicyName;
+        this.id = $.id;
+        this.identity = $.identity;
+        this.insights = $.insights;
+        this.intrusionDetection = $.intrusionDetection;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.snat = $.snat;
+        this.tags = $.tags;
+        this.threatIntelMode = $.threatIntelMode;
+        this.threatIntelWhitelist = $.threatIntelWhitelist;
+        this.transportSecurity = $.transportSecurity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> basePolicy;
-        private @Nullable Output<DnsSettingsArgs> dnsSettings;
-        private @Nullable Output<String> firewallPolicyName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<ManagedServiceIdentityArgs> identity;
-        private @Nullable Output<FirewallPolicyInsightsArgs> insights;
-        private @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<FirewallPolicySkuArgs> sku;
-        private @Nullable Output<FirewallPolicySNATArgs> snat;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
-        private @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
-        private @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
+        private FirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyArgs();
         }
 
         public Builder(FirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basePolicy = defaults.basePolicy;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.firewallPolicyName = defaults.firewallPolicyName;
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
-    	      this.insights = defaults.insights;
-    	      this.intrusionDetection = defaults.intrusionDetection;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.snat = defaults.snat;
-    	      this.tags = defaults.tags;
-    	      this.threatIntelMode = defaults.threatIntelMode;
-    	      this.threatIntelWhitelist = defaults.threatIntelWhitelist;
-    	      this.transportSecurity = defaults.transportSecurity;
+            $ = new FirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basePolicy(@Nullable Output<SubResourceArgs> basePolicy) {
-            this.basePolicy = basePolicy;
+            $.basePolicy = basePolicy;
             return this;
         }
-        public Builder basePolicy(@Nullable SubResourceArgs basePolicy) {
-            this.basePolicy = Codegen.ofNullable(basePolicy);
-            return this;
+
+        public Builder basePolicy(SubResourceArgs basePolicy) {
+            return basePolicy(Output.of(basePolicy));
         }
+
         public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
-        public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Codegen.ofNullable(dnsSettings);
-            return this;
+
+        public Builder dnsSettings(DnsSettingsArgs dnsSettings) {
+            return dnsSettings(Output.of(dnsSettings));
         }
+
         public Builder firewallPolicyName(@Nullable Output<String> firewallPolicyName) {
-            this.firewallPolicyName = firewallPolicyName;
+            $.firewallPolicyName = firewallPolicyName;
             return this;
         }
-        public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
-            this.firewallPolicyName = Codegen.ofNullable(firewallPolicyName);
-            return this;
+
+        public Builder firewallPolicyName(String firewallPolicyName) {
+            return firewallPolicyName(Output.of(firewallPolicyName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder insights(@Nullable Output<FirewallPolicyInsightsArgs> insights) {
-            this.insights = insights;
+            $.insights = insights;
             return this;
         }
-        public Builder insights(@Nullable FirewallPolicyInsightsArgs insights) {
-            this.insights = Codegen.ofNullable(insights);
-            return this;
+
+        public Builder insights(FirewallPolicyInsightsArgs insights) {
+            return insights(Output.of(insights));
         }
+
         public Builder intrusionDetection(@Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
-            this.intrusionDetection = intrusionDetection;
+            $.intrusionDetection = intrusionDetection;
             return this;
         }
-        public Builder intrusionDetection(@Nullable FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
-            this.intrusionDetection = Codegen.ofNullable(intrusionDetection);
-            return this;
+
+        public Builder intrusionDetection(FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
+            return intrusionDetection(Output.of(intrusionDetection));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<FirewallPolicySkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable FirewallPolicySkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(FirewallPolicySkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder snat(@Nullable Output<FirewallPolicySNATArgs> snat) {
-            this.snat = snat;
+            $.snat = snat;
             return this;
         }
-        public Builder snat(@Nullable FirewallPolicySNATArgs snat) {
-            this.snat = Codegen.ofNullable(snat);
-            return this;
+
+        public Builder snat(FirewallPolicySNATArgs snat) {
+            return snat(Output.of(snat));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder threatIntelMode(@Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
-            this.threatIntelMode = threatIntelMode;
+            $.threatIntelMode = threatIntelMode;
             return this;
         }
-        public Builder threatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
-            this.threatIntelMode = Codegen.ofNullable(threatIntelMode);
-            return this;
+
+        public Builder threatIntelMode(Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
+            return threatIntelMode(Output.of(threatIntelMode));
         }
+
         public Builder threatIntelWhitelist(@Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
-            this.threatIntelWhitelist = threatIntelWhitelist;
+            $.threatIntelWhitelist = threatIntelWhitelist;
             return this;
         }
-        public Builder threatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
-            this.threatIntelWhitelist = Codegen.ofNullable(threatIntelWhitelist);
-            return this;
+
+        public Builder threatIntelWhitelist(FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
+            return threatIntelWhitelist(Output.of(threatIntelWhitelist));
         }
+
         public Builder transportSecurity(@Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity) {
-            this.transportSecurity = transportSecurity;
+            $.transportSecurity = transportSecurity;
             return this;
         }
-        public Builder transportSecurity(@Nullable FirewallPolicyTransportSecurityArgs transportSecurity) {
-            this.transportSecurity = Codegen.ofNullable(transportSecurity);
-            return this;
-        }        public FirewallPolicyArgs build() {
-            return new FirewallPolicyArgs(basePolicy, dnsSettings, firewallPolicyName, id, identity, insights, intrusionDetection, location, resourceGroupName, sku, snat, tags, threatIntelMode, threatIntelWhitelist, transportSecurity);
+
+        public Builder transportSecurity(FirewallPolicyTransportSecurityArgs transportSecurity) {
+            return transportSecurity(Output.of(transportSecurity));
+        }
+
+        public FirewallPolicyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

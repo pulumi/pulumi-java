@@ -17,45 +17,45 @@ public final class GetIngestionSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ingestionSettingName", required=true)
-      private final String ingestionSettingName;
+    private String ingestionSettingName;
 
     public String ingestionSettingName() {
         return this.ingestionSettingName;
     }
 
-    public GetIngestionSettingArgs(String ingestionSettingName) {
-        this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName, "expected parameter 'ingestionSettingName' to be non-null");
-    }
+    private GetIngestionSettingArgs() {}
 
-    private GetIngestionSettingArgs() {
-        this.ingestionSettingName = null;
+    private GetIngestionSettingArgs(GetIngestionSettingArgs $) {
+        this.ingestionSettingName = $.ingestionSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIngestionSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ingestionSettingName;
+        private GetIngestionSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIngestionSettingArgs();
         }
 
         public Builder(GetIngestionSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestionSettingName = defaults.ingestionSettingName;
+            $ = new GetIngestionSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestionSettingName(String ingestionSettingName) {
-            this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
+            $.ingestionSettingName = ingestionSettingName;
             return this;
-        }        public GetIngestionSettingArgs build() {
-            return new GetIngestionSettingArgs(ingestionSettingName);
+        }
+
+        public GetIngestionSettingArgs build() {
+            $.ingestionSettingName = Objects.requireNonNull($.ingestionSettingName, "expected parameter 'ingestionSettingName' to be non-null");
+            return $;
         }
     }
+
 }

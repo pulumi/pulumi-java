@@ -22,7 +22,7 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="androidDevice", required=true)
-      private final AndroidDeviceResponse androidDevice;
+    private AndroidDeviceResponse androidDevice;
 
     public AndroidDeviceResponse androidDevice() {
         return this.androidDevice;
@@ -33,55 +33,52 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosDevice", required=true)
-      private final IosDeviceResponse iosDevice;
+    private IosDeviceResponse iosDevice;
 
     public IosDeviceResponse iosDevice() {
         return this.iosDevice;
     }
 
-    public EnvironmentResponse(
-        AndroidDeviceResponse androidDevice,
-        IosDeviceResponse iosDevice) {
-        this.androidDevice = Objects.requireNonNull(androidDevice, "expected parameter 'androidDevice' to be non-null");
-        this.iosDevice = Objects.requireNonNull(iosDevice, "expected parameter 'iosDevice' to be non-null");
-    }
+    private EnvironmentResponse() {}
 
-    private EnvironmentResponse() {
-        this.androidDevice = null;
-        this.iosDevice = null;
+    private EnvironmentResponse(EnvironmentResponse $) {
+        this.androidDevice = $.androidDevice;
+        this.iosDevice = $.iosDevice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AndroidDeviceResponse androidDevice;
-        private IosDeviceResponse iosDevice;
+        private EnvironmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentResponse();
         }
 
         public Builder(EnvironmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidDevice = defaults.androidDevice;
-    	      this.iosDevice = defaults.iosDevice;
+            $ = new EnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidDevice(AndroidDeviceResponse androidDevice) {
-            this.androidDevice = Objects.requireNonNull(androidDevice);
+            $.androidDevice = androidDevice;
             return this;
         }
+
         public Builder iosDevice(IosDeviceResponse iosDevice) {
-            this.iosDevice = Objects.requireNonNull(iosDevice);
+            $.iosDevice = iosDevice;
             return this;
-        }        public EnvironmentResponse build() {
-            return new EnvironmentResponse(androidDevice, iosDevice);
+        }
+
+        public EnvironmentResponse build() {
+            $.androidDevice = Objects.requireNonNull($.androidDevice, "expected parameter 'androidDevice' to be non-null");
+            $.iosDevice = Objects.requireNonNull($.iosDevice, "expected parameter 'iosDevice' to be non-null");
+            return $;
         }
     }
+
 }

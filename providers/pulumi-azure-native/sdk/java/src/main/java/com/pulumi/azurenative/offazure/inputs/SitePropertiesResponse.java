@@ -25,10 +25,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="agentDetails")
-      private final @Nullable SiteAgentPropertiesResponse agentDetails;
+    private @Nullable SiteAgentPropertiesResponse agentDetails;
 
     public Optional<SiteAgentPropertiesResponse> agentDetails() {
-        return this.agentDetails == null ? Optional.empty() : Optional.ofNullable(this.agentDetails);
+        return Optional.ofNullable(this.agentDetails);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="applianceName")
-      private final @Nullable String applianceName;
+    private @Nullable String applianceName;
 
     public Optional<String> applianceName() {
-        return this.applianceName == null ? Optional.empty() : Optional.ofNullable(this.applianceName);
+        return Optional.ofNullable(this.applianceName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="discoverySolutionId")
-      private final @Nullable String discoverySolutionId;
+    private @Nullable String discoverySolutionId;
 
     public Optional<String> discoverySolutionId() {
-        return this.discoverySolutionId == null ? Optional.empty() : Optional.ofNullable(this.discoverySolutionId);
+        return Optional.ofNullable(this.discoverySolutionId);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceEndpoint", required=true)
-      private final String serviceEndpoint;
+    private String serviceEndpoint;
 
     public String serviceEndpoint() {
         return this.serviceEndpoint;
@@ -69,82 +69,69 @@ public final class SitePropertiesResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="servicePrincipalIdentityDetails")
-      private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
+    private @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
     public Optional<SiteSpnPropertiesResponse> servicePrincipalIdentityDetails() {
-        return this.servicePrincipalIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalIdentityDetails);
+        return Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }
 
-    public SitePropertiesResponse(
-        @Nullable SiteAgentPropertiesResponse agentDetails,
-        @Nullable String applianceName,
-        @Nullable String discoverySolutionId,
-        String serviceEndpoint,
-        @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
-        this.agentDetails = agentDetails;
-        this.applianceName = applianceName;
-        this.discoverySolutionId = discoverySolutionId;
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
-        this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
-    }
+    private SitePropertiesResponse() {}
 
-    private SitePropertiesResponse() {
-        this.agentDetails = null;
-        this.applianceName = null;
-        this.discoverySolutionId = null;
-        this.serviceEndpoint = null;
-        this.servicePrincipalIdentityDetails = null;
+    private SitePropertiesResponse(SitePropertiesResponse $) {
+        this.agentDetails = $.agentDetails;
+        this.applianceName = $.applianceName;
+        this.discoverySolutionId = $.discoverySolutionId;
+        this.serviceEndpoint = $.serviceEndpoint;
+        this.servicePrincipalIdentityDetails = $.servicePrincipalIdentityDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SitePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SiteAgentPropertiesResponse agentDetails;
-        private @Nullable String applianceName;
-        private @Nullable String discoverySolutionId;
-        private String serviceEndpoint;
-        private @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
+        private SitePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SitePropertiesResponse();
         }
 
         public Builder(SitePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentDetails = defaults.agentDetails;
-    	      this.applianceName = defaults.applianceName;
-    	      this.discoverySolutionId = defaults.discoverySolutionId;
-    	      this.serviceEndpoint = defaults.serviceEndpoint;
-    	      this.servicePrincipalIdentityDetails = defaults.servicePrincipalIdentityDetails;
+            $ = new SitePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentDetails(@Nullable SiteAgentPropertiesResponse agentDetails) {
-            this.agentDetails = agentDetails;
+            $.agentDetails = agentDetails;
             return this;
         }
+
         public Builder applianceName(@Nullable String applianceName) {
-            this.applianceName = applianceName;
+            $.applianceName = applianceName;
             return this;
         }
+
         public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
-            this.discoverySolutionId = discoverySolutionId;
+            $.discoverySolutionId = discoverySolutionId;
             return this;
         }
+
         public Builder serviceEndpoint(String serviceEndpoint) {
-            this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
+            $.serviceEndpoint = serviceEndpoint;
             return this;
         }
+
         public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
-            this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
+            $.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
-        }        public SitePropertiesResponse build() {
-            return new SitePropertiesResponse(agentDetails, applianceName, discoverySolutionId, serviceEndpoint, servicePrincipalIdentityDetails);
+        }
+
+        public SitePropertiesResponse build() {
+            $.serviceEndpoint = Objects.requireNonNull($.serviceEndpoint, "expected parameter 'serviceEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

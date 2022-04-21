@@ -24,7 +24,7 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="connectResources", required=true)
-      private final List<ResourceManifestResponse> connectResources;
+    private List<ResourceManifestResponse> connectResources;
 
     public List<ResourceManifestResponse> connectResources() {
         return this.connectResources;
@@ -35,7 +35,7 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="membershipCrManifest", required=true)
-      private final String membershipCrManifest;
+    private String membershipCrManifest;
 
     public String membershipCrManifest() {
         return this.membershipCrManifest;
@@ -46,7 +46,7 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="membershipResources", required=true)
-      private final List<ResourceManifestResponse> membershipResources;
+    private List<ResourceManifestResponse> membershipResources;
 
     public List<ResourceManifestResponse> membershipResources() {
         return this.membershipResources;
@@ -57,79 +57,74 @@ public final class KubernetesResourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceOptions", required=true)
-      private final ResourceOptionsResponse resourceOptions;
+    private ResourceOptionsResponse resourceOptions;
 
     public ResourceOptionsResponse resourceOptions() {
         return this.resourceOptions;
     }
 
-    public KubernetesResourceResponse(
-        List<ResourceManifestResponse> connectResources,
-        String membershipCrManifest,
-        List<ResourceManifestResponse> membershipResources,
-        ResourceOptionsResponse resourceOptions) {
-        this.connectResources = Objects.requireNonNull(connectResources, "expected parameter 'connectResources' to be non-null");
-        this.membershipCrManifest = Objects.requireNonNull(membershipCrManifest, "expected parameter 'membershipCrManifest' to be non-null");
-        this.membershipResources = Objects.requireNonNull(membershipResources, "expected parameter 'membershipResources' to be non-null");
-        this.resourceOptions = Objects.requireNonNull(resourceOptions, "expected parameter 'resourceOptions' to be non-null");
-    }
+    private KubernetesResourceResponse() {}
 
-    private KubernetesResourceResponse() {
-        this.connectResources = List.of();
-        this.membershipCrManifest = null;
-        this.membershipResources = List.of();
-        this.resourceOptions = null;
+    private KubernetesResourceResponse(KubernetesResourceResponse $) {
+        this.connectResources = $.connectResources;
+        this.membershipCrManifest = $.membershipCrManifest;
+        this.membershipResources = $.membershipResources;
+        this.resourceOptions = $.resourceOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ResourceManifestResponse> connectResources;
-        private String membershipCrManifest;
-        private List<ResourceManifestResponse> membershipResources;
-        private ResourceOptionsResponse resourceOptions;
+        private KubernetesResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesResourceResponse();
         }
 
         public Builder(KubernetesResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectResources = defaults.connectResources;
-    	      this.membershipCrManifest = defaults.membershipCrManifest;
-    	      this.membershipResources = defaults.membershipResources;
-    	      this.resourceOptions = defaults.resourceOptions;
+            $ = new KubernetesResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectResources(List<ResourceManifestResponse> connectResources) {
-            this.connectResources = Objects.requireNonNull(connectResources);
+            $.connectResources = connectResources;
             return this;
         }
+
         public Builder connectResources(ResourceManifestResponse... connectResources) {
             return connectResources(List.of(connectResources));
         }
+
         public Builder membershipCrManifest(String membershipCrManifest) {
-            this.membershipCrManifest = Objects.requireNonNull(membershipCrManifest);
+            $.membershipCrManifest = membershipCrManifest;
             return this;
         }
+
         public Builder membershipResources(List<ResourceManifestResponse> membershipResources) {
-            this.membershipResources = Objects.requireNonNull(membershipResources);
+            $.membershipResources = membershipResources;
             return this;
         }
+
         public Builder membershipResources(ResourceManifestResponse... membershipResources) {
             return membershipResources(List.of(membershipResources));
         }
+
         public Builder resourceOptions(ResourceOptionsResponse resourceOptions) {
-            this.resourceOptions = Objects.requireNonNull(resourceOptions);
+            $.resourceOptions = resourceOptions;
             return this;
-        }        public KubernetesResourceResponse build() {
-            return new KubernetesResourceResponse(connectResources, membershipCrManifest, membershipResources, resourceOptions);
+        }
+
+        public KubernetesResourceResponse build() {
+            $.connectResources = Objects.requireNonNull($.connectResources, "expected parameter 'connectResources' to be non-null");
+            $.membershipCrManifest = Objects.requireNonNull($.membershipCrManifest, "expected parameter 'membershipCrManifest' to be non-null");
+            $.membershipResources = Objects.requireNonNull($.membershipResources, "expected parameter 'membershipResources' to be non-null");
+            $.resourceOptions = Objects.requireNonNull($.resourceOptions, "expected parameter 'resourceOptions' to be non-null");
+            return $;
         }
     }
+
 }

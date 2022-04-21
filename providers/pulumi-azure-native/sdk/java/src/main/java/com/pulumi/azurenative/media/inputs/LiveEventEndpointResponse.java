@@ -23,10 +23,10 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public LiveEventEndpointResponse(
-        @Nullable String protocol,
-        @Nullable String url) {
-        this.protocol = protocol;
-        this.url = url;
-    }
+    private LiveEventEndpointResponse() {}
 
-    private LiveEventEndpointResponse() {
-        this.protocol = null;
-        this.url = null;
+    private LiveEventEndpointResponse(LiveEventEndpointResponse $) {
+        this.protocol = $.protocol;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String protocol;
-        private @Nullable String url;
+        private LiveEventEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventEndpointResponse();
         }
 
         public Builder(LiveEventEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocol = defaults.protocol;
-    	      this.url = defaults.url;
+            $ = new LiveEventEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public LiveEventEndpointResponse build() {
-            return new LiveEventEndpointResponse(protocol, url);
+        }
+
+        public LiveEventEndpointResponse build() {
+            return $;
         }
     }
+
 }

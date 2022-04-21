@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs exten
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
+    private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
-    public VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
-        this.tls = tls;
-    }
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs() {}
 
-    private VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs() {
-        this.tls = Codegen.empty();
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs(VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs $) {
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
+        private VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs();
         }
 
         public Builder(VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tls = defaults.tls;
+            $ = new VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tls(@Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
-        }        public VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs build() {
-            return new VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs(tls);
+
+        public Builder tls(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs tls) {
+            return tls(Output.of(tls));
+        }
+
+        public VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

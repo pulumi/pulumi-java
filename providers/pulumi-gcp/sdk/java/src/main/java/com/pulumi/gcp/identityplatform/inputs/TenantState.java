@@ -5,10 +5,10 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TenantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowPasswordSignup")
-      private final @Nullable Output<Boolean> allowPasswordSignup;
+    private @Nullable Output<Boolean> allowPasswordSignup;
 
-    public Output<Boolean> allowPasswordSignup() {
-        return this.allowPasswordSignup == null ? Codegen.empty() : this.allowPasswordSignup;
+    public Optional<Output<Boolean>> allowPasswordSignup() {
+        return Optional.ofNullable(this.allowPasswordSignup);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TenantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableAuth")
-      private final @Nullable Output<Boolean> disableAuth;
+    private @Nullable Output<Boolean> disableAuth;
 
-    public Output<Boolean> disableAuth() {
-        return this.disableAuth == null ? Codegen.empty() : this.disableAuth;
+    public Optional<Output<Boolean>> disableAuth() {
+        return Optional.ofNullable(this.disableAuth);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TenantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TenantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableEmailLinkSignin")
-      private final @Nullable Output<Boolean> enableEmailLinkSignin;
+    private @Nullable Output<Boolean> enableEmailLinkSignin;
 
-    public Output<Boolean> enableEmailLinkSignin() {
-        return this.enableEmailLinkSignin == null ? Codegen.empty() : this.enableEmailLinkSignin;
+    public Optional<Output<Boolean>> enableEmailLinkSignin() {
+        return Optional.ofNullable(this.enableEmailLinkSignin);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TenantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class TenantState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public TenantState(
-        @Nullable Output<Boolean> allowPasswordSignup,
-        @Nullable Output<Boolean> disableAuth,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enableEmailLinkSignin,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.allowPasswordSignup = allowPasswordSignup;
-        this.disableAuth = disableAuth;
-        this.displayName = displayName;
-        this.enableEmailLinkSignin = enableEmailLinkSignin;
-        this.name = name;
-        this.project = project;
-    }
+    private TenantState() {}
 
-    private TenantState() {
-        this.allowPasswordSignup = Codegen.empty();
-        this.disableAuth = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableEmailLinkSignin = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private TenantState(TenantState $) {
+        this.allowPasswordSignup = $.allowPasswordSignup;
+        this.disableAuth = $.disableAuth;
+        this.displayName = $.displayName;
+        this.enableEmailLinkSignin = $.enableEmailLinkSignin;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowPasswordSignup;
-        private @Nullable Output<Boolean> disableAuth;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enableEmailLinkSignin;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private TenantState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantState();
         }
 
         public Builder(TenantState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPasswordSignup = defaults.allowPasswordSignup;
-    	      this.disableAuth = defaults.disableAuth;
-    	      this.displayName = defaults.displayName;
-    	      this.enableEmailLinkSignin = defaults.enableEmailLinkSignin;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new TenantState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPasswordSignup(@Nullable Output<Boolean> allowPasswordSignup) {
-            this.allowPasswordSignup = allowPasswordSignup;
+            $.allowPasswordSignup = allowPasswordSignup;
             return this;
         }
-        public Builder allowPasswordSignup(@Nullable Boolean allowPasswordSignup) {
-            this.allowPasswordSignup = Codegen.ofNullable(allowPasswordSignup);
-            return this;
+
+        public Builder allowPasswordSignup(Boolean allowPasswordSignup) {
+            return allowPasswordSignup(Output.of(allowPasswordSignup));
         }
+
         public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
-            this.disableAuth = disableAuth;
+            $.disableAuth = disableAuth;
             return this;
         }
-        public Builder disableAuth(@Nullable Boolean disableAuth) {
-            this.disableAuth = Codegen.ofNullable(disableAuth);
-            return this;
+
+        public Builder disableAuth(Boolean disableAuth) {
+            return disableAuth(Output.of(disableAuth));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableEmailLinkSignin(@Nullable Output<Boolean> enableEmailLinkSignin) {
-            this.enableEmailLinkSignin = enableEmailLinkSignin;
+            $.enableEmailLinkSignin = enableEmailLinkSignin;
             return this;
         }
-        public Builder enableEmailLinkSignin(@Nullable Boolean enableEmailLinkSignin) {
-            this.enableEmailLinkSignin = Codegen.ofNullable(enableEmailLinkSignin);
-            return this;
+
+        public Builder enableEmailLinkSignin(Boolean enableEmailLinkSignin) {
+            return enableEmailLinkSignin(Output.of(enableEmailLinkSignin));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public TenantState build() {
-            return new TenantState(allowPasswordSignup, disableAuth, displayName, enableEmailLinkSignin, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public TenantState build() {
+            return $;
         }
     }
+
 }

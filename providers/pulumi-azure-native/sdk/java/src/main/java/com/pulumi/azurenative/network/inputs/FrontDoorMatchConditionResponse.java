@@ -25,7 +25,7 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="matchValue", required=true)
-      private final List<String> matchValue;
+    private List<String> matchValue;
 
     public List<String> matchValue() {
         return this.matchValue;
@@ -36,7 +36,7 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="matchVariable", required=true)
-      private final String matchVariable;
+    private String matchVariable;
 
     public String matchVariable() {
         return this.matchVariable;
@@ -47,10 +47,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="negateCondition")
-      private final @Nullable Boolean negateCondition;
+    private @Nullable Boolean negateCondition;
 
     public Optional<Boolean> negateCondition() {
-        return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
+        return Optional.ofNullable(this.negateCondition);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -69,10 +69,10 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="selector")
-      private final @Nullable String selector;
+    private @Nullable String selector;
 
     public Optional<String> selector() {
-        return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -80,97 +80,85 @@ public final class FrontDoorMatchConditionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="transforms")
-      private final @Nullable List<String> transforms;
+    private @Nullable List<String> transforms;
 
-    public List<String> transforms() {
-        return this.transforms == null ? List.of() : this.transforms;
+    public Optional<List<String>> transforms() {
+        return Optional.ofNullable(this.transforms);
     }
 
-    public FrontDoorMatchConditionResponse(
-        List<String> matchValue,
-        String matchVariable,
-        @Nullable Boolean negateCondition,
-        String operator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
-        this.matchValue = Objects.requireNonNull(matchValue, "expected parameter 'matchValue' to be non-null");
-        this.matchVariable = Objects.requireNonNull(matchVariable, "expected parameter 'matchVariable' to be non-null");
-        this.negateCondition = negateCondition;
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.selector = selector;
-        this.transforms = transforms;
-    }
+    private FrontDoorMatchConditionResponse() {}
 
-    private FrontDoorMatchConditionResponse() {
-        this.matchValue = List.of();
-        this.matchVariable = null;
-        this.negateCondition = null;
-        this.operator = null;
-        this.selector = null;
-        this.transforms = List.of();
+    private FrontDoorMatchConditionResponse(FrontDoorMatchConditionResponse $) {
+        this.matchValue = $.matchValue;
+        this.matchVariable = $.matchVariable;
+        this.negateCondition = $.negateCondition;
+        this.operator = $.operator;
+        this.selector = $.selector;
+        this.transforms = $.transforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorMatchConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> matchValue;
-        private String matchVariable;
-        private @Nullable Boolean negateCondition;
-        private String operator;
-        private @Nullable String selector;
-        private @Nullable List<String> transforms;
+        private FrontDoorMatchConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorMatchConditionResponse();
         }
 
         public Builder(FrontDoorMatchConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchValue = defaults.matchValue;
-    	      this.matchVariable = defaults.matchVariable;
-    	      this.negateCondition = defaults.negateCondition;
-    	      this.operator = defaults.operator;
-    	      this.selector = defaults.selector;
-    	      this.transforms = defaults.transforms;
+            $ = new FrontDoorMatchConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder matchValue(List<String> matchValue) {
-            this.matchValue = Objects.requireNonNull(matchValue);
+            $.matchValue = matchValue;
             return this;
         }
+
         public Builder matchValue(String... matchValue) {
             return matchValue(List.of(matchValue));
         }
+
         public Builder matchVariable(String matchVariable) {
-            this.matchVariable = Objects.requireNonNull(matchVariable);
+            $.matchVariable = matchVariable;
             return this;
         }
+
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = negateCondition;
+            $.negateCondition = negateCondition;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder selector(@Nullable String selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
+
         public Builder transforms(@Nullable List<String> transforms) {
-            this.transforms = transforms;
+            $.transforms = transforms;
             return this;
         }
+
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
-        }        public FrontDoorMatchConditionResponse build() {
-            return new FrontDoorMatchConditionResponse(matchValue, matchVariable, negateCondition, operator, selector, transforms);
+        }
+
+        public FrontDoorMatchConditionResponse build() {
+            $.matchValue = Objects.requireNonNull($.matchValue, "expected parameter 'matchValue' to be non-null");
+            $.matchVariable = Objects.requireNonNull($.matchVariable, "expected parameter 'matchVariable' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs();
 
     @Import(name="referenceId")
-      private final @Nullable Output<String> referenceId;
+    private @Nullable Output<String> referenceId;
 
-    public Output<String> referenceId() {
-        return this.referenceId == null ? Codegen.empty() : this.referenceId;
+    public Optional<Output<String>> referenceId() {
+        return Optional.ofNullable(this.referenceId);
     }
 
     /**
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="referenceSchema", required=true)
-      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs> referenceSchema;
+    private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs> referenceSchema;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs> referenceSchema() {
         return this.referenceSchema;
@@ -40,7 +40,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="s3ReferenceDataSource", required=true)
-      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs> s3ReferenceDataSource;
+    private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs> s3ReferenceDataSource;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs> s3ReferenceDataSource() {
         return this.s3ReferenceDataSource;
@@ -51,89 +51,81 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs(
-        @Nullable Output<String> referenceId,
-        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs> referenceSchema,
-        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs> s3ReferenceDataSource,
-        Output<String> tableName) {
-        this.referenceId = referenceId;
-        this.referenceSchema = Objects.requireNonNull(referenceSchema, "expected parameter 'referenceSchema' to be non-null");
-        this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource, "expected parameter 's3ReferenceDataSource' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs() {
-        this.referenceId = Codegen.empty();
-        this.referenceSchema = Codegen.empty();
-        this.s3ReferenceDataSource = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs $) {
+        this.referenceId = $.referenceId;
+        this.referenceSchema = $.referenceSchema;
+        this.s3ReferenceDataSource = $.s3ReferenceDataSource;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> referenceId;
-        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs> referenceSchema;
-        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs> s3ReferenceDataSource;
-        private Output<String> tableName;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceId = defaults.referenceId;
-    	      this.referenceSchema = defaults.referenceSchema;
-    	      this.s3ReferenceDataSource = defaults.s3ReferenceDataSource;
-    	      this.tableName = defaults.tableName;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceId(@Nullable Output<String> referenceId) {
-            this.referenceId = referenceId;
+            $.referenceId = referenceId;
             return this;
         }
-        public Builder referenceId(@Nullable String referenceId) {
-            this.referenceId = Codegen.ofNullable(referenceId);
-            return this;
+
+        public Builder referenceId(String referenceId) {
+            return referenceId(Output.of(referenceId));
         }
+
         public Builder referenceSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs> referenceSchema) {
-            this.referenceSchema = Objects.requireNonNull(referenceSchema);
+            $.referenceSchema = referenceSchema;
             return this;
         }
+
         public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs referenceSchema) {
-            this.referenceSchema = Output.of(Objects.requireNonNull(referenceSchema));
-            return this;
+            return referenceSchema(Output.of(referenceSchema));
         }
+
         public Builder s3ReferenceDataSource(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs> s3ReferenceDataSource) {
-            this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
+            $.s3ReferenceDataSource = s3ReferenceDataSource;
             return this;
         }
+
         public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs s3ReferenceDataSource) {
-            this.s3ReferenceDataSource = Output.of(Objects.requireNonNull(s3ReferenceDataSource));
-            return this;
+            return s3ReferenceDataSource(Output.of(s3ReferenceDataSource));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs(referenceId, referenceSchema, s3ReferenceDataSource, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs build() {
+            $.referenceSchema = Objects.requireNonNull($.referenceSchema, "expected parameter 'referenceSchema' to be non-null");
+            $.s3ReferenceDataSource = Objects.requireNonNull($.s3ReferenceDataSource, "expected parameter 's3ReferenceDataSource' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

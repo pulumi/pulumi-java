@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.enums.PassNames;
 import com.pulumi.azurenative.compute.enums.SettingNames;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="componentName")
-      private final @Nullable Output<ComponentNames> componentName;
+    private @Nullable Output<ComponentNames> componentName;
 
-    public Output<ComponentNames> componentName() {
-        return this.componentName == null ? Codegen.empty() : this.componentName;
+    public Optional<Output<ComponentNames>> componentName() {
+        return Optional.ofNullable(this.componentName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="passName")
-      private final @Nullable Output<PassNames> passName;
+    private @Nullable Output<PassNames> passName;
 
-    public Output<PassNames> passName() {
-        return this.passName == null ? Codegen.empty() : this.passName;
+    public Optional<Output<PassNames>> passName() {
+        return Optional.ofNullable(this.passName);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class AdditionalUnattendContentArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="settingName")
-      private final @Nullable Output<SettingNames> settingName;
+    private @Nullable Output<SettingNames> settingName;
 
-    public Output<SettingNames> settingName() {
-        return this.settingName == null ? Codegen.empty() : this.settingName;
+    public Optional<Output<SettingNames>> settingName() {
+        return Optional.ofNullable(this.settingName);
     }
 
-    public AdditionalUnattendContentArgs(
-        @Nullable Output<ComponentNames> componentName,
-        @Nullable Output<String> content,
-        @Nullable Output<PassNames> passName,
-        @Nullable Output<SettingNames> settingName) {
-        this.componentName = componentName;
-        this.content = content;
-        this.passName = passName;
-        this.settingName = settingName;
-    }
+    private AdditionalUnattendContentArgs() {}
 
-    private AdditionalUnattendContentArgs() {
-        this.componentName = Codegen.empty();
-        this.content = Codegen.empty();
-        this.passName = Codegen.empty();
-        this.settingName = Codegen.empty();
+    private AdditionalUnattendContentArgs(AdditionalUnattendContentArgs $) {
+        this.componentName = $.componentName;
+        this.content = $.content;
+        this.passName = $.passName;
+        this.settingName = $.settingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalUnattendContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ComponentNames> componentName;
-        private @Nullable Output<String> content;
-        private @Nullable Output<PassNames> passName;
-        private @Nullable Output<SettingNames> settingName;
+        private AdditionalUnattendContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalUnattendContentArgs();
         }
 
         public Builder(AdditionalUnattendContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentName = defaults.componentName;
-    	      this.content = defaults.content;
-    	      this.passName = defaults.passName;
-    	      this.settingName = defaults.settingName;
+            $ = new AdditionalUnattendContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentName(@Nullable Output<ComponentNames> componentName) {
-            this.componentName = componentName;
+            $.componentName = componentName;
             return this;
         }
-        public Builder componentName(@Nullable ComponentNames componentName) {
-            this.componentName = Codegen.ofNullable(componentName);
-            return this;
+
+        public Builder componentName(ComponentNames componentName) {
+            return componentName(Output.of(componentName));
         }
+
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder passName(@Nullable Output<PassNames> passName) {
-            this.passName = passName;
+            $.passName = passName;
             return this;
         }
-        public Builder passName(@Nullable PassNames passName) {
-            this.passName = Codegen.ofNullable(passName);
-            return this;
+
+        public Builder passName(PassNames passName) {
+            return passName(Output.of(passName));
         }
+
         public Builder settingName(@Nullable Output<SettingNames> settingName) {
-            this.settingName = settingName;
+            $.settingName = settingName;
             return this;
         }
-        public Builder settingName(@Nullable SettingNames settingName) {
-            this.settingName = Codegen.ofNullable(settingName);
-            return this;
-        }        public AdditionalUnattendContentArgs build() {
-            return new AdditionalUnattendContentArgs(componentName, content, passName, settingName);
+
+        public Builder settingName(SettingNames settingName) {
+            return settingName(Output.of(settingName));
+        }
+
+        public AdditionalUnattendContentArgs build() {
+            return $;
         }
     }
+
 }

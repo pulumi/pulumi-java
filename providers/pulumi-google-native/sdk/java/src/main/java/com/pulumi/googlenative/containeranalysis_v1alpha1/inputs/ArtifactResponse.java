@@ -22,7 +22,7 @@ public final class ArtifactResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="checksum", required=true)
-      private final String checksum;
+    private String checksum;
 
     public String checksum() {
         return this.checksum;
@@ -33,58 +33,56 @@ public final class ArtifactResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="names", required=true)
-      private final List<String> names;
+    private List<String> names;
 
     public List<String> names() {
         return this.names;
     }
 
-    public ArtifactResponse(
-        String checksum,
-        List<String> names) {
-        this.checksum = Objects.requireNonNull(checksum, "expected parameter 'checksum' to be non-null");
-        this.names = Objects.requireNonNull(names, "expected parameter 'names' to be non-null");
-    }
+    private ArtifactResponse() {}
 
-    private ArtifactResponse() {
-        this.checksum = null;
-        this.names = List.of();
+    private ArtifactResponse(ArtifactResponse $) {
+        this.checksum = $.checksum;
+        this.names = $.names;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String checksum;
-        private List<String> names;
+        private ArtifactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactResponse();
         }
 
         public Builder(ArtifactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.names = defaults.names;
+            $ = new ArtifactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(String checksum) {
-            this.checksum = Objects.requireNonNull(checksum);
+            $.checksum = checksum;
             return this;
         }
+
         public Builder names(List<String> names) {
-            this.names = Objects.requireNonNull(names);
+            $.names = names;
             return this;
         }
+
         public Builder names(String... names) {
             return names(List.of(names));
-        }        public ArtifactResponse build() {
-            return new ArtifactResponse(checksum, names);
+        }
+
+        public ArtifactResponse build() {
+            $.checksum = Objects.requireNonNull($.checksum, "expected parameter 'checksum' to be non-null");
+            $.names = Objects.requireNonNull($.names, "expected parameter 'names' to be non-null");
+            return $;
         }
     }
+
 }

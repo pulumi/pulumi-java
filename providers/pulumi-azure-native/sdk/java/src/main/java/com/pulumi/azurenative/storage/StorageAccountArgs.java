@@ -20,11 +20,11 @@ import com.pulumi.azurenative.storage.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +37,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accessTier")
-      private final @Nullable Output<AccessTier> accessTier;
+    private @Nullable Output<AccessTier> accessTier;
 
-    public Output<AccessTier> accessTier() {
-        return this.accessTier == null ? Codegen.empty() : this.accessTier;
+    public Optional<Output<AccessTier>> accessTier() {
+        return Optional.ofNullable(this.accessTier);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowBlobPublicAccess")
-      private final @Nullable Output<Boolean> allowBlobPublicAccess;
+    private @Nullable Output<Boolean> allowBlobPublicAccess;
 
-    public Output<Boolean> allowBlobPublicAccess() {
-        return this.allowBlobPublicAccess == null ? Codegen.empty() : this.allowBlobPublicAccess;
+    public Optional<Output<Boolean>> allowBlobPublicAccess() {
+        return Optional.ofNullable(this.allowBlobPublicAccess);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="allowSharedKeyAccess")
-      private final @Nullable Output<Boolean> allowSharedKeyAccess;
+    private @Nullable Output<Boolean> allowSharedKeyAccess;
 
-    public Output<Boolean> allowSharedKeyAccess() {
-        return this.allowSharedKeyAccess == null ? Codegen.empty() : this.allowSharedKeyAccess;
+    public Optional<Output<Boolean>> allowSharedKeyAccess() {
+        return Optional.ofNullable(this.allowSharedKeyAccess);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="azureFilesIdentityBasedAuthentication")
-      private final @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
+    private @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
 
-    public Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication() {
-        return this.azureFilesIdentityBasedAuthentication == null ? Codegen.empty() : this.azureFilesIdentityBasedAuthentication;
+    public Optional<Output<AzureFilesIdentityBasedAuthenticationArgs>> azureFilesIdentityBasedAuthentication() {
+        return Optional.ofNullable(this.azureFilesIdentityBasedAuthentication);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customDomain")
-      private final @Nullable Output<CustomDomainArgs> customDomain;
+    private @Nullable Output<CustomDomainArgs> customDomain;
 
-    public Output<CustomDomainArgs> customDomain() {
-        return this.customDomain == null ? Codegen.empty() : this.customDomain;
+    public Optional<Output<CustomDomainArgs>> customDomain() {
+        return Optional.ofNullable(this.customDomain);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableHttpsTrafficOnly")
-      private final @Nullable Output<Boolean> enableHttpsTrafficOnly;
+    private @Nullable Output<Boolean> enableHttpsTrafficOnly;
 
-    public Output<Boolean> enableHttpsTrafficOnly() {
-        return this.enableHttpsTrafficOnly == null ? Codegen.empty() : this.enableHttpsTrafficOnly;
+    public Optional<Output<Boolean>> enableHttpsTrafficOnly() {
+        return Optional.ofNullable(this.enableHttpsTrafficOnly);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableNfsV3")
-      private final @Nullable Output<Boolean> enableNfsV3;
+    private @Nullable Output<Boolean> enableNfsV3;
 
-    public Output<Boolean> enableNfsV3() {
-        return this.enableNfsV3 == null ? Codegen.empty() : this.enableNfsV3;
+    public Optional<Output<Boolean>> enableNfsV3() {
+        return Optional.ofNullable(this.enableNfsV3);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionArgs> encryption;
+    private @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isHnsEnabled")
-      private final @Nullable Output<Boolean> isHnsEnabled;
+    private @Nullable Output<Boolean> isHnsEnabled;
 
-    public Output<Boolean> isHnsEnabled() {
-        return this.isHnsEnabled == null ? Codegen.empty() : this.isHnsEnabled;
+    public Optional<Output<Boolean>> isHnsEnabled() {
+        return Optional.ofNullable(this.isHnsEnabled);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyPolicy")
-      private final @Nullable Output<KeyPolicyArgs> keyPolicy;
+    private @Nullable Output<KeyPolicyArgs> keyPolicy;
 
-    public Output<KeyPolicyArgs> keyPolicy() {
-        return this.keyPolicy == null ? Codegen.empty() : this.keyPolicy;
+    public Optional<Output<KeyPolicyArgs>> keyPolicy() {
+        return Optional.ofNullable(this.keyPolicy);
     }
 
     /**
@@ -180,7 +180,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,Kind>> kind;
+    private Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> kind() {
         return this.kind;
@@ -191,10 +191,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="largeFileSharesState")
-      private final @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
+    private @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
 
-    public Output<Either<String,LargeFileSharesState>> largeFileSharesState() {
-        return this.largeFileSharesState == null ? Codegen.empty() : this.largeFileSharesState;
+    public Optional<Output<Either<String,LargeFileSharesState>>> largeFileSharesState() {
+        return Optional.ofNullable(this.largeFileSharesState);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minimumTlsVersion")
-      private final @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
+    private @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
 
-    public Output<Either<String,MinimumTlsVersion>> minimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
+    public Optional<Output<Either<String,MinimumTlsVersion>>> minimumTlsVersion() {
+        return Optional.ofNullable(this.minimumTlsVersion);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkRuleSet")
-      private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
+    private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Output<NetworkRuleSetArgs> networkRuleSet() {
-        return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
+    public Optional<Output<NetworkRuleSetArgs>> networkRuleSet() {
+        return Optional.ofNullable(this.networkRuleSet);
     }
 
     /**
@@ -235,7 +235,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -246,10 +246,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="routingPreference")
-      private final @Nullable Output<RoutingPreferenceArgs> routingPreference;
+    private @Nullable Output<RoutingPreferenceArgs> routingPreference;
 
-    public Output<RoutingPreferenceArgs> routingPreference() {
-        return this.routingPreference == null ? Codegen.empty() : this.routingPreference;
+    public Optional<Output<RoutingPreferenceArgs>> routingPreference() {
+        return Optional.ofNullable(this.routingPreference);
     }
 
     /**
@@ -257,10 +257,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sasPolicy")
-      private final @Nullable Output<SasPolicyArgs> sasPolicy;
+    private @Nullable Output<SasPolicyArgs> sasPolicy;
 
-    public Output<SasPolicyArgs> sasPolicy() {
-        return this.sasPolicy == null ? Codegen.empty() : this.sasPolicy;
+    public Optional<Output<SasPolicyArgs>> sasPolicy() {
+        return Optional.ofNullable(this.sasPolicy);
     }
 
     /**
@@ -268,7 +268,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -279,336 +279,271 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StorageAccountArgs(
-        @Nullable Output<AccessTier> accessTier,
-        @Nullable Output<String> accountName,
-        @Nullable Output<Boolean> allowBlobPublicAccess,
-        @Nullable Output<Boolean> allowSharedKeyAccess,
-        @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication,
-        @Nullable Output<CustomDomainArgs> customDomain,
-        @Nullable Output<Boolean> enableHttpsTrafficOnly,
-        @Nullable Output<Boolean> enableNfsV3,
-        @Nullable Output<EncryptionArgs> encryption,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<Boolean> isHnsEnabled,
-        @Nullable Output<KeyPolicyArgs> keyPolicy,
-        Output<Either<String,Kind>> kind,
-        @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion,
-        @Nullable Output<NetworkRuleSetArgs> networkRuleSet,
-        Output<String> resourceGroupName,
-        @Nullable Output<RoutingPreferenceArgs> routingPreference,
-        @Nullable Output<SasPolicyArgs> sasPolicy,
-        Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accessTier = accessTier;
-        this.accountName = accountName;
-        this.allowBlobPublicAccess = allowBlobPublicAccess;
-        this.allowSharedKeyAccess = allowSharedKeyAccess;
-        this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
-        this.customDomain = customDomain;
-        this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
-        this.enableNfsV3 = enableNfsV3;
-        this.encryption = encryption;
-        this.extendedLocation = extendedLocation;
-        this.identity = identity;
-        this.isHnsEnabled = isHnsEnabled;
-        this.keyPolicy = keyPolicy;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.largeFileSharesState = largeFileSharesState;
-        this.location = location;
-        this.minimumTlsVersion = minimumTlsVersion;
-        this.networkRuleSet = networkRuleSet;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routingPreference = routingPreference;
-        this.sasPolicy = sasPolicy;
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-    }
+    private StorageAccountArgs() {}
 
-    private StorageAccountArgs() {
-        this.accessTier = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.allowBlobPublicAccess = Codegen.empty();
-        this.allowSharedKeyAccess = Codegen.empty();
-        this.azureFilesIdentityBasedAuthentication = Codegen.empty();
-        this.customDomain = Codegen.empty();
-        this.enableHttpsTrafficOnly = Codegen.empty();
-        this.enableNfsV3 = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.isHnsEnabled = Codegen.empty();
-        this.keyPolicy = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.largeFileSharesState = Codegen.empty();
-        this.location = Codegen.empty();
-        this.minimumTlsVersion = Codegen.empty();
-        this.networkRuleSet = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routingPreference = Codegen.empty();
-        this.sasPolicy = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StorageAccountArgs(StorageAccountArgs $) {
+        this.accessTier = $.accessTier;
+        this.accountName = $.accountName;
+        this.allowBlobPublicAccess = $.allowBlobPublicAccess;
+        this.allowSharedKeyAccess = $.allowSharedKeyAccess;
+        this.azureFilesIdentityBasedAuthentication = $.azureFilesIdentityBasedAuthentication;
+        this.customDomain = $.customDomain;
+        this.enableHttpsTrafficOnly = $.enableHttpsTrafficOnly;
+        this.enableNfsV3 = $.enableNfsV3;
+        this.encryption = $.encryption;
+        this.extendedLocation = $.extendedLocation;
+        this.identity = $.identity;
+        this.isHnsEnabled = $.isHnsEnabled;
+        this.keyPolicy = $.keyPolicy;
+        this.kind = $.kind;
+        this.largeFileSharesState = $.largeFileSharesState;
+        this.location = $.location;
+        this.minimumTlsVersion = $.minimumTlsVersion;
+        this.networkRuleSet = $.networkRuleSet;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routingPreference = $.routingPreference;
+        this.sasPolicy = $.sasPolicy;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccessTier> accessTier;
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<Boolean> allowBlobPublicAccess;
-        private @Nullable Output<Boolean> allowSharedKeyAccess;
-        private @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
-        private @Nullable Output<CustomDomainArgs> customDomain;
-        private @Nullable Output<Boolean> enableHttpsTrafficOnly;
-        private @Nullable Output<Boolean> enableNfsV3;
-        private @Nullable Output<EncryptionArgs> encryption;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<Boolean> isHnsEnabled;
-        private @Nullable Output<KeyPolicyArgs> keyPolicy;
-        private Output<Either<String,Kind>> kind;
-        private @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
-        private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<RoutingPreferenceArgs> routingPreference;
-        private @Nullable Output<SasPolicyArgs> sasPolicy;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private StorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountArgs();
         }
 
         public Builder(StorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTier = defaults.accessTier;
-    	      this.accountName = defaults.accountName;
-    	      this.allowBlobPublicAccess = defaults.allowBlobPublicAccess;
-    	      this.allowSharedKeyAccess = defaults.allowSharedKeyAccess;
-    	      this.azureFilesIdentityBasedAuthentication = defaults.azureFilesIdentityBasedAuthentication;
-    	      this.customDomain = defaults.customDomain;
-    	      this.enableHttpsTrafficOnly = defaults.enableHttpsTrafficOnly;
-    	      this.enableNfsV3 = defaults.enableNfsV3;
-    	      this.encryption = defaults.encryption;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.identity = defaults.identity;
-    	      this.isHnsEnabled = defaults.isHnsEnabled;
-    	      this.keyPolicy = defaults.keyPolicy;
-    	      this.kind = defaults.kind;
-    	      this.largeFileSharesState = defaults.largeFileSharesState;
-    	      this.location = defaults.location;
-    	      this.minimumTlsVersion = defaults.minimumTlsVersion;
-    	      this.networkRuleSet = defaults.networkRuleSet;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routingPreference = defaults.routingPreference;
-    	      this.sasPolicy = defaults.sasPolicy;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTier(@Nullable Output<AccessTier> accessTier) {
-            this.accessTier = accessTier;
+            $.accessTier = accessTier;
             return this;
         }
-        public Builder accessTier(@Nullable AccessTier accessTier) {
-            this.accessTier = Codegen.ofNullable(accessTier);
-            return this;
+
+        public Builder accessTier(AccessTier accessTier) {
+            return accessTier(Output.of(accessTier));
         }
+
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder allowBlobPublicAccess(@Nullable Output<Boolean> allowBlobPublicAccess) {
-            this.allowBlobPublicAccess = allowBlobPublicAccess;
+            $.allowBlobPublicAccess = allowBlobPublicAccess;
             return this;
         }
-        public Builder allowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
-            this.allowBlobPublicAccess = Codegen.ofNullable(allowBlobPublicAccess);
-            return this;
+
+        public Builder allowBlobPublicAccess(Boolean allowBlobPublicAccess) {
+            return allowBlobPublicAccess(Output.of(allowBlobPublicAccess));
         }
+
         public Builder allowSharedKeyAccess(@Nullable Output<Boolean> allowSharedKeyAccess) {
-            this.allowSharedKeyAccess = allowSharedKeyAccess;
+            $.allowSharedKeyAccess = allowSharedKeyAccess;
             return this;
         }
-        public Builder allowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
-            this.allowSharedKeyAccess = Codegen.ofNullable(allowSharedKeyAccess);
-            return this;
+
+        public Builder allowSharedKeyAccess(Boolean allowSharedKeyAccess) {
+            return allowSharedKeyAccess(Output.of(allowSharedKeyAccess));
         }
+
         public Builder azureFilesIdentityBasedAuthentication(@Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication) {
-            this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
+            $.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
             return this;
         }
-        public Builder azureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
-            this.azureFilesIdentityBasedAuthentication = Codegen.ofNullable(azureFilesIdentityBasedAuthentication);
-            return this;
+
+        public Builder azureFilesIdentityBasedAuthentication(AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
+            return azureFilesIdentityBasedAuthentication(Output.of(azureFilesIdentityBasedAuthentication));
         }
+
         public Builder customDomain(@Nullable Output<CustomDomainArgs> customDomain) {
-            this.customDomain = customDomain;
+            $.customDomain = customDomain;
             return this;
         }
-        public Builder customDomain(@Nullable CustomDomainArgs customDomain) {
-            this.customDomain = Codegen.ofNullable(customDomain);
-            return this;
+
+        public Builder customDomain(CustomDomainArgs customDomain) {
+            return customDomain(Output.of(customDomain));
         }
+
         public Builder enableHttpsTrafficOnly(@Nullable Output<Boolean> enableHttpsTrafficOnly) {
-            this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
+            $.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
             return this;
         }
-        public Builder enableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
-            this.enableHttpsTrafficOnly = Codegen.ofNullable(enableHttpsTrafficOnly);
-            return this;
+
+        public Builder enableHttpsTrafficOnly(Boolean enableHttpsTrafficOnly) {
+            return enableHttpsTrafficOnly(Output.of(enableHttpsTrafficOnly));
         }
+
         public Builder enableNfsV3(@Nullable Output<Boolean> enableNfsV3) {
-            this.enableNfsV3 = enableNfsV3;
+            $.enableNfsV3 = enableNfsV3;
             return this;
         }
-        public Builder enableNfsV3(@Nullable Boolean enableNfsV3) {
-            this.enableNfsV3 = Codegen.ofNullable(enableNfsV3);
-            return this;
+
+        public Builder enableNfsV3(Boolean enableNfsV3) {
+            return enableNfsV3(Output.of(enableNfsV3));
         }
+
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder isHnsEnabled(@Nullable Output<Boolean> isHnsEnabled) {
-            this.isHnsEnabled = isHnsEnabled;
+            $.isHnsEnabled = isHnsEnabled;
             return this;
         }
-        public Builder isHnsEnabled(@Nullable Boolean isHnsEnabled) {
-            this.isHnsEnabled = Codegen.ofNullable(isHnsEnabled);
-            return this;
+
+        public Builder isHnsEnabled(Boolean isHnsEnabled) {
+            return isHnsEnabled(Output.of(isHnsEnabled));
         }
+
         public Builder keyPolicy(@Nullable Output<KeyPolicyArgs> keyPolicy) {
-            this.keyPolicy = keyPolicy;
+            $.keyPolicy = keyPolicy;
             return this;
         }
-        public Builder keyPolicy(@Nullable KeyPolicyArgs keyPolicy) {
-            this.keyPolicy = Codegen.ofNullable(keyPolicy);
-            return this;
+
+        public Builder keyPolicy(KeyPolicyArgs keyPolicy) {
+            return keyPolicy(Output.of(keyPolicy));
         }
+
         public Builder kind(Output<Either<String,Kind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,Kind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder largeFileSharesState(@Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState) {
-            this.largeFileSharesState = largeFileSharesState;
+            $.largeFileSharesState = largeFileSharesState;
             return this;
         }
-        public Builder largeFileSharesState(@Nullable Either<String,LargeFileSharesState> largeFileSharesState) {
-            this.largeFileSharesState = Codegen.ofNullable(largeFileSharesState);
-            return this;
+
+        public Builder largeFileSharesState(Either<String,LargeFileSharesState> largeFileSharesState) {
+            return largeFileSharesState(Output.of(largeFileSharesState));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder minimumTlsVersion(@Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion) {
-            this.minimumTlsVersion = minimumTlsVersion;
+            $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
-        public Builder minimumTlsVersion(@Nullable Either<String,MinimumTlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
-            return this;
+
+        public Builder minimumTlsVersion(Either<String,MinimumTlsVersion> minimumTlsVersion) {
+            return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
+
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
-            this.networkRuleSet = networkRuleSet;
+            $.networkRuleSet = networkRuleSet;
             return this;
         }
-        public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Codegen.ofNullable(networkRuleSet);
-            return this;
+
+        public Builder networkRuleSet(NetworkRuleSetArgs networkRuleSet) {
+            return networkRuleSet(Output.of(networkRuleSet));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routingPreference(@Nullable Output<RoutingPreferenceArgs> routingPreference) {
-            this.routingPreference = routingPreference;
+            $.routingPreference = routingPreference;
             return this;
         }
-        public Builder routingPreference(@Nullable RoutingPreferenceArgs routingPreference) {
-            this.routingPreference = Codegen.ofNullable(routingPreference);
-            return this;
+
+        public Builder routingPreference(RoutingPreferenceArgs routingPreference) {
+            return routingPreference(Output.of(routingPreference));
         }
+
         public Builder sasPolicy(@Nullable Output<SasPolicyArgs> sasPolicy) {
-            this.sasPolicy = sasPolicy;
+            $.sasPolicy = sasPolicy;
             return this;
         }
-        public Builder sasPolicy(@Nullable SasPolicyArgs sasPolicy) {
-            this.sasPolicy = Codegen.ofNullable(sasPolicy);
-            return this;
+
+        public Builder sasPolicy(SasPolicyArgs sasPolicy) {
+            return sasPolicy(Output.of(sasPolicy));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public StorageAccountArgs build() {
-            return new StorageAccountArgs(accessTier, accountName, allowBlobPublicAccess, allowSharedKeyAccess, azureFilesIdentityBasedAuthentication, customDomain, enableHttpsTrafficOnly, enableNfsV3, encryption, extendedLocation, identity, isHnsEnabled, keyPolicy, kind, largeFileSharesState, location, minimumTlsVersion, networkRuleSet, resourceGroupName, routingPreference, sasPolicy, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public StorageAccountArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

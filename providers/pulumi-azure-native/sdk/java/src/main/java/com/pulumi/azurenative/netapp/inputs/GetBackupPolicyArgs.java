@@ -17,7 +17,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupPolicyName", required=true)
-      private final String backupPolicyName;
+    private String backupPolicyName;
 
     public String backupPolicyName() {
         return this.backupPolicyName;
@@ -39,64 +39,59 @@ public final class GetBackupPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBackupPolicyArgs(
-        String accountName,
-        String backupPolicyName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.backupPolicyName = Objects.requireNonNull(backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBackupPolicyArgs() {}
 
-    private GetBackupPolicyArgs() {
-        this.accountName = null;
-        this.backupPolicyName = null;
-        this.resourceGroupName = null;
+    private GetBackupPolicyArgs(GetBackupPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.backupPolicyName = $.backupPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String backupPolicyName;
-        private String resourceGroupName;
+        private GetBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupPolicyArgs();
         }
 
         public Builder(GetBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.backupPolicyName = defaults.backupPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder backupPolicyName(String backupPolicyName) {
-            this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
+            $.backupPolicyName = backupPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBackupPolicyArgs build() {
-            return new GetBackupPolicyArgs(accountName, backupPolicyName, resourceGroupName);
+        }
+
+        public GetBackupPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.backupPolicyName = Objects.requireNonNull($.backupPolicyName, "expected parameter 'backupPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

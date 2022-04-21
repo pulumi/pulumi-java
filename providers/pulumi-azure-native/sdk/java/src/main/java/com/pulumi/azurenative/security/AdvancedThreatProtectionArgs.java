@@ -5,10 +5,10 @@ package com.pulumi.azurenative.security;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -43,76 +43,69 @@ public final class AdvancedThreatProtectionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="settingName")
-      private final @Nullable Output<String> settingName;
+    private @Nullable Output<String> settingName;
 
-    public Output<String> settingName() {
-        return this.settingName == null ? Codegen.empty() : this.settingName;
+    public Optional<Output<String>> settingName() {
+        return Optional.ofNullable(this.settingName);
     }
 
-    public AdvancedThreatProtectionArgs(
-        @Nullable Output<Boolean> isEnabled,
-        Output<String> resourceId,
-        @Nullable Output<String> settingName) {
-        this.isEnabled = isEnabled;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.settingName = settingName;
-    }
+    private AdvancedThreatProtectionArgs() {}
 
-    private AdvancedThreatProtectionArgs() {
-        this.isEnabled = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.settingName = Codegen.empty();
+    private AdvancedThreatProtectionArgs(AdvancedThreatProtectionArgs $) {
+        this.isEnabled = $.isEnabled;
+        this.resourceId = $.resourceId;
+        this.settingName = $.settingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedThreatProtectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isEnabled;
-        private Output<String> resourceId;
-        private @Nullable Output<String> settingName;
+        private AdvancedThreatProtectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedThreatProtectionArgs();
         }
 
         public Builder(AdvancedThreatProtectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.resourceId = defaults.resourceId;
-    	      this.settingName = defaults.settingName;
+            $ = new AdvancedThreatProtectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder settingName(@Nullable Output<String> settingName) {
-            this.settingName = settingName;
+            $.settingName = settingName;
             return this;
         }
-        public Builder settingName(@Nullable String settingName) {
-            this.settingName = Codegen.ofNullable(settingName);
-            return this;
-        }        public AdvancedThreatProtectionArgs build() {
-            return new AdvancedThreatProtectionArgs(isEnabled, resourceId, settingName);
+
+        public Builder settingName(String settingName) {
+            return settingName(Output.of(settingName));
+        }
+
+        public AdvancedThreatProtectionArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

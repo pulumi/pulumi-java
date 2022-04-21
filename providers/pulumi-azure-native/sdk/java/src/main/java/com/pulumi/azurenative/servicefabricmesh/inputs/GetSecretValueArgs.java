@@ -17,7 +17,7 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretResourceName", required=true)
-      private final String secretResourceName;
+    private String secretResourceName;
 
     public String secretResourceName() {
         return this.secretResourceName;
@@ -39,64 +39,59 @@ public final class GetSecretValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretValueResourceName", required=true)
-      private final String secretValueResourceName;
+    private String secretValueResourceName;
 
     public String secretValueResourceName() {
         return this.secretValueResourceName;
     }
 
-    public GetSecretValueArgs(
-        String resourceGroupName,
-        String secretResourceName,
-        String secretValueResourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secretResourceName = Objects.requireNonNull(secretResourceName, "expected parameter 'secretResourceName' to be non-null");
-        this.secretValueResourceName = Objects.requireNonNull(secretValueResourceName, "expected parameter 'secretValueResourceName' to be non-null");
-    }
+    private GetSecretValueArgs() {}
 
-    private GetSecretValueArgs() {
-        this.resourceGroupName = null;
-        this.secretResourceName = null;
-        this.secretValueResourceName = null;
+    private GetSecretValueArgs(GetSecretValueArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.secretResourceName = $.secretResourceName;
+        this.secretValueResourceName = $.secretValueResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String secretResourceName;
-        private String secretValueResourceName;
+        private GetSecretValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretValueArgs();
         }
 
         public Builder(GetSecretValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secretResourceName = defaults.secretResourceName;
-    	      this.secretValueResourceName = defaults.secretValueResourceName;
+            $ = new GetSecretValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder secretResourceName(String secretResourceName) {
-            this.secretResourceName = Objects.requireNonNull(secretResourceName);
+            $.secretResourceName = secretResourceName;
             return this;
         }
+
         public Builder secretValueResourceName(String secretValueResourceName) {
-            this.secretValueResourceName = Objects.requireNonNull(secretValueResourceName);
+            $.secretValueResourceName = secretValueResourceName;
             return this;
-        }        public GetSecretValueArgs build() {
-            return new GetSecretValueArgs(resourceGroupName, secretResourceName, secretValueResourceName);
+        }
+
+        public GetSecretValueArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.secretResourceName = Objects.requireNonNull($.secretResourceName, "expected parameter 'secretResourceName' to be non-null");
+            $.secretValueResourceName = Objects.requireNonNull($.secretValueResourceName, "expected parameter 'secretValueResourceName' to be non-null");
+            return $;
         }
     }
+
 }

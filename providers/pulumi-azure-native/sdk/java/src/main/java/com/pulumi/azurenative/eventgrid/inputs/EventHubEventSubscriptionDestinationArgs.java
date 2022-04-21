@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class EventHubEventSubscriptionDestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -36,63 +37,59 @@ public final class EventHubEventSubscriptionDestinationArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public EventHubEventSubscriptionDestinationArgs(
-        Output<String> endpointType,
-        @Nullable Output<String> resourceId) {
-        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
-        this.resourceId = resourceId;
-    }
+    private EventHubEventSubscriptionDestinationArgs() {}
 
-    private EventHubEventSubscriptionDestinationArgs() {
-        this.endpointType = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private EventHubEventSubscriptionDestinationArgs(EventHubEventSubscriptionDestinationArgs $) {
+        this.endpointType = $.endpointType;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubEventSubscriptionDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpointType;
-        private @Nullable Output<String> resourceId;
+        private EventHubEventSubscriptionDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubEventSubscriptionDestinationArgs();
         }
 
         public Builder(EventHubEventSubscriptionDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.resourceId = defaults.resourceId;
+            $ = new EventHubEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public EventHubEventSubscriptionDestinationArgs build() {
-            return new EventHubEventSubscriptionDestinationArgs(endpointType, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public EventHubEventSubscriptionDestinationArgs build() {
+            $.endpointType = Codegen.stringProp("endpointType").output().arg($.endpointType).require();
+            return $;
         }
     }
+
 }

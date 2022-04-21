@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dir")
-      private final @Nullable Output<String> dir;
+    private @Nullable Output<String> dir;
 
-    public Output<String> dir() {
-        return this.dir == null ? Codegen.empty() : this.dir;
+    public Optional<Output<String>> dir() {
+        return Optional.ofNullable(this.dir);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<String>> env;
+    private @Nullable Output<List<String>> env;
 
-    public Output<List<String>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<String>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,124 +80,110 @@ public final class CommandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitFor")
-      private final @Nullable Output<List<String>> waitFor;
+    private @Nullable Output<List<String>> waitFor;
 
-    public Output<List<String>> waitFor() {
-        return this.waitFor == null ? Codegen.empty() : this.waitFor;
+    public Optional<Output<List<String>>> waitFor() {
+        return Optional.ofNullable(this.waitFor);
     }
 
-    public CommandArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<String> dir,
-        @Nullable Output<List<String>> env,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> waitFor) {
-        this.args = args;
-        this.dir = dir;
-        this.env = env;
-        this.id = id;
-        this.name = name;
-        this.waitFor = waitFor;
-    }
+    private CommandArgs() {}
 
-    private CommandArgs() {
-        this.args = Codegen.empty();
-        this.dir = Codegen.empty();
-        this.env = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.waitFor = Codegen.empty();
+    private CommandArgs(CommandArgs $) {
+        this.args = $.args;
+        this.dir = $.dir;
+        this.env = $.env;
+        this.id = $.id;
+        this.name = $.name;
+        this.waitFor = $.waitFor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommandArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<String> dir;
-        private @Nullable Output<List<String>> env;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> waitFor;
+        private CommandArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommandArgs();
         }
 
         public Builder(CommandArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.dir = defaults.dir;
-    	      this.env = defaults.env;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.waitFor = defaults.waitFor;
+            $ = new CommandArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder dir(@Nullable Output<String> dir) {
-            this.dir = dir;
+            $.dir = dir;
             return this;
         }
-        public Builder dir(@Nullable String dir) {
-            this.dir = Codegen.ofNullable(dir);
-            return this;
+
+        public Builder dir(String dir) {
+            return dir(Output.of(dir));
         }
+
         public Builder env(@Nullable Output<List<String>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<String> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<String> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(String... env) {
             return env(List.of(env));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder waitFor(@Nullable Output<List<String>> waitFor) {
-            this.waitFor = waitFor;
+            $.waitFor = waitFor;
             return this;
         }
-        public Builder waitFor(@Nullable List<String> waitFor) {
-            this.waitFor = Codegen.ofNullable(waitFor);
-            return this;
+
+        public Builder waitFor(List<String> waitFor) {
+            return waitFor(Output.of(waitFor));
         }
+
         public Builder waitFor(String... waitFor) {
             return waitFor(List.of(waitFor));
-        }        public CommandArgs build() {
-            return new CommandArgs(args, dir, env, id, name, waitFor);
+        }
+
+        public CommandArgs build() {
+            return $;
         }
     }
+
 }

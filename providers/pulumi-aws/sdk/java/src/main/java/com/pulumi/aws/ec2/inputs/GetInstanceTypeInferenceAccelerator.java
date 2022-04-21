@@ -14,78 +14,73 @@ public final class GetInstanceTypeInferenceAccelerator extends com.pulumi.resour
     public static final GetInstanceTypeInferenceAccelerator Empty = new GetInstanceTypeInferenceAccelerator();
 
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
     }
 
     @Import(name="manufacturer", required=true)
-      private final String manufacturer;
+    private String manufacturer;
 
     public String manufacturer() {
         return this.manufacturer;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetInstanceTypeInferenceAccelerator(
-        Integer count,
-        String manufacturer,
-        String name) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.manufacturer = Objects.requireNonNull(manufacturer, "expected parameter 'manufacturer' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetInstanceTypeInferenceAccelerator() {}
 
-    private GetInstanceTypeInferenceAccelerator() {
-        this.count = null;
-        this.manufacturer = null;
-        this.name = null;
+    private GetInstanceTypeInferenceAccelerator(GetInstanceTypeInferenceAccelerator $) {
+        this.count = $.count;
+        this.manufacturer = $.manufacturer;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypeInferenceAccelerator defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String manufacturer;
-        private String name;
+        private GetInstanceTypeInferenceAccelerator $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypeInferenceAccelerator();
         }
 
         public Builder(GetInstanceTypeInferenceAccelerator defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.manufacturer = defaults.manufacturer;
-    	      this.name = defaults.name;
+            $ = new GetInstanceTypeInferenceAccelerator(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder manufacturer(String manufacturer) {
-            this.manufacturer = Objects.requireNonNull(manufacturer);
+            $.manufacturer = manufacturer;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetInstanceTypeInferenceAccelerator build() {
-            return new GetInstanceTypeInferenceAccelerator(count, manufacturer, name);
+        }
+
+        public GetInstanceTypeInferenceAccelerator build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.manufacturer = Objects.requireNonNull($.manufacturer, "expected parameter 'manufacturer' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

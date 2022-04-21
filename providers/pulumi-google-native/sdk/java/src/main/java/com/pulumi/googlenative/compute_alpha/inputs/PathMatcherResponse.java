@@ -27,7 +27,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultRouteAction", required=true)
-      private final HttpRouteActionResponse defaultRouteAction;
+    private HttpRouteActionResponse defaultRouteAction;
 
     public HttpRouteActionResponse defaultRouteAction() {
         return this.defaultRouteAction;
@@ -38,7 +38,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultService", required=true)
-      private final String defaultService;
+    private String defaultService;
 
     public String defaultService() {
         return this.defaultService;
@@ -49,7 +49,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultUrlRedirect", required=true)
-      private final HttpRedirectActionResponse defaultUrlRedirect;
+    private HttpRedirectActionResponse defaultUrlRedirect;
 
     public HttpRedirectActionResponse defaultUrlRedirect() {
         return this.defaultUrlRedirect;
@@ -60,7 +60,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -71,7 +71,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headerAction", required=true)
-      private final HttpHeaderActionResponse headerAction;
+    private HttpHeaderActionResponse headerAction;
 
     public HttpHeaderActionResponse headerAction() {
         return this.headerAction;
@@ -82,7 +82,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -93,7 +93,7 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathRules", required=true)
-      private final List<PathRuleResponse> pathRules;
+    private List<PathRuleResponse> pathRules;
 
     public List<PathRuleResponse> pathRules() {
         return this.pathRules;
@@ -104,115 +104,102 @@ public final class PathMatcherResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeRules", required=true)
-      private final List<HttpRouteRuleResponse> routeRules;
+    private List<HttpRouteRuleResponse> routeRules;
 
     public List<HttpRouteRuleResponse> routeRules() {
         return this.routeRules;
     }
 
-    public PathMatcherResponse(
-        HttpRouteActionResponse defaultRouteAction,
-        String defaultService,
-        HttpRedirectActionResponse defaultUrlRedirect,
-        String description,
-        HttpHeaderActionResponse headerAction,
-        String name,
-        List<PathRuleResponse> pathRules,
-        List<HttpRouteRuleResponse> routeRules) {
-        this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction, "expected parameter 'defaultRouteAction' to be non-null");
-        this.defaultService = Objects.requireNonNull(defaultService, "expected parameter 'defaultService' to be non-null");
-        this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect, "expected parameter 'defaultUrlRedirect' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.pathRules = Objects.requireNonNull(pathRules, "expected parameter 'pathRules' to be non-null");
-        this.routeRules = Objects.requireNonNull(routeRules, "expected parameter 'routeRules' to be non-null");
-    }
+    private PathMatcherResponse() {}
 
-    private PathMatcherResponse() {
-        this.defaultRouteAction = null;
-        this.defaultService = null;
-        this.defaultUrlRedirect = null;
-        this.description = null;
-        this.headerAction = null;
-        this.name = null;
-        this.pathRules = List.of();
-        this.routeRules = List.of();
+    private PathMatcherResponse(PathMatcherResponse $) {
+        this.defaultRouteAction = $.defaultRouteAction;
+        this.defaultService = $.defaultService;
+        this.defaultUrlRedirect = $.defaultUrlRedirect;
+        this.description = $.description;
+        this.headerAction = $.headerAction;
+        this.name = $.name;
+        this.pathRules = $.pathRules;
+        this.routeRules = $.routeRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PathMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HttpRouteActionResponse defaultRouteAction;
-        private String defaultService;
-        private HttpRedirectActionResponse defaultUrlRedirect;
-        private String description;
-        private HttpHeaderActionResponse headerAction;
-        private String name;
-        private List<PathRuleResponse> pathRules;
-        private List<HttpRouteRuleResponse> routeRules;
+        private PathMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PathMatcherResponse();
         }
 
         public Builder(PathMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRouteAction = defaults.defaultRouteAction;
-    	      this.defaultService = defaults.defaultService;
-    	      this.defaultUrlRedirect = defaults.defaultUrlRedirect;
-    	      this.description = defaults.description;
-    	      this.headerAction = defaults.headerAction;
-    	      this.name = defaults.name;
-    	      this.pathRules = defaults.pathRules;
-    	      this.routeRules = defaults.routeRules;
+            $ = new PathMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRouteAction(HttpRouteActionResponse defaultRouteAction) {
-            this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
+            $.defaultRouteAction = defaultRouteAction;
             return this;
         }
+
         public Builder defaultService(String defaultService) {
-            this.defaultService = Objects.requireNonNull(defaultService);
+            $.defaultService = defaultService;
             return this;
         }
+
         public Builder defaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
-            this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
+            $.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
-            this.headerAction = Objects.requireNonNull(headerAction);
+            $.headerAction = headerAction;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder pathRules(List<PathRuleResponse> pathRules) {
-            this.pathRules = Objects.requireNonNull(pathRules);
+            $.pathRules = pathRules;
             return this;
         }
+
         public Builder pathRules(PathRuleResponse... pathRules) {
             return pathRules(List.of(pathRules));
         }
+
         public Builder routeRules(List<HttpRouteRuleResponse> routeRules) {
-            this.routeRules = Objects.requireNonNull(routeRules);
+            $.routeRules = routeRules;
             return this;
         }
+
         public Builder routeRules(HttpRouteRuleResponse... routeRules) {
             return routeRules(List.of(routeRules));
-        }        public PathMatcherResponse build() {
-            return new PathMatcherResponse(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
+        }
+
+        public PathMatcherResponse build() {
+            $.defaultRouteAction = Objects.requireNonNull($.defaultRouteAction, "expected parameter 'defaultRouteAction' to be non-null");
+            $.defaultService = Objects.requireNonNull($.defaultService, "expected parameter 'defaultService' to be non-null");
+            $.defaultUrlRedirect = Objects.requireNonNull($.defaultUrlRedirect, "expected parameter 'defaultUrlRedirect' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.headerAction = Objects.requireNonNull($.headerAction, "expected parameter 'headerAction' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pathRules = Objects.requireNonNull($.pathRules, "expected parameter 'pathRules' to be non-null");
+            $.routeRules = Objects.requireNonNull($.routeRules, "expected parameter 'routeRules' to be non-null");
+            return $;
         }
     }
+
 }

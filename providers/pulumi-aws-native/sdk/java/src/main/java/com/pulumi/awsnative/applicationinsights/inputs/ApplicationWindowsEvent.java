@@ -25,7 +25,7 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="eventLevels", required=true)
-      private final List<ApplicationEventLevel> eventLevels;
+    private List<ApplicationEventLevel> eventLevels;
 
     public List<ApplicationEventLevel> eventLevels() {
         return this.eventLevels;
@@ -36,7 +36,7 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="eventName", required=true)
-      private final String eventName;
+    private String eventName;
 
     public String eventName() {
         return this.eventName;
@@ -47,7 +47,7 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final String logGroupName;
+    private String logGroupName;
 
     public String logGroupName() {
         return this.logGroupName;
@@ -58,76 +58,69 @@ public final class ApplicationWindowsEvent extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="patternSet")
-      private final @Nullable String patternSet;
+    private @Nullable String patternSet;
 
     public Optional<String> patternSet() {
-        return this.patternSet == null ? Optional.empty() : Optional.ofNullable(this.patternSet);
+        return Optional.ofNullable(this.patternSet);
     }
 
-    public ApplicationWindowsEvent(
-        List<ApplicationEventLevel> eventLevels,
-        String eventName,
-        String logGroupName,
-        @Nullable String patternSet) {
-        this.eventLevels = Objects.requireNonNull(eventLevels, "expected parameter 'eventLevels' to be non-null");
-        this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.patternSet = patternSet;
-    }
+    private ApplicationWindowsEvent() {}
 
-    private ApplicationWindowsEvent() {
-        this.eventLevels = List.of();
-        this.eventName = null;
-        this.logGroupName = null;
-        this.patternSet = null;
+    private ApplicationWindowsEvent(ApplicationWindowsEvent $) {
+        this.eventLevels = $.eventLevels;
+        this.eventName = $.eventName;
+        this.logGroupName = $.logGroupName;
+        this.patternSet = $.patternSet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationWindowsEvent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ApplicationEventLevel> eventLevels;
-        private String eventName;
-        private String logGroupName;
-        private @Nullable String patternSet;
+        private ApplicationWindowsEvent $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationWindowsEvent();
         }
 
         public Builder(ApplicationWindowsEvent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventLevels = defaults.eventLevels;
-    	      this.eventName = defaults.eventName;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.patternSet = defaults.patternSet;
+            $ = new ApplicationWindowsEvent(Objects.requireNonNull(defaults));
         }
 
         public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
-            this.eventLevels = Objects.requireNonNull(eventLevels);
+            $.eventLevels = eventLevels;
             return this;
         }
+
         public Builder eventLevels(ApplicationEventLevel... eventLevels) {
             return eventLevels(List.of(eventLevels));
         }
+
         public Builder eventName(String eventName) {
-            this.eventName = Objects.requireNonNull(eventName);
+            $.eventName = eventName;
             return this;
         }
+
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder patternSet(@Nullable String patternSet) {
-            this.patternSet = patternSet;
+            $.patternSet = patternSet;
             return this;
-        }        public ApplicationWindowsEvent build() {
-            return new ApplicationWindowsEvent(eventLevels, eventName, logGroupName, patternSet);
+        }
+
+        public ApplicationWindowsEvent build() {
+            $.eventLevels = Objects.requireNonNull($.eventLevels, "expected parameter 'eventLevels' to be non-null");
+            $.eventName = Objects.requireNonNull($.eventName, "expected parameter 'eventName' to be non-null");
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            return $;
         }
     }
+
 }

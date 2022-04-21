@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.ConversationConversationStage;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConversationArgs Empty = new ConversationArgs();
 
     @Import(name="conversationId")
-      private final @Nullable Output<String> conversationId;
+    private @Nullable Output<String> conversationId;
 
-    public Output<String> conversationId() {
-        return this.conversationId == null ? Codegen.empty() : this.conversationId;
+    public Optional<Output<String>> conversationId() {
+        return Optional.ofNullable(this.conversationId);
     }
 
     /**
@@ -28,7 +28,7 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conversationProfile", required=true)
-      private final Output<String> conversationProfile;
+    private Output<String> conversationProfile;
 
     public Output<String> conversationProfile() {
         return this.conversationProfile;
@@ -39,116 +39,103 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conversationStage")
-      private final @Nullable Output<ConversationConversationStage> conversationStage;
+    private @Nullable Output<ConversationConversationStage> conversationStage;
 
-    public Output<ConversationConversationStage> conversationStage() {
-        return this.conversationStage == null ? Codegen.empty() : this.conversationStage;
+    public Optional<Output<ConversationConversationStage>> conversationStage() {
+        return Optional.ofNullable(this.conversationStage);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ConversationArgs(
-        @Nullable Output<String> conversationId,
-        Output<String> conversationProfile,
-        @Nullable Output<ConversationConversationStage> conversationStage,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project) {
-        this.conversationId = conversationId;
-        this.conversationProfile = Objects.requireNonNull(conversationProfile, "expected parameter 'conversationProfile' to be non-null");
-        this.conversationStage = conversationStage;
-        this.location = location;
-        this.project = project;
-    }
+    private ConversationArgs() {}
 
-    private ConversationArgs() {
-        this.conversationId = Codegen.empty();
-        this.conversationProfile = Codegen.empty();
-        this.conversationStage = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
+    private ConversationArgs(ConversationArgs $) {
+        this.conversationId = $.conversationId;
+        this.conversationProfile = $.conversationProfile;
+        this.conversationStage = $.conversationStage;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConversationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> conversationId;
-        private Output<String> conversationProfile;
-        private @Nullable Output<ConversationConversationStage> conversationStage;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
+        private ConversationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConversationArgs();
         }
 
         public Builder(ConversationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationId = defaults.conversationId;
-    	      this.conversationProfile = defaults.conversationProfile;
-    	      this.conversationStage = defaults.conversationStage;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new ConversationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationId(@Nullable Output<String> conversationId) {
-            this.conversationId = conversationId;
+            $.conversationId = conversationId;
             return this;
         }
-        public Builder conversationId(@Nullable String conversationId) {
-            this.conversationId = Codegen.ofNullable(conversationId);
-            return this;
+
+        public Builder conversationId(String conversationId) {
+            return conversationId(Output.of(conversationId));
         }
+
         public Builder conversationProfile(Output<String> conversationProfile) {
-            this.conversationProfile = Objects.requireNonNull(conversationProfile);
+            $.conversationProfile = conversationProfile;
             return this;
         }
+
         public Builder conversationProfile(String conversationProfile) {
-            this.conversationProfile = Output.of(Objects.requireNonNull(conversationProfile));
-            return this;
+            return conversationProfile(Output.of(conversationProfile));
         }
+
         public Builder conversationStage(@Nullable Output<ConversationConversationStage> conversationStage) {
-            this.conversationStage = conversationStage;
+            $.conversationStage = conversationStage;
             return this;
         }
-        public Builder conversationStage(@Nullable ConversationConversationStage conversationStage) {
-            this.conversationStage = Codegen.ofNullable(conversationStage);
-            return this;
+
+        public Builder conversationStage(ConversationConversationStage conversationStage) {
+            return conversationStage(Output.of(conversationStage));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ConversationArgs build() {
-            return new ConversationArgs(conversationId, conversationProfile, conversationStage, location, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ConversationArgs build() {
+            $.conversationProfile = Objects.requireNonNull($.conversationProfile, "expected parameter 'conversationProfile' to be non-null");
+            return $;
         }
     }
+
 }

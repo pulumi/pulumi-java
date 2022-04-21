@@ -6,9 +6,9 @@ package com.pulumi.azurenative.signalrservice.inputs;
 import com.pulumi.azurenative.signalrservice.inputs.UpstreamTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ServerlessUpstreamSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="templates")
-      private final @Nullable Output<List<UpstreamTemplateArgs>> templates;
+    private @Nullable Output<List<UpstreamTemplateArgs>> templates;
 
-    public Output<List<UpstreamTemplateArgs>> templates() {
-        return this.templates == null ? Codegen.empty() : this.templates;
+    public Optional<Output<List<UpstreamTemplateArgs>>> templates() {
+        return Optional.ofNullable(this.templates);
     }
 
-    public ServerlessUpstreamSettingsArgs(@Nullable Output<List<UpstreamTemplateArgs>> templates) {
-        this.templates = templates;
-    }
+    private ServerlessUpstreamSettingsArgs() {}
 
-    private ServerlessUpstreamSettingsArgs() {
-        this.templates = Codegen.empty();
+    private ServerlessUpstreamSettingsArgs(ServerlessUpstreamSettingsArgs $) {
+        this.templates = $.templates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerlessUpstreamSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<UpstreamTemplateArgs>> templates;
+        private ServerlessUpstreamSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerlessUpstreamSettingsArgs();
         }
 
         public Builder(ServerlessUpstreamSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templates = defaults.templates;
+            $ = new ServerlessUpstreamSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder templates(@Nullable Output<List<UpstreamTemplateArgs>> templates) {
-            this.templates = templates;
+            $.templates = templates;
             return this;
         }
-        public Builder templates(@Nullable List<UpstreamTemplateArgs> templates) {
-            this.templates = Codegen.ofNullable(templates);
-            return this;
+
+        public Builder templates(List<UpstreamTemplateArgs> templates) {
+            return templates(Output.of(templates));
         }
+
         public Builder templates(UpstreamTemplateArgs... templates) {
             return templates(List.of(templates));
-        }        public ServerlessUpstreamSettingsArgs build() {
-            return new ServerlessUpstreamSettingsArgs(templates);
+        }
+
+        public ServerlessUpstreamSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceSetDescriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="elements")
-      private final @Nullable Output<List<String>> elements;
+    private @Nullable Output<List<String>> elements;
 
-    public Output<List<String>> elements() {
-        return this.elements == null ? Codegen.empty() : this.elements;
+    public Optional<Output<List<String>>> elements() {
+        return Optional.ofNullable(this.elements);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class ResourceSetDescriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="exceptions")
-      private final @Nullable Output<List<String>> exceptions;
+    private @Nullable Output<List<String>> exceptions;
 
-    public Output<List<String>> exceptions() {
-        return this.exceptions == null ? Codegen.empty() : this.exceptions;
+    public Optional<Output<List<String>>> exceptions() {
+        return Optional.ofNullable(this.exceptions);
     }
 
-    public ResourceSetDescriptionArgs(
-        @Nullable Output<List<String>> elements,
-        @Nullable Output<List<String>> exceptions) {
-        this.elements = elements;
-        this.exceptions = exceptions;
-    }
+    private ResourceSetDescriptionArgs() {}
 
-    private ResourceSetDescriptionArgs() {
-        this.elements = Codegen.empty();
-        this.exceptions = Codegen.empty();
+    private ResourceSetDescriptionArgs(ResourceSetDescriptionArgs $) {
+        this.elements = $.elements;
+        this.exceptions = $.exceptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> elements;
-        private @Nullable Output<List<String>> exceptions;
+        private ResourceSetDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetDescriptionArgs();
         }
 
         public Builder(ResourceSetDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elements = defaults.elements;
-    	      this.exceptions = defaults.exceptions;
+            $ = new ResourceSetDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elements(@Nullable Output<List<String>> elements) {
-            this.elements = elements;
+            $.elements = elements;
             return this;
         }
-        public Builder elements(@Nullable List<String> elements) {
-            this.elements = Codegen.ofNullable(elements);
-            return this;
+
+        public Builder elements(List<String> elements) {
+            return elements(Output.of(elements));
         }
+
         public Builder elements(String... elements) {
             return elements(List.of(elements));
         }
+
         public Builder exceptions(@Nullable Output<List<String>> exceptions) {
-            this.exceptions = exceptions;
+            $.exceptions = exceptions;
             return this;
         }
-        public Builder exceptions(@Nullable List<String> exceptions) {
-            this.exceptions = Codegen.ofNullable(exceptions);
-            return this;
+
+        public Builder exceptions(List<String> exceptions) {
+            return exceptions(Output.of(exceptions));
         }
+
         public Builder exceptions(String... exceptions) {
             return exceptions(List.of(exceptions));
-        }        public ResourceSetDescriptionArgs build() {
-            return new ResourceSetDescriptionArgs(elements, exceptions);
+        }
+
+        public ResourceSetDescriptionArgs build() {
+            return $;
         }
     }
+
 }

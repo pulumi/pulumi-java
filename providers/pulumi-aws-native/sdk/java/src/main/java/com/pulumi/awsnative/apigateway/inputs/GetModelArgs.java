@@ -17,7 +17,7 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetModelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetModelArgs(
-        String name,
-        String restApiId) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetModelArgs() {}
 
-    private GetModelArgs() {
-        this.name = null;
-        this.restApiId = null;
+    private GetModelArgs(GetModelArgs $) {
+        this.name = $.name;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String restApiId;
+        private GetModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModelArgs();
         }
 
         public Builder(GetModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetModelArgs build() {
-            return new GetModelArgs(name, restApiId);
+        }
+
+        public GetModelArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

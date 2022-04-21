@@ -5,7 +5,6 @@ package com.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsDiskType;
 import com.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsLicenseType;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeSchedulingArgs;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="additionalLicenses")
-      private final @Nullable Output<List<String>> additionalLicenses;
+    private @Nullable Output<List<String>> additionalLicenses;
 
-    public Output<List<String>> additionalLicenses() {
-        return this.additionalLicenses == null ? Codegen.empty() : this.additionalLicenses;
+    public Optional<Output<List<String>>> additionalLicenses() {
+        return Optional.ofNullable(this.additionalLicenses);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="computeScheduling")
-      private final @Nullable Output<ComputeSchedulingArgs> computeScheduling;
+    private @Nullable Output<ComputeSchedulingArgs> computeScheduling;
 
-    public Output<ComputeSchedulingArgs> computeScheduling() {
-        return this.computeScheduling == null ? Codegen.empty() : this.computeScheduling;
+    public Optional<Output<ComputeSchedulingArgs>> computeScheduling() {
+        return Optional.ofNullable(this.computeScheduling);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
+    private @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
 
-    public Output<ComputeEngineTargetDefaultsDiskType> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<ComputeEngineTargetDefaultsDiskType>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
+    private @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
 
-    public Output<ComputeEngineTargetDefaultsLicenseType> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<ComputeEngineTargetDefaultsLicenseType>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="machineTypeSeries")
-      private final @Nullable Output<String> machineTypeSeries;
+    private @Nullable Output<String> machineTypeSeries;
 
-    public Output<String> machineTypeSeries() {
-        return this.machineTypeSeries == null ? Codegen.empty() : this.machineTypeSeries;
+    public Optional<Output<String>> machineTypeSeries() {
+        return Optional.ofNullable(this.machineTypeSeries);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+    private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="networkTags")
-      private final @Nullable Output<List<String>> networkTags;
+    private @Nullable Output<List<String>> networkTags;
 
-    public Output<List<String>> networkTags() {
-        return this.networkTags == null ? Codegen.empty() : this.networkTags;
+    public Optional<Output<List<String>>> networkTags() {
+        return Optional.ofNullable(this.networkTags);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="secureBoot")
-      private final @Nullable Output<Boolean> secureBoot;
+    private @Nullable Output<Boolean> secureBoot;
 
-    public Output<Boolean> secureBoot() {
-        return this.secureBoot == null ? Codegen.empty() : this.secureBoot;
+    public Optional<Output<Boolean>> secureBoot() {
+        return Optional.ofNullable(this.secureBoot);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="targetProject")
-      private final @Nullable Output<String> targetProject;
+    private @Nullable Output<String> targetProject;
 
-    public Output<String> targetProject() {
-        return this.targetProject == null ? Codegen.empty() : this.targetProject;
+    public Optional<Output<String>> targetProject() {
+        return Optional.ofNullable(this.targetProject);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vmName")
-      private final @Nullable Output<String> vmName;
+    private @Nullable Output<String> vmName;
 
-    public Output<String> vmName() {
-        return this.vmName == null ? Codegen.empty() : this.vmName;
+    public Optional<Output<String>> vmName() {
+        return Optional.ofNullable(this.vmName);
     }
 
     /**
@@ -185,241 +185,200 @@ public final class ComputeEngineTargetDefaultsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public ComputeEngineTargetDefaultsArgs(
-        @Nullable Output<List<String>> additionalLicenses,
-        @Nullable Output<ComputeSchedulingArgs> computeScheduling,
-        @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType,
-        @Nullable Output<String> machineType,
-        @Nullable Output<String> machineTypeSeries,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Output<List<String>> networkTags,
-        @Nullable Output<Boolean> secureBoot,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<String> targetProject,
-        @Nullable Output<String> vmName,
-        @Nullable Output<String> zone) {
-        this.additionalLicenses = additionalLicenses;
-        this.computeScheduling = computeScheduling;
-        this.diskType = diskType;
-        this.labels = labels;
-        this.licenseType = licenseType;
-        this.machineType = machineType;
-        this.machineTypeSeries = machineTypeSeries;
-        this.metadata = metadata;
-        this.networkInterfaces = networkInterfaces;
-        this.networkTags = networkTags;
-        this.secureBoot = secureBoot;
-        this.serviceAccount = serviceAccount;
-        this.targetProject = targetProject;
-        this.vmName = vmName;
-        this.zone = zone;
-    }
+    private ComputeEngineTargetDefaultsArgs() {}
 
-    private ComputeEngineTargetDefaultsArgs() {
-        this.additionalLicenses = Codegen.empty();
-        this.computeScheduling = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.machineTypeSeries = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.networkInterfaces = Codegen.empty();
-        this.networkTags = Codegen.empty();
-        this.secureBoot = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.targetProject = Codegen.empty();
-        this.vmName = Codegen.empty();
-        this.zone = Codegen.empty();
+    private ComputeEngineTargetDefaultsArgs(ComputeEngineTargetDefaultsArgs $) {
+        this.additionalLicenses = $.additionalLicenses;
+        this.computeScheduling = $.computeScheduling;
+        this.diskType = $.diskType;
+        this.labels = $.labels;
+        this.licenseType = $.licenseType;
+        this.machineType = $.machineType;
+        this.machineTypeSeries = $.machineTypeSeries;
+        this.metadata = $.metadata;
+        this.networkInterfaces = $.networkInterfaces;
+        this.networkTags = $.networkTags;
+        this.secureBoot = $.secureBoot;
+        this.serviceAccount = $.serviceAccount;
+        this.targetProject = $.targetProject;
+        this.vmName = $.vmName;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeEngineTargetDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalLicenses;
-        private @Nullable Output<ComputeSchedulingArgs> computeScheduling;
-        private @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<String> machineTypeSeries;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Output<List<String>> networkTags;
-        private @Nullable Output<Boolean> secureBoot;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<String> targetProject;
-        private @Nullable Output<String> vmName;
-        private @Nullable Output<String> zone;
+        private ComputeEngineTargetDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeEngineTargetDefaultsArgs();
         }
 
         public Builder(ComputeEngineTargetDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalLicenses = defaults.additionalLicenses;
-    	      this.computeScheduling = defaults.computeScheduling;
-    	      this.diskType = defaults.diskType;
-    	      this.labels = defaults.labels;
-    	      this.licenseType = defaults.licenseType;
-    	      this.machineType = defaults.machineType;
-    	      this.machineTypeSeries = defaults.machineTypeSeries;
-    	      this.metadata = defaults.metadata;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.networkTags = defaults.networkTags;
-    	      this.secureBoot = defaults.secureBoot;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.targetProject = defaults.targetProject;
-    	      this.vmName = defaults.vmName;
-    	      this.zone = defaults.zone;
+            $ = new ComputeEngineTargetDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalLicenses(@Nullable Output<List<String>> additionalLicenses) {
-            this.additionalLicenses = additionalLicenses;
+            $.additionalLicenses = additionalLicenses;
             return this;
         }
-        public Builder additionalLicenses(@Nullable List<String> additionalLicenses) {
-            this.additionalLicenses = Codegen.ofNullable(additionalLicenses);
-            return this;
+
+        public Builder additionalLicenses(List<String> additionalLicenses) {
+            return additionalLicenses(Output.of(additionalLicenses));
         }
+
         public Builder additionalLicenses(String... additionalLicenses) {
             return additionalLicenses(List.of(additionalLicenses));
         }
+
         public Builder computeScheduling(@Nullable Output<ComputeSchedulingArgs> computeScheduling) {
-            this.computeScheduling = computeScheduling;
+            $.computeScheduling = computeScheduling;
             return this;
         }
-        public Builder computeScheduling(@Nullable ComputeSchedulingArgs computeScheduling) {
-            this.computeScheduling = Codegen.ofNullable(computeScheduling);
-            return this;
+
+        public Builder computeScheduling(ComputeSchedulingArgs computeScheduling) {
+            return computeScheduling(Output.of(computeScheduling));
         }
+
         public Builder diskType(@Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable ComputeEngineTargetDefaultsDiskType diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(ComputeEngineTargetDefaultsDiskType diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder licenseType(@Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable ComputeEngineTargetDefaultsLicenseType licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(ComputeEngineTargetDefaultsLicenseType licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder machineTypeSeries(@Nullable Output<String> machineTypeSeries) {
-            this.machineTypeSeries = machineTypeSeries;
+            $.machineTypeSeries = machineTypeSeries;
             return this;
         }
-        public Builder machineTypeSeries(@Nullable String machineTypeSeries) {
-            this.machineTypeSeries = Codegen.ofNullable(machineTypeSeries);
-            return this;
+
+        public Builder machineTypeSeries(String machineTypeSeries) {
+            return machineTypeSeries(Output.of(machineTypeSeries));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder networkTags(@Nullable Output<List<String>> networkTags) {
-            this.networkTags = networkTags;
+            $.networkTags = networkTags;
             return this;
         }
-        public Builder networkTags(@Nullable List<String> networkTags) {
-            this.networkTags = Codegen.ofNullable(networkTags);
-            return this;
+
+        public Builder networkTags(List<String> networkTags) {
+            return networkTags(Output.of(networkTags));
         }
+
         public Builder networkTags(String... networkTags) {
             return networkTags(List.of(networkTags));
         }
+
         public Builder secureBoot(@Nullable Output<Boolean> secureBoot) {
-            this.secureBoot = secureBoot;
+            $.secureBoot = secureBoot;
             return this;
         }
-        public Builder secureBoot(@Nullable Boolean secureBoot) {
-            this.secureBoot = Codegen.ofNullable(secureBoot);
-            return this;
+
+        public Builder secureBoot(Boolean secureBoot) {
+            return secureBoot(Output.of(secureBoot));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder targetProject(@Nullable Output<String> targetProject) {
-            this.targetProject = targetProject;
+            $.targetProject = targetProject;
             return this;
         }
-        public Builder targetProject(@Nullable String targetProject) {
-            this.targetProject = Codegen.ofNullable(targetProject);
-            return this;
+
+        public Builder targetProject(String targetProject) {
+            return targetProject(Output.of(targetProject));
         }
+
         public Builder vmName(@Nullable Output<String> vmName) {
-            this.vmName = vmName;
+            $.vmName = vmName;
             return this;
         }
-        public Builder vmName(@Nullable String vmName) {
-            this.vmName = Codegen.ofNullable(vmName);
-            return this;
+
+        public Builder vmName(String vmName) {
+            return vmName(Output.of(vmName));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public ComputeEngineTargetDefaultsArgs build() {
-            return new ComputeEngineTargetDefaultsArgs(additionalLicenses, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, secureBoot, serviceAccount, targetProject, vmName, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public ComputeEngineTargetDefaultsArgs build() {
+            return $;
         }
     }
+
 }

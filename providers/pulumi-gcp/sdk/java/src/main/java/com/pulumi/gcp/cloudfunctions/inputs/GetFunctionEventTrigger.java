@@ -21,7 +21,7 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="eventType", required=true)
-      private final String eventType;
+    private String eventType;
 
     public String eventType() {
         return this.eventType;
@@ -32,7 +32,7 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="failurePolicies", required=true)
-      private final List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
+    private List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
 
     public List<GetFunctionEventTriggerFailurePolicy> failurePolicies() {
         return this.failurePolicies;
@@ -43,67 +43,63 @@ public final class GetFunctionEventTrigger extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GetFunctionEventTrigger(
-        String eventType,
-        List<GetFunctionEventTriggerFailurePolicy> failurePolicies,
-        String resource) {
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-        this.failurePolicies = Objects.requireNonNull(failurePolicies, "expected parameter 'failurePolicies' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GetFunctionEventTrigger() {}
 
-    private GetFunctionEventTrigger() {
-        this.eventType = null;
-        this.failurePolicies = List.of();
-        this.resource = null;
+    private GetFunctionEventTrigger(GetFunctionEventTrigger $) {
+        this.eventType = $.eventType;
+        this.failurePolicies = $.failurePolicies;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionEventTrigger defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventType;
-        private List<GetFunctionEventTriggerFailurePolicy> failurePolicies;
-        private String resource;
+        private GetFunctionEventTrigger $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionEventTrigger();
         }
 
         public Builder(GetFunctionEventTrigger defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.failurePolicies = defaults.failurePolicies;
-    	      this.resource = defaults.resource;
+            $ = new GetFunctionEventTrigger(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(String eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder failurePolicies(List<GetFunctionEventTriggerFailurePolicy> failurePolicies) {
-            this.failurePolicies = Objects.requireNonNull(failurePolicies);
+            $.failurePolicies = failurePolicies;
             return this;
         }
+
         public Builder failurePolicies(GetFunctionEventTriggerFailurePolicy... failurePolicies) {
             return failurePolicies(List.of(failurePolicies));
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GetFunctionEventTrigger build() {
-            return new GetFunctionEventTrigger(eventType, failurePolicies, resource);
+        }
+
+        public GetFunctionEventTrigger build() {
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            $.failurePolicies = Objects.requireNonNull($.failurePolicies, "expected parameter 'failurePolicies' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

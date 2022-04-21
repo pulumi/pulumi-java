@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionProfileArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class FieldLevelEncryptionProfileArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="encryptionEntities", required=true)
-      private final Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
+    private Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
     public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities() {
         return this.encryptionEntities;
@@ -43,76 +43,69 @@ public final class FieldLevelEncryptionProfileArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FieldLevelEncryptionProfileArgs(
-        @Nullable Output<String> comment,
-        Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities,
-        @Nullable Output<String> name) {
-        this.comment = comment;
-        this.encryptionEntities = Objects.requireNonNull(encryptionEntities, "expected parameter 'encryptionEntities' to be non-null");
-        this.name = name;
-    }
+    private FieldLevelEncryptionProfileArgs() {}
 
-    private FieldLevelEncryptionProfileArgs() {
-        this.comment = Codegen.empty();
-        this.encryptionEntities = Codegen.empty();
-        this.name = Codegen.empty();
+    private FieldLevelEncryptionProfileArgs(FieldLevelEncryptionProfileArgs $) {
+        this.comment = $.comment;
+        this.encryptionEntities = $.encryptionEntities;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
-        private @Nullable Output<String> name;
+        private FieldLevelEncryptionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionProfileArgs();
         }
 
         public Builder(FieldLevelEncryptionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.encryptionEntities = defaults.encryptionEntities;
-    	      this.name = defaults.name;
+            $ = new FieldLevelEncryptionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder encryptionEntities(Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities) {
-            this.encryptionEntities = Objects.requireNonNull(encryptionEntities);
+            $.encryptionEntities = encryptionEntities;
             return this;
         }
+
         public Builder encryptionEntities(FieldLevelEncryptionProfileEncryptionEntitiesArgs encryptionEntities) {
-            this.encryptionEntities = Output.of(Objects.requireNonNull(encryptionEntities));
-            return this;
+            return encryptionEntities(Output.of(encryptionEntities));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FieldLevelEncryptionProfileArgs build() {
-            return new FieldLevelEncryptionProfileArgs(comment, encryptionEntities, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FieldLevelEncryptionProfileArgs build() {
+            $.encryptionEntities = Objects.requireNonNull($.encryptionEntities, "expected parameter 'encryptionEntities' to be non-null");
+            return $;
         }
     }
+
 }

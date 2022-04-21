@@ -21,7 +21,7 @@ public final class DocumentNoteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataLicence", required=true)
-      private final String dataLicence;
+    private String dataLicence;
 
     public String dataLicence() {
         return this.dataLicence;
@@ -32,55 +32,52 @@ public final class DocumentNoteResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="spdxVersion", required=true)
-      private final String spdxVersion;
+    private String spdxVersion;
 
     public String spdxVersion() {
         return this.spdxVersion;
     }
 
-    public DocumentNoteResponse(
-        String dataLicence,
-        String spdxVersion) {
-        this.dataLicence = Objects.requireNonNull(dataLicence, "expected parameter 'dataLicence' to be non-null");
-        this.spdxVersion = Objects.requireNonNull(spdxVersion, "expected parameter 'spdxVersion' to be non-null");
-    }
+    private DocumentNoteResponse() {}
 
-    private DocumentNoteResponse() {
-        this.dataLicence = null;
-        this.spdxVersion = null;
+    private DocumentNoteResponse(DocumentNoteResponse $) {
+        this.dataLicence = $.dataLicence;
+        this.spdxVersion = $.spdxVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataLicence;
-        private String spdxVersion;
+        private DocumentNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentNoteResponse();
         }
 
         public Builder(DocumentNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLicence = defaults.dataLicence;
-    	      this.spdxVersion = defaults.spdxVersion;
+            $ = new DocumentNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLicence(String dataLicence) {
-            this.dataLicence = Objects.requireNonNull(dataLicence);
+            $.dataLicence = dataLicence;
             return this;
         }
+
         public Builder spdxVersion(String spdxVersion) {
-            this.spdxVersion = Objects.requireNonNull(spdxVersion);
+            $.spdxVersion = spdxVersion;
             return this;
-        }        public DocumentNoteResponse build() {
-            return new DocumentNoteResponse(dataLicence, spdxVersion);
+        }
+
+        public DocumentNoteResponse build() {
+            $.dataLicence = Objects.requireNonNull($.dataLicence, "expected parameter 'dataLicence' to be non-null");
+            $.spdxVersion = Objects.requireNonNull($.spdxVersion, "expected parameter 'spdxVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.azurenative.apimanagement.enums.LoggerType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<Map<String,String>> credentials;
+    private @Nullable Output<Map<String,String>> credentials;
 
-    public Output<Map<String,String>> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<Map<String,String>>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isBuffered")
-      private final @Nullable Output<Boolean> isBuffered;
+    private @Nullable Output<Boolean> isBuffered;
 
-    public Output<Boolean> isBuffered() {
-        return this.isBuffered == null ? Codegen.empty() : this.isBuffered;
+    public Optional<Output<Boolean>> isBuffered() {
+        return Optional.ofNullable(this.isBuffered);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggerId")
-      private final @Nullable Output<String> loggerId;
+    private @Nullable Output<String> loggerId;
 
-    public Output<String> loggerId() {
-        return this.loggerId == null ? Codegen.empty() : this.loggerId;
+    public Optional<Output<String>> loggerId() {
+        return Optional.ofNullable(this.loggerId);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggerType", required=true)
-      private final Output<Either<String,LoggerType>> loggerType;
+    private Output<Either<String,LoggerType>> loggerType;
 
     public Output<Either<String,LoggerType>> loggerType() {
         return this.loggerType;
@@ -80,7 +80,7 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,10 +91,10 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -102,141 +102,121 @@ public final class LoggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public LoggerArgs(
-        @Nullable Output<Map<String,String>> credentials,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isBuffered,
-        @Nullable Output<String> loggerId,
-        Output<Either<String,LoggerType>> loggerType,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceId,
-        Output<String> serviceName) {
-        this.credentials = credentials;
-        this.description = description;
-        this.isBuffered = isBuffered;
-        this.loggerId = loggerId;
-        this.loggerType = Objects.requireNonNull(loggerType, "expected parameter 'loggerType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = resourceId;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private LoggerArgs() {}
 
-    private LoggerArgs() {
-        this.credentials = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isBuffered = Codegen.empty();
-        this.loggerId = Codegen.empty();
-        this.loggerType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private LoggerArgs(LoggerArgs $) {
+        this.credentials = $.credentials;
+        this.description = $.description;
+        this.isBuffered = $.isBuffered;
+        this.loggerId = $.loggerId;
+        this.loggerType = $.loggerType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> credentials;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isBuffered;
-        private @Nullable Output<String> loggerId;
-        private Output<Either<String,LoggerType>> loggerType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceId;
-        private Output<String> serviceName;
+        private LoggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggerArgs();
         }
 
         public Builder(LoggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.description = defaults.description;
-    	      this.isBuffered = defaults.isBuffered;
-    	      this.loggerId = defaults.loggerId;
-    	      this.loggerType = defaults.loggerType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.serviceName = defaults.serviceName;
+            $ = new LoggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<Map<String,String>> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable Map<String,String> credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(Map<String,String> credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isBuffered(@Nullable Output<Boolean> isBuffered) {
-            this.isBuffered = isBuffered;
+            $.isBuffered = isBuffered;
             return this;
         }
-        public Builder isBuffered(@Nullable Boolean isBuffered) {
-            this.isBuffered = Codegen.ofNullable(isBuffered);
-            return this;
+
+        public Builder isBuffered(Boolean isBuffered) {
+            return isBuffered(Output.of(isBuffered));
         }
+
         public Builder loggerId(@Nullable Output<String> loggerId) {
-            this.loggerId = loggerId;
+            $.loggerId = loggerId;
             return this;
         }
-        public Builder loggerId(@Nullable String loggerId) {
-            this.loggerId = Codegen.ofNullable(loggerId);
-            return this;
+
+        public Builder loggerId(String loggerId) {
+            return loggerId(Output.of(loggerId));
         }
+
         public Builder loggerType(Output<Either<String,LoggerType>> loggerType) {
-            this.loggerType = Objects.requireNonNull(loggerType);
+            $.loggerType = loggerType;
             return this;
         }
+
         public Builder loggerType(Either<String,LoggerType> loggerType) {
-            this.loggerType = Output.of(Objects.requireNonNull(loggerType));
-            return this;
+            return loggerType(Output.of(loggerType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public LoggerArgs build() {
-            return new LoggerArgs(credentials, description, isBuffered, loggerId, loggerType, resourceGroupName, resourceId, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public LoggerArgs build() {
+            $.loggerType = Objects.requireNonNull($.loggerType, "expected parameter 'loggerType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
      * 
      */
     @Import(name="azureApp", required=true)
-      private final AzureActiveDirectoryAppResponse azureApp;
+    private AzureActiveDirectoryAppResponse azureApp;
 
     public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
@@ -33,55 +33,52 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse extends com.pulumi.
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final MiSqlConnectionInfoResponse targetConnectionInfo;
+    private MiSqlConnectionInfoResponse targetConnectionInfo;
 
     public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetSqlMISyncTaskInputResponse(
-        AzureActiveDirectoryAppResponse azureApp,
-        MiSqlConnectionInfoResponse targetConnectionInfo) {
-        this.azureApp = Objects.requireNonNull(azureApp, "expected parameter 'azureApp' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetSqlMISyncTaskInputResponse() {}
 
-    private ConnectToTargetSqlMISyncTaskInputResponse() {
-        this.azureApp = null;
-        this.targetConnectionInfo = null;
+    private ConnectToTargetSqlMISyncTaskInputResponse(ConnectToTargetSqlMISyncTaskInputResponse $) {
+        this.azureApp = $.azureApp;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlMISyncTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AzureActiveDirectoryAppResponse azureApp;
-        private MiSqlConnectionInfoResponse targetConnectionInfo;
+        private ConnectToTargetSqlMISyncTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlMISyncTaskInputResponse();
         }
 
         public Builder(ConnectToTargetSqlMISyncTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureApp = defaults.azureApp;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetSqlMISyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureApp(AzureActiveDirectoryAppResponse azureApp) {
-            this.azureApp = Objects.requireNonNull(azureApp);
+            $.azureApp = azureApp;
             return this;
         }
+
         public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public ConnectToTargetSqlMISyncTaskInputResponse build() {
-            return new ConnectToTargetSqlMISyncTaskInputResponse(azureApp, targetConnectionInfo);
+        }
+
+        public ConnectToTargetSqlMISyncTaskInputResponse build() {
+            $.azureApp = Objects.requireNonNull($.azureApp, "expected parameter 'azureApp' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

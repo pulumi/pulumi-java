@@ -5,10 +5,10 @@ package com.pulumi.azurenative.dataprotection.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="date")
-      private final @Nullable Output<Integer> date;
+    private @Nullable Output<Integer> date;
 
-    public Output<Integer> date() {
-        return this.date == null ? Codegen.empty() : this.date;
+    public Optional<Output<Integer>> date() {
+        return Optional.ofNullable(this.date);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isLast")
-      private final @Nullable Output<Boolean> isLast;
+    private @Nullable Output<Boolean> isLast;
 
-    public Output<Boolean> isLast() {
-        return this.isLast == null ? Codegen.empty() : this.isLast;
+    public Optional<Output<Boolean>> isLast() {
+        return Optional.ofNullable(this.isLast);
     }
 
-    public DayArgs(
-        @Nullable Output<Integer> date,
-        @Nullable Output<Boolean> isLast) {
-        this.date = date;
-        this.isLast = isLast;
-    }
+    private DayArgs() {}
 
-    private DayArgs() {
-        this.date = Codegen.empty();
-        this.isLast = Codegen.empty();
+    private DayArgs(DayArgs $) {
+        this.date = $.date;
+        this.isLast = $.isLast;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> date;
-        private @Nullable Output<Boolean> isLast;
+        private DayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DayArgs();
         }
 
         public Builder(DayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.date = defaults.date;
-    	      this.isLast = defaults.isLast;
+            $ = new DayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder date(@Nullable Output<Integer> date) {
-            this.date = date;
+            $.date = date;
             return this;
         }
-        public Builder date(@Nullable Integer date) {
-            this.date = Codegen.ofNullable(date);
-            return this;
+
+        public Builder date(Integer date) {
+            return date(Output.of(date));
         }
+
         public Builder isLast(@Nullable Output<Boolean> isLast) {
-            this.isLast = isLast;
+            $.isLast = isLast;
             return this;
         }
-        public Builder isLast(@Nullable Boolean isLast) {
-            this.isLast = Codegen.ofNullable(isLast);
-            return this;
-        }        public DayArgs build() {
-            return new DayArgs(date, isLast);
+
+        public Builder isLast(Boolean isLast) {
+            return isLast(Output.of(isLast));
+        }
+
+        public DayArgs build() {
+            return $;
         }
     }
+
 }

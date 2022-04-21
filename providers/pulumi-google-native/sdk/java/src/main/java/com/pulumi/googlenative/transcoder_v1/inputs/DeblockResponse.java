@@ -22,7 +22,7 @@ public final class DeblockResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class DeblockResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="strength", required=true)
-      private final Double strength;
+    private Double strength;
 
     public Double strength() {
         return this.strength;
     }
 
-    public DeblockResponse(
-        Boolean enabled,
-        Double strength) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.strength = Objects.requireNonNull(strength, "expected parameter 'strength' to be non-null");
-    }
+    private DeblockResponse() {}
 
-    private DeblockResponse() {
-        this.enabled = null;
-        this.strength = null;
+    private DeblockResponse(DeblockResponse $) {
+        this.enabled = $.enabled;
+        this.strength = $.strength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeblockResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private Double strength;
+        private DeblockResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeblockResponse();
         }
 
         public Builder(DeblockResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.strength = defaults.strength;
+            $ = new DeblockResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder strength(Double strength) {
-            this.strength = Objects.requireNonNull(strength);
+            $.strength = strength;
             return this;
-        }        public DeblockResponse build() {
-            return new DeblockResponse(enabled, strength);
+        }
+
+        public DeblockResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.strength = Objects.requireNonNull($.strength, "expected parameter 'strength' to be non-null");
+            return $;
         }
     }
+
 }

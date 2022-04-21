@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="advancedApiOpsConfig", required=true)
-      private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
+    private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
 
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig() {
         return this.advancedApiOpsConfig;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="connectorsPlatformConfig", required=true)
-      private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
+    private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
 
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig() {
         return this.connectorsPlatformConfig;
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="integrationConfig", required=true)
-      private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
+    private GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
 
     public GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig() {
         return this.integrationConfig;
@@ -57,73 +57,66 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="monetizationConfig", required=true)
-      private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
+    private GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
     public GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig() {
         return this.monetizationConfig;
     }
 
-    public GoogleCloudApigeeV1AddonsConfigResponse(
-        GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
-        GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
-        GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
-        GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
-        this.advancedApiOpsConfig = Objects.requireNonNull(advancedApiOpsConfig, "expected parameter 'advancedApiOpsConfig' to be non-null");
-        this.connectorsPlatformConfig = Objects.requireNonNull(connectorsPlatformConfig, "expected parameter 'connectorsPlatformConfig' to be non-null");
-        this.integrationConfig = Objects.requireNonNull(integrationConfig, "expected parameter 'integrationConfig' to be non-null");
-        this.monetizationConfig = Objects.requireNonNull(monetizationConfig, "expected parameter 'monetizationConfig' to be non-null");
-    }
+    private GoogleCloudApigeeV1AddonsConfigResponse() {}
 
-    private GoogleCloudApigeeV1AddonsConfigResponse() {
-        this.advancedApiOpsConfig = null;
-        this.connectorsPlatformConfig = null;
-        this.integrationConfig = null;
-        this.monetizationConfig = null;
+    private GoogleCloudApigeeV1AddonsConfigResponse(GoogleCloudApigeeV1AddonsConfigResponse $) {
+        this.advancedApiOpsConfig = $.advancedApiOpsConfig;
+        this.connectorsPlatformConfig = $.connectorsPlatformConfig;
+        this.integrationConfig = $.integrationConfig;
+        this.monetizationConfig = $.monetizationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1AddonsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
-        private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
-        private GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
-        private GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
+        private GoogleCloudApigeeV1AddonsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1AddonsConfigResponse();
         }
 
         public Builder(GoogleCloudApigeeV1AddonsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedApiOpsConfig = defaults.advancedApiOpsConfig;
-    	      this.connectorsPlatformConfig = defaults.connectorsPlatformConfig;
-    	      this.integrationConfig = defaults.integrationConfig;
-    	      this.monetizationConfig = defaults.monetizationConfig;
+            $ = new GoogleCloudApigeeV1AddonsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig) {
-            this.advancedApiOpsConfig = Objects.requireNonNull(advancedApiOpsConfig);
+            $.advancedApiOpsConfig = advancedApiOpsConfig;
             return this;
         }
+
         public Builder connectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
-            this.connectorsPlatformConfig = Objects.requireNonNull(connectorsPlatformConfig);
+            $.connectorsPlatformConfig = connectorsPlatformConfig;
             return this;
         }
+
         public Builder integrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
-            this.integrationConfig = Objects.requireNonNull(integrationConfig);
+            $.integrationConfig = integrationConfig;
             return this;
         }
+
         public Builder monetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
-            this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
+            $.monetizationConfig = monetizationConfig;
             return this;
-        }        public GoogleCloudApigeeV1AddonsConfigResponse build() {
-            return new GoogleCloudApigeeV1AddonsConfigResponse(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
+        }
+
+        public GoogleCloudApigeeV1AddonsConfigResponse build() {
+            $.advancedApiOpsConfig = Objects.requireNonNull($.advancedApiOpsConfig, "expected parameter 'advancedApiOpsConfig' to be non-null");
+            $.connectorsPlatformConfig = Objects.requireNonNull($.connectorsPlatformConfig, "expected parameter 'connectorsPlatformConfig' to be non-null");
+            $.integrationConfig = Objects.requireNonNull($.integrationConfig, "expected parameter 'integrationConfig' to be non-null");
+            $.monetizationConfig = Objects.requireNonNull($.monetizationConfig, "expected parameter 'monetizationConfig' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="applicationSharingPolicy")
-      private final @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
+    private @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
-    public Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy() {
-        return this.applicationSharingPolicy == null ? Codegen.empty() : this.applicationSharingPolicy;
+    public Optional<Output<Either<String,ApplicationSharingPolicy>>> applicationSharingPolicy() {
+        return Optional.ofNullable(this.applicationSharingPolicy);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="computeInstanceAuthorizationType")
-      private final @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
+    private @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
-    public Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType() {
-        return this.computeInstanceAuthorizationType == null ? Codegen.empty() : this.computeInstanceAuthorizationType;
+    public Optional<Output<Either<String,ComputeInstanceAuthorizationType>>> computeInstanceAuthorizationType() {
+        return Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="personalComputeInstanceSettings")
-      private final @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
+    private @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
-    public Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings() {
-        return this.personalComputeInstanceSettings == null ? Codegen.empty() : this.personalComputeInstanceSettings;
+    public Optional<Output<PersonalComputeInstanceSettingsArgs>> personalComputeInstanceSettings() {
+        return Optional.ofNullable(this.personalComputeInstanceSettings);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="setupScripts")
-      private final @Nullable Output<SetupScriptsArgs> setupScripts;
+    private @Nullable Output<SetupScriptsArgs> setupScripts;
 
-    public Output<SetupScriptsArgs> setupScripts() {
-        return this.setupScripts == null ? Codegen.empty() : this.setupScripts;
+    public Optional<Output<SetupScriptsArgs>> setupScripts() {
+        return Optional.ofNullable(this.setupScripts);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sshSettings")
-      private final @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
+    private @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
 
-    public Output<ComputeInstanceSshSettingsArgs> sshSettings() {
-        return this.sshSettings == null ? Codegen.empty() : this.sshSettings;
+    public Optional<Output<ComputeInstanceSshSettingsArgs>> sshSettings() {
+        return Optional.ofNullable(this.sshSettings);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<ResourceIdArgs> subnet;
+    private @Nullable Output<ResourceIdArgs> subnet;
 
-    public Output<ResourceIdArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<ResourceIdArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -97,128 +98,110 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public ComputeInstancePropertiesArgs(
-        @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy,
-        @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType,
-        @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings,
-        @Nullable Output<SetupScriptsArgs> setupScripts,
-        @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings,
-        @Nullable Output<ResourceIdArgs> subnet,
-        @Nullable Output<String> vmSize) {
-        this.applicationSharingPolicy = Codegen.stringProp("applicationSharingPolicy").left(ApplicationSharingPolicy.class).output().arg(applicationSharingPolicy).def("Shared").getNullable();
-        this.computeInstanceAuthorizationType = Codegen.stringProp("computeInstanceAuthorizationType").left(ComputeInstanceAuthorizationType.class).output().arg(computeInstanceAuthorizationType).def("personal").getNullable();
-        this.personalComputeInstanceSettings = personalComputeInstanceSettings;
-        this.setupScripts = setupScripts;
-        this.sshSettings = sshSettings;
-        this.subnet = subnet;
-        this.vmSize = vmSize;
-    }
+    private ComputeInstancePropertiesArgs() {}
 
-    private ComputeInstancePropertiesArgs() {
-        this.applicationSharingPolicy = Codegen.empty();
-        this.computeInstanceAuthorizationType = Codegen.empty();
-        this.personalComputeInstanceSettings = Codegen.empty();
-        this.setupScripts = Codegen.empty();
-        this.sshSettings = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private ComputeInstancePropertiesArgs(ComputeInstancePropertiesArgs $) {
+        this.applicationSharingPolicy = $.applicationSharingPolicy;
+        this.computeInstanceAuthorizationType = $.computeInstanceAuthorizationType;
+        this.personalComputeInstanceSettings = $.personalComputeInstanceSettings;
+        this.setupScripts = $.setupScripts;
+        this.sshSettings = $.sshSettings;
+        this.subnet = $.subnet;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstancePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
-        private @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
-        private @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
-        private @Nullable Output<SetupScriptsArgs> setupScripts;
-        private @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
-        private @Nullable Output<ResourceIdArgs> subnet;
-        private @Nullable Output<String> vmSize;
+        private ComputeInstancePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstancePropertiesArgs();
         }
 
         public Builder(ComputeInstancePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationSharingPolicy = defaults.applicationSharingPolicy;
-    	      this.computeInstanceAuthorizationType = defaults.computeInstanceAuthorizationType;
-    	      this.personalComputeInstanceSettings = defaults.personalComputeInstanceSettings;
-    	      this.setupScripts = defaults.setupScripts;
-    	      this.sshSettings = defaults.sshSettings;
-    	      this.subnet = defaults.subnet;
-    	      this.vmSize = defaults.vmSize;
+            $ = new ComputeInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationSharingPolicy(@Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy) {
-            this.applicationSharingPolicy = applicationSharingPolicy;
+            $.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
-        public Builder applicationSharingPolicy(@Nullable Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
-            this.applicationSharingPolicy = Codegen.ofNullable(applicationSharingPolicy);
-            return this;
+
+        public Builder applicationSharingPolicy(Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
+            return applicationSharingPolicy(Output.of(applicationSharingPolicy));
         }
+
         public Builder computeInstanceAuthorizationType(@Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
-            this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
+            $.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
-        public Builder computeInstanceAuthorizationType(@Nullable Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
-            this.computeInstanceAuthorizationType = Codegen.ofNullable(computeInstanceAuthorizationType);
-            return this;
+
+        public Builder computeInstanceAuthorizationType(Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
+            return computeInstanceAuthorizationType(Output.of(computeInstanceAuthorizationType));
         }
+
         public Builder personalComputeInstanceSettings(@Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
-            this.personalComputeInstanceSettings = personalComputeInstanceSettings;
+            $.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
-        public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
-            this.personalComputeInstanceSettings = Codegen.ofNullable(personalComputeInstanceSettings);
-            return this;
+
+        public Builder personalComputeInstanceSettings(PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
+            return personalComputeInstanceSettings(Output.of(personalComputeInstanceSettings));
         }
+
         public Builder setupScripts(@Nullable Output<SetupScriptsArgs> setupScripts) {
-            this.setupScripts = setupScripts;
+            $.setupScripts = setupScripts;
             return this;
         }
-        public Builder setupScripts(@Nullable SetupScriptsArgs setupScripts) {
-            this.setupScripts = Codegen.ofNullable(setupScripts);
-            return this;
+
+        public Builder setupScripts(SetupScriptsArgs setupScripts) {
+            return setupScripts(Output.of(setupScripts));
         }
+
         public Builder sshSettings(@Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings) {
-            this.sshSettings = sshSettings;
+            $.sshSettings = sshSettings;
             return this;
         }
-        public Builder sshSettings(@Nullable ComputeInstanceSshSettingsArgs sshSettings) {
-            this.sshSettings = Codegen.ofNullable(sshSettings);
-            return this;
+
+        public Builder sshSettings(ComputeInstanceSshSettingsArgs sshSettings) {
+            return sshSettings(Output.of(sshSettings));
         }
+
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable ResourceIdArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(ResourceIdArgs subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public ComputeInstancePropertiesArgs build() {
-            return new ComputeInstancePropertiesArgs(applicationSharingPolicy, computeInstanceAuthorizationType, personalComputeInstanceSettings, setupScripts, sshSettings, subnet, vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public ComputeInstancePropertiesArgs build() {
+            $.applicationSharingPolicy = Codegen.stringProp("applicationSharingPolicy").left(ApplicationSharingPolicy.class).output().arg($.applicationSharingPolicy).def("Shared").getNullable();
+            $.computeInstanceAuthorizationType = Codegen.stringProp("computeInstanceAuthorizationType").left(ComputeInstanceAuthorizationType.class).output().arg($.computeInstanceAuthorizationType).def("personal").getNullable();
+            return $;
         }
     }
+
 }

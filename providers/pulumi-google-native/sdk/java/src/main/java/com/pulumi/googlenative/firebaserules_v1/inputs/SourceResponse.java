@@ -22,48 +22,49 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="files", required=true)
-      private final List<FileResponse> files;
+    private List<FileResponse> files;
 
     public List<FileResponse> files() {
         return this.files;
     }
 
-    public SourceResponse(List<FileResponse> files) {
-        this.files = Objects.requireNonNull(files, "expected parameter 'files' to be non-null");
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.files = List.of();
+    private SourceResponse(SourceResponse $) {
+        this.files = $.files;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FileResponse> files;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.files = defaults.files;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder files(List<FileResponse> files) {
-            this.files = Objects.requireNonNull(files);
+            $.files = files;
             return this;
         }
+
         public Builder files(FileResponse... files) {
             return files(List.of(files));
-        }        public SourceResponse build() {
-            return new SourceResponse(files);
+        }
+
+        public SourceResponse build() {
+            $.files = Objects.requireNonNull($.files, "expected parameter 'files' to be non-null");
+            return $;
         }
     }
+
 }

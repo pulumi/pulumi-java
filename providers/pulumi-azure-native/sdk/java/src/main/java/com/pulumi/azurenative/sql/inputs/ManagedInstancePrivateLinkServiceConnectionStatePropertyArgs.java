@@ -5,7 +5,6 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -30,63 +29,60 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
     }
 
-    public ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(
-        Output<String> description,
-        Output<String> status) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs() {}
 
-    private ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs() {
-        this.description = Codegen.empty();
-        this.status = Codegen.empty();
+    private ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs $) {
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> description;
-        private Output<String> status;
+        private ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs();
         }
 
         public Builder(ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs build() {
-            return new ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs(description, status);
+            return status(Output.of(status));
+        }
+
+        public ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

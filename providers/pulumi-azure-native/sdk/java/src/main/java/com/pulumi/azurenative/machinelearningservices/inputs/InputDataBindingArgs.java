@@ -7,9 +7,9 @@ import com.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataId")
-      private final @Nullable Output<String> dataId;
+    private @Nullable Output<String> dataId;
 
-    public Output<String> dataId() {
-        return this.dataId == null ? Codegen.empty() : this.dataId;
+    public Optional<Output<String>> dataId() {
+        return Optional.ofNullable(this.dataId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,DataBindingMode>> mode;
+    private @Nullable Output<Either<String,DataBindingMode>> mode;
 
-    public Output<Either<String,DataBindingMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,DataBindingMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class InputDataBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pathOnCompute")
-      private final @Nullable Output<String> pathOnCompute;
+    private @Nullable Output<String> pathOnCompute;
 
-    public Output<String> pathOnCompute() {
-        return this.pathOnCompute == null ? Codegen.empty() : this.pathOnCompute;
+    public Optional<Output<String>> pathOnCompute() {
+        return Optional.ofNullable(this.pathOnCompute);
     }
 
-    public InputDataBindingArgs(
-        @Nullable Output<String> dataId,
-        @Nullable Output<Either<String,DataBindingMode>> mode,
-        @Nullable Output<String> pathOnCompute) {
-        this.dataId = dataId;
-        this.mode = mode;
-        this.pathOnCompute = pathOnCompute;
-    }
+    private InputDataBindingArgs() {}
 
-    private InputDataBindingArgs() {
-        this.dataId = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.pathOnCompute = Codegen.empty();
+    private InputDataBindingArgs(InputDataBindingArgs $) {
+        this.dataId = $.dataId;
+        this.mode = $.mode;
+        this.pathOnCompute = $.pathOnCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputDataBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataId;
-        private @Nullable Output<Either<String,DataBindingMode>> mode;
-        private @Nullable Output<String> pathOnCompute;
+        private InputDataBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputDataBindingArgs();
         }
 
         public Builder(InputDataBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataId = defaults.dataId;
-    	      this.mode = defaults.mode;
-    	      this.pathOnCompute = defaults.pathOnCompute;
+            $ = new InputDataBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataId(@Nullable Output<String> dataId) {
-            this.dataId = dataId;
+            $.dataId = dataId;
             return this;
         }
-        public Builder dataId(@Nullable String dataId) {
-            this.dataId = Codegen.ofNullable(dataId);
-            return this;
+
+        public Builder dataId(String dataId) {
+            return dataId(Output.of(dataId));
         }
+
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,DataBindingMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
-            this.pathOnCompute = pathOnCompute;
+            $.pathOnCompute = pathOnCompute;
             return this;
         }
-        public Builder pathOnCompute(@Nullable String pathOnCompute) {
-            this.pathOnCompute = Codegen.ofNullable(pathOnCompute);
-            return this;
-        }        public InputDataBindingArgs build() {
-            return new InputDataBindingArgs(dataId, mode, pathOnCompute);
+
+        public Builder pathOnCompute(String pathOnCompute) {
+            return pathOnCompute(Output.of(pathOnCompute));
+        }
+
+        public InputDataBindingArgs build() {
+            return $;
         }
     }
+
 }

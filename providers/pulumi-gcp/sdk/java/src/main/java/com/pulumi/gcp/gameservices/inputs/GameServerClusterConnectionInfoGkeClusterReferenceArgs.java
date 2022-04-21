@@ -5,7 +5,6 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,49 +25,49 @@ public final class GameServerClusterConnectionInfoGkeClusterReferenceArgs extend
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
     }
 
-    public GameServerClusterConnectionInfoGkeClusterReferenceArgs(Output<String> cluster) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-    }
+    private GameServerClusterConnectionInfoGkeClusterReferenceArgs() {}
 
-    private GameServerClusterConnectionInfoGkeClusterReferenceArgs() {
-        this.cluster = Codegen.empty();
+    private GameServerClusterConnectionInfoGkeClusterReferenceArgs(GameServerClusterConnectionInfoGkeClusterReferenceArgs $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerClusterConnectionInfoGkeClusterReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cluster;
+        private GameServerClusterConnectionInfoGkeClusterReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerClusterConnectionInfoGkeClusterReferenceArgs();
         }
 
         public Builder(GameServerClusterConnectionInfoGkeClusterReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new GameServerClusterConnectionInfoGkeClusterReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
-        }        public GameServerClusterConnectionInfoGkeClusterReferenceArgs build() {
-            return new GameServerClusterConnectionInfoGkeClusterReferenceArgs(cluster);
+            return cluster(Output.of(cluster));
+        }
+
+        public GameServerClusterConnectionInfoGkeClusterReferenceArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="categoricalValues", required=true)
-      private final List<String> categoricalValues;
+    private List<String> categoricalValues;
 
     public List<String> categoricalValues() {
         return this.categoricalValues;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="discreteValues", required=true)
-      private final List<Double> discreteValues;
+    private List<Double> discreteValues;
 
     public List<Double> discreteValues() {
         return this.discreteValues;
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="maxValue", required=true)
-      private final Double maxValue;
+    private Double maxValue;
 
     public Double maxValue() {
         return this.maxValue;
@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="minValue", required=true)
-      private final Double minValue;
+    private Double minValue;
 
     public Double minValue() {
         return this.minValue;
@@ -67,7 +67,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="parameterName", required=true)
-      private final String parameterName;
+    private String parameterName;
 
     public String parameterName() {
         return this.parameterName;
@@ -78,7 +78,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="scaleType", required=true)
-      private final String scaleType;
+    private String scaleType;
 
     public String scaleType() {
         return this.scaleType;
@@ -89,106 +89,95 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudMlV1__ParameterSpecResponse(
-        List<String> categoricalValues,
-        List<Double> discreteValues,
-        Double maxValue,
-        Double minValue,
-        String parameterName,
-        String scaleType,
-        String type) {
-        this.categoricalValues = Objects.requireNonNull(categoricalValues, "expected parameter 'categoricalValues' to be non-null");
-        this.discreteValues = Objects.requireNonNull(discreteValues, "expected parameter 'discreteValues' to be non-null");
-        this.maxValue = Objects.requireNonNull(maxValue, "expected parameter 'maxValue' to be non-null");
-        this.minValue = Objects.requireNonNull(minValue, "expected parameter 'minValue' to be non-null");
-        this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
-        this.scaleType = Objects.requireNonNull(scaleType, "expected parameter 'scaleType' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudMlV1__ParameterSpecResponse() {}
 
-    private GoogleCloudMlV1__ParameterSpecResponse() {
-        this.categoricalValues = List.of();
-        this.discreteValues = List.of();
-        this.maxValue = null;
-        this.minValue = null;
-        this.parameterName = null;
-        this.scaleType = null;
-        this.type = null;
+    private GoogleCloudMlV1__ParameterSpecResponse(GoogleCloudMlV1__ParameterSpecResponse $) {
+        this.categoricalValues = $.categoricalValues;
+        this.discreteValues = $.discreteValues;
+        this.maxValue = $.maxValue;
+        this.minValue = $.minValue;
+        this.parameterName = $.parameterName;
+        this.scaleType = $.scaleType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ParameterSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> categoricalValues;
-        private List<Double> discreteValues;
-        private Double maxValue;
-        private Double minValue;
-        private String parameterName;
-        private String scaleType;
-        private String type;
+        private GoogleCloudMlV1__ParameterSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ParameterSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1__ParameterSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoricalValues = defaults.categoricalValues;
-    	      this.discreteValues = defaults.discreteValues;
-    	      this.maxValue = defaults.maxValue;
-    	      this.minValue = defaults.minValue;
-    	      this.parameterName = defaults.parameterName;
-    	      this.scaleType = defaults.scaleType;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudMlV1__ParameterSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categoricalValues(List<String> categoricalValues) {
-            this.categoricalValues = Objects.requireNonNull(categoricalValues);
+            $.categoricalValues = categoricalValues;
             return this;
         }
+
         public Builder categoricalValues(String... categoricalValues) {
             return categoricalValues(List.of(categoricalValues));
         }
+
         public Builder discreteValues(List<Double> discreteValues) {
-            this.discreteValues = Objects.requireNonNull(discreteValues);
+            $.discreteValues = discreteValues;
             return this;
         }
+
         public Builder discreteValues(Double... discreteValues) {
             return discreteValues(List.of(discreteValues));
         }
+
         public Builder maxValue(Double maxValue) {
-            this.maxValue = Objects.requireNonNull(maxValue);
+            $.maxValue = maxValue;
             return this;
         }
+
         public Builder minValue(Double minValue) {
-            this.minValue = Objects.requireNonNull(minValue);
+            $.minValue = minValue;
             return this;
         }
+
         public Builder parameterName(String parameterName) {
-            this.parameterName = Objects.requireNonNull(parameterName);
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder scaleType(String scaleType) {
-            this.scaleType = Objects.requireNonNull(scaleType);
+            $.scaleType = scaleType;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudMlV1__ParameterSpecResponse build() {
-            return new GoogleCloudMlV1__ParameterSpecResponse(categoricalValues, discreteValues, maxValue, minValue, parameterName, scaleType, type);
+        }
+
+        public GoogleCloudMlV1__ParameterSpecResponse build() {
+            $.categoricalValues = Objects.requireNonNull($.categoricalValues, "expected parameter 'categoricalValues' to be non-null");
+            $.discreteValues = Objects.requireNonNull($.discreteValues, "expected parameter 'discreteValues' to be non-null");
+            $.maxValue = Objects.requireNonNull($.maxValue, "expected parameter 'maxValue' to be non-null");
+            $.minValue = Objects.requireNonNull($.minValue, "expected parameter 'minValue' to be non-null");
+            $.parameterName = Objects.requireNonNull($.parameterName, "expected parameter 'parameterName' to be non-null");
+            $.scaleType = Objects.requireNonNull($.scaleType, "expected parameter 'scaleType' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

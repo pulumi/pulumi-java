@@ -9,9 +9,9 @@ import com.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import com.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class CommonEncryptionCencArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clearTracks")
-      private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
+    private @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
-    public Output<List<TrackSelectionArgs>> clearTracks() {
-        return this.clearTracks == null ? Codegen.empty() : this.clearTracks;
+    public Optional<Output<List<TrackSelectionArgs>>> clearTracks() {
+        return Optional.ofNullable(this.clearTracks);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CommonEncryptionCencArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="contentKeys")
-      private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
+    private @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
-    public Output<StreamingPolicyContentKeysArgs> contentKeys() {
-        return this.contentKeys == null ? Codegen.empty() : this.contentKeys;
+    public Optional<Output<StreamingPolicyContentKeysArgs>> contentKeys() {
+        return Optional.ofNullable(this.contentKeys);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CommonEncryptionCencArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="drm")
-      private final @Nullable Output<CencDrmConfigurationArgs> drm;
+    private @Nullable Output<CencDrmConfigurationArgs> drm;
 
-    public Output<CencDrmConfigurationArgs> drm() {
-        return this.drm == null ? Codegen.empty() : this.drm;
+    public Optional<Output<CencDrmConfigurationArgs>> drm() {
+        return Optional.ofNullable(this.drm);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class CommonEncryptionCencArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabledProtocols")
-      private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
+    private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Output<EnabledProtocolsArgs> enabledProtocols() {
-        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
+    public Optional<Output<EnabledProtocolsArgs>> enabledProtocols() {
+        return Optional.ofNullable(this.enabledProtocols);
     }
 
-    public CommonEncryptionCencArgs(
-        @Nullable Output<List<TrackSelectionArgs>> clearTracks,
-        @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys,
-        @Nullable Output<CencDrmConfigurationArgs> drm,
-        @Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
-        this.clearTracks = clearTracks;
-        this.contentKeys = contentKeys;
-        this.drm = drm;
-        this.enabledProtocols = enabledProtocols;
-    }
+    private CommonEncryptionCencArgs() {}
 
-    private CommonEncryptionCencArgs() {
-        this.clearTracks = Codegen.empty();
-        this.contentKeys = Codegen.empty();
-        this.drm = Codegen.empty();
-        this.enabledProtocols = Codegen.empty();
+    private CommonEncryptionCencArgs(CommonEncryptionCencArgs $) {
+        this.clearTracks = $.clearTracks;
+        this.contentKeys = $.contentKeys;
+        this.drm = $.drm;
+        this.enabledProtocols = $.enabledProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonEncryptionCencArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TrackSelectionArgs>> clearTracks;
-        private @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
-        private @Nullable Output<CencDrmConfigurationArgs> drm;
-        private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
+        private CommonEncryptionCencArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonEncryptionCencArgs();
         }
 
         public Builder(CommonEncryptionCencArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clearTracks = defaults.clearTracks;
-    	      this.contentKeys = defaults.contentKeys;
-    	      this.drm = defaults.drm;
-    	      this.enabledProtocols = defaults.enabledProtocols;
+            $ = new CommonEncryptionCencArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clearTracks(@Nullable Output<List<TrackSelectionArgs>> clearTracks) {
-            this.clearTracks = clearTracks;
+            $.clearTracks = clearTracks;
             return this;
         }
-        public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
-            this.clearTracks = Codegen.ofNullable(clearTracks);
-            return this;
+
+        public Builder clearTracks(List<TrackSelectionArgs> clearTracks) {
+            return clearTracks(Output.of(clearTracks));
         }
+
         public Builder clearTracks(TrackSelectionArgs... clearTracks) {
             return clearTracks(List.of(clearTracks));
         }
+
         public Builder contentKeys(@Nullable Output<StreamingPolicyContentKeysArgs> contentKeys) {
-            this.contentKeys = contentKeys;
+            $.contentKeys = contentKeys;
             return this;
         }
-        public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
-            this.contentKeys = Codegen.ofNullable(contentKeys);
-            return this;
+
+        public Builder contentKeys(StreamingPolicyContentKeysArgs contentKeys) {
+            return contentKeys(Output.of(contentKeys));
         }
+
         public Builder drm(@Nullable Output<CencDrmConfigurationArgs> drm) {
-            this.drm = drm;
+            $.drm = drm;
             return this;
         }
-        public Builder drm(@Nullable CencDrmConfigurationArgs drm) {
-            this.drm = Codegen.ofNullable(drm);
-            return this;
+
+        public Builder drm(CencDrmConfigurationArgs drm) {
+            return drm(Output.of(drm));
         }
+
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
-            this.enabledProtocols = enabledProtocols;
+            $.enabledProtocols = enabledProtocols;
             return this;
         }
-        public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
-            return this;
-        }        public CommonEncryptionCencArgs build() {
-            return new CommonEncryptionCencArgs(clearTracks, contentKeys, drm, enabledProtocols);
+
+        public Builder enabledProtocols(EnabledProtocolsArgs enabledProtocols) {
+            return enabledProtocols(Output.of(enabledProtocols));
+        }
+
+        public CommonEncryptionCencArgs build() {
+            return $;
         }
     }
+
 }

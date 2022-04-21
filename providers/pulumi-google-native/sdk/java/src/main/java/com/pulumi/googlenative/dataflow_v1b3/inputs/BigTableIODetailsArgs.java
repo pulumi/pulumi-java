@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class BigTableIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tableId")
-      private final @Nullable Output<String> tableId;
+    private @Nullable Output<String> tableId;
 
-    public Output<String> tableId() {
-        return this.tableId == null ? Codegen.empty() : this.tableId;
+    public Optional<Output<String>> tableId() {
+        return Optional.ofNullable(this.tableId);
     }
 
-    public BigTableIODetailsArgs(
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> tableId) {
-        this.instanceId = instanceId;
-        this.project = project;
-        this.tableId = tableId;
-    }
+    private BigTableIODetailsArgs() {}
 
-    private BigTableIODetailsArgs() {
-        this.instanceId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tableId = Codegen.empty();
+    private BigTableIODetailsArgs(BigTableIODetailsArgs $) {
+        this.instanceId = $.instanceId;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigTableIODetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> tableId;
+        private BigTableIODetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigTableIODetailsArgs();
         }
 
         public Builder(BigTableIODetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new BigTableIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tableId(@Nullable Output<String> tableId) {
-            this.tableId = tableId;
+            $.tableId = tableId;
             return this;
         }
-        public Builder tableId(@Nullable String tableId) {
-            this.tableId = Codegen.ofNullable(tableId);
-            return this;
-        }        public BigTableIODetailsArgs build() {
-            return new BigTableIODetailsArgs(instanceId, project, tableId);
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
+        }
+
+        public BigTableIODetailsArgs build() {
+            return $;
         }
     }
+
 }

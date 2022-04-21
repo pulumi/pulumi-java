@@ -19,65 +19,63 @@ public final class RuleGroupSqliMatchStatement extends com.pulumi.resources.Invo
     public static final RuleGroupSqliMatchStatement Empty = new RuleGroupSqliMatchStatement();
 
     @Import(name="fieldToMatch", required=true)
-      private final RuleGroupFieldToMatch fieldToMatch;
+    private RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<RuleGroupTextTransformation> textTransformations;
+    private List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupSqliMatchStatement(
-        RuleGroupFieldToMatch fieldToMatch,
-        List<RuleGroupTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupSqliMatchStatement() {}
 
-    private RuleGroupSqliMatchStatement() {
-        this.fieldToMatch = null;
-        this.textTransformations = List.of();
+    private RuleGroupSqliMatchStatement(RuleGroupSqliMatchStatement $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupSqliMatchStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupFieldToMatch fieldToMatch;
-        private List<RuleGroupTextTransformation> textTransformations;
+        private RuleGroupSqliMatchStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupSqliMatchStatement();
         }
 
         public Builder(RuleGroupSqliMatchStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupSqliMatchStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupSqliMatchStatement build() {
-            return new RuleGroupSqliMatchStatement(fieldToMatch, textTransformations);
+        }
+
+        public RuleGroupSqliMatchStatement build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

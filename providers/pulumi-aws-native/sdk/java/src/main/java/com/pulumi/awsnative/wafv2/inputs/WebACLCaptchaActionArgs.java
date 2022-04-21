@@ -6,8 +6,8 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLCustomRequestHandlingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WebACLCaptchaActionArgs extends com.pulumi.resources.Resource
     public static final WebACLCaptchaActionArgs Empty = new WebACLCaptchaActionArgs();
 
     @Import(name="customRequestHandling")
-      private final @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
+    private @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<WebACLCustomRequestHandlingArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<WebACLCustomRequestHandlingArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public WebACLCaptchaActionArgs(@Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private WebACLCaptchaActionArgs() {}
 
-    private WebACLCaptchaActionArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private WebACLCaptchaActionArgs(WebACLCaptchaActionArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLCaptchaActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
+        private WebACLCaptchaActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLCaptchaActionArgs();
         }
 
         public Builder(WebACLCaptchaActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new WebACLCaptchaActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable WebACLCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public WebACLCaptchaActionArgs build() {
-            return new WebACLCaptchaActionArgs(customRequestHandling);
+
+        public Builder customRequestHandling(WebACLCustomRequestHandlingArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public WebACLCaptchaActionArgs build() {
+            return $;
         }
     }
+
 }

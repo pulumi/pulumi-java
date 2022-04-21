@@ -19,10 +19,10 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -41,7 +41,7 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policySetName", required=true)
-      private final String policySetName;
+    private String policySetName;
 
     public String policySetName() {
         return this.policySetName;
@@ -63,82 +63,72 @@ public final class GetPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPolicyArgs(
-        @Nullable String expand,
-        String labName,
-        String name,
-        String policySetName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policySetName = Objects.requireNonNull(policySetName, "expected parameter 'policySetName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPolicyArgs() {}
 
-    private GetPolicyArgs() {
-        this.expand = null;
-        this.labName = null;
-        this.name = null;
-        this.policySetName = null;
-        this.resourceGroupName = null;
+    private GetPolicyArgs(GetPolicyArgs $) {
+        this.expand = $.expand;
+        this.labName = $.labName;
+        this.name = $.name;
+        this.policySetName = $.policySetName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String labName;
-        private String name;
-        private String policySetName;
-        private String resourceGroupName;
+        private GetPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyArgs();
         }
 
         public Builder(GetPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.labName = defaults.labName;
-    	      this.name = defaults.name;
-    	      this.policySetName = defaults.policySetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policySetName(String policySetName) {
-            this.policySetName = Objects.requireNonNull(policySetName);
+            $.policySetName = policySetName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPolicyArgs build() {
-            return new GetPolicyArgs(expand, labName, name, policySetName, resourceGroupName);
+        }
+
+        public GetPolicyArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.policySetName = Objects.requireNonNull($.policySetName, "expected parameter 'policySetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

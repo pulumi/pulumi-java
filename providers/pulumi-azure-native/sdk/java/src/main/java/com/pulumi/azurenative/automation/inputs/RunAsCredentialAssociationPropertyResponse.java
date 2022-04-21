@@ -23,45 +23,44 @@ public final class RunAsCredentialAssociationPropertyResponse extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public RunAsCredentialAssociationPropertyResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private RunAsCredentialAssociationPropertyResponse() {}
 
-    private RunAsCredentialAssociationPropertyResponse() {
-        this.name = null;
+    private RunAsCredentialAssociationPropertyResponse(RunAsCredentialAssociationPropertyResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunAsCredentialAssociationPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private RunAsCredentialAssociationPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunAsCredentialAssociationPropertyResponse();
         }
 
         public Builder(RunAsCredentialAssociationPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new RunAsCredentialAssociationPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public RunAsCredentialAssociationPropertyResponse build() {
-            return new RunAsCredentialAssociationPropertyResponse(name);
+        }
+
+        public RunAsCredentialAssociationPropertyResponse build() {
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
 
     public static final AndroidTestLoopArgs Empty = new AndroidTestLoopArgs();
 
-    public AndroidTestLoopArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AndroidTestLoopArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AndroidTestLoopArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AndroidTestLoopArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AndroidTestLoopArgs();
         }
         public AndroidTestLoopArgs build() {
-            return new AndroidTestLoopArgs();
+            return $;
         }
     }
+
 }

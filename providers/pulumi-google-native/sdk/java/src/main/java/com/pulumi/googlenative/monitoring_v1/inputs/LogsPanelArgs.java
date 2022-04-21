@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LogsPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class LogsPanelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceNames")
-      private final @Nullable Output<List<String>> resourceNames;
+    private @Nullable Output<List<String>> resourceNames;
 
-    public Output<List<String>> resourceNames() {
-        return this.resourceNames == null ? Codegen.empty() : this.resourceNames;
+    public Optional<Output<List<String>>> resourceNames() {
+        return Optional.ofNullable(this.resourceNames);
     }
 
-    public LogsPanelArgs(
-        @Nullable Output<String> filter,
-        @Nullable Output<List<String>> resourceNames) {
-        this.filter = filter;
-        this.resourceNames = resourceNames;
-    }
+    private LogsPanelArgs() {}
 
-    private LogsPanelArgs() {
-        this.filter = Codegen.empty();
-        this.resourceNames = Codegen.empty();
+    private LogsPanelArgs(LogsPanelArgs $) {
+        this.filter = $.filter;
+        this.resourceNames = $.resourceNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogsPanelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private @Nullable Output<List<String>> resourceNames;
+        private LogsPanelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogsPanelArgs();
         }
 
         public Builder(LogsPanelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.resourceNames = defaults.resourceNames;
+            $ = new LogsPanelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder resourceNames(@Nullable Output<List<String>> resourceNames) {
-            this.resourceNames = resourceNames;
+            $.resourceNames = resourceNames;
             return this;
         }
-        public Builder resourceNames(@Nullable List<String> resourceNames) {
-            this.resourceNames = Codegen.ofNullable(resourceNames);
-            return this;
+
+        public Builder resourceNames(List<String> resourceNames) {
+            return resourceNames(Output.of(resourceNames));
         }
+
         public Builder resourceNames(String... resourceNames) {
             return resourceNames(List.of(resourceNames));
-        }        public LogsPanelArgs build() {
-            return new LogsPanelArgs(filter, resourceNames);
+        }
+
+        public LogsPanelArgs build() {
+            return $;
         }
     }
+
 }

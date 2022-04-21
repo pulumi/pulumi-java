@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ClusterCacheNodeArgs extends com.pulumi.resources.ResourceArg
     public static final ClusterCacheNodeArgs Empty = new ClusterCacheNodeArgs();
 
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -28,17 +28,17 @@ public final class ClusterCacheNodeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,89 +46,78 @@ public final class ClusterCacheNodeArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public ClusterCacheNodeArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> port) {
-        this.address = address;
-        this.availabilityZone = availabilityZone;
-        this.id = id;
-        this.port = port;
-    }
+    private ClusterCacheNodeArgs() {}
 
-    private ClusterCacheNodeArgs() {
-        this.address = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.id = Codegen.empty();
-        this.port = Codegen.empty();
+    private ClusterCacheNodeArgs(ClusterCacheNodeArgs $) {
+        this.address = $.address;
+        this.availabilityZone = $.availabilityZone;
+        this.id = $.id;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCacheNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> port;
+        private ClusterCacheNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCacheNodeArgs();
         }
 
         public Builder(ClusterCacheNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.id = defaults.id;
-    	      this.port = defaults.port;
+            $ = new ClusterCacheNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public ClusterCacheNodeArgs build() {
-            return new ClusterCacheNodeArgs(address, availabilityZone, id, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public ClusterCacheNodeArgs build() {
+            return $;
         }
     }
+
 }

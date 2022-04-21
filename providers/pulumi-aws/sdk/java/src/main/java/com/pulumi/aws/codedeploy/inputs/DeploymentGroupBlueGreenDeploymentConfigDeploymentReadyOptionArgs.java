@@ -5,10 +5,10 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      * 
      */
     @Import(name="actionOnTimeout")
-      private final @Nullable Output<String> actionOnTimeout;
+    private @Nullable Output<String> actionOnTimeout;
 
-    public Output<String> actionOnTimeout() {
-        return this.actionOnTimeout == null ? Codegen.empty() : this.actionOnTimeout;
+    public Optional<Output<String>> actionOnTimeout() {
+        return Optional.ofNullable(this.actionOnTimeout);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      * 
      */
     @Import(name="waitTimeInMinutes")
-      private final @Nullable Output<Integer> waitTimeInMinutes;
+    private @Nullable Output<Integer> waitTimeInMinutes;
 
-    public Output<Integer> waitTimeInMinutes() {
-        return this.waitTimeInMinutes == null ? Codegen.empty() : this.waitTimeInMinutes;
+    public Optional<Output<Integer>> waitTimeInMinutes() {
+        return Optional.ofNullable(this.waitTimeInMinutes);
     }
 
-    public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(
-        @Nullable Output<String> actionOnTimeout,
-        @Nullable Output<Integer> waitTimeInMinutes) {
-        this.actionOnTimeout = actionOnTimeout;
-        this.waitTimeInMinutes = waitTimeInMinutes;
-    }
+    private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs() {}
 
-    private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs() {
-        this.actionOnTimeout = Codegen.empty();
-        this.waitTimeInMinutes = Codegen.empty();
+    private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs $) {
+        this.actionOnTimeout = $.actionOnTimeout;
+        this.waitTimeInMinutes = $.waitTimeInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionOnTimeout;
-        private @Nullable Output<Integer> waitTimeInMinutes;
+        private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs();
         }
 
         public Builder(DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionOnTimeout = defaults.actionOnTimeout;
-    	      this.waitTimeInMinutes = defaults.waitTimeInMinutes;
+            $ = new DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionOnTimeout(@Nullable Output<String> actionOnTimeout) {
-            this.actionOnTimeout = actionOnTimeout;
+            $.actionOnTimeout = actionOnTimeout;
             return this;
         }
-        public Builder actionOnTimeout(@Nullable String actionOnTimeout) {
-            this.actionOnTimeout = Codegen.ofNullable(actionOnTimeout);
-            return this;
+
+        public Builder actionOnTimeout(String actionOnTimeout) {
+            return actionOnTimeout(Output.of(actionOnTimeout));
         }
+
         public Builder waitTimeInMinutes(@Nullable Output<Integer> waitTimeInMinutes) {
-            this.waitTimeInMinutes = waitTimeInMinutes;
+            $.waitTimeInMinutes = waitTimeInMinutes;
             return this;
         }
-        public Builder waitTimeInMinutes(@Nullable Integer waitTimeInMinutes) {
-            this.waitTimeInMinutes = Codegen.ofNullable(waitTimeInMinutes);
-            return this;
-        }        public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs build() {
-            return new DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs(actionOnTimeout, waitTimeInMinutes);
+
+        public Builder waitTimeInMinutes(Integer waitTimeInMinutes) {
+            return waitTimeInMinutes(Output.of(waitTimeInMinutes));
+        }
+
+        public DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs build() {
+            return $;
         }
     }
+
 }

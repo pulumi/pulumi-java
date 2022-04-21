@@ -17,7 +17,7 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="searchServiceName", required=true)
-      private final String searchServiceName;
+    private String searchServiceName;
 
     public String searchServiceName() {
         return this.searchServiceName;
@@ -39,64 +39,59 @@ public final class GetSharedPrivateLinkResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharedPrivateLinkResourceName", required=true)
-      private final String sharedPrivateLinkResourceName;
+    private String sharedPrivateLinkResourceName;
 
     public String sharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName;
     }
 
-    public GetSharedPrivateLinkResourceArgs(
-        String resourceGroupName,
-        String searchServiceName,
-        String sharedPrivateLinkResourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.searchServiceName = Objects.requireNonNull(searchServiceName, "expected parameter 'searchServiceName' to be non-null");
-        this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName, "expected parameter 'sharedPrivateLinkResourceName' to be non-null");
-    }
+    private GetSharedPrivateLinkResourceArgs() {}
 
-    private GetSharedPrivateLinkResourceArgs() {
-        this.resourceGroupName = null;
-        this.searchServiceName = null;
-        this.sharedPrivateLinkResourceName = null;
+    private GetSharedPrivateLinkResourceArgs(GetSharedPrivateLinkResourceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.searchServiceName = $.searchServiceName;
+        this.sharedPrivateLinkResourceName = $.sharedPrivateLinkResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSharedPrivateLinkResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String searchServiceName;
-        private String sharedPrivateLinkResourceName;
+        private GetSharedPrivateLinkResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSharedPrivateLinkResourceArgs();
         }
 
         public Builder(GetSharedPrivateLinkResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.searchServiceName = defaults.searchServiceName;
-    	      this.sharedPrivateLinkResourceName = defaults.sharedPrivateLinkResourceName;
+            $ = new GetSharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder searchServiceName(String searchServiceName) {
-            this.searchServiceName = Objects.requireNonNull(searchServiceName);
+            $.searchServiceName = searchServiceName;
             return this;
         }
+
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
+            $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
-        }        public GetSharedPrivateLinkResourceArgs build() {
-            return new GetSharedPrivateLinkResourceArgs(resourceGroupName, searchServiceName, sharedPrivateLinkResourceName);
+        }
+
+        public GetSharedPrivateLinkResourceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.searchServiceName = Objects.requireNonNull($.searchServiceName, "expected parameter 'searchServiceName' to be non-null");
+            $.sharedPrivateLinkResourceName = Objects.requireNonNull($.sharedPrivateLinkResourceName, "expected parameter 'sharedPrivateLinkResourceName' to be non-null");
+            return $;
         }
     }
+
 }

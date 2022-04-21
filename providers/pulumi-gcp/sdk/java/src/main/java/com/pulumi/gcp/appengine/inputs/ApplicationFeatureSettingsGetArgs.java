@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ApplicationFeatureSettingsGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="splitHealthChecks", required=true)
-      private final Output<Boolean> splitHealthChecks;
+    private Output<Boolean> splitHealthChecks;
 
     public Output<Boolean> splitHealthChecks() {
         return this.splitHealthChecks;
     }
 
-    public ApplicationFeatureSettingsGetArgs(Output<Boolean> splitHealthChecks) {
-        this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks, "expected parameter 'splitHealthChecks' to be non-null");
-    }
+    private ApplicationFeatureSettingsGetArgs() {}
 
-    private ApplicationFeatureSettingsGetArgs() {
-        this.splitHealthChecks = Codegen.empty();
+    private ApplicationFeatureSettingsGetArgs(ApplicationFeatureSettingsGetArgs $) {
+        this.splitHealthChecks = $.splitHealthChecks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationFeatureSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> splitHealthChecks;
+        private ApplicationFeatureSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationFeatureSettingsGetArgs();
         }
 
         public Builder(ApplicationFeatureSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.splitHealthChecks = defaults.splitHealthChecks;
+            $ = new ApplicationFeatureSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder splitHealthChecks(Output<Boolean> splitHealthChecks) {
-            this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
+            $.splitHealthChecks = splitHealthChecks;
             return this;
         }
+
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
-            this.splitHealthChecks = Output.of(Objects.requireNonNull(splitHealthChecks));
-            return this;
-        }        public ApplicationFeatureSettingsGetArgs build() {
-            return new ApplicationFeatureSettingsGetArgs(splitHealthChecks);
+            return splitHealthChecks(Output.of(splitHealthChecks));
+        }
+
+        public ApplicationFeatureSettingsGetArgs build() {
+            $.splitHealthChecks = Objects.requireNonNull($.splitHealthChecks, "expected parameter 'splitHealthChecks' to be non-null");
+            return $;
         }
     }
+
 }

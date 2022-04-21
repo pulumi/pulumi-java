@@ -17,7 +17,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="networkInterfaceName", required=true)
-      private final String networkInterfaceName;
+    private String networkInterfaceName;
 
     public String networkInterfaceName() {
         return this.networkInterfaceName;
@@ -28,7 +28,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="tapConfigurationName", required=true)
-      private final String tapConfigurationName;
+    private String tapConfigurationName;
 
     public String tapConfigurationName() {
         return this.tapConfigurationName;
     }
 
-    public GetNetworkInterfaceTapConfigurationArgs(
-        String networkInterfaceName,
-        String resourceGroupName,
-        String tapConfigurationName) {
-        this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tapConfigurationName = Objects.requireNonNull(tapConfigurationName, "expected parameter 'tapConfigurationName' to be non-null");
-    }
+    private GetNetworkInterfaceTapConfigurationArgs() {}
 
-    private GetNetworkInterfaceTapConfigurationArgs() {
-        this.networkInterfaceName = null;
-        this.resourceGroupName = null;
-        this.tapConfigurationName = null;
+    private GetNetworkInterfaceTapConfigurationArgs(GetNetworkInterfaceTapConfigurationArgs $) {
+        this.networkInterfaceName = $.networkInterfaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tapConfigurationName = $.tapConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInterfaceTapConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkInterfaceName;
-        private String resourceGroupName;
-        private String tapConfigurationName;
+        private GetNetworkInterfaceTapConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInterfaceTapConfigurationArgs();
         }
 
         public Builder(GetNetworkInterfaceTapConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaceName = defaults.networkInterfaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tapConfigurationName = defaults.tapConfigurationName;
+            $ = new GetNetworkInterfaceTapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
+            $.networkInterfaceName = networkInterfaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tapConfigurationName(String tapConfigurationName) {
-            this.tapConfigurationName = Objects.requireNonNull(tapConfigurationName);
+            $.tapConfigurationName = tapConfigurationName;
             return this;
-        }        public GetNetworkInterfaceTapConfigurationArgs build() {
-            return new GetNetworkInterfaceTapConfigurationArgs(networkInterfaceName, resourceGroupName, tapConfigurationName);
+        }
+
+        public GetNetworkInterfaceTapConfigurationArgs build() {
+            $.networkInterfaceName = Objects.requireNonNull($.networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.tapConfigurationName = Objects.requireNonNull($.tapConfigurationName, "expected parameter 'tapConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

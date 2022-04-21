@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iotwireless.inputs;
 import com.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANGatewayVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs extends com.p
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs();
 
     @Import(name="currentVersion")
-      private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
+    private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion() {
-        return this.currentVersion == null ? Codegen.empty() : this.currentVersion;
+    public Optional<Output<TaskDefinitionLoRaWANGatewayVersionArgs>> currentVersion() {
+        return Optional.ofNullable(this.currentVersion);
     }
 
     @Import(name="updateVersion")
-      private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
+    private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
 
-    public Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion() {
-        return this.updateVersion == null ? Codegen.empty() : this.updateVersion;
+    public Optional<Output<TaskDefinitionLoRaWANGatewayVersionArgs>> updateVersion() {
+        return Optional.ofNullable(this.updateVersion);
     }
 
-    public TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs(
-        @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion,
-        @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
-        this.currentVersion = currentVersion;
-        this.updateVersion = updateVersion;
-    }
+    private TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs() {}
 
-    private TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs() {
-        this.currentVersion = Codegen.empty();
-        this.updateVersion = Codegen.empty();
+    private TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs(TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs $) {
+        this.currentVersion = $.currentVersion;
+        this.updateVersion = $.updateVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
-        private @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
+        private TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs();
         }
 
         public Builder(TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentVersion = defaults.currentVersion;
-    	      this.updateVersion = defaults.updateVersion;
+            $ = new TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentVersion(@Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion) {
-            this.currentVersion = currentVersion;
+            $.currentVersion = currentVersion;
             return this;
         }
-        public Builder currentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
-            this.currentVersion = Codegen.ofNullable(currentVersion);
-            return this;
+
+        public Builder currentVersion(TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
+            return currentVersion(Output.of(currentVersion));
         }
+
         public Builder updateVersion(@Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
-            this.updateVersion = updateVersion;
+            $.updateVersion = updateVersion;
             return this;
         }
-        public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
-            this.updateVersion = Codegen.ofNullable(updateVersion);
-            return this;
-        }        public TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs build() {
-            return new TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs(currentVersion, updateVersion);
+
+        public Builder updateVersion(TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
+            return updateVersion(Output.of(updateVersion));
+        }
+
+        public TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs build() {
+            return $;
         }
     }
+
 }

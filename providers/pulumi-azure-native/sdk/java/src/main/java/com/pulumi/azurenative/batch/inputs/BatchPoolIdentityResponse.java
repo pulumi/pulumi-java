@@ -25,7 +25,7 @@ public final class BatchPoolIdentityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -36,55 +36,51 @@ public final class BatchPoolIdentityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+    private @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    public Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
+    public Optional<Map<String,BatchPoolIdentityResponseUserAssignedIdentities>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public BatchPoolIdentityResponse(
-        String type,
-        @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private BatchPoolIdentityResponse() {}
 
-    private BatchPoolIdentityResponse() {
-        this.type = null;
-        this.userAssignedIdentities = Map.of();
+    private BatchPoolIdentityResponse(BatchPoolIdentityResponse $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchPoolIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+        private BatchPoolIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchPoolIdentityResponse();
         }
 
         public Builder(BatchPoolIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new BatchPoolIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public BatchPoolIdentityResponse build() {
-            return new BatchPoolIdentityResponse(type, userAssignedIdentities);
+        }
+
+        public BatchPoolIdentityResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

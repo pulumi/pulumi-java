@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeAffinityArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodAffinityArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodAntiAffinityArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeAffinity")
-      private final @Nullable Output<NodeAffinityArgs> nodeAffinity;
+    private @Nullable Output<NodeAffinityArgs> nodeAffinity;
 
-    public Output<NodeAffinityArgs> nodeAffinity() {
-        return this.nodeAffinity == null ? Codegen.empty() : this.nodeAffinity;
+    public Optional<Output<NodeAffinityArgs>> nodeAffinity() {
+        return Optional.ofNullable(this.nodeAffinity);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podAffinity")
-      private final @Nullable Output<PodAffinityArgs> podAffinity;
+    private @Nullable Output<PodAffinityArgs> podAffinity;
 
-    public Output<PodAffinityArgs> podAffinity() {
-        return this.podAffinity == null ? Codegen.empty() : this.podAffinity;
+    public Optional<Output<PodAffinityArgs>> podAffinity() {
+        return Optional.ofNullable(this.podAffinity);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AffinityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podAntiAffinity")
-      private final @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
+    private @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
 
-    public Output<PodAntiAffinityArgs> podAntiAffinity() {
-        return this.podAntiAffinity == null ? Codegen.empty() : this.podAntiAffinity;
+    public Optional<Output<PodAntiAffinityArgs>> podAntiAffinity() {
+        return Optional.ofNullable(this.podAntiAffinity);
     }
 
-    public AffinityArgs(
-        @Nullable Output<NodeAffinityArgs> nodeAffinity,
-        @Nullable Output<PodAffinityArgs> podAffinity,
-        @Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
-        this.nodeAffinity = nodeAffinity;
-        this.podAffinity = podAffinity;
-        this.podAntiAffinity = podAntiAffinity;
-    }
+    private AffinityArgs() {}
 
-    private AffinityArgs() {
-        this.nodeAffinity = Codegen.empty();
-        this.podAffinity = Codegen.empty();
-        this.podAntiAffinity = Codegen.empty();
+    private AffinityArgs(AffinityArgs $) {
+        this.nodeAffinity = $.nodeAffinity;
+        this.podAffinity = $.podAffinity;
+        this.podAntiAffinity = $.podAntiAffinity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeAffinityArgs> nodeAffinity;
-        private @Nullable Output<PodAffinityArgs> podAffinity;
-        private @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
+        private AffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AffinityArgs();
         }
 
         public Builder(AffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeAffinity = defaults.nodeAffinity;
-    	      this.podAffinity = defaults.podAffinity;
-    	      this.podAntiAffinity = defaults.podAntiAffinity;
+            $ = new AffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeAffinity(@Nullable Output<NodeAffinityArgs> nodeAffinity) {
-            this.nodeAffinity = nodeAffinity;
+            $.nodeAffinity = nodeAffinity;
             return this;
         }
-        public Builder nodeAffinity(@Nullable NodeAffinityArgs nodeAffinity) {
-            this.nodeAffinity = Codegen.ofNullable(nodeAffinity);
-            return this;
+
+        public Builder nodeAffinity(NodeAffinityArgs nodeAffinity) {
+            return nodeAffinity(Output.of(nodeAffinity));
         }
+
         public Builder podAffinity(@Nullable Output<PodAffinityArgs> podAffinity) {
-            this.podAffinity = podAffinity;
+            $.podAffinity = podAffinity;
             return this;
         }
-        public Builder podAffinity(@Nullable PodAffinityArgs podAffinity) {
-            this.podAffinity = Codegen.ofNullable(podAffinity);
-            return this;
+
+        public Builder podAffinity(PodAffinityArgs podAffinity) {
+            return podAffinity(Output.of(podAffinity));
         }
+
         public Builder podAntiAffinity(@Nullable Output<PodAntiAffinityArgs> podAntiAffinity) {
-            this.podAntiAffinity = podAntiAffinity;
+            $.podAntiAffinity = podAntiAffinity;
             return this;
         }
-        public Builder podAntiAffinity(@Nullable PodAntiAffinityArgs podAntiAffinity) {
-            this.podAntiAffinity = Codegen.ofNullable(podAntiAffinity);
-            return this;
-        }        public AffinityArgs build() {
-            return new AffinityArgs(nodeAffinity, podAffinity, podAntiAffinity);
+
+        public Builder podAntiAffinity(PodAntiAffinityArgs podAntiAffinity) {
+            return podAntiAffinity(Output.of(podAntiAffinity));
+        }
+
+        public AffinityArgs build() {
+            return $;
         }
     }
+
 }

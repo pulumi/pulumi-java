@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxFindingsPerInfoType", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
+    private List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
 
     public List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType() {
         return this.maxFindingsPerInfoType;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxFindingsPerItem", required=true)
-      private final Integer maxFindingsPerItem;
+    private Integer maxFindingsPerItem;
 
     public Integer maxFindingsPerItem() {
         return this.maxFindingsPerItem;
@@ -45,67 +45,63 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxFindingsPerRequest", required=true)
-      private final Integer maxFindingsPerRequest;
+    private Integer maxFindingsPerRequest;
 
     public Integer maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 
-    public GooglePrivacyDlpV2FindingLimitsResponse(
-        List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType,
-        Integer maxFindingsPerItem,
-        Integer maxFindingsPerRequest) {
-        this.maxFindingsPerInfoType = Objects.requireNonNull(maxFindingsPerInfoType, "expected parameter 'maxFindingsPerInfoType' to be non-null");
-        this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem, "expected parameter 'maxFindingsPerItem' to be non-null");
-        this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest, "expected parameter 'maxFindingsPerRequest' to be non-null");
-    }
+    private GooglePrivacyDlpV2FindingLimitsResponse() {}
 
-    private GooglePrivacyDlpV2FindingLimitsResponse() {
-        this.maxFindingsPerInfoType = List.of();
-        this.maxFindingsPerItem = null;
-        this.maxFindingsPerRequest = null;
+    private GooglePrivacyDlpV2FindingLimitsResponse(GooglePrivacyDlpV2FindingLimitsResponse $) {
+        this.maxFindingsPerInfoType = $.maxFindingsPerInfoType;
+        this.maxFindingsPerItem = $.maxFindingsPerItem;
+        this.maxFindingsPerRequest = $.maxFindingsPerRequest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FindingLimitsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
-        private Integer maxFindingsPerItem;
-        private Integer maxFindingsPerRequest;
+        private GooglePrivacyDlpV2FindingLimitsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FindingLimitsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2FindingLimitsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFindingsPerInfoType = defaults.maxFindingsPerInfoType;
-    	      this.maxFindingsPerItem = defaults.maxFindingsPerItem;
-    	      this.maxFindingsPerRequest = defaults.maxFindingsPerRequest;
+            $ = new GooglePrivacyDlpV2FindingLimitsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFindingsPerInfoType(List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType) {
-            this.maxFindingsPerInfoType = Objects.requireNonNull(maxFindingsPerInfoType);
+            $.maxFindingsPerInfoType = maxFindingsPerInfoType;
             return this;
         }
+
         public Builder maxFindingsPerInfoType(GooglePrivacyDlpV2InfoTypeLimitResponse... maxFindingsPerInfoType) {
             return maxFindingsPerInfoType(List.of(maxFindingsPerInfoType));
         }
+
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
-            this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
+            $.maxFindingsPerItem = maxFindingsPerItem;
             return this;
         }
+
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
-            this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
+            $.maxFindingsPerRequest = maxFindingsPerRequest;
             return this;
-        }        public GooglePrivacyDlpV2FindingLimitsResponse build() {
-            return new GooglePrivacyDlpV2FindingLimitsResponse(maxFindingsPerInfoType, maxFindingsPerItem, maxFindingsPerRequest);
+        }
+
+        public GooglePrivacyDlpV2FindingLimitsResponse build() {
+            $.maxFindingsPerInfoType = Objects.requireNonNull($.maxFindingsPerInfoType, "expected parameter 'maxFindingsPerInfoType' to be non-null");
+            $.maxFindingsPerItem = Objects.requireNonNull($.maxFindingsPerItem, "expected parameter 'maxFindingsPerItem' to be non-null");
+            $.maxFindingsPerRequest = Objects.requireNonNull($.maxFindingsPerRequest, "expected parameter 'maxFindingsPerRequest' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hanaonazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
-    public IpAddressArgs(@Nullable Output<String> ipAddress) {
-        this.ipAddress = ipAddress;
-    }
+    private IpAddressArgs() {}
 
-    private IpAddressArgs() {
-        this.ipAddress = Codegen.empty();
+    private IpAddressArgs(IpAddressArgs $) {
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
+        private IpAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressArgs();
         }
 
         public Builder(IpAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new IpAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
-        }        public IpAddressArgs build() {
-            return new IpAddressArgs(ipAddress);
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        public IpAddressArgs build() {
+            return $;
         }
     }
+
 }

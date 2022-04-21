@@ -23,10 +23,10 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="family")
-      private final @Nullable String family;
+    private @Nullable String family;
 
     public Optional<String> family() {
-        return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public ExpressRouteCircuitSkuResponse(
-        @Nullable String family,
-        @Nullable String name,
-        @Nullable String tier) {
-        this.family = family;
-        this.name = name;
-        this.tier = tier;
-    }
+    private ExpressRouteCircuitSkuResponse() {}
 
-    private ExpressRouteCircuitSkuResponse() {
-        this.family = null;
-        this.name = null;
-        this.tier = null;
+    private ExpressRouteCircuitSkuResponse(ExpressRouteCircuitSkuResponse $) {
+        this.family = $.family;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String family;
-        private @Nullable String name;
-        private @Nullable String tier;
+        private ExpressRouteCircuitSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitSkuResponse();
         }
 
         public Builder(ExpressRouteCircuitSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ExpressRouteCircuitSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder family(@Nullable String family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public ExpressRouteCircuitSkuResponse build() {
-            return new ExpressRouteCircuitSkuResponse(family, name, tier);
+        }
+
+        public ExpressRouteCircuitSkuResponse build() {
+            return $;
         }
     }
+
 }

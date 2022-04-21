@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class WirelessDeviceOtaaV10xArgs extends com.pulumi.resources.Resou
     public static final WirelessDeviceOtaaV10xArgs Empty = new WirelessDeviceOtaaV10xArgs();
 
     @Import(name="appEui", required=true)
-      private final Output<String> appEui;
+    private Output<String> appEui;
 
     public Output<String> appEui() {
         return this.appEui;
     }
 
     @Import(name="appKey", required=true)
-      private final Output<String> appKey;
+    private Output<String> appKey;
 
     public Output<String> appKey() {
         return this.appKey;
     }
 
-    public WirelessDeviceOtaaV10xArgs(
-        Output<String> appEui,
-        Output<String> appKey) {
-        this.appEui = Objects.requireNonNull(appEui, "expected parameter 'appEui' to be non-null");
-        this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
-    }
+    private WirelessDeviceOtaaV10xArgs() {}
 
-    private WirelessDeviceOtaaV10xArgs() {
-        this.appEui = Codegen.empty();
-        this.appKey = Codegen.empty();
+    private WirelessDeviceOtaaV10xArgs(WirelessDeviceOtaaV10xArgs $) {
+        this.appEui = $.appEui;
+        this.appKey = $.appKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceOtaaV10xArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appEui;
-        private Output<String> appKey;
+        private WirelessDeviceOtaaV10xArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceOtaaV10xArgs();
         }
 
         public Builder(WirelessDeviceOtaaV10xArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEui = defaults.appEui;
-    	      this.appKey = defaults.appKey;
+            $ = new WirelessDeviceOtaaV10xArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEui(Output<String> appEui) {
-            this.appEui = Objects.requireNonNull(appEui);
+            $.appEui = appEui;
             return this;
         }
+
         public Builder appEui(String appEui) {
-            this.appEui = Output.of(Objects.requireNonNull(appEui));
-            return this;
+            return appEui(Output.of(appEui));
         }
+
         public Builder appKey(Output<String> appKey) {
-            this.appKey = Objects.requireNonNull(appKey);
+            $.appKey = appKey;
             return this;
         }
+
         public Builder appKey(String appKey) {
-            this.appKey = Output.of(Objects.requireNonNull(appKey));
-            return this;
-        }        public WirelessDeviceOtaaV10xArgs build() {
-            return new WirelessDeviceOtaaV10xArgs(appEui, appKey);
+            return appKey(Output.of(appKey));
+        }
+
+        public WirelessDeviceOtaaV10xArgs build() {
+            $.appEui = Objects.requireNonNull($.appEui, "expected parameter 'appEui' to be non-null");
+            $.appKey = Objects.requireNonNull($.appKey, "expected parameter 'appKey' to be non-null");
+            return $;
         }
     }
+
 }

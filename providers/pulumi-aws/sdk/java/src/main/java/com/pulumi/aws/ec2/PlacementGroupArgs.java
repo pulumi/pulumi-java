@@ -7,11 +7,11 @@ import com.pulumi.aws.ec2.enums.PlacementStrategy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="partitionCount")
-      private final @Nullable Output<Integer> partitionCount;
+    private @Nullable Output<Integer> partitionCount;
 
-    public Output<Integer> partitionCount() {
-        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
+    public Optional<Output<Integer>> partitionCount() {
+        return Optional.ofNullable(this.partitionCount);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="strategy", required=true)
-      private final Output<Either<String,PlacementStrategy>> strategy;
+    private Output<Either<String,PlacementStrategy>> strategy;
 
     public Output<Either<String,PlacementStrategy>> strategy() {
         return this.strategy;
@@ -59,89 +59,79 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PlacementGroupArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> partitionCount,
-        Output<Either<String,PlacementStrategy>> strategy,
-        @Nullable Output<Map<String,String>> tags) {
-        this.name = name;
-        this.partitionCount = partitionCount;
-        this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
-        this.tags = tags;
-    }
+    private PlacementGroupArgs() {}
 
-    private PlacementGroupArgs() {
-        this.name = Codegen.empty();
-        this.partitionCount = Codegen.empty();
-        this.strategy = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PlacementGroupArgs(PlacementGroupArgs $) {
+        this.name = $.name;
+        this.partitionCount = $.partitionCount;
+        this.strategy = $.strategy;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlacementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> partitionCount;
-        private Output<Either<String,PlacementStrategy>> strategy;
-        private @Nullable Output<Map<String,String>> tags;
+        private PlacementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlacementGroupArgs();
         }
 
         public Builder(PlacementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.partitionCount = defaults.partitionCount;
-    	      this.strategy = defaults.strategy;
-    	      this.tags = defaults.tags;
+            $ = new PlacementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
-            this.partitionCount = partitionCount;
+            $.partitionCount = partitionCount;
             return this;
         }
-        public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Codegen.ofNullable(partitionCount);
-            return this;
+
+        public Builder partitionCount(Integer partitionCount) {
+            return partitionCount(Output.of(partitionCount));
         }
+
         public Builder strategy(Output<Either<String,PlacementStrategy>> strategy) {
-            this.strategy = Objects.requireNonNull(strategy);
+            $.strategy = strategy;
             return this;
         }
+
         public Builder strategy(Either<String,PlacementStrategy> strategy) {
-            this.strategy = Output.of(Objects.requireNonNull(strategy));
-            return this;
+            return strategy(Output.of(strategy));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PlacementGroupArgs build() {
-            return new PlacementGroupArgs(name, partitionCount, strategy, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PlacementGroupArgs build() {
+            $.strategy = Objects.requireNonNull($.strategy, "expected parameter 'strategy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="accountId")
-      private final @Nullable String accountId;
+    private @Nullable String accountId;
 
     public Optional<String> accountId() {
-        return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable String accountKey;
+    private @Nullable String accountKey;
 
     public Optional<String> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="collectionNamePattern")
-      private final @Nullable String collectionNamePattern;
+    private @Nullable String collectionNamePattern;
 
     public Optional<String> collectionNamePattern() {
-        return this.collectionNamePattern == null ? Optional.empty() : Optional.ofNullable(this.collectionNamePattern);
+        return Optional.ofNullable(this.collectionNamePattern);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="database")
-      private final @Nullable String database;
+    private @Nullable String database;
 
     public Optional<String> database() {
-        return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="documentId")
-      private final @Nullable String documentId;
+    private @Nullable String documentId;
 
     public Optional<String> documentId() {
-        return this.documentId == null ? Optional.empty() : Optional.ofNullable(this.documentId);
+        return Optional.ofNullable(this.documentId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable String partitionKey;
+    private @Nullable String partitionKey;
 
     public Optional<String> partitionKey() {
-        return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -91,100 +91,81 @@ public final class DocumentDbOutputDataSourceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DocumentDbOutputDataSourceResponse(
-        @Nullable String accountId,
-        @Nullable String accountKey,
-        @Nullable String collectionNamePattern,
-        @Nullable String database,
-        @Nullable String documentId,
-        @Nullable String partitionKey,
-        String type) {
-        this.accountId = accountId;
-        this.accountKey = accountKey;
-        this.collectionNamePattern = collectionNamePattern;
-        this.database = database;
-        this.documentId = documentId;
-        this.partitionKey = partitionKey;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DocumentDbOutputDataSourceResponse() {}
 
-    private DocumentDbOutputDataSourceResponse() {
-        this.accountId = null;
-        this.accountKey = null;
-        this.collectionNamePattern = null;
-        this.database = null;
-        this.documentId = null;
-        this.partitionKey = null;
-        this.type = null;
+    private DocumentDbOutputDataSourceResponse(DocumentDbOutputDataSourceResponse $) {
+        this.accountId = $.accountId;
+        this.accountKey = $.accountKey;
+        this.collectionNamePattern = $.collectionNamePattern;
+        this.database = $.database;
+        this.documentId = $.documentId;
+        this.partitionKey = $.partitionKey;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentDbOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountId;
-        private @Nullable String accountKey;
-        private @Nullable String collectionNamePattern;
-        private @Nullable String database;
-        private @Nullable String documentId;
-        private @Nullable String partitionKey;
-        private String type;
+        private DocumentDbOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentDbOutputDataSourceResponse();
         }
 
         public Builder(DocumentDbOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.accountKey = defaults.accountKey;
-    	      this.collectionNamePattern = defaults.collectionNamePattern;
-    	      this.database = defaults.database;
-    	      this.documentId = defaults.documentId;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.type = defaults.type;
+            $ = new DocumentDbOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
-            this.collectionNamePattern = collectionNamePattern;
+            $.collectionNamePattern = collectionNamePattern;
             return this;
         }
+
         public Builder database(@Nullable String database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
+
         public Builder documentId(@Nullable String documentId) {
-            this.documentId = documentId;
+            $.documentId = documentId;
             return this;
         }
+
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DocumentDbOutputDataSourceResponse build() {
-            return new DocumentDbOutputDataSourceResponse(accountId, accountKey, collectionNamePattern, database, documentId, partitionKey, type);
+        }
+
+        public DocumentDbOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

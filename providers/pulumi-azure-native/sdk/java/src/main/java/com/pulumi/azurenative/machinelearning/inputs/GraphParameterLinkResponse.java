@@ -21,7 +21,7 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeId", required=true)
-      private final String nodeId;
+    private String nodeId;
 
     public String nodeId() {
         return this.nodeId;
@@ -32,55 +32,52 @@ public final class GraphParameterLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="parameterKey", required=true)
-      private final String parameterKey;
+    private String parameterKey;
 
     public String parameterKey() {
         return this.parameterKey;
     }
 
-    public GraphParameterLinkResponse(
-        String nodeId,
-        String parameterKey) {
-        this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
-        this.parameterKey = Objects.requireNonNull(parameterKey, "expected parameter 'parameterKey' to be non-null");
-    }
+    private GraphParameterLinkResponse() {}
 
-    private GraphParameterLinkResponse() {
-        this.nodeId = null;
-        this.parameterKey = null;
+    private GraphParameterLinkResponse(GraphParameterLinkResponse $) {
+        this.nodeId = $.nodeId;
+        this.parameterKey = $.parameterKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphParameterLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeId;
-        private String parameterKey;
+        private GraphParameterLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphParameterLinkResponse();
         }
 
         public Builder(GraphParameterLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeId = defaults.nodeId;
-    	      this.parameterKey = defaults.parameterKey;
+            $ = new GraphParameterLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeId(String nodeId) {
-            this.nodeId = Objects.requireNonNull(nodeId);
+            $.nodeId = nodeId;
             return this;
         }
+
         public Builder parameterKey(String parameterKey) {
-            this.parameterKey = Objects.requireNonNull(parameterKey);
+            $.parameterKey = parameterKey;
             return this;
-        }        public GraphParameterLinkResponse build() {
-            return new GraphParameterLinkResponse(nodeId, parameterKey);
+        }
+
+        public GraphParameterLinkResponse build() {
+            $.nodeId = Objects.requireNonNull($.nodeId, "expected parameter 'nodeId' to be non-null");
+            $.parameterKey = Objects.requireNonNull($.parameterKey, "expected parameter 'parameterKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
      * 
      */
     @Import(name="level", required=true)
-      private final Output<Either<String,LockLevel>> level;
+    private Output<Either<String,LockLevel>> level;
 
     public Output<Either<String,LockLevel>> level() {
         return this.level;
@@ -35,10 +35,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
      * 
      */
     @Import(name="lockName")
-      private final @Nullable Output<String> lockName;
+    private @Nullable Output<String> lockName;
 
-    public Output<String> lockName() {
-        return this.lockName == null ? Codegen.empty() : this.lockName;
+    public Optional<Output<String>> lockName() {
+        return Optional.ofNullable(this.lockName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
      * 
      */
     @Import(name="owners")
-      private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
+    private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
-    public Output<List<ManagementLockOwnerArgs>> owners() {
-        return this.owners == null ? Codegen.empty() : this.owners;
+    public Optional<Output<List<ManagementLockOwnerArgs>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -68,105 +68,94 @@ public final class ManagementLockAtResourceGroupLevelArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagementLockAtResourceGroupLevelArgs(
-        Output<Either<String,LockLevel>> level,
-        @Nullable Output<String> lockName,
-        @Nullable Output<String> notes,
-        @Nullable Output<List<ManagementLockOwnerArgs>> owners,
-        Output<String> resourceGroupName) {
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-        this.lockName = lockName;
-        this.notes = notes;
-        this.owners = owners;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagementLockAtResourceGroupLevelArgs() {}
 
-    private ManagementLockAtResourceGroupLevelArgs() {
-        this.level = Codegen.empty();
-        this.lockName = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.owners = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagementLockAtResourceGroupLevelArgs(ManagementLockAtResourceGroupLevelArgs $) {
+        this.level = $.level;
+        this.lockName = $.lockName;
+        this.notes = $.notes;
+        this.owners = $.owners;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementLockAtResourceGroupLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,LockLevel>> level;
-        private @Nullable Output<String> lockName;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<List<ManagementLockOwnerArgs>> owners;
-        private Output<String> resourceGroupName;
+        private ManagementLockAtResourceGroupLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementLockAtResourceGroupLevelArgs();
         }
 
         public Builder(ManagementLockAtResourceGroupLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.lockName = defaults.lockName;
-    	      this.notes = defaults.notes;
-    	      this.owners = defaults.owners;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagementLockAtResourceGroupLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(Output<Either<String,LockLevel>> level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
         }
+
         public Builder level(Either<String,LockLevel> level) {
-            this.level = Output.of(Objects.requireNonNull(level));
-            return this;
+            return level(Output.of(level));
         }
+
         public Builder lockName(@Nullable Output<String> lockName) {
-            this.lockName = lockName;
+            $.lockName = lockName;
             return this;
         }
-        public Builder lockName(@Nullable String lockName) {
-            this.lockName = Codegen.ofNullable(lockName);
-            return this;
+
+        public Builder lockName(String lockName) {
+            return lockName(Output.of(lockName));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder owners(@Nullable Output<List<ManagementLockOwnerArgs>> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
-        public Builder owners(@Nullable List<ManagementLockOwnerArgs> owners) {
-            this.owners = Codegen.ofNullable(owners);
-            return this;
+
+        public Builder owners(List<ManagementLockOwnerArgs> owners) {
+            return owners(Output.of(owners));
         }
+
         public Builder owners(ManagementLockOwnerArgs... owners) {
             return owners(List.of(owners));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagementLockAtResourceGroupLevelArgs build() {
-            return new ManagementLockAtResourceGroupLevelArgs(level, lockName, notes, owners, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagementLockAtResourceGroupLevelArgs build() {
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

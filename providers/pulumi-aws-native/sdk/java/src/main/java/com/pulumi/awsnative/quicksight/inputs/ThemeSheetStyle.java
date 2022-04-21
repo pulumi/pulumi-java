@@ -20,62 +20,57 @@ public final class ThemeSheetStyle extends com.pulumi.resources.InvokeArgs {
     public static final ThemeSheetStyle Empty = new ThemeSheetStyle();
 
     @Import(name="tile")
-      private final @Nullable ThemeTileStyle tile;
+    private @Nullable ThemeTileStyle tile;
 
     public Optional<ThemeTileStyle> tile() {
-        return this.tile == null ? Optional.empty() : Optional.ofNullable(this.tile);
+        return Optional.ofNullable(this.tile);
     }
 
     @Import(name="tileLayout")
-      private final @Nullable ThemeTileLayoutStyle tileLayout;
+    private @Nullable ThemeTileLayoutStyle tileLayout;
 
     public Optional<ThemeTileLayoutStyle> tileLayout() {
-        return this.tileLayout == null ? Optional.empty() : Optional.ofNullable(this.tileLayout);
+        return Optional.ofNullable(this.tileLayout);
     }
 
-    public ThemeSheetStyle(
-        @Nullable ThemeTileStyle tile,
-        @Nullable ThemeTileLayoutStyle tileLayout) {
-        this.tile = tile;
-        this.tileLayout = tileLayout;
-    }
+    private ThemeSheetStyle() {}
 
-    private ThemeSheetStyle() {
-        this.tile = null;
-        this.tileLayout = null;
+    private ThemeSheetStyle(ThemeSheetStyle $) {
+        this.tile = $.tile;
+        this.tileLayout = $.tileLayout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeSheetStyle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ThemeTileStyle tile;
-        private @Nullable ThemeTileLayoutStyle tileLayout;
+        private ThemeSheetStyle $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeSheetStyle();
         }
 
         public Builder(ThemeSheetStyle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tile = defaults.tile;
-    	      this.tileLayout = defaults.tileLayout;
+            $ = new ThemeSheetStyle(Objects.requireNonNull(defaults));
         }
 
         public Builder tile(@Nullable ThemeTileStyle tile) {
-            this.tile = tile;
+            $.tile = tile;
             return this;
         }
+
         public Builder tileLayout(@Nullable ThemeTileLayoutStyle tileLayout) {
-            this.tileLayout = tileLayout;
+            $.tileLayout = tileLayout;
             return this;
-        }        public ThemeSheetStyle build() {
-            return new ThemeSheetStyle(tile, tileLayout);
+        }
+
+        public ThemeSheetStyle build() {
+            return $;
         }
     }
+
 }

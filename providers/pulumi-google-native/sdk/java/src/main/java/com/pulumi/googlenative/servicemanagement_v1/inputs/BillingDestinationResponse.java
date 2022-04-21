@@ -22,7 +22,7 @@ public final class BillingDestinationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<String> metrics;
+    private List<String> metrics;
 
     public List<String> metrics() {
         return this.metrics;
@@ -33,58 +33,56 @@ public final class BillingDestinationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="monitoredResource", required=true)
-      private final String monitoredResource;
+    private String monitoredResource;
 
     public String monitoredResource() {
         return this.monitoredResource;
     }
 
-    public BillingDestinationResponse(
-        List<String> metrics,
-        String monitoredResource) {
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.monitoredResource = Objects.requireNonNull(monitoredResource, "expected parameter 'monitoredResource' to be non-null");
-    }
+    private BillingDestinationResponse() {}
 
-    private BillingDestinationResponse() {
-        this.metrics = List.of();
-        this.monitoredResource = null;
+    private BillingDestinationResponse(BillingDestinationResponse $) {
+        this.metrics = $.metrics;
+        this.monitoredResource = $.monitoredResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> metrics;
-        private String monitoredResource;
+        private BillingDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingDestinationResponse();
         }
 
         public Builder(BillingDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metrics = defaults.metrics;
-    	      this.monitoredResource = defaults.monitoredResource;
+            $ = new BillingDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metrics(List<String> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder monitoredResource(String monitoredResource) {
-            this.monitoredResource = Objects.requireNonNull(monitoredResource);
+            $.monitoredResource = monitoredResource;
             return this;
-        }        public BillingDestinationResponse build() {
-            return new BillingDestinationResponse(metrics, monitoredResource);
+        }
+
+        public BillingDestinationResponse build() {
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.monitoredResource = Objects.requireNonNull($.monitoredResource, "expected parameter 'monitoredResource' to be non-null");
+            return $;
         }
     }
+
 }

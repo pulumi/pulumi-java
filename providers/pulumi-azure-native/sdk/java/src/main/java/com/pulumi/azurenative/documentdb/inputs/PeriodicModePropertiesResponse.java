@@ -23,10 +23,10 @@ public final class PeriodicModePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupIntervalInMinutes")
-      private final @Nullable Integer backupIntervalInMinutes;
+    private @Nullable Integer backupIntervalInMinutes;
 
     public Optional<Integer> backupIntervalInMinutes() {
-        return this.backupIntervalInMinutes == null ? Optional.empty() : Optional.ofNullable(this.backupIntervalInMinutes);
+        return Optional.ofNullable(this.backupIntervalInMinutes);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PeriodicModePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupRetentionIntervalInHours")
-      private final @Nullable Integer backupRetentionIntervalInHours;
+    private @Nullable Integer backupRetentionIntervalInHours;
 
     public Optional<Integer> backupRetentionIntervalInHours() {
-        return this.backupRetentionIntervalInHours == null ? Optional.empty() : Optional.ofNullable(this.backupRetentionIntervalInHours);
+        return Optional.ofNullable(this.backupRetentionIntervalInHours);
     }
 
-    public PeriodicModePropertiesResponse(
-        @Nullable Integer backupIntervalInMinutes,
-        @Nullable Integer backupRetentionIntervalInHours) {
-        this.backupIntervalInMinutes = backupIntervalInMinutes;
-        this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
-    }
+    private PeriodicModePropertiesResponse() {}
 
-    private PeriodicModePropertiesResponse() {
-        this.backupIntervalInMinutes = null;
-        this.backupRetentionIntervalInHours = null;
+    private PeriodicModePropertiesResponse(PeriodicModePropertiesResponse $) {
+        this.backupIntervalInMinutes = $.backupIntervalInMinutes;
+        this.backupRetentionIntervalInHours = $.backupRetentionIntervalInHours;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicModePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer backupIntervalInMinutes;
-        private @Nullable Integer backupRetentionIntervalInHours;
+        private PeriodicModePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicModePropertiesResponse();
         }
 
         public Builder(PeriodicModePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupIntervalInMinutes = defaults.backupIntervalInMinutes;
-    	      this.backupRetentionIntervalInHours = defaults.backupRetentionIntervalInHours;
+            $ = new PeriodicModePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupIntervalInMinutes(@Nullable Integer backupIntervalInMinutes) {
-            this.backupIntervalInMinutes = backupIntervalInMinutes;
+            $.backupIntervalInMinutes = backupIntervalInMinutes;
             return this;
         }
+
         public Builder backupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
-            this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
+            $.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
-        }        public PeriodicModePropertiesResponse build() {
-            return new PeriodicModePropertiesResponse(backupIntervalInMinutes, backupRetentionIntervalInHours);
+        }
+
+        public PeriodicModePropertiesResponse build() {
+            return $;
         }
     }
+
 }

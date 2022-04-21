@@ -5,7 +5,6 @@ package com.pulumi.aws.s3control;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accessPointArn", required=true)
-      private final Output<String> accessPointArn;
+    private Output<String> accessPointArn;
 
     public Output<String> accessPointArn() {
         return this.accessPointArn;
@@ -30,63 +29,60 @@ public final class AccessPointPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public AccessPointPolicyArgs(
-        Output<String> accessPointArn,
-        Output<String> policy) {
-        this.accessPointArn = Objects.requireNonNull(accessPointArn, "expected parameter 'accessPointArn' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private AccessPointPolicyArgs() {}
 
-    private AccessPointPolicyArgs() {
-        this.accessPointArn = Codegen.empty();
-        this.policy = Codegen.empty();
+    private AccessPointPolicyArgs(AccessPointPolicyArgs $) {
+        this.accessPointArn = $.accessPointArn;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessPointArn;
-        private Output<String> policy;
+        private AccessPointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointPolicyArgs();
         }
 
         public Builder(AccessPointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointArn = defaults.accessPointArn;
-    	      this.policy = defaults.policy;
+            $ = new AccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointArn(Output<String> accessPointArn) {
-            this.accessPointArn = Objects.requireNonNull(accessPointArn);
+            $.accessPointArn = accessPointArn;
             return this;
         }
+
         public Builder accessPointArn(String accessPointArn) {
-            this.accessPointArn = Output.of(Objects.requireNonNull(accessPointArn));
-            return this;
+            return accessPointArn(Output.of(accessPointArn));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public AccessPointPolicyArgs build() {
-            return new AccessPointPolicyArgs(accessPointArn, policy);
+            return policy(Output.of(policy));
+        }
+
+        public AccessPointPolicyArgs build() {
+            $.accessPointArn = Objects.requireNonNull($.accessPointArn, "expected parameter 'accessPointArn' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="defaultTtlAsIso8601")
-      private final @Nullable String defaultTtlAsIso8601;
+    private @Nullable String defaultTtlAsIso8601;
 
     public Optional<String> defaultTtlAsIso8601() {
-        return this.defaultTtlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.defaultTtlAsIso8601);
+        return Optional.ofNullable(this.defaultTtlAsIso8601);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="feedback")
-      private final @Nullable FeedbackPropertiesResponse feedback;
+    private @Nullable FeedbackPropertiesResponse feedback;
 
     public Optional<FeedbackPropertiesResponse> feedback() {
-        return this.feedback == null ? Optional.empty() : Optional.ofNullable(this.feedback);
+        return Optional.ofNullable(this.feedback);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class CloudToDevicePropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="maxDeliveryCount")
-      private final @Nullable Integer maxDeliveryCount;
+    private @Nullable Integer maxDeliveryCount;
 
     public Optional<Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
+        return Optional.ofNullable(this.maxDeliveryCount);
     }
 
-    public CloudToDevicePropertiesResponse(
-        @Nullable String defaultTtlAsIso8601,
-        @Nullable FeedbackPropertiesResponse feedback,
-        @Nullable Integer maxDeliveryCount) {
-        this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
-        this.feedback = feedback;
-        this.maxDeliveryCount = maxDeliveryCount;
-    }
+    private CloudToDevicePropertiesResponse() {}
 
-    private CloudToDevicePropertiesResponse() {
-        this.defaultTtlAsIso8601 = null;
-        this.feedback = null;
-        this.maxDeliveryCount = null;
+    private CloudToDevicePropertiesResponse(CloudToDevicePropertiesResponse $) {
+        this.defaultTtlAsIso8601 = $.defaultTtlAsIso8601;
+        this.feedback = $.feedback;
+        this.maxDeliveryCount = $.maxDeliveryCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudToDevicePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultTtlAsIso8601;
-        private @Nullable FeedbackPropertiesResponse feedback;
-        private @Nullable Integer maxDeliveryCount;
+        private CloudToDevicePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudToDevicePropertiesResponse();
         }
 
         public Builder(CloudToDevicePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultTtlAsIso8601 = defaults.defaultTtlAsIso8601;
-    	      this.feedback = defaults.feedback;
-    	      this.maxDeliveryCount = defaults.maxDeliveryCount;
+            $ = new CloudToDevicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultTtlAsIso8601(@Nullable String defaultTtlAsIso8601) {
-            this.defaultTtlAsIso8601 = defaultTtlAsIso8601;
+            $.defaultTtlAsIso8601 = defaultTtlAsIso8601;
             return this;
         }
+
         public Builder feedback(@Nullable FeedbackPropertiesResponse feedback) {
-            this.feedback = feedback;
+            $.feedback = feedback;
             return this;
         }
+
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = maxDeliveryCount;
+            $.maxDeliveryCount = maxDeliveryCount;
             return this;
-        }        public CloudToDevicePropertiesResponse build() {
-            return new CloudToDevicePropertiesResponse(defaultTtlAsIso8601, feedback, maxDeliveryCount);
+        }
+
+        public CloudToDevicePropertiesResponse build() {
+            return $;
         }
     }
+
 }

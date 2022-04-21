@@ -23,10 +23,10 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StudioComponentActiveDirectoryComputerAttribute extends com.p
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public StudioComponentActiveDirectoryComputerAttribute(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private StudioComponentActiveDirectoryComputerAttribute() {}
 
-    private StudioComponentActiveDirectoryComputerAttribute() {
-        this.name = null;
-        this.value = null;
+    private StudioComponentActiveDirectoryComputerAttribute(StudioComponentActiveDirectoryComputerAttribute $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentActiveDirectoryComputerAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private StudioComponentActiveDirectoryComputerAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentActiveDirectoryComputerAttribute();
         }
 
         public Builder(StudioComponentActiveDirectoryComputerAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new StudioComponentActiveDirectoryComputerAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public StudioComponentActiveDirectoryComputerAttribute build() {
-            return new StudioComponentActiveDirectoryComputerAttribute(name, value);
+        }
+
+        public StudioComponentActiveDirectoryComputerAttribute build() {
+            return $;
         }
     }
+
 }

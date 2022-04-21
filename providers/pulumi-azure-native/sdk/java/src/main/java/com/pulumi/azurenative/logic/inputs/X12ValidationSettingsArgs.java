@@ -7,7 +7,6 @@ import com.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +26,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
+    private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -38,7 +37,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="checkDuplicateGroupControlNumber", required=true)
-      private final Output<Boolean> checkDuplicateGroupControlNumber;
+    private Output<Boolean> checkDuplicateGroupControlNumber;
 
     public Output<Boolean> checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
@@ -49,7 +48,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="checkDuplicateInterchangeControlNumber", required=true)
-      private final Output<Boolean> checkDuplicateInterchangeControlNumber;
+    private Output<Boolean> checkDuplicateInterchangeControlNumber;
 
     public Output<Boolean> checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
@@ -60,7 +59,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
-      private final Output<Boolean> checkDuplicateTransactionSetControlNumber;
+    private Output<Boolean> checkDuplicateTransactionSetControlNumber;
 
     public Output<Boolean> checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
@@ -71,7 +70,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="interchangeControlNumberValidityDays", required=true)
-      private final Output<Integer> interchangeControlNumberValidityDays;
+    private Output<Integer> interchangeControlNumberValidityDays;
 
     public Output<Integer> interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
@@ -82,7 +81,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="trailingSeparatorPolicy", required=true)
-      private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
+    private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
     public Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -93,7 +92,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
+    private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -104,7 +103,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="validateCharacterSet", required=true)
-      private final Output<Boolean> validateCharacterSet;
+    private Output<Boolean> validateCharacterSet;
 
     public Output<Boolean> validateCharacterSet() {
         return this.validateCharacterSet;
@@ -115,7 +114,7 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="validateEDITypes", required=true)
-      private final Output<Boolean> validateEDITypes;
+    private Output<Boolean> validateEDITypes;
 
     public Output<Boolean> validateEDITypes() {
         return this.validateEDITypes;
@@ -126,167 +125,148 @@ public final class X12ValidationSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="validateXSDTypes", required=true)
-      private final Output<Boolean> validateXSDTypes;
+    private Output<Boolean> validateXSDTypes;
 
     public Output<Boolean> validateXSDTypes() {
         return this.validateXSDTypes;
     }
 
-    public X12ValidationSettingsArgs(
-        Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes,
-        Output<Boolean> checkDuplicateGroupControlNumber,
-        Output<Boolean> checkDuplicateInterchangeControlNumber,
-        Output<Boolean> checkDuplicateTransactionSetControlNumber,
-        Output<Integer> interchangeControlNumberValidityDays,
-        Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy,
-        Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes,
-        Output<Boolean> validateCharacterSet,
-        Output<Boolean> validateEDITypes,
-        Output<Boolean> validateXSDTypes) {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
-        this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber, "expected parameter 'checkDuplicateGroupControlNumber' to be non-null");
-        this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber, "expected parameter 'checkDuplicateInterchangeControlNumber' to be non-null");
-        this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber, "expected parameter 'checkDuplicateTransactionSetControlNumber' to be non-null");
-        this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays, "expected parameter 'interchangeControlNumberValidityDays' to be non-null");
-        this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
-        this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes, "expected parameter 'trimLeadingAndTrailingSpacesAndZeroes' to be non-null");
-        this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet, "expected parameter 'validateCharacterSet' to be non-null");
-        this.validateEDITypes = Objects.requireNonNull(validateEDITypes, "expected parameter 'validateEDITypes' to be non-null");
-        this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes, "expected parameter 'validateXSDTypes' to be non-null");
-    }
+    private X12ValidationSettingsArgs() {}
 
-    private X12ValidationSettingsArgs() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
-        this.checkDuplicateGroupControlNumber = Codegen.empty();
-        this.checkDuplicateInterchangeControlNumber = Codegen.empty();
-        this.checkDuplicateTransactionSetControlNumber = Codegen.empty();
-        this.interchangeControlNumberValidityDays = Codegen.empty();
-        this.trailingSeparatorPolicy = Codegen.empty();
-        this.trimLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
-        this.validateCharacterSet = Codegen.empty();
-        this.validateEDITypes = Codegen.empty();
-        this.validateXSDTypes = Codegen.empty();
+    private X12ValidationSettingsArgs(X12ValidationSettingsArgs $) {
+        this.allowLeadingAndTrailingSpacesAndZeroes = $.allowLeadingAndTrailingSpacesAndZeroes;
+        this.checkDuplicateGroupControlNumber = $.checkDuplicateGroupControlNumber;
+        this.checkDuplicateInterchangeControlNumber = $.checkDuplicateInterchangeControlNumber;
+        this.checkDuplicateTransactionSetControlNumber = $.checkDuplicateTransactionSetControlNumber;
+        this.interchangeControlNumberValidityDays = $.interchangeControlNumberValidityDays;
+        this.trailingSeparatorPolicy = $.trailingSeparatorPolicy;
+        this.trimLeadingAndTrailingSpacesAndZeroes = $.trimLeadingAndTrailingSpacesAndZeroes;
+        this.validateCharacterSet = $.validateCharacterSet;
+        this.validateEDITypes = $.validateEDITypes;
+        this.validateXSDTypes = $.validateXSDTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12ValidationSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
-        private Output<Boolean> checkDuplicateGroupControlNumber;
-        private Output<Boolean> checkDuplicateInterchangeControlNumber;
-        private Output<Boolean> checkDuplicateTransactionSetControlNumber;
-        private Output<Integer> interchangeControlNumberValidityDays;
-        private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
-        private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
-        private Output<Boolean> validateCharacterSet;
-        private Output<Boolean> validateEDITypes;
-        private Output<Boolean> validateXSDTypes;
+        private X12ValidationSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12ValidationSettingsArgs();
         }
 
         public Builder(X12ValidationSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowLeadingAndTrailingSpacesAndZeroes = defaults.allowLeadingAndTrailingSpacesAndZeroes;
-    	      this.checkDuplicateGroupControlNumber = defaults.checkDuplicateGroupControlNumber;
-    	      this.checkDuplicateInterchangeControlNumber = defaults.checkDuplicateInterchangeControlNumber;
-    	      this.checkDuplicateTransactionSetControlNumber = defaults.checkDuplicateTransactionSetControlNumber;
-    	      this.interchangeControlNumberValidityDays = defaults.interchangeControlNumberValidityDays;
-    	      this.trailingSeparatorPolicy = defaults.trailingSeparatorPolicy;
-    	      this.trimLeadingAndTrailingSpacesAndZeroes = defaults.trimLeadingAndTrailingSpacesAndZeroes;
-    	      this.validateCharacterSet = defaults.validateCharacterSet;
-    	      this.validateEDITypes = defaults.validateEDITypes;
-    	      this.validateXSDTypes = defaults.validateXSDTypes;
+            $ = new X12ValidationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
-            this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
+            $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
+
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
-            this.allowLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
-            return this;
+            return allowLeadingAndTrailingSpacesAndZeroes(Output.of(allowLeadingAndTrailingSpacesAndZeroes));
         }
+
         public Builder checkDuplicateGroupControlNumber(Output<Boolean> checkDuplicateGroupControlNumber) {
-            this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber);
+            $.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
             return this;
         }
+
         public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
-            this.checkDuplicateGroupControlNumber = Output.of(Objects.requireNonNull(checkDuplicateGroupControlNumber));
-            return this;
+            return checkDuplicateGroupControlNumber(Output.of(checkDuplicateGroupControlNumber));
         }
+
         public Builder checkDuplicateInterchangeControlNumber(Output<Boolean> checkDuplicateInterchangeControlNumber) {
-            this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber);
+            $.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;
             return this;
         }
+
         public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
-            this.checkDuplicateInterchangeControlNumber = Output.of(Objects.requireNonNull(checkDuplicateInterchangeControlNumber));
-            return this;
+            return checkDuplicateInterchangeControlNumber(Output.of(checkDuplicateInterchangeControlNumber));
         }
+
         public Builder checkDuplicateTransactionSetControlNumber(Output<Boolean> checkDuplicateTransactionSetControlNumber) {
-            this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber);
+            $.checkDuplicateTransactionSetControlNumber = checkDuplicateTransactionSetControlNumber;
             return this;
         }
+
         public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
-            this.checkDuplicateTransactionSetControlNumber = Output.of(Objects.requireNonNull(checkDuplicateTransactionSetControlNumber));
-            return this;
+            return checkDuplicateTransactionSetControlNumber(Output.of(checkDuplicateTransactionSetControlNumber));
         }
+
         public Builder interchangeControlNumberValidityDays(Output<Integer> interchangeControlNumberValidityDays) {
-            this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays);
+            $.interchangeControlNumberValidityDays = interchangeControlNumberValidityDays;
             return this;
         }
+
         public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
-            this.interchangeControlNumberValidityDays = Output.of(Objects.requireNonNull(interchangeControlNumberValidityDays));
-            return this;
+            return interchangeControlNumberValidityDays(Output.of(interchangeControlNumberValidityDays));
         }
+
         public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
-            this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
+            $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
+
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
-            this.trailingSeparatorPolicy = Output.of(Objects.requireNonNull(trailingSeparatorPolicy));
-            return this;
+            return trailingSeparatorPolicy(Output.of(trailingSeparatorPolicy));
         }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
-            this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
+            $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
-            this.trimLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
-            return this;
+            return trimLeadingAndTrailingSpacesAndZeroes(Output.of(trimLeadingAndTrailingSpacesAndZeroes));
         }
+
         public Builder validateCharacterSet(Output<Boolean> validateCharacterSet) {
-            this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
+            $.validateCharacterSet = validateCharacterSet;
             return this;
         }
+
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
-            this.validateCharacterSet = Output.of(Objects.requireNonNull(validateCharacterSet));
-            return this;
+            return validateCharacterSet(Output.of(validateCharacterSet));
         }
+
         public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
-            this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
+            $.validateEDITypes = validateEDITypes;
             return this;
         }
+
         public Builder validateEDITypes(Boolean validateEDITypes) {
-            this.validateEDITypes = Output.of(Objects.requireNonNull(validateEDITypes));
-            return this;
+            return validateEDITypes(Output.of(validateEDITypes));
         }
+
         public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
-            this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
+            $.validateXSDTypes = validateXSDTypes;
             return this;
         }
+
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
-            this.validateXSDTypes = Output.of(Objects.requireNonNull(validateXSDTypes));
-            return this;
-        }        public X12ValidationSettingsArgs build() {
-            return new X12ValidationSettingsArgs(allowLeadingAndTrailingSpacesAndZeroes, checkDuplicateGroupControlNumber, checkDuplicateInterchangeControlNumber, checkDuplicateTransactionSetControlNumber, interchangeControlNumberValidityDays, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateCharacterSet, validateEDITypes, validateXSDTypes);
+            return validateXSDTypes(Output.of(validateXSDTypes));
+        }
+
+        public X12ValidationSettingsArgs build() {
+            $.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull($.allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
+            $.checkDuplicateGroupControlNumber = Objects.requireNonNull($.checkDuplicateGroupControlNumber, "expected parameter 'checkDuplicateGroupControlNumber' to be non-null");
+            $.checkDuplicateInterchangeControlNumber = Objects.requireNonNull($.checkDuplicateInterchangeControlNumber, "expected parameter 'checkDuplicateInterchangeControlNumber' to be non-null");
+            $.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull($.checkDuplicateTransactionSetControlNumber, "expected parameter 'checkDuplicateTransactionSetControlNumber' to be non-null");
+            $.interchangeControlNumberValidityDays = Objects.requireNonNull($.interchangeControlNumberValidityDays, "expected parameter 'interchangeControlNumberValidityDays' to be non-null");
+            $.trailingSeparatorPolicy = Objects.requireNonNull($.trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
+            $.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull($.trimLeadingAndTrailingSpacesAndZeroes, "expected parameter 'trimLeadingAndTrailingSpacesAndZeroes' to be non-null");
+            $.validateCharacterSet = Objects.requireNonNull($.validateCharacterSet, "expected parameter 'validateCharacterSet' to be non-null");
+            $.validateEDITypes = Objects.requireNonNull($.validateEDITypes, "expected parameter 'validateEDITypes' to be non-null");
+            $.validateXSDTypes = Objects.requireNonNull($.validateXSDTypes, "expected parameter 'validateXSDTypes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.PolicyTagIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class PolicyTagIamBindingState extends com.pulumi.resources.Resourc
     public static final PolicyTagIamBindingState Empty = new PolicyTagIamBindingState();
 
     @Import(name="condition")
-      private final @Nullable Output<PolicyTagIamBindingConditionGetArgs> condition;
+    private @Nullable Output<PolicyTagIamBindingConditionGetArgs> condition;
 
-    public Output<PolicyTagIamBindingConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<PolicyTagIamBindingConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -29,17 +29,17 @@ public final class PolicyTagIamBindingState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PolicyTagIamBindingState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyTag")
-      private final @Nullable Output<String> policyTag;
+    private @Nullable Output<String> policyTag;
 
-    public Output<String> policyTag() {
-        return this.policyTag == null ? Codegen.empty() : this.policyTag;
+    public Optional<Output<String>> policyTag() {
+        return Optional.ofNullable(this.policyTag);
     }
 
     /**
@@ -60,105 +60,92 @@ public final class PolicyTagIamBindingState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public PolicyTagIamBindingState(
-        @Nullable Output<PolicyTagIamBindingConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> policyTag,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.etag = etag;
-        this.members = members;
-        this.policyTag = policyTag;
-        this.role = role;
-    }
+    private PolicyTagIamBindingState() {}
 
-    private PolicyTagIamBindingState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.members = Codegen.empty();
-        this.policyTag = Codegen.empty();
-        this.role = Codegen.empty();
+    private PolicyTagIamBindingState(PolicyTagIamBindingState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.members = $.members;
+        this.policyTag = $.policyTag;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTagIamBindingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PolicyTagIamBindingConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> policyTag;
-        private @Nullable Output<String> role;
+        private PolicyTagIamBindingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTagIamBindingState();
         }
 
         public Builder(PolicyTagIamBindingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.members = defaults.members;
-    	      this.policyTag = defaults.policyTag;
-    	      this.role = defaults.role;
+            $ = new PolicyTagIamBindingState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<PolicyTagIamBindingConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable PolicyTagIamBindingConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(PolicyTagIamBindingConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder policyTag(@Nullable Output<String> policyTag) {
-            this.policyTag = policyTag;
+            $.policyTag = policyTag;
             return this;
         }
-        public Builder policyTag(@Nullable String policyTag) {
-            this.policyTag = Codegen.ofNullable(policyTag);
-            return this;
+
+        public Builder policyTag(String policyTag) {
+            return policyTag(Output.of(policyTag));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public PolicyTagIamBindingState build() {
-            return new PolicyTagIamBindingState(condition, etag, members, policyTag, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public PolicyTagIamBindingState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * 
      */
     @Import(name="timeoutSec")
-      private final @Nullable Output<Integer> timeoutSec;
+    private @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> timeoutSec() {
-        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
+    public Optional<Output<Integer>> timeoutSec() {
+        return Optional.ofNullable(this.timeoutSec);
     }
 
-    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(@Nullable Output<Integer> timeoutSec) {
-        this.timeoutSec = timeoutSec;
-    }
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs() {}
 
-    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs() {
-        this.timeoutSec = Codegen.empty();
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs $) {
+        this.timeoutSec = $.timeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> timeoutSec;
+        private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs();
         }
 
         public Builder(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeoutSec = defaults.timeoutSec;
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
-            this.timeoutSec = timeoutSec;
+            $.timeoutSec = timeoutSec;
             return this;
         }
-        public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Codegen.ofNullable(timeoutSec);
-            return this;
-        }        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
-            return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(timeoutSec);
+
+        public Builder timeoutSec(Integer timeoutSec) {
+            return timeoutSec(Output.of(timeoutSec));
+        }
+
+        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
+            return $;
         }
     }
+
 }

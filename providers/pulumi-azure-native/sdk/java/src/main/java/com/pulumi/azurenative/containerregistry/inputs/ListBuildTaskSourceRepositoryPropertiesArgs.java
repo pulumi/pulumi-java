@@ -17,7 +17,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="buildTaskName", required=true)
-      private final String buildTaskName;
+    private String buildTaskName;
 
     public String buildTaskName() {
         return this.buildTaskName;
@@ -28,7 +28,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,64 +39,59 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListBuildTaskSourceRepositoryPropertiesArgs(
-        String buildTaskName,
-        String registryName,
-        String resourceGroupName) {
-        this.buildTaskName = Objects.requireNonNull(buildTaskName, "expected parameter 'buildTaskName' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListBuildTaskSourceRepositoryPropertiesArgs() {}
 
-    private ListBuildTaskSourceRepositoryPropertiesArgs() {
-        this.buildTaskName = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private ListBuildTaskSourceRepositoryPropertiesArgs(ListBuildTaskSourceRepositoryPropertiesArgs $) {
+        this.buildTaskName = $.buildTaskName;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListBuildTaskSourceRepositoryPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildTaskName;
-        private String registryName;
-        private String resourceGroupName;
+        private ListBuildTaskSourceRepositoryPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListBuildTaskSourceRepositoryPropertiesArgs();
         }
 
         public Builder(ListBuildTaskSourceRepositoryPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildTaskName = defaults.buildTaskName;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListBuildTaskSourceRepositoryPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildTaskName(String buildTaskName) {
-            this.buildTaskName = Objects.requireNonNull(buildTaskName);
+            $.buildTaskName = buildTaskName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListBuildTaskSourceRepositoryPropertiesArgs build() {
-            return new ListBuildTaskSourceRepositoryPropertiesArgs(buildTaskName, registryName, resourceGroupName);
+        }
+
+        public ListBuildTaskSourceRepositoryPropertiesArgs build() {
+            $.buildTaskName = Objects.requireNonNull($.buildTaskName, "expected parameter 'buildTaskName' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

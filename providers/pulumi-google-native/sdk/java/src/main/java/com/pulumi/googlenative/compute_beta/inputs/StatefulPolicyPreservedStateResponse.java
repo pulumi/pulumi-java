@@ -22,7 +22,7 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
      * 
      */
     @Import(name="disks", required=true)
-      private final Map<String,String> disks;
+    private Map<String,String> disks;
 
     public Map<String,String> disks() {
         return this.disks;
@@ -33,7 +33,7 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
      * 
      */
     @Import(name="externalIPs", required=true)
-      private final Map<String,String> externalIPs;
+    private Map<String,String> externalIPs;
 
     public Map<String,String> externalIPs() {
         return this.externalIPs;
@@ -44,64 +44,59 @@ public final class StatefulPolicyPreservedStateResponse extends com.pulumi.resou
      * 
      */
     @Import(name="internalIPs", required=true)
-      private final Map<String,String> internalIPs;
+    private Map<String,String> internalIPs;
 
     public Map<String,String> internalIPs() {
         return this.internalIPs;
     }
 
-    public StatefulPolicyPreservedStateResponse(
-        Map<String,String> disks,
-        Map<String,String> externalIPs,
-        Map<String,String> internalIPs) {
-        this.disks = Objects.requireNonNull(disks, "expected parameter 'disks' to be non-null");
-        this.externalIPs = Objects.requireNonNull(externalIPs, "expected parameter 'externalIPs' to be non-null");
-        this.internalIPs = Objects.requireNonNull(internalIPs, "expected parameter 'internalIPs' to be non-null");
-    }
+    private StatefulPolicyPreservedStateResponse() {}
 
-    private StatefulPolicyPreservedStateResponse() {
-        this.disks = Map.of();
-        this.externalIPs = Map.of();
-        this.internalIPs = Map.of();
+    private StatefulPolicyPreservedStateResponse(StatefulPolicyPreservedStateResponse $) {
+        this.disks = $.disks;
+        this.externalIPs = $.externalIPs;
+        this.internalIPs = $.internalIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulPolicyPreservedStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> disks;
-        private Map<String,String> externalIPs;
-        private Map<String,String> internalIPs;
+        private StatefulPolicyPreservedStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulPolicyPreservedStateResponse();
         }
 
         public Builder(StatefulPolicyPreservedStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
-    	      this.externalIPs = defaults.externalIPs;
-    	      this.internalIPs = defaults.internalIPs;
+            $ = new StatefulPolicyPreservedStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(Map<String,String> disks) {
-            this.disks = Objects.requireNonNull(disks);
+            $.disks = disks;
             return this;
         }
+
         public Builder externalIPs(Map<String,String> externalIPs) {
-            this.externalIPs = Objects.requireNonNull(externalIPs);
+            $.externalIPs = externalIPs;
             return this;
         }
+
         public Builder internalIPs(Map<String,String> internalIPs) {
-            this.internalIPs = Objects.requireNonNull(internalIPs);
+            $.internalIPs = internalIPs;
             return this;
-        }        public StatefulPolicyPreservedStateResponse build() {
-            return new StatefulPolicyPreservedStateResponse(disks, externalIPs, internalIPs);
+        }
+
+        public StatefulPolicyPreservedStateResponse build() {
+            $.disks = Objects.requireNonNull($.disks, "expected parameter 'disks' to be non-null");
+            $.externalIPs = Objects.requireNonNull($.externalIPs, "expected parameter 'externalIPs' to be non-null");
+            $.internalIPs = Objects.requireNonNull($.internalIPs, "expected parameter 'internalIPs' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * 
      */
     @Import(name="caseContent", required=true)
-      private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
+    private List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent() {
         return this.caseContent;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * 
      */
     @Import(name="condition", required=true)
-      private final String condition;
+    private String condition;
 
     public String condition() {
         return this.condition;
     }
 
-    public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(
-        List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent,
-        String condition) {
-        this.caseContent = Objects.requireNonNull(caseContent, "expected parameter 'caseContent' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse() {}
 
-    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse() {
-        this.caseContent = List.of();
-        this.condition = null;
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse $) {
+        this.caseContent = $.caseContent;
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
-        private String condition;
+        private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseContent = defaults.caseContent;
-    	      this.condition = defaults.condition;
+            $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caseContent(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent) {
-            this.caseContent = Objects.requireNonNull(caseContent);
+            $.caseContent = caseContent;
             return this;
         }
+
         public Builder caseContent(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse... caseContent) {
             return caseContent(List.of(caseContent));
         }
+
         public Builder condition(String condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
-        }        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse build() {
-            return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(caseContent, condition);
+        }
+
+        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse build() {
+            $.caseContent = Objects.requireNonNull($.caseContent, "expected parameter 'caseContent' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            return $;
         }
     }
+
 }

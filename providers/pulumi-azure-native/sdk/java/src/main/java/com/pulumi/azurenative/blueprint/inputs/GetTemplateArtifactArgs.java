@@ -17,7 +17,7 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="artifactName", required=true)
-      private final String artifactName;
+    private String artifactName;
 
     public String artifactName() {
         return this.artifactName;
@@ -28,7 +28,7 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="blueprintName", required=true)
-      private final String blueprintName;
+    private String blueprintName;
 
     public String blueprintName() {
         return this.blueprintName;
@@ -39,64 +39,59 @@ public final class GetTemplateArtifactArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final String resourceScope;
+    private String resourceScope;
 
     public String resourceScope() {
         return this.resourceScope;
     }
 
-    public GetTemplateArtifactArgs(
-        String artifactName,
-        String blueprintName,
-        String resourceScope) {
-        this.artifactName = Objects.requireNonNull(artifactName, "expected parameter 'artifactName' to be non-null");
-        this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-    }
+    private GetTemplateArtifactArgs() {}
 
-    private GetTemplateArtifactArgs() {
-        this.artifactName = null;
-        this.blueprintName = null;
-        this.resourceScope = null;
+    private GetTemplateArtifactArgs(GetTemplateArtifactArgs $) {
+        this.artifactName = $.artifactName;
+        this.blueprintName = $.blueprintName;
+        this.resourceScope = $.resourceScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTemplateArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactName;
-        private String blueprintName;
-        private String resourceScope;
+        private GetTemplateArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTemplateArtifactArgs();
         }
 
         public Builder(GetTemplateArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactName = defaults.artifactName;
-    	      this.blueprintName = defaults.blueprintName;
-    	      this.resourceScope = defaults.resourceScope;
+            $ = new GetTemplateArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactName(String artifactName) {
-            this.artifactName = Objects.requireNonNull(artifactName);
+            $.artifactName = artifactName;
             return this;
         }
+
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Objects.requireNonNull(blueprintName);
+            $.blueprintName = blueprintName;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
-        }        public GetTemplateArtifactArgs build() {
-            return new GetTemplateArtifactArgs(artifactName, blueprintName, resourceScope);
+        }
+
+        public GetTemplateArtifactArgs build() {
+            $.artifactName = Objects.requireNonNull($.artifactName, "expected parameter 'artifactName' to be non-null");
+            $.blueprintName = Objects.requireNonNull($.blueprintName, "expected parameter 'blueprintName' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

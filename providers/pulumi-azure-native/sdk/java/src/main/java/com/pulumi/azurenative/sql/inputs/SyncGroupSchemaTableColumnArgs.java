@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dataSize")
-      private final @Nullable Output<String> dataSize;
+    private @Nullable Output<String> dataSize;
 
-    public Output<String> dataSize() {
-        return this.dataSize == null ? Codegen.empty() : this.dataSize;
+    public Optional<Output<String>> dataSize() {
+        return Optional.ofNullable(this.dataSize);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SyncGroupSchemaTableColumnArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="quotedName")
-      private final @Nullable Output<String> quotedName;
+    private @Nullable Output<String> quotedName;
 
-    public Output<String> quotedName() {
-        return this.quotedName == null ? Codegen.empty() : this.quotedName;
+    public Optional<Output<String>> quotedName() {
+        return Optional.ofNullable(this.quotedName);
     }
 
-    public SyncGroupSchemaTableColumnArgs(
-        @Nullable Output<String> dataSize,
-        @Nullable Output<String> dataType,
-        @Nullable Output<String> quotedName) {
-        this.dataSize = dataSize;
-        this.dataType = dataType;
-        this.quotedName = quotedName;
-    }
+    private SyncGroupSchemaTableColumnArgs() {}
 
-    private SyncGroupSchemaTableColumnArgs() {
-        this.dataSize = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.quotedName = Codegen.empty();
+    private SyncGroupSchemaTableColumnArgs(SyncGroupSchemaTableColumnArgs $) {
+        this.dataSize = $.dataSize;
+        this.dataType = $.dataType;
+        this.quotedName = $.quotedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupSchemaTableColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataSize;
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<String> quotedName;
+        private SyncGroupSchemaTableColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupSchemaTableColumnArgs();
         }
 
         public Builder(SyncGroupSchemaTableColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSize = defaults.dataSize;
-    	      this.dataType = defaults.dataType;
-    	      this.quotedName = defaults.quotedName;
+            $ = new SyncGroupSchemaTableColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSize(@Nullable Output<String> dataSize) {
-            this.dataSize = dataSize;
+            $.dataSize = dataSize;
             return this;
         }
-        public Builder dataSize(@Nullable String dataSize) {
-            this.dataSize = Codegen.ofNullable(dataSize);
-            return this;
+
+        public Builder dataSize(String dataSize) {
+            return dataSize(Output.of(dataSize));
         }
+
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder quotedName(@Nullable Output<String> quotedName) {
-            this.quotedName = quotedName;
+            $.quotedName = quotedName;
             return this;
         }
-        public Builder quotedName(@Nullable String quotedName) {
-            this.quotedName = Codegen.ofNullable(quotedName);
-            return this;
-        }        public SyncGroupSchemaTableColumnArgs build() {
-            return new SyncGroupSchemaTableColumnArgs(dataSize, dataType, quotedName);
+
+        public Builder quotedName(String quotedName) {
+            return quotedName(Output.of(quotedName));
+        }
+
+        public SyncGroupSchemaTableColumnArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="selectedSourceDatabases", required=true)
-      private final Output<List<String>> selectedSourceDatabases;
+    private Output<List<String>> selectedSourceDatabases;
 
     public Output<List<String>> selectedSourceDatabases() {
         return this.selectedSourceDatabases;
@@ -36,7 +35,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="selectedTargetDatabases", required=true)
-      private final Output<List<String>> selectedTargetDatabases;
+    private Output<List<String>> selectedTargetDatabases;
 
     public Output<List<String>> selectedTargetDatabases() {
         return this.selectedTargetDatabases;
@@ -47,7 +46,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+    private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -58,95 +57,90 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
+    private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public GetUserTablesSqlSyncTaskInputArgs(
-        Output<List<String>> selectedSourceDatabases,
-        Output<List<String>> selectedTargetDatabases,
-        Output<SqlConnectionInfoArgs> sourceConnectionInfo,
-        Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-        this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases, "expected parameter 'selectedSourceDatabases' to be non-null");
-        this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases, "expected parameter 'selectedTargetDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private GetUserTablesSqlSyncTaskInputArgs() {}
 
-    private GetUserTablesSqlSyncTaskInputArgs() {
-        this.selectedSourceDatabases = Codegen.empty();
-        this.selectedTargetDatabases = Codegen.empty();
-        this.sourceConnectionInfo = Codegen.empty();
-        this.targetConnectionInfo = Codegen.empty();
+    private GetUserTablesSqlSyncTaskInputArgs(GetUserTablesSqlSyncTaskInputArgs $) {
+        this.selectedSourceDatabases = $.selectedSourceDatabases;
+        this.selectedTargetDatabases = $.selectedTargetDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserTablesSqlSyncTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> selectedSourceDatabases;
-        private Output<List<String>> selectedTargetDatabases;
-        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
-        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
+        private GetUserTablesSqlSyncTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserTablesSqlSyncTaskInputArgs();
         }
 
         public Builder(GetUserTablesSqlSyncTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectedSourceDatabases = defaults.selectedSourceDatabases;
-    	      this.selectedTargetDatabases = defaults.selectedTargetDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new GetUserTablesSqlSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder selectedSourceDatabases(Output<List<String>> selectedSourceDatabases) {
-            this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases);
+            $.selectedSourceDatabases = selectedSourceDatabases;
             return this;
         }
+
         public Builder selectedSourceDatabases(List<String> selectedSourceDatabases) {
-            this.selectedSourceDatabases = Output.of(Objects.requireNonNull(selectedSourceDatabases));
-            return this;
+            return selectedSourceDatabases(Output.of(selectedSourceDatabases));
         }
+
         public Builder selectedSourceDatabases(String... selectedSourceDatabases) {
             return selectedSourceDatabases(List.of(selectedSourceDatabases));
         }
+
         public Builder selectedTargetDatabases(Output<List<String>> selectedTargetDatabases) {
-            this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases);
+            $.selectedTargetDatabases = selectedTargetDatabases;
             return this;
         }
+
         public Builder selectedTargetDatabases(List<String> selectedTargetDatabases) {
-            this.selectedTargetDatabases = Output.of(Objects.requireNonNull(selectedTargetDatabases));
-            return this;
+            return selectedTargetDatabases(Output.of(selectedTargetDatabases));
         }
+
         public Builder selectedTargetDatabases(String... selectedTargetDatabases) {
             return selectedTargetDatabases(List.of(selectedTargetDatabases));
         }
+
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
-            return this;
+            return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
+
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
-            return this;
-        }        public GetUserTablesSqlSyncTaskInputArgs build() {
-            return new GetUserTablesSqlSyncTaskInputArgs(selectedSourceDatabases, selectedTargetDatabases, sourceConnectionInfo, targetConnectionInfo);
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
+        }
+
+        public GetUserTablesSqlSyncTaskInputArgs build() {
+            $.selectedSourceDatabases = Objects.requireNonNull($.selectedSourceDatabases, "expected parameter 'selectedSourceDatabases' to be non-null");
+            $.selectedTargetDatabases = Objects.requireNonNull($.selectedTargetDatabases, "expected parameter 'selectedTargetDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

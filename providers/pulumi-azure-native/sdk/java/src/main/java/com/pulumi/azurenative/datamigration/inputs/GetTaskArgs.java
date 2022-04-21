@@ -19,10 +19,10 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final String groupName;
+    private String groupName;
 
     public String groupName() {
         return this.groupName;
@@ -41,7 +41,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -52,7 +52,7 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -63,82 +63,72 @@ public final class GetTaskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="taskName", required=true)
-      private final String taskName;
+    private String taskName;
 
     public String taskName() {
         return this.taskName;
     }
 
-    public GetTaskArgs(
-        @Nullable String expand,
-        String groupName,
-        String projectName,
-        String serviceName,
-        String taskName) {
-        this.expand = expand;
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.taskName = Objects.requireNonNull(taskName, "expected parameter 'taskName' to be non-null");
-    }
+    private GetTaskArgs() {}
 
-    private GetTaskArgs() {
-        this.expand = null;
-        this.groupName = null;
-        this.projectName = null;
-        this.serviceName = null;
-        this.taskName = null;
+    private GetTaskArgs(GetTaskArgs $) {
+        this.expand = $.expand;
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.serviceName = $.serviceName;
+        this.taskName = $.taskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String groupName;
-        private String projectName;
-        private String serviceName;
-        private String taskName;
+        private GetTaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaskArgs();
         }
 
         public Builder(GetTaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.taskName = defaults.taskName;
+            $ = new GetTaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder taskName(String taskName) {
-            this.taskName = Objects.requireNonNull(taskName);
+            $.taskName = taskName;
             return this;
-        }        public GetTaskArgs build() {
-            return new GetTaskArgs(expand, groupName, projectName, serviceName, taskName);
+        }
+
+        public GetTaskArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.taskName = Objects.requireNonNull($.taskName, "expected parameter 'taskName' to be non-null");
+            return $;
         }
     }
+
 }

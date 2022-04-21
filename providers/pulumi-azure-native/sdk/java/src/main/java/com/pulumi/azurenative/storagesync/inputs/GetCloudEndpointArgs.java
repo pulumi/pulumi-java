@@ -17,7 +17,7 @@ public final class GetCloudEndpointArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cloudEndpointName", required=true)
-      private final String cloudEndpointName;
+    private String cloudEndpointName;
 
     public String cloudEndpointName() {
         return this.cloudEndpointName;
@@ -28,7 +28,7 @@ public final class GetCloudEndpointArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetCloudEndpointArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-      private final String storageSyncServiceName;
+    private String storageSyncServiceName;
 
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -50,73 +50,66 @@ public final class GetCloudEndpointArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="syncGroupName", required=true)
-      private final String syncGroupName;
+    private String syncGroupName;
 
     public String syncGroupName() {
         return this.syncGroupName;
     }
 
-    public GetCloudEndpointArgs(
-        String cloudEndpointName,
-        String resourceGroupName,
-        String storageSyncServiceName,
-        String syncGroupName) {
-        this.cloudEndpointName = Objects.requireNonNull(cloudEndpointName, "expected parameter 'cloudEndpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
-        this.syncGroupName = Objects.requireNonNull(syncGroupName, "expected parameter 'syncGroupName' to be non-null");
-    }
+    private GetCloudEndpointArgs() {}
 
-    private GetCloudEndpointArgs() {
-        this.cloudEndpointName = null;
-        this.resourceGroupName = null;
-        this.storageSyncServiceName = null;
-        this.syncGroupName = null;
+    private GetCloudEndpointArgs(GetCloudEndpointArgs $) {
+        this.cloudEndpointName = $.cloudEndpointName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageSyncServiceName = $.storageSyncServiceName;
+        this.syncGroupName = $.syncGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudEndpointName;
-        private String resourceGroupName;
-        private String storageSyncServiceName;
-        private String syncGroupName;
+        private GetCloudEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudEndpointArgs();
         }
 
         public Builder(GetCloudEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudEndpointName = defaults.cloudEndpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageSyncServiceName = defaults.storageSyncServiceName;
-    	      this.syncGroupName = defaults.syncGroupName;
+            $ = new GetCloudEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudEndpointName(String cloudEndpointName) {
-            this.cloudEndpointName = Objects.requireNonNull(cloudEndpointName);
+            $.cloudEndpointName = cloudEndpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
+
         public Builder syncGroupName(String syncGroupName) {
-            this.syncGroupName = Objects.requireNonNull(syncGroupName);
+            $.syncGroupName = syncGroupName;
             return this;
-        }        public GetCloudEndpointArgs build() {
-            return new GetCloudEndpointArgs(cloudEndpointName, resourceGroupName, storageSyncServiceName, syncGroupName);
+        }
+
+        public GetCloudEndpointArgs build() {
+            $.cloudEndpointName = Objects.requireNonNull($.cloudEndpointName, "expected parameter 'cloudEndpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
+            $.syncGroupName = Objects.requireNonNull($.syncGroupName, "expected parameter 'syncGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
@@ -28,55 +28,52 @@ public final class GetCostAllocationRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public GetCostAllocationRuleArgs(
-        String billingAccountId,
-        String ruleName) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private GetCostAllocationRuleArgs() {}
 
-    private GetCostAllocationRuleArgs() {
-        this.billingAccountId = null;
-        this.ruleName = null;
+    private GetCostAllocationRuleArgs(GetCostAllocationRuleArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCostAllocationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
-        private String ruleName;
+        private GetCostAllocationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCostAllocationRuleArgs();
         }
 
         public Builder(GetCostAllocationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.ruleName = defaults.ruleName;
+            $ = new GetCostAllocationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public GetCostAllocationRuleArgs build() {
-            return new GetCostAllocationRuleArgs(billingAccountId, ruleName);
+        }
+
+        public GetCostAllocationRuleArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

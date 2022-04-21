@@ -20,10 +20,10 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+    private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
     /**
@@ -31,55 +31,51 @@ public final class AccountEncryptionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AccountEncryptionResponse(
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        String type) {
-        this.keyVaultProperties = keyVaultProperties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AccountEncryptionResponse() {}
 
-    private AccountEncryptionResponse() {
-        this.keyVaultProperties = null;
-        this.type = null;
+    private AccountEncryptionResponse(AccountEncryptionResponse $) {
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
-        private String type;
+        private AccountEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountEncryptionResponse();
         }
 
         public Builder(AccountEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.type = defaults.type;
+            $ = new AccountEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AccountEncryptionResponse build() {
-            return new AccountEncryptionResponse(keyVaultProperties, type);
+        }
+
+        public AccountEncryptionResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class IdentityPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userAssigned")
-      private final @Nullable UserAssignedPropertiesResponse userAssigned;
+    private @Nullable UserAssignedPropertiesResponse userAssigned;
 
     public Optional<UserAssignedPropertiesResponse> userAssigned() {
-        return this.userAssigned == null ? Optional.empty() : Optional.ofNullable(this.userAssigned);
+        return Optional.ofNullable(this.userAssigned);
     }
 
-    public IdentityPropertiesResponse(
-        @Nullable String type,
-        @Nullable UserAssignedPropertiesResponse userAssigned) {
-        this.type = type;
-        this.userAssigned = userAssigned;
-    }
+    private IdentityPropertiesResponse() {}
 
-    private IdentityPropertiesResponse() {
-        this.type = null;
-        this.userAssigned = null;
+    private IdentityPropertiesResponse(IdentityPropertiesResponse $) {
+        this.type = $.type;
+        this.userAssigned = $.userAssigned;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable UserAssignedPropertiesResponse userAssigned;
+        private IdentityPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPropertiesResponse();
         }
 
         public Builder(IdentityPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssigned = defaults.userAssigned;
+            $ = new IdentityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
-            this.userAssigned = userAssigned;
+            $.userAssigned = userAssigned;
             return this;
-        }        public IdentityPropertiesResponse build() {
-            return new IdentityPropertiesResponse(type, userAssigned);
+        }
+
+        public IdentityPropertiesResponse build() {
+            return $;
         }
     }
+
 }

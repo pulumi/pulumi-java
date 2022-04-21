@@ -22,174 +22,150 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration extends co
     public static final DeliveryStreamHttpEndpointDestinationConfiguration Empty = new DeliveryStreamHttpEndpointDestinationConfiguration();
 
     @Import(name="bufferingHints")
-      private final @Nullable DeliveryStreamBufferingHints bufferingHints;
+    private @Nullable DeliveryStreamBufferingHints bufferingHints;
 
     public Optional<DeliveryStreamBufferingHints> bufferingHints() {
-        return this.bufferingHints == null ? Optional.empty() : Optional.ofNullable(this.bufferingHints);
+        return Optional.ofNullable(this.bufferingHints);
     }
 
     @Import(name="cloudWatchLoggingOptions")
-      private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
+    private @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
+        return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="endpointConfiguration", required=true)
-      private final DeliveryStreamHttpEndpointConfiguration endpointConfiguration;
+    private DeliveryStreamHttpEndpointConfiguration endpointConfiguration;
 
     public DeliveryStreamHttpEndpointConfiguration endpointConfiguration() {
         return this.endpointConfiguration;
     }
 
     @Import(name="processingConfiguration")
-      private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
+    private @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
 
     public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
-        return this.processingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.processingConfiguration);
+        return Optional.ofNullable(this.processingConfiguration);
     }
 
     @Import(name="requestConfiguration")
-      private final @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration;
+    private @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration;
 
     public Optional<DeliveryStreamHttpEndpointRequestConfiguration> requestConfiguration() {
-        return this.requestConfiguration == null ? Optional.empty() : Optional.ofNullable(this.requestConfiguration);
+        return Optional.ofNullable(this.requestConfiguration);
     }
 
     @Import(name="retryOptions")
-      private final @Nullable DeliveryStreamRetryOptions retryOptions;
+    private @Nullable DeliveryStreamRetryOptions retryOptions;
 
     public Optional<DeliveryStreamRetryOptions> retryOptions() {
-        return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
+        return Optional.ofNullable(this.retryOptions);
     }
 
     @Import(name="roleARN")
-      private final @Nullable String roleARN;
+    private @Nullable String roleARN;
 
     public Optional<String> roleARN() {
-        return this.roleARN == null ? Optional.empty() : Optional.ofNullable(this.roleARN);
+        return Optional.ofNullable(this.roleARN);
     }
 
     @Import(name="s3BackupMode")
-      private final @Nullable String s3BackupMode;
+    private @Nullable String s3BackupMode;
 
     public Optional<String> s3BackupMode() {
-        return this.s3BackupMode == null ? Optional.empty() : Optional.ofNullable(this.s3BackupMode);
+        return Optional.ofNullable(this.s3BackupMode);
     }
 
     @Import(name="s3Configuration", required=true)
-      private final DeliveryStreamS3DestinationConfiguration s3Configuration;
+    private DeliveryStreamS3DestinationConfiguration s3Configuration;
 
     public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
 
-    public DeliveryStreamHttpEndpointDestinationConfiguration(
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
-        @Nullable DeliveryStreamRetryOptions retryOptions,
-        @Nullable String roleARN,
-        @Nullable String s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration) {
-        this.bufferingHints = bufferingHints;
-        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
-        this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration, "expected parameter 'endpointConfiguration' to be non-null");
-        this.processingConfiguration = processingConfiguration;
-        this.requestConfiguration = requestConfiguration;
-        this.retryOptions = retryOptions;
-        this.roleARN = roleARN;
-        this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration, "expected parameter 's3Configuration' to be non-null");
-    }
+    private DeliveryStreamHttpEndpointDestinationConfiguration() {}
 
-    private DeliveryStreamHttpEndpointDestinationConfiguration() {
-        this.bufferingHints = null;
-        this.cloudWatchLoggingOptions = null;
-        this.endpointConfiguration = null;
-        this.processingConfiguration = null;
-        this.requestConfiguration = null;
-        this.retryOptions = null;
-        this.roleARN = null;
-        this.s3BackupMode = null;
-        this.s3Configuration = null;
+    private DeliveryStreamHttpEndpointDestinationConfiguration(DeliveryStreamHttpEndpointDestinationConfiguration $) {
+        this.bufferingHints = $.bufferingHints;
+        this.cloudWatchLoggingOptions = $.cloudWatchLoggingOptions;
+        this.endpointConfiguration = $.endpointConfiguration;
+        this.processingConfiguration = $.processingConfiguration;
+        this.requestConfiguration = $.requestConfiguration;
+        this.retryOptions = $.retryOptions;
+        this.roleARN = $.roleARN;
+        this.s3BackupMode = $.s3BackupMode;
+        this.s3Configuration = $.s3Configuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointDestinationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamBufferingHints bufferingHints;
-        private @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
-        private DeliveryStreamHttpEndpointConfiguration endpointConfiguration;
-        private @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
-        private @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration;
-        private @Nullable DeliveryStreamRetryOptions retryOptions;
-        private @Nullable String roleARN;
-        private @Nullable String s3BackupMode;
-        private DeliveryStreamS3DestinationConfiguration s3Configuration;
+        private DeliveryStreamHttpEndpointDestinationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointDestinationConfiguration();
         }
 
         public Builder(DeliveryStreamHttpEndpointDestinationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bufferingHints = defaults.bufferingHints;
-    	      this.cloudWatchLoggingOptions = defaults.cloudWatchLoggingOptions;
-    	      this.endpointConfiguration = defaults.endpointConfiguration;
-    	      this.processingConfiguration = defaults.processingConfiguration;
-    	      this.requestConfiguration = defaults.requestConfiguration;
-    	      this.retryOptions = defaults.retryOptions;
-    	      this.roleARN = defaults.roleARN;
-    	      this.s3BackupMode = defaults.s3BackupMode;
-    	      this.s3Configuration = defaults.s3Configuration;
+            $ = new DeliveryStreamHttpEndpointDestinationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
-            this.bufferingHints = bufferingHints;
+            $.bufferingHints = bufferingHints;
             return this;
         }
+
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+            $.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
+
         public Builder endpointConfiguration(DeliveryStreamHttpEndpointConfiguration endpointConfiguration) {
-            this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration);
+            $.endpointConfiguration = endpointConfiguration;
             return this;
         }
+
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
-            this.processingConfiguration = processingConfiguration;
+            $.processingConfiguration = processingConfiguration;
             return this;
         }
+
         public Builder requestConfiguration(@Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration) {
-            this.requestConfiguration = requestConfiguration;
+            $.requestConfiguration = requestConfiguration;
             return this;
         }
+
         public Builder retryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
-            this.retryOptions = retryOptions;
+            $.retryOptions = retryOptions;
             return this;
         }
+
         public Builder roleARN(@Nullable String roleARN) {
-            this.roleARN = roleARN;
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder s3BackupMode(@Nullable String s3BackupMode) {
-            this.s3BackupMode = s3BackupMode;
+            $.s3BackupMode = s3BackupMode;
             return this;
         }
+
         public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
-            this.s3Configuration = Objects.requireNonNull(s3Configuration);
+            $.s3Configuration = s3Configuration;
             return this;
-        }        public DeliveryStreamHttpEndpointDestinationConfiguration build() {
-            return new DeliveryStreamHttpEndpointDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, endpointConfiguration, processingConfiguration, requestConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration);
+        }
+
+        public DeliveryStreamHttpEndpointDestinationConfiguration build() {
+            $.endpointConfiguration = Objects.requireNonNull($.endpointConfiguration, "expected parameter 'endpointConfiguration' to be non-null");
+            $.s3Configuration = Objects.requireNonNull($.s3Configuration, "expected parameter 's3Configuration' to be non-null");
+            return $;
         }
     }
+
 }

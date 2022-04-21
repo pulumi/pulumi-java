@@ -23,45 +23,44 @@ public final class CassandraPartitionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public CassandraPartitionKeyResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private CassandraPartitionKeyResponse() {}
 
-    private CassandraPartitionKeyResponse() {
-        this.name = null;
+    private CassandraPartitionKeyResponse(CassandraPartitionKeyResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraPartitionKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private CassandraPartitionKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraPartitionKeyResponse();
         }
 
         public Builder(CassandraPartitionKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new CassandraPartitionKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public CassandraPartitionKeyResponse build() {
-            return new CassandraPartitionKeyResponse(name);
+        }
+
+        public CassandraPartitionKeyResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketDefaultRetentionMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,90 +21,82 @@ public final class BucketDefaultRetentionArgs extends com.pulumi.resources.Resou
     public static final BucketDefaultRetentionArgs Empty = new BucketDefaultRetentionArgs();
 
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     @Import(name="mode")
-      private final @Nullable Output<BucketDefaultRetentionMode> mode;
+    private @Nullable Output<BucketDefaultRetentionMode> mode;
 
-    public Output<BucketDefaultRetentionMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<BucketDefaultRetentionMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="years")
-      private final @Nullable Output<Integer> years;
+    private @Nullable Output<Integer> years;
 
-    public Output<Integer> years() {
-        return this.years == null ? Codegen.empty() : this.years;
+    public Optional<Output<Integer>> years() {
+        return Optional.ofNullable(this.years);
     }
 
-    public BucketDefaultRetentionArgs(
-        @Nullable Output<Integer> days,
-        @Nullable Output<BucketDefaultRetentionMode> mode,
-        @Nullable Output<Integer> years) {
-        this.days = days;
-        this.mode = mode;
-        this.years = years;
-    }
+    private BucketDefaultRetentionArgs() {}
 
-    private BucketDefaultRetentionArgs() {
-        this.days = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.years = Codegen.empty();
+    private BucketDefaultRetentionArgs(BucketDefaultRetentionArgs $) {
+        this.days = $.days;
+        this.mode = $.mode;
+        this.years = $.years;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDefaultRetentionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
-        private @Nullable Output<BucketDefaultRetentionMode> mode;
-        private @Nullable Output<Integer> years;
+        private BucketDefaultRetentionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDefaultRetentionArgs();
         }
 
         public Builder(BucketDefaultRetentionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.mode = defaults.mode;
-    	      this.years = defaults.years;
+            $ = new BucketDefaultRetentionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
         }
+
         public Builder mode(@Nullable Output<BucketDefaultRetentionMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable BucketDefaultRetentionMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(BucketDefaultRetentionMode mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder years(@Nullable Output<Integer> years) {
-            this.years = years;
+            $.years = years;
             return this;
         }
-        public Builder years(@Nullable Integer years) {
-            this.years = Codegen.ofNullable(years);
-            return this;
-        }        public BucketDefaultRetentionArgs build() {
-            return new BucketDefaultRetentionArgs(days, mode, years);
+
+        public Builder years(Integer years) {
+            return years(Output.of(years));
+        }
+
+        public BucketDefaultRetentionArgs build() {
+            return $;
         }
     }
+
 }

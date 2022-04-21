@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerinstance.inputs;
 import com.pulumi.azurenative.containerinstance.inputs.GpuResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cpu", required=true)
-      private final Output<Double> cpu;
+    private Output<Double> cpu;
 
     public Output<Double> cpu() {
         return this.cpu;
@@ -36,10 +36,10 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="gpu")
-      private final @Nullable Output<GpuResourceArgs> gpu;
+    private @Nullable Output<GpuResourceArgs> gpu;
 
-    public Output<GpuResourceArgs> gpu() {
-        return this.gpu == null ? Codegen.empty() : this.gpu;
+    public Optional<Output<GpuResourceArgs>> gpu() {
+        return Optional.ofNullable(this.gpu);
     }
 
     /**
@@ -47,76 +47,70 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="memoryInGB", required=true)
-      private final Output<Double> memoryInGB;
+    private Output<Double> memoryInGB;
 
     public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
 
-    public ResourceRequestsArgs(
-        Output<Double> cpu,
-        @Nullable Output<GpuResourceArgs> gpu,
-        Output<Double> memoryInGB) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.gpu = gpu;
-        this.memoryInGB = Objects.requireNonNull(memoryInGB, "expected parameter 'memoryInGB' to be non-null");
-    }
+    private ResourceRequestsArgs() {}
 
-    private ResourceRequestsArgs() {
-        this.cpu = Codegen.empty();
-        this.gpu = Codegen.empty();
-        this.memoryInGB = Codegen.empty();
+    private ResourceRequestsArgs(ResourceRequestsArgs $) {
+        this.cpu = $.cpu;
+        this.gpu = $.gpu;
+        this.memoryInGB = $.memoryInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequestsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> cpu;
-        private @Nullable Output<GpuResourceArgs> gpu;
-        private Output<Double> memoryInGB;
+        private ResourceRequestsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequestsArgs();
         }
 
         public Builder(ResourceRequestsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.gpu = defaults.gpu;
-    	      this.memoryInGB = defaults.memoryInGB;
+            $ = new ResourceRequestsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Output<Double> cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder cpu(Double cpu) {
-            this.cpu = Output.of(Objects.requireNonNull(cpu));
-            return this;
+            return cpu(Output.of(cpu));
         }
+
         public Builder gpu(@Nullable Output<GpuResourceArgs> gpu) {
-            this.gpu = gpu;
+            $.gpu = gpu;
             return this;
         }
-        public Builder gpu(@Nullable GpuResourceArgs gpu) {
-            this.gpu = Codegen.ofNullable(gpu);
-            return this;
+
+        public Builder gpu(GpuResourceArgs gpu) {
+            return gpu(Output.of(gpu));
         }
+
         public Builder memoryInGB(Output<Double> memoryInGB) {
-            this.memoryInGB = Objects.requireNonNull(memoryInGB);
+            $.memoryInGB = memoryInGB;
             return this;
         }
+
         public Builder memoryInGB(Double memoryInGB) {
-            this.memoryInGB = Output.of(Objects.requireNonNull(memoryInGB));
-            return this;
-        }        public ResourceRequestsArgs build() {
-            return new ResourceRequestsArgs(cpu, gpu, memoryInGB);
+            return memoryInGB(Output.of(memoryInGB));
+        }
+
+        public ResourceRequestsArgs build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryInGB = Objects.requireNonNull($.memoryInGB, "expected parameter 'memoryInGB' to be non-null");
+            return $;
         }
     }
+
 }

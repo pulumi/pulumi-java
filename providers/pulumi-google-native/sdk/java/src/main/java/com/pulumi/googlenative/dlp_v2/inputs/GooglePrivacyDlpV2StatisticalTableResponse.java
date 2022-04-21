@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends com.pulumi
      * 
      */
     @Import(name="quasiIds", required=true)
-      private final List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
+    private List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds() {
         return this.quasiIds;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends com.pulumi
      * 
      */
     @Import(name="relativeFrequency", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
+    private GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
 
     public GooglePrivacyDlpV2FieldIdResponse relativeFrequency() {
         return this.relativeFrequency;
@@ -46,67 +46,63 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends com.pulumi
      * 
      */
     @Import(name="table", required=true)
-      private final GooglePrivacyDlpV2BigQueryTableResponse table;
+    private GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 
-    public GooglePrivacyDlpV2StatisticalTableResponse(
-        List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds,
-        GooglePrivacyDlpV2FieldIdResponse relativeFrequency,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
-        this.quasiIds = Objects.requireNonNull(quasiIds, "expected parameter 'quasiIds' to be non-null");
-        this.relativeFrequency = Objects.requireNonNull(relativeFrequency, "expected parameter 'relativeFrequency' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private GooglePrivacyDlpV2StatisticalTableResponse() {}
 
-    private GooglePrivacyDlpV2StatisticalTableResponse() {
-        this.quasiIds = List.of();
-        this.relativeFrequency = null;
-        this.table = null;
+    private GooglePrivacyDlpV2StatisticalTableResponse(GooglePrivacyDlpV2StatisticalTableResponse $) {
+        this.quasiIds = $.quasiIds;
+        this.relativeFrequency = $.relativeFrequency;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StatisticalTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
-        private GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
-        private GooglePrivacyDlpV2BigQueryTableResponse table;
+        private GooglePrivacyDlpV2StatisticalTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StatisticalTableResponse();
         }
 
         public Builder(GooglePrivacyDlpV2StatisticalTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quasiIds = defaults.quasiIds;
-    	      this.relativeFrequency = defaults.relativeFrequency;
-    	      this.table = defaults.table;
+            $ = new GooglePrivacyDlpV2StatisticalTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds) {
-            this.quasiIds = Objects.requireNonNull(quasiIds);
+            $.quasiIds = quasiIds;
             return this;
         }
+
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdentifierFieldResponse... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
+
         public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdResponse relativeFrequency) {
-            this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
+            $.relativeFrequency = relativeFrequency;
             return this;
         }
+
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
-        }        public GooglePrivacyDlpV2StatisticalTableResponse build() {
-            return new GooglePrivacyDlpV2StatisticalTableResponse(quasiIds, relativeFrequency, table);
+        }
+
+        public GooglePrivacyDlpV2StatisticalTableResponse build() {
+            $.quasiIds = Objects.requireNonNull($.quasiIds, "expected parameter 'quasiIds' to be non-null");
+            $.relativeFrequency = Objects.requireNonNull($.relativeFrequency, "expected parameter 'relativeFrequency' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

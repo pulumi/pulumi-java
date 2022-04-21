@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConnectionMonitorWorkspaceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Output<String> workspaceResourceId;
+    private @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
+    public Optional<Output<String>> workspaceResourceId() {
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public ConnectionMonitorWorkspaceSettingsArgs(@Nullable Output<String> workspaceResourceId) {
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private ConnectionMonitorWorkspaceSettingsArgs() {}
 
-    private ConnectionMonitorWorkspaceSettingsArgs() {
-        this.workspaceResourceId = Codegen.empty();
+    private ConnectionMonitorWorkspaceSettingsArgs(ConnectionMonitorWorkspaceSettingsArgs $) {
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorWorkspaceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> workspaceResourceId;
+        private ConnectionMonitorWorkspaceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorWorkspaceSettingsArgs();
         }
 
         public Builder(ConnectionMonitorWorkspaceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new ConnectionMonitorWorkspaceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
         }
-        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
-            return this;
-        }        public ConnectionMonitorWorkspaceSettingsArgs build() {
-            return new ConnectionMonitorWorkspaceSettingsArgs(workspaceResourceId);
+
+        public Builder workspaceResourceId(String workspaceResourceId) {
+            return workspaceResourceId(Output.of(workspaceResourceId));
+        }
+
+        public ConnectionMonitorWorkspaceSettingsArgs build() {
+            return $;
         }
     }
+
 }

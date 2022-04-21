@@ -5,13 +5,13 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.PluginGrantPermissionGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableTimeout")
-      private final @Nullable Output<Integer> enableTimeout;
+    private @Nullable Output<Integer> enableTimeout;
 
-    public Output<Integer> enableTimeout() {
-        return this.enableTimeout == null ? Codegen.empty() : this.enableTimeout;
+    public Optional<Output<Integer>> enableTimeout() {
+        return Optional.ofNullable(this.enableTimeout);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="envs")
-      private final @Nullable Output<List<String>> envs;
+    private @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> envs() {
-        return this.envs == null ? Codegen.empty() : this.envs;
+    public Optional<Output<List<String>>> envs() {
+        return Optional.ofNullable(this.envs);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDisable")
-      private final @Nullable Output<Boolean> forceDisable;
+    private @Nullable Output<Boolean> forceDisable;
 
-    public Output<Boolean> forceDisable() {
-        return this.forceDisable == null ? Codegen.empty() : this.forceDisable;
+    public Optional<Output<Boolean>> forceDisable() {
+        return Optional.ofNullable(this.forceDisable);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grantAllPermissions")
-      private final @Nullable Output<Boolean> grantAllPermissions;
+    private @Nullable Output<Boolean> grantAllPermissions;
 
-    public Output<Boolean> grantAllPermissions() {
-        return this.grantAllPermissions == null ? Codegen.empty() : this.grantAllPermissions;
+    public Optional<Output<Boolean>> grantAllPermissions() {
+        return Optional.ofNullable(this.grantAllPermissions);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grantPermissions")
-      private final @Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions;
+    private @Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions;
 
-    public Output<List<PluginGrantPermissionGetArgs>> grantPermissions() {
-        return this.grantPermissions == null ? Codegen.empty() : this.grantPermissions;
+    public Optional<Output<List<PluginGrantPermissionGetArgs>>> grantPermissions() {
+        return Optional.ofNullable(this.grantPermissions);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -123,173 +123,146 @@ public final class PluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pluginReference")
-      private final @Nullable Output<String> pluginReference;
+    private @Nullable Output<String> pluginReference;
 
-    public Output<String> pluginReference() {
-        return this.pluginReference == null ? Codegen.empty() : this.pluginReference;
+    public Optional<Output<String>> pluginReference() {
+        return Optional.ofNullable(this.pluginReference);
     }
 
-    public PluginState(
-        @Nullable Output<String> alias,
-        @Nullable Output<Integer> enableTimeout,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<String>> envs,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<Boolean> forceDisable,
-        @Nullable Output<Boolean> grantAllPermissions,
-        @Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions,
-        @Nullable Output<String> name,
-        @Nullable Output<String> pluginReference) {
-        this.alias = alias;
-        this.enableTimeout = enableTimeout;
-        this.enabled = enabled;
-        this.envs = envs;
-        this.forceDestroy = forceDestroy;
-        this.forceDisable = forceDisable;
-        this.grantAllPermissions = grantAllPermissions;
-        this.grantPermissions = grantPermissions;
-        this.name = name;
-        this.pluginReference = pluginReference;
-    }
+    private PluginState() {}
 
-    private PluginState() {
-        this.alias = Codegen.empty();
-        this.enableTimeout = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.envs = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.forceDisable = Codegen.empty();
-        this.grantAllPermissions = Codegen.empty();
-        this.grantPermissions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pluginReference = Codegen.empty();
+    private PluginState(PluginState $) {
+        this.alias = $.alias;
+        this.enableTimeout = $.enableTimeout;
+        this.enabled = $.enabled;
+        this.envs = $.envs;
+        this.forceDestroy = $.forceDestroy;
+        this.forceDisable = $.forceDisable;
+        this.grantAllPermissions = $.grantAllPermissions;
+        this.grantPermissions = $.grantPermissions;
+        this.name = $.name;
+        this.pluginReference = $.pluginReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PluginState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
-        private @Nullable Output<Integer> enableTimeout;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<String>> envs;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<Boolean> forceDisable;
-        private @Nullable Output<Boolean> grantAllPermissions;
-        private @Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> pluginReference;
+        private PluginState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PluginState();
         }
 
         public Builder(PluginState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.enableTimeout = defaults.enableTimeout;
-    	      this.enabled = defaults.enabled;
-    	      this.envs = defaults.envs;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.forceDisable = defaults.forceDisable;
-    	      this.grantAllPermissions = defaults.grantAllPermissions;
-    	      this.grantPermissions = defaults.grantPermissions;
-    	      this.name = defaults.name;
-    	      this.pluginReference = defaults.pluginReference;
+            $ = new PluginState(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder enableTimeout(@Nullable Output<Integer> enableTimeout) {
-            this.enableTimeout = enableTimeout;
+            $.enableTimeout = enableTimeout;
             return this;
         }
-        public Builder enableTimeout(@Nullable Integer enableTimeout) {
-            this.enableTimeout = Codegen.ofNullable(enableTimeout);
-            return this;
+
+        public Builder enableTimeout(Integer enableTimeout) {
+            return enableTimeout(Output.of(enableTimeout));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder envs(@Nullable Output<List<String>> envs) {
-            this.envs = envs;
+            $.envs = envs;
             return this;
         }
-        public Builder envs(@Nullable List<String> envs) {
-            this.envs = Codegen.ofNullable(envs);
-            return this;
+
+        public Builder envs(List<String> envs) {
+            return envs(Output.of(envs));
         }
+
         public Builder envs(String... envs) {
             return envs(List.of(envs));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder forceDisable(@Nullable Output<Boolean> forceDisable) {
-            this.forceDisable = forceDisable;
+            $.forceDisable = forceDisable;
             return this;
         }
-        public Builder forceDisable(@Nullable Boolean forceDisable) {
-            this.forceDisable = Codegen.ofNullable(forceDisable);
-            return this;
+
+        public Builder forceDisable(Boolean forceDisable) {
+            return forceDisable(Output.of(forceDisable));
         }
+
         public Builder grantAllPermissions(@Nullable Output<Boolean> grantAllPermissions) {
-            this.grantAllPermissions = grantAllPermissions;
+            $.grantAllPermissions = grantAllPermissions;
             return this;
         }
-        public Builder grantAllPermissions(@Nullable Boolean grantAllPermissions) {
-            this.grantAllPermissions = Codegen.ofNullable(grantAllPermissions);
-            return this;
+
+        public Builder grantAllPermissions(Boolean grantAllPermissions) {
+            return grantAllPermissions(Output.of(grantAllPermissions));
         }
+
         public Builder grantPermissions(@Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions) {
-            this.grantPermissions = grantPermissions;
+            $.grantPermissions = grantPermissions;
             return this;
         }
-        public Builder grantPermissions(@Nullable List<PluginGrantPermissionGetArgs> grantPermissions) {
-            this.grantPermissions = Codegen.ofNullable(grantPermissions);
-            return this;
+
+        public Builder grantPermissions(List<PluginGrantPermissionGetArgs> grantPermissions) {
+            return grantPermissions(Output.of(grantPermissions));
         }
+
         public Builder grantPermissions(PluginGrantPermissionGetArgs... grantPermissions) {
             return grantPermissions(List.of(grantPermissions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pluginReference(@Nullable Output<String> pluginReference) {
-            this.pluginReference = pluginReference;
+            $.pluginReference = pluginReference;
             return this;
         }
-        public Builder pluginReference(@Nullable String pluginReference) {
-            this.pluginReference = Codegen.ofNullable(pluginReference);
-            return this;
-        }        public PluginState build() {
-            return new PluginState(alias, enableTimeout, enabled, envs, forceDestroy, forceDisable, grantAllPermissions, grantPermissions, name, pluginReference);
+
+        public Builder pluginReference(String pluginReference) {
+            return pluginReference(Output.of(pluginReference));
+        }
+
+        public PluginState build() {
+            return $;
         }
     }
+
 }

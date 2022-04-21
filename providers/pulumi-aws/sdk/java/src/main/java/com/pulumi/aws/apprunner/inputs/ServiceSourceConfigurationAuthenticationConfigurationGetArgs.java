@@ -5,9 +5,9 @@ package com.pulumi.aws.apprunner.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationGetArgs 
      * 
      */
     @Import(name="accessRoleArn")
-      private final @Nullable Output<String> accessRoleArn;
+    private @Nullable Output<String> accessRoleArn;
 
-    public Output<String> accessRoleArn() {
-        return this.accessRoleArn == null ? Codegen.empty() : this.accessRoleArn;
+    public Optional<Output<String>> accessRoleArn() {
+        return Optional.ofNullable(this.accessRoleArn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationGetArgs 
      * 
      */
     @Import(name="connectionArn")
-      private final @Nullable Output<String> connectionArn;
+    private @Nullable Output<String> connectionArn;
 
-    public Output<String> connectionArn() {
-        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
+    public Optional<Output<String>> connectionArn() {
+        return Optional.ofNullable(this.connectionArn);
     }
 
-    public ServiceSourceConfigurationAuthenticationConfigurationGetArgs(
-        @Nullable Output<String> accessRoleArn,
-        @Nullable Output<String> connectionArn) {
-        this.accessRoleArn = accessRoleArn;
-        this.connectionArn = connectionArn;
-    }
+    private ServiceSourceConfigurationAuthenticationConfigurationGetArgs() {}
 
-    private ServiceSourceConfigurationAuthenticationConfigurationGetArgs() {
-        this.accessRoleArn = Codegen.empty();
-        this.connectionArn = Codegen.empty();
+    private ServiceSourceConfigurationAuthenticationConfigurationGetArgs(ServiceSourceConfigurationAuthenticationConfigurationGetArgs $) {
+        this.accessRoleArn = $.accessRoleArn;
+        this.connectionArn = $.connectionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSourceConfigurationAuthenticationConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessRoleArn;
-        private @Nullable Output<String> connectionArn;
+        private ServiceSourceConfigurationAuthenticationConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSourceConfigurationAuthenticationConfigurationGetArgs();
         }
 
         public Builder(ServiceSourceConfigurationAuthenticationConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessRoleArn = defaults.accessRoleArn;
-    	      this.connectionArn = defaults.connectionArn;
+            $ = new ServiceSourceConfigurationAuthenticationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessRoleArn(@Nullable Output<String> accessRoleArn) {
-            this.accessRoleArn = accessRoleArn;
+            $.accessRoleArn = accessRoleArn;
             return this;
         }
-        public Builder accessRoleArn(@Nullable String accessRoleArn) {
-            this.accessRoleArn = Codegen.ofNullable(accessRoleArn);
-            return this;
+
+        public Builder accessRoleArn(String accessRoleArn) {
+            return accessRoleArn(Output.of(accessRoleArn));
         }
+
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
-            this.connectionArn = connectionArn;
+            $.connectionArn = connectionArn;
             return this;
         }
-        public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Codegen.ofNullable(connectionArn);
-            return this;
-        }        public ServiceSourceConfigurationAuthenticationConfigurationGetArgs build() {
-            return new ServiceSourceConfigurationAuthenticationConfigurationGetArgs(accessRoleArn, connectionArn);
+
+        public Builder connectionArn(String connectionArn) {
+            return connectionArn(Output.of(connectionArn));
+        }
+
+        public ServiceSourceConfigurationAuthenticationConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

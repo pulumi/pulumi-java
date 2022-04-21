@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterClientAuthenticationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends com.pul
     public static final ConnectorKafkaClusterClientAuthenticationArgs Empty = new ConnectorKafkaClusterClientAuthenticationArgs();
 
     @Import(name="authenticationType", required=true)
-      private final Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
+    private Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
 
     public Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType() {
         return this.authenticationType;
     }
 
-    public ConnectorKafkaClusterClientAuthenticationArgs(Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-    }
+    private ConnectorKafkaClusterClientAuthenticationArgs() {}
 
-    private ConnectorKafkaClusterClientAuthenticationArgs() {
-        this.authenticationType = Codegen.empty();
+    private ConnectorKafkaClusterClientAuthenticationArgs(ConnectorKafkaClusterClientAuthenticationArgs $) {
+        this.authenticationType = $.authenticationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorKafkaClusterClientAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType;
+        private ConnectorKafkaClusterClientAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorKafkaClusterClientAuthenticationArgs();
         }
 
         public Builder(ConnectorKafkaClusterClientAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
+            $ = new ConnectorKafkaClusterClientAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
-        }        public ConnectorKafkaClusterClientAuthenticationArgs build() {
-            return new ConnectorKafkaClusterClientAuthenticationArgs(authenticationType);
+            return authenticationType(Output.of(authenticationType));
+        }
+
+        public ConnectorKafkaClusterClientAuthenticationArgs build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            return $;
         }
     }
+
 }

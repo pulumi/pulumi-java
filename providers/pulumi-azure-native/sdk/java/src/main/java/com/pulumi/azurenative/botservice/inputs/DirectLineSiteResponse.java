@@ -25,10 +25,10 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isBlockUserUploadEnabled")
-      private final @Nullable Boolean isBlockUserUploadEnabled;
+    private @Nullable Boolean isBlockUserUploadEnabled;
 
     public Optional<Boolean> isBlockUserUploadEnabled() {
-        return this.isBlockUserUploadEnabled == null ? Optional.empty() : Optional.ofNullable(this.isBlockUserUploadEnabled);
+        return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -47,10 +47,10 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isSecureSiteEnabled")
-      private final @Nullable Boolean isSecureSiteEnabled;
+    private @Nullable Boolean isSecureSiteEnabled;
 
     public Optional<Boolean> isSecureSiteEnabled() {
-        return this.isSecureSiteEnabled == null ? Optional.empty() : Optional.ofNullable(this.isSecureSiteEnabled);
+        return Optional.ofNullable(this.isSecureSiteEnabled);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isV1Enabled", required=true)
-      private final Boolean isV1Enabled;
+    private Boolean isV1Enabled;
 
     public Boolean isV1Enabled() {
         return this.isV1Enabled;
@@ -69,7 +69,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="isV3Enabled", required=true)
-      private final Boolean isV3Enabled;
+    private Boolean isV3Enabled;
 
     public Boolean isV3Enabled() {
         return this.isV3Enabled;
@@ -80,7 +80,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -91,7 +91,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="key2", required=true)
-      private final String key2;
+    private String key2;
 
     public String key2() {
         return this.key2;
@@ -102,7 +102,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
@@ -113,7 +113,7 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="siteName", required=true)
-      private final String siteName;
+    private String siteName;
 
     public String siteName() {
         return this.siteName;
@@ -124,130 +124,109 @@ public final class DirectLineSiteResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="trustedOrigins")
-      private final @Nullable List<String> trustedOrigins;
+    private @Nullable List<String> trustedOrigins;
 
-    public List<String> trustedOrigins() {
-        return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
+    public Optional<List<String>> trustedOrigins() {
+        return Optional.ofNullable(this.trustedOrigins);
     }
 
-    public DirectLineSiteResponse(
-        @Nullable Boolean isBlockUserUploadEnabled,
-        Boolean isEnabled,
-        @Nullable Boolean isSecureSiteEnabled,
-        Boolean isV1Enabled,
-        Boolean isV3Enabled,
-        String key,
-        String key2,
-        String siteId,
-        String siteName,
-        @Nullable List<String> trustedOrigins) {
-        this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isSecureSiteEnabled = isSecureSiteEnabled;
-        this.isV1Enabled = Objects.requireNonNull(isV1Enabled, "expected parameter 'isV1Enabled' to be non-null");
-        this.isV3Enabled = Objects.requireNonNull(isV3Enabled, "expected parameter 'isV3Enabled' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.key2 = Objects.requireNonNull(key2, "expected parameter 'key2' to be non-null");
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-        this.trustedOrigins = trustedOrigins;
-    }
+    private DirectLineSiteResponse() {}
 
-    private DirectLineSiteResponse() {
-        this.isBlockUserUploadEnabled = null;
-        this.isEnabled = null;
-        this.isSecureSiteEnabled = null;
-        this.isV1Enabled = null;
-        this.isV3Enabled = null;
-        this.key = null;
-        this.key2 = null;
-        this.siteId = null;
-        this.siteName = null;
-        this.trustedOrigins = List.of();
+    private DirectLineSiteResponse(DirectLineSiteResponse $) {
+        this.isBlockUserUploadEnabled = $.isBlockUserUploadEnabled;
+        this.isEnabled = $.isEnabled;
+        this.isSecureSiteEnabled = $.isSecureSiteEnabled;
+        this.isV1Enabled = $.isV1Enabled;
+        this.isV3Enabled = $.isV3Enabled;
+        this.key = $.key;
+        this.key2 = $.key2;
+        this.siteId = $.siteId;
+        this.siteName = $.siteName;
+        this.trustedOrigins = $.trustedOrigins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineSiteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isBlockUserUploadEnabled;
-        private Boolean isEnabled;
-        private @Nullable Boolean isSecureSiteEnabled;
-        private Boolean isV1Enabled;
-        private Boolean isV3Enabled;
-        private String key;
-        private String key2;
-        private String siteId;
-        private String siteName;
-        private @Nullable List<String> trustedOrigins;
+        private DirectLineSiteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineSiteResponse();
         }
 
         public Builder(DirectLineSiteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isBlockUserUploadEnabled = defaults.isBlockUserUploadEnabled;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isSecureSiteEnabled = defaults.isSecureSiteEnabled;
-    	      this.isV1Enabled = defaults.isV1Enabled;
-    	      this.isV3Enabled = defaults.isV3Enabled;
-    	      this.key = defaults.key;
-    	      this.key2 = defaults.key2;
-    	      this.siteId = defaults.siteId;
-    	      this.siteName = defaults.siteName;
-    	      this.trustedOrigins = defaults.trustedOrigins;
+            $ = new DirectLineSiteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
-            this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
+            $.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
-            this.isSecureSiteEnabled = isSecureSiteEnabled;
+            $.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
+
         public Builder isV1Enabled(Boolean isV1Enabled) {
-            this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
+            $.isV1Enabled = isV1Enabled;
             return this;
         }
+
         public Builder isV3Enabled(Boolean isV3Enabled) {
-            this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
+            $.isV3Enabled = isV3Enabled;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key2(String key2) {
-            this.key2 = Objects.requireNonNull(key2);
+            $.key2 = key2;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
         }
+
         public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
-            this.trustedOrigins = trustedOrigins;
+            $.trustedOrigins = trustedOrigins;
             return this;
         }
+
         public Builder trustedOrigins(String... trustedOrigins) {
             return trustedOrigins(List.of(trustedOrigins));
-        }        public DirectLineSiteResponse build() {
-            return new DirectLineSiteResponse(isBlockUserUploadEnabled, isEnabled, isSecureSiteEnabled, isV1Enabled, isV3Enabled, key, key2, siteId, siteName, trustedOrigins);
+        }
+
+        public DirectLineSiteResponse build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.isV1Enabled = Objects.requireNonNull($.isV1Enabled, "expected parameter 'isV1Enabled' to be non-null");
+            $.isV3Enabled = Objects.requireNonNull($.isV3Enabled, "expected parameter 'isV3Enabled' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.key2 = Objects.requireNonNull($.key2, "expected parameter 'key2' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

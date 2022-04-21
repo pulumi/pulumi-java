@@ -6,10 +6,10 @@ package com.pulumi.azurenative.avs;
 import com.pulumi.azurenative.avs.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterSize", required=true)
-      private final Output<Integer> clusterSize;
+    private Output<Integer> clusterSize;
 
     public Output<Integer> clusterSize() {
         return this.clusterSize;
@@ -44,7 +44,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -55,7 +55,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,102 +66,92 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
     }
 
-    public ClusterArgs(
-        @Nullable Output<String> clusterName,
-        Output<Integer> clusterSize,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku) {
-        this.clusterName = clusterName;
-        this.clusterSize = Objects.requireNonNull(clusterSize, "expected parameter 'clusterSize' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.clusterName = Codegen.empty();
-        this.clusterSize = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.clusterName = $.clusterName;
+        this.clusterSize = $.clusterSize;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterName;
-        private Output<Integer> clusterSize;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterSize = defaults.clusterSize;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder clusterSize(Output<Integer> clusterSize) {
-            this.clusterSize = Objects.requireNonNull(clusterSize);
+            $.clusterSize = clusterSize;
             return this;
         }
+
         public Builder clusterSize(Integer clusterSize) {
-            this.clusterSize = Output.of(Objects.requireNonNull(clusterSize));
-            return this;
+            return clusterSize(Output.of(clusterSize));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(clusterName, clusterSize, privateCloudName, resourceGroupName, sku);
+            return sku(Output.of(sku));
+        }
+
+        public ClusterArgs build() {
+            $.clusterSize = Objects.requireNonNull($.clusterSize, "expected parameter 'clusterSize' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

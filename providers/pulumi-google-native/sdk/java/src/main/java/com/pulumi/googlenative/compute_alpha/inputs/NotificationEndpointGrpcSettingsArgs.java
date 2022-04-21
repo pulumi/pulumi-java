@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="authority")
-      private final @Nullable Output<String> authority;
+    private @Nullable Output<String> authority;
 
-    public Output<String> authority() {
-        return this.authority == null ? Codegen.empty() : this.authority;
+    public Optional<Output<String>> authority() {
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="payloadName")
-      private final @Nullable Output<String> payloadName;
+    private @Nullable Output<String> payloadName;
 
-    public Output<String> payloadName() {
-        return this.payloadName == null ? Codegen.empty() : this.payloadName;
+    public Optional<Output<String>> payloadName() {
+        return Optional.ofNullable(this.payloadName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resendInterval")
-      private final @Nullable Output<DurationArgs> resendInterval;
+    private @Nullable Output<DurationArgs> resendInterval;
 
-    public Output<DurationArgs> resendInterval() {
-        return this.resendInterval == null ? Codegen.empty() : this.resendInterval;
+    public Optional<Output<DurationArgs>> resendInterval() {
+        return Optional.ofNullable(this.resendInterval);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class NotificationEndpointGrpcSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="retryDurationSec")
-      private final @Nullable Output<Integer> retryDurationSec;
+    private @Nullable Output<Integer> retryDurationSec;
 
-    public Output<Integer> retryDurationSec() {
-        return this.retryDurationSec == null ? Codegen.empty() : this.retryDurationSec;
+    public Optional<Output<Integer>> retryDurationSec() {
+        return Optional.ofNullable(this.retryDurationSec);
     }
 
-    public NotificationEndpointGrpcSettingsArgs(
-        @Nullable Output<String> authority,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> payloadName,
-        @Nullable Output<DurationArgs> resendInterval,
-        @Nullable Output<Integer> retryDurationSec) {
-        this.authority = authority;
-        this.endpoint = endpoint;
-        this.payloadName = payloadName;
-        this.resendInterval = resendInterval;
-        this.retryDurationSec = retryDurationSec;
-    }
+    private NotificationEndpointGrpcSettingsArgs() {}
 
-    private NotificationEndpointGrpcSettingsArgs() {
-        this.authority = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.payloadName = Codegen.empty();
-        this.resendInterval = Codegen.empty();
-        this.retryDurationSec = Codegen.empty();
+    private NotificationEndpointGrpcSettingsArgs(NotificationEndpointGrpcSettingsArgs $) {
+        this.authority = $.authority;
+        this.endpoint = $.endpoint;
+        this.payloadName = $.payloadName;
+        this.resendInterval = $.resendInterval;
+        this.retryDurationSec = $.retryDurationSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationEndpointGrpcSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authority;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> payloadName;
-        private @Nullable Output<DurationArgs> resendInterval;
-        private @Nullable Output<Integer> retryDurationSec;
+        private NotificationEndpointGrpcSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationEndpointGrpcSettingsArgs();
         }
 
         public Builder(NotificationEndpointGrpcSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authority = defaults.authority;
-    	      this.endpoint = defaults.endpoint;
-    	      this.payloadName = defaults.payloadName;
-    	      this.resendInterval = defaults.resendInterval;
-    	      this.retryDurationSec = defaults.retryDurationSec;
+            $ = new NotificationEndpointGrpcSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authority(@Nullable Output<String> authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
-        public Builder authority(@Nullable String authority) {
-            this.authority = Codegen.ofNullable(authority);
-            return this;
+
+        public Builder authority(String authority) {
+            return authority(Output.of(authority));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder payloadName(@Nullable Output<String> payloadName) {
-            this.payloadName = payloadName;
+            $.payloadName = payloadName;
             return this;
         }
-        public Builder payloadName(@Nullable String payloadName) {
-            this.payloadName = Codegen.ofNullable(payloadName);
-            return this;
+
+        public Builder payloadName(String payloadName) {
+            return payloadName(Output.of(payloadName));
         }
+
         public Builder resendInterval(@Nullable Output<DurationArgs> resendInterval) {
-            this.resendInterval = resendInterval;
+            $.resendInterval = resendInterval;
             return this;
         }
-        public Builder resendInterval(@Nullable DurationArgs resendInterval) {
-            this.resendInterval = Codegen.ofNullable(resendInterval);
-            return this;
+
+        public Builder resendInterval(DurationArgs resendInterval) {
+            return resendInterval(Output.of(resendInterval));
         }
+
         public Builder retryDurationSec(@Nullable Output<Integer> retryDurationSec) {
-            this.retryDurationSec = retryDurationSec;
+            $.retryDurationSec = retryDurationSec;
             return this;
         }
-        public Builder retryDurationSec(@Nullable Integer retryDurationSec) {
-            this.retryDurationSec = Codegen.ofNullable(retryDurationSec);
-            return this;
-        }        public NotificationEndpointGrpcSettingsArgs build() {
-            return new NotificationEndpointGrpcSettingsArgs(authority, endpoint, payloadName, resendInterval, retryDurationSec);
+
+        public Builder retryDurationSec(Integer retryDurationSec) {
+            return retryDurationSec(Output.of(retryDurationSec));
+        }
+
+        public NotificationEndpointGrpcSettingsArgs build() {
+            return $;
         }
     }
+
 }

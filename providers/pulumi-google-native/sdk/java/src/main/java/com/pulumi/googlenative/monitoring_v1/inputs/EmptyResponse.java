@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.monitoring_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class EmptyResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final EmptyResponse Empty = new EmptyResponse();
 
-    public EmptyResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(EmptyResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private EmptyResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(EmptyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new EmptyResponse();
         }
         public EmptyResponse build() {
-            return new EmptyResponse();
+            return $;
         }
     }
+
 }

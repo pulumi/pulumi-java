@@ -13,45 +13,45 @@ public final class RuleGroupLabel extends com.pulumi.resources.InvokeArgs {
     public static final RuleGroupLabel Empty = new RuleGroupLabel();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public RuleGroupLabel(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private RuleGroupLabel() {}
 
-    private RuleGroupLabel() {
-        this.name = null;
+    private RuleGroupLabel(RuleGroupLabel $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupLabel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private RuleGroupLabel $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupLabel();
         }
 
         public Builder(RuleGroupLabel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new RuleGroupLabel(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public RuleGroupLabel build() {
-            return new RuleGroupLabel(name);
+        }
+
+        public RuleGroupLabel build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

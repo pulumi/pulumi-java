@@ -22,7 +22,7 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -33,7 +33,7 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="maxDegreeOfParallelismPerJob", required=true)
-      private final Integer maxDegreeOfParallelismPerJob;
+    private Integer maxDegreeOfParallelismPerJob;
 
     public Integer maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
@@ -44,7 +44,7 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="minPriorityPerJob", required=true)
-      private final Integer minPriorityPerJob;
+    private Integer minPriorityPerJob;
 
     public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
@@ -55,7 +55,7 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -66,7 +66,7 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="objectId", required=true)
-      private final String objectId;
+    private String objectId;
 
     public String objectId() {
         return this.objectId;
@@ -77,7 +77,7 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -88,100 +88,87 @@ public final class ComputePolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ComputePolicyResponse(
-        String id,
-        Integer maxDegreeOfParallelismPerJob,
-        Integer minPriorityPerJob,
-        String name,
-        String objectId,
-        String objectType,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.maxDegreeOfParallelismPerJob = Objects.requireNonNull(maxDegreeOfParallelismPerJob, "expected parameter 'maxDegreeOfParallelismPerJob' to be non-null");
-        this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob, "expected parameter 'minPriorityPerJob' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ComputePolicyResponse() {}
 
-    private ComputePolicyResponse() {
-        this.id = null;
-        this.maxDegreeOfParallelismPerJob = null;
-        this.minPriorityPerJob = null;
-        this.name = null;
-        this.objectId = null;
-        this.objectType = null;
-        this.type = null;
+    private ComputePolicyResponse(ComputePolicyResponse $) {
+        this.id = $.id;
+        this.maxDegreeOfParallelismPerJob = $.maxDegreeOfParallelismPerJob;
+        this.minPriorityPerJob = $.minPriorityPerJob;
+        this.name = $.name;
+        this.objectId = $.objectId;
+        this.objectType = $.objectType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private Integer maxDegreeOfParallelismPerJob;
-        private Integer minPriorityPerJob;
-        private String name;
-        private String objectId;
-        private String objectType;
-        private String type;
+        private ComputePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputePolicyResponse();
         }
 
         public Builder(ComputePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.maxDegreeOfParallelismPerJob = defaults.maxDegreeOfParallelismPerJob;
-    	      this.minPriorityPerJob = defaults.minPriorityPerJob;
-    	      this.name = defaults.name;
-    	      this.objectId = defaults.objectId;
-    	      this.objectType = defaults.objectType;
-    	      this.type = defaults.type;
+            $ = new ComputePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Objects.requireNonNull(maxDegreeOfParallelismPerJob);
+            $.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
+
         public Builder minPriorityPerJob(Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob);
+            $.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ComputePolicyResponse build() {
-            return new ComputePolicyResponse(id, maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType, type);
+        }
+
+        public ComputePolicyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.maxDegreeOfParallelismPerJob = Objects.requireNonNull($.maxDegreeOfParallelismPerJob, "expected parameter 'maxDegreeOfParallelismPerJob' to be non-null");
+            $.minPriorityPerJob = Objects.requireNonNull($.minPriorityPerJob, "expected parameter 'minPriorityPerJob' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

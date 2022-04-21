@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SpotDatafeedSubscriptionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SpotDatafeedSubscriptionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public SpotDatafeedSubscriptionState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> prefix) {
-        this.bucket = bucket;
-        this.prefix = prefix;
-    }
+    private SpotDatafeedSubscriptionState() {}
 
-    private SpotDatafeedSubscriptionState() {
-        this.bucket = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private SpotDatafeedSubscriptionState(SpotDatafeedSubscriptionState $) {
+        this.bucket = $.bucket;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotDatafeedSubscriptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> prefix;
+        private SpotDatafeedSubscriptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotDatafeedSubscriptionState();
         }
 
         public Builder(SpotDatafeedSubscriptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.prefix = defaults.prefix;
+            $ = new SpotDatafeedSubscriptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public SpotDatafeedSubscriptionState build() {
-            return new SpotDatafeedSubscriptionState(bucket, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public SpotDatafeedSubscriptionState build() {
+            return $;
         }
     }
+
 }

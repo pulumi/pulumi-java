@@ -25,10 +25,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="authMode")
-      private final @Nullable String authMode;
+    private @Nullable String authMode;
 
     public Optional<String> authMode() {
-        return this.authMode == null ? Optional.empty() : Optional.ofNullable(this.authMode);
+        return Optional.ofNullable(this.authMode);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scoringUri", required=true)
-      private final String scoringUri;
+    private String scoringUri;
 
     public String scoringUri() {
         return this.scoringUri;
@@ -69,7 +69,7 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="swaggerUri", required=true)
-      private final String swaggerUri;
+    private String swaggerUri;
 
     public String swaggerUri() {
         return this.swaggerUri;
@@ -80,91 +80,76 @@ public final class BatchEndpointResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="traffic")
-      private final @Nullable Map<String,Integer> traffic;
+    private @Nullable Map<String,Integer> traffic;
 
-    public Map<String,Integer> traffic() {
-        return this.traffic == null ? Map.of() : this.traffic;
+    public Optional<Map<String,Integer>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
-    public BatchEndpointResponse(
-        @Nullable String authMode,
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        String scoringUri,
-        String swaggerUri,
-        @Nullable Map<String,Integer> traffic) {
-        this.authMode = authMode;
-        this.description = description;
-        this.properties = properties;
-        this.scoringUri = Objects.requireNonNull(scoringUri, "expected parameter 'scoringUri' to be non-null");
-        this.swaggerUri = Objects.requireNonNull(swaggerUri, "expected parameter 'swaggerUri' to be non-null");
-        this.traffic = traffic;
-    }
+    private BatchEndpointResponse() {}
 
-    private BatchEndpointResponse() {
-        this.authMode = null;
-        this.description = null;
-        this.properties = Map.of();
-        this.scoringUri = null;
-        this.swaggerUri = null;
-        this.traffic = Map.of();
+    private BatchEndpointResponse(BatchEndpointResponse $) {
+        this.authMode = $.authMode;
+        this.description = $.description;
+        this.properties = $.properties;
+        this.scoringUri = $.scoringUri;
+        this.swaggerUri = $.swaggerUri;
+        this.traffic = $.traffic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authMode;
-        private @Nullable String description;
-        private @Nullable Map<String,String> properties;
-        private String scoringUri;
-        private String swaggerUri;
-        private @Nullable Map<String,Integer> traffic;
+        private BatchEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchEndpointResponse();
         }
 
         public Builder(BatchEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authMode = defaults.authMode;
-    	      this.description = defaults.description;
-    	      this.properties = defaults.properties;
-    	      this.scoringUri = defaults.scoringUri;
-    	      this.swaggerUri = defaults.swaggerUri;
-    	      this.traffic = defaults.traffic;
+            $ = new BatchEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authMode(@Nullable String authMode) {
-            this.authMode = authMode;
+            $.authMode = authMode;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder scoringUri(String scoringUri) {
-            this.scoringUri = Objects.requireNonNull(scoringUri);
+            $.scoringUri = scoringUri;
             return this;
         }
+
         public Builder swaggerUri(String swaggerUri) {
-            this.swaggerUri = Objects.requireNonNull(swaggerUri);
+            $.swaggerUri = swaggerUri;
             return this;
         }
+
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
-        }        public BatchEndpointResponse build() {
-            return new BatchEndpointResponse(authMode, description, properties, scoringUri, swaggerUri, traffic);
+        }
+
+        public BatchEndpointResponse build() {
+            $.scoringUri = Objects.requireNonNull($.scoringUri, "expected parameter 'scoringUri' to be non-null");
+            $.swaggerUri = Objects.requireNonNull($.swaggerUri, "expected parameter 'swaggerUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.botservice.inputs;
 import com.pulumi.azurenative.botservice.inputs.WebChatSiteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class WebChatChannelPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sites")
-      private final @Nullable Output<List<WebChatSiteArgs>> sites;
+    private @Nullable Output<List<WebChatSiteArgs>> sites;
 
-    public Output<List<WebChatSiteArgs>> sites() {
-        return this.sites == null ? Codegen.empty() : this.sites;
+    public Optional<Output<List<WebChatSiteArgs>>> sites() {
+        return Optional.ofNullable(this.sites);
     }
 
-    public WebChatChannelPropertiesArgs(@Nullable Output<List<WebChatSiteArgs>> sites) {
-        this.sites = sites;
-    }
+    private WebChatChannelPropertiesArgs() {}
 
-    private WebChatChannelPropertiesArgs() {
-        this.sites = Codegen.empty();
+    private WebChatChannelPropertiesArgs(WebChatChannelPropertiesArgs $) {
+        this.sites = $.sites;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebChatChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WebChatSiteArgs>> sites;
+        private WebChatChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebChatChannelPropertiesArgs();
         }
 
         public Builder(WebChatChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sites = defaults.sites;
+            $ = new WebChatChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sites(@Nullable Output<List<WebChatSiteArgs>> sites) {
-            this.sites = sites;
+            $.sites = sites;
             return this;
         }
-        public Builder sites(@Nullable List<WebChatSiteArgs> sites) {
-            this.sites = Codegen.ofNullable(sites);
-            return this;
+
+        public Builder sites(List<WebChatSiteArgs> sites) {
+            return sites(Output.of(sites));
         }
+
         public Builder sites(WebChatSiteArgs... sites) {
             return sites(List.of(sites));
-        }        public WebChatChannelPropertiesArgs build() {
-            return new WebChatChannelPropertiesArgs(sites);
+        }
+
+        public WebChatChannelPropertiesArgs build() {
+            return $;
         }
     }
+
 }

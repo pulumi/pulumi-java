@@ -26,7 +26,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -37,7 +37,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -48,7 +48,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="matchConditions", required=true)
-      private final List<MatchConditionResponse> matchConditions;
+    private List<MatchConditionResponse> matchConditions;
 
     public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
@@ -59,10 +59,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -81,94 +81,83 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
      * 
      */
     @Import(name="ruleType", required=true)
-      private final String ruleType;
+    private String ruleType;
 
     public String ruleType() {
         return this.ruleType;
     }
 
-    public WebApplicationFirewallCustomRuleResponse(
-        String action,
-        String etag,
-        List<MatchConditionResponse> matchConditions,
-        @Nullable String name,
-        Integer priority,
-        String ruleType) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
-        this.name = name;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
-    }
+    private WebApplicationFirewallCustomRuleResponse() {}
 
-    private WebApplicationFirewallCustomRuleResponse() {
-        this.action = null;
-        this.etag = null;
-        this.matchConditions = List.of();
-        this.name = null;
-        this.priority = null;
-        this.ruleType = null;
+    private WebApplicationFirewallCustomRuleResponse(WebApplicationFirewallCustomRuleResponse $) {
+        this.action = $.action;
+        this.etag = $.etag;
+        this.matchConditions = $.matchConditions;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.ruleType = $.ruleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebApplicationFirewallCustomRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private String etag;
-        private List<MatchConditionResponse> matchConditions;
-        private @Nullable String name;
-        private Integer priority;
-        private String ruleType;
+        private WebApplicationFirewallCustomRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebApplicationFirewallCustomRuleResponse();
         }
 
         public Builder(WebApplicationFirewallCustomRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.etag = defaults.etag;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.ruleType = defaults.ruleType;
+            $ = new WebApplicationFirewallCustomRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
-            this.matchConditions = Objects.requireNonNull(matchConditions);
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(MatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
-        }        public WebApplicationFirewallCustomRuleResponse build() {
-            return new WebApplicationFirewallCustomRuleResponse(action, etag, matchConditions, name, priority, ruleType);
+        }
+
+        public WebApplicationFirewallCustomRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.matchConditions = Objects.requireNonNull($.matchConditions, "expected parameter 'matchConditions' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.ruleType = Objects.requireNonNull($.ruleType, "expected parameter 'ruleType' to be non-null");
+            return $;
         }
     }
+
 }

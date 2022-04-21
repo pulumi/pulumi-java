@@ -22,7 +22,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="bucketEndTimeUTC", required=true)
-      private final String bucketEndTimeUTC;
+    private String bucketEndTimeUTC;
 
     public String bucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
@@ -33,7 +33,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="bucketStartTimeUTC", required=true)
-      private final String bucketStartTimeUTC;
+    private String bucketStartTimeUTC;
 
     public String bucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
@@ -44,7 +44,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -55,7 +55,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="firstActivityTimeUTC", required=true)
-      private final String firstActivityTimeUTC;
+    private String firstActivityTimeUTC;
 
     public String firstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
@@ -67,7 +67,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -78,7 +78,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="lastActivityTimeUTC", required=true)
-      private final String lastActivityTimeUTC;
+    private String lastActivityTimeUTC;
 
     public String lastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
@@ -89,7 +89,7 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="queryId", required=true)
-      private final String queryId;
+    private String queryId;
 
     public String queryId() {
         return this.queryId;
@@ -100,109 +100,94 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public ActivityTimelineItemResponse(
-        String bucketEndTimeUTC,
-        String bucketStartTimeUTC,
-        String content,
-        String firstActivityTimeUTC,
-        String kind,
-        String lastActivityTimeUTC,
-        String queryId,
-        String title) {
-        this.bucketEndTimeUTC = Objects.requireNonNull(bucketEndTimeUTC, "expected parameter 'bucketEndTimeUTC' to be non-null");
-        this.bucketStartTimeUTC = Objects.requireNonNull(bucketStartTimeUTC, "expected parameter 'bucketStartTimeUTC' to be non-null");
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.firstActivityTimeUTC = Objects.requireNonNull(firstActivityTimeUTC, "expected parameter 'firstActivityTimeUTC' to be non-null");
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.lastActivityTimeUTC = Objects.requireNonNull(lastActivityTimeUTC, "expected parameter 'lastActivityTimeUTC' to be non-null");
-        this.queryId = Objects.requireNonNull(queryId, "expected parameter 'queryId' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private ActivityTimelineItemResponse() {}
 
-    private ActivityTimelineItemResponse() {
-        this.bucketEndTimeUTC = null;
-        this.bucketStartTimeUTC = null;
-        this.content = null;
-        this.firstActivityTimeUTC = null;
-        this.kind = null;
-        this.lastActivityTimeUTC = null;
-        this.queryId = null;
-        this.title = null;
+    private ActivityTimelineItemResponse(ActivityTimelineItemResponse $) {
+        this.bucketEndTimeUTC = $.bucketEndTimeUTC;
+        this.bucketStartTimeUTC = $.bucketStartTimeUTC;
+        this.content = $.content;
+        this.firstActivityTimeUTC = $.firstActivityTimeUTC;
+        this.kind = $.kind;
+        this.lastActivityTimeUTC = $.lastActivityTimeUTC;
+        this.queryId = $.queryId;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityTimelineItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketEndTimeUTC;
-        private String bucketStartTimeUTC;
-        private String content;
-        private String firstActivityTimeUTC;
-        private String kind;
-        private String lastActivityTimeUTC;
-        private String queryId;
-        private String title;
+        private ActivityTimelineItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityTimelineItemResponse();
         }
 
         public Builder(ActivityTimelineItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketEndTimeUTC = defaults.bucketEndTimeUTC;
-    	      this.bucketStartTimeUTC = defaults.bucketStartTimeUTC;
-    	      this.content = defaults.content;
-    	      this.firstActivityTimeUTC = defaults.firstActivityTimeUTC;
-    	      this.kind = defaults.kind;
-    	      this.lastActivityTimeUTC = defaults.lastActivityTimeUTC;
-    	      this.queryId = defaults.queryId;
-    	      this.title = defaults.title;
+            $ = new ActivityTimelineItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketEndTimeUTC(String bucketEndTimeUTC) {
-            this.bucketEndTimeUTC = Objects.requireNonNull(bucketEndTimeUTC);
+            $.bucketEndTimeUTC = bucketEndTimeUTC;
             return this;
         }
+
         public Builder bucketStartTimeUTC(String bucketStartTimeUTC) {
-            this.bucketStartTimeUTC = Objects.requireNonNull(bucketStartTimeUTC);
+            $.bucketStartTimeUTC = bucketStartTimeUTC;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder firstActivityTimeUTC(String firstActivityTimeUTC) {
-            this.firstActivityTimeUTC = Objects.requireNonNull(firstActivityTimeUTC);
+            $.firstActivityTimeUTC = firstActivityTimeUTC;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder lastActivityTimeUTC(String lastActivityTimeUTC) {
-            this.lastActivityTimeUTC = Objects.requireNonNull(lastActivityTimeUTC);
+            $.lastActivityTimeUTC = lastActivityTimeUTC;
             return this;
         }
+
         public Builder queryId(String queryId) {
-            this.queryId = Objects.requireNonNull(queryId);
+            $.queryId = queryId;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public ActivityTimelineItemResponse build() {
-            return new ActivityTimelineItemResponse(bucketEndTimeUTC, bucketStartTimeUTC, content, firstActivityTimeUTC, kind, lastActivityTimeUTC, queryId, title);
+        }
+
+        public ActivityTimelineItemResponse build() {
+            $.bucketEndTimeUTC = Objects.requireNonNull($.bucketEndTimeUTC, "expected parameter 'bucketEndTimeUTC' to be non-null");
+            $.bucketStartTimeUTC = Objects.requireNonNull($.bucketStartTimeUTC, "expected parameter 'bucketStartTimeUTC' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.firstActivityTimeUTC = Objects.requireNonNull($.firstActivityTimeUTC, "expected parameter 'firstActivityTimeUTC' to be non-null");
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.lastActivityTimeUTC = Objects.requireNonNull($.lastActivityTimeUTC, "expected parameter 'lastActivityTimeUTC' to be non-null");
+            $.queryId = Objects.requireNonNull($.queryId, "expected parameter 'queryId' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

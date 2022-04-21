@@ -17,7 +17,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -28,7 +28,7 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicIPId", required=true)
-      private final String publicIPId;
+    private String publicIPId;
 
     public String publicIPId() {
         return this.publicIPId;
@@ -39,64 +39,59 @@ public final class GetWorkloadNetworkPublicIPArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWorkloadNetworkPublicIPArgs(
-        String privateCloudName,
-        String publicIPId,
-        String resourceGroupName) {
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.publicIPId = Objects.requireNonNull(publicIPId, "expected parameter 'publicIPId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWorkloadNetworkPublicIPArgs() {}
 
-    private GetWorkloadNetworkPublicIPArgs() {
-        this.privateCloudName = null;
-        this.publicIPId = null;
-        this.resourceGroupName = null;
+    private GetWorkloadNetworkPublicIPArgs(GetWorkloadNetworkPublicIPArgs $) {
+        this.privateCloudName = $.privateCloudName;
+        this.publicIPId = $.publicIPId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadNetworkPublicIPArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateCloudName;
-        private String publicIPId;
-        private String resourceGroupName;
+        private GetWorkloadNetworkPublicIPArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadNetworkPublicIPArgs();
         }
 
         public Builder(GetWorkloadNetworkPublicIPArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.publicIPId = defaults.publicIPId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWorkloadNetworkPublicIPArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder publicIPId(String publicIPId) {
-            this.publicIPId = Objects.requireNonNull(publicIPId);
+            $.publicIPId = publicIPId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWorkloadNetworkPublicIPArgs build() {
-            return new GetWorkloadNetworkPublicIPArgs(privateCloudName, publicIPId, resourceGroupName);
+        }
+
+        public GetWorkloadNetworkPublicIPArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.publicIPId = Objects.requireNonNull($.publicIPId, "expected parameter 'publicIPId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

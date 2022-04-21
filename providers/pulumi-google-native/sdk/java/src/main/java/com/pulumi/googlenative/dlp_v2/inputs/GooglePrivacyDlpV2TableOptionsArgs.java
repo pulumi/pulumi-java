@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="identifyingFields")
-      private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
+    private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields() {
-        return this.identifyingFields == null ? Codegen.empty() : this.identifyingFields;
+    public Optional<Output<List<GooglePrivacyDlpV2FieldIdArgs>>> identifyingFields() {
+        return Optional.ofNullable(this.identifyingFields);
     }
 
-    public GooglePrivacyDlpV2TableOptionsArgs(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
-        this.identifyingFields = identifyingFields;
-    }
+    private GooglePrivacyDlpV2TableOptionsArgs() {}
 
-    private GooglePrivacyDlpV2TableOptionsArgs() {
-        this.identifyingFields = Codegen.empty();
+    private GooglePrivacyDlpV2TableOptionsArgs(GooglePrivacyDlpV2TableOptionsArgs $) {
+        this.identifyingFields = $.identifyingFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TableOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields;
+        private GooglePrivacyDlpV2TableOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TableOptionsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2TableOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifyingFields = defaults.identifyingFields;
+            $ = new GooglePrivacyDlpV2TableOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identifyingFields(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
-            this.identifyingFields = identifyingFields;
+            $.identifyingFields = identifyingFields;
             return this;
         }
-        public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
-            this.identifyingFields = Codegen.ofNullable(identifyingFields);
-            return this;
+
+        public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
+            return identifyingFields(Output.of(identifyingFields));
         }
+
         public Builder identifyingFields(GooglePrivacyDlpV2FieldIdArgs... identifyingFields) {
             return identifyingFields(List.of(identifyingFields));
-        }        public GooglePrivacyDlpV2TableOptionsArgs build() {
-            return new GooglePrivacyDlpV2TableOptionsArgs(identifyingFields);
+        }
+
+        public GooglePrivacyDlpV2TableOptionsArgs build() {
+            return $;
         }
     }
+
 }

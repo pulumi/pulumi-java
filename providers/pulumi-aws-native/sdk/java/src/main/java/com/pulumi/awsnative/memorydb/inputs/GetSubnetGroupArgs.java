@@ -17,45 +17,45 @@ public final class GetSubnetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetGroupName", required=true)
-      private final String subnetGroupName;
+    private String subnetGroupName;
 
     public String subnetGroupName() {
         return this.subnetGroupName;
     }
 
-    public GetSubnetGroupArgs(String subnetGroupName) {
-        this.subnetGroupName = Objects.requireNonNull(subnetGroupName, "expected parameter 'subnetGroupName' to be non-null");
-    }
+    private GetSubnetGroupArgs() {}
 
-    private GetSubnetGroupArgs() {
-        this.subnetGroupName = null;
+    private GetSubnetGroupArgs(GetSubnetGroupArgs $) {
+        this.subnetGroupName = $.subnetGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String subnetGroupName;
+        private GetSubnetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetGroupArgs();
         }
 
         public Builder(GetSubnetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetGroupName = defaults.subnetGroupName;
+            $ = new GetSubnetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetGroupName(String subnetGroupName) {
-            this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
+            $.subnetGroupName = subnetGroupName;
             return this;
-        }        public GetSubnetGroupArgs build() {
-            return new GetSubnetGroupArgs(subnetGroupName);
+        }
+
+        public GetSubnetGroupArgs build() {
+            $.subnetGroupName = Objects.requireNonNull($.subnetGroupName, "expected parameter 'subnetGroupName' to be non-null");
+            return $;
         }
     }
+
 }

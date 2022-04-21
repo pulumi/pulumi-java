@@ -15,78 +15,72 @@ public final class GetNetworkEdgeSecurityServiceArgs extends com.pulumi.resource
     public static final GetNetworkEdgeSecurityServiceArgs Empty = new GetNetworkEdgeSecurityServiceArgs();
 
     @Import(name="networkEdgeSecurityService", required=true)
-      private final String networkEdgeSecurityService;
+    private String networkEdgeSecurityService;
 
     public String networkEdgeSecurityService() {
         return this.networkEdgeSecurityService;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetNetworkEdgeSecurityServiceArgs(
-        String networkEdgeSecurityService,
-        @Nullable String project,
-        String region) {
-        this.networkEdgeSecurityService = Objects.requireNonNull(networkEdgeSecurityService, "expected parameter 'networkEdgeSecurityService' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetNetworkEdgeSecurityServiceArgs() {}
 
-    private GetNetworkEdgeSecurityServiceArgs() {
-        this.networkEdgeSecurityService = null;
-        this.project = null;
-        this.region = null;
+    private GetNetworkEdgeSecurityServiceArgs(GetNetworkEdgeSecurityServiceArgs $) {
+        this.networkEdgeSecurityService = $.networkEdgeSecurityService;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkEdgeSecurityServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkEdgeSecurityService;
-        private @Nullable String project;
-        private String region;
+        private GetNetworkEdgeSecurityServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkEdgeSecurityServiceArgs();
         }
 
         public Builder(GetNetworkEdgeSecurityServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkEdgeSecurityService = defaults.networkEdgeSecurityService;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetNetworkEdgeSecurityServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkEdgeSecurityService(String networkEdgeSecurityService) {
-            this.networkEdgeSecurityService = Objects.requireNonNull(networkEdgeSecurityService);
+            $.networkEdgeSecurityService = networkEdgeSecurityService;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetNetworkEdgeSecurityServiceArgs build() {
-            return new GetNetworkEdgeSecurityServiceArgs(networkEdgeSecurityService, project, region);
+        }
+
+        public GetNetworkEdgeSecurityServiceArgs build() {
+            $.networkEdgeSecurityService = Objects.requireNonNull($.networkEdgeSecurityService, "expected parameter 'networkEdgeSecurityService' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,96 +15,93 @@ public final class DeliveryStreamVpcConfigurationArgs extends com.pulumi.resourc
     public static final DeliveryStreamVpcConfigurationArgs Empty = new DeliveryStreamVpcConfigurationArgs();
 
     @Import(name="roleARN", required=true)
-      private final Output<String> roleARN;
+    private Output<String> roleARN;
 
     public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="securityGroupIds", required=true)
-      private final Output<List<String>> securityGroupIds;
+    private Output<List<String>> securityGroupIds;
 
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
-    public DeliveryStreamVpcConfigurationArgs(
-        Output<String> roleARN,
-        Output<List<String>> securityGroupIds,
-        Output<List<String>> subnetIds) {
-        this.roleARN = Objects.requireNonNull(roleARN, "expected parameter 'roleARN' to be non-null");
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-    }
+    private DeliveryStreamVpcConfigurationArgs() {}
 
-    private DeliveryStreamVpcConfigurationArgs() {
-        this.roleARN = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
+    private DeliveryStreamVpcConfigurationArgs(DeliveryStreamVpcConfigurationArgs $) {
+        this.roleARN = $.roleARN;
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamVpcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleARN;
-        private Output<List<String>> securityGroupIds;
-        private Output<List<String>> subnetIds;
+        private DeliveryStreamVpcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamVpcConfigurationArgs();
         }
 
         public Builder(DeliveryStreamVpcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleARN = defaults.roleARN;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new DeliveryStreamVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleARN(Output<String> roleARN) {
-            this.roleARN = Objects.requireNonNull(roleARN);
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder roleARN(String roleARN) {
-            this.roleARN = Output.of(Objects.requireNonNull(roleARN));
-            return this;
+            return roleARN(Output.of(roleARN));
         }
+
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
-            return this;
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public DeliveryStreamVpcConfigurationArgs build() {
-            return new DeliveryStreamVpcConfigurationArgs(roleARN, securityGroupIds, subnetIds);
+        }
+
+        public DeliveryStreamVpcConfigurationArgs build() {
+            $.roleARN = Objects.requireNonNull($.roleARN, "expected parameter 'roleARN' to be non-null");
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

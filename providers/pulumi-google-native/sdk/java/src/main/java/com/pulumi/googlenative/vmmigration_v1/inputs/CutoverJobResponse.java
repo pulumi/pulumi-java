@@ -24,7 +24,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeEngineTargetDetails", required=true)
-      private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
+    private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
     public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
@@ -35,7 +35,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -46,7 +46,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="error", required=true)
-      private final StatusResponse error;
+    private StatusResponse error;
 
     public StatusResponse error() {
         return this.error;
@@ -57,7 +57,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -68,7 +68,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="progressPercent", required=true)
-      private final Integer progressPercent;
+    private Integer progressPercent;
 
     public Integer progressPercent() {
         return this.progressPercent;
@@ -79,7 +79,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -90,7 +90,7 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stateMessage", required=true)
-      private final String stateMessage;
+    private String stateMessage;
 
     public String stateMessage() {
         return this.stateMessage;
@@ -101,109 +101,94 @@ public final class CutoverJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stateTime", required=true)
-      private final String stateTime;
+    private String stateTime;
 
     public String stateTime() {
         return this.stateTime;
     }
 
-    public CutoverJobResponse(
-        ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        String createTime,
-        StatusResponse error,
-        String name,
-        Integer progressPercent,
-        String state,
-        String stateMessage,
-        String stateTime) {
-        this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails, "expected parameter 'computeEngineTargetDetails' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.progressPercent = Objects.requireNonNull(progressPercent, "expected parameter 'progressPercent' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateMessage = Objects.requireNonNull(stateMessage, "expected parameter 'stateMessage' to be non-null");
-        this.stateTime = Objects.requireNonNull(stateTime, "expected parameter 'stateTime' to be non-null");
-    }
+    private CutoverJobResponse() {}
 
-    private CutoverJobResponse() {
-        this.computeEngineTargetDetails = null;
-        this.createTime = null;
-        this.error = null;
-        this.name = null;
-        this.progressPercent = null;
-        this.state = null;
-        this.stateMessage = null;
-        this.stateTime = null;
+    private CutoverJobResponse(CutoverJobResponse $) {
+        this.computeEngineTargetDetails = $.computeEngineTargetDetails;
+        this.createTime = $.createTime;
+        this.error = $.error;
+        this.name = $.name;
+        this.progressPercent = $.progressPercent;
+        this.state = $.state;
+        this.stateMessage = $.stateMessage;
+        this.stateTime = $.stateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CutoverJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
-        private String createTime;
-        private StatusResponse error;
-        private String name;
-        private Integer progressPercent;
-        private String state;
-        private String stateMessage;
-        private String stateTime;
+        private CutoverJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CutoverJobResponse();
         }
 
         public Builder(CutoverJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeEngineTargetDetails = defaults.computeEngineTargetDetails;
-    	      this.createTime = defaults.createTime;
-    	      this.error = defaults.error;
-    	      this.name = defaults.name;
-    	      this.progressPercent = defaults.progressPercent;
-    	      this.state = defaults.state;
-    	      this.stateMessage = defaults.stateMessage;
-    	      this.stateTime = defaults.stateTime;
+            $ = new CutoverJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
-            this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
+            $.computeEngineTargetDetails = computeEngineTargetDetails;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder error(StatusResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder progressPercent(Integer progressPercent) {
-            this.progressPercent = Objects.requireNonNull(progressPercent);
+            $.progressPercent = progressPercent;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateMessage(String stateMessage) {
-            this.stateMessage = Objects.requireNonNull(stateMessage);
+            $.stateMessage = stateMessage;
             return this;
         }
+
         public Builder stateTime(String stateTime) {
-            this.stateTime = Objects.requireNonNull(stateTime);
+            $.stateTime = stateTime;
             return this;
-        }        public CutoverJobResponse build() {
-            return new CutoverJobResponse(computeEngineTargetDetails, createTime, error, name, progressPercent, state, stateMessage, stateTime);
+        }
+
+        public CutoverJobResponse build() {
+            $.computeEngineTargetDetails = Objects.requireNonNull($.computeEngineTargetDetails, "expected parameter 'computeEngineTargetDetails' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.progressPercent = Objects.requireNonNull($.progressPercent, "expected parameter 'progressPercent' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateMessage = Objects.requireNonNull($.stateMessage, "expected parameter 'stateMessage' to be non-null");
+            $.stateTime = Objects.requireNonNull($.stateTime, "expected parameter 'stateTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetBundleComputeType extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetBundleComputeType(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetBundleComputeType() {}
 
-    private GetBundleComputeType() {
-        this.name = null;
+    private GetBundleComputeType(GetBundleComputeType $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBundleComputeType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetBundleComputeType $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBundleComputeType();
         }
 
         public Builder(GetBundleComputeType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetBundleComputeType(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetBundleComputeType build() {
-            return new GetBundleComputeType(name);
+        }
+
+        public GetBundleComputeType build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class LaunchTemplateHibernationOptionsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="configured", required=true)
-      private final Output<Boolean> configured;
+    private Output<Boolean> configured;
 
     public Output<Boolean> configured() {
         return this.configured;
     }
 
-    public LaunchTemplateHibernationOptionsGetArgs(Output<Boolean> configured) {
-        this.configured = Objects.requireNonNull(configured, "expected parameter 'configured' to be non-null");
-    }
+    private LaunchTemplateHibernationOptionsGetArgs() {}
 
-    private LaunchTemplateHibernationOptionsGetArgs() {
-        this.configured = Codegen.empty();
+    private LaunchTemplateHibernationOptionsGetArgs(LaunchTemplateHibernationOptionsGetArgs $) {
+        this.configured = $.configured;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateHibernationOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> configured;
+        private LaunchTemplateHibernationOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateHibernationOptionsGetArgs();
         }
 
         public Builder(LaunchTemplateHibernationOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configured = defaults.configured;
+            $ = new LaunchTemplateHibernationOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configured(Output<Boolean> configured) {
-            this.configured = Objects.requireNonNull(configured);
+            $.configured = configured;
             return this;
         }
+
         public Builder configured(Boolean configured) {
-            this.configured = Output.of(Objects.requireNonNull(configured));
-            return this;
-        }        public LaunchTemplateHibernationOptionsGetArgs build() {
-            return new LaunchTemplateHibernationOptionsGetArgs(configured);
+            return configured(Output.of(configured));
+        }
+
+        public LaunchTemplateHibernationOptionsGetArgs build() {
+            $.configured = Objects.requireNonNull($.configured, "expected parameter 'configured' to be non-null");
+            return $;
         }
     }
+
 }

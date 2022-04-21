@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,10 +31,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="externalDocsDescription")
-      private final @Nullable Output<String> externalDocsDescription;
+    private @Nullable Output<String> externalDocsDescription;
 
-    public Output<String> externalDocsDescription() {
-        return this.externalDocsDescription == null ? Codegen.empty() : this.externalDocsDescription;
+    public Optional<Output<String>> externalDocsDescription() {
+        return Optional.ofNullable(this.externalDocsDescription);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="externalDocsUrl")
-      private final @Nullable Output<String> externalDocsUrl;
+    private @Nullable Output<String> externalDocsUrl;
 
-    public Output<String> externalDocsUrl() {
-        return this.externalDocsUrl == null ? Codegen.empty() : this.externalDocsUrl;
+    public Optional<Output<String>> externalDocsUrl() {
+        return Optional.ofNullable(this.externalDocsUrl);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -86,128 +86,111 @@ public final class ApiTagDescriptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tagDescriptionId")
-      private final @Nullable Output<String> tagDescriptionId;
+    private @Nullable Output<String> tagDescriptionId;
 
-    public Output<String> tagDescriptionId() {
-        return this.tagDescriptionId == null ? Codegen.empty() : this.tagDescriptionId;
+    public Optional<Output<String>> tagDescriptionId() {
+        return Optional.ofNullable(this.tagDescriptionId);
     }
 
-    public ApiTagDescriptionArgs(
-        Output<String> apiId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> externalDocsDescription,
-        @Nullable Output<String> externalDocsUrl,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<String> tagDescriptionId) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.description = description;
-        this.externalDocsDescription = externalDocsDescription;
-        this.externalDocsUrl = externalDocsUrl;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tagDescriptionId = tagDescriptionId;
-    }
+    private ApiTagDescriptionArgs() {}
 
-    private ApiTagDescriptionArgs() {
-        this.apiId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.externalDocsDescription = Codegen.empty();
-        this.externalDocsUrl = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tagDescriptionId = Codegen.empty();
+    private ApiTagDescriptionArgs(ApiTagDescriptionArgs $) {
+        this.apiId = $.apiId;
+        this.description = $.description;
+        this.externalDocsDescription = $.externalDocsDescription;
+        this.externalDocsUrl = $.externalDocsUrl;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.tagDescriptionId = $.tagDescriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiTagDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> externalDocsDescription;
-        private @Nullable Output<String> externalDocsUrl;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<String> tagDescriptionId;
+        private ApiTagDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiTagDescriptionArgs();
         }
 
         public Builder(ApiTagDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.description = defaults.description;
-    	      this.externalDocsDescription = defaults.externalDocsDescription;
-    	      this.externalDocsUrl = defaults.externalDocsUrl;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tagDescriptionId = defaults.tagDescriptionId;
+            $ = new ApiTagDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder externalDocsDescription(@Nullable Output<String> externalDocsDescription) {
-            this.externalDocsDescription = externalDocsDescription;
+            $.externalDocsDescription = externalDocsDescription;
             return this;
         }
-        public Builder externalDocsDescription(@Nullable String externalDocsDescription) {
-            this.externalDocsDescription = Codegen.ofNullable(externalDocsDescription);
-            return this;
+
+        public Builder externalDocsDescription(String externalDocsDescription) {
+            return externalDocsDescription(Output.of(externalDocsDescription));
         }
+
         public Builder externalDocsUrl(@Nullable Output<String> externalDocsUrl) {
-            this.externalDocsUrl = externalDocsUrl;
+            $.externalDocsUrl = externalDocsUrl;
             return this;
         }
-        public Builder externalDocsUrl(@Nullable String externalDocsUrl) {
-            this.externalDocsUrl = Codegen.ofNullable(externalDocsUrl);
-            return this;
+
+        public Builder externalDocsUrl(String externalDocsUrl) {
+            return externalDocsUrl(Output.of(externalDocsUrl));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tagDescriptionId(@Nullable Output<String> tagDescriptionId) {
-            this.tagDescriptionId = tagDescriptionId;
+            $.tagDescriptionId = tagDescriptionId;
             return this;
         }
-        public Builder tagDescriptionId(@Nullable String tagDescriptionId) {
-            this.tagDescriptionId = Codegen.ofNullable(tagDescriptionId);
-            return this;
-        }        public ApiTagDescriptionArgs build() {
-            return new ApiTagDescriptionArgs(apiId, description, externalDocsDescription, externalDocsUrl, resourceGroupName, serviceName, tagDescriptionId);
+
+        public Builder tagDescriptionId(String tagDescriptionId) {
+            return tagDescriptionId(Output.of(tagDescriptionId));
+        }
+
+        public ApiTagDescriptionArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

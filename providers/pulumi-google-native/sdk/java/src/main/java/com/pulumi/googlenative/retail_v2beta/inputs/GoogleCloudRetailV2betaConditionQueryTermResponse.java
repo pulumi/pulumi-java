@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends com
      * 
      */
     @Import(name="fullMatch", required=true)
-      private final Boolean fullMatch;
+    private Boolean fullMatch;
 
     public Boolean fullMatch() {
         return this.fullMatch;
@@ -33,55 +33,52 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse extends com
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GoogleCloudRetailV2betaConditionQueryTermResponse(
-        Boolean fullMatch,
-        String value) {
-        this.fullMatch = Objects.requireNonNull(fullMatch, "expected parameter 'fullMatch' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudRetailV2betaConditionQueryTermResponse() {}
 
-    private GoogleCloudRetailV2betaConditionQueryTermResponse() {
-        this.fullMatch = null;
-        this.value = null;
+    private GoogleCloudRetailV2betaConditionQueryTermResponse(GoogleCloudRetailV2betaConditionQueryTermResponse $) {
+        this.fullMatch = $.fullMatch;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaConditionQueryTermResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean fullMatch;
-        private String value;
+        private GoogleCloudRetailV2betaConditionQueryTermResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaConditionQueryTermResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaConditionQueryTermResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullMatch = defaults.fullMatch;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudRetailV2betaConditionQueryTermResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fullMatch(Boolean fullMatch) {
-            this.fullMatch = Objects.requireNonNull(fullMatch);
+            $.fullMatch = fullMatch;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudRetailV2betaConditionQueryTermResponse build() {
-            return new GoogleCloudRetailV2betaConditionQueryTermResponse(fullMatch, value);
+        }
+
+        public GoogleCloudRetailV2betaConditionQueryTermResponse build() {
+            $.fullMatch = Objects.requireNonNull($.fullMatch, "expected parameter 'fullMatch' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

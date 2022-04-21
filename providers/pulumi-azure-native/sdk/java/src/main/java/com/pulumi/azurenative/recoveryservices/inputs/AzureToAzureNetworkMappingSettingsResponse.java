@@ -25,7 +25,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -36,10 +36,10 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="primaryFabricLocation")
-      private final @Nullable String primaryFabricLocation;
+    private @Nullable String primaryFabricLocation;
 
     public Optional<String> primaryFabricLocation() {
-        return this.primaryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricLocation);
+        return Optional.ofNullable(this.primaryFabricLocation);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class AzureToAzureNetworkMappingSettingsResponse extends com.pulumi
      * 
      */
     @Import(name="recoveryFabricLocation")
-      private final @Nullable String recoveryFabricLocation;
+    private @Nullable String recoveryFabricLocation;
 
     public Optional<String> recoveryFabricLocation() {
-        return this.recoveryFabricLocation == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricLocation);
+        return Optional.ofNullable(this.recoveryFabricLocation);
     }
 
-    public AzureToAzureNetworkMappingSettingsResponse(
-        String instanceType,
-        @Nullable String primaryFabricLocation,
-        @Nullable String recoveryFabricLocation) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.primaryFabricLocation = primaryFabricLocation;
-        this.recoveryFabricLocation = recoveryFabricLocation;
-    }
+    private AzureToAzureNetworkMappingSettingsResponse() {}
 
-    private AzureToAzureNetworkMappingSettingsResponse() {
-        this.instanceType = null;
-        this.primaryFabricLocation = null;
-        this.recoveryFabricLocation = null;
+    private AzureToAzureNetworkMappingSettingsResponse(AzureToAzureNetworkMappingSettingsResponse $) {
+        this.instanceType = $.instanceType;
+        this.primaryFabricLocation = $.primaryFabricLocation;
+        this.recoveryFabricLocation = $.recoveryFabricLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureToAzureNetworkMappingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
-        private @Nullable String primaryFabricLocation;
-        private @Nullable String recoveryFabricLocation;
+        private AzureToAzureNetworkMappingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureToAzureNetworkMappingSettingsResponse();
         }
 
         public Builder(AzureToAzureNetworkMappingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.primaryFabricLocation = defaults.primaryFabricLocation;
-    	      this.recoveryFabricLocation = defaults.recoveryFabricLocation;
+            $ = new AzureToAzureNetworkMappingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
-            this.primaryFabricLocation = primaryFabricLocation;
+            $.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
+
         public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
-            this.recoveryFabricLocation = recoveryFabricLocation;
+            $.recoveryFabricLocation = recoveryFabricLocation;
             return this;
-        }        public AzureToAzureNetworkMappingSettingsResponse build() {
-            return new AzureToAzureNetworkMappingSettingsResponse(instanceType, primaryFabricLocation, recoveryFabricLocation);
+        }
+
+        public AzureToAzureNetworkMappingSettingsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

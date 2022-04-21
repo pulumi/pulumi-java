@@ -15,65 +15,63 @@ public final class GetSecretReplicationUserManagedReplica extends com.pulumi.res
     public static final GetSecretReplicationUserManagedReplica Empty = new GetSecretReplicationUserManagedReplica();
 
     @Import(name="customerManagedEncryptions", required=true)
-      private final List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
+    private List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
 
     public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions() {
         return this.customerManagedEncryptions;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
-    public GetSecretReplicationUserManagedReplica(
-        List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions,
-        String location) {
-        this.customerManagedEncryptions = Objects.requireNonNull(customerManagedEncryptions, "expected parameter 'customerManagedEncryptions' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private GetSecretReplicationUserManagedReplica() {}
 
-    private GetSecretReplicationUserManagedReplica() {
-        this.customerManagedEncryptions = List.of();
-        this.location = null;
+    private GetSecretReplicationUserManagedReplica(GetSecretReplicationUserManagedReplica $) {
+        this.customerManagedEncryptions = $.customerManagedEncryptions;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretReplicationUserManagedReplica defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
-        private String location;
+        private GetSecretReplicationUserManagedReplica $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretReplicationUserManagedReplica();
         }
 
         public Builder(GetSecretReplicationUserManagedReplica defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedEncryptions = defaults.customerManagedEncryptions;
-    	      this.location = defaults.location;
+            $ = new GetSecretReplicationUserManagedReplica(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedEncryptions(List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions) {
-            this.customerManagedEncryptions = Objects.requireNonNull(customerManagedEncryptions);
+            $.customerManagedEncryptions = customerManagedEncryptions;
             return this;
         }
+
         public Builder customerManagedEncryptions(GetSecretReplicationUserManagedReplicaCustomerManagedEncryption... customerManagedEncryptions) {
             return customerManagedEncryptions(List.of(customerManagedEncryptions));
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public GetSecretReplicationUserManagedReplica build() {
-            return new GetSecretReplicationUserManagedReplica(customerManagedEncryptions, location);
+        }
+
+        public GetSecretReplicationUserManagedReplica build() {
+            $.customerManagedEncryptions = Objects.requireNonNull($.customerManagedEncryptions, "expected parameter 'customerManagedEncryptions' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

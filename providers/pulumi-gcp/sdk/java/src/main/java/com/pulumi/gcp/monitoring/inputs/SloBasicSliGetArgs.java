@@ -5,12 +5,12 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloBasicSliAvailabilityGetArgs;
 import com.pulumi.gcp.monitoring.inputs.SloBasicSliLatencyGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SloBasicSliGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="availability")
-      private final @Nullable Output<SloBasicSliAvailabilityGetArgs> availability;
+    private @Nullable Output<SloBasicSliAvailabilityGetArgs> availability;
 
-    public Output<SloBasicSliAvailabilityGetArgs> availability() {
-        return this.availability == null ? Codegen.empty() : this.availability;
+    public Optional<Output<SloBasicSliAvailabilityGetArgs>> availability() {
+        return Optional.ofNullable(this.availability);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SloBasicSliGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="latency")
-      private final @Nullable Output<SloBasicSliLatencyGetArgs> latency;
+    private @Nullable Output<SloBasicSliLatencyGetArgs> latency;
 
-    public Output<SloBasicSliLatencyGetArgs> latency() {
-        return this.latency == null ? Codegen.empty() : this.latency;
+    public Optional<Output<SloBasicSliLatencyGetArgs>> latency() {
+        return Optional.ofNullable(this.latency);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SloBasicSliGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SloBasicSliGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="methods")
-      private final @Nullable Output<List<String>> methods;
+    private @Nullable Output<List<String>> methods;
 
-    public Output<List<String>> methods() {
-        return this.methods == null ? Codegen.empty() : this.methods;
+    public Optional<Output<List<String>>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     /**
@@ -84,111 +84,100 @@ public final class SloBasicSliGetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versions")
-      private final @Nullable Output<List<String>> versions;
+    private @Nullable Output<List<String>> versions;
 
-    public Output<List<String>> versions() {
-        return this.versions == null ? Codegen.empty() : this.versions;
+    public Optional<Output<List<String>>> versions() {
+        return Optional.ofNullable(this.versions);
     }
 
-    public SloBasicSliGetArgs(
-        @Nullable Output<SloBasicSliAvailabilityGetArgs> availability,
-        @Nullable Output<SloBasicSliLatencyGetArgs> latency,
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<List<String>> methods,
-        @Nullable Output<List<String>> versions) {
-        this.availability = availability;
-        this.latency = latency;
-        this.locations = locations;
-        this.methods = methods;
-        this.versions = versions;
-    }
+    private SloBasicSliGetArgs() {}
 
-    private SloBasicSliGetArgs() {
-        this.availability = Codegen.empty();
-        this.latency = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.methods = Codegen.empty();
-        this.versions = Codegen.empty();
+    private SloBasicSliGetArgs(SloBasicSliGetArgs $) {
+        this.availability = $.availability;
+        this.latency = $.latency;
+        this.locations = $.locations;
+        this.methods = $.methods;
+        this.versions = $.versions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloBasicSliGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SloBasicSliAvailabilityGetArgs> availability;
-        private @Nullable Output<SloBasicSliLatencyGetArgs> latency;
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<List<String>> methods;
-        private @Nullable Output<List<String>> versions;
+        private SloBasicSliGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloBasicSliGetArgs();
         }
 
         public Builder(SloBasicSliGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availability = defaults.availability;
-    	      this.latency = defaults.latency;
-    	      this.locations = defaults.locations;
-    	      this.methods = defaults.methods;
-    	      this.versions = defaults.versions;
+            $ = new SloBasicSliGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availability(@Nullable Output<SloBasicSliAvailabilityGetArgs> availability) {
-            this.availability = availability;
+            $.availability = availability;
             return this;
         }
-        public Builder availability(@Nullable SloBasicSliAvailabilityGetArgs availability) {
-            this.availability = Codegen.ofNullable(availability);
-            return this;
+
+        public Builder availability(SloBasicSliAvailabilityGetArgs availability) {
+            return availability(Output.of(availability));
         }
+
         public Builder latency(@Nullable Output<SloBasicSliLatencyGetArgs> latency) {
-            this.latency = latency;
+            $.latency = latency;
             return this;
         }
-        public Builder latency(@Nullable SloBasicSliLatencyGetArgs latency) {
-            this.latency = Codegen.ofNullable(latency);
-            return this;
+
+        public Builder latency(SloBasicSliLatencyGetArgs latency) {
+            return latency(Output.of(latency));
         }
+
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder methods(@Nullable Output<List<String>> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
-        public Builder methods(@Nullable List<String> methods) {
-            this.methods = Codegen.ofNullable(methods);
-            return this;
+
+        public Builder methods(List<String> methods) {
+            return methods(Output.of(methods));
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder versions(@Nullable Output<List<String>> versions) {
-            this.versions = versions;
+            $.versions = versions;
             return this;
         }
-        public Builder versions(@Nullable List<String> versions) {
-            this.versions = Codegen.ofNullable(versions);
-            return this;
+
+        public Builder versions(List<String> versions) {
+            return versions(Output.of(versions));
         }
+
         public Builder versions(String... versions) {
             return versions(List.of(versions));
-        }        public SloBasicSliGetArgs build() {
-            return new SloBasicSliGetArgs(availability, latency, locations, methods, versions);
+        }
+
+        public SloBasicSliGetArgs build() {
+            return $;
         }
     }
+
 }

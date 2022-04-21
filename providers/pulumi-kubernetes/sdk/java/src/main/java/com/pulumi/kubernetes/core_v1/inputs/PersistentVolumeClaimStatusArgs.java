@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="accessModes")
-      private final @Nullable Output<List<String>> accessModes;
+    private @Nullable Output<List<String>> accessModes;
 
-    public Output<List<String>> accessModes() {
-        return this.accessModes == null ? Codegen.empty() : this.accessModes;
+    public Optional<Output<List<String>>> accessModes() {
+        return Optional.ofNullable(this.accessModes);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allocatedResources")
-      private final @Nullable Output<Map<String,String>> allocatedResources;
+    private @Nullable Output<Map<String,String>> allocatedResources;
 
-    public Output<Map<String,String>> allocatedResources() {
-        return this.allocatedResources == null ? Codegen.empty() : this.allocatedResources;
+    public Optional<Output<Map<String,String>>> allocatedResources() {
+        return Optional.ofNullable(this.allocatedResources);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Map<String,String>> capacity;
+    private @Nullable Output<Map<String,String>> capacity;
 
-    public Output<Map<String,String>> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Map<String,String>>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions;
+    private @Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions;
 
-    public Output<List<PersistentVolumeClaimConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<PersistentVolumeClaimConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="phase")
-      private final @Nullable Output<String> phase;
+    private @Nullable Output<String> phase;
 
-    public Output<String> phase() {
-        return this.phase == null ? Codegen.empty() : this.phase;
+    public Optional<Output<String>> phase() {
+        return Optional.ofNullable(this.phase);
     }
 
     /**
@@ -87,121 +87,106 @@ public final class PersistentVolumeClaimStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resizeStatus")
-      private final @Nullable Output<String> resizeStatus;
+    private @Nullable Output<String> resizeStatus;
 
-    public Output<String> resizeStatus() {
-        return this.resizeStatus == null ? Codegen.empty() : this.resizeStatus;
+    public Optional<Output<String>> resizeStatus() {
+        return Optional.ofNullable(this.resizeStatus);
     }
 
-    public PersistentVolumeClaimStatusArgs(
-        @Nullable Output<List<String>> accessModes,
-        @Nullable Output<Map<String,String>> allocatedResources,
-        @Nullable Output<Map<String,String>> capacity,
-        @Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions,
-        @Nullable Output<String> phase,
-        @Nullable Output<String> resizeStatus) {
-        this.accessModes = accessModes;
-        this.allocatedResources = allocatedResources;
-        this.capacity = capacity;
-        this.conditions = conditions;
-        this.phase = phase;
-        this.resizeStatus = resizeStatus;
-    }
+    private PersistentVolumeClaimStatusArgs() {}
 
-    private PersistentVolumeClaimStatusArgs() {
-        this.accessModes = Codegen.empty();
-        this.allocatedResources = Codegen.empty();
-        this.capacity = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.phase = Codegen.empty();
-        this.resizeStatus = Codegen.empty();
+    private PersistentVolumeClaimStatusArgs(PersistentVolumeClaimStatusArgs $) {
+        this.accessModes = $.accessModes;
+        this.allocatedResources = $.allocatedResources;
+        this.capacity = $.capacity;
+        this.conditions = $.conditions;
+        this.phase = $.phase;
+        this.resizeStatus = $.resizeStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentVolumeClaimStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accessModes;
-        private @Nullable Output<Map<String,String>> allocatedResources;
-        private @Nullable Output<Map<String,String>> capacity;
-        private @Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions;
-        private @Nullable Output<String> phase;
-        private @Nullable Output<String> resizeStatus;
+        private PersistentVolumeClaimStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentVolumeClaimStatusArgs();
         }
 
         public Builder(PersistentVolumeClaimStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessModes = defaults.accessModes;
-    	      this.allocatedResources = defaults.allocatedResources;
-    	      this.capacity = defaults.capacity;
-    	      this.conditions = defaults.conditions;
-    	      this.phase = defaults.phase;
-    	      this.resizeStatus = defaults.resizeStatus;
+            $ = new PersistentVolumeClaimStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessModes(@Nullable Output<List<String>> accessModes) {
-            this.accessModes = accessModes;
+            $.accessModes = accessModes;
             return this;
         }
-        public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = Codegen.ofNullable(accessModes);
-            return this;
+
+        public Builder accessModes(List<String> accessModes) {
+            return accessModes(Output.of(accessModes));
         }
+
         public Builder accessModes(String... accessModes) {
             return accessModes(List.of(accessModes));
         }
+
         public Builder allocatedResources(@Nullable Output<Map<String,String>> allocatedResources) {
-            this.allocatedResources = allocatedResources;
+            $.allocatedResources = allocatedResources;
             return this;
         }
-        public Builder allocatedResources(@Nullable Map<String,String> allocatedResources) {
-            this.allocatedResources = Codegen.ofNullable(allocatedResources);
-            return this;
+
+        public Builder allocatedResources(Map<String,String> allocatedResources) {
+            return allocatedResources(Output.of(allocatedResources));
         }
+
         public Builder capacity(@Nullable Output<Map<String,String>> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Map<String,String> capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Map<String,String> capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder conditions(@Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<PersistentVolumeClaimConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<PersistentVolumeClaimConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(PersistentVolumeClaimConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder phase(@Nullable Output<String> phase) {
-            this.phase = phase;
+            $.phase = phase;
             return this;
         }
-        public Builder phase(@Nullable String phase) {
-            this.phase = Codegen.ofNullable(phase);
-            return this;
+
+        public Builder phase(String phase) {
+            return phase(Output.of(phase));
         }
+
         public Builder resizeStatus(@Nullable Output<String> resizeStatus) {
-            this.resizeStatus = resizeStatus;
+            $.resizeStatus = resizeStatus;
             return this;
         }
-        public Builder resizeStatus(@Nullable String resizeStatus) {
-            this.resizeStatus = Codegen.ofNullable(resizeStatus);
-            return this;
-        }        public PersistentVolumeClaimStatusArgs build() {
-            return new PersistentVolumeClaimStatusArgs(accessModes, allocatedResources, capacity, conditions, phase, resizeStatus);
+
+        public Builder resizeStatus(String resizeStatus) {
+            return resizeStatus(Output.of(resizeStatus));
+        }
+
+        public PersistentVolumeClaimStatusArgs build() {
+            return $;
         }
     }
+
 }

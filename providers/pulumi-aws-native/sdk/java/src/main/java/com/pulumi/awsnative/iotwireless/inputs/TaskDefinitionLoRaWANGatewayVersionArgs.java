@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends com.pulumi.re
     public static final TaskDefinitionLoRaWANGatewayVersionArgs Empty = new TaskDefinitionLoRaWANGatewayVersionArgs();
 
     @Import(name="model")
-      private final @Nullable Output<String> model;
+    private @Nullable Output<String> model;
 
-    public Output<String> model() {
-        return this.model == null ? Codegen.empty() : this.model;
+    public Optional<Output<String>> model() {
+        return Optional.ofNullable(this.model);
     }
 
     @Import(name="packageVersion")
-      private final @Nullable Output<String> packageVersion;
+    private @Nullable Output<String> packageVersion;
 
-    public Output<String> packageVersion() {
-        return this.packageVersion == null ? Codegen.empty() : this.packageVersion;
+    public Optional<Output<String>> packageVersion() {
+        return Optional.ofNullable(this.packageVersion);
     }
 
     @Import(name="station")
-      private final @Nullable Output<String> station;
+    private @Nullable Output<String> station;
 
-    public Output<String> station() {
-        return this.station == null ? Codegen.empty() : this.station;
+    public Optional<Output<String>> station() {
+        return Optional.ofNullable(this.station);
     }
 
-    public TaskDefinitionLoRaWANGatewayVersionArgs(
-        @Nullable Output<String> model,
-        @Nullable Output<String> packageVersion,
-        @Nullable Output<String> station) {
-        this.model = model;
-        this.packageVersion = packageVersion;
-        this.station = station;
-    }
+    private TaskDefinitionLoRaWANGatewayVersionArgs() {}
 
-    private TaskDefinitionLoRaWANGatewayVersionArgs() {
-        this.model = Codegen.empty();
-        this.packageVersion = Codegen.empty();
-        this.station = Codegen.empty();
+    private TaskDefinitionLoRaWANGatewayVersionArgs(TaskDefinitionLoRaWANGatewayVersionArgs $) {
+        this.model = $.model;
+        this.packageVersion = $.packageVersion;
+        this.station = $.station;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionLoRaWANGatewayVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> model;
-        private @Nullable Output<String> packageVersion;
-        private @Nullable Output<String> station;
+        private TaskDefinitionLoRaWANGatewayVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionLoRaWANGatewayVersionArgs();
         }
 
         public Builder(TaskDefinitionLoRaWANGatewayVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.model = defaults.model;
-    	      this.packageVersion = defaults.packageVersion;
-    	      this.station = defaults.station;
+            $ = new TaskDefinitionLoRaWANGatewayVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder model(@Nullable Output<String> model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
-        public Builder model(@Nullable String model) {
-            this.model = Codegen.ofNullable(model);
-            return this;
+
+        public Builder model(String model) {
+            return model(Output.of(model));
         }
+
         public Builder packageVersion(@Nullable Output<String> packageVersion) {
-            this.packageVersion = packageVersion;
+            $.packageVersion = packageVersion;
             return this;
         }
-        public Builder packageVersion(@Nullable String packageVersion) {
-            this.packageVersion = Codegen.ofNullable(packageVersion);
-            return this;
+
+        public Builder packageVersion(String packageVersion) {
+            return packageVersion(Output.of(packageVersion));
         }
+
         public Builder station(@Nullable Output<String> station) {
-            this.station = station;
+            $.station = station;
             return this;
         }
-        public Builder station(@Nullable String station) {
-            this.station = Codegen.ofNullable(station);
-            return this;
-        }        public TaskDefinitionLoRaWANGatewayVersionArgs build() {
-            return new TaskDefinitionLoRaWANGatewayVersionArgs(model, packageVersion, station);
+
+        public Builder station(String station) {
+            return station(Output.of(station));
+        }
+
+        public TaskDefinitionLoRaWANGatewayVersionArgs build() {
+            return $;
         }
     }
+
 }

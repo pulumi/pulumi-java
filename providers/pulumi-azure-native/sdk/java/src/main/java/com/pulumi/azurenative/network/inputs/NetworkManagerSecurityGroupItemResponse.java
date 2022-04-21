@@ -23,45 +23,44 @@ public final class NetworkManagerSecurityGroupItemResponse extends com.pulumi.re
      * 
      */
     @Import(name="networkGroupId")
-      private final @Nullable String networkGroupId;
+    private @Nullable String networkGroupId;
 
     public Optional<String> networkGroupId() {
-        return this.networkGroupId == null ? Optional.empty() : Optional.ofNullable(this.networkGroupId);
+        return Optional.ofNullable(this.networkGroupId);
     }
 
-    public NetworkManagerSecurityGroupItemResponse(@Nullable String networkGroupId) {
-        this.networkGroupId = networkGroupId;
-    }
+    private NetworkManagerSecurityGroupItemResponse() {}
 
-    private NetworkManagerSecurityGroupItemResponse() {
-        this.networkGroupId = null;
+    private NetworkManagerSecurityGroupItemResponse(NetworkManagerSecurityGroupItemResponse $) {
+        this.networkGroupId = $.networkGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkManagerSecurityGroupItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String networkGroupId;
+        private NetworkManagerSecurityGroupItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkManagerSecurityGroupItemResponse();
         }
 
         public Builder(NetworkManagerSecurityGroupItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkGroupId = defaults.networkGroupId;
+            $ = new NetworkManagerSecurityGroupItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = networkGroupId;
+            $.networkGroupId = networkGroupId;
             return this;
-        }        public NetworkManagerSecurityGroupItemResponse build() {
-            return new NetworkManagerSecurityGroupItemResponse(networkGroupId);
+        }
+
+        public NetworkManagerSecurityGroupItemResponse build() {
+            return $;
         }
     }
+
 }

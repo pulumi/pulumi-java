@@ -21,45 +21,45 @@ public final class HostedZoneQueryLoggingConfig extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="cloudWatchLogsLogGroupArn", required=true)
-      private final String cloudWatchLogsLogGroupArn;
+    private String cloudWatchLogsLogGroupArn;
 
     public String cloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }
 
-    public HostedZoneQueryLoggingConfig(String cloudWatchLogsLogGroupArn) {
-        this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn, "expected parameter 'cloudWatchLogsLogGroupArn' to be non-null");
-    }
+    private HostedZoneQueryLoggingConfig() {}
 
-    private HostedZoneQueryLoggingConfig() {
-        this.cloudWatchLogsLogGroupArn = null;
+    private HostedZoneQueryLoggingConfig(HostedZoneQueryLoggingConfig $) {
+        this.cloudWatchLogsLogGroupArn = $.cloudWatchLogsLogGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedZoneQueryLoggingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudWatchLogsLogGroupArn;
+        private HostedZoneQueryLoggingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedZoneQueryLoggingConfig();
         }
 
         public Builder(HostedZoneQueryLoggingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchLogsLogGroupArn = defaults.cloudWatchLogsLogGroupArn;
+            $ = new HostedZoneQueryLoggingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
-            this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
+            $.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
             return this;
-        }        public HostedZoneQueryLoggingConfig build() {
-            return new HostedZoneQueryLoggingConfig(cloudWatchLogsLogGroupArn);
+        }
+
+        public HostedZoneQueryLoggingConfig build() {
+            $.cloudWatchLogsLogGroupArn = Objects.requireNonNull($.cloudWatchLogsLogGroupArn, "expected parameter 'cloudWatchLogsLogGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

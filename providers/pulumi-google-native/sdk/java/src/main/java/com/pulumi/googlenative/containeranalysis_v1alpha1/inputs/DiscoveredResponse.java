@@ -22,7 +22,7 @@ public final class DiscoveredResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="analysisStatus", required=true)
-      private final String analysisStatus;
+    private String analysisStatus;
 
     public String analysisStatus() {
         return this.analysisStatus;
@@ -33,7 +33,7 @@ public final class DiscoveredResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="analysisStatusError", required=true)
-      private final StatusResponse analysisStatusError;
+    private StatusResponse analysisStatusError;
 
     public StatusResponse analysisStatusError() {
         return this.analysisStatusError;
@@ -44,7 +44,7 @@ public final class DiscoveredResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="continuousAnalysis", required=true)
-      private final String continuousAnalysis;
+    private String continuousAnalysis;
 
     public String continuousAnalysis() {
         return this.continuousAnalysis;
@@ -55,73 +55,66 @@ public final class DiscoveredResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cpe", required=true)
-      private final String cpe;
+    private String cpe;
 
     public String cpe() {
         return this.cpe;
     }
 
-    public DiscoveredResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis,
-        String cpe) {
-        this.analysisStatus = Objects.requireNonNull(analysisStatus, "expected parameter 'analysisStatus' to be non-null");
-        this.analysisStatusError = Objects.requireNonNull(analysisStatusError, "expected parameter 'analysisStatusError' to be non-null");
-        this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis, "expected parameter 'continuousAnalysis' to be non-null");
-        this.cpe = Objects.requireNonNull(cpe, "expected parameter 'cpe' to be non-null");
-    }
+    private DiscoveredResponse() {}
 
-    private DiscoveredResponse() {
-        this.analysisStatus = null;
-        this.analysisStatusError = null;
-        this.continuousAnalysis = null;
-        this.cpe = null;
+    private DiscoveredResponse(DiscoveredResponse $) {
+        this.analysisStatus = $.analysisStatus;
+        this.analysisStatusError = $.analysisStatusError;
+        this.continuousAnalysis = $.continuousAnalysis;
+        this.cpe = $.cpe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveredResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String analysisStatus;
-        private StatusResponse analysisStatusError;
-        private String continuousAnalysis;
-        private String cpe;
+        private DiscoveredResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveredResponse();
         }
 
         public Builder(DiscoveredResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisStatus = defaults.analysisStatus;
-    	      this.analysisStatusError = defaults.analysisStatusError;
-    	      this.continuousAnalysis = defaults.continuousAnalysis;
-    	      this.cpe = defaults.cpe;
+            $ = new DiscoveredResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisStatus(String analysisStatus) {
-            this.analysisStatus = Objects.requireNonNull(analysisStatus);
+            $.analysisStatus = analysisStatus;
             return this;
         }
+
         public Builder analysisStatusError(StatusResponse analysisStatusError) {
-            this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
+            $.analysisStatusError = analysisStatusError;
             return this;
         }
+
         public Builder continuousAnalysis(String continuousAnalysis) {
-            this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
+            $.continuousAnalysis = continuousAnalysis;
             return this;
         }
+
         public Builder cpe(String cpe) {
-            this.cpe = Objects.requireNonNull(cpe);
+            $.cpe = cpe;
             return this;
-        }        public DiscoveredResponse build() {
-            return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, cpe);
+        }
+
+        public DiscoveredResponse build() {
+            $.analysisStatus = Objects.requireNonNull($.analysisStatus, "expected parameter 'analysisStatus' to be non-null");
+            $.analysisStatusError = Objects.requireNonNull($.analysisStatusError, "expected parameter 'analysisStatusError' to be non-null");
+            $.continuousAnalysis = Objects.requireNonNull($.continuousAnalysis, "expected parameter 'continuousAnalysis' to be non-null");
+            $.cpe = Objects.requireNonNull($.cpe, "expected parameter 'cpe' to be non-null");
+            return $;
         }
     }
+
 }

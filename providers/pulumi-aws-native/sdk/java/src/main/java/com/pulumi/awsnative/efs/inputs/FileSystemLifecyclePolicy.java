@@ -15,62 +15,57 @@ public final class FileSystemLifecyclePolicy extends com.pulumi.resources.Invoke
     public static final FileSystemLifecyclePolicy Empty = new FileSystemLifecyclePolicy();
 
     @Import(name="transitionToIA")
-      private final @Nullable String transitionToIA;
+    private @Nullable String transitionToIA;
 
     public Optional<String> transitionToIA() {
-        return this.transitionToIA == null ? Optional.empty() : Optional.ofNullable(this.transitionToIA);
+        return Optional.ofNullable(this.transitionToIA);
     }
 
     @Import(name="transitionToPrimaryStorageClass")
-      private final @Nullable String transitionToPrimaryStorageClass;
+    private @Nullable String transitionToPrimaryStorageClass;
 
     public Optional<String> transitionToPrimaryStorageClass() {
-        return this.transitionToPrimaryStorageClass == null ? Optional.empty() : Optional.ofNullable(this.transitionToPrimaryStorageClass);
+        return Optional.ofNullable(this.transitionToPrimaryStorageClass);
     }
 
-    public FileSystemLifecyclePolicy(
-        @Nullable String transitionToIA,
-        @Nullable String transitionToPrimaryStorageClass) {
-        this.transitionToIA = transitionToIA;
-        this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
-    }
+    private FileSystemLifecyclePolicy() {}
 
-    private FileSystemLifecyclePolicy() {
-        this.transitionToIA = null;
-        this.transitionToPrimaryStorageClass = null;
+    private FileSystemLifecyclePolicy(FileSystemLifecyclePolicy $) {
+        this.transitionToIA = $.transitionToIA;
+        this.transitionToPrimaryStorageClass = $.transitionToPrimaryStorageClass;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemLifecyclePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String transitionToIA;
-        private @Nullable String transitionToPrimaryStorageClass;
+        private FileSystemLifecyclePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemLifecyclePolicy();
         }
 
         public Builder(FileSystemLifecyclePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transitionToIA = defaults.transitionToIA;
-    	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
+            $ = new FileSystemLifecyclePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder transitionToIA(@Nullable String transitionToIA) {
-            this.transitionToIA = transitionToIA;
+            $.transitionToIA = transitionToIA;
             return this;
         }
+
         public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
-            this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
+            $.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
-        }        public FileSystemLifecyclePolicy build() {
-            return new FileSystemLifecyclePolicy(transitionToIA, transitionToPrimaryStorageClass);
+        }
+
+        public FileSystemLifecyclePolicy build() {
+            return $;
         }
     }
+
 }

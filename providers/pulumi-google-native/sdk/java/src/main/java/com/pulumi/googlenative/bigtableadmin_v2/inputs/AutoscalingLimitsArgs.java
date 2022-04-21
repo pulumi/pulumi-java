@@ -5,7 +5,6 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AutoscalingLimitsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxServeNodes", required=true)
-      private final Output<Integer> maxServeNodes;
+    private Output<Integer> maxServeNodes;
 
     public Output<Integer> maxServeNodes() {
         return this.maxServeNodes;
@@ -34,63 +33,60 @@ public final class AutoscalingLimitsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minServeNodes", required=true)
-      private final Output<Integer> minServeNodes;
+    private Output<Integer> minServeNodes;
 
     public Output<Integer> minServeNodes() {
         return this.minServeNodes;
     }
 
-    public AutoscalingLimitsArgs(
-        Output<Integer> maxServeNodes,
-        Output<Integer> minServeNodes) {
-        this.maxServeNodes = Objects.requireNonNull(maxServeNodes, "expected parameter 'maxServeNodes' to be non-null");
-        this.minServeNodes = Objects.requireNonNull(minServeNodes, "expected parameter 'minServeNodes' to be non-null");
-    }
+    private AutoscalingLimitsArgs() {}
 
-    private AutoscalingLimitsArgs() {
-        this.maxServeNodes = Codegen.empty();
-        this.minServeNodes = Codegen.empty();
+    private AutoscalingLimitsArgs(AutoscalingLimitsArgs $) {
+        this.maxServeNodes = $.maxServeNodes;
+        this.minServeNodes = $.minServeNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingLimitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxServeNodes;
-        private Output<Integer> minServeNodes;
+        private AutoscalingLimitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingLimitsArgs();
         }
 
         public Builder(AutoscalingLimitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxServeNodes = defaults.maxServeNodes;
-    	      this.minServeNodes = defaults.minServeNodes;
+            $ = new AutoscalingLimitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxServeNodes(Output<Integer> maxServeNodes) {
-            this.maxServeNodes = Objects.requireNonNull(maxServeNodes);
+            $.maxServeNodes = maxServeNodes;
             return this;
         }
+
         public Builder maxServeNodes(Integer maxServeNodes) {
-            this.maxServeNodes = Output.of(Objects.requireNonNull(maxServeNodes));
-            return this;
+            return maxServeNodes(Output.of(maxServeNodes));
         }
+
         public Builder minServeNodes(Output<Integer> minServeNodes) {
-            this.minServeNodes = Objects.requireNonNull(minServeNodes);
+            $.minServeNodes = minServeNodes;
             return this;
         }
+
         public Builder minServeNodes(Integer minServeNodes) {
-            this.minServeNodes = Output.of(Objects.requireNonNull(minServeNodes));
-            return this;
-        }        public AutoscalingLimitsArgs build() {
-            return new AutoscalingLimitsArgs(maxServeNodes, minServeNodes);
+            return minServeNodes(Output.of(minServeNodes));
+        }
+
+        public AutoscalingLimitsArgs build() {
+            $.maxServeNodes = Objects.requireNonNull($.maxServeNodes, "expected parameter 'maxServeNodes' to be non-null");
+            $.minServeNodes = Objects.requireNonNull($.minServeNodes, "expected parameter 'minServeNodes' to be non-null");
+            return $;
         }
     }
+
 }

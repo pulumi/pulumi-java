@@ -5,10 +5,10 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class DataSetColumnLevelPermissionRuleArgs extends com.pulumi.resou
     public static final DataSetColumnLevelPermissionRuleArgs Empty = new DataSetColumnLevelPermissionRuleArgs();
 
     @Import(name="columnNames")
-      private final @Nullable Output<List<String>> columnNames;
+    private @Nullable Output<List<String>> columnNames;
 
-    public Output<List<String>> columnNames() {
-        return this.columnNames == null ? Codegen.empty() : this.columnNames;
+    public Optional<Output<List<String>>> columnNames() {
+        return Optional.ofNullable(this.columnNames);
     }
 
     @Import(name="principals")
-      private final @Nullable Output<List<String>> principals;
+    private @Nullable Output<List<String>> principals;
 
-    public Output<List<String>> principals() {
-        return this.principals == null ? Codegen.empty() : this.principals;
+    public Optional<Output<List<String>>> principals() {
+        return Optional.ofNullable(this.principals);
     }
 
-    public DataSetColumnLevelPermissionRuleArgs(
-        @Nullable Output<List<String>> columnNames,
-        @Nullable Output<List<String>> principals) {
-        this.columnNames = columnNames;
-        this.principals = principals;
-    }
+    private DataSetColumnLevelPermissionRuleArgs() {}
 
-    private DataSetColumnLevelPermissionRuleArgs() {
-        this.columnNames = Codegen.empty();
-        this.principals = Codegen.empty();
+    private DataSetColumnLevelPermissionRuleArgs(DataSetColumnLevelPermissionRuleArgs $) {
+        this.columnNames = $.columnNames;
+        this.principals = $.principals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetColumnLevelPermissionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> columnNames;
-        private @Nullable Output<List<String>> principals;
+        private DataSetColumnLevelPermissionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetColumnLevelPermissionRuleArgs();
         }
 
         public Builder(DataSetColumnLevelPermissionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnNames = defaults.columnNames;
-    	      this.principals = defaults.principals;
+            $ = new DataSetColumnLevelPermissionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnNames(@Nullable Output<List<String>> columnNames) {
-            this.columnNames = columnNames;
+            $.columnNames = columnNames;
             return this;
         }
-        public Builder columnNames(@Nullable List<String> columnNames) {
-            this.columnNames = Codegen.ofNullable(columnNames);
-            return this;
+
+        public Builder columnNames(List<String> columnNames) {
+            return columnNames(Output.of(columnNames));
         }
+
         public Builder columnNames(String... columnNames) {
             return columnNames(List.of(columnNames));
         }
+
         public Builder principals(@Nullable Output<List<String>> principals) {
-            this.principals = principals;
+            $.principals = principals;
             return this;
         }
-        public Builder principals(@Nullable List<String> principals) {
-            this.principals = Codegen.ofNullable(principals);
-            return this;
+
+        public Builder principals(List<String> principals) {
+            return principals(Output.of(principals));
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
-        }        public DataSetColumnLevelPermissionRuleArgs build() {
-            return new DataSetColumnLevelPermissionRuleArgs(columnNames, principals);
+        }
+
+        public DataSetColumnLevelPermissionRuleArgs build() {
+            return $;
         }
     }
+
 }

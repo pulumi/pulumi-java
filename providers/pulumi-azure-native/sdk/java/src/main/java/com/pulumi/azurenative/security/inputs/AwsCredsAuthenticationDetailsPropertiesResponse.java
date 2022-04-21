@@ -23,7 +23,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
@@ -34,7 +34,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
      * 
      */
     @Import(name="authenticationProvisioningState", required=true)
-      private final String authenticationProvisioningState;
+    private String authenticationProvisioningState;
 
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
@@ -46,7 +46,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -57,7 +57,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
      * 
      */
     @Import(name="awsAccessKeyId", required=true)
-      private final String awsAccessKeyId;
+    private String awsAccessKeyId;
 
     public String awsAccessKeyId() {
         return this.awsAccessKeyId;
@@ -68,7 +68,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
      * 
      */
     @Import(name="awsSecretAccessKey", required=true)
-      private final String awsSecretAccessKey;
+    private String awsSecretAccessKey;
 
     public String awsSecretAccessKey() {
         return this.awsSecretAccessKey;
@@ -79,94 +79,84 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse extends com.p
      * 
      */
     @Import(name="grantedPermissions", required=true)
-      private final List<String> grantedPermissions;
+    private List<String> grantedPermissions;
 
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
 
-    public AwsCredsAuthenticationDetailsPropertiesResponse(
-        String accountId,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String awsAccessKeyId,
-        String awsSecretAccessKey,
-        List<String> grantedPermissions) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
-        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
-        this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId, "expected parameter 'awsAccessKeyId' to be non-null");
-        this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey, "expected parameter 'awsSecretAccessKey' to be non-null");
-        this.grantedPermissions = Objects.requireNonNull(grantedPermissions, "expected parameter 'grantedPermissions' to be non-null");
-    }
+    private AwsCredsAuthenticationDetailsPropertiesResponse() {}
 
-    private AwsCredsAuthenticationDetailsPropertiesResponse() {
-        this.accountId = null;
-        this.authenticationProvisioningState = null;
-        this.authenticationType = null;
-        this.awsAccessKeyId = null;
-        this.awsSecretAccessKey = null;
-        this.grantedPermissions = List.of();
+    private AwsCredsAuthenticationDetailsPropertiesResponse(AwsCredsAuthenticationDetailsPropertiesResponse $) {
+        this.accountId = $.accountId;
+        this.authenticationProvisioningState = $.authenticationProvisioningState;
+        this.authenticationType = $.authenticationType;
+        this.awsAccessKeyId = $.awsAccessKeyId;
+        this.awsSecretAccessKey = $.awsSecretAccessKey;
+        this.grantedPermissions = $.grantedPermissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsCredsAuthenticationDetailsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private String authenticationProvisioningState;
-        private String authenticationType;
-        private String awsAccessKeyId;
-        private String awsSecretAccessKey;
-        private List<String> grantedPermissions;
+        private AwsCredsAuthenticationDetailsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsCredsAuthenticationDetailsPropertiesResponse();
         }
 
         public Builder(AwsCredsAuthenticationDetailsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.authenticationProvisioningState = defaults.authenticationProvisioningState;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.awsAccessKeyId = defaults.awsAccessKeyId;
-    	      this.awsSecretAccessKey = defaults.awsSecretAccessKey;
-    	      this.grantedPermissions = defaults.grantedPermissions;
+            $ = new AwsCredsAuthenticationDetailsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
-            this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
+            $.authenticationProvisioningState = authenticationProvisioningState;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder awsAccessKeyId(String awsAccessKeyId) {
-            this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
+            $.awsAccessKeyId = awsAccessKeyId;
             return this;
         }
+
         public Builder awsSecretAccessKey(String awsSecretAccessKey) {
-            this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
+            $.awsSecretAccessKey = awsSecretAccessKey;
             return this;
         }
+
         public Builder grantedPermissions(List<String> grantedPermissions) {
-            this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
+            $.grantedPermissions = grantedPermissions;
             return this;
         }
+
         public Builder grantedPermissions(String... grantedPermissions) {
             return grantedPermissions(List.of(grantedPermissions));
-        }        public AwsCredsAuthenticationDetailsPropertiesResponse build() {
-            return new AwsCredsAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAccessKeyId, awsSecretAccessKey, grantedPermissions);
+        }
+
+        public AwsCredsAuthenticationDetailsPropertiesResponse build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.authenticationProvisioningState = Objects.requireNonNull($.authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
+            $.authenticationType = Codegen.stringProp("authenticationType").arg($.authenticationType).require();
+            $.awsAccessKeyId = Objects.requireNonNull($.awsAccessKeyId, "expected parameter 'awsAccessKeyId' to be non-null");
+            $.awsSecretAccessKey = Objects.requireNonNull($.awsSecretAccessKey, "expected parameter 'awsSecretAccessKey' to be non-null");
+            $.grantedPermissions = Objects.requireNonNull($.grantedPermissions, "expected parameter 'grantedPermissions' to be non-null");
+            return $;
         }
     }
+
 }

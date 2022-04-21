@@ -7,9 +7,9 @@ import com.pulumi.azurenative.changeanalysis.inputs.ConfigurationProfileResource
 import com.pulumi.azurenative.changeanalysis.inputs.ResourceIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ResourceIdentityArgs> identity;
+    private @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="profileName")
-      private final @Nullable Output<String> profileName;
+    private @Nullable Output<String> profileName;
 
-    public Output<String> profileName() {
-        return this.profileName == null ? Codegen.empty() : this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
+    private @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
 
-    public Output<ConfigurationProfileResourcePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ConfigurationProfileResourcePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public ConfigurationProfileArgs(
-        @Nullable Output<ResourceIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<String> profileName,
-        @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties) {
-        this.identity = identity;
-        this.location = location;
-        this.profileName = profileName;
-        this.properties = properties;
-    }
+    private ConfigurationProfileArgs() {}
 
-    private ConfigurationProfileArgs() {
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ConfigurationProfileArgs(ConfigurationProfileArgs $) {
+        this.identity = $.identity;
+        this.location = $.location;
+        this.profileName = $.profileName;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> profileName;
-        private @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
+        private ConfigurationProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileArgs();
         }
 
         public Builder(ConfigurationProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.profileName = defaults.profileName;
-    	      this.properties = defaults.properties;
+            $ = new ConfigurationProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder profileName(@Nullable Output<String> profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
-        public Builder profileName(@Nullable String profileName) {
-            this.profileName = Codegen.ofNullable(profileName);
-            return this;
+
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
+
         public Builder properties(@Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ConfigurationProfileResourcePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public ConfigurationProfileArgs build() {
-            return new ConfigurationProfileArgs(identity, location, profileName, properties);
+
+        public Builder properties(ConfigurationProfileResourcePropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public ConfigurationProfileArgs build() {
+            return $;
         }
     }
+
 }

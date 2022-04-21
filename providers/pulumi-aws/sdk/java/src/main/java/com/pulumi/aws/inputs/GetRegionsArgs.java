@@ -21,10 +21,10 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allRegions")
-      private final @Nullable Boolean allRegions;
+    private @Nullable Boolean allRegions;
 
     public Optional<Boolean> allRegions() {
-        return this.allRegions == null ? Optional.empty() : Optional.ofNullable(this.allRegions);
+        return Optional.ofNullable(this.allRegions);
     }
 
     /**
@@ -32,58 +32,54 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetRegionsFilter> filters;
+    private @Nullable List<GetRegionsFilter> filters;
 
-    public List<GetRegionsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetRegionsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetRegionsArgs(
-        @Nullable Boolean allRegions,
-        @Nullable List<GetRegionsFilter> filters) {
-        this.allRegions = allRegions;
-        this.filters = filters;
-    }
+    private GetRegionsArgs() {}
 
-    private GetRegionsArgs() {
-        this.allRegions = null;
-        this.filters = List.of();
+    private GetRegionsArgs(GetRegionsArgs $) {
+        this.allRegions = $.allRegions;
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allRegions;
-        private @Nullable List<GetRegionsFilter> filters;
+        private GetRegionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionsArgs();
         }
 
         public Builder(GetRegionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allRegions = defaults.allRegions;
-    	      this.filters = defaults.filters;
+            $ = new GetRegionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allRegions(@Nullable Boolean allRegions) {
-            this.allRegions = allRegions;
+            $.allRegions = allRegions;
             return this;
         }
+
         public Builder filters(@Nullable List<GetRegionsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetRegionsFilter... filters) {
             return filters(List.of(filters));
-        }        public GetRegionsArgs build() {
-            return new GetRegionsArgs(allRegions, filters);
+        }
+
+        public GetRegionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.SchedulingInstanceTerminationAction;
 import com.pulumi.googlenative.compute_alpha.enums.SchedulingMaintenanceInterval;
 import com.pulumi.googlenative.compute_alpha.enums.SchedulingOnHostMaintenance;
@@ -17,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automaticRestart")
-      private final @Nullable Output<Boolean> automaticRestart;
+    private @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> automaticRestart() {
-        return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
+    public Optional<Output<Boolean>> automaticRestart() {
+        return Optional.ofNullable(this.automaticRestart);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityDomain")
-      private final @Nullable Output<Integer> availabilityDomain;
+    private @Nullable Output<Integer> availabilityDomain;
 
-    public Output<Integer> availabilityDomain() {
-        return this.availabilityDomain == null ? Codegen.empty() : this.availabilityDomain;
+    public Optional<Output<Integer>> availabilityDomain() {
+        return Optional.ofNullable(this.availabilityDomain);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currentCpus")
-      private final @Nullable Output<Integer> currentCpus;
+    private @Nullable Output<Integer> currentCpus;
 
-    public Output<Integer> currentCpus() {
-        return this.currentCpus == null ? Codegen.empty() : this.currentCpus;
+    public Optional<Output<Integer>> currentCpus() {
+        return Optional.ofNullable(this.currentCpus);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currentMemoryMb")
-      private final @Nullable Output<String> currentMemoryMb;
+    private @Nullable Output<String> currentMemoryMb;
 
-    public Output<String> currentMemoryMb() {
-        return this.currentMemoryMb == null ? Codegen.empty() : this.currentMemoryMb;
+    public Optional<Output<String>> currentMemoryMb() {
+        return Optional.ofNullable(this.currentMemoryMb);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostErrorTimeoutSeconds")
-      private final @Nullable Output<Integer> hostErrorTimeoutSeconds;
+    private @Nullable Output<Integer> hostErrorTimeoutSeconds;
 
-    public Output<Integer> hostErrorTimeoutSeconds() {
-        return this.hostErrorTimeoutSeconds == null ? Codegen.empty() : this.hostErrorTimeoutSeconds;
+    public Optional<Output<Integer>> hostErrorTimeoutSeconds() {
+        return Optional.ofNullable(this.hostErrorTimeoutSeconds);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceTerminationAction")
-      private final @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
+    private @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
-    public Output<SchedulingInstanceTerminationAction> instanceTerminationAction() {
-        return this.instanceTerminationAction == null ? Codegen.empty() : this.instanceTerminationAction;
+    public Optional<Output<SchedulingInstanceTerminationAction>> instanceTerminationAction() {
+        return Optional.ofNullable(this.instanceTerminationAction);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latencyTolerant")
-      private final @Nullable Output<Boolean> latencyTolerant;
+    private @Nullable Output<Boolean> latencyTolerant;
 
-    public Output<Boolean> latencyTolerant() {
-        return this.latencyTolerant == null ? Codegen.empty() : this.latencyTolerant;
+    public Optional<Output<Boolean>> latencyTolerant() {
+        return Optional.ofNullable(this.latencyTolerant);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationHint")
-      private final @Nullable Output<String> locationHint;
+    private @Nullable Output<String> locationHint;
 
-    public Output<String> locationHint() {
-        return this.locationHint == null ? Codegen.empty() : this.locationHint;
+    public Optional<Output<String>> locationHint() {
+        return Optional.ofNullable(this.locationHint);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceFreezeDurationHours")
-      private final @Nullable Output<Integer> maintenanceFreezeDurationHours;
+    private @Nullable Output<Integer> maintenanceFreezeDurationHours;
 
-    public Output<Integer> maintenanceFreezeDurationHours() {
-        return this.maintenanceFreezeDurationHours == null ? Codegen.empty() : this.maintenanceFreezeDurationHours;
+    public Optional<Output<Integer>> maintenanceFreezeDurationHours() {
+        return Optional.ofNullable(this.maintenanceFreezeDurationHours);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceInterval")
-      private final @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval;
+    private @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval;
 
-    public Output<SchedulingMaintenanceInterval> maintenanceInterval() {
-        return this.maintenanceInterval == null ? Codegen.empty() : this.maintenanceInterval;
+    public Optional<Output<SchedulingMaintenanceInterval>> maintenanceInterval() {
+        return Optional.ofNullable(this.maintenanceInterval);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxRunDuration")
-      private final @Nullable Output<DurationArgs> maxRunDuration;
+    private @Nullable Output<DurationArgs> maxRunDuration;
 
-    public Output<DurationArgs> maxRunDuration() {
-        return this.maxRunDuration == null ? Codegen.empty() : this.maxRunDuration;
+    public Optional<Output<DurationArgs>> maxRunDuration() {
+        return Optional.ofNullable(this.maxRunDuration);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minNodeCpus")
-      private final @Nullable Output<Integer> minNodeCpus;
+    private @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> minNodeCpus() {
-        return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
+    public Optional<Output<Integer>> minNodeCpus() {
+        return Optional.ofNullable(this.minNodeCpus);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeAffinities")
-      private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
+    private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<SchedulingNodeAffinityArgs>> nodeAffinities() {
-        return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
+    public Optional<Output<List<SchedulingNodeAffinityArgs>>> nodeAffinities() {
+        return Optional.ofNullable(this.nodeAffinities);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onHostMaintenance")
-      private final @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
+    private @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
 
-    public Output<SchedulingOnHostMaintenance> onHostMaintenance() {
-        return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
+    public Optional<Output<SchedulingOnHostMaintenance>> onHostMaintenance() {
+        return Optional.ofNullable(this.onHostMaintenance);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningModel")
-      private final @Nullable Output<SchedulingProvisioningModel> provisioningModel;
+    private @Nullable Output<SchedulingProvisioningModel> provisioningModel;
 
-    public Output<SchedulingProvisioningModel> provisioningModel() {
-        return this.provisioningModel == null ? Codegen.empty() : this.provisioningModel;
+    public Optional<Output<SchedulingProvisioningModel>> provisioningModel() {
+        return Optional.ofNullable(this.provisioningModel);
     }
 
     /**
@@ -209,261 +209,212 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationTime")
-      private final @Nullable Output<String> terminationTime;
+    private @Nullable Output<String> terminationTime;
 
-    public Output<String> terminationTime() {
-        return this.terminationTime == null ? Codegen.empty() : this.terminationTime;
+    public Optional<Output<String>> terminationTime() {
+        return Optional.ofNullable(this.terminationTime);
     }
 
-    public SchedulingArgs(
-        @Nullable Output<Boolean> automaticRestart,
-        @Nullable Output<Integer> availabilityDomain,
-        @Nullable Output<Integer> currentCpus,
-        @Nullable Output<String> currentMemoryMb,
-        @Nullable Output<Integer> hostErrorTimeoutSeconds,
-        @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction,
-        @Nullable Output<Boolean> latencyTolerant,
-        @Nullable Output<String> locationHint,
-        @Nullable Output<Integer> maintenanceFreezeDurationHours,
-        @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval,
-        @Nullable Output<DurationArgs> maxRunDuration,
-        @Nullable Output<Integer> minNodeCpus,
-        @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities,
-        @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance,
-        @Nullable Output<Boolean> preemptible,
-        @Nullable Output<SchedulingProvisioningModel> provisioningModel,
-        @Nullable Output<String> terminationTime) {
-        this.automaticRestart = automaticRestart;
-        this.availabilityDomain = availabilityDomain;
-        this.currentCpus = currentCpus;
-        this.currentMemoryMb = currentMemoryMb;
-        this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
-        this.instanceTerminationAction = instanceTerminationAction;
-        this.latencyTolerant = latencyTolerant;
-        this.locationHint = locationHint;
-        this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
-        this.maintenanceInterval = maintenanceInterval;
-        this.maxRunDuration = maxRunDuration;
-        this.minNodeCpus = minNodeCpus;
-        this.nodeAffinities = nodeAffinities;
-        this.onHostMaintenance = onHostMaintenance;
-        this.preemptible = preemptible;
-        this.provisioningModel = provisioningModel;
-        this.terminationTime = terminationTime;
-    }
+    private SchedulingArgs() {}
 
-    private SchedulingArgs() {
-        this.automaticRestart = Codegen.empty();
-        this.availabilityDomain = Codegen.empty();
-        this.currentCpus = Codegen.empty();
-        this.currentMemoryMb = Codegen.empty();
-        this.hostErrorTimeoutSeconds = Codegen.empty();
-        this.instanceTerminationAction = Codegen.empty();
-        this.latencyTolerant = Codegen.empty();
-        this.locationHint = Codegen.empty();
-        this.maintenanceFreezeDurationHours = Codegen.empty();
-        this.maintenanceInterval = Codegen.empty();
-        this.maxRunDuration = Codegen.empty();
-        this.minNodeCpus = Codegen.empty();
-        this.nodeAffinities = Codegen.empty();
-        this.onHostMaintenance = Codegen.empty();
-        this.preemptible = Codegen.empty();
-        this.provisioningModel = Codegen.empty();
-        this.terminationTime = Codegen.empty();
+    private SchedulingArgs(SchedulingArgs $) {
+        this.automaticRestart = $.automaticRestart;
+        this.availabilityDomain = $.availabilityDomain;
+        this.currentCpus = $.currentCpus;
+        this.currentMemoryMb = $.currentMemoryMb;
+        this.hostErrorTimeoutSeconds = $.hostErrorTimeoutSeconds;
+        this.instanceTerminationAction = $.instanceTerminationAction;
+        this.latencyTolerant = $.latencyTolerant;
+        this.locationHint = $.locationHint;
+        this.maintenanceFreezeDurationHours = $.maintenanceFreezeDurationHours;
+        this.maintenanceInterval = $.maintenanceInterval;
+        this.maxRunDuration = $.maxRunDuration;
+        this.minNodeCpus = $.minNodeCpus;
+        this.nodeAffinities = $.nodeAffinities;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.preemptible = $.preemptible;
+        this.provisioningModel = $.provisioningModel;
+        this.terminationTime = $.terminationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automaticRestart;
-        private @Nullable Output<Integer> availabilityDomain;
-        private @Nullable Output<Integer> currentCpus;
-        private @Nullable Output<String> currentMemoryMb;
-        private @Nullable Output<Integer> hostErrorTimeoutSeconds;
-        private @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
-        private @Nullable Output<Boolean> latencyTolerant;
-        private @Nullable Output<String> locationHint;
-        private @Nullable Output<Integer> maintenanceFreezeDurationHours;
-        private @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval;
-        private @Nullable Output<DurationArgs> maxRunDuration;
-        private @Nullable Output<Integer> minNodeCpus;
-        private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
-        private @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
-        private @Nullable Output<Boolean> preemptible;
-        private @Nullable Output<SchedulingProvisioningModel> provisioningModel;
-        private @Nullable Output<String> terminationTime;
+        private SchedulingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingArgs();
         }
 
         public Builder(SchedulingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticRestart = defaults.automaticRestart;
-    	      this.availabilityDomain = defaults.availabilityDomain;
-    	      this.currentCpus = defaults.currentCpus;
-    	      this.currentMemoryMb = defaults.currentMemoryMb;
-    	      this.hostErrorTimeoutSeconds = defaults.hostErrorTimeoutSeconds;
-    	      this.instanceTerminationAction = defaults.instanceTerminationAction;
-    	      this.latencyTolerant = defaults.latencyTolerant;
-    	      this.locationHint = defaults.locationHint;
-    	      this.maintenanceFreezeDurationHours = defaults.maintenanceFreezeDurationHours;
-    	      this.maintenanceInterval = defaults.maintenanceInterval;
-    	      this.maxRunDuration = defaults.maxRunDuration;
-    	      this.minNodeCpus = defaults.minNodeCpus;
-    	      this.nodeAffinities = defaults.nodeAffinities;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.preemptible = defaults.preemptible;
-    	      this.provisioningModel = defaults.provisioningModel;
-    	      this.terminationTime = defaults.terminationTime;
+            $ = new SchedulingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
-            this.automaticRestart = automaticRestart;
+            $.automaticRestart = automaticRestart;
             return this;
         }
-        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Codegen.ofNullable(automaticRestart);
-            return this;
+
+        public Builder automaticRestart(Boolean automaticRestart) {
+            return automaticRestart(Output.of(automaticRestart));
         }
+
         public Builder availabilityDomain(@Nullable Output<Integer> availabilityDomain) {
-            this.availabilityDomain = availabilityDomain;
+            $.availabilityDomain = availabilityDomain;
             return this;
         }
-        public Builder availabilityDomain(@Nullable Integer availabilityDomain) {
-            this.availabilityDomain = Codegen.ofNullable(availabilityDomain);
-            return this;
+
+        public Builder availabilityDomain(Integer availabilityDomain) {
+            return availabilityDomain(Output.of(availabilityDomain));
         }
+
         public Builder currentCpus(@Nullable Output<Integer> currentCpus) {
-            this.currentCpus = currentCpus;
+            $.currentCpus = currentCpus;
             return this;
         }
-        public Builder currentCpus(@Nullable Integer currentCpus) {
-            this.currentCpus = Codegen.ofNullable(currentCpus);
-            return this;
+
+        public Builder currentCpus(Integer currentCpus) {
+            return currentCpus(Output.of(currentCpus));
         }
+
         public Builder currentMemoryMb(@Nullable Output<String> currentMemoryMb) {
-            this.currentMemoryMb = currentMemoryMb;
+            $.currentMemoryMb = currentMemoryMb;
             return this;
         }
-        public Builder currentMemoryMb(@Nullable String currentMemoryMb) {
-            this.currentMemoryMb = Codegen.ofNullable(currentMemoryMb);
-            return this;
+
+        public Builder currentMemoryMb(String currentMemoryMb) {
+            return currentMemoryMb(Output.of(currentMemoryMb));
         }
+
         public Builder hostErrorTimeoutSeconds(@Nullable Output<Integer> hostErrorTimeoutSeconds) {
-            this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
+            $.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
             return this;
         }
-        public Builder hostErrorTimeoutSeconds(@Nullable Integer hostErrorTimeoutSeconds) {
-            this.hostErrorTimeoutSeconds = Codegen.ofNullable(hostErrorTimeoutSeconds);
-            return this;
+
+        public Builder hostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
+            return hostErrorTimeoutSeconds(Output.of(hostErrorTimeoutSeconds));
         }
+
         public Builder instanceTerminationAction(@Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction) {
-            this.instanceTerminationAction = instanceTerminationAction;
+            $.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
-        public Builder instanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
-            this.instanceTerminationAction = Codegen.ofNullable(instanceTerminationAction);
-            return this;
+
+        public Builder instanceTerminationAction(SchedulingInstanceTerminationAction instanceTerminationAction) {
+            return instanceTerminationAction(Output.of(instanceTerminationAction));
         }
+
         public Builder latencyTolerant(@Nullable Output<Boolean> latencyTolerant) {
-            this.latencyTolerant = latencyTolerant;
+            $.latencyTolerant = latencyTolerant;
             return this;
         }
-        public Builder latencyTolerant(@Nullable Boolean latencyTolerant) {
-            this.latencyTolerant = Codegen.ofNullable(latencyTolerant);
-            return this;
+
+        public Builder latencyTolerant(Boolean latencyTolerant) {
+            return latencyTolerant(Output.of(latencyTolerant));
         }
+
         public Builder locationHint(@Nullable Output<String> locationHint) {
-            this.locationHint = locationHint;
+            $.locationHint = locationHint;
             return this;
         }
-        public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Codegen.ofNullable(locationHint);
-            return this;
+
+        public Builder locationHint(String locationHint) {
+            return locationHint(Output.of(locationHint));
         }
+
         public Builder maintenanceFreezeDurationHours(@Nullable Output<Integer> maintenanceFreezeDurationHours) {
-            this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+            $.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
-        public Builder maintenanceFreezeDurationHours(@Nullable Integer maintenanceFreezeDurationHours) {
-            this.maintenanceFreezeDurationHours = Codegen.ofNullable(maintenanceFreezeDurationHours);
-            return this;
+
+        public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
+            return maintenanceFreezeDurationHours(Output.of(maintenanceFreezeDurationHours));
         }
+
         public Builder maintenanceInterval(@Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval) {
-            this.maintenanceInterval = maintenanceInterval;
+            $.maintenanceInterval = maintenanceInterval;
             return this;
         }
-        public Builder maintenanceInterval(@Nullable SchedulingMaintenanceInterval maintenanceInterval) {
-            this.maintenanceInterval = Codegen.ofNullable(maintenanceInterval);
-            return this;
+
+        public Builder maintenanceInterval(SchedulingMaintenanceInterval maintenanceInterval) {
+            return maintenanceInterval(Output.of(maintenanceInterval));
         }
+
         public Builder maxRunDuration(@Nullable Output<DurationArgs> maxRunDuration) {
-            this.maxRunDuration = maxRunDuration;
+            $.maxRunDuration = maxRunDuration;
             return this;
         }
-        public Builder maxRunDuration(@Nullable DurationArgs maxRunDuration) {
-            this.maxRunDuration = Codegen.ofNullable(maxRunDuration);
-            return this;
+
+        public Builder maxRunDuration(DurationArgs maxRunDuration) {
+            return maxRunDuration(Output.of(maxRunDuration));
         }
+
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
-            this.minNodeCpus = minNodeCpus;
+            $.minNodeCpus = minNodeCpus;
             return this;
         }
-        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Codegen.ofNullable(minNodeCpus);
-            return this;
+
+        public Builder minNodeCpus(Integer minNodeCpus) {
+            return minNodeCpus(Output.of(minNodeCpus));
         }
+
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
-            this.nodeAffinities = nodeAffinities;
+            $.nodeAffinities = nodeAffinities;
             return this;
         }
-        public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Codegen.ofNullable(nodeAffinities);
-            return this;
+
+        public Builder nodeAffinities(List<SchedulingNodeAffinityArgs> nodeAffinities) {
+            return nodeAffinities(Output.of(nodeAffinities));
         }
+
         public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
+
         public Builder onHostMaintenance(@Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance) {
-            this.onHostMaintenance = onHostMaintenance;
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
-        public Builder onHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
-            this.onHostMaintenance = Codegen.ofNullable(onHostMaintenance);
-            return this;
+
+        public Builder onHostMaintenance(SchedulingOnHostMaintenance onHostMaintenance) {
+            return onHostMaintenance(Output.of(onHostMaintenance));
         }
+
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
         }
+
         public Builder provisioningModel(@Nullable Output<SchedulingProvisioningModel> provisioningModel) {
-            this.provisioningModel = provisioningModel;
+            $.provisioningModel = provisioningModel;
             return this;
         }
-        public Builder provisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
-            this.provisioningModel = Codegen.ofNullable(provisioningModel);
-            return this;
+
+        public Builder provisioningModel(SchedulingProvisioningModel provisioningModel) {
+            return provisioningModel(Output.of(provisioningModel));
         }
+
         public Builder terminationTime(@Nullable Output<String> terminationTime) {
-            this.terminationTime = terminationTime;
+            $.terminationTime = terminationTime;
             return this;
         }
-        public Builder terminationTime(@Nullable String terminationTime) {
-            this.terminationTime = Codegen.ofNullable(terminationTime);
-            return this;
-        }        public SchedulingArgs build() {
-            return new SchedulingArgs(automaticRestart, availabilityDomain, currentCpus, currentMemoryMb, hostErrorTimeoutSeconds, instanceTerminationAction, latencyTolerant, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, maxRunDuration, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel, terminationTime);
+
+        public Builder terminationTime(String terminationTime) {
+            return terminationTime(Output.of(terminationTime));
+        }
+
+        public SchedulingArgs build() {
+            return $;
         }
     }
+
 }

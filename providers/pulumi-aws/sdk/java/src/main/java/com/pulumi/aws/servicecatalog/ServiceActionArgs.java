@@ -6,9 +6,9 @@ package com.pulumi.aws.servicecatalog;
 import com.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition", required=true)
-      private final Output<ServiceActionDefinitionArgs> definition;
+    private Output<ServiceActionDefinitionArgs> definition;
 
     public Output<ServiceActionDefinitionArgs> definition() {
         return this.definition;
@@ -43,10 +43,10 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ServiceActionArgs(
-        @Nullable Output<String> acceptLanguage,
-        Output<ServiceActionDefinitionArgs> definition,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name) {
-        this.acceptLanguage = acceptLanguage;
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.description = description;
-        this.name = name;
-    }
+    private ServiceActionArgs() {}
 
-    private ServiceActionArgs() {
-        this.acceptLanguage = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
+    private ServiceActionArgs(ServiceActionArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.definition = $.definition;
+        this.description = $.description;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private Output<ServiceActionDefinitionArgs> definition;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
+        private ServiceActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceActionArgs();
         }
 
         public Builder(ServiceActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.definition = defaults.definition;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
+            $ = new ServiceActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder definition(Output<ServiceActionDefinitionArgs> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(ServiceActionDefinitionArgs definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ServiceActionArgs build() {
-            return new ServiceActionArgs(acceptLanguage, definition, description, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ServiceActionArgs build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="consumerGroupName", required=true)
-      private final String consumerGroupName;
+    private String consumerGroupName;
 
     public String consumerGroupName() {
         return this.consumerGroupName;
@@ -28,7 +28,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="eventHubName", required=true)
-      private final String eventHubName;
+    private String eventHubName;
 
     public String eventHubName() {
         return this.eventHubName;
@@ -39,7 +39,7 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -50,73 +50,66 @@ public final class GetConsumerGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConsumerGroupArgs(
-        String consumerGroupName,
-        String eventHubName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.consumerGroupName = Objects.requireNonNull(consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
-        this.eventHubName = Objects.requireNonNull(eventHubName, "expected parameter 'eventHubName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConsumerGroupArgs() {}
 
-    private GetConsumerGroupArgs() {
-        this.consumerGroupName = null;
-        this.eventHubName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetConsumerGroupArgs(GetConsumerGroupArgs $) {
+        this.consumerGroupName = $.consumerGroupName;
+        this.eventHubName = $.eventHubName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConsumerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consumerGroupName;
-        private String eventHubName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetConsumerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConsumerGroupArgs();
         }
 
         public Builder(GetConsumerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerGroupName = defaults.consumerGroupName;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerGroupName(String consumerGroupName) {
-            this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
+            $.consumerGroupName = consumerGroupName;
             return this;
         }
+
         public Builder eventHubName(String eventHubName) {
-            this.eventHubName = Objects.requireNonNull(eventHubName);
+            $.eventHubName = eventHubName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConsumerGroupArgs build() {
-            return new GetConsumerGroupArgs(consumerGroupName, eventHubName, namespaceName, resourceGroupName);
+        }
+
+        public GetConsumerGroupArgs build() {
+            $.consumerGroupName = Objects.requireNonNull($.consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
+            $.eventHubName = Objects.requireNonNull($.eventHubName, "expected parameter 'eventHubName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

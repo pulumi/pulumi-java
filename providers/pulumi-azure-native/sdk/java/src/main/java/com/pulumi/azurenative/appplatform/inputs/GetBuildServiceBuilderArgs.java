@@ -17,7 +17,7 @@ public final class GetBuildServiceBuilderArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="buildServiceName", required=true)
-      private final String buildServiceName;
+    private String buildServiceName;
 
     public String buildServiceName() {
         return this.buildServiceName;
@@ -28,7 +28,7 @@ public final class GetBuildServiceBuilderArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="builderName", required=true)
-      private final String builderName;
+    private String builderName;
 
     public String builderName() {
         return this.builderName;
@@ -39,7 +39,7 @@ public final class GetBuildServiceBuilderArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetBuildServiceBuilderArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetBuildServiceBuilderArgs(
-        String buildServiceName,
-        String builderName,
-        String resourceGroupName,
-        String serviceName) {
-        this.buildServiceName = Objects.requireNonNull(buildServiceName, "expected parameter 'buildServiceName' to be non-null");
-        this.builderName = Objects.requireNonNull(builderName, "expected parameter 'builderName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetBuildServiceBuilderArgs() {}
 
-    private GetBuildServiceBuilderArgs() {
-        this.buildServiceName = null;
-        this.builderName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetBuildServiceBuilderArgs(GetBuildServiceBuilderArgs $) {
+        this.buildServiceName = $.buildServiceName;
+        this.builderName = $.builderName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBuildServiceBuilderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildServiceName;
-        private String builderName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetBuildServiceBuilderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBuildServiceBuilderArgs();
         }
 
         public Builder(GetBuildServiceBuilderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildServiceName = defaults.buildServiceName;
-    	      this.builderName = defaults.builderName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetBuildServiceBuilderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildServiceName(String buildServiceName) {
-            this.buildServiceName = Objects.requireNonNull(buildServiceName);
+            $.buildServiceName = buildServiceName;
             return this;
         }
+
         public Builder builderName(String builderName) {
-            this.builderName = Objects.requireNonNull(builderName);
+            $.builderName = builderName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetBuildServiceBuilderArgs build() {
-            return new GetBuildServiceBuilderArgs(buildServiceName, builderName, resourceGroupName, serviceName);
+        }
+
+        public GetBuildServiceBuilderArgs build() {
+            $.buildServiceName = Objects.requireNonNull($.buildServiceName, "expected parameter 'buildServiceName' to be non-null");
+            $.builderName = Objects.requireNonNull($.builderName, "expected parameter 'builderName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

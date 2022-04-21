@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CertificateConfigPublicKeyGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -32,63 +32,59 @@ public final class CertificateConfigPublicKeyGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public CertificateConfigPublicKeyGetArgs(
-        Output<String> format,
-        @Nullable Output<String> key) {
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.key = key;
-    }
+    private CertificateConfigPublicKeyGetArgs() {}
 
-    private CertificateConfigPublicKeyGetArgs() {
-        this.format = Codegen.empty();
-        this.key = Codegen.empty();
+    private CertificateConfigPublicKeyGetArgs(CertificateConfigPublicKeyGetArgs $) {
+        this.format = $.format;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigPublicKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> format;
-        private @Nullable Output<String> key;
+        private CertificateConfigPublicKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigPublicKeyGetArgs();
         }
 
         public Builder(CertificateConfigPublicKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
+            $ = new CertificateConfigPublicKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public CertificateConfigPublicKeyGetArgs build() {
-            return new CertificateConfigPublicKeyGetArgs(format, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public CertificateConfigPublicKeyGetArgs build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

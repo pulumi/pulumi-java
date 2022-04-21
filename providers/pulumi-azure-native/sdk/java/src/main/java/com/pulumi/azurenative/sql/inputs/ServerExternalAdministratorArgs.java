@@ -8,10 +8,10 @@ import com.pulumi.azurenative.sql.enums.PrincipalType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ServerExternalAdministratorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="administratorType")
-      private final @Nullable Output<Either<String,AdministratorType>> administratorType;
+    private @Nullable Output<Either<String,AdministratorType>> administratorType;
 
-    public Output<Either<String,AdministratorType>> administratorType() {
-        return this.administratorType == null ? Codegen.empty() : this.administratorType;
+    public Optional<Output<Either<String,AdministratorType>>> administratorType() {
+        return Optional.ofNullable(this.administratorType);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ServerExternalAdministratorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="azureADOnlyAuthentication")
-      private final @Nullable Output<Boolean> azureADOnlyAuthentication;
+    private @Nullable Output<Boolean> azureADOnlyAuthentication;
 
-    public Output<Boolean> azureADOnlyAuthentication() {
-        return this.azureADOnlyAuthentication == null ? Codegen.empty() : this.azureADOnlyAuthentication;
+    public Optional<Output<Boolean>> azureADOnlyAuthentication() {
+        return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ServerExternalAdministratorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<String> login;
+    private @Nullable Output<String> login;
 
-    public Output<String> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<String>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ServerExternalAdministratorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="principalType")
-      private final @Nullable Output<Either<String,PrincipalType>> principalType;
+    private @Nullable Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> principalType() {
-        return this.principalType == null ? Codegen.empty() : this.principalType;
+    public Optional<Output<Either<String,PrincipalType>>> principalType() {
+        return Optional.ofNullable(this.principalType);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ServerExternalAdministratorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sid")
-      private final @Nullable Output<String> sid;
+    private @Nullable Output<String> sid;
 
-    public Output<String> sid() {
-        return this.sid == null ? Codegen.empty() : this.sid;
+    public Optional<Output<String>> sid() {
+        return Optional.ofNullable(this.sid);
     }
 
     /**
@@ -83,115 +83,98 @@ public final class ServerExternalAdministratorArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ServerExternalAdministratorArgs(
-        @Nullable Output<Either<String,AdministratorType>> administratorType,
-        @Nullable Output<Boolean> azureADOnlyAuthentication,
-        @Nullable Output<String> login,
-        @Nullable Output<Either<String,PrincipalType>> principalType,
-        @Nullable Output<String> sid,
-        @Nullable Output<String> tenantId) {
-        this.administratorType = administratorType;
-        this.azureADOnlyAuthentication = azureADOnlyAuthentication;
-        this.login = login;
-        this.principalType = principalType;
-        this.sid = sid;
-        this.tenantId = tenantId;
-    }
+    private ServerExternalAdministratorArgs() {}
 
-    private ServerExternalAdministratorArgs() {
-        this.administratorType = Codegen.empty();
-        this.azureADOnlyAuthentication = Codegen.empty();
-        this.login = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.sid = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private ServerExternalAdministratorArgs(ServerExternalAdministratorArgs $) {
+        this.administratorType = $.administratorType;
+        this.azureADOnlyAuthentication = $.azureADOnlyAuthentication;
+        this.login = $.login;
+        this.principalType = $.principalType;
+        this.sid = $.sid;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerExternalAdministratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AdministratorType>> administratorType;
-        private @Nullable Output<Boolean> azureADOnlyAuthentication;
-        private @Nullable Output<String> login;
-        private @Nullable Output<Either<String,PrincipalType>> principalType;
-        private @Nullable Output<String> sid;
-        private @Nullable Output<String> tenantId;
+        private ServerExternalAdministratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerExternalAdministratorArgs();
         }
 
         public Builder(ServerExternalAdministratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorType = defaults.administratorType;
-    	      this.azureADOnlyAuthentication = defaults.azureADOnlyAuthentication;
-    	      this.login = defaults.login;
-    	      this.principalType = defaults.principalType;
-    	      this.sid = defaults.sid;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ServerExternalAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorType(@Nullable Output<Either<String,AdministratorType>> administratorType) {
-            this.administratorType = administratorType;
+            $.administratorType = administratorType;
             return this;
         }
-        public Builder administratorType(@Nullable Either<String,AdministratorType> administratorType) {
-            this.administratorType = Codegen.ofNullable(administratorType);
-            return this;
+
+        public Builder administratorType(Either<String,AdministratorType> administratorType) {
+            return administratorType(Output.of(administratorType));
         }
+
         public Builder azureADOnlyAuthentication(@Nullable Output<Boolean> azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = azureADOnlyAuthentication;
+            $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
-        public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Codegen.ofNullable(azureADOnlyAuthentication);
-            return this;
+
+        public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
+            return azureADOnlyAuthentication(Output.of(azureADOnlyAuthentication));
         }
+
         public Builder login(@Nullable Output<String> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable String login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(String login) {
+            return login(Output.of(login));
         }
+
         public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
-            this.principalType = principalType;
+            $.principalType = principalType;
             return this;
         }
-        public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
-            this.principalType = Codegen.ofNullable(principalType);
-            return this;
+
+        public Builder principalType(Either<String,PrincipalType> principalType) {
+            return principalType(Output.of(principalType));
         }
+
         public Builder sid(@Nullable Output<String> sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
         }
-        public Builder sid(@Nullable String sid) {
-            this.sid = Codegen.ofNullable(sid);
-            return this;
+
+        public Builder sid(String sid) {
+            return sid(Output.of(sid));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public ServerExternalAdministratorArgs build() {
-            return new ServerExternalAdministratorArgs(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public ServerExternalAdministratorArgs build() {
+            return $;
         }
     }
+
 }

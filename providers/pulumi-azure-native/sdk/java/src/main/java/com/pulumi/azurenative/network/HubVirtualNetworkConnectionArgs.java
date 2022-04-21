@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allowHubToRemoteVnetTransit")
-      private final @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
+    private @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
 
-    public Output<Boolean> allowHubToRemoteVnetTransit() {
-        return this.allowHubToRemoteVnetTransit == null ? Codegen.empty() : this.allowHubToRemoteVnetTransit;
+    public Optional<Output<Boolean>> allowHubToRemoteVnetTransit() {
+        return Optional.ofNullable(this.allowHubToRemoteVnetTransit);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allowRemoteVnetToUseHubVnetGateways")
-      private final @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
+    private @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
-    public Output<Boolean> allowRemoteVnetToUseHubVnetGateways() {
-        return this.allowRemoteVnetToUseHubVnetGateways == null ? Codegen.empty() : this.allowRemoteVnetToUseHubVnetGateways;
+    public Optional<Output<Boolean>> allowRemoteVnetToUseHubVnetGateways() {
+        return Optional.ofNullable(this.allowRemoteVnetToUseHubVnetGateways);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enableInternetSecurity")
-      private final @Nullable Output<Boolean> enableInternetSecurity;
+    private @Nullable Output<Boolean> enableInternetSecurity;
 
-    public Output<Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
+    public Optional<Output<Boolean>> enableInternetSecurity() {
+        return Optional.ofNullable(this.enableInternetSecurity);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="remoteVirtualNetwork")
-      private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
+    private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
-    public Output<SubResourceArgs> remoteVirtualNetwork() {
-        return this.remoteVirtualNetwork == null ? Codegen.empty() : this.remoteVirtualNetwork;
+    public Optional<Output<SubResourceArgs>> remoteVirtualNetwork() {
+        return Optional.ofNullable(this.remoteVirtualNetwork);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -111,10 +111,10 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="routingConfiguration")
-      private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
+    private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
-    public Output<RoutingConfigurationArgs> routingConfiguration() {
-        return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
+    public Optional<Output<RoutingConfigurationArgs>> routingConfiguration() {
+        return Optional.ofNullable(this.routingConfiguration);
     }
 
     /**
@@ -122,167 +122,140 @@ public final class HubVirtualNetworkConnectionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final Output<String> virtualHubName;
+    private Output<String> virtualHubName;
 
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
-    public HubVirtualNetworkConnectionArgs(
-        @Nullable Output<Boolean> allowHubToRemoteVnetTransit,
-        @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways,
-        @Nullable Output<String> connectionName,
-        @Nullable Output<Boolean> enableInternetSecurity,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<SubResourceArgs> remoteVirtualNetwork,
-        Output<String> resourceGroupName,
-        @Nullable Output<RoutingConfigurationArgs> routingConfiguration,
-        Output<String> virtualHubName) {
-        this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
-        this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
-        this.connectionName = connectionName;
-        this.enableInternetSecurity = enableInternetSecurity;
-        this.id = id;
-        this.name = name;
-        this.remoteVirtualNetwork = remoteVirtualNetwork;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routingConfiguration = routingConfiguration;
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private HubVirtualNetworkConnectionArgs() {}
 
-    private HubVirtualNetworkConnectionArgs() {
-        this.allowHubToRemoteVnetTransit = Codegen.empty();
-        this.allowRemoteVnetToUseHubVnetGateways = Codegen.empty();
-        this.connectionName = Codegen.empty();
-        this.enableInternetSecurity = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.remoteVirtualNetwork = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routingConfiguration = Codegen.empty();
-        this.virtualHubName = Codegen.empty();
+    private HubVirtualNetworkConnectionArgs(HubVirtualNetworkConnectionArgs $) {
+        this.allowHubToRemoteVnetTransit = $.allowHubToRemoteVnetTransit;
+        this.allowRemoteVnetToUseHubVnetGateways = $.allowRemoteVnetToUseHubVnetGateways;
+        this.connectionName = $.connectionName;
+        this.enableInternetSecurity = $.enableInternetSecurity;
+        this.id = $.id;
+        this.name = $.name;
+        this.remoteVirtualNetwork = $.remoteVirtualNetwork;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routingConfiguration = $.routingConfiguration;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubVirtualNetworkConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
-        private @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<Boolean> enableInternetSecurity;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
-        private Output<String> virtualHubName;
+        private HubVirtualNetworkConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubVirtualNetworkConnectionArgs();
         }
 
         public Builder(HubVirtualNetworkConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowHubToRemoteVnetTransit = defaults.allowHubToRemoteVnetTransit;
-    	      this.allowRemoteVnetToUseHubVnetGateways = defaults.allowRemoteVnetToUseHubVnetGateways;
-    	      this.connectionName = defaults.connectionName;
-    	      this.enableInternetSecurity = defaults.enableInternetSecurity;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.remoteVirtualNetwork = defaults.remoteVirtualNetwork;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routingConfiguration = defaults.routingConfiguration;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new HubVirtualNetworkConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowHubToRemoteVnetTransit(@Nullable Output<Boolean> allowHubToRemoteVnetTransit) {
-            this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
+            $.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
             return this;
         }
-        public Builder allowHubToRemoteVnetTransit(@Nullable Boolean allowHubToRemoteVnetTransit) {
-            this.allowHubToRemoteVnetTransit = Codegen.ofNullable(allowHubToRemoteVnetTransit);
-            return this;
+
+        public Builder allowHubToRemoteVnetTransit(Boolean allowHubToRemoteVnetTransit) {
+            return allowHubToRemoteVnetTransit(Output.of(allowHubToRemoteVnetTransit));
         }
+
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways) {
-            this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
+            $.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
             return this;
         }
-        public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
-            this.allowRemoteVnetToUseHubVnetGateways = Codegen.ofNullable(allowRemoteVnetToUseHubVnetGateways);
-            return this;
+
+        public Builder allowRemoteVnetToUseHubVnetGateways(Boolean allowRemoteVnetToUseHubVnetGateways) {
+            return allowRemoteVnetToUseHubVnetGateways(Output.of(allowRemoteVnetToUseHubVnetGateways));
         }
+
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
-            this.enableInternetSecurity = enableInternetSecurity;
+            $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
-        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = Codegen.ofNullable(enableInternetSecurity);
-            return this;
+
+        public Builder enableInternetSecurity(Boolean enableInternetSecurity) {
+            return enableInternetSecurity(Output.of(enableInternetSecurity));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = remoteVirtualNetwork;
+            $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
-        public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Codegen.ofNullable(remoteVirtualNetwork);
-            return this;
+
+        public Builder remoteVirtualNetwork(SubResourceArgs remoteVirtualNetwork) {
+            return remoteVirtualNetwork(Output.of(remoteVirtualNetwork));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
-            this.routingConfiguration = routingConfiguration;
+            $.routingConfiguration = routingConfiguration;
             return this;
         }
-        public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
-            this.routingConfiguration = Codegen.ofNullable(routingConfiguration);
-            return this;
+
+        public Builder routingConfiguration(RoutingConfigurationArgs routingConfiguration) {
+            return routingConfiguration(Output.of(routingConfiguration));
         }
+
         public Builder virtualHubName(Output<String> virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
-            return this;
-        }        public HubVirtualNetworkConnectionArgs build() {
-            return new HubVirtualNetworkConnectionArgs(allowHubToRemoteVnetTransit, allowRemoteVnetToUseHubVnetGateways, connectionName, enableInternetSecurity, id, name, remoteVirtualNetwork, resourceGroupName, routingConfiguration, virtualHubName);
+            return virtualHubName(Output.of(virtualHubName));
+        }
+
+        public HubVirtualNetworkConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

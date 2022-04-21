@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureResponse extends com.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDialogflowV2SuggestionFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDialogflowV2SuggestionFeatureResponse() {}
 
-    private GoogleCloudDialogflowV2SuggestionFeatureResponse() {
-        this.type = null;
+    private GoogleCloudDialogflowV2SuggestionFeatureResponse(GoogleCloudDialogflowV2SuggestionFeatureResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2SuggestionFeatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private GoogleCloudDialogflowV2SuggestionFeatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2SuggestionFeatureResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2SuggestionFeatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowV2SuggestionFeatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDialogflowV2SuggestionFeatureResponse build() {
-            return new GoogleCloudDialogflowV2SuggestionFeatureResponse(type);
+        }
+
+        public GoogleCloudDialogflowV2SuggestionFeatureResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

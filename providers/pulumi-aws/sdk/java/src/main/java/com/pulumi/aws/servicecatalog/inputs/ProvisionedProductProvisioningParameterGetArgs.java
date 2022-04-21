@@ -5,10 +5,10 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends com.pu
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -32,10 +32,10 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends com.pu
      * 
      */
     @Import(name="usePreviousValue")
-      private final @Nullable Output<Boolean> usePreviousValue;
+    private @Nullable Output<Boolean> usePreviousValue;
 
-    public Output<Boolean> usePreviousValue() {
-        return this.usePreviousValue == null ? Codegen.empty() : this.usePreviousValue;
+    public Optional<Output<Boolean>> usePreviousValue() {
+        return Optional.ofNullable(this.usePreviousValue);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends com.pu
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ProvisionedProductProvisioningParameterGetArgs(
-        Output<String> key,
-        @Nullable Output<Boolean> usePreviousValue,
-        @Nullable Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.usePreviousValue = usePreviousValue;
-        this.value = value;
-    }
+    private ProvisionedProductProvisioningParameterGetArgs() {}
 
-    private ProvisionedProductProvisioningParameterGetArgs() {
-        this.key = Codegen.empty();
-        this.usePreviousValue = Codegen.empty();
-        this.value = Codegen.empty();
+    private ProvisionedProductProvisioningParameterGetArgs(ProvisionedProductProvisioningParameterGetArgs $) {
+        this.key = $.key;
+        this.usePreviousValue = $.usePreviousValue;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisionedProductProvisioningParameterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<Boolean> usePreviousValue;
-        private @Nullable Output<String> value;
+        private ProvisionedProductProvisioningParameterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisionedProductProvisioningParameterGetArgs();
         }
 
         public Builder(ProvisionedProductProvisioningParameterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.usePreviousValue = defaults.usePreviousValue;
-    	      this.value = defaults.value;
+            $ = new ProvisionedProductProvisioningParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder usePreviousValue(@Nullable Output<Boolean> usePreviousValue) {
-            this.usePreviousValue = usePreviousValue;
+            $.usePreviousValue = usePreviousValue;
             return this;
         }
-        public Builder usePreviousValue(@Nullable Boolean usePreviousValue) {
-            this.usePreviousValue = Codegen.ofNullable(usePreviousValue);
-            return this;
+
+        public Builder usePreviousValue(Boolean usePreviousValue) {
+            return usePreviousValue(Output.of(usePreviousValue));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ProvisionedProductProvisioningParameterGetArgs build() {
-            return new ProvisionedProductProvisioningParameterGetArgs(key, usePreviousValue, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ProvisionedProductProvisioningParameterGetArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

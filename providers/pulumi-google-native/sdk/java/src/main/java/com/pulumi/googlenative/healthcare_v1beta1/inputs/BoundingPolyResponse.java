@@ -23,7 +23,7 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -34,58 +34,56 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vertices", required=true)
-      private final List<VertexResponse> vertices;
+    private List<VertexResponse> vertices;
 
     public List<VertexResponse> vertices() {
         return this.vertices;
     }
 
-    public BoundingPolyResponse(
-        String label,
-        List<VertexResponse> vertices) {
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.vertices = Objects.requireNonNull(vertices, "expected parameter 'vertices' to be non-null");
-    }
+    private BoundingPolyResponse() {}
 
-    private BoundingPolyResponse() {
-        this.label = null;
-        this.vertices = List.of();
+    private BoundingPolyResponse(BoundingPolyResponse $) {
+        this.label = $.label;
+        this.vertices = $.vertices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BoundingPolyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String label;
-        private List<VertexResponse> vertices;
+        private BoundingPolyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BoundingPolyResponse();
         }
 
         public Builder(BoundingPolyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.vertices = defaults.vertices;
+            $ = new BoundingPolyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder vertices(List<VertexResponse> vertices) {
-            this.vertices = Objects.requireNonNull(vertices);
+            $.vertices = vertices;
             return this;
         }
+
         public Builder vertices(VertexResponse... vertices) {
             return vertices(List.of(vertices));
-        }        public BoundingPolyResponse build() {
-            return new BoundingPolyResponse(label, vertices);
+        }
+
+        public BoundingPolyResponse build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.vertices = Objects.requireNonNull($.vertices, "expected parameter 'vertices' to be non-null");
+            return $;
         }
     }
+
 }

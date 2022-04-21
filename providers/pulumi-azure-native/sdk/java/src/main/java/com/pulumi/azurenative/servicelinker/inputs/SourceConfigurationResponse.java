@@ -23,10 +23,10 @@ public final class SourceConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SourceConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public SourceConfigurationResponse(
-        @Nullable String name,
-        @Nullable String value) {
-        this.name = name;
-        this.value = value;
-    }
+    private SourceConfigurationResponse() {}
 
-    private SourceConfigurationResponse() {
-        this.name = null;
-        this.value = null;
+    private SourceConfigurationResponse(SourceConfigurationResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String value;
+        private SourceConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceConfigurationResponse();
         }
 
         public Builder(SourceConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new SourceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public SourceConfigurationResponse build() {
-            return new SourceConfigurationResponse(name, value);
+        }
+
+        public SourceConfigurationResponse build() {
+            return $;
         }
     }
+
 }

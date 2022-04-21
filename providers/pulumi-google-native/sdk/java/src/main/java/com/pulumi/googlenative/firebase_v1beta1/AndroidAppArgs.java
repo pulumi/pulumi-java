@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebase_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AndroidAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AndroidAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AndroidAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AndroidAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class AndroidAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AndroidAppArgs(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> packageName,
-        @Nullable Output<String> project) {
-        this.appId = appId;
-        this.displayName = displayName;
-        this.name = name;
-        this.packageName = packageName;
-        this.project = project;
-    }
+    private AndroidAppArgs() {}
 
-    private AndroidAppArgs() {
-        this.appId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.packageName = Codegen.empty();
-        this.project = Codegen.empty();
+    private AndroidAppArgs(AndroidAppArgs $) {
+        this.appId = $.appId;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.packageName = $.packageName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> packageName;
-        private @Nullable Output<String> project;
+        private AndroidAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidAppArgs();
         }
 
         public Builder(AndroidAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.packageName = defaults.packageName;
-    	      this.project = defaults.project;
+            $ = new AndroidAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AndroidAppArgs build() {
-            return new AndroidAppArgs(appId, displayName, name, packageName, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public AndroidAppArgs build() {
+            return $;
         }
     }
+
 }

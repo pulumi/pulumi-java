@@ -21,7 +21,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gcpZone", required=true)
-      private final String gcpZone;
+    private String gcpZone;
 
     public String gcpZone() {
         return this.gcpZone;
@@ -43,7 +43,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -54,7 +54,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -65,7 +65,7 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="peerProjectId", required=true)
-      private final String peerProjectId;
+    private String peerProjectId;
 
     public String peerProjectId() {
         return this.peerProjectId;
@@ -76,91 +76,80 @@ public final class InternalCheckerResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public InternalCheckerResponse(
-        String displayName,
-        String gcpZone,
-        String name,
-        String network,
-        String peerProjectId,
-        String state) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.gcpZone = Objects.requireNonNull(gcpZone, "expected parameter 'gcpZone' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.peerProjectId = Objects.requireNonNull(peerProjectId, "expected parameter 'peerProjectId' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private InternalCheckerResponse() {}
 
-    private InternalCheckerResponse() {
-        this.displayName = null;
-        this.gcpZone = null;
-        this.name = null;
-        this.network = null;
-        this.peerProjectId = null;
-        this.state = null;
+    private InternalCheckerResponse(InternalCheckerResponse $) {
+        this.displayName = $.displayName;
+        this.gcpZone = $.gcpZone;
+        this.name = $.name;
+        this.network = $.network;
+        this.peerProjectId = $.peerProjectId;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InternalCheckerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String gcpZone;
-        private String name;
-        private String network;
-        private String peerProjectId;
-        private String state;
+        private InternalCheckerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InternalCheckerResponse();
         }
 
         public Builder(InternalCheckerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.gcpZone = defaults.gcpZone;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.peerProjectId = defaults.peerProjectId;
-    	      this.state = defaults.state;
+            $ = new InternalCheckerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder gcpZone(String gcpZone) {
-            this.gcpZone = Objects.requireNonNull(gcpZone);
+            $.gcpZone = gcpZone;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder peerProjectId(String peerProjectId) {
-            this.peerProjectId = Objects.requireNonNull(peerProjectId);
+            $.peerProjectId = peerProjectId;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public InternalCheckerResponse build() {
-            return new InternalCheckerResponse(displayName, gcpZone, name, network, peerProjectId, state);
+        }
+
+        public InternalCheckerResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.gcpZone = Objects.requireNonNull($.gcpZone, "expected parameter 'gcpZone' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.peerProjectId = Objects.requireNonNull($.peerProjectId, "expected parameter 'peerProjectId' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

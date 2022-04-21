@@ -5,7 +5,6 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends com.pulu
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
-    public TagTemplateFieldTypeEnumTypeAllowedValueArgs(Output<String> displayName) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private TagTemplateFieldTypeEnumTypeAllowedValueArgs() {}
 
-    private TagTemplateFieldTypeEnumTypeAllowedValueArgs() {
-        this.displayName = Codegen.empty();
+    private TagTemplateFieldTypeEnumTypeAllowedValueArgs(TagTemplateFieldTypeEnumTypeAllowedValueArgs $) {
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateFieldTypeEnumTypeAllowedValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
+        private TagTemplateFieldTypeEnumTypeAllowedValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateFieldTypeEnumTypeAllowedValueArgs();
         }
 
         public Builder(TagTemplateFieldTypeEnumTypeAllowedValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
+            $ = new TagTemplateFieldTypeEnumTypeAllowedValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
-        }        public TagTemplateFieldTypeEnumTypeAllowedValueArgs build() {
-            return new TagTemplateFieldTypeEnumTypeAllowedValueArgs(displayName);
+            return displayName(Output.of(displayName));
+        }
+
+        public TagTemplateFieldTypeEnumTypeAllowedValueArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

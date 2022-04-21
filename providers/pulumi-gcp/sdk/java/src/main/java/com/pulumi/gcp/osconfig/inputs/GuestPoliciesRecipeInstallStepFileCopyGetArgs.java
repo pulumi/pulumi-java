@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeInstallStepFileCopyGetArgs extends com.pul
      * 
      */
     @Import(name="artifactId", required=true)
-      private final Output<String> artifactId;
+    private Output<String> artifactId;
 
     public Output<String> artifactId() {
         return this.artifactId;
@@ -32,7 +32,7 @@ public final class GuestPoliciesRecipeInstallStepFileCopyGetArgs extends com.pul
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -44,10 +44,10 @@ public final class GuestPoliciesRecipeInstallStepFileCopyGetArgs extends com.pul
      * 
      */
     @Import(name="overwrite")
-      private final @Nullable Output<Boolean> overwrite;
+    private @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> overwrite() {
-        return this.overwrite == null ? Codegen.empty() : this.overwrite;
+    public Optional<Output<Boolean>> overwrite() {
+        return Optional.ofNullable(this.overwrite);
     }
 
     /**
@@ -60,89 +60,80 @@ public final class GuestPoliciesRecipeInstallStepFileCopyGetArgs extends com.pul
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<String> permissions;
+    private @Nullable Output<String> permissions;
 
-    public Output<String> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<String>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
-    public GuestPoliciesRecipeInstallStepFileCopyGetArgs(
-        Output<String> artifactId,
-        Output<String> destination,
-        @Nullable Output<Boolean> overwrite,
-        @Nullable Output<String> permissions) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.overwrite = overwrite;
-        this.permissions = permissions;
-    }
+    private GuestPoliciesRecipeInstallStepFileCopyGetArgs() {}
 
-    private GuestPoliciesRecipeInstallStepFileCopyGetArgs() {
-        this.artifactId = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.overwrite = Codegen.empty();
-        this.permissions = Codegen.empty();
+    private GuestPoliciesRecipeInstallStepFileCopyGetArgs(GuestPoliciesRecipeInstallStepFileCopyGetArgs $) {
+        this.artifactId = $.artifactId;
+        this.destination = $.destination;
+        this.overwrite = $.overwrite;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeInstallStepFileCopyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> artifactId;
-        private Output<String> destination;
-        private @Nullable Output<Boolean> overwrite;
-        private @Nullable Output<String> permissions;
+        private GuestPoliciesRecipeInstallStepFileCopyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeInstallStepFileCopyGetArgs();
         }
 
         public Builder(GuestPoliciesRecipeInstallStepFileCopyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
-    	      this.destination = defaults.destination;
-    	      this.overwrite = defaults.overwrite;
-    	      this.permissions = defaults.permissions;
+            $ = new GuestPoliciesRecipeInstallStepFileCopyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(Output<String> artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
-            return this;
+            return artifactId(Output.of(artifactId));
         }
+
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
-            this.overwrite = overwrite;
+            $.overwrite = overwrite;
             return this;
         }
-        public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Codegen.ofNullable(overwrite);
-            return this;
+
+        public Builder overwrite(Boolean overwrite) {
+            return overwrite(Output.of(overwrite));
         }
+
         public Builder permissions(@Nullable Output<String> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable String permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
-        }        public GuestPoliciesRecipeInstallStepFileCopyGetArgs build() {
-            return new GuestPoliciesRecipeInstallStepFileCopyGetArgs(artifactId, destination, overwrite, permissions);
+
+        public Builder permissions(String permissions) {
+            return permissions(Output.of(permissions));
+        }
+
+        public GuestPoliciesRecipeInstallStepFileCopyGetArgs build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            return $;
         }
     }
+
 }

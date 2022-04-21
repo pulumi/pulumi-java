@@ -5,12 +5,12 @@ package com.pulumi.googlenative.ids_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ids_v1.enums.EndpointSeverity;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="endpointId", required=true)
-      private final Output<String> endpointId;
+    private Output<String> endpointId;
 
     public Output<String> endpointId() {
         return this.endpointId;
@@ -41,17 +41,17 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,24 +59,24 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<EndpointSeverity> severity;
+    private Output<EndpointSeverity> severity;
 
     public Output<EndpointSeverity> severity() {
         return this.severity;
@@ -95,154 +95,131 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficLogs")
-      private final @Nullable Output<Boolean> trafficLogs;
+    private @Nullable Output<Boolean> trafficLogs;
 
-    public Output<Boolean> trafficLogs() {
-        return this.trafficLogs == null ? Codegen.empty() : this.trafficLogs;
+    public Optional<Output<Boolean>> trafficLogs() {
+        return Optional.ofNullable(this.trafficLogs);
     }
 
-    public EndpointArgs(
-        @Nullable Output<String> description,
-        Output<String> endpointId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<EndpointSeverity> severity,
-        @Nullable Output<Boolean> trafficLogs) {
-        this.description = description;
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = project;
-        this.requestId = requestId;
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.trafficLogs = trafficLogs;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.description = Codegen.empty();
-        this.endpointId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.trafficLogs = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.description = $.description;
+        this.endpointId = $.endpointId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.network = $.network;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.severity = $.severity;
+        this.trafficLogs = $.trafficLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> endpointId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<EndpointSeverity> severity;
-        private @Nullable Output<Boolean> trafficLogs;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.endpointId = defaults.endpointId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.severity = defaults.severity;
-    	      this.trafficLogs = defaults.trafficLogs;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endpointId(Output<String> endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder endpointId(String endpointId) {
-            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
-            return this;
+            return endpointId(Output.of(endpointId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder severity(Output<EndpointSeverity> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(EndpointSeverity severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
+            return severity(Output.of(severity));
         }
+
         public Builder trafficLogs(@Nullable Output<Boolean> trafficLogs) {
-            this.trafficLogs = trafficLogs;
+            $.trafficLogs = trafficLogs;
             return this;
         }
-        public Builder trafficLogs(@Nullable Boolean trafficLogs) {
-            this.trafficLogs = Codegen.ofNullable(trafficLogs);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(description, endpointId, labels, location, network, project, requestId, severity, trafficLogs);
+
+        public Builder trafficLogs(Boolean trafficLogs) {
+            return trafficLogs(Output.of(trafficLogs));
+        }
+
+        public EndpointArgs build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

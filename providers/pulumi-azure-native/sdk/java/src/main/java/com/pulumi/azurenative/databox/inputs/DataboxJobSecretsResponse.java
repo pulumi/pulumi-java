@@ -28,7 +28,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dcAccessSecurityCode", required=true)
-      private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
+    private DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
@@ -39,7 +39,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="error", required=true)
-      private final CloudErrorResponse error;
+    private CloudErrorResponse error;
 
     public CloudErrorResponse error() {
         return this.error;
@@ -51,7 +51,7 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="jobSecretsType", required=true)
-      private final String jobSecretsType;
+    private String jobSecretsType;
 
     public String jobSecretsType() {
         return this.jobSecretsType;
@@ -62,76 +62,69 @@ public final class DataboxJobSecretsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="podSecrets")
-      private final @Nullable List<DataBoxSecretResponse> podSecrets;
+    private @Nullable List<DataBoxSecretResponse> podSecrets;
 
-    public List<DataBoxSecretResponse> podSecrets() {
-        return this.podSecrets == null ? List.of() : this.podSecrets;
+    public Optional<List<DataBoxSecretResponse>> podSecrets() {
+        return Optional.ofNullable(this.podSecrets);
     }
 
-    public DataboxJobSecretsResponse(
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        CloudErrorResponse error,
-        String jobSecretsType,
-        @Nullable List<DataBoxSecretResponse> podSecrets) {
-        this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.jobSecretsType = Codegen.stringProp("jobSecretsType").arg(jobSecretsType).require();
-        this.podSecrets = podSecrets;
-    }
+    private DataboxJobSecretsResponse() {}
 
-    private DataboxJobSecretsResponse() {
-        this.dcAccessSecurityCode = null;
-        this.error = null;
-        this.jobSecretsType = null;
-        this.podSecrets = List.of();
+    private DataboxJobSecretsResponse(DataboxJobSecretsResponse $) {
+        this.dcAccessSecurityCode = $.dcAccessSecurityCode;
+        this.error = $.error;
+        this.jobSecretsType = $.jobSecretsType;
+        this.podSecrets = $.podSecrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataboxJobSecretsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DcAccessSecurityCodeResponse dcAccessSecurityCode;
-        private CloudErrorResponse error;
-        private String jobSecretsType;
-        private @Nullable List<DataBoxSecretResponse> podSecrets;
+        private DataboxJobSecretsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataboxJobSecretsResponse();
         }
 
         public Builder(DataboxJobSecretsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dcAccessSecurityCode = defaults.dcAccessSecurityCode;
-    	      this.error = defaults.error;
-    	      this.jobSecretsType = defaults.jobSecretsType;
-    	      this.podSecrets = defaults.podSecrets;
+            $ = new DataboxJobSecretsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
-            this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
+            $.dcAccessSecurityCode = dcAccessSecurityCode;
             return this;
         }
+
         public Builder error(CloudErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder jobSecretsType(String jobSecretsType) {
-            this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
+            $.jobSecretsType = jobSecretsType;
             return this;
         }
+
         public Builder podSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
-            this.podSecrets = podSecrets;
+            $.podSecrets = podSecrets;
             return this;
         }
+
         public Builder podSecrets(DataBoxSecretResponse... podSecrets) {
             return podSecrets(List.of(podSecrets));
-        }        public DataboxJobSecretsResponse build() {
-            return new DataboxJobSecretsResponse(dcAccessSecurityCode, error, jobSecretsType, podSecrets);
+        }
+
+        public DataboxJobSecretsResponse build() {
+            $.dcAccessSecurityCode = Objects.requireNonNull($.dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.jobSecretsType = Codegen.stringProp("jobSecretsType").arg($.jobSecretsType).require();
+            return $;
         }
     }
+
 }

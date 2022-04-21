@@ -26,7 +26,7 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentHash", required=true)
-      private final ContentHashResponse contentHash;
+    private ContentHashResponse contentHash;
 
     public ContentHashResponse contentHash() {
         return this.contentHash;
@@ -37,7 +37,7 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentSize", required=true)
-      private final Double contentSize;
+    private Double contentSize;
 
     public Double contentSize() {
         return this.contentSize;
@@ -48,7 +48,7 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentVersion", required=true)
-      private final String contentVersion;
+    private String contentVersion;
 
     public String contentVersion() {
         return this.contentVersion;
@@ -59,7 +59,7 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final Object metadata;
+    private Object metadata;
 
     public Object metadata() {
         return this.metadata;
@@ -70,82 +70,72 @@ public final class ContentLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public ContentLinkResponse(
-        ContentHashResponse contentHash,
-        Double contentSize,
-        String contentVersion,
-        Object metadata,
-        @Nullable String uri) {
-        this.contentHash = Objects.requireNonNull(contentHash, "expected parameter 'contentHash' to be non-null");
-        this.contentSize = Objects.requireNonNull(contentSize, "expected parameter 'contentSize' to be non-null");
-        this.contentVersion = Objects.requireNonNull(contentVersion, "expected parameter 'contentVersion' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.uri = uri;
-    }
+    private ContentLinkResponse() {}
 
-    private ContentLinkResponse() {
-        this.contentHash = null;
-        this.contentSize = null;
-        this.contentVersion = null;
-        this.metadata = null;
-        this.uri = null;
+    private ContentLinkResponse(ContentLinkResponse $) {
+        this.contentHash = $.contentHash;
+        this.contentSize = $.contentSize;
+        this.contentVersion = $.contentVersion;
+        this.metadata = $.metadata;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ContentHashResponse contentHash;
-        private Double contentSize;
-        private String contentVersion;
-        private Object metadata;
-        private @Nullable String uri;
+        private ContentLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentLinkResponse();
         }
 
         public Builder(ContentLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHash = defaults.contentHash;
-    	      this.contentSize = defaults.contentSize;
-    	      this.contentVersion = defaults.contentVersion;
-    	      this.metadata = defaults.metadata;
-    	      this.uri = defaults.uri;
+            $ = new ContentLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHash(ContentHashResponse contentHash) {
-            this.contentHash = Objects.requireNonNull(contentHash);
+            $.contentHash = contentHash;
             return this;
         }
+
         public Builder contentSize(Double contentSize) {
-            this.contentSize = Objects.requireNonNull(contentSize);
+            $.contentSize = contentSize;
             return this;
         }
+
         public Builder contentVersion(String contentVersion) {
-            this.contentVersion = Objects.requireNonNull(contentVersion);
+            $.contentVersion = contentVersion;
             return this;
         }
+
         public Builder metadata(Object metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public ContentLinkResponse build() {
-            return new ContentLinkResponse(contentHash, contentSize, contentVersion, metadata, uri);
+        }
+
+        public ContentLinkResponse build() {
+            $.contentHash = Objects.requireNonNull($.contentHash, "expected parameter 'contentHash' to be non-null");
+            $.contentSize = Objects.requireNonNull($.contentSize, "expected parameter 'contentSize' to be non-null");
+            $.contentVersion = Objects.requireNonNull($.contentVersion, "expected parameter 'contentVersion' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

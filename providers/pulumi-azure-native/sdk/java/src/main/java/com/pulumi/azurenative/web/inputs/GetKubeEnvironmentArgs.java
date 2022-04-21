@@ -17,7 +17,7 @@ public final class GetKubeEnvironmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetKubeEnvironmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetKubeEnvironmentArgs(
-        String name,
-        String resourceGroupName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetKubeEnvironmentArgs() {}
 
-    private GetKubeEnvironmentArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetKubeEnvironmentArgs(GetKubeEnvironmentArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKubeEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
+        private GetKubeEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKubeEnvironmentArgs();
         }
 
         public Builder(GetKubeEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetKubeEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetKubeEnvironmentArgs build() {
-            return new GetKubeEnvironmentArgs(name, resourceGroupName);
+        }
+
+        public GetKubeEnvironmentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetServerAdvisorArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="advisorName", required=true)
-      private final String advisorName;
+    private String advisorName;
 
     public String advisorName() {
         return this.advisorName;
@@ -28,7 +28,7 @@ public final class GetServerAdvisorArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerAdvisorArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerAdvisorArgs(
-        String advisorName,
-        String resourceGroupName,
-        String serverName) {
-        this.advisorName = Objects.requireNonNull(advisorName, "expected parameter 'advisorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerAdvisorArgs() {}
 
-    private GetServerAdvisorArgs() {
-        this.advisorName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerAdvisorArgs(GetServerAdvisorArgs $) {
+        this.advisorName = $.advisorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerAdvisorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String advisorName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerAdvisorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerAdvisorArgs();
         }
 
         public Builder(GetServerAdvisorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advisorName = defaults.advisorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerAdvisorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advisorName(String advisorName) {
-            this.advisorName = Objects.requireNonNull(advisorName);
+            $.advisorName = advisorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerAdvisorArgs build() {
-            return new GetServerAdvisorArgs(advisorName, resourceGroupName, serverName);
+        }
+
+        public GetServerAdvisorArgs build() {
+            $.advisorName = Objects.requireNonNull($.advisorName, "expected parameter 'advisorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

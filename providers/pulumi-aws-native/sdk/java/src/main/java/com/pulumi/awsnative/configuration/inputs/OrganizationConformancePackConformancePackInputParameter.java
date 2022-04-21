@@ -17,62 +17,59 @@ public final class OrganizationConformancePackConformancePackInputParameter exte
     public static final OrganizationConformancePackConformancePackInputParameter Empty = new OrganizationConformancePackConformancePackInputParameter();
 
     @Import(name="parameterName", required=true)
-      private final String parameterName;
+    private String parameterName;
 
     public String parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
-      private final String parameterValue;
+    private String parameterValue;
 
     public String parameterValue() {
         return this.parameterValue;
     }
 
-    public OrganizationConformancePackConformancePackInputParameter(
-        String parameterName,
-        String parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private OrganizationConformancePackConformancePackInputParameter() {}
 
-    private OrganizationConformancePackConformancePackInputParameter() {
-        this.parameterName = null;
-        this.parameterValue = null;
+    private OrganizationConformancePackConformancePackInputParameter(OrganizationConformancePackConformancePackInputParameter $) {
+        this.parameterName = $.parameterName;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationConformancePackConformancePackInputParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterName;
-        private String parameterValue;
+        private OrganizationConformancePackConformancePackInputParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationConformancePackConformancePackInputParameter();
         }
 
         public Builder(OrganizationConformancePackConformancePackInputParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterName = defaults.parameterName;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new OrganizationConformancePackConformancePackInputParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterName(String parameterName) {
-            this.parameterName = Objects.requireNonNull(parameterName);
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
-        }        public OrganizationConformancePackConformancePackInputParameter build() {
-            return new OrganizationConformancePackConformancePackInputParameter(parameterName, parameterValue);
+        }
+
+        public OrganizationConformancePackConformancePackInputParameter build() {
+            $.parameterName = Objects.requireNonNull($.parameterName, "expected parameter 'parameterName' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

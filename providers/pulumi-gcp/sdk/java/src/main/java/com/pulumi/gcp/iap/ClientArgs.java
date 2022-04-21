@@ -5,7 +5,6 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class ClientArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brand", required=true)
-      private final Output<String> brand;
+    private Output<String> brand;
 
     public Output<String> brand() {
         return this.brand;
@@ -32,63 +31,60 @@ public final class ClientArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
-    public ClientArgs(
-        Output<String> brand,
-        Output<String> displayName) {
-        this.brand = Objects.requireNonNull(brand, "expected parameter 'brand' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private ClientArgs() {}
 
-    private ClientArgs() {
-        this.brand = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private ClientArgs(ClientArgs $) {
+        this.brand = $.brand;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> brand;
-        private Output<String> displayName;
+        private ClientArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientArgs();
         }
 
         public Builder(ClientArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brand = defaults.brand;
-    	      this.displayName = defaults.displayName;
+            $ = new ClientArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brand(Output<String> brand) {
-            this.brand = Objects.requireNonNull(brand);
+            $.brand = brand;
             return this;
         }
+
         public Builder brand(String brand) {
-            this.brand = Output.of(Objects.requireNonNull(brand));
-            return this;
+            return brand(Output.of(brand));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
-        }        public ClientArgs build() {
-            return new ClientArgs(brand, displayName);
+            return displayName(Output.of(displayName));
+        }
+
+        public ClientArgs build() {
+            $.brand = Objects.requireNonNull($.brand, "expected parameter 'brand' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

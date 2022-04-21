@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -30,63 +29,60 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
      * 
      */
     @Import(name="clientSecret", required=true)
-      private final Output<String> clientSecret;
+    private Output<String> clientSecret;
 
     public Output<String> clientSecret() {
         return this.clientSecret;
     }
 
-    public EventConnectionAuthParametersOauthClientParametersGetArgs(
-        Output<String> clientId,
-        Output<String> clientSecret) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-    }
+    private EventConnectionAuthParametersOauthClientParametersGetArgs() {}
 
-    private EventConnectionAuthParametersOauthClientParametersGetArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
+    private EventConnectionAuthParametersOauthClientParametersGetArgs(EventConnectionAuthParametersOauthClientParametersGetArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventConnectionAuthParametersOauthClientParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private Output<String> clientSecret;
+        private EventConnectionAuthParametersOauthClientParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventConnectionAuthParametersOauthClientParametersGetArgs();
         }
 
         public Builder(EventConnectionAuthParametersOauthClientParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new EventConnectionAuthParametersOauthClientParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(Output<String> clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
-            return this;
-        }        public EventConnectionAuthParametersOauthClientParametersGetArgs build() {
-            return new EventConnectionAuthParametersOauthClientParametersGetArgs(clientId, clientSecret);
+            return clientSecret(Output.of(clientSecret));
+        }
+
+        public EventConnectionAuthParametersOauthClientParametersGetArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            return $;
         }
     }
+
 }

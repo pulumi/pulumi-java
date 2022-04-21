@@ -5,9 +5,9 @@ package com.pulumi.azurenative.iotsecurity;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class OnPremiseSensorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="onPremiseSensorName")
-      private final @Nullable Output<String> onPremiseSensorName;
+    private @Nullable Output<String> onPremiseSensorName;
 
-    public Output<String> onPremiseSensorName() {
-        return this.onPremiseSensorName == null ? Codegen.empty() : this.onPremiseSensorName;
+    public Optional<Output<String>> onPremiseSensorName() {
+        return Optional.ofNullable(this.onPremiseSensorName);
     }
 
-    public OnPremiseSensorArgs(@Nullable Output<String> onPremiseSensorName) {
-        this.onPremiseSensorName = onPremiseSensorName;
-    }
+    private OnPremiseSensorArgs() {}
 
-    private OnPremiseSensorArgs() {
-        this.onPremiseSensorName = Codegen.empty();
+    private OnPremiseSensorArgs(OnPremiseSensorArgs $) {
+        this.onPremiseSensorName = $.onPremiseSensorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremiseSensorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> onPremiseSensorName;
+        private OnPremiseSensorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremiseSensorArgs();
         }
 
         public Builder(OnPremiseSensorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onPremiseSensorName = defaults.onPremiseSensorName;
+            $ = new OnPremiseSensorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onPremiseSensorName(@Nullable Output<String> onPremiseSensorName) {
-            this.onPremiseSensorName = onPremiseSensorName;
+            $.onPremiseSensorName = onPremiseSensorName;
             return this;
         }
-        public Builder onPremiseSensorName(@Nullable String onPremiseSensorName) {
-            this.onPremiseSensorName = Codegen.ofNullable(onPremiseSensorName);
-            return this;
-        }        public OnPremiseSensorArgs build() {
-            return new OnPremiseSensorArgs(onPremiseSensorName);
+
+        public Builder onPremiseSensorName(String onPremiseSensorName) {
+            return onPremiseSensorName(Output.of(onPremiseSensorName));
+        }
+
+        public OnPremiseSensorArgs build() {
+            return $;
         }
     }
+
 }

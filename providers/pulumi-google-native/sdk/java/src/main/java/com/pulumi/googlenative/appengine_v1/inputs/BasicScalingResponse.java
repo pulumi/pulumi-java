@@ -22,7 +22,7 @@ public final class BasicScalingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="idleTimeout", required=true)
-      private final String idleTimeout;
+    private String idleTimeout;
 
     public String idleTimeout() {
         return this.idleTimeout;
@@ -33,55 +33,52 @@ public final class BasicScalingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maxInstances", required=true)
-      private final Integer maxInstances;
+    private Integer maxInstances;
 
     public Integer maxInstances() {
         return this.maxInstances;
     }
 
-    public BasicScalingResponse(
-        String idleTimeout,
-        Integer maxInstances) {
-        this.idleTimeout = Objects.requireNonNull(idleTimeout, "expected parameter 'idleTimeout' to be non-null");
-        this.maxInstances = Objects.requireNonNull(maxInstances, "expected parameter 'maxInstances' to be non-null");
-    }
+    private BasicScalingResponse() {}
 
-    private BasicScalingResponse() {
-        this.idleTimeout = null;
-        this.maxInstances = null;
+    private BasicScalingResponse(BasicScalingResponse $) {
+        this.idleTimeout = $.idleTimeout;
+        this.maxInstances = $.maxInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicScalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String idleTimeout;
-        private Integer maxInstances;
+        private BasicScalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicScalingResponse();
         }
 
         public Builder(BasicScalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleTimeout = defaults.idleTimeout;
-    	      this.maxInstances = defaults.maxInstances;
+            $ = new BasicScalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder idleTimeout(String idleTimeout) {
-            this.idleTimeout = Objects.requireNonNull(idleTimeout);
+            $.idleTimeout = idleTimeout;
             return this;
         }
+
         public Builder maxInstances(Integer maxInstances) {
-            this.maxInstances = Objects.requireNonNull(maxInstances);
+            $.maxInstances = maxInstances;
             return this;
-        }        public BasicScalingResponse build() {
-            return new BasicScalingResponse(idleTimeout, maxInstances);
+        }
+
+        public BasicScalingResponse build() {
+            $.idleTimeout = Objects.requireNonNull($.idleTimeout, "expected parameter 'idleTimeout' to be non-null");
+            $.maxInstances = Objects.requireNonNull($.maxInstances, "expected parameter 'maxInstances' to be non-null");
+            return $;
         }
     }
+
 }

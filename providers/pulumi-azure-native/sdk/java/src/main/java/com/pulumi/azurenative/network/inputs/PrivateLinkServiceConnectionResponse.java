@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -36,10 +36,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="groupIds")
-      private final @Nullable List<String> groupIds;
+    private @Nullable List<String> groupIds;
 
-    public List<String> groupIds() {
-        return this.groupIds == null ? List.of() : this.groupIds;
+    public Optional<List<String>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="privateLinkServiceId")
-      private final @Nullable String privateLinkServiceId;
+    private @Nullable String privateLinkServiceId;
 
     public Optional<String> privateLinkServiceId() {
-        return this.privateLinkServiceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceId);
+        return Optional.ofNullable(this.privateLinkServiceId);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -102,10 +102,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable String requestMessage;
+    private @Nullable String requestMessage;
 
     public Optional<String> requestMessage() {
-        return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -113,121 +113,99 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PrivateLinkServiceConnectionResponse(
-        String etag,
-        @Nullable List<String> groupIds,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @Nullable String privateLinkServiceId,
-        String provisioningState,
-        @Nullable String requestMessage,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.groupIds = groupIds;
-        this.id = id;
-        this.name = name;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.privateLinkServiceId = privateLinkServiceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.requestMessage = requestMessage;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PrivateLinkServiceConnectionResponse() {}
 
-    private PrivateLinkServiceConnectionResponse() {
-        this.etag = null;
-        this.groupIds = List.of();
-        this.id = null;
-        this.name = null;
-        this.privateLinkServiceConnectionState = null;
-        this.privateLinkServiceId = null;
-        this.provisioningState = null;
-        this.requestMessage = null;
-        this.type = null;
+    private PrivateLinkServiceConnectionResponse(PrivateLinkServiceConnectionResponse $) {
+        this.etag = $.etag;
+        this.groupIds = $.groupIds;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.privateLinkServiceId = $.privateLinkServiceId;
+        this.provisioningState = $.provisioningState;
+        this.requestMessage = $.requestMessage;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable List<String> groupIds;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private @Nullable String privateLinkServiceId;
-        private String provisioningState;
-        private @Nullable String requestMessage;
-        private String type;
+        private PrivateLinkServiceConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionResponse();
         }
 
         public Builder(PrivateLinkServiceConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.groupIds = defaults.groupIds;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.privateLinkServiceId = defaults.privateLinkServiceId;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.type = defaults.type;
+            $ = new PrivateLinkServiceConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = groupIds;
+            $.groupIds = groupIds;
             return this;
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
-            this.privateLinkServiceId = privateLinkServiceId;
+            $.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PrivateLinkServiceConnectionResponse build() {
-            return new PrivateLinkServiceConnectionResponse(etag, groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, provisioningState, requestMessage, type);
+        }
+
+        public PrivateLinkServiceConnectionResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

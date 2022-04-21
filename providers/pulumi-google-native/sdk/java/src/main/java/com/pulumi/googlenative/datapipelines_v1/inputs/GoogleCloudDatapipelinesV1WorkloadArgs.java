@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends com.pulumi.res
      * 
      */
     @Import(name="dataflowFlexTemplateRequest")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
+    private @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest() {
-        return this.dataflowFlexTemplateRequest == null ? Codegen.empty() : this.dataflowFlexTemplateRequest;
+    public Optional<Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs>> dataflowFlexTemplateRequest() {
+        return Optional.ofNullable(this.dataflowFlexTemplateRequest);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDatapipelinesV1WorkloadArgs extends com.pulumi.res
      * 
      */
     @Import(name="dataflowLaunchTemplateRequest")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
+    private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
 
-    public Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest() {
-        return this.dataflowLaunchTemplateRequest == null ? Codegen.empty() : this.dataflowLaunchTemplateRequest;
+    public Optional<Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs>> dataflowLaunchTemplateRequest() {
+        return Optional.ofNullable(this.dataflowLaunchTemplateRequest);
     }
 
-    public GoogleCloudDatapipelinesV1WorkloadArgs(
-        @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest,
-        @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
-        this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
-        this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
-    }
+    private GoogleCloudDatapipelinesV1WorkloadArgs() {}
 
-    private GoogleCloudDatapipelinesV1WorkloadArgs() {
-        this.dataflowFlexTemplateRequest = Codegen.empty();
-        this.dataflowLaunchTemplateRequest = Codegen.empty();
+    private GoogleCloudDatapipelinesV1WorkloadArgs(GoogleCloudDatapipelinesV1WorkloadArgs $) {
+        this.dataflowFlexTemplateRequest = $.dataflowFlexTemplateRequest;
+        this.dataflowLaunchTemplateRequest = $.dataflowLaunchTemplateRequest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1WorkloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest;
-        private @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest;
+        private GoogleCloudDatapipelinesV1WorkloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1WorkloadArgs();
         }
 
         public Builder(GoogleCloudDatapipelinesV1WorkloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataflowFlexTemplateRequest = defaults.dataflowFlexTemplateRequest;
-    	      this.dataflowLaunchTemplateRequest = defaults.dataflowLaunchTemplateRequest;
+            $ = new GoogleCloudDatapipelinesV1WorkloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataflowFlexTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs> dataflowFlexTemplateRequest) {
-            this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
+            $.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
             return this;
         }
-        public Builder dataflowFlexTemplateRequest(@Nullable GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs dataflowFlexTemplateRequest) {
-            this.dataflowFlexTemplateRequest = Codegen.ofNullable(dataflowFlexTemplateRequest);
-            return this;
+
+        public Builder dataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs dataflowFlexTemplateRequest) {
+            return dataflowFlexTemplateRequest(Output.of(dataflowFlexTemplateRequest));
         }
+
         public Builder dataflowLaunchTemplateRequest(@Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs> dataflowLaunchTemplateRequest) {
-            this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
+            $.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
             return this;
         }
-        public Builder dataflowLaunchTemplateRequest(@Nullable GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs dataflowLaunchTemplateRequest) {
-            this.dataflowLaunchTemplateRequest = Codegen.ofNullable(dataflowLaunchTemplateRequest);
-            return this;
-        }        public GoogleCloudDatapipelinesV1WorkloadArgs build() {
-            return new GoogleCloudDatapipelinesV1WorkloadArgs(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
+
+        public Builder dataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs dataflowLaunchTemplateRequest) {
+            return dataflowLaunchTemplateRequest(Output.of(dataflowLaunchTemplateRequest));
+        }
+
+        public GoogleCloudDatapipelinesV1WorkloadArgs build() {
+            return $;
         }
     }
+
 }

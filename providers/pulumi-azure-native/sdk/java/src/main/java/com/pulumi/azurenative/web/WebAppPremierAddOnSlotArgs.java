@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="marketplaceOffer")
-      private final @Nullable Output<String> marketplaceOffer;
+    private @Nullable Output<String> marketplaceOffer;
 
-    public Output<String> marketplaceOffer() {
-        return this.marketplaceOffer == null ? Codegen.empty() : this.marketplaceOffer;
+    public Optional<Output<String>> marketplaceOffer() {
+        return Optional.ofNullable(this.marketplaceOffer);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="marketplacePublisher")
-      private final @Nullable Output<String> marketplacePublisher;
+    private @Nullable Output<String> marketplacePublisher;
 
-    public Output<String> marketplacePublisher() {
-        return this.marketplacePublisher == null ? Codegen.empty() : this.marketplacePublisher;
+    public Optional<Output<String>> marketplacePublisher() {
+        return Optional.ofNullable(this.marketplacePublisher);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -76,10 +76,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="premierAddOnName")
-      private final @Nullable Output<String> premierAddOnName;
+    private @Nullable Output<String> premierAddOnName;
 
-    public Output<String> premierAddOnName() {
-        return this.premierAddOnName == null ? Codegen.empty() : this.premierAddOnName;
+    public Optional<Output<String>> premierAddOnName() {
+        return Optional.ofNullable(this.premierAddOnName);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="product")
-      private final @Nullable Output<String> product;
+    private @Nullable Output<String> product;
 
-    public Output<String> product() {
-        return this.product == null ? Codegen.empty() : this.product;
+    public Optional<Output<String>> product() {
+        return Optional.ofNullable(this.product);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -109,10 +109,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
@@ -131,10 +131,10 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -142,193 +142,161 @@ public final class WebAppPremierAddOnSlotArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vendor")
-      private final @Nullable Output<String> vendor;
+    private @Nullable Output<String> vendor;
 
-    public Output<String> vendor() {
-        return this.vendor == null ? Codegen.empty() : this.vendor;
+    public Optional<Output<String>> vendor() {
+        return Optional.ofNullable(this.vendor);
     }
 
-    public WebAppPremierAddOnSlotArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> marketplaceOffer,
-        @Nullable Output<String> marketplacePublisher,
-        Output<String> name,
-        @Nullable Output<String> premierAddOnName,
-        @Nullable Output<String> product,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sku,
-        Output<String> slot,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vendor) {
-        this.kind = kind;
-        this.location = location;
-        this.marketplaceOffer = marketplaceOffer;
-        this.marketplacePublisher = marketplacePublisher;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.premierAddOnName = premierAddOnName;
-        this.product = product;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-        this.tags = tags;
-        this.vendor = vendor;
-    }
+    private WebAppPremierAddOnSlotArgs() {}
 
-    private WebAppPremierAddOnSlotArgs() {
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.marketplaceOffer = Codegen.empty();
-        this.marketplacePublisher = Codegen.empty();
-        this.name = Codegen.empty();
-        this.premierAddOnName = Codegen.empty();
-        this.product = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.slot = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vendor = Codegen.empty();
+    private WebAppPremierAddOnSlotArgs(WebAppPremierAddOnSlotArgs $) {
+        this.kind = $.kind;
+        this.location = $.location;
+        this.marketplaceOffer = $.marketplaceOffer;
+        this.marketplacePublisher = $.marketplacePublisher;
+        this.name = $.name;
+        this.premierAddOnName = $.premierAddOnName;
+        this.product = $.product;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.slot = $.slot;
+        this.tags = $.tags;
+        this.vendor = $.vendor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppPremierAddOnSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> marketplaceOffer;
-        private @Nullable Output<String> marketplacePublisher;
-        private Output<String> name;
-        private @Nullable Output<String> premierAddOnName;
-        private @Nullable Output<String> product;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sku;
-        private Output<String> slot;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vendor;
+        private WebAppPremierAddOnSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppPremierAddOnSlotArgs();
         }
 
         public Builder(WebAppPremierAddOnSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.marketplaceOffer = defaults.marketplaceOffer;
-    	      this.marketplacePublisher = defaults.marketplacePublisher;
-    	      this.name = defaults.name;
-    	      this.premierAddOnName = defaults.premierAddOnName;
-    	      this.product = defaults.product;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.slot = defaults.slot;
-    	      this.tags = defaults.tags;
-    	      this.vendor = defaults.vendor;
+            $ = new WebAppPremierAddOnSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder marketplaceOffer(@Nullable Output<String> marketplaceOffer) {
-            this.marketplaceOffer = marketplaceOffer;
+            $.marketplaceOffer = marketplaceOffer;
             return this;
         }
-        public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
-            this.marketplaceOffer = Codegen.ofNullable(marketplaceOffer);
-            return this;
+
+        public Builder marketplaceOffer(String marketplaceOffer) {
+            return marketplaceOffer(Output.of(marketplaceOffer));
         }
+
         public Builder marketplacePublisher(@Nullable Output<String> marketplacePublisher) {
-            this.marketplacePublisher = marketplacePublisher;
+            $.marketplacePublisher = marketplacePublisher;
             return this;
         }
-        public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
-            this.marketplacePublisher = Codegen.ofNullable(marketplacePublisher);
-            return this;
+
+        public Builder marketplacePublisher(String marketplacePublisher) {
+            return marketplacePublisher(Output.of(marketplacePublisher));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder premierAddOnName(@Nullable Output<String> premierAddOnName) {
-            this.premierAddOnName = premierAddOnName;
+            $.premierAddOnName = premierAddOnName;
             return this;
         }
-        public Builder premierAddOnName(@Nullable String premierAddOnName) {
-            this.premierAddOnName = Codegen.ofNullable(premierAddOnName);
-            return this;
+
+        public Builder premierAddOnName(String premierAddOnName) {
+            return premierAddOnName(Output.of(premierAddOnName));
         }
+
         public Builder product(@Nullable Output<String> product) {
-            this.product = product;
+            $.product = product;
             return this;
         }
-        public Builder product(@Nullable String product) {
-            this.product = Codegen.ofNullable(product);
-            return this;
+
+        public Builder product(String product) {
+            return product(Output.of(product));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
+            return slot(Output.of(slot));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vendor(@Nullable Output<String> vendor) {
-            this.vendor = vendor;
+            $.vendor = vendor;
             return this;
         }
-        public Builder vendor(@Nullable String vendor) {
-            this.vendor = Codegen.ofNullable(vendor);
-            return this;
-        }        public WebAppPremierAddOnSlotArgs build() {
-            return new WebAppPremierAddOnSlotArgs(kind, location, marketplaceOffer, marketplacePublisher, name, premierAddOnName, product, resourceGroupName, sku, slot, tags, vendor);
+
+        public Builder vendor(String vendor) {
+            return vendor(Output.of(vendor));
+        }
+
+        public WebAppPremierAddOnSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="autoRenew")
-      private final @Nullable Boolean autoRenew;
+    private @Nullable Boolean autoRenew;
 
     public Optional<Boolean> autoRenew() {
-        return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
+        return Optional.ofNullable(this.autoRenew);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="current")
-      private final @Nullable CommitmentPeriodResponse current;
+    private @Nullable CommitmentPeriodResponse current;
 
     public Optional<CommitmentPeriodResponse> current() {
-        return this.current == null ? Optional.empty() : Optional.ofNullable(this.current);
+        return Optional.ofNullable(this.current);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="hostingModel")
-      private final @Nullable String hostingModel;
+    private @Nullable String hostingModel;
 
     public Optional<String> hostingModel() {
-        return this.hostingModel == null ? Optional.empty() : Optional.ofNullable(this.hostingModel);
+        return Optional.ofNullable(this.hostingModel);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="last", required=true)
-      private final CommitmentPeriodResponse last;
+    private CommitmentPeriodResponse last;
 
     public CommitmentPeriodResponse last() {
         return this.last;
@@ -69,10 +69,10 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="next")
-      private final @Nullable CommitmentPeriodResponse next;
+    private @Nullable CommitmentPeriodResponse next;
 
     public Optional<CommitmentPeriodResponse> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
     /**
@@ -80,91 +80,75 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="planType")
-      private final @Nullable String planType;
+    private @Nullable String planType;
 
     public Optional<String> planType() {
-        return this.planType == null ? Optional.empty() : Optional.ofNullable(this.planType);
+        return Optional.ofNullable(this.planType);
     }
 
-    public CommitmentPlanPropertiesResponse(
-        @Nullable Boolean autoRenew,
-        @Nullable CommitmentPeriodResponse current,
-        @Nullable String hostingModel,
-        CommitmentPeriodResponse last,
-        @Nullable CommitmentPeriodResponse next,
-        @Nullable String planType) {
-        this.autoRenew = autoRenew;
-        this.current = current;
-        this.hostingModel = hostingModel;
-        this.last = Objects.requireNonNull(last, "expected parameter 'last' to be non-null");
-        this.next = next;
-        this.planType = planType;
-    }
+    private CommitmentPlanPropertiesResponse() {}
 
-    private CommitmentPlanPropertiesResponse() {
-        this.autoRenew = null;
-        this.current = null;
-        this.hostingModel = null;
-        this.last = null;
-        this.next = null;
-        this.planType = null;
+    private CommitmentPlanPropertiesResponse(CommitmentPlanPropertiesResponse $) {
+        this.autoRenew = $.autoRenew;
+        this.current = $.current;
+        this.hostingModel = $.hostingModel;
+        this.last = $.last;
+        this.next = $.next;
+        this.planType = $.planType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentPlanPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean autoRenew;
-        private @Nullable CommitmentPeriodResponse current;
-        private @Nullable String hostingModel;
-        private CommitmentPeriodResponse last;
-        private @Nullable CommitmentPeriodResponse next;
-        private @Nullable String planType;
+        private CommitmentPlanPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentPlanPropertiesResponse();
         }
 
         public Builder(CommitmentPlanPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRenew = defaults.autoRenew;
-    	      this.current = defaults.current;
-    	      this.hostingModel = defaults.hostingModel;
-    	      this.last = defaults.last;
-    	      this.next = defaults.next;
-    	      this.planType = defaults.planType;
+            $ = new CommitmentPlanPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = autoRenew;
+            $.autoRenew = autoRenew;
             return this;
         }
+
         public Builder current(@Nullable CommitmentPeriodResponse current) {
-            this.current = current;
+            $.current = current;
             return this;
         }
+
         public Builder hostingModel(@Nullable String hostingModel) {
-            this.hostingModel = hostingModel;
+            $.hostingModel = hostingModel;
             return this;
         }
+
         public Builder last(CommitmentPeriodResponse last) {
-            this.last = Objects.requireNonNull(last);
+            $.last = last;
             return this;
         }
+
         public Builder next(@Nullable CommitmentPeriodResponse next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
+
         public Builder planType(@Nullable String planType) {
-            this.planType = planType;
+            $.planType = planType;
             return this;
-        }        public CommitmentPlanPropertiesResponse build() {
-            return new CommitmentPlanPropertiesResponse(autoRenew, current, hostingModel, last, next, planType);
+        }
+
+        public CommitmentPlanPropertiesResponse build() {
+            $.last = Objects.requireNonNull($.last, "expected parameter 'last' to be non-null");
+            return $;
         }
     }
+
 }

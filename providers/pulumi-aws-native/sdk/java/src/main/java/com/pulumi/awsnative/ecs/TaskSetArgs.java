@@ -10,10 +10,10 @@ import com.pulumi.awsnative.ecs.inputs.TaskSetScaleArgs;
 import com.pulumi.awsnative.ecs.inputs.TaskSetServiceRegistryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
@@ -37,10 +37,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -48,24 +48,24 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchType")
-      private final @Nullable Output<TaskSetLaunchType> launchType;
+    private @Nullable Output<TaskSetLaunchType> launchType;
 
-    public Output<TaskSetLaunchType> launchType() {
-        return this.launchType == null ? Codegen.empty() : this.launchType;
+    public Optional<Output<TaskSetLaunchType>> launchType() {
+        return Optional.ofNullable(this.launchType);
     }
 
     @Import(name="loadBalancers")
-      private final @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
+    private @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
 
-    public Output<List<TaskSetLoadBalancerArgs>> loadBalancers() {
-        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
+    public Optional<Output<List<TaskSetLoadBalancerArgs>>> loadBalancers() {
+        return Optional.ofNullable(this.loadBalancers);
     }
 
     @Import(name="networkConfiguration")
-      private final @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
+    private @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<TaskSetNetworkConfigurationArgs> networkConfiguration() {
-        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
+    public Optional<Output<TaskSetNetworkConfigurationArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformVersion")
-      private final @Nullable Output<String> platformVersion;
+    private @Nullable Output<String> platformVersion;
 
-    public Output<String> platformVersion() {
-        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
+    public Optional<Output<String>> platformVersion() {
+        return Optional.ofNullable(this.platformVersion);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<TaskSetScaleArgs> scale;
+    private @Nullable Output<TaskSetScaleArgs> scale;
 
-    public Output<TaskSetScaleArgs> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<TaskSetScaleArgs>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -106,10 +106,10 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRegistries")
-      private final @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries;
+    private @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries;
 
-    public Output<List<TaskSetServiceRegistryArgs>> serviceRegistries() {
-        return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
+    public Optional<Output<List<TaskSetServiceRegistryArgs>>> serviceRegistries() {
+        return Optional.ofNullable(this.serviceRegistries);
     }
 
     /**
@@ -117,173 +117,149 @@ public final class TaskSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskDefinition", required=true)
-      private final Output<String> taskDefinition;
+    private Output<String> taskDefinition;
 
     public Output<String> taskDefinition() {
         return this.taskDefinition;
     }
 
-    public TaskSetArgs(
-        Output<String> cluster,
-        @Nullable Output<String> externalId,
-        @Nullable Output<TaskSetLaunchType> launchType,
-        @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers,
-        @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration,
-        @Nullable Output<String> platformVersion,
-        @Nullable Output<TaskSetScaleArgs> scale,
-        Output<String> service,
-        @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries,
-        Output<String> taskDefinition) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.externalId = externalId;
-        this.launchType = launchType;
-        this.loadBalancers = loadBalancers;
-        this.networkConfiguration = networkConfiguration;
-        this.platformVersion = platformVersion;
-        this.scale = scale;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.serviceRegistries = serviceRegistries;
-        this.taskDefinition = Objects.requireNonNull(taskDefinition, "expected parameter 'taskDefinition' to be non-null");
-    }
+    private TaskSetArgs() {}
 
-    private TaskSetArgs() {
-        this.cluster = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.launchType = Codegen.empty();
-        this.loadBalancers = Codegen.empty();
-        this.networkConfiguration = Codegen.empty();
-        this.platformVersion = Codegen.empty();
-        this.scale = Codegen.empty();
-        this.service = Codegen.empty();
-        this.serviceRegistries = Codegen.empty();
-        this.taskDefinition = Codegen.empty();
+    private TaskSetArgs(TaskSetArgs $) {
+        this.cluster = $.cluster;
+        this.externalId = $.externalId;
+        this.launchType = $.launchType;
+        this.loadBalancers = $.loadBalancers;
+        this.networkConfiguration = $.networkConfiguration;
+        this.platformVersion = $.platformVersion;
+        this.scale = $.scale;
+        this.service = $.service;
+        this.serviceRegistries = $.serviceRegistries;
+        this.taskDefinition = $.taskDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cluster;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<TaskSetLaunchType> launchType;
-        private @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
-        private @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Output<String> platformVersion;
-        private @Nullable Output<TaskSetScaleArgs> scale;
-        private Output<String> service;
-        private @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries;
-        private Output<String> taskDefinition;
+        private TaskSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetArgs();
         }
 
         public Builder(TaskSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.externalId = defaults.externalId;
-    	      this.launchType = defaults.launchType;
-    	      this.loadBalancers = defaults.loadBalancers;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.platformVersion = defaults.platformVersion;
-    	      this.scale = defaults.scale;
-    	      this.service = defaults.service;
-    	      this.serviceRegistries = defaults.serviceRegistries;
-    	      this.taskDefinition = defaults.taskDefinition;
+            $ = new TaskSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder launchType(@Nullable Output<TaskSetLaunchType> launchType) {
-            this.launchType = launchType;
+            $.launchType = launchType;
             return this;
         }
-        public Builder launchType(@Nullable TaskSetLaunchType launchType) {
-            this.launchType = Codegen.ofNullable(launchType);
-            return this;
+
+        public Builder launchType(TaskSetLaunchType launchType) {
+            return launchType(Output.of(launchType));
         }
+
         public Builder loadBalancers(@Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers) {
-            this.loadBalancers = loadBalancers;
+            $.loadBalancers = loadBalancers;
             return this;
         }
-        public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerArgs> loadBalancers) {
-            this.loadBalancers = Codegen.ofNullable(loadBalancers);
-            return this;
+
+        public Builder loadBalancers(List<TaskSetLoadBalancerArgs> loadBalancers) {
+            return loadBalancers(Output.of(loadBalancers));
         }
+
         public Builder loadBalancers(TaskSetLoadBalancerArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
+
         public Builder networkConfiguration(@Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
-        public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
-            return this;
+
+        public Builder networkConfiguration(TaskSetNetworkConfigurationArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
         }
+
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
-            this.platformVersion = platformVersion;
+            $.platformVersion = platformVersion;
             return this;
         }
-        public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Codegen.ofNullable(platformVersion);
-            return this;
+
+        public Builder platformVersion(String platformVersion) {
+            return platformVersion(Output.of(platformVersion));
         }
+
         public Builder scale(@Nullable Output<TaskSetScaleArgs> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable TaskSetScaleArgs scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
+
+        public Builder scale(TaskSetScaleArgs scale) {
+            return scale(Output.of(scale));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder serviceRegistries(@Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries) {
-            this.serviceRegistries = serviceRegistries;
+            $.serviceRegistries = serviceRegistries;
             return this;
         }
-        public Builder serviceRegistries(@Nullable List<TaskSetServiceRegistryArgs> serviceRegistries) {
-            this.serviceRegistries = Codegen.ofNullable(serviceRegistries);
-            return this;
+
+        public Builder serviceRegistries(List<TaskSetServiceRegistryArgs> serviceRegistries) {
+            return serviceRegistries(Output.of(serviceRegistries));
         }
+
         public Builder serviceRegistries(TaskSetServiceRegistryArgs... serviceRegistries) {
             return serviceRegistries(List.of(serviceRegistries));
         }
+
         public Builder taskDefinition(Output<String> taskDefinition) {
-            this.taskDefinition = Objects.requireNonNull(taskDefinition);
+            $.taskDefinition = taskDefinition;
             return this;
         }
+
         public Builder taskDefinition(String taskDefinition) {
-            this.taskDefinition = Output.of(Objects.requireNonNull(taskDefinition));
-            return this;
-        }        public TaskSetArgs build() {
-            return new TaskSetArgs(cluster, externalId, launchType, loadBalancers, networkConfiguration, platformVersion, scale, service, serviceRegistries, taskDefinition);
+            return taskDefinition(Output.of(taskDefinition));
+        }
+
+        public TaskSetArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.taskDefinition = Objects.requireNonNull($.taskDefinition, "expected parameter 'taskDefinition' to be non-null");
+            return $;
         }
     }
+
 }

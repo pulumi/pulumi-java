@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class IamPolicyState extends com.pulumi.resources.ResourceArgs {
     public static final IamPolicyState Empty = new IamPolicyState();
 
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -27,10 +27,10 @@ public final class IamPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IamPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -51,109 +51,95 @@ public final class IamPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tableId")
-      private final @Nullable Output<String> tableId;
+    private @Nullable Output<String> tableId;
 
-    public Output<String> tableId() {
-        return this.tableId == null ? Codegen.empty() : this.tableId;
+    public Optional<Output<String>> tableId() {
+        return Optional.ofNullable(this.tableId);
     }
 
-    public IamPolicyState(
-        @Nullable Output<String> datasetId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> tableId) {
-        this.datasetId = datasetId;
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-        this.tableId = tableId;
-    }
+    private IamPolicyState() {}
 
-    private IamPolicyState() {
-        this.datasetId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tableId = Codegen.empty();
+    private IamPolicyState(IamPolicyState $) {
+        this.datasetId = $.datasetId;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> tableId;
+        private IamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IamPolicyState();
         }
 
         public Builder(IamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new IamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tableId(@Nullable Output<String> tableId) {
-            this.tableId = tableId;
+            $.tableId = tableId;
             return this;
         }
-        public Builder tableId(@Nullable String tableId) {
-            this.tableId = Codegen.ofNullable(tableId);
-            return this;
-        }        public IamPolicyState build() {
-            return new IamPolicyState(datasetId, etag, policyData, project, tableId);
+
+        public Builder tableId(String tableId) {
+            return tableId(Output.of(tableId));
+        }
+
+        public IamPolicyState build() {
+            return $;
         }
     }
+
 }

@@ -11,6 +11,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class ControllerRevisionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -34,10 +35,10 @@ public final class ControllerRevisionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<JsonElement> data;
+    private @Nullable Output<JsonElement> data;
 
-    public Output<JsonElement> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<JsonElement>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class ControllerRevisionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class ControllerRevisionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -67,102 +68,91 @@ public final class ControllerRevisionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="revision", required=true)
-      private final Output<Integer> revision;
+    private Output<Integer> revision;
 
     public Output<Integer> revision() {
         return this.revision;
     }
 
-    public ControllerRevisionArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<JsonElement> data,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        Output<Integer> revision) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.data = data;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-    }
+    private ControllerRevisionArgs() {}
 
-    private ControllerRevisionArgs() {
-        this.apiVersion = Codegen.empty();
-        this.data = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.revision = Codegen.empty();
+    private ControllerRevisionArgs(ControllerRevisionArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.data = $.data;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControllerRevisionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<JsonElement> data;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private Output<Integer> revision;
+        private ControllerRevisionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControllerRevisionArgs();
         }
 
         public Builder(ControllerRevisionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.data = defaults.data;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.revision = defaults.revision;
+            $ = new ControllerRevisionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder data(@Nullable Output<JsonElement> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable JsonElement data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(JsonElement data) {
+            return data(Output.of(data));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder revision(Output<Integer> revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Output.of(Objects.requireNonNull(revision));
-            return this;
-        }        public ControllerRevisionArgs build() {
-            return new ControllerRevisionArgs(apiVersion, data, kind, metadata, revision);
+            return revision(Output.of(revision));
+        }
+
+        public ControllerRevisionArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class WorkspaceKeyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyVaultUrl")
-      private final @Nullable String keyVaultUrl;
+    private @Nullable String keyVaultUrl;
 
     public Optional<String> keyVaultUrl() {
-        return this.keyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUrl);
+        return Optional.ofNullable(this.keyVaultUrl);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class WorkspaceKeyDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public WorkspaceKeyDetailsResponse(
-        @Nullable String keyVaultUrl,
-        @Nullable String name) {
-        this.keyVaultUrl = keyVaultUrl;
-        this.name = name;
-    }
+    private WorkspaceKeyDetailsResponse() {}
 
-    private WorkspaceKeyDetailsResponse() {
-        this.keyVaultUrl = null;
-        this.name = null;
+    private WorkspaceKeyDetailsResponse(WorkspaceKeyDetailsResponse $) {
+        this.keyVaultUrl = $.keyVaultUrl;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceKeyDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyVaultUrl;
-        private @Nullable String name;
+        private WorkspaceKeyDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceKeyDetailsResponse();
         }
 
         public Builder(WorkspaceKeyDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultUrl = defaults.keyVaultUrl;
-    	      this.name = defaults.name;
+            $ = new WorkspaceKeyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = keyVaultUrl;
+            $.keyVaultUrl = keyVaultUrl;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public WorkspaceKeyDetailsResponse build() {
-            return new WorkspaceKeyDetailsResponse(keyVaultUrl, name);
+        }
+
+        public WorkspaceKeyDetailsResponse build() {
+            return $;
         }
     }
+
 }

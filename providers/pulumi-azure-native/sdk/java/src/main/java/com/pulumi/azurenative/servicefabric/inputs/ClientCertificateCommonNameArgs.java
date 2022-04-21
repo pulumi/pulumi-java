@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateCommonName", required=true)
-      private final Output<String> certificateCommonName;
+    private Output<String> certificateCommonName;
 
     public Output<String> certificateCommonName() {
         return this.certificateCommonName;
@@ -35,7 +34,7 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="certificateIssuerThumbprint", required=true)
-      private final Output<String> certificateIssuerThumbprint;
+    private Output<String> certificateIssuerThumbprint;
 
     public Output<String> certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
@@ -46,76 +45,71 @@ public final class ClientCertificateCommonNameArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="isAdmin", required=true)
-      private final Output<Boolean> isAdmin;
+    private Output<Boolean> isAdmin;
 
     public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
 
-    public ClientCertificateCommonNameArgs(
-        Output<String> certificateCommonName,
-        Output<String> certificateIssuerThumbprint,
-        Output<Boolean> isAdmin) {
-        this.certificateCommonName = Objects.requireNonNull(certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
-        this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
-        this.isAdmin = Objects.requireNonNull(isAdmin, "expected parameter 'isAdmin' to be non-null");
-    }
+    private ClientCertificateCommonNameArgs() {}
 
-    private ClientCertificateCommonNameArgs() {
-        this.certificateCommonName = Codegen.empty();
-        this.certificateIssuerThumbprint = Codegen.empty();
-        this.isAdmin = Codegen.empty();
+    private ClientCertificateCommonNameArgs(ClientCertificateCommonNameArgs $) {
+        this.certificateCommonName = $.certificateCommonName;
+        this.certificateIssuerThumbprint = $.certificateIssuerThumbprint;
+        this.isAdmin = $.isAdmin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertificateCommonNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateCommonName;
-        private Output<String> certificateIssuerThumbprint;
-        private Output<Boolean> isAdmin;
+        private ClientCertificateCommonNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertificateCommonNameArgs();
         }
 
         public Builder(ClientCertificateCommonNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateCommonName = defaults.certificateCommonName;
-    	      this.certificateIssuerThumbprint = defaults.certificateIssuerThumbprint;
-    	      this.isAdmin = defaults.isAdmin;
+            $ = new ClientCertificateCommonNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateCommonName(Output<String> certificateCommonName) {
-            this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
+            $.certificateCommonName = certificateCommonName;
             return this;
         }
+
         public Builder certificateCommonName(String certificateCommonName) {
-            this.certificateCommonName = Output.of(Objects.requireNonNull(certificateCommonName));
-            return this;
+            return certificateCommonName(Output.of(certificateCommonName));
         }
+
         public Builder certificateIssuerThumbprint(Output<String> certificateIssuerThumbprint) {
-            this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
+            $.certificateIssuerThumbprint = certificateIssuerThumbprint;
             return this;
         }
+
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
-            this.certificateIssuerThumbprint = Output.of(Objects.requireNonNull(certificateIssuerThumbprint));
-            return this;
+            return certificateIssuerThumbprint(Output.of(certificateIssuerThumbprint));
         }
+
         public Builder isAdmin(Output<Boolean> isAdmin) {
-            this.isAdmin = Objects.requireNonNull(isAdmin);
+            $.isAdmin = isAdmin;
             return this;
         }
+
         public Builder isAdmin(Boolean isAdmin) {
-            this.isAdmin = Output.of(Objects.requireNonNull(isAdmin));
-            return this;
-        }        public ClientCertificateCommonNameArgs build() {
-            return new ClientCertificateCommonNameArgs(certificateCommonName, certificateIssuerThumbprint, isAdmin);
+            return isAdmin(Output.of(isAdmin));
+        }
+
+        public ClientCertificateCommonNameArgs build() {
+            $.certificateCommonName = Objects.requireNonNull($.certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
+            $.certificateIssuerThumbprint = Objects.requireNonNull($.certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
+            $.isAdmin = Objects.requireNonNull($.isAdmin, "expected parameter 'isAdmin' to be non-null");
+            return $;
         }
     }
+
 }

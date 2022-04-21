@@ -24,7 +24,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="error", required=true)
-      private final ApiErrorResponse error;
+    private ApiErrorResponse error;
 
     public ApiErrorResponse error() {
         return this.error;
@@ -35,7 +35,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="excludedPatchCount", required=true)
-      private final Integer excludedPatchCount;
+    private Integer excludedPatchCount;
 
     public Integer excludedPatchCount() {
         return this.excludedPatchCount;
@@ -46,7 +46,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="failedPatchCount", required=true)
-      private final Integer failedPatchCount;
+    private Integer failedPatchCount;
 
     public Integer failedPatchCount() {
         return this.failedPatchCount;
@@ -57,7 +57,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="installationActivityId", required=true)
-      private final String installationActivityId;
+    private String installationActivityId;
 
     public String installationActivityId() {
         return this.installationActivityId;
@@ -68,7 +68,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="installedPatchCount", required=true)
-      private final Integer installedPatchCount;
+    private Integer installedPatchCount;
 
     public Integer installedPatchCount() {
         return this.installedPatchCount;
@@ -79,7 +79,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lastModifiedTime", required=true)
-      private final String lastModifiedTime;
+    private String lastModifiedTime;
 
     public String lastModifiedTime() {
         return this.lastModifiedTime;
@@ -90,7 +90,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="maintenanceWindowExceeded", required=true)
-      private final Boolean maintenanceWindowExceeded;
+    private Boolean maintenanceWindowExceeded;
 
     public Boolean maintenanceWindowExceeded() {
         return this.maintenanceWindowExceeded;
@@ -101,7 +101,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="notSelectedPatchCount", required=true)
-      private final Integer notSelectedPatchCount;
+    private Integer notSelectedPatchCount;
 
     public Integer notSelectedPatchCount() {
         return this.notSelectedPatchCount;
@@ -112,7 +112,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="pendingPatchCount", required=true)
-      private final Integer pendingPatchCount;
+    private Integer pendingPatchCount;
 
     public Integer pendingPatchCount() {
         return this.pendingPatchCount;
@@ -123,7 +123,7 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -134,136 +134,115 @@ public final class LastPatchInstallationSummaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public LastPatchInstallationSummaryResponse(
-        ApiErrorResponse error,
-        Integer excludedPatchCount,
-        Integer failedPatchCount,
-        String installationActivityId,
-        Integer installedPatchCount,
-        String lastModifiedTime,
-        Boolean maintenanceWindowExceeded,
-        Integer notSelectedPatchCount,
-        Integer pendingPatchCount,
-        String startTime,
-        String status) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.excludedPatchCount = Objects.requireNonNull(excludedPatchCount, "expected parameter 'excludedPatchCount' to be non-null");
-        this.failedPatchCount = Objects.requireNonNull(failedPatchCount, "expected parameter 'failedPatchCount' to be non-null");
-        this.installationActivityId = Objects.requireNonNull(installationActivityId, "expected parameter 'installationActivityId' to be non-null");
-        this.installedPatchCount = Objects.requireNonNull(installedPatchCount, "expected parameter 'installedPatchCount' to be non-null");
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
-        this.maintenanceWindowExceeded = Objects.requireNonNull(maintenanceWindowExceeded, "expected parameter 'maintenanceWindowExceeded' to be non-null");
-        this.notSelectedPatchCount = Objects.requireNonNull(notSelectedPatchCount, "expected parameter 'notSelectedPatchCount' to be non-null");
-        this.pendingPatchCount = Objects.requireNonNull(pendingPatchCount, "expected parameter 'pendingPatchCount' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private LastPatchInstallationSummaryResponse() {}
 
-    private LastPatchInstallationSummaryResponse() {
-        this.error = null;
-        this.excludedPatchCount = null;
-        this.failedPatchCount = null;
-        this.installationActivityId = null;
-        this.installedPatchCount = null;
-        this.lastModifiedTime = null;
-        this.maintenanceWindowExceeded = null;
-        this.notSelectedPatchCount = null;
-        this.pendingPatchCount = null;
-        this.startTime = null;
-        this.status = null;
+    private LastPatchInstallationSummaryResponse(LastPatchInstallationSummaryResponse $) {
+        this.error = $.error;
+        this.excludedPatchCount = $.excludedPatchCount;
+        this.failedPatchCount = $.failedPatchCount;
+        this.installationActivityId = $.installationActivityId;
+        this.installedPatchCount = $.installedPatchCount;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.maintenanceWindowExceeded = $.maintenanceWindowExceeded;
+        this.notSelectedPatchCount = $.notSelectedPatchCount;
+        this.pendingPatchCount = $.pendingPatchCount;
+        this.startTime = $.startTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LastPatchInstallationSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApiErrorResponse error;
-        private Integer excludedPatchCount;
-        private Integer failedPatchCount;
-        private String installationActivityId;
-        private Integer installedPatchCount;
-        private String lastModifiedTime;
-        private Boolean maintenanceWindowExceeded;
-        private Integer notSelectedPatchCount;
-        private Integer pendingPatchCount;
-        private String startTime;
-        private String status;
+        private LastPatchInstallationSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LastPatchInstallationSummaryResponse();
         }
 
         public Builder(LastPatchInstallationSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.excludedPatchCount = defaults.excludedPatchCount;
-    	      this.failedPatchCount = defaults.failedPatchCount;
-    	      this.installationActivityId = defaults.installationActivityId;
-    	      this.installedPatchCount = defaults.installedPatchCount;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.maintenanceWindowExceeded = defaults.maintenanceWindowExceeded;
-    	      this.notSelectedPatchCount = defaults.notSelectedPatchCount;
-    	      this.pendingPatchCount = defaults.pendingPatchCount;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
+            $ = new LastPatchInstallationSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(ApiErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder excludedPatchCount(Integer excludedPatchCount) {
-            this.excludedPatchCount = Objects.requireNonNull(excludedPatchCount);
+            $.excludedPatchCount = excludedPatchCount;
             return this;
         }
+
         public Builder failedPatchCount(Integer failedPatchCount) {
-            this.failedPatchCount = Objects.requireNonNull(failedPatchCount);
+            $.failedPatchCount = failedPatchCount;
             return this;
         }
+
         public Builder installationActivityId(String installationActivityId) {
-            this.installationActivityId = Objects.requireNonNull(installationActivityId);
+            $.installationActivityId = installationActivityId;
             return this;
         }
+
         public Builder installedPatchCount(Integer installedPatchCount) {
-            this.installedPatchCount = Objects.requireNonNull(installedPatchCount);
+            $.installedPatchCount = installedPatchCount;
             return this;
         }
+
         public Builder lastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder maintenanceWindowExceeded(Boolean maintenanceWindowExceeded) {
-            this.maintenanceWindowExceeded = Objects.requireNonNull(maintenanceWindowExceeded);
+            $.maintenanceWindowExceeded = maintenanceWindowExceeded;
             return this;
         }
+
         public Builder notSelectedPatchCount(Integer notSelectedPatchCount) {
-            this.notSelectedPatchCount = Objects.requireNonNull(notSelectedPatchCount);
+            $.notSelectedPatchCount = notSelectedPatchCount;
             return this;
         }
+
         public Builder pendingPatchCount(Integer pendingPatchCount) {
-            this.pendingPatchCount = Objects.requireNonNull(pendingPatchCount);
+            $.pendingPatchCount = pendingPatchCount;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public LastPatchInstallationSummaryResponse build() {
-            return new LastPatchInstallationSummaryResponse(error, excludedPatchCount, failedPatchCount, installationActivityId, installedPatchCount, lastModifiedTime, maintenanceWindowExceeded, notSelectedPatchCount, pendingPatchCount, startTime, status);
+        }
+
+        public LastPatchInstallationSummaryResponse build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.excludedPatchCount = Objects.requireNonNull($.excludedPatchCount, "expected parameter 'excludedPatchCount' to be non-null");
+            $.failedPatchCount = Objects.requireNonNull($.failedPatchCount, "expected parameter 'failedPatchCount' to be non-null");
+            $.installationActivityId = Objects.requireNonNull($.installationActivityId, "expected parameter 'installationActivityId' to be non-null");
+            $.installedPatchCount = Objects.requireNonNull($.installedPatchCount, "expected parameter 'installedPatchCount' to be non-null");
+            $.lastModifiedTime = Objects.requireNonNull($.lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
+            $.maintenanceWindowExceeded = Objects.requireNonNull($.maintenanceWindowExceeded, "expected parameter 'maintenanceWindowExceeded' to be non-null");
+            $.notSelectedPatchCount = Objects.requireNonNull($.notSelectedPatchCount, "expected parameter 'notSelectedPatchCount' to be non-null");
+            $.pendingPatchCount = Objects.requireNonNull($.pendingPatchCount, "expected parameter 'pendingPatchCount' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

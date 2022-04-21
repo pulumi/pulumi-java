@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="srcIpRanges")
-      private final @Nullable Output<List<String>> srcIpRanges;
+    private @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> srcIpRanges() {
-        return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
+    public Optional<Output<List<String>>> srcIpRanges() {
+        return Optional.ofNullable(this.srcIpRanges);
     }
 
-    public SecurityPolicyRuleMatcherConfigArgs(@Nullable Output<List<String>> srcIpRanges) {
-        this.srcIpRanges = srcIpRanges;
-    }
+    private SecurityPolicyRuleMatcherConfigArgs() {}
 
-    private SecurityPolicyRuleMatcherConfigArgs() {
-        this.srcIpRanges = Codegen.empty();
+    private SecurityPolicyRuleMatcherConfigArgs(SecurityPolicyRuleMatcherConfigArgs $) {
+        this.srcIpRanges = $.srcIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatcherConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> srcIpRanges;
+        private SecurityPolicyRuleMatcherConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatcherConfigArgs();
         }
 
         public Builder(SecurityPolicyRuleMatcherConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.srcIpRanges = defaults.srcIpRanges;
+            $ = new SecurityPolicyRuleMatcherConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
-            this.srcIpRanges = srcIpRanges;
+            $.srcIpRanges = srcIpRanges;
             return this;
         }
-        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Codegen.ofNullable(srcIpRanges);
-            return this;
+
+        public Builder srcIpRanges(List<String> srcIpRanges) {
+            return srcIpRanges(Output.of(srcIpRanges));
         }
+
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
-        }        public SecurityPolicyRuleMatcherConfigArgs build() {
-            return new SecurityPolicyRuleMatcherConfigArgs(srcIpRanges);
+        }
+
+        public SecurityPolicyRuleMatcherConfigArgs build() {
+            return $;
         }
     }
+
 }

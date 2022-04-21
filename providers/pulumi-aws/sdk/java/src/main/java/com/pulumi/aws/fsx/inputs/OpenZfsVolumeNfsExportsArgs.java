@@ -6,7 +6,6 @@ package com.pulumi.aws.fsx.inputs;
 import com.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsClientConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class OpenZfsVolumeNfsExportsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clientConfigurations", required=true)
-      private final Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
+    private Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
 
     public Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations() {
         return this.clientConfigurations;
     }
 
-    public OpenZfsVolumeNfsExportsArgs(Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations) {
-        this.clientConfigurations = Objects.requireNonNull(clientConfigurations, "expected parameter 'clientConfigurations' to be non-null");
-    }
+    private OpenZfsVolumeNfsExportsArgs() {}
 
-    private OpenZfsVolumeNfsExportsArgs() {
-        this.clientConfigurations = Codegen.empty();
+    private OpenZfsVolumeNfsExportsArgs(OpenZfsVolumeNfsExportsArgs $) {
+        this.clientConfigurations = $.clientConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenZfsVolumeNfsExportsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
+        private OpenZfsVolumeNfsExportsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenZfsVolumeNfsExportsArgs();
         }
 
         public Builder(OpenZfsVolumeNfsExportsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientConfigurations = defaults.clientConfigurations;
+            $ = new OpenZfsVolumeNfsExportsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientConfigurations(Output<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations) {
-            this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
+            $.clientConfigurations = clientConfigurations;
             return this;
         }
+
         public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfigurationArgs> clientConfigurations) {
-            this.clientConfigurations = Output.of(Objects.requireNonNull(clientConfigurations));
-            return this;
+            return clientConfigurations(Output.of(clientConfigurations));
         }
+
         public Builder clientConfigurations(OpenZfsVolumeNfsExportsClientConfigurationArgs... clientConfigurations) {
             return clientConfigurations(List.of(clientConfigurations));
-        }        public OpenZfsVolumeNfsExportsArgs build() {
-            return new OpenZfsVolumeNfsExportsArgs(clientConfigurations);
+        }
+
+        public OpenZfsVolumeNfsExportsArgs build() {
+            $.clientConfigurations = Objects.requireNonNull($.clientConfigurations, "expected parameter 'clientConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

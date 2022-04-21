@@ -5,11 +5,11 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="delegationServiceAccountEmail")
-      private final @Nullable Output<String> delegationServiceAccountEmail;
+    private @Nullable Output<String> delegationServiceAccountEmail;
 
-    public Output<String> delegationServiceAccountEmail() {
-        return this.delegationServiceAccountEmail == null ? Codegen.empty() : this.delegationServiceAccountEmail;
+    public Optional<Output<String>> delegationServiceAccountEmail() {
+        return Optional.ofNullable(this.delegationServiceAccountEmail);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="noteReference", required=true)
-      private final Output<String> noteReference;
+    private Output<String> noteReference;
 
     public Output<String> noteReference() {
         return this.noteReference;
@@ -66,79 +66,73 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
+    private @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
 
-    public Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
-    public AttestorAttestationAuthorityNoteGetArgs(
-        @Nullable Output<String> delegationServiceAccountEmail,
-        Output<String> noteReference,
-        @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys) {
-        this.delegationServiceAccountEmail = delegationServiceAccountEmail;
-        this.noteReference = Objects.requireNonNull(noteReference, "expected parameter 'noteReference' to be non-null");
-        this.publicKeys = publicKeys;
-    }
+    private AttestorAttestationAuthorityNoteGetArgs() {}
 
-    private AttestorAttestationAuthorityNoteGetArgs() {
-        this.delegationServiceAccountEmail = Codegen.empty();
-        this.noteReference = Codegen.empty();
-        this.publicKeys = Codegen.empty();
+    private AttestorAttestationAuthorityNoteGetArgs(AttestorAttestationAuthorityNoteGetArgs $) {
+        this.delegationServiceAccountEmail = $.delegationServiceAccountEmail;
+        this.noteReference = $.noteReference;
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorAttestationAuthorityNoteGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delegationServiceAccountEmail;
-        private Output<String> noteReference;
-        private @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
+        private AttestorAttestationAuthorityNoteGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorAttestationAuthorityNoteGetArgs();
         }
 
         public Builder(AttestorAttestationAuthorityNoteGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegationServiceAccountEmail = defaults.delegationServiceAccountEmail;
-    	      this.noteReference = defaults.noteReference;
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new AttestorAttestationAuthorityNoteGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delegationServiceAccountEmail(@Nullable Output<String> delegationServiceAccountEmail) {
-            this.delegationServiceAccountEmail = delegationServiceAccountEmail;
+            $.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
-        public Builder delegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
-            this.delegationServiceAccountEmail = Codegen.ofNullable(delegationServiceAccountEmail);
-            return this;
+
+        public Builder delegationServiceAccountEmail(String delegationServiceAccountEmail) {
+            return delegationServiceAccountEmail(Output.of(delegationServiceAccountEmail));
         }
+
         public Builder noteReference(Output<String> noteReference) {
-            this.noteReference = Objects.requireNonNull(noteReference);
+            $.noteReference = noteReference;
             return this;
         }
+
         public Builder noteReference(String noteReference) {
-            this.noteReference = Output.of(Objects.requireNonNull(noteReference));
-            return this;
+            return noteReference(Output.of(noteReference));
         }
+
         public Builder publicKeys(@Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKeyGetArgs> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<AttestorAttestationAuthorityNotePublicKeyGetArgs> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(AttestorAttestationAuthorityNotePublicKeyGetArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public AttestorAttestationAuthorityNoteGetArgs build() {
-            return new AttestorAttestationAuthorityNoteGetArgs(delegationServiceAccountEmail, noteReference, publicKeys);
+        }
+
+        public AttestorAttestationAuthorityNoteGetArgs build() {
+            $.noteReference = Objects.requireNonNull($.noteReference, "expected parameter 'noteReference' to be non-null");
+            return $;
         }
     }
+
 }

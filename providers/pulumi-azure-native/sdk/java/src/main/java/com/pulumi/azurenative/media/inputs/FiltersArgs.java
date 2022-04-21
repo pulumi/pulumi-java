@@ -11,10 +11,10 @@ import com.pulumi.azurenative.media.inputs.VideoOverlayArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class FiltersArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crop")
-      private final @Nullable Output<RectangleArgs> crop;
+    private @Nullable Output<RectangleArgs> crop;
 
-    public Output<RectangleArgs> crop() {
-        return this.crop == null ? Codegen.empty() : this.crop;
+    public Optional<Output<RectangleArgs>> crop() {
+        return Optional.ofNullable(this.crop);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FiltersArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deinterlace")
-      private final @Nullable Output<DeinterlaceArgs> deinterlace;
+    private @Nullable Output<DeinterlaceArgs> deinterlace;
 
-    public Output<DeinterlaceArgs> deinterlace() {
-        return this.deinterlace == null ? Codegen.empty() : this.deinterlace;
+    public Optional<Output<DeinterlaceArgs>> deinterlace() {
+        return Optional.ofNullable(this.deinterlace);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FiltersArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overlays")
-      private final @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
+    private @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
 
-    public Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays() {
-        return this.overlays == null ? Codegen.empty() : this.overlays;
+    public Optional<Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>>> overlays() {
+        return Optional.ofNullable(this.overlays);
     }
 
     /**
@@ -64,92 +64,82 @@ public final class FiltersArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rotation")
-      private final @Nullable Output<Either<String,Rotation>> rotation;
+    private @Nullable Output<Either<String,Rotation>> rotation;
 
-    public Output<Either<String,Rotation>> rotation() {
-        return this.rotation == null ? Codegen.empty() : this.rotation;
+    public Optional<Output<Either<String,Rotation>>> rotation() {
+        return Optional.ofNullable(this.rotation);
     }
 
-    public FiltersArgs(
-        @Nullable Output<RectangleArgs> crop,
-        @Nullable Output<DeinterlaceArgs> deinterlace,
-        @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays,
-        @Nullable Output<Either<String,Rotation>> rotation) {
-        this.crop = crop;
-        this.deinterlace = deinterlace;
-        this.overlays = overlays;
-        this.rotation = rotation;
-    }
+    private FiltersArgs() {}
 
-    private FiltersArgs() {
-        this.crop = Codegen.empty();
-        this.deinterlace = Codegen.empty();
-        this.overlays = Codegen.empty();
-        this.rotation = Codegen.empty();
+    private FiltersArgs(FiltersArgs $) {
+        this.crop = $.crop;
+        this.deinterlace = $.deinterlace;
+        this.overlays = $.overlays;
+        this.rotation = $.rotation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FiltersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RectangleArgs> crop;
-        private @Nullable Output<DeinterlaceArgs> deinterlace;
-        private @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
-        private @Nullable Output<Either<String,Rotation>> rotation;
+        private FiltersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FiltersArgs();
         }
 
         public Builder(FiltersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crop = defaults.crop;
-    	      this.deinterlace = defaults.deinterlace;
-    	      this.overlays = defaults.overlays;
-    	      this.rotation = defaults.rotation;
+            $ = new FiltersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crop(@Nullable Output<RectangleArgs> crop) {
-            this.crop = crop;
+            $.crop = crop;
             return this;
         }
-        public Builder crop(@Nullable RectangleArgs crop) {
-            this.crop = Codegen.ofNullable(crop);
-            return this;
+
+        public Builder crop(RectangleArgs crop) {
+            return crop(Output.of(crop));
         }
+
         public Builder deinterlace(@Nullable Output<DeinterlaceArgs> deinterlace) {
-            this.deinterlace = deinterlace;
+            $.deinterlace = deinterlace;
             return this;
         }
-        public Builder deinterlace(@Nullable DeinterlaceArgs deinterlace) {
-            this.deinterlace = Codegen.ofNullable(deinterlace);
-            return this;
+
+        public Builder deinterlace(DeinterlaceArgs deinterlace) {
+            return deinterlace(Output.of(deinterlace));
         }
+
         public Builder overlays(@Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
-            this.overlays = overlays;
+            $.overlays = overlays;
             return this;
         }
-        public Builder overlays(@Nullable List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
-            this.overlays = Codegen.ofNullable(overlays);
-            return this;
+
+        public Builder overlays(List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
+            return overlays(Output.of(overlays));
         }
+
         public Builder overlays(Either<AudioOverlayArgs,VideoOverlayArgs>... overlays) {
             return overlays(List.of(overlays));
         }
+
         public Builder rotation(@Nullable Output<Either<String,Rotation>> rotation) {
-            this.rotation = rotation;
+            $.rotation = rotation;
             return this;
         }
-        public Builder rotation(@Nullable Either<String,Rotation> rotation) {
-            this.rotation = Codegen.ofNullable(rotation);
-            return this;
-        }        public FiltersArgs build() {
-            return new FiltersArgs(crop, deinterlace, overlays, rotation);
+
+        public Builder rotation(Either<String,Rotation> rotation) {
+            return rotation(Output.of(rotation));
+        }
+
+        public FiltersArgs build() {
+            return $;
         }
     }
+
 }

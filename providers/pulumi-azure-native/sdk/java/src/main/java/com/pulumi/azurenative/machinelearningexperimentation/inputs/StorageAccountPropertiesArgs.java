@@ -5,7 +5,6 @@ package com.pulumi.azurenative.machinelearningexperimentation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class StorageAccountPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="accessKey", required=true)
-      private final Output<String> accessKey;
+    private Output<String> accessKey;
 
     public Output<String> accessKey() {
         return this.accessKey;
@@ -34,63 +33,60 @@ public final class StorageAccountPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final Output<String> storageAccountId;
+    private Output<String> storageAccountId;
 
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
-    public StorageAccountPropertiesArgs(
-        Output<String> accessKey,
-        Output<String> storageAccountId) {
-        this.accessKey = Objects.requireNonNull(accessKey, "expected parameter 'accessKey' to be non-null");
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private StorageAccountPropertiesArgs() {}
 
-    private StorageAccountPropertiesArgs() {
-        this.accessKey = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
+    private StorageAccountPropertiesArgs(StorageAccountPropertiesArgs $) {
+        this.accessKey = $.accessKey;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessKey;
-        private Output<String> storageAccountId;
+        private StorageAccountPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountPropertiesArgs();
         }
 
         public Builder(StorageAccountPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessKey = defaults.accessKey;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new StorageAccountPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessKey(Output<String> accessKey) {
-            this.accessKey = Objects.requireNonNull(accessKey);
+            $.accessKey = accessKey;
             return this;
         }
+
         public Builder accessKey(String accessKey) {
-            this.accessKey = Output.of(Objects.requireNonNull(accessKey));
-            return this;
+            return accessKey(Output.of(accessKey));
         }
+
         public Builder storageAccountId(Output<String> storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
-            return this;
-        }        public StorageAccountPropertiesArgs build() {
-            return new StorageAccountPropertiesArgs(accessKey, storageAccountId);
+            return storageAccountId(Output.of(storageAccountId));
+        }
+
+        public StorageAccountPropertiesArgs build() {
+            $.accessKey = Objects.requireNonNull($.accessKey, "expected parameter 'accessKey' to be non-null");
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

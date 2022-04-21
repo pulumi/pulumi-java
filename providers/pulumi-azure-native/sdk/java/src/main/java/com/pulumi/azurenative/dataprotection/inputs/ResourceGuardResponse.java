@@ -20,7 +20,7 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allowAutoApprovals", required=true)
-      private final Boolean allowAutoApprovals;
+    private Boolean allowAutoApprovals;
 
     public Boolean allowAutoApprovals() {
         return this.allowAutoApprovals;
@@ -31,7 +31,7 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -42,7 +42,7 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -53,7 +53,7 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGuardOperations", required=true)
-      private final List<ResourceGuardOperationResponse> resourceGuardOperations;
+    private List<ResourceGuardOperationResponse> resourceGuardOperations;
 
     public List<ResourceGuardOperationResponse> resourceGuardOperations() {
         return this.resourceGuardOperations;
@@ -64,88 +64,81 @@ public final class ResourceGuardResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vaultCriticalOperationExclusionList", required=true)
-      private final List<String> vaultCriticalOperationExclusionList;
+    private List<String> vaultCriticalOperationExclusionList;
 
     public List<String> vaultCriticalOperationExclusionList() {
         return this.vaultCriticalOperationExclusionList;
     }
 
-    public ResourceGuardResponse(
-        Boolean allowAutoApprovals,
-        String description,
-        String provisioningState,
-        List<ResourceGuardOperationResponse> resourceGuardOperations,
-        List<String> vaultCriticalOperationExclusionList) {
-        this.allowAutoApprovals = Objects.requireNonNull(allowAutoApprovals, "expected parameter 'allowAutoApprovals' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuardOperations = Objects.requireNonNull(resourceGuardOperations, "expected parameter 'resourceGuardOperations' to be non-null");
-        this.vaultCriticalOperationExclusionList = Objects.requireNonNull(vaultCriticalOperationExclusionList, "expected parameter 'vaultCriticalOperationExclusionList' to be non-null");
-    }
+    private ResourceGuardResponse() {}
 
-    private ResourceGuardResponse() {
-        this.allowAutoApprovals = null;
-        this.description = null;
-        this.provisioningState = null;
-        this.resourceGuardOperations = List.of();
-        this.vaultCriticalOperationExclusionList = List.of();
+    private ResourceGuardResponse(ResourceGuardResponse $) {
+        this.allowAutoApprovals = $.allowAutoApprovals;
+        this.description = $.description;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuardOperations = $.resourceGuardOperations;
+        this.vaultCriticalOperationExclusionList = $.vaultCriticalOperationExclusionList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGuardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowAutoApprovals;
-        private String description;
-        private String provisioningState;
-        private List<ResourceGuardOperationResponse> resourceGuardOperations;
-        private List<String> vaultCriticalOperationExclusionList;
+        private ResourceGuardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGuardResponse();
         }
 
         public Builder(ResourceGuardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAutoApprovals = defaults.allowAutoApprovals;
-    	      this.description = defaults.description;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuardOperations = defaults.resourceGuardOperations;
-    	      this.vaultCriticalOperationExclusionList = defaults.vaultCriticalOperationExclusionList;
+            $ = new ResourceGuardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAutoApprovals(Boolean allowAutoApprovals) {
-            this.allowAutoApprovals = Objects.requireNonNull(allowAutoApprovals);
+            $.allowAutoApprovals = allowAutoApprovals;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuardOperations(List<ResourceGuardOperationResponse> resourceGuardOperations) {
-            this.resourceGuardOperations = Objects.requireNonNull(resourceGuardOperations);
+            $.resourceGuardOperations = resourceGuardOperations;
             return this;
         }
+
         public Builder resourceGuardOperations(ResourceGuardOperationResponse... resourceGuardOperations) {
             return resourceGuardOperations(List.of(resourceGuardOperations));
         }
+
         public Builder vaultCriticalOperationExclusionList(List<String> vaultCriticalOperationExclusionList) {
-            this.vaultCriticalOperationExclusionList = Objects.requireNonNull(vaultCriticalOperationExclusionList);
+            $.vaultCriticalOperationExclusionList = vaultCriticalOperationExclusionList;
             return this;
         }
+
         public Builder vaultCriticalOperationExclusionList(String... vaultCriticalOperationExclusionList) {
             return vaultCriticalOperationExclusionList(List.of(vaultCriticalOperationExclusionList));
-        }        public ResourceGuardResponse build() {
-            return new ResourceGuardResponse(allowAutoApprovals, description, provisioningState, resourceGuardOperations, vaultCriticalOperationExclusionList);
+        }
+
+        public ResourceGuardResponse build() {
+            $.allowAutoApprovals = Objects.requireNonNull($.allowAutoApprovals, "expected parameter 'allowAutoApprovals' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuardOperations = Objects.requireNonNull($.resourceGuardOperations, "expected parameter 'resourceGuardOperations' to be non-null");
+            $.vaultCriticalOperationExclusionList = Objects.requireNonNull($.vaultCriticalOperationExclusionList, "expected parameter 'vaultCriticalOperationExclusionList' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 import com.google.gson.JsonElement;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourceScaleArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomResourceSubresourcesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
+    private @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
 
-    public Output<CustomResourceSubresourceScaleArgs> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<CustomResourceSubresourceScaleArgs>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CustomResourceSubresourcesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<JsonElement> status;
+    private @Nullable Output<JsonElement> status;
 
-    public Output<JsonElement> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<JsonElement>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public CustomResourceSubresourcesArgs(
-        @Nullable Output<CustomResourceSubresourceScaleArgs> scale,
-        @Nullable Output<JsonElement> status) {
-        this.scale = scale;
-        this.status = status;
-    }
+    private CustomResourceSubresourcesArgs() {}
 
-    private CustomResourceSubresourcesArgs() {
-        this.scale = Codegen.empty();
-        this.status = Codegen.empty();
+    private CustomResourceSubresourcesArgs(CustomResourceSubresourcesArgs $) {
+        this.scale = $.scale;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceSubresourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
-        private @Nullable Output<JsonElement> status;
+        private CustomResourceSubresourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceSubresourcesArgs();
         }
 
         public Builder(CustomResourceSubresourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scale = defaults.scale;
-    	      this.status = defaults.status;
+            $ = new CustomResourceSubresourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scale(@Nullable Output<CustomResourceSubresourceScaleArgs> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable CustomResourceSubresourceScaleArgs scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
+
+        public Builder scale(CustomResourceSubresourceScaleArgs scale) {
+            return scale(Output.of(scale));
         }
+
         public Builder status(@Nullable Output<JsonElement> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable JsonElement status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public CustomResourceSubresourcesArgs build() {
-            return new CustomResourceSubresourcesArgs(scale, status);
+
+        public Builder status(JsonElement status) {
+            return status(Output.of(status));
+        }
+
+        public CustomResourceSubresourcesArgs build() {
+            return $;
         }
     }
+
 }

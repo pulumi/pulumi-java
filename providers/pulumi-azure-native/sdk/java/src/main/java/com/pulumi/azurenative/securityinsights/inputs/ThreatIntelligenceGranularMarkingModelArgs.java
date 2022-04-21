@@ -5,11 +5,11 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<String> language;
+    private @Nullable Output<String> language;
 
-    public Output<String> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<String>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
      * 
      */
     @Import(name="markingRef")
-      private final @Nullable Output<Integer> markingRef;
+    private @Nullable Output<Integer> markingRef;
 
-    public Output<Integer> markingRef() {
-        return this.markingRef == null ? Codegen.empty() : this.markingRef;
+    public Optional<Output<Integer>> markingRef() {
+        return Optional.ofNullable(this.markingRef);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends com.pulumi
      * 
      */
     @Import(name="selectors")
-      private final @Nullable Output<List<String>> selectors;
+    private @Nullable Output<List<String>> selectors;
 
-    public Output<List<String>> selectors() {
-        return this.selectors == null ? Codegen.empty() : this.selectors;
+    public Optional<Output<List<String>>> selectors() {
+        return Optional.ofNullable(this.selectors);
     }
 
-    public ThreatIntelligenceGranularMarkingModelArgs(
-        @Nullable Output<String> language,
-        @Nullable Output<Integer> markingRef,
-        @Nullable Output<List<String>> selectors) {
-        this.language = language;
-        this.markingRef = markingRef;
-        this.selectors = selectors;
-    }
+    private ThreatIntelligenceGranularMarkingModelArgs() {}
 
-    private ThreatIntelligenceGranularMarkingModelArgs() {
-        this.language = Codegen.empty();
-        this.markingRef = Codegen.empty();
-        this.selectors = Codegen.empty();
+    private ThreatIntelligenceGranularMarkingModelArgs(ThreatIntelligenceGranularMarkingModelArgs $) {
+        this.language = $.language;
+        this.markingRef = $.markingRef;
+        this.selectors = $.selectors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThreatIntelligenceGranularMarkingModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> language;
-        private @Nullable Output<Integer> markingRef;
-        private @Nullable Output<List<String>> selectors;
+        private ThreatIntelligenceGranularMarkingModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThreatIntelligenceGranularMarkingModelArgs();
         }
 
         public Builder(ThreatIntelligenceGranularMarkingModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.language = defaults.language;
-    	      this.markingRef = defaults.markingRef;
-    	      this.selectors = defaults.selectors;
+            $ = new ThreatIntelligenceGranularMarkingModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder language(@Nullable Output<String> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable String language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(String language) {
+            return language(Output.of(language));
         }
+
         public Builder markingRef(@Nullable Output<Integer> markingRef) {
-            this.markingRef = markingRef;
+            $.markingRef = markingRef;
             return this;
         }
-        public Builder markingRef(@Nullable Integer markingRef) {
-            this.markingRef = Codegen.ofNullable(markingRef);
-            return this;
+
+        public Builder markingRef(Integer markingRef) {
+            return markingRef(Output.of(markingRef));
         }
+
         public Builder selectors(@Nullable Output<List<String>> selectors) {
-            this.selectors = selectors;
+            $.selectors = selectors;
             return this;
         }
-        public Builder selectors(@Nullable List<String> selectors) {
-            this.selectors = Codegen.ofNullable(selectors);
-            return this;
+
+        public Builder selectors(List<String> selectors) {
+            return selectors(Output.of(selectors));
         }
+
         public Builder selectors(String... selectors) {
             return selectors(List.of(selectors));
-        }        public ThreatIntelligenceGranularMarkingModelArgs build() {
-            return new ThreatIntelligenceGranularMarkingModelArgs(language, markingRef, selectors);
+        }
+
+        public ThreatIntelligenceGranularMarkingModelArgs build() {
+            return $;
         }
     }
+
 }

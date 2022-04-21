@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -35,63 +35,59 @@ public final class GcsProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootPath")
-      private final @Nullable Output<String> rootPath;
+    private @Nullable Output<String> rootPath;
 
-    public Output<String> rootPath() {
-        return this.rootPath == null ? Codegen.empty() : this.rootPath;
+    public Optional<Output<String>> rootPath() {
+        return Optional.ofNullable(this.rootPath);
     }
 
-    public GcsProfileArgs(
-        Output<String> bucket,
-        @Nullable Output<String> rootPath) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.rootPath = rootPath;
-    }
+    private GcsProfileArgs() {}
 
-    private GcsProfileArgs() {
-        this.bucket = Codegen.empty();
-        this.rootPath = Codegen.empty();
+    private GcsProfileArgs(GcsProfileArgs $) {
+        this.bucket = $.bucket;
+        this.rootPath = $.rootPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> rootPath;
+        private GcsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsProfileArgs();
         }
 
         public Builder(GcsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.rootPath = defaults.rootPath;
+            $ = new GcsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder rootPath(@Nullable Output<String> rootPath) {
-            this.rootPath = rootPath;
+            $.rootPath = rootPath;
             return this;
         }
-        public Builder rootPath(@Nullable String rootPath) {
-            this.rootPath = Codegen.ofNullable(rootPath);
-            return this;
-        }        public GcsProfileArgs build() {
-            return new GcsProfileArgs(bucket, rootPath);
+
+        public Builder rootPath(String rootPath) {
+            return rootPath(Output.of(rootPath));
+        }
+
+        public GcsProfileArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

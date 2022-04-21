@@ -6,9 +6,9 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.enums.RuleGroupTCPFlag;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,74 @@ public final class RuleGroupTCPFlagFieldArgs extends com.pulumi.resources.Resour
     public static final RuleGroupTCPFlagFieldArgs Empty = new RuleGroupTCPFlagFieldArgs();
 
     @Import(name="flags", required=true)
-      private final Output<List<RuleGroupTCPFlag>> flags;
+    private Output<List<RuleGroupTCPFlag>> flags;
 
     public Output<List<RuleGroupTCPFlag>> flags() {
         return this.flags;
     }
 
     @Import(name="masks")
-      private final @Nullable Output<List<RuleGroupTCPFlag>> masks;
+    private @Nullable Output<List<RuleGroupTCPFlag>> masks;
 
-    public Output<List<RuleGroupTCPFlag>> masks() {
-        return this.masks == null ? Codegen.empty() : this.masks;
+    public Optional<Output<List<RuleGroupTCPFlag>>> masks() {
+        return Optional.ofNullable(this.masks);
     }
 
-    public RuleGroupTCPFlagFieldArgs(
-        Output<List<RuleGroupTCPFlag>> flags,
-        @Nullable Output<List<RuleGroupTCPFlag>> masks) {
-        this.flags = Objects.requireNonNull(flags, "expected parameter 'flags' to be non-null");
-        this.masks = masks;
-    }
+    private RuleGroupTCPFlagFieldArgs() {}
 
-    private RuleGroupTCPFlagFieldArgs() {
-        this.flags = Codegen.empty();
-        this.masks = Codegen.empty();
+    private RuleGroupTCPFlagFieldArgs(RuleGroupTCPFlagFieldArgs $) {
+        this.flags = $.flags;
+        this.masks = $.masks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupTCPFlagFieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RuleGroupTCPFlag>> flags;
-        private @Nullable Output<List<RuleGroupTCPFlag>> masks;
+        private RuleGroupTCPFlagFieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupTCPFlagFieldArgs();
         }
 
         public Builder(RuleGroupTCPFlagFieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flags = defaults.flags;
-    	      this.masks = defaults.masks;
+            $ = new RuleGroupTCPFlagFieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flags(Output<List<RuleGroupTCPFlag>> flags) {
-            this.flags = Objects.requireNonNull(flags);
+            $.flags = flags;
             return this;
         }
+
         public Builder flags(List<RuleGroupTCPFlag> flags) {
-            this.flags = Output.of(Objects.requireNonNull(flags));
-            return this;
+            return flags(Output.of(flags));
         }
+
         public Builder flags(RuleGroupTCPFlag... flags) {
             return flags(List.of(flags));
         }
+
         public Builder masks(@Nullable Output<List<RuleGroupTCPFlag>> masks) {
-            this.masks = masks;
+            $.masks = masks;
             return this;
         }
-        public Builder masks(@Nullable List<RuleGroupTCPFlag> masks) {
-            this.masks = Codegen.ofNullable(masks);
-            return this;
+
+        public Builder masks(List<RuleGroupTCPFlag> masks) {
+            return masks(Output.of(masks));
         }
+
         public Builder masks(RuleGroupTCPFlag... masks) {
             return masks(List.of(masks));
-        }        public RuleGroupTCPFlagFieldArgs build() {
-            return new RuleGroupTCPFlagFieldArgs(flags, masks);
+        }
+
+        public RuleGroupTCPFlagFieldArgs build() {
+            $.flags = Objects.requireNonNull($.flags, "expected parameter 'flags' to be non-null");
+            return $;
         }
     }
+
 }

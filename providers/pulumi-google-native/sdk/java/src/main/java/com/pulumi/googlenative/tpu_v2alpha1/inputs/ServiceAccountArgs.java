@@ -5,10 +5,10 @@ package com.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<List<String>> scope;
+    private @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<List<String>>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public ServiceAccountArgs(
-        @Nullable Output<String> email,
-        @Nullable Output<List<String>> scope) {
-        this.email = email;
-        this.scope = scope;
-    }
+    private ServiceAccountArgs() {}
 
-    private ServiceAccountArgs() {
-        this.email = Codegen.empty();
-        this.scope = Codegen.empty();
+    private ServiceAccountArgs(ServiceAccountArgs $) {
+        this.email = $.email;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<List<String>> scope;
+        private ServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountArgs();
         }
 
         public Builder(ServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.scope = defaults.scope;
+            $ = new ServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder scope(@Nullable Output<List<String>> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable List<String> scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(List<String> scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder scope(String... scope) {
             return scope(List.of(scope));
-        }        public ServiceAccountArgs build() {
-            return new ServiceAccountArgs(email, scope);
+        }
+
+        public ServiceAccountArgs build() {
+            return $;
         }
     }
+
 }

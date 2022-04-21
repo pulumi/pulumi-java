@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="certificateStore")
-      private final @Nullable Output<String> certificateStore;
+    private @Nullable Output<String> certificateStore;
 
-    public Output<String> certificateStore() {
-        return this.certificateStore == null ? Codegen.empty() : this.certificateStore;
+    public Optional<Output<String>> certificateStore() {
+        return Optional.ofNullable(this.certificateStore);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VaultCertificateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="certificateUrl")
-      private final @Nullable Output<String> certificateUrl;
+    private @Nullable Output<String> certificateUrl;
 
-    public Output<String> certificateUrl() {
-        return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
+    public Optional<Output<String>> certificateUrl() {
+        return Optional.ofNullable(this.certificateUrl);
     }
 
-    public VaultCertificateArgs(
-        @Nullable Output<String> certificateStore,
-        @Nullable Output<String> certificateUrl) {
-        this.certificateStore = certificateStore;
-        this.certificateUrl = certificateUrl;
-    }
+    private VaultCertificateArgs() {}
 
-    private VaultCertificateArgs() {
-        this.certificateStore = Codegen.empty();
-        this.certificateUrl = Codegen.empty();
+    private VaultCertificateArgs(VaultCertificateArgs $) {
+        this.certificateStore = $.certificateStore;
+        this.certificateUrl = $.certificateUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateStore;
-        private @Nullable Output<String> certificateUrl;
+        private VaultCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultCertificateArgs();
         }
 
         public Builder(VaultCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateStore = defaults.certificateStore;
-    	      this.certificateUrl = defaults.certificateUrl;
+            $ = new VaultCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateStore(@Nullable Output<String> certificateStore) {
-            this.certificateStore = certificateStore;
+            $.certificateStore = certificateStore;
             return this;
         }
-        public Builder certificateStore(@Nullable String certificateStore) {
-            this.certificateStore = Codegen.ofNullable(certificateStore);
-            return this;
+
+        public Builder certificateStore(String certificateStore) {
+            return certificateStore(Output.of(certificateStore));
         }
+
         public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
-            this.certificateUrl = certificateUrl;
+            $.certificateUrl = certificateUrl;
             return this;
         }
-        public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Codegen.ofNullable(certificateUrl);
-            return this;
-        }        public VaultCertificateArgs build() {
-            return new VaultCertificateArgs(certificateStore, certificateUrl);
+
+        public Builder certificateUrl(String certificateUrl) {
+            return certificateUrl(Output.of(certificateUrl));
+        }
+
+        public VaultCertificateArgs build() {
+            return $;
         }
     }
+
 }

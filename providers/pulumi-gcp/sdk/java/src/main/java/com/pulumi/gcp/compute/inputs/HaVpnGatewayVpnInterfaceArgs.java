@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HaVpnGatewayVpnInterfaceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<Integer> id;
+    private @Nullable Output<Integer> id;
 
-    public Output<Integer> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<Integer>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HaVpnGatewayVpnInterfaceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="interconnectAttachment")
-      private final @Nullable Output<String> interconnectAttachment;
+    private @Nullable Output<String> interconnectAttachment;
 
-    public Output<String> interconnectAttachment() {
-        return this.interconnectAttachment == null ? Codegen.empty() : this.interconnectAttachment;
+    public Optional<Output<String>> interconnectAttachment() {
+        return Optional.ofNullable(this.interconnectAttachment);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class HaVpnGatewayVpnInterfaceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
-    public HaVpnGatewayVpnInterfaceArgs(
-        @Nullable Output<Integer> id,
-        @Nullable Output<String> interconnectAttachment,
-        @Nullable Output<String> ipAddress) {
-        this.id = id;
-        this.interconnectAttachment = interconnectAttachment;
-        this.ipAddress = ipAddress;
-    }
+    private HaVpnGatewayVpnInterfaceArgs() {}
 
-    private HaVpnGatewayVpnInterfaceArgs() {
-        this.id = Codegen.empty();
-        this.interconnectAttachment = Codegen.empty();
-        this.ipAddress = Codegen.empty();
+    private HaVpnGatewayVpnInterfaceArgs(HaVpnGatewayVpnInterfaceArgs $) {
+        this.id = $.id;
+        this.interconnectAttachment = $.interconnectAttachment;
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HaVpnGatewayVpnInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> id;
-        private @Nullable Output<String> interconnectAttachment;
-        private @Nullable Output<String> ipAddress;
+        private HaVpnGatewayVpnInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HaVpnGatewayVpnInterfaceArgs();
         }
 
         public Builder(HaVpnGatewayVpnInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.interconnectAttachment = defaults.interconnectAttachment;
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new HaVpnGatewayVpnInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<Integer> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable Integer id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(Integer id) {
+            return id(Output.of(id));
         }
+
         public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
-            this.interconnectAttachment = interconnectAttachment;
+            $.interconnectAttachment = interconnectAttachment;
             return this;
         }
-        public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Codegen.ofNullable(interconnectAttachment);
-            return this;
+
+        public Builder interconnectAttachment(String interconnectAttachment) {
+            return interconnectAttachment(Output.of(interconnectAttachment));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
-        }        public HaVpnGatewayVpnInterfaceArgs build() {
-            return new HaVpnGatewayVpnInterfaceArgs(id, interconnectAttachment, ipAddress);
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        public HaVpnGatewayVpnInterfaceArgs build() {
+            return $;
         }
     }
+
 }

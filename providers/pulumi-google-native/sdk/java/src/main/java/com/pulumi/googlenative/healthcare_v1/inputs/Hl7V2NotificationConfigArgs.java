@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class Hl7V2NotificationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class Hl7V2NotificationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="pubsubTopic")
-      private final @Nullable Output<String> pubsubTopic;
+    private @Nullable Output<String> pubsubTopic;
 
-    public Output<String> pubsubTopic() {
-        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
+    public Optional<Output<String>> pubsubTopic() {
+        return Optional.ofNullable(this.pubsubTopic);
     }
 
-    public Hl7V2NotificationConfigArgs(
-        @Nullable Output<String> filter,
-        @Nullable Output<String> pubsubTopic) {
-        this.filter = filter;
-        this.pubsubTopic = pubsubTopic;
-    }
+    private Hl7V2NotificationConfigArgs() {}
 
-    private Hl7V2NotificationConfigArgs() {
-        this.filter = Codegen.empty();
-        this.pubsubTopic = Codegen.empty();
+    private Hl7V2NotificationConfigArgs(Hl7V2NotificationConfigArgs $) {
+        this.filter = $.filter;
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7V2NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> pubsubTopic;
+        private Hl7V2NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7V2NotificationConfigArgs();
         }
 
         public Builder(Hl7V2NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new Hl7V2NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
-            this.pubsubTopic = pubsubTopic;
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
-        public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
-            return this;
-        }        public Hl7V2NotificationConfigArgs build() {
-            return new Hl7V2NotificationConfigArgs(filter, pubsubTopic);
+
+        public Builder pubsubTopic(String pubsubTopic) {
+            return pubsubTopic(Output.of(pubsubTopic));
+        }
+
+        public Hl7V2NotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

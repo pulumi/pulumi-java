@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -76,7 +77,7 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="host", required=true)
-      private final Output<Object> host;
+    private Output<Object> host;
 
     public Output<Object> host() {
         return this.host;
@@ -87,10 +88,10 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -110,7 +111,7 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -121,157 +122,134 @@ public final class FileServerLinkedServiceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<Object> userId;
+    private @Nullable Output<Object> userId;
 
-    public Output<Object> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<Object>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
-    public FileServerLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        Output<Object> host,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        Output<String> type,
-        @Nullable Output<Object> userId) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.parameters = parameters;
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userId = userId;
-    }
+    private FileServerLinkedServiceArgs() {}
 
-    private FileServerLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.host = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userId = Codegen.empty();
+    private FileServerLinkedServiceArgs(FileServerLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.type = $.type;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileServerLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private Output<Object> host;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private Output<String> type;
-        private @Nullable Output<Object> userId;
+        private FileServerLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileServerLinkedServiceArgs();
         }
 
         public Builder(FileServerLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.userId = defaults.userId;
+            $ = new FileServerLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder host(Output<Object> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userId(@Nullable Output<Object> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable Object userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
-        }        public FileServerLinkedServiceArgs build() {
-            return new FileServerLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, host, parameters, password, type, userId);
+
+        public Builder userId(Object userId) {
+            return userId(Output.of(userId));
+        }
+
+        public FileServerLinkedServiceArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

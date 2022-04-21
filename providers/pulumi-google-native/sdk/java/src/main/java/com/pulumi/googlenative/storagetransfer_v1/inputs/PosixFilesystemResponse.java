@@ -21,45 +21,45 @@ public final class PosixFilesystemResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rootDirectory", required=true)
-      private final String rootDirectory;
+    private String rootDirectory;
 
     public String rootDirectory() {
         return this.rootDirectory;
     }
 
-    public PosixFilesystemResponse(String rootDirectory) {
-        this.rootDirectory = Objects.requireNonNull(rootDirectory, "expected parameter 'rootDirectory' to be non-null");
-    }
+    private PosixFilesystemResponse() {}
 
-    private PosixFilesystemResponse() {
-        this.rootDirectory = null;
+    private PosixFilesystemResponse(PosixFilesystemResponse $) {
+        this.rootDirectory = $.rootDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PosixFilesystemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String rootDirectory;
+        private PosixFilesystemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PosixFilesystemResponse();
         }
 
         public Builder(PosixFilesystemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rootDirectory = defaults.rootDirectory;
+            $ = new PosixFilesystemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rootDirectory(String rootDirectory) {
-            this.rootDirectory = Objects.requireNonNull(rootDirectory);
+            $.rootDirectory = rootDirectory;
             return this;
-        }        public PosixFilesystemResponse build() {
-            return new PosixFilesystemResponse(rootDirectory);
+        }
+
+        public PosixFilesystemResponse build() {
+            $.rootDirectory = Objects.requireNonNull($.rootDirectory, "expected parameter 'rootDirectory' to be non-null");
+            return $;
         }
     }
+
 }

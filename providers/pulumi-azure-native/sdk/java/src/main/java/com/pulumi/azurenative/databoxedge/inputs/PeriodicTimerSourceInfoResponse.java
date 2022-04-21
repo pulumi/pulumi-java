@@ -23,7 +23,7 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="schedule", required=true)
-      private final String schedule;
+    private String schedule;
 
     public String schedule() {
         return this.schedule;
@@ -34,7 +34,7 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -45,64 +45,58 @@ public final class PeriodicTimerSourceInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="topic")
-      private final @Nullable String topic;
+    private @Nullable String topic;
 
     public Optional<String> topic() {
-        return this.topic == null ? Optional.empty() : Optional.ofNullable(this.topic);
+        return Optional.ofNullable(this.topic);
     }
 
-    public PeriodicTimerSourceInfoResponse(
-        String schedule,
-        String startTime,
-        @Nullable String topic) {
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.topic = topic;
-    }
+    private PeriodicTimerSourceInfoResponse() {}
 
-    private PeriodicTimerSourceInfoResponse() {
-        this.schedule = null;
-        this.startTime = null;
-        this.topic = null;
+    private PeriodicTimerSourceInfoResponse(PeriodicTimerSourceInfoResponse $) {
+        this.schedule = $.schedule;
+        this.startTime = $.startTime;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicTimerSourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String schedule;
-        private String startTime;
-        private @Nullable String topic;
+        private PeriodicTimerSourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicTimerSourceInfoResponse();
         }
 
         public Builder(PeriodicTimerSourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.startTime = defaults.startTime;
-    	      this.topic = defaults.topic;
+            $ = new PeriodicTimerSourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(String schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder topic(@Nullable String topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
-        }        public PeriodicTimerSourceInfoResponse build() {
-            return new PeriodicTimerSourceInfoResponse(schedule, startTime, topic);
+        }
+
+        public PeriodicTimerSourceInfoResponse build() {
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

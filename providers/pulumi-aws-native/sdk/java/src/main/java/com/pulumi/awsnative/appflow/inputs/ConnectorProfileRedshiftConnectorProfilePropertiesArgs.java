@@ -5,9 +5,9 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -31,10 +31,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @Import(name="databaseUrl", required=true)
-      private final Output<String> databaseUrl;
+    private Output<String> databaseUrl;
 
     public Output<String> databaseUrl() {
         return this.databaseUrl;
@@ -53,89 +53,81 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public ConnectorProfileRedshiftConnectorProfilePropertiesArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> bucketPrefix,
-        Output<String> databaseUrl,
-        Output<String> roleArn) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.bucketPrefix = bucketPrefix;
-        this.databaseUrl = Objects.requireNonNull(databaseUrl, "expected parameter 'databaseUrl' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private ConnectorProfileRedshiftConnectorProfilePropertiesArgs() {}
 
-    private ConnectorProfileRedshiftConnectorProfilePropertiesArgs() {
-        this.bucketName = Codegen.empty();
-        this.bucketPrefix = Codegen.empty();
-        this.databaseUrl = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ConnectorProfileRedshiftConnectorProfilePropertiesArgs(ConnectorProfileRedshiftConnectorProfilePropertiesArgs $) {
+        this.bucketName = $.bucketName;
+        this.bucketPrefix = $.bucketPrefix;
+        this.databaseUrl = $.databaseUrl;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileRedshiftConnectorProfilePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> bucketPrefix;
-        private Output<String> databaseUrl;
-        private Output<String> roleArn;
+        private ConnectorProfileRedshiftConnectorProfilePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileRedshiftConnectorProfilePropertiesArgs();
         }
 
         public Builder(ConnectorProfileRedshiftConnectorProfilePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.databaseUrl = defaults.databaseUrl;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ConnectorProfileRedshiftConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder databaseUrl(Output<String> databaseUrl) {
-            this.databaseUrl = Objects.requireNonNull(databaseUrl);
+            $.databaseUrl = databaseUrl;
             return this;
         }
+
         public Builder databaseUrl(String databaseUrl) {
-            this.databaseUrl = Output.of(Objects.requireNonNull(databaseUrl));
-            return this;
+            return databaseUrl(Output.of(databaseUrl));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public ConnectorProfileRedshiftConnectorProfilePropertiesArgs build() {
-            return new ConnectorProfileRedshiftConnectorProfilePropertiesArgs(bucketName, bucketPrefix, databaseUrl, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ConnectorProfileRedshiftConnectorProfilePropertiesArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.databaseUrl = Objects.requireNonNull($.databaseUrl, "expected parameter 'databaseUrl' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

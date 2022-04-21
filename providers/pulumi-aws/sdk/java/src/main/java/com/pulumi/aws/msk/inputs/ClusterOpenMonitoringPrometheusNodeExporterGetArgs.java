@@ -5,7 +5,6 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterOpenMonitoringPrometheusNodeExporterGetArgs extends co
      * 
      */
     @Import(name="enabledInBroker", required=true)
-      private final Output<Boolean> enabledInBroker;
+    private Output<Boolean> enabledInBroker;
 
     public Output<Boolean> enabledInBroker() {
         return this.enabledInBroker;
     }
 
-    public ClusterOpenMonitoringPrometheusNodeExporterGetArgs(Output<Boolean> enabledInBroker) {
-        this.enabledInBroker = Objects.requireNonNull(enabledInBroker, "expected parameter 'enabledInBroker' to be non-null");
-    }
+    private ClusterOpenMonitoringPrometheusNodeExporterGetArgs() {}
 
-    private ClusterOpenMonitoringPrometheusNodeExporterGetArgs() {
-        this.enabledInBroker = Codegen.empty();
+    private ClusterOpenMonitoringPrometheusNodeExporterGetArgs(ClusterOpenMonitoringPrometheusNodeExporterGetArgs $) {
+        this.enabledInBroker = $.enabledInBroker;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterOpenMonitoringPrometheusNodeExporterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabledInBroker;
+        private ClusterOpenMonitoringPrometheusNodeExporterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterOpenMonitoringPrometheusNodeExporterGetArgs();
         }
 
         public Builder(ClusterOpenMonitoringPrometheusNodeExporterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledInBroker = defaults.enabledInBroker;
+            $ = new ClusterOpenMonitoringPrometheusNodeExporterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledInBroker(Output<Boolean> enabledInBroker) {
-            this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
+            $.enabledInBroker = enabledInBroker;
             return this;
         }
+
         public Builder enabledInBroker(Boolean enabledInBroker) {
-            this.enabledInBroker = Output.of(Objects.requireNonNull(enabledInBroker));
-            return this;
-        }        public ClusterOpenMonitoringPrometheusNodeExporterGetArgs build() {
-            return new ClusterOpenMonitoringPrometheusNodeExporterGetArgs(enabledInBroker);
+            return enabledInBroker(Output.of(enabledInBroker));
+        }
+
+        public ClusterOpenMonitoringPrometheusNodeExporterGetArgs build() {
+            $.enabledInBroker = Objects.requireNonNull($.enabledInBroker, "expected parameter 'enabledInBroker' to be non-null");
+            return $;
         }
     }
+
 }

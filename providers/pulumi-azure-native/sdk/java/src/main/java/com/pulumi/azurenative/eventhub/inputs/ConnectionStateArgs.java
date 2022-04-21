@@ -7,9 +7,9 @@ import com.pulumi.azurenative.eventhub.enums.PrivateLinkConnectionStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class ConnectionStateArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status;
+    private @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status;
 
-    public Output<Either<String,PrivateLinkConnectionStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,PrivateLinkConnectionStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public ConnectionStateArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status) {
-        this.description = description;
-        this.status = status;
-    }
+    private ConnectionStateArgs() {}
 
-    private ConnectionStateArgs() {
-        this.description = Codegen.empty();
-        this.status = Codegen.empty();
+    private ConnectionStateArgs(ConnectionStateArgs $) {
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status;
+        private ConnectionStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionStateArgs();
         }
 
         public Builder(ConnectionStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new ConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder status(@Nullable Output<Either<String,PrivateLinkConnectionStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,PrivateLinkConnectionStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public ConnectionStateArgs build() {
-            return new ConnectionStateArgs(description, status);
+
+        public Builder status(Either<String,PrivateLinkConnectionStatus> status) {
+            return status(Output.of(status));
+        }
+
+        public ConnectionStateArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class HubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class HubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public HubResponse(
-        @Nullable String resourceId,
-        @Nullable String resourceType) {
-        this.resourceId = resourceId;
-        this.resourceType = resourceType;
-    }
+    private HubResponse() {}
 
-    private HubResponse() {
-        this.resourceId = null;
-        this.resourceType = null;
+    private HubResponse(HubResponse $) {
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
-        private @Nullable String resourceType;
+        private HubResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubResponse();
         }
 
         public Builder(HubResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new HubResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
-        }        public HubResponse build() {
-            return new HubResponse(resourceId, resourceType);
+        }
+
+        public HubResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="executionId", required=true)
-      private final String executionId;
+    private String executionId;
 
     public String executionId() {
         return this.executionId;
@@ -32,7 +32,7 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="historyId", required=true)
-      private final String historyId;
+    private String historyId;
 
     public String historyId() {
         return this.historyId;
@@ -43,64 +43,59 @@ public final class ToolResultsExecutionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public ToolResultsExecutionResponse(
-        String executionId,
-        String historyId,
-        String project) {
-        this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private ToolResultsExecutionResponse() {}
 
-    private ToolResultsExecutionResponse() {
-        this.executionId = null;
-        this.historyId = null;
-        this.project = null;
+    private ToolResultsExecutionResponse(ToolResultsExecutionResponse $) {
+        this.executionId = $.executionId;
+        this.historyId = $.historyId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolResultsExecutionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String executionId;
-        private String historyId;
-        private String project;
+        private ToolResultsExecutionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolResultsExecutionResponse();
         }
 
         public Builder(ToolResultsExecutionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionId = defaults.executionId;
-    	      this.historyId = defaults.historyId;
-    	      this.project = defaults.project;
+            $ = new ToolResultsExecutionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Objects.requireNonNull(executionId);
+            $.executionId = executionId;
             return this;
         }
+
         public Builder historyId(String historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public ToolResultsExecutionResponse build() {
-            return new ToolResultsExecutionResponse(executionId, historyId, project);
+        }
+
+        public ToolResultsExecutionResponse build() {
+            $.executionId = Objects.requireNonNull($.executionId, "expected parameter 'executionId' to be non-null");
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

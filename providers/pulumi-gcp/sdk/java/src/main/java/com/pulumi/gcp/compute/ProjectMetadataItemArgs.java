@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ProjectMetadataItemArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -32,10 +32,10 @@ public final class ProjectMetadataItemArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,76 +43,70 @@ public final class ProjectMetadataItemArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ProjectMetadataItemArgs(
-        Output<String> key,
-        @Nullable Output<String> project,
-        Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.project = project;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ProjectMetadataItemArgs() {}
 
-    private ProjectMetadataItemArgs() {
-        this.key = Codegen.empty();
-        this.project = Codegen.empty();
-        this.value = Codegen.empty();
+    private ProjectMetadataItemArgs(ProjectMetadataItemArgs $) {
+        this.key = $.key;
+        this.project = $.project;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectMetadataItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<String> project;
-        private Output<String> value;
+        private ProjectMetadataItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectMetadataItemArgs();
         }
 
         public Builder(ProjectMetadataItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.project = defaults.project;
-    	      this.value = defaults.value;
+            $ = new ProjectMetadataItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ProjectMetadataItemArgs build() {
-            return new ProjectMetadataItemArgs(key, project, value);
+            return value(Output.of(value));
+        }
+
+        public ProjectMetadataItemArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

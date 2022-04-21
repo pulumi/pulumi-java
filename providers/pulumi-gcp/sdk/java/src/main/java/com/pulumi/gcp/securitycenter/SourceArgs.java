@@ -5,9 +5,9 @@ package com.pulumi.gcp.securitycenter;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -47,76 +47,70 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="organization", required=true)
-      private final Output<String> organization;
+    private Output<String> organization;
 
     public Output<String> organization() {
         return this.organization;
     }
 
-    public SourceArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> organization) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.organization = Objects.requireNonNull(organization, "expected parameter 'organization' to be non-null");
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.organization = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.organization = $.organization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> organization;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.organization = defaults.organization;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder organization(Output<String> organization) {
-            this.organization = Objects.requireNonNull(organization);
+            $.organization = organization;
             return this;
         }
+
         public Builder organization(String organization) {
-            this.organization = Output.of(Objects.requireNonNull(organization));
-            return this;
-        }        public SourceArgs build() {
-            return new SourceArgs(description, displayName, organization);
+            return organization(Output.of(organization));
+        }
+
+        public SourceArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
+            return $;
         }
     }
+
 }

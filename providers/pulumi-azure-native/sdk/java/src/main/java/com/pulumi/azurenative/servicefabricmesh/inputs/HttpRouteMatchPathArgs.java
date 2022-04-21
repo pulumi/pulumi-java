@@ -7,9 +7,9 @@ import com.pulumi.azurenative.servicefabricmesh.enums.PathMatchType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rewrite")
-      private final @Nullable Output<String> rewrite;
+    private @Nullable Output<String> rewrite;
 
-    public Output<String> rewrite() {
-        return this.rewrite == null ? Codegen.empty() : this.rewrite;
+    public Optional<Output<String>> rewrite() {
+        return Optional.ofNullable(this.rewrite);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,PathMatchType>> type;
+    private Output<Either<String,PathMatchType>> type;
 
     public Output<Either<String,PathMatchType>> type() {
         return this.type;
@@ -48,76 +48,70 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public HttpRouteMatchPathArgs(
-        @Nullable Output<String> rewrite,
-        Output<Either<String,PathMatchType>> type,
-        Output<String> value) {
-        this.rewrite = rewrite;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private HttpRouteMatchPathArgs() {}
 
-    private HttpRouteMatchPathArgs() {
-        this.rewrite = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private HttpRouteMatchPathArgs(HttpRouteMatchPathArgs $) {
+        this.rewrite = $.rewrite;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteMatchPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> rewrite;
-        private Output<Either<String,PathMatchType>> type;
-        private Output<String> value;
+        private HttpRouteMatchPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteMatchPathArgs();
         }
 
         public Builder(HttpRouteMatchPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rewrite = defaults.rewrite;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new HttpRouteMatchPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rewrite(@Nullable Output<String> rewrite) {
-            this.rewrite = rewrite;
+            $.rewrite = rewrite;
             return this;
         }
-        public Builder rewrite(@Nullable String rewrite) {
-            this.rewrite = Codegen.ofNullable(rewrite);
-            return this;
+
+        public Builder rewrite(String rewrite) {
+            return rewrite(Output.of(rewrite));
         }
+
         public Builder type(Output<Either<String,PathMatchType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,PathMatchType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public HttpRouteMatchPathArgs build() {
-            return new HttpRouteMatchPathArgs(rewrite, type, value);
+            return value(Output.of(value));
+        }
+
+        public HttpRouteMatchPathArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

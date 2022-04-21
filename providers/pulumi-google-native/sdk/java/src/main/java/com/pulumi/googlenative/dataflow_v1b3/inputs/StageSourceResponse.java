@@ -21,7 +21,7 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="originalTransformOrCollection", required=true)
-      private final String originalTransformOrCollection;
+    private String originalTransformOrCollection;
 
     public String originalTransformOrCollection() {
         return this.originalTransformOrCollection;
@@ -43,7 +43,7 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeBytes", required=true)
-      private final String sizeBytes;
+    private String sizeBytes;
 
     public String sizeBytes() {
         return this.sizeBytes;
@@ -54,73 +54,66 @@ public final class StageSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public StageSourceResponse(
-        String name,
-        String originalTransformOrCollection,
-        String sizeBytes,
-        String userName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection, "expected parameter 'originalTransformOrCollection' to be non-null");
-        this.sizeBytes = Objects.requireNonNull(sizeBytes, "expected parameter 'sizeBytes' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private StageSourceResponse() {}
 
-    private StageSourceResponse() {
-        this.name = null;
-        this.originalTransformOrCollection = null;
-        this.sizeBytes = null;
-        this.userName = null;
+    private StageSourceResponse(StageSourceResponse $) {
+        this.name = $.name;
+        this.originalTransformOrCollection = $.originalTransformOrCollection;
+        this.sizeBytes = $.sizeBytes;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String originalTransformOrCollection;
-        private String sizeBytes;
-        private String userName;
+        private StageSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageSourceResponse();
         }
 
         public Builder(StageSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.originalTransformOrCollection = defaults.originalTransformOrCollection;
-    	      this.sizeBytes = defaults.sizeBytes;
-    	      this.userName = defaults.userName;
+            $ = new StageSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder originalTransformOrCollection(String originalTransformOrCollection) {
-            this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
+            $.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
+
         public Builder sizeBytes(String sizeBytes) {
-            this.sizeBytes = Objects.requireNonNull(sizeBytes);
+            $.sizeBytes = sizeBytes;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public StageSourceResponse build() {
-            return new StageSourceResponse(name, originalTransformOrCollection, sizeBytes, userName);
+        }
+
+        public StageSourceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.originalTransformOrCollection = Objects.requireNonNull($.originalTransformOrCollection, "expected parameter 'originalTransformOrCollection' to be non-null");
+            $.sizeBytes = Objects.requireNonNull($.sizeBytes, "expected parameter 'sizeBytes' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

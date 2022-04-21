@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CloudServiceVaultCertificateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="certificateUrl")
-      private final @Nullable Output<String> certificateUrl;
+    private @Nullable Output<String> certificateUrl;
 
-    public Output<String> certificateUrl() {
-        return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
+    public Optional<Output<String>> certificateUrl() {
+        return Optional.ofNullable(this.certificateUrl);
     }
 
-    public CloudServiceVaultCertificateArgs(@Nullable Output<String> certificateUrl) {
-        this.certificateUrl = certificateUrl;
-    }
+    private CloudServiceVaultCertificateArgs() {}
 
-    private CloudServiceVaultCertificateArgs() {
-        this.certificateUrl = Codegen.empty();
+    private CloudServiceVaultCertificateArgs(CloudServiceVaultCertificateArgs $) {
+        this.certificateUrl = $.certificateUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceVaultCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateUrl;
+        private CloudServiceVaultCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceVaultCertificateArgs();
         }
 
         public Builder(CloudServiceVaultCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateUrl = defaults.certificateUrl;
+            $ = new CloudServiceVaultCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateUrl(@Nullable Output<String> certificateUrl) {
-            this.certificateUrl = certificateUrl;
+            $.certificateUrl = certificateUrl;
             return this;
         }
-        public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Codegen.ofNullable(certificateUrl);
-            return this;
-        }        public CloudServiceVaultCertificateArgs build() {
-            return new CloudServiceVaultCertificateArgs(certificateUrl);
+
+        public Builder certificateUrl(String certificateUrl) {
+            return certificateUrl(Output.of(certificateUrl));
+        }
+
+        public CloudServiceVaultCertificateArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.codegurureviewer.enums.RepositoryAssociationType;
 import com.pulumi.awsnative.codegurureviewer.inputs.RepositoryAssociationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionArn")
-      private final @Nullable Output<String> connectionArn;
+    private @Nullable Output<String> connectionArn;
 
-    public Output<String> connectionArn() {
-        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
+    public Optional<Output<String>> connectionArn() {
+        return Optional.ofNullable(this.connectionArn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
+    private @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
 
-    public Output<List<RepositoryAssociationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RepositoryAssociationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,118 +78,103 @@ public final class RepositoryAssociationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<RepositoryAssociationType> type;
+    private Output<RepositoryAssociationType> type;
 
     public Output<RepositoryAssociationType> type() {
         return this.type;
     }
 
-    public RepositoryAssociationArgs(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<String> connectionArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> owner,
-        @Nullable Output<List<RepositoryAssociationTagArgs>> tags,
-        Output<RepositoryAssociationType> type) {
-        this.bucketName = bucketName;
-        this.connectionArn = connectionArn;
-        this.name = name;
-        this.owner = owner;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RepositoryAssociationArgs() {}
 
-    private RepositoryAssociationArgs() {
-        this.bucketName = Codegen.empty();
-        this.connectionArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private RepositoryAssociationArgs(RepositoryAssociationArgs $) {
+        this.bucketName = $.bucketName;
+        this.connectionArn = $.connectionArn;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<String> connectionArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
-        private Output<RepositoryAssociationType> type;
+        private RepositoryAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryAssociationArgs();
         }
 
         public Builder(RepositoryAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.connectionArn = defaults.connectionArn;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new RepositoryAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
-            this.connectionArn = connectionArn;
+            $.connectionArn = connectionArn;
             return this;
         }
-        public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Codegen.ofNullable(connectionArn);
-            return this;
+
+        public Builder connectionArn(String connectionArn) {
+            return connectionArn(Output.of(connectionArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder tags(@Nullable Output<List<RepositoryAssociationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RepositoryAssociationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RepositoryAssociationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RepositoryAssociationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<RepositoryAssociationType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(RepositoryAssociationType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RepositoryAssociationArgs build() {
-            return new RepositoryAssociationArgs(bucketName, connectionArn, name, owner, tags, type);
+            return type(Output.of(type));
+        }
+
+        public RepositoryAssociationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

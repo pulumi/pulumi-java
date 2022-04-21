@@ -18,135 +18,122 @@ public final class DataSourceServiceNowServiceCatalogConfiguration extends com.p
     public static final DataSourceServiceNowServiceCatalogConfiguration Empty = new DataSourceServiceNowServiceCatalogConfiguration();
 
     @Import(name="crawlAttachments")
-      private final @Nullable Boolean crawlAttachments;
+    private @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> crawlAttachments() {
-        return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
+        return Optional.ofNullable(this.crawlAttachments);
     }
 
     @Import(name="documentDataFieldName", required=true)
-      private final String documentDataFieldName;
+    private String documentDataFieldName;
 
     public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable String documentTitleFieldName;
+    private @Nullable String documentTitleFieldName;
 
     public Optional<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="excludeAttachmentFilePatterns")
-      private final @Nullable List<String> excludeAttachmentFilePatterns;
+    private @Nullable List<String> excludeAttachmentFilePatterns;
 
-    public List<String> excludeAttachmentFilePatterns() {
-        return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
+    public Optional<List<String>> excludeAttachmentFilePatterns() {
+        return Optional.ofNullable(this.excludeAttachmentFilePatterns);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
     @Import(name="includeAttachmentFilePatterns")
-      private final @Nullable List<String> includeAttachmentFilePatterns;
+    private @Nullable List<String> includeAttachmentFilePatterns;
 
-    public List<String> includeAttachmentFilePatterns() {
-        return this.includeAttachmentFilePatterns == null ? List.of() : this.includeAttachmentFilePatterns;
+    public Optional<List<String>> includeAttachmentFilePatterns() {
+        return Optional.ofNullable(this.includeAttachmentFilePatterns);
     }
 
-    public DataSourceServiceNowServiceCatalogConfiguration(
-        @Nullable Boolean crawlAttachments,
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> includeAttachmentFilePatterns) {
-        this.crawlAttachments = crawlAttachments;
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
-        this.fieldMappings = fieldMappings;
-        this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
-    }
+    private DataSourceServiceNowServiceCatalogConfiguration() {}
 
-    private DataSourceServiceNowServiceCatalogConfiguration() {
-        this.crawlAttachments = null;
-        this.documentDataFieldName = null;
-        this.documentTitleFieldName = null;
-        this.excludeAttachmentFilePatterns = List.of();
-        this.fieldMappings = List.of();
-        this.includeAttachmentFilePatterns = List.of();
+    private DataSourceServiceNowServiceCatalogConfiguration(DataSourceServiceNowServiceCatalogConfiguration $) {
+        this.crawlAttachments = $.crawlAttachments;
+        this.documentDataFieldName = $.documentDataFieldName;
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.excludeAttachmentFilePatterns = $.excludeAttachmentFilePatterns;
+        this.fieldMappings = $.fieldMappings;
+        this.includeAttachmentFilePatterns = $.includeAttachmentFilePatterns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceServiceNowServiceCatalogConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean crawlAttachments;
-        private String documentDataFieldName;
-        private @Nullable String documentTitleFieldName;
-        private @Nullable List<String> excludeAttachmentFilePatterns;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
-        private @Nullable List<String> includeAttachmentFilePatterns;
+        private DataSourceServiceNowServiceCatalogConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceServiceNowServiceCatalogConfiguration();
         }
 
         public Builder(DataSourceServiceNowServiceCatalogConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crawlAttachments = defaults.crawlAttachments;
-    	      this.documentDataFieldName = defaults.documentDataFieldName;
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.excludeAttachmentFilePatterns = defaults.excludeAttachmentFilePatterns;
-    	      this.fieldMappings = defaults.fieldMappings;
-    	      this.includeAttachmentFilePatterns = defaults.includeAttachmentFilePatterns;
+            $ = new DataSourceServiceNowServiceCatalogConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = crawlAttachments;
+            $.crawlAttachments = crawlAttachments;
             return this;
         }
+
         public Builder documentDataFieldName(String documentDataFieldName) {
-            this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+            $.documentDataFieldName = documentDataFieldName;
             return this;
         }
+
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
+
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
-            this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
+            $.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
+
         public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
             return excludeAttachmentFilePatterns(List.of(excludeAttachmentFilePatterns));
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
         }
+
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
-            this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
+            $.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
+
         public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {
             return includeAttachmentFilePatterns(List.of(includeAttachmentFilePatterns));
-        }        public DataSourceServiceNowServiceCatalogConfiguration build() {
-            return new DataSourceServiceNowServiceCatalogConfiguration(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, includeAttachmentFilePatterns);
+        }
+
+        public DataSourceServiceNowServiceCatalogConfiguration build() {
+            $.documentDataFieldName = Objects.requireNonNull($.documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
+            return $;
         }
     }
+
 }

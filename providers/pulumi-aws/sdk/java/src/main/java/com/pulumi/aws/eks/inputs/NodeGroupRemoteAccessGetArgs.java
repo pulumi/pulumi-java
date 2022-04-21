@@ -5,10 +5,10 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ec2SshKey")
-      private final @Nullable Output<String> ec2SshKey;
+    private @Nullable Output<String> ec2SshKey;
 
-    public Output<String> ec2SshKey() {
-        return this.ec2SshKey == null ? Codegen.empty() : this.ec2SshKey;
+    public Optional<Output<String>> ec2SshKey() {
+        return Optional.ofNullable(this.ec2SshKey);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class NodeGroupRemoteAccessGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceSecurityGroupIds")
-      private final @Nullable Output<List<String>> sourceSecurityGroupIds;
+    private @Nullable Output<List<String>> sourceSecurityGroupIds;
 
-    public Output<List<String>> sourceSecurityGroupIds() {
-        return this.sourceSecurityGroupIds == null ? Codegen.empty() : this.sourceSecurityGroupIds;
+    public Optional<Output<List<String>>> sourceSecurityGroupIds() {
+        return Optional.ofNullable(this.sourceSecurityGroupIds);
     }
 
-    public NodeGroupRemoteAccessGetArgs(
-        @Nullable Output<String> ec2SshKey,
-        @Nullable Output<List<String>> sourceSecurityGroupIds) {
-        this.ec2SshKey = ec2SshKey;
-        this.sourceSecurityGroupIds = sourceSecurityGroupIds;
-    }
+    private NodeGroupRemoteAccessGetArgs() {}
 
-    private NodeGroupRemoteAccessGetArgs() {
-        this.ec2SshKey = Codegen.empty();
-        this.sourceSecurityGroupIds = Codegen.empty();
+    private NodeGroupRemoteAccessGetArgs(NodeGroupRemoteAccessGetArgs $) {
+        this.ec2SshKey = $.ec2SshKey;
+        this.sourceSecurityGroupIds = $.sourceSecurityGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupRemoteAccessGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ec2SshKey;
-        private @Nullable Output<List<String>> sourceSecurityGroupIds;
+        private NodeGroupRemoteAccessGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupRemoteAccessGetArgs();
         }
 
         public Builder(NodeGroupRemoteAccessGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ec2SshKey = defaults.ec2SshKey;
-    	      this.sourceSecurityGroupIds = defaults.sourceSecurityGroupIds;
+            $ = new NodeGroupRemoteAccessGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ec2SshKey(@Nullable Output<String> ec2SshKey) {
-            this.ec2SshKey = ec2SshKey;
+            $.ec2SshKey = ec2SshKey;
             return this;
         }
-        public Builder ec2SshKey(@Nullable String ec2SshKey) {
-            this.ec2SshKey = Codegen.ofNullable(ec2SshKey);
-            return this;
+
+        public Builder ec2SshKey(String ec2SshKey) {
+            return ec2SshKey(Output.of(ec2SshKey));
         }
+
         public Builder sourceSecurityGroupIds(@Nullable Output<List<String>> sourceSecurityGroupIds) {
-            this.sourceSecurityGroupIds = sourceSecurityGroupIds;
+            $.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
-        public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
-            this.sourceSecurityGroupIds = Codegen.ofNullable(sourceSecurityGroupIds);
-            return this;
+
+        public Builder sourceSecurityGroupIds(List<String> sourceSecurityGroupIds) {
+            return sourceSecurityGroupIds(Output.of(sourceSecurityGroupIds));
         }
+
         public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {
             return sourceSecurityGroupIds(List.of(sourceSecurityGroupIds));
-        }        public NodeGroupRemoteAccessGetArgs build() {
-            return new NodeGroupRemoteAccessGetArgs(ec2SshKey, sourceSecurityGroupIds);
+        }
+
+        public NodeGroupRemoteAccessGetArgs build() {
+            return $;
         }
     }
+
 }

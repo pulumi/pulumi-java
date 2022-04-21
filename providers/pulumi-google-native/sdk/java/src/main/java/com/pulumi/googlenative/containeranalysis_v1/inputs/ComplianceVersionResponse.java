@@ -21,7 +21,7 @@ public final class ComplianceVersionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final String cpeUri;
+    private String cpeUri;
 
     public String cpeUri() {
         return this.cpeUri;
@@ -32,55 +32,52 @@ public final class ComplianceVersionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public ComplianceVersionResponse(
-        String cpeUri,
-        String version) {
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ComplianceVersionResponse() {}
 
-    private ComplianceVersionResponse() {
-        this.cpeUri = null;
-        this.version = null;
+    private ComplianceVersionResponse(ComplianceVersionResponse $) {
+        this.cpeUri = $.cpeUri;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpeUri;
-        private String version;
+        private ComplianceVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceVersionResponse();
         }
 
         public Builder(ComplianceVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.version = defaults.version;
+            $ = new ComplianceVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ComplianceVersionResponse build() {
-            return new ComplianceVersionResponse(cpeUri, version);
+        }
+
+        public ComplianceVersionResponse build() {
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

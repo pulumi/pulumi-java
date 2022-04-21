@@ -23,45 +23,45 @@ public final class ManagedCertificateParametersResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ManagedCertificateParametersResponse(String type) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ManagedCertificateParametersResponse() {}
 
-    private ManagedCertificateParametersResponse() {
-        this.type = null;
+    private ManagedCertificateParametersResponse(ManagedCertificateParametersResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedCertificateParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ManagedCertificateParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedCertificateParametersResponse();
         }
 
         public Builder(ManagedCertificateParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ManagedCertificateParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ManagedCertificateParametersResponse build() {
-            return new ManagedCertificateParametersResponse(type);
+        }
+
+        public ManagedCertificateParametersResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LayerArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class DerivedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final Output<FingerprintArgs> fingerprint;
+    private Output<FingerprintArgs> fingerprint;
 
     public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint;
@@ -37,66 +37,63 @@ public final class DerivedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="layerInfo")
-      private final @Nullable Output<List<LayerArgs>> layerInfo;
+    private @Nullable Output<List<LayerArgs>> layerInfo;
 
-    public Output<List<LayerArgs>> layerInfo() {
-        return this.layerInfo == null ? Codegen.empty() : this.layerInfo;
+    public Optional<Output<List<LayerArgs>>> layerInfo() {
+        return Optional.ofNullable(this.layerInfo);
     }
 
-    public DerivedArgs(
-        Output<FingerprintArgs> fingerprint,
-        @Nullable Output<List<LayerArgs>> layerInfo) {
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.layerInfo = layerInfo;
-    }
+    private DerivedArgs() {}
 
-    private DerivedArgs() {
-        this.fingerprint = Codegen.empty();
-        this.layerInfo = Codegen.empty();
+    private DerivedArgs(DerivedArgs $) {
+        this.fingerprint = $.fingerprint;
+        this.layerInfo = $.layerInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DerivedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FingerprintArgs> fingerprint;
-        private @Nullable Output<List<LayerArgs>> layerInfo;
+        private DerivedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DerivedArgs();
         }
 
         public Builder(DerivedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.layerInfo = defaults.layerInfo;
+            $ = new DerivedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fingerprint(Output<FingerprintArgs> fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder fingerprint(FingerprintArgs fingerprint) {
-            this.fingerprint = Output.of(Objects.requireNonNull(fingerprint));
-            return this;
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder layerInfo(@Nullable Output<List<LayerArgs>> layerInfo) {
-            this.layerInfo = layerInfo;
+            $.layerInfo = layerInfo;
             return this;
         }
-        public Builder layerInfo(@Nullable List<LayerArgs> layerInfo) {
-            this.layerInfo = Codegen.ofNullable(layerInfo);
-            return this;
+
+        public Builder layerInfo(List<LayerArgs> layerInfo) {
+            return layerInfo(Output.of(layerInfo));
         }
+
         public Builder layerInfo(LayerArgs... layerInfo) {
             return layerInfo(List.of(layerInfo));
-        }        public DerivedArgs build() {
-            return new DerivedArgs(fingerprint, layerInfo);
+        }
+
+        public DerivedArgs build() {
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            return $;
         }
     }
+
 }

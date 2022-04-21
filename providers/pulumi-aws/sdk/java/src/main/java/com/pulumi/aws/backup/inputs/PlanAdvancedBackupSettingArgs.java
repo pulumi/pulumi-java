@@ -5,7 +5,6 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class PlanAdvancedBackupSettingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="backupOptions", required=true)
-      private final Output<Map<String,String>> backupOptions;
+    private Output<Map<String,String>> backupOptions;
 
     public Output<Map<String,String>> backupOptions() {
         return this.backupOptions;
@@ -31,63 +30,60 @@ public final class PlanAdvancedBackupSettingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
     }
 
-    public PlanAdvancedBackupSettingArgs(
-        Output<Map<String,String>> backupOptions,
-        Output<String> resourceType) {
-        this.backupOptions = Objects.requireNonNull(backupOptions, "expected parameter 'backupOptions' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private PlanAdvancedBackupSettingArgs() {}
 
-    private PlanAdvancedBackupSettingArgs() {
-        this.backupOptions = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private PlanAdvancedBackupSettingArgs(PlanAdvancedBackupSettingArgs $) {
+        this.backupOptions = $.backupOptions;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanAdvancedBackupSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> backupOptions;
-        private Output<String> resourceType;
+        private PlanAdvancedBackupSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanAdvancedBackupSettingArgs();
         }
 
         public Builder(PlanAdvancedBackupSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupOptions = defaults.backupOptions;
-    	      this.resourceType = defaults.resourceType;
+            $ = new PlanAdvancedBackupSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupOptions(Output<Map<String,String>> backupOptions) {
-            this.backupOptions = Objects.requireNonNull(backupOptions);
+            $.backupOptions = backupOptions;
             return this;
         }
+
         public Builder backupOptions(Map<String,String> backupOptions) {
-            this.backupOptions = Output.of(Objects.requireNonNull(backupOptions));
-            return this;
+            return backupOptions(Output.of(backupOptions));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
-        }        public PlanAdvancedBackupSettingArgs build() {
-            return new PlanAdvancedBackupSettingArgs(backupOptions, resourceType);
+            return resourceType(Output.of(resourceType));
+        }
+
+        public PlanAdvancedBackupSettingArgs build() {
+            $.backupOptions = Objects.requireNonNull($.backupOptions, "expected parameter 'backupOptions' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

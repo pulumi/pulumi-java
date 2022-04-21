@@ -17,7 +17,7 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -39,64 +39,59 @@ public final class GetDeploymentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDeploymentArgs(
-        String accountName,
-        String deploymentName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDeploymentArgs() {}
 
-    private GetDeploymentArgs() {
-        this.accountName = null;
-        this.deploymentName = null;
-        this.resourceGroupName = null;
+    private GetDeploymentArgs(GetDeploymentArgs $) {
+        this.accountName = $.accountName;
+        this.deploymentName = $.deploymentName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String deploymentName;
-        private String resourceGroupName;
+        private GetDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentArgs();
         }
 
         public Builder(GetDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDeploymentArgs build() {
-            return new GetDeploymentArgs(accountName, deploymentName, resourceGroupName);
+        }
+
+        public GetDeploymentArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

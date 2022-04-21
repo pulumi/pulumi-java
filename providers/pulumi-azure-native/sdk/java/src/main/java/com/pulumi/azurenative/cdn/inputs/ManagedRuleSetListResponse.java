@@ -24,48 +24,48 @@ public final class ManagedRuleSetListResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedRuleSets")
-      private final @Nullable List<ManagedRuleSetResponse> managedRuleSets;
+    private @Nullable List<ManagedRuleSetResponse> managedRuleSets;
 
-    public List<ManagedRuleSetResponse> managedRuleSets() {
-        return this.managedRuleSets == null ? List.of() : this.managedRuleSets;
+    public Optional<List<ManagedRuleSetResponse>> managedRuleSets() {
+        return Optional.ofNullable(this.managedRuleSets);
     }
 
-    public ManagedRuleSetListResponse(@Nullable List<ManagedRuleSetResponse> managedRuleSets) {
-        this.managedRuleSets = managedRuleSets;
-    }
+    private ManagedRuleSetListResponse() {}
 
-    private ManagedRuleSetListResponse() {
-        this.managedRuleSets = List.of();
+    private ManagedRuleSetListResponse(ManagedRuleSetListResponse $) {
+        this.managedRuleSets = $.managedRuleSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleSetListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ManagedRuleSetResponse> managedRuleSets;
+        private ManagedRuleSetListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleSetListResponse();
         }
 
         public Builder(ManagedRuleSetListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedRuleSets = defaults.managedRuleSets;
+            $ = new ManagedRuleSetListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder managedRuleSets(@Nullable List<ManagedRuleSetResponse> managedRuleSets) {
-            this.managedRuleSets = managedRuleSets;
+            $.managedRuleSets = managedRuleSets;
             return this;
         }
+
         public Builder managedRuleSets(ManagedRuleSetResponse... managedRuleSets) {
             return managedRuleSets(List.of(managedRuleSets));
-        }        public ManagedRuleSetListResponse build() {
-            return new ManagedRuleSetListResponse(managedRuleSets);
+        }
+
+        public ManagedRuleSetListResponse build() {
+            return $;
         }
     }
+
 }

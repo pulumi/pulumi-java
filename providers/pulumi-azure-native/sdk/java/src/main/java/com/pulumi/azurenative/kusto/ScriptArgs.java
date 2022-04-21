@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +22,7 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -32,10 +33,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="continueOnErrors")
-      private final @Nullable Output<Boolean> continueOnErrors;
+    private @Nullable Output<Boolean> continueOnErrors;
 
-    public Output<Boolean> continueOnErrors() {
-        return this.continueOnErrors == null ? Codegen.empty() : this.continueOnErrors;
+    public Optional<Output<Boolean>> continueOnErrors() {
+        return Optional.ofNullable(this.continueOnErrors);
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -54,10 +55,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable Output<String> forceUpdateTag;
+    private @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
+    public Optional<Output<String>> forceUpdateTag() {
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,10 +77,10 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptName")
-      private final @Nullable Output<String> scriptName;
+    private @Nullable Output<String> scriptName;
 
-    public Output<String> scriptName() {
-        return this.scriptName == null ? Codegen.empty() : this.scriptName;
+    public Optional<Output<String>> scriptName() {
+        return Optional.ofNullable(this.scriptName);
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptUrl", required=true)
-      private final Output<String> scriptUrl;
+    private Output<String> scriptUrl;
 
     public Output<String> scriptUrl() {
         return this.scriptUrl;
@@ -98,141 +99,124 @@ public final class ScriptArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptUrlSasToken", required=true)
-      private final Output<String> scriptUrlSasToken;
+    private Output<String> scriptUrlSasToken;
 
     public Output<String> scriptUrlSasToken() {
         return this.scriptUrlSasToken;
     }
 
-    public ScriptArgs(
-        Output<String> clusterName,
-        @Nullable Output<Boolean> continueOnErrors,
-        Output<String> databaseName,
-        @Nullable Output<String> forceUpdateTag,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scriptName,
-        Output<String> scriptUrl,
-        Output<String> scriptUrlSasToken) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.continueOnErrors = Codegen.booleanProp("continueOnErrors").output().arg(continueOnErrors).def(false).getNullable();
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.forceUpdateTag = forceUpdateTag;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scriptName = scriptName;
-        this.scriptUrl = Objects.requireNonNull(scriptUrl, "expected parameter 'scriptUrl' to be non-null");
-        this.scriptUrlSasToken = Objects.requireNonNull(scriptUrlSasToken, "expected parameter 'scriptUrlSasToken' to be non-null");
-    }
+    private ScriptArgs() {}
 
-    private ScriptArgs() {
-        this.clusterName = Codegen.empty();
-        this.continueOnErrors = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.forceUpdateTag = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scriptName = Codegen.empty();
-        this.scriptUrl = Codegen.empty();
-        this.scriptUrlSasToken = Codegen.empty();
+    private ScriptArgs(ScriptArgs $) {
+        this.clusterName = $.clusterName;
+        this.continueOnErrors = $.continueOnErrors;
+        this.databaseName = $.databaseName;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scriptName = $.scriptName;
+        this.scriptUrl = $.scriptUrl;
+        this.scriptUrlSasToken = $.scriptUrlSasToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<Boolean> continueOnErrors;
-        private Output<String> databaseName;
-        private @Nullable Output<String> forceUpdateTag;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scriptName;
-        private Output<String> scriptUrl;
-        private Output<String> scriptUrlSasToken;
+        private ScriptArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptArgs();
         }
 
         public Builder(ScriptArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.continueOnErrors = defaults.continueOnErrors;
-    	      this.databaseName = defaults.databaseName;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scriptName = defaults.scriptName;
-    	      this.scriptUrl = defaults.scriptUrl;
-    	      this.scriptUrlSasToken = defaults.scriptUrlSasToken;
+            $ = new ScriptArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder continueOnErrors(@Nullable Output<Boolean> continueOnErrors) {
-            this.continueOnErrors = continueOnErrors;
+            $.continueOnErrors = continueOnErrors;
             return this;
         }
-        public Builder continueOnErrors(@Nullable Boolean continueOnErrors) {
-            this.continueOnErrors = Codegen.ofNullable(continueOnErrors);
-            return this;
+
+        public Builder continueOnErrors(Boolean continueOnErrors) {
+            return continueOnErrors(Output.of(continueOnErrors));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
-        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
-            return this;
+
+        public Builder forceUpdateTag(String forceUpdateTag) {
+            return forceUpdateTag(Output.of(forceUpdateTag));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scriptName(@Nullable Output<String> scriptName) {
-            this.scriptName = scriptName;
+            $.scriptName = scriptName;
             return this;
         }
-        public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Codegen.ofNullable(scriptName);
-            return this;
+
+        public Builder scriptName(String scriptName) {
+            return scriptName(Output.of(scriptName));
         }
+
         public Builder scriptUrl(Output<String> scriptUrl) {
-            this.scriptUrl = Objects.requireNonNull(scriptUrl);
+            $.scriptUrl = scriptUrl;
             return this;
         }
+
         public Builder scriptUrl(String scriptUrl) {
-            this.scriptUrl = Output.of(Objects.requireNonNull(scriptUrl));
-            return this;
+            return scriptUrl(Output.of(scriptUrl));
         }
+
         public Builder scriptUrlSasToken(Output<String> scriptUrlSasToken) {
-            this.scriptUrlSasToken = Objects.requireNonNull(scriptUrlSasToken);
+            $.scriptUrlSasToken = scriptUrlSasToken;
             return this;
         }
+
         public Builder scriptUrlSasToken(String scriptUrlSasToken) {
-            this.scriptUrlSasToken = Output.of(Objects.requireNonNull(scriptUrlSasToken));
-            return this;
-        }        public ScriptArgs build() {
-            return new ScriptArgs(clusterName, continueOnErrors, databaseName, forceUpdateTag, resourceGroupName, scriptName, scriptUrl, scriptUrlSasToken);
+            return scriptUrlSasToken(Output.of(scriptUrlSasToken));
+        }
+
+        public ScriptArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.continueOnErrors = Codegen.booleanProp("continueOnErrors").output().arg($.continueOnErrors).def(false).getNullable();
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scriptUrl = Objects.requireNonNull($.scriptUrl, "expected parameter 'scriptUrl' to be non-null");
+            $.scriptUrlSasToken = Objects.requireNonNull($.scriptUrlSasToken, "expected parameter 'scriptUrlSasToken' to be non-null");
+            return $;
         }
     }
+
 }

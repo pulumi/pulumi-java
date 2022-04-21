@@ -13,45 +13,45 @@ public final class GetBackupPlanArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupPlanArgs Empty = new GetBackupPlanArgs();
 
     @Import(name="backupPlanId", required=true)
-      private final String backupPlanId;
+    private String backupPlanId;
 
     public String backupPlanId() {
         return this.backupPlanId;
     }
 
-    public GetBackupPlanArgs(String backupPlanId) {
-        this.backupPlanId = Objects.requireNonNull(backupPlanId, "expected parameter 'backupPlanId' to be non-null");
-    }
+    private GetBackupPlanArgs() {}
 
-    private GetBackupPlanArgs() {
-        this.backupPlanId = null;
+    private GetBackupPlanArgs(GetBackupPlanArgs $) {
+        this.backupPlanId = $.backupPlanId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupPlanId;
+        private GetBackupPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupPlanArgs();
         }
 
         public Builder(GetBackupPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPlanId = defaults.backupPlanId;
+            $ = new GetBackupPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPlanId(String backupPlanId) {
-            this.backupPlanId = Objects.requireNonNull(backupPlanId);
+            $.backupPlanId = backupPlanId;
             return this;
-        }        public GetBackupPlanArgs build() {
-            return new GetBackupPlanArgs(backupPlanId);
+        }
+
+        public GetBackupPlanArgs build() {
+            $.backupPlanId = Objects.requireNonNull($.backupPlanId, "expected parameter 'backupPlanId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.digitaltwins.enums.DigitalTwinsIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class DigitalTwinsIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
+    private @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
 
-    public Output<Either<String,DigitalTwinsIdentityType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,DigitalTwinsIdentityType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DigitalTwinsIdentityArgs(@Nullable Output<Either<String,DigitalTwinsIdentityType>> type) {
-        this.type = type;
-    }
+    private DigitalTwinsIdentityArgs() {}
 
-    private DigitalTwinsIdentityArgs() {
-        this.type = Codegen.empty();
+    private DigitalTwinsIdentityArgs(DigitalTwinsIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DigitalTwinsIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
+        private DigitalTwinsIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DigitalTwinsIdentityArgs();
         }
 
         public Builder(DigitalTwinsIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new DigitalTwinsIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,DigitalTwinsIdentityType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,DigitalTwinsIdentityType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DigitalTwinsIdentityArgs build() {
-            return new DigitalTwinsIdentityArgs(type);
+
+        public Builder type(Either<String,DigitalTwinsIdentityType> type) {
+            return type(Output.of(type));
+        }
+
+        public DigitalTwinsIdentityArgs build() {
+            return $;
         }
     }
+
 }

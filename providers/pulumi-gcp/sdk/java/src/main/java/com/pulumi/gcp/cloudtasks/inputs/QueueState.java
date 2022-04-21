@@ -5,13 +5,13 @@ package com.pulumi.gcp.cloudtasks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudtasks.inputs.QueueAppEngineRoutingOverrideGetArgs;
 import com.pulumi.gcp.cloudtasks.inputs.QueueRateLimitsGetArgs;
 import com.pulumi.gcp.cloudtasks.inputs.QueueRetryConfigGetArgs;
 import com.pulumi.gcp.cloudtasks.inputs.QueueStackdriverLoggingConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngineRoutingOverride")
-      private final @Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
+    private @Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
 
-    public Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride() {
-        return this.appEngineRoutingOverride == null ? Codegen.empty() : this.appEngineRoutingOverride;
+    public Optional<Output<QueueAppEngineRoutingOverrideGetArgs>> appEngineRoutingOverride() {
+        return Optional.ofNullable(this.appEngineRoutingOverride);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimits")
-      private final @Nullable Output<QueueRateLimitsGetArgs> rateLimits;
+    private @Nullable Output<QueueRateLimitsGetArgs> rateLimits;
 
-    public Output<QueueRateLimitsGetArgs> rateLimits() {
-        return this.rateLimits == null ? Codegen.empty() : this.rateLimits;
+    public Optional<Output<QueueRateLimitsGetArgs>> rateLimits() {
+        return Optional.ofNullable(this.rateLimits);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryConfig")
-      private final @Nullable Output<QueueRetryConfigGetArgs> retryConfig;
+    private @Nullable Output<QueueRetryConfigGetArgs> retryConfig;
 
-    public Output<QueueRetryConfigGetArgs> retryConfig() {
-        return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
+    public Optional<Output<QueueRetryConfigGetArgs>> retryConfig() {
+        return Optional.ofNullable(this.retryConfig);
     }
 
     /**
@@ -102,128 +102,108 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackdriverLoggingConfig")
-      private final @Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
+    private @Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
 
-    public Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig() {
-        return this.stackdriverLoggingConfig == null ? Codegen.empty() : this.stackdriverLoggingConfig;
+    public Optional<Output<QueueStackdriverLoggingConfigGetArgs>> stackdriverLoggingConfig() {
+        return Optional.ofNullable(this.stackdriverLoggingConfig);
     }
 
-    public QueueState(
-        @Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<QueueRateLimitsGetArgs> rateLimits,
-        @Nullable Output<QueueRetryConfigGetArgs> retryConfig,
-        @Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig) {
-        this.appEngineRoutingOverride = appEngineRoutingOverride;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.rateLimits = rateLimits;
-        this.retryConfig = retryConfig;
-        this.stackdriverLoggingConfig = stackdriverLoggingConfig;
-    }
+    private QueueState() {}
 
-    private QueueState() {
-        this.appEngineRoutingOverride = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rateLimits = Codegen.empty();
-        this.retryConfig = Codegen.empty();
-        this.stackdriverLoggingConfig = Codegen.empty();
+    private QueueState(QueueState $) {
+        this.appEngineRoutingOverride = $.appEngineRoutingOverride;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.rateLimits = $.rateLimits;
+        this.retryConfig = $.retryConfig;
+        this.stackdriverLoggingConfig = $.stackdriverLoggingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<QueueRateLimitsGetArgs> rateLimits;
-        private @Nullable Output<QueueRetryConfigGetArgs> retryConfig;
-        private @Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
+        private QueueState $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueState();
         }
 
         public Builder(QueueState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineRoutingOverride = defaults.appEngineRoutingOverride;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rateLimits = defaults.rateLimits;
-    	      this.retryConfig = defaults.retryConfig;
-    	      this.stackdriverLoggingConfig = defaults.stackdriverLoggingConfig;
+            $ = new QueueState(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineRoutingOverride(@Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = appEngineRoutingOverride;
+            $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
         }
-        public Builder appEngineRoutingOverride(@Nullable QueueAppEngineRoutingOverrideGetArgs appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Codegen.ofNullable(appEngineRoutingOverride);
-            return this;
+
+        public Builder appEngineRoutingOverride(QueueAppEngineRoutingOverrideGetArgs appEngineRoutingOverride) {
+            return appEngineRoutingOverride(Output.of(appEngineRoutingOverride));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rateLimits(@Nullable Output<QueueRateLimitsGetArgs> rateLimits) {
-            this.rateLimits = rateLimits;
+            $.rateLimits = rateLimits;
             return this;
         }
-        public Builder rateLimits(@Nullable QueueRateLimitsGetArgs rateLimits) {
-            this.rateLimits = Codegen.ofNullable(rateLimits);
-            return this;
+
+        public Builder rateLimits(QueueRateLimitsGetArgs rateLimits) {
+            return rateLimits(Output.of(rateLimits));
         }
+
         public Builder retryConfig(@Nullable Output<QueueRetryConfigGetArgs> retryConfig) {
-            this.retryConfig = retryConfig;
+            $.retryConfig = retryConfig;
             return this;
         }
-        public Builder retryConfig(@Nullable QueueRetryConfigGetArgs retryConfig) {
-            this.retryConfig = Codegen.ofNullable(retryConfig);
-            return this;
+
+        public Builder retryConfig(QueueRetryConfigGetArgs retryConfig) {
+            return retryConfig(Output.of(retryConfig));
         }
+
         public Builder stackdriverLoggingConfig(@Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig) {
-            this.stackdriverLoggingConfig = stackdriverLoggingConfig;
+            $.stackdriverLoggingConfig = stackdriverLoggingConfig;
             return this;
         }
-        public Builder stackdriverLoggingConfig(@Nullable QueueStackdriverLoggingConfigGetArgs stackdriverLoggingConfig) {
-            this.stackdriverLoggingConfig = Codegen.ofNullable(stackdriverLoggingConfig);
-            return this;
-        }        public QueueState build() {
-            return new QueueState(appEngineRoutingOverride, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig);
+
+        public Builder stackdriverLoggingConfig(QueueStackdriverLoggingConfigGetArgs stackdriverLoggingConfig) {
+            return stackdriverLoggingConfig(Output.of(stackdriverLoggingConfig));
+        }
+
+        public QueueState build() {
+            return $;
         }
     }
+
 }

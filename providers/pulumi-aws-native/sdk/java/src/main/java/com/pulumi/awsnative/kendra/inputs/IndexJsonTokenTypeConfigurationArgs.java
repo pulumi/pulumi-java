@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class IndexJsonTokenTypeConfigurationArgs extends com.pulumi.resour
     public static final IndexJsonTokenTypeConfigurationArgs Empty = new IndexJsonTokenTypeConfigurationArgs();
 
     @Import(name="groupAttributeField", required=true)
-      private final Output<String> groupAttributeField;
+    private Output<String> groupAttributeField;
 
     public Output<String> groupAttributeField() {
         return this.groupAttributeField;
     }
 
     @Import(name="userNameAttributeField", required=true)
-      private final Output<String> userNameAttributeField;
+    private Output<String> userNameAttributeField;
 
     public Output<String> userNameAttributeField() {
         return this.userNameAttributeField;
     }
 
-    public IndexJsonTokenTypeConfigurationArgs(
-        Output<String> groupAttributeField,
-        Output<String> userNameAttributeField) {
-        this.groupAttributeField = Objects.requireNonNull(groupAttributeField, "expected parameter 'groupAttributeField' to be non-null");
-        this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField, "expected parameter 'userNameAttributeField' to be non-null");
-    }
+    private IndexJsonTokenTypeConfigurationArgs() {}
 
-    private IndexJsonTokenTypeConfigurationArgs() {
-        this.groupAttributeField = Codegen.empty();
-        this.userNameAttributeField = Codegen.empty();
+    private IndexJsonTokenTypeConfigurationArgs(IndexJsonTokenTypeConfigurationArgs $) {
+        this.groupAttributeField = $.groupAttributeField;
+        this.userNameAttributeField = $.userNameAttributeField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexJsonTokenTypeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupAttributeField;
-        private Output<String> userNameAttributeField;
+        private IndexJsonTokenTypeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexJsonTokenTypeConfigurationArgs();
         }
 
         public Builder(IndexJsonTokenTypeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupAttributeField = defaults.groupAttributeField;
-    	      this.userNameAttributeField = defaults.userNameAttributeField;
+            $ = new IndexJsonTokenTypeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupAttributeField(Output<String> groupAttributeField) {
-            this.groupAttributeField = Objects.requireNonNull(groupAttributeField);
+            $.groupAttributeField = groupAttributeField;
             return this;
         }
+
         public Builder groupAttributeField(String groupAttributeField) {
-            this.groupAttributeField = Output.of(Objects.requireNonNull(groupAttributeField));
-            return this;
+            return groupAttributeField(Output.of(groupAttributeField));
         }
+
         public Builder userNameAttributeField(Output<String> userNameAttributeField) {
-            this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
+            $.userNameAttributeField = userNameAttributeField;
             return this;
         }
+
         public Builder userNameAttributeField(String userNameAttributeField) {
-            this.userNameAttributeField = Output.of(Objects.requireNonNull(userNameAttributeField));
-            return this;
-        }        public IndexJsonTokenTypeConfigurationArgs build() {
-            return new IndexJsonTokenTypeConfigurationArgs(groupAttributeField, userNameAttributeField);
+            return userNameAttributeField(Output.of(userNameAttributeField));
+        }
+
+        public IndexJsonTokenTypeConfigurationArgs build() {
+            $.groupAttributeField = Objects.requireNonNull($.groupAttributeField, "expected parameter 'groupAttributeField' to be non-null");
+            $.userNameAttributeField = Objects.requireNonNull($.userNameAttributeField, "expected parameter 'userNameAttributeField' to be non-null");
+            return $;
         }
     }
+
 }

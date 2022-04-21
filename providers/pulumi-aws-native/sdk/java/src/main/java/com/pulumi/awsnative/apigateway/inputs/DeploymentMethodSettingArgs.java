@@ -5,12 +5,12 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cacheDataEncrypted")
-      private final @Nullable Output<Boolean> cacheDataEncrypted;
+    private @Nullable Output<Boolean> cacheDataEncrypted;
 
-    public Output<Boolean> cacheDataEncrypted() {
-        return this.cacheDataEncrypted == null ? Codegen.empty() : this.cacheDataEncrypted;
+    public Optional<Output<Boolean>> cacheDataEncrypted() {
+        return Optional.ofNullable(this.cacheDataEncrypted);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cacheTtlInSeconds")
-      private final @Nullable Output<Integer> cacheTtlInSeconds;
+    private @Nullable Output<Integer> cacheTtlInSeconds;
 
-    public Output<Integer> cacheTtlInSeconds() {
-        return this.cacheTtlInSeconds == null ? Codegen.empty() : this.cacheTtlInSeconds;
+    public Optional<Output<Integer>> cacheTtlInSeconds() {
+        return Optional.ofNullable(this.cacheTtlInSeconds);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cachingEnabled")
-      private final @Nullable Output<Boolean> cachingEnabled;
+    private @Nullable Output<Boolean> cachingEnabled;
 
-    public Output<Boolean> cachingEnabled() {
-        return this.cachingEnabled == null ? Codegen.empty() : this.cachingEnabled;
+    public Optional<Output<Boolean>> cachingEnabled() {
+        return Optional.ofNullable(this.cachingEnabled);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dataTraceEnabled")
-      private final @Nullable Output<Boolean> dataTraceEnabled;
+    private @Nullable Output<Boolean> dataTraceEnabled;
 
-    public Output<Boolean> dataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
+    public Optional<Output<Boolean>> dataTraceEnabled() {
+        return Optional.ofNullable(this.dataTraceEnabled);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable Output<String> httpMethod;
+    private @Nullable Output<String> httpMethod;
 
-    public Output<String> httpMethod() {
-        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
+    public Optional<Output<String>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="loggingLevel")
-      private final @Nullable Output<String> loggingLevel;
+    private @Nullable Output<String> loggingLevel;
 
-    public Output<String> loggingLevel() {
-        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
+    public Optional<Output<String>> loggingLevel() {
+        return Optional.ofNullable(this.loggingLevel);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="metricsEnabled")
-      private final @Nullable Output<Boolean> metricsEnabled;
+    private @Nullable Output<Boolean> metricsEnabled;
 
-    public Output<Boolean> metricsEnabled() {
-        return this.metricsEnabled == null ? Codegen.empty() : this.metricsEnabled;
+    public Optional<Output<Boolean>> metricsEnabled() {
+        return Optional.ofNullable(this.metricsEnabled);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourcePath")
-      private final @Nullable Output<String> resourcePath;
+    private @Nullable Output<String> resourcePath;
 
-    public Output<String> resourcePath() {
-        return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
+    public Optional<Output<String>> resourcePath() {
+        return Optional.ofNullable(this.resourcePath);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="throttlingBurstLimit")
-      private final @Nullable Output<Integer> throttlingBurstLimit;
+    private @Nullable Output<Integer> throttlingBurstLimit;
 
-    public Output<Integer> throttlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
+    public Optional<Output<Integer>> throttlingBurstLimit() {
+        return Optional.ofNullable(this.throttlingBurstLimit);
     }
 
     /**
@@ -122,167 +122,138 @@ public final class DeploymentMethodSettingArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="throttlingRateLimit")
-      private final @Nullable Output<Double> throttlingRateLimit;
+    private @Nullable Output<Double> throttlingRateLimit;
 
-    public Output<Double> throttlingRateLimit() {
-        return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
+    public Optional<Output<Double>> throttlingRateLimit() {
+        return Optional.ofNullable(this.throttlingRateLimit);
     }
 
-    public DeploymentMethodSettingArgs(
-        @Nullable Output<Boolean> cacheDataEncrypted,
-        @Nullable Output<Integer> cacheTtlInSeconds,
-        @Nullable Output<Boolean> cachingEnabled,
-        @Nullable Output<Boolean> dataTraceEnabled,
-        @Nullable Output<String> httpMethod,
-        @Nullable Output<String> loggingLevel,
-        @Nullable Output<Boolean> metricsEnabled,
-        @Nullable Output<String> resourcePath,
-        @Nullable Output<Integer> throttlingBurstLimit,
-        @Nullable Output<Double> throttlingRateLimit) {
-        this.cacheDataEncrypted = cacheDataEncrypted;
-        this.cacheTtlInSeconds = cacheTtlInSeconds;
-        this.cachingEnabled = cachingEnabled;
-        this.dataTraceEnabled = dataTraceEnabled;
-        this.httpMethod = httpMethod;
-        this.loggingLevel = loggingLevel;
-        this.metricsEnabled = metricsEnabled;
-        this.resourcePath = resourcePath;
-        this.throttlingBurstLimit = throttlingBurstLimit;
-        this.throttlingRateLimit = throttlingRateLimit;
-    }
+    private DeploymentMethodSettingArgs() {}
 
-    private DeploymentMethodSettingArgs() {
-        this.cacheDataEncrypted = Codegen.empty();
-        this.cacheTtlInSeconds = Codegen.empty();
-        this.cachingEnabled = Codegen.empty();
-        this.dataTraceEnabled = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.loggingLevel = Codegen.empty();
-        this.metricsEnabled = Codegen.empty();
-        this.resourcePath = Codegen.empty();
-        this.throttlingBurstLimit = Codegen.empty();
-        this.throttlingRateLimit = Codegen.empty();
+    private DeploymentMethodSettingArgs(DeploymentMethodSettingArgs $) {
+        this.cacheDataEncrypted = $.cacheDataEncrypted;
+        this.cacheTtlInSeconds = $.cacheTtlInSeconds;
+        this.cachingEnabled = $.cachingEnabled;
+        this.dataTraceEnabled = $.dataTraceEnabled;
+        this.httpMethod = $.httpMethod;
+        this.loggingLevel = $.loggingLevel;
+        this.metricsEnabled = $.metricsEnabled;
+        this.resourcePath = $.resourcePath;
+        this.throttlingBurstLimit = $.throttlingBurstLimit;
+        this.throttlingRateLimit = $.throttlingRateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentMethodSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> cacheDataEncrypted;
-        private @Nullable Output<Integer> cacheTtlInSeconds;
-        private @Nullable Output<Boolean> cachingEnabled;
-        private @Nullable Output<Boolean> dataTraceEnabled;
-        private @Nullable Output<String> httpMethod;
-        private @Nullable Output<String> loggingLevel;
-        private @Nullable Output<Boolean> metricsEnabled;
-        private @Nullable Output<String> resourcePath;
-        private @Nullable Output<Integer> throttlingBurstLimit;
-        private @Nullable Output<Double> throttlingRateLimit;
+        private DeploymentMethodSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentMethodSettingArgs();
         }
 
         public Builder(DeploymentMethodSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheDataEncrypted = defaults.cacheDataEncrypted;
-    	      this.cacheTtlInSeconds = defaults.cacheTtlInSeconds;
-    	      this.cachingEnabled = defaults.cachingEnabled;
-    	      this.dataTraceEnabled = defaults.dataTraceEnabled;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.loggingLevel = defaults.loggingLevel;
-    	      this.metricsEnabled = defaults.metricsEnabled;
-    	      this.resourcePath = defaults.resourcePath;
-    	      this.throttlingBurstLimit = defaults.throttlingBurstLimit;
-    	      this.throttlingRateLimit = defaults.throttlingRateLimit;
+            $ = new DeploymentMethodSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheDataEncrypted(@Nullable Output<Boolean> cacheDataEncrypted) {
-            this.cacheDataEncrypted = cacheDataEncrypted;
+            $.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
-        public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
-            this.cacheDataEncrypted = Codegen.ofNullable(cacheDataEncrypted);
-            return this;
+
+        public Builder cacheDataEncrypted(Boolean cacheDataEncrypted) {
+            return cacheDataEncrypted(Output.of(cacheDataEncrypted));
         }
+
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = cacheTtlInSeconds;
+            $.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
-        public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = Codegen.ofNullable(cacheTtlInSeconds);
-            return this;
+
+        public Builder cacheTtlInSeconds(Integer cacheTtlInSeconds) {
+            return cacheTtlInSeconds(Output.of(cacheTtlInSeconds));
         }
+
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
-            this.cachingEnabled = cachingEnabled;
+            $.cachingEnabled = cachingEnabled;
             return this;
         }
-        public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
-            this.cachingEnabled = Codegen.ofNullable(cachingEnabled);
-            return this;
+
+        public Builder cachingEnabled(Boolean cachingEnabled) {
+            return cachingEnabled(Output.of(cachingEnabled));
         }
+
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
-            this.dataTraceEnabled = dataTraceEnabled;
+            $.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
-        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Codegen.ofNullable(dataTraceEnabled);
-            return this;
+
+        public Builder dataTraceEnabled(Boolean dataTraceEnabled) {
+            return dataTraceEnabled(Output.of(dataTraceEnabled));
         }
+
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
-        public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Codegen.ofNullable(httpMethod);
-            return this;
+
+        public Builder httpMethod(String httpMethod) {
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
-            this.loggingLevel = loggingLevel;
+            $.loggingLevel = loggingLevel;
             return this;
         }
-        public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Codegen.ofNullable(loggingLevel);
-            return this;
+
+        public Builder loggingLevel(String loggingLevel) {
+            return loggingLevel(Output.of(loggingLevel));
         }
+
         public Builder metricsEnabled(@Nullable Output<Boolean> metricsEnabled) {
-            this.metricsEnabled = metricsEnabled;
+            $.metricsEnabled = metricsEnabled;
             return this;
         }
-        public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
-            this.metricsEnabled = Codegen.ofNullable(metricsEnabled);
-            return this;
+
+        public Builder metricsEnabled(Boolean metricsEnabled) {
+            return metricsEnabled(Output.of(metricsEnabled));
         }
+
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
-            this.resourcePath = resourcePath;
+            $.resourcePath = resourcePath;
             return this;
         }
-        public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Codegen.ofNullable(resourcePath);
-            return this;
+
+        public Builder resourcePath(String resourcePath) {
+            return resourcePath(Output.of(resourcePath));
         }
+
         public Builder throttlingBurstLimit(@Nullable Output<Integer> throttlingBurstLimit) {
-            this.throttlingBurstLimit = throttlingBurstLimit;
+            $.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
-        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Codegen.ofNullable(throttlingBurstLimit);
-            return this;
+
+        public Builder throttlingBurstLimit(Integer throttlingBurstLimit) {
+            return throttlingBurstLimit(Output.of(throttlingBurstLimit));
         }
+
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
-            this.throttlingRateLimit = throttlingRateLimit;
+            $.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
-        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Codegen.ofNullable(throttlingRateLimit);
-            return this;
-        }        public DeploymentMethodSettingArgs build() {
-            return new DeploymentMethodSettingArgs(cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, dataTraceEnabled, httpMethod, loggingLevel, metricsEnabled, resourcePath, throttlingBurstLimit, throttlingRateLimit);
+
+        public Builder throttlingRateLimit(Double throttlingRateLimit) {
+            return throttlingRateLimit(Output.of(throttlingRateLimit));
+        }
+
+        public DeploymentMethodSettingArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSqlVirtualMachineGroupArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSqlVirtualMachineGroupArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="sqlVirtualMachineGroupName", required=true)
-      private final String sqlVirtualMachineGroupName;
+    private String sqlVirtualMachineGroupName;
 
     public String sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 
-    public GetSqlVirtualMachineGroupArgs(
-        String resourceGroupName,
-        String sqlVirtualMachineGroupName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName, "expected parameter 'sqlVirtualMachineGroupName' to be non-null");
-    }
+    private GetSqlVirtualMachineGroupArgs() {}
 
-    private GetSqlVirtualMachineGroupArgs() {
-        this.resourceGroupName = null;
-        this.sqlVirtualMachineGroupName = null;
+    private GetSqlVirtualMachineGroupArgs(GetSqlVirtualMachineGroupArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlVirtualMachineGroupName = $.sqlVirtualMachineGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlVirtualMachineGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlVirtualMachineGroupName;
+        private GetSqlVirtualMachineGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlVirtualMachineGroupArgs();
         }
 
         public Builder(GetSqlVirtualMachineGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
+            $ = new GetSqlVirtualMachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
+            $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
-        }        public GetSqlVirtualMachineGroupArgs build() {
-            return new GetSqlVirtualMachineGroupArgs(resourceGroupName, sqlVirtualMachineGroupName);
+        }
+
+        public GetSqlVirtualMachineGroupArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlVirtualMachineGroupName = Objects.requireNonNull($.sqlVirtualMachineGroupName, "expected parameter 'sqlVirtualMachineGroupName' to be non-null");
+            return $;
         }
     }
+
 }

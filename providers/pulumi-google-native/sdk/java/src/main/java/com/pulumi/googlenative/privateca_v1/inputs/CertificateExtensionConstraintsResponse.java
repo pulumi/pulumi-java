@@ -23,7 +23,7 @@ public final class CertificateExtensionConstraintsResponse extends com.pulumi.re
      * 
      */
     @Import(name="additionalExtensions", required=true)
-      private final List<ObjectIdResponse> additionalExtensions;
+    private List<ObjectIdResponse> additionalExtensions;
 
     public List<ObjectIdResponse> additionalExtensions() {
         return this.additionalExtensions;
@@ -34,61 +34,60 @@ public final class CertificateExtensionConstraintsResponse extends com.pulumi.re
      * 
      */
     @Import(name="knownExtensions", required=true)
-      private final List<String> knownExtensions;
+    private List<String> knownExtensions;
 
     public List<String> knownExtensions() {
         return this.knownExtensions;
     }
 
-    public CertificateExtensionConstraintsResponse(
-        List<ObjectIdResponse> additionalExtensions,
-        List<String> knownExtensions) {
-        this.additionalExtensions = Objects.requireNonNull(additionalExtensions, "expected parameter 'additionalExtensions' to be non-null");
-        this.knownExtensions = Objects.requireNonNull(knownExtensions, "expected parameter 'knownExtensions' to be non-null");
-    }
+    private CertificateExtensionConstraintsResponse() {}
 
-    private CertificateExtensionConstraintsResponse() {
-        this.additionalExtensions = List.of();
-        this.knownExtensions = List.of();
+    private CertificateExtensionConstraintsResponse(CertificateExtensionConstraintsResponse $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.knownExtensions = $.knownExtensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateExtensionConstraintsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ObjectIdResponse> additionalExtensions;
-        private List<String> knownExtensions;
+        private CertificateExtensionConstraintsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateExtensionConstraintsResponse();
         }
 
         public Builder(CertificateExtensionConstraintsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.knownExtensions = defaults.knownExtensions;
+            $ = new CertificateExtensionConstraintsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(List<ObjectIdResponse> additionalExtensions) {
-            this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
+
         public Builder additionalExtensions(ObjectIdResponse... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder knownExtensions(List<String> knownExtensions) {
-            this.knownExtensions = Objects.requireNonNull(knownExtensions);
+            $.knownExtensions = knownExtensions;
             return this;
         }
+
         public Builder knownExtensions(String... knownExtensions) {
             return knownExtensions(List.of(knownExtensions));
-        }        public CertificateExtensionConstraintsResponse build() {
-            return new CertificateExtensionConstraintsResponse(additionalExtensions, knownExtensions);
+        }
+
+        public CertificateExtensionConstraintsResponse build() {
+            $.additionalExtensions = Objects.requireNonNull($.additionalExtensions, "expected parameter 'additionalExtensions' to be non-null");
+            $.knownExtensions = Objects.requireNonNull($.knownExtensions, "expected parameter 'knownExtensions' to be non-null");
+            return $;
         }
     }
+
 }

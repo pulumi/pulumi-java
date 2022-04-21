@@ -22,7 +22,7 @@ public final class DeadLetterPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deadLetterTopic", required=true)
-      private final String deadLetterTopic;
+    private String deadLetterTopic;
 
     public String deadLetterTopic() {
         return this.deadLetterTopic;
@@ -33,55 +33,52 @@ public final class DeadLetterPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxDeliveryAttempts", required=true)
-      private final Integer maxDeliveryAttempts;
+    private Integer maxDeliveryAttempts;
 
     public Integer maxDeliveryAttempts() {
         return this.maxDeliveryAttempts;
     }
 
-    public DeadLetterPolicyResponse(
-        String deadLetterTopic,
-        Integer maxDeliveryAttempts) {
-        this.deadLetterTopic = Objects.requireNonNull(deadLetterTopic, "expected parameter 'deadLetterTopic' to be non-null");
-        this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts, "expected parameter 'maxDeliveryAttempts' to be non-null");
-    }
+    private DeadLetterPolicyResponse() {}
 
-    private DeadLetterPolicyResponse() {
-        this.deadLetterTopic = null;
-        this.maxDeliveryAttempts = null;
+    private DeadLetterPolicyResponse(DeadLetterPolicyResponse $) {
+        this.deadLetterTopic = $.deadLetterTopic;
+        this.maxDeliveryAttempts = $.maxDeliveryAttempts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeadLetterPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deadLetterTopic;
-        private Integer maxDeliveryAttempts;
+        private DeadLetterPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeadLetterPolicyResponse();
         }
 
         public Builder(DeadLetterPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deadLetterTopic = defaults.deadLetterTopic;
-    	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
+            $ = new DeadLetterPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deadLetterTopic(String deadLetterTopic) {
-            this.deadLetterTopic = Objects.requireNonNull(deadLetterTopic);
+            $.deadLetterTopic = deadLetterTopic;
             return this;
         }
+
         public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
+            $.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
-        }        public DeadLetterPolicyResponse build() {
-            return new DeadLetterPolicyResponse(deadLetterTopic, maxDeliveryAttempts);
+        }
+
+        public DeadLetterPolicyResponse build() {
+            $.deadLetterTopic = Objects.requireNonNull($.deadLetterTopic, "expected parameter 'deadLetterTopic' to be non-null");
+            $.maxDeliveryAttempts = Objects.requireNonNull($.maxDeliveryAttempts, "expected parameter 'maxDeliveryAttempts' to be non-null");
+            return $;
         }
     }
+
 }

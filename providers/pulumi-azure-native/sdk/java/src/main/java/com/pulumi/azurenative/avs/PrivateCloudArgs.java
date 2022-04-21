@@ -15,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identitySources")
-      private final @Nullable Output<List<IdentitySourceArgs>> identitySources;
+    private @Nullable Output<List<IdentitySourceArgs>> identitySources;
 
-    public Output<List<IdentitySourceArgs>> identitySources() {
-        return this.identitySources == null ? Codegen.empty() : this.identitySources;
+    public Optional<Output<List<IdentitySourceArgs>>> identitySources() {
+        return Optional.ofNullable(this.identitySources);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="internet")
-      private final @Nullable Output<Either<String,InternetEnum>> internet;
+    private @Nullable Output<Either<String,InternetEnum>> internet;
 
-    public Output<Either<String,InternetEnum>> internet() {
-        return this.internet == null ? Codegen.empty() : this.internet;
+    public Optional<Output<Either<String,InternetEnum>>> internet() {
+        return Optional.ofNullable(this.internet);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managementCluster", required=true)
-      private final Output<ManagementClusterArgs> managementCluster;
+    private Output<ManagementClusterArgs> managementCluster;
 
     public Output<ManagementClusterArgs> managementCluster() {
         return this.managementCluster;
@@ -71,7 +72,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkBlock", required=true)
-      private final Output<String> networkBlock;
+    private Output<String> networkBlock;
 
     public Output<String> networkBlock() {
         return this.networkBlock;
@@ -82,10 +83,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nsxtPassword")
-      private final @Nullable Output<String> nsxtPassword;
+    private @Nullable Output<String> nsxtPassword;
 
-    public Output<String> nsxtPassword() {
-        return this.nsxtPassword == null ? Codegen.empty() : this.nsxtPassword;
+    public Optional<Output<String>> nsxtPassword() {
+        return Optional.ofNullable(this.nsxtPassword);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateCloudName")
-      private final @Nullable Output<String> privateCloudName;
+    private @Nullable Output<String> privateCloudName;
 
-    public Output<String> privateCloudName() {
-        return this.privateCloudName == null ? Codegen.empty() : this.privateCloudName;
+    public Optional<Output<String>> privateCloudName() {
+        return Optional.ofNullable(this.privateCloudName);
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -115,7 +116,7 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -126,10 +127,10 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -137,183 +138,157 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vcenterPassword")
-      private final @Nullable Output<String> vcenterPassword;
+    private @Nullable Output<String> vcenterPassword;
 
-    public Output<String> vcenterPassword() {
-        return this.vcenterPassword == null ? Codegen.empty() : this.vcenterPassword;
+    public Optional<Output<String>> vcenterPassword() {
+        return Optional.ofNullable(this.vcenterPassword);
     }
 
-    public PrivateCloudArgs(
-        @Nullable Output<List<IdentitySourceArgs>> identitySources,
-        @Nullable Output<Either<String,InternetEnum>> internet,
-        @Nullable Output<String> location,
-        Output<ManagementClusterArgs> managementCluster,
-        Output<String> networkBlock,
-        @Nullable Output<String> nsxtPassword,
-        @Nullable Output<String> privateCloudName,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vcenterPassword) {
-        this.identitySources = identitySources;
-        this.internet = Codegen.stringProp("internet").left(InternetEnum.class).output().arg(internet).def("Disabled").getNullable();
-        this.location = location;
-        this.managementCluster = Objects.requireNonNull(managementCluster, "expected parameter 'managementCluster' to be non-null");
-        this.networkBlock = Objects.requireNonNull(networkBlock, "expected parameter 'networkBlock' to be non-null");
-        this.nsxtPassword = nsxtPassword;
-        this.privateCloudName = privateCloudName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-        this.vcenterPassword = vcenterPassword;
-    }
+    private PrivateCloudArgs() {}
 
-    private PrivateCloudArgs() {
-        this.identitySources = Codegen.empty();
-        this.internet = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managementCluster = Codegen.empty();
-        this.networkBlock = Codegen.empty();
-        this.nsxtPassword = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vcenterPassword = Codegen.empty();
+    private PrivateCloudArgs(PrivateCloudArgs $) {
+        this.identitySources = $.identitySources;
+        this.internet = $.internet;
+        this.location = $.location;
+        this.managementCluster = $.managementCluster;
+        this.networkBlock = $.networkBlock;
+        this.nsxtPassword = $.nsxtPassword;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.vcenterPassword = $.vcenterPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateCloudArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IdentitySourceArgs>> identitySources;
-        private @Nullable Output<Either<String,InternetEnum>> internet;
-        private @Nullable Output<String> location;
-        private Output<ManagementClusterArgs> managementCluster;
-        private Output<String> networkBlock;
-        private @Nullable Output<String> nsxtPassword;
-        private @Nullable Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vcenterPassword;
+        private PrivateCloudArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateCloudArgs();
         }
 
         public Builder(PrivateCloudArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identitySources = defaults.identitySources;
-    	      this.internet = defaults.internet;
-    	      this.location = defaults.location;
-    	      this.managementCluster = defaults.managementCluster;
-    	      this.networkBlock = defaults.networkBlock;
-    	      this.nsxtPassword = defaults.nsxtPassword;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.vcenterPassword = defaults.vcenterPassword;
+            $ = new PrivateCloudArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identitySources(@Nullable Output<List<IdentitySourceArgs>> identitySources) {
-            this.identitySources = identitySources;
+            $.identitySources = identitySources;
             return this;
         }
-        public Builder identitySources(@Nullable List<IdentitySourceArgs> identitySources) {
-            this.identitySources = Codegen.ofNullable(identitySources);
-            return this;
+
+        public Builder identitySources(List<IdentitySourceArgs> identitySources) {
+            return identitySources(Output.of(identitySources));
         }
+
         public Builder identitySources(IdentitySourceArgs... identitySources) {
             return identitySources(List.of(identitySources));
         }
+
         public Builder internet(@Nullable Output<Either<String,InternetEnum>> internet) {
-            this.internet = internet;
+            $.internet = internet;
             return this;
         }
-        public Builder internet(@Nullable Either<String,InternetEnum> internet) {
-            this.internet = Codegen.ofNullable(internet);
-            return this;
+
+        public Builder internet(Either<String,InternetEnum> internet) {
+            return internet(Output.of(internet));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managementCluster(Output<ManagementClusterArgs> managementCluster) {
-            this.managementCluster = Objects.requireNonNull(managementCluster);
+            $.managementCluster = managementCluster;
             return this;
         }
+
         public Builder managementCluster(ManagementClusterArgs managementCluster) {
-            this.managementCluster = Output.of(Objects.requireNonNull(managementCluster));
-            return this;
+            return managementCluster(Output.of(managementCluster));
         }
+
         public Builder networkBlock(Output<String> networkBlock) {
-            this.networkBlock = Objects.requireNonNull(networkBlock);
+            $.networkBlock = networkBlock;
             return this;
         }
+
         public Builder networkBlock(String networkBlock) {
-            this.networkBlock = Output.of(Objects.requireNonNull(networkBlock));
-            return this;
+            return networkBlock(Output.of(networkBlock));
         }
+
         public Builder nsxtPassword(@Nullable Output<String> nsxtPassword) {
-            this.nsxtPassword = nsxtPassword;
+            $.nsxtPassword = nsxtPassword;
             return this;
         }
-        public Builder nsxtPassword(@Nullable String nsxtPassword) {
-            this.nsxtPassword = Codegen.ofNullable(nsxtPassword);
-            return this;
+
+        public Builder nsxtPassword(String nsxtPassword) {
+            return nsxtPassword(Output.of(nsxtPassword));
         }
+
         public Builder privateCloudName(@Nullable Output<String> privateCloudName) {
-            this.privateCloudName = privateCloudName;
+            $.privateCloudName = privateCloudName;
             return this;
         }
-        public Builder privateCloudName(@Nullable String privateCloudName) {
-            this.privateCloudName = Codegen.ofNullable(privateCloudName);
-            return this;
+
+        public Builder privateCloudName(String privateCloudName) {
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vcenterPassword(@Nullable Output<String> vcenterPassword) {
-            this.vcenterPassword = vcenterPassword;
+            $.vcenterPassword = vcenterPassword;
             return this;
         }
-        public Builder vcenterPassword(@Nullable String vcenterPassword) {
-            this.vcenterPassword = Codegen.ofNullable(vcenterPassword);
-            return this;
-        }        public PrivateCloudArgs build() {
-            return new PrivateCloudArgs(identitySources, internet, location, managementCluster, networkBlock, nsxtPassword, privateCloudName, resourceGroupName, sku, tags, vcenterPassword);
+
+        public Builder vcenterPassword(String vcenterPassword) {
+            return vcenterPassword(Output.of(vcenterPassword));
+        }
+
+        public PrivateCloudArgs build() {
+            $.internet = Codegen.stringProp("internet").left(InternetEnum.class).output().arg($.internet).def("Disabled").getNullable();
+            $.managementCluster = Objects.requireNonNull($.managementCluster, "expected parameter 'managementCluster' to be non-null");
+            $.networkBlock = Objects.requireNonNull($.networkBlock, "expected parameter 'networkBlock' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

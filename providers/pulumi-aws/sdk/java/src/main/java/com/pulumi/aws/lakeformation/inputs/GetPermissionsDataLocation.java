@@ -17,7 +17,7 @@ public final class GetPermissionsDataLocation extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -28,55 +28,52 @@ public final class GetPermissionsDataLocation extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
     }
 
-    public GetPermissionsDataLocation(
-        String arn,
-        String catalogId) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-    }
+    private GetPermissionsDataLocation() {}
 
-    private GetPermissionsDataLocation() {
-        this.arn = null;
-        this.catalogId = null;
+    private GetPermissionsDataLocation(GetPermissionsDataLocation $) {
+        this.arn = $.arn;
+        this.catalogId = $.catalogId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPermissionsDataLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private String catalogId;
+        private GetPermissionsDataLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPermissionsDataLocation();
         }
 
         public Builder(GetPermissionsDataLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.catalogId = defaults.catalogId;
+            $ = new GetPermissionsDataLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
-        }        public GetPermissionsDataLocation build() {
-            return new GetPermissionsDataLocation(arn, catalogId);
+        }
+
+        public GetPermissionsDataLocation build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            return $;
         }
     }
+
 }

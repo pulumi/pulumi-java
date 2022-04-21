@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="createMode")
-      private final @Nullable Output<CreateMode> createMode;
+    private @Nullable Output<CreateMode> createMode;
 
-    public Output<CreateMode> createMode() {
-        return this.createMode == null ? Codegen.empty() : this.createMode;
+    public Optional<Output<CreateMode>> createMode() {
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enablePurgeProtection")
-      private final @Nullable Output<Boolean> enablePurgeProtection;
+    private @Nullable Output<Boolean> enablePurgeProtection;
 
-    public Output<Boolean> enablePurgeProtection() {
-        return this.enablePurgeProtection == null ? Codegen.empty() : this.enablePurgeProtection;
+    public Optional<Output<Boolean>> enablePurgeProtection() {
+        return Optional.ofNullable(this.enablePurgeProtection);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enableSoftDelete")
-      private final @Nullable Output<Boolean> enableSoftDelete;
+    private @Nullable Output<Boolean> enableSoftDelete;
 
-    public Output<Boolean> enableSoftDelete() {
-        return this.enableSoftDelete == null ? Codegen.empty() : this.enableSoftDelete;
+    public Optional<Output<Boolean>> enableSoftDelete() {
+        return Optional.ofNullable(this.enableSoftDelete);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="initialAdminObjectIds")
-      private final @Nullable Output<List<String>> initialAdminObjectIds;
+    private @Nullable Output<List<String>> initialAdminObjectIds;
 
-    public Output<List<String>> initialAdminObjectIds() {
-        return this.initialAdminObjectIds == null ? Codegen.empty() : this.initialAdminObjectIds;
+    public Optional<Output<List<String>>> initialAdminObjectIds() {
+        return Optional.ofNullable(this.initialAdminObjectIds);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkAcls")
-      private final @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
+    private @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
 
-    public Output<MHSMNetworkRuleSetArgs> networkAcls() {
-        return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
+    public Optional<Output<MHSMNetworkRuleSetArgs>> networkAcls() {
+        return Optional.ofNullable(this.networkAcls);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="softDeleteRetentionInDays")
-      private final @Nullable Output<Integer> softDeleteRetentionInDays;
+    private @Nullable Output<Integer> softDeleteRetentionInDays;
 
-    public Output<Integer> softDeleteRetentionInDays() {
-        return this.softDeleteRetentionInDays == null ? Codegen.empty() : this.softDeleteRetentionInDays;
+    public Optional<Output<Integer>> softDeleteRetentionInDays() {
+        return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
 
     /**
@@ -108,144 +109,125 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ManagedHsmPropertiesArgs(
-        @Nullable Output<CreateMode> createMode,
-        @Nullable Output<Boolean> enablePurgeProtection,
-        @Nullable Output<Boolean> enableSoftDelete,
-        @Nullable Output<List<String>> initialAdminObjectIds,
-        @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Output<Integer> softDeleteRetentionInDays,
-        @Nullable Output<String> tenantId) {
-        this.createMode = createMode;
-        this.enablePurgeProtection = Codegen.booleanProp("enablePurgeProtection").output().arg(enablePurgeProtection).def(true).getNullable();
-        this.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").output().arg(enableSoftDelete).def(true).getNullable();
-        this.initialAdminObjectIds = initialAdminObjectIds;
-        this.networkAcls = networkAcls;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").output().arg(softDeleteRetentionInDays).def(90).getNullable();
-        this.tenantId = tenantId;
-    }
+    private ManagedHsmPropertiesArgs() {}
 
-    private ManagedHsmPropertiesArgs() {
-        this.createMode = Codegen.empty();
-        this.enablePurgeProtection = Codegen.empty();
-        this.enableSoftDelete = Codegen.empty();
-        this.initialAdminObjectIds = Codegen.empty();
-        this.networkAcls = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.softDeleteRetentionInDays = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private ManagedHsmPropertiesArgs(ManagedHsmPropertiesArgs $) {
+        this.createMode = $.createMode;
+        this.enablePurgeProtection = $.enablePurgeProtection;
+        this.enableSoftDelete = $.enableSoftDelete;
+        this.initialAdminObjectIds = $.initialAdminObjectIds;
+        this.networkAcls = $.networkAcls;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.softDeleteRetentionInDays = $.softDeleteRetentionInDays;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedHsmPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CreateMode> createMode;
-        private @Nullable Output<Boolean> enablePurgeProtection;
-        private @Nullable Output<Boolean> enableSoftDelete;
-        private @Nullable Output<List<String>> initialAdminObjectIds;
-        private @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Output<Integer> softDeleteRetentionInDays;
-        private @Nullable Output<String> tenantId;
+        private ManagedHsmPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedHsmPropertiesArgs();
         }
 
         public Builder(ManagedHsmPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createMode = defaults.createMode;
-    	      this.enablePurgeProtection = defaults.enablePurgeProtection;
-    	      this.enableSoftDelete = defaults.enableSoftDelete;
-    	      this.initialAdminObjectIds = defaults.initialAdminObjectIds;
-    	      this.networkAcls = defaults.networkAcls;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.softDeleteRetentionInDays = defaults.softDeleteRetentionInDays;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ManagedHsmPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createMode(@Nullable Output<CreateMode> createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
-        public Builder createMode(@Nullable CreateMode createMode) {
-            this.createMode = Codegen.ofNullable(createMode);
-            return this;
+
+        public Builder createMode(CreateMode createMode) {
+            return createMode(Output.of(createMode));
         }
+
         public Builder enablePurgeProtection(@Nullable Output<Boolean> enablePurgeProtection) {
-            this.enablePurgeProtection = enablePurgeProtection;
+            $.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
-        public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
-            this.enablePurgeProtection = Codegen.ofNullable(enablePurgeProtection);
-            return this;
+
+        public Builder enablePurgeProtection(Boolean enablePurgeProtection) {
+            return enablePurgeProtection(Output.of(enablePurgeProtection));
         }
+
         public Builder enableSoftDelete(@Nullable Output<Boolean> enableSoftDelete) {
-            this.enableSoftDelete = enableSoftDelete;
+            $.enableSoftDelete = enableSoftDelete;
             return this;
         }
-        public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
-            this.enableSoftDelete = Codegen.ofNullable(enableSoftDelete);
-            return this;
+
+        public Builder enableSoftDelete(Boolean enableSoftDelete) {
+            return enableSoftDelete(Output.of(enableSoftDelete));
         }
+
         public Builder initialAdminObjectIds(@Nullable Output<List<String>> initialAdminObjectIds) {
-            this.initialAdminObjectIds = initialAdminObjectIds;
+            $.initialAdminObjectIds = initialAdminObjectIds;
             return this;
         }
-        public Builder initialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
-            this.initialAdminObjectIds = Codegen.ofNullable(initialAdminObjectIds);
-            return this;
+
+        public Builder initialAdminObjectIds(List<String> initialAdminObjectIds) {
+            return initialAdminObjectIds(Output.of(initialAdminObjectIds));
         }
+
         public Builder initialAdminObjectIds(String... initialAdminObjectIds) {
             return initialAdminObjectIds(List.of(initialAdminObjectIds));
         }
+
         public Builder networkAcls(@Nullable Output<MHSMNetworkRuleSetArgs> networkAcls) {
-            this.networkAcls = networkAcls;
+            $.networkAcls = networkAcls;
             return this;
         }
-        public Builder networkAcls(@Nullable MHSMNetworkRuleSetArgs networkAcls) {
-            this.networkAcls = Codegen.ofNullable(networkAcls);
-            return this;
+
+        public Builder networkAcls(MHSMNetworkRuleSetArgs networkAcls) {
+            return networkAcls(Output.of(networkAcls));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder softDeleteRetentionInDays(@Nullable Output<Integer> softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = softDeleteRetentionInDays;
+            $.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
-        public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = Codegen.ofNullable(softDeleteRetentionInDays);
-            return this;
+
+        public Builder softDeleteRetentionInDays(Integer softDeleteRetentionInDays) {
+            return softDeleteRetentionInDays(Output.of(softDeleteRetentionInDays));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public ManagedHsmPropertiesArgs build() {
-            return new ManagedHsmPropertiesArgs(createMode, enablePurgeProtection, enableSoftDelete, initialAdminObjectIds, networkAcls, publicNetworkAccess, softDeleteRetentionInDays, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public ManagedHsmPropertiesArgs build() {
+            $.enablePurgeProtection = Codegen.booleanProp("enablePurgeProtection").output().arg($.enablePurgeProtection).def(true).getNullable();
+            $.enableSoftDelete = Codegen.booleanProp("enableSoftDelete").output().arg($.enableSoftDelete).def(true).getNullable();
+            $.softDeleteRetentionInDays = Codegen.integerProp("softDeleteRetentionInDays").output().arg($.softDeleteRetentionInDays).def(90).getNullable();
+            return $;
         }
     }
+
 }

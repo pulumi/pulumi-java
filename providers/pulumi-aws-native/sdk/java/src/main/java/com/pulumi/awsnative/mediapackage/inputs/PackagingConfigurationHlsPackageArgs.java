@@ -7,11 +7,11 @@ import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsEncrypt
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
     public static final PackagingConfigurationHlsPackageArgs Empty = new PackagingConfigurationHlsPackageArgs();
 
     @Import(name="encryption")
-      private final @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
+    private @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
 
-    public Output<PackagingConfigurationHlsEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<PackagingConfigurationHlsEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -35,17 +35,17 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
      * 
      */
     @Import(name="hlsManifests", required=true)
-      private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+    private Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
     public Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests() {
         return this.hlsManifests;
     }
 
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Output<Integer> segmentDurationSeconds;
+    private @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
+    public Optional<Output<Integer>> segmentDurationSeconds() {
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     /**
@@ -53,92 +53,83 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
      * 
      */
     @Import(name="useAudioRenditionGroup")
-      private final @Nullable Output<Boolean> useAudioRenditionGroup;
+    private @Nullable Output<Boolean> useAudioRenditionGroup;
 
-    public Output<Boolean> useAudioRenditionGroup() {
-        return this.useAudioRenditionGroup == null ? Codegen.empty() : this.useAudioRenditionGroup;
+    public Optional<Output<Boolean>> useAudioRenditionGroup() {
+        return Optional.ofNullable(this.useAudioRenditionGroup);
     }
 
-    public PackagingConfigurationHlsPackageArgs(
-        @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption,
-        Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests,
-        @Nullable Output<Integer> segmentDurationSeconds,
-        @Nullable Output<Boolean> useAudioRenditionGroup) {
-        this.encryption = encryption;
-        this.hlsManifests = Objects.requireNonNull(hlsManifests, "expected parameter 'hlsManifests' to be non-null");
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.useAudioRenditionGroup = useAudioRenditionGroup;
-    }
+    private PackagingConfigurationHlsPackageArgs() {}
 
-    private PackagingConfigurationHlsPackageArgs() {
-        this.encryption = Codegen.empty();
-        this.hlsManifests = Codegen.empty();
-        this.segmentDurationSeconds = Codegen.empty();
-        this.useAudioRenditionGroup = Codegen.empty();
+    private PackagingConfigurationHlsPackageArgs(PackagingConfigurationHlsPackageArgs $) {
+        this.encryption = $.encryption;
+        this.hlsManifests = $.hlsManifests;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.useAudioRenditionGroup = $.useAudioRenditionGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationHlsPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
-        private Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
-        private @Nullable Output<Integer> segmentDurationSeconds;
-        private @Nullable Output<Boolean> useAudioRenditionGroup;
+        private PackagingConfigurationHlsPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationHlsPackageArgs();
         }
 
         public Builder(PackagingConfigurationHlsPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.hlsManifests = defaults.hlsManifests;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
+            $ = new PackagingConfigurationHlsPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable PackagingConfigurationHlsEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(PackagingConfigurationHlsEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
-            this.hlsManifests = Objects.requireNonNull(hlsManifests);
+            $.hlsManifests = hlsManifests;
             return this;
         }
+
         public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
-            this.hlsManifests = Output.of(Objects.requireNonNull(hlsManifests));
-            return this;
+            return hlsManifests(Output.of(hlsManifests));
         }
+
         public Builder hlsManifests(PackagingConfigurationHlsManifestArgs... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
+
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
-        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
-            return this;
+
+        public Builder segmentDurationSeconds(Integer segmentDurationSeconds) {
+            return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
+
         public Builder useAudioRenditionGroup(@Nullable Output<Boolean> useAudioRenditionGroup) {
-            this.useAudioRenditionGroup = useAudioRenditionGroup;
+            $.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-        public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
-            this.useAudioRenditionGroup = Codegen.ofNullable(useAudioRenditionGroup);
-            return this;
-        }        public PackagingConfigurationHlsPackageArgs build() {
-            return new PackagingConfigurationHlsPackageArgs(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
+
+        public Builder useAudioRenditionGroup(Boolean useAudioRenditionGroup) {
+            return useAudioRenditionGroup(Output.of(useAudioRenditionGroup));
+        }
+
+        public PackagingConfigurationHlsPackageArgs build() {
+            $.hlsManifests = Objects.requireNonNull($.hlsManifests, "expected parameter 'hlsManifests' to be non-null");
+            return $;
         }
     }
+
 }

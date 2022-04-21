@@ -22,7 +22,7 @@ public final class AutoscalingSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -33,55 +33,52 @@ public final class AutoscalingSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="maxNumWorkers", required=true)
-      private final Integer maxNumWorkers;
+    private Integer maxNumWorkers;
 
     public Integer maxNumWorkers() {
         return this.maxNumWorkers;
     }
 
-    public AutoscalingSettingsResponse(
-        String algorithm,
-        Integer maxNumWorkers) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers, "expected parameter 'maxNumWorkers' to be non-null");
-    }
+    private AutoscalingSettingsResponse() {}
 
-    private AutoscalingSettingsResponse() {
-        this.algorithm = null;
-        this.maxNumWorkers = null;
+    private AutoscalingSettingsResponse(AutoscalingSettingsResponse $) {
+        this.algorithm = $.algorithm;
+        this.maxNumWorkers = $.maxNumWorkers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private Integer maxNumWorkers;
+        private AutoscalingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingSettingsResponse();
         }
 
         public Builder(AutoscalingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.maxNumWorkers = defaults.maxNumWorkers;
+            $ = new AutoscalingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder maxNumWorkers(Integer maxNumWorkers) {
-            this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers);
+            $.maxNumWorkers = maxNumWorkers;
             return this;
-        }        public AutoscalingSettingsResponse build() {
-            return new AutoscalingSettingsResponse(algorithm, maxNumWorkers);
+        }
+
+        public AutoscalingSettingsResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.maxNumWorkers = Objects.requireNonNull($.maxNumWorkers, "expected parameter 'maxNumWorkers' to be non-null");
+            return $;
         }
     }
+
 }

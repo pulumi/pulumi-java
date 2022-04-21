@@ -5,7 +5,6 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class DeviceCredentialPublicKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="format", required=true)
-      private final Output<String> format;
+    private Output<String> format;
 
     public Output<String> format() {
         return this.format;
@@ -31,63 +30,60 @@ public final class DeviceCredentialPublicKeyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
-    public DeviceCredentialPublicKeyArgs(
-        Output<String> format,
-        Output<String> key) {
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private DeviceCredentialPublicKeyArgs() {}
 
-    private DeviceCredentialPublicKeyArgs() {
-        this.format = Codegen.empty();
-        this.key = Codegen.empty();
+    private DeviceCredentialPublicKeyArgs(DeviceCredentialPublicKeyArgs $) {
+        this.format = $.format;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceCredentialPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> format;
-        private Output<String> key;
+        private DeviceCredentialPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceCredentialPublicKeyArgs();
         }
 
         public Builder(DeviceCredentialPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
+            $ = new DeviceCredentialPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(Output<String> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
-        }        public DeviceCredentialPublicKeyArgs build() {
-            return new DeviceCredentialPublicKeyArgs(format, key);
+            return key(Output.of(key));
+        }
+
+        public DeviceCredentialPublicKeyArgs build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

@@ -30,14 +30,14 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     @Import(name="diskSizeGB", required=true)
-      private final Integer diskSizeGB;
+    private Integer diskSizeGB;
 
     public Integer diskSizeGB() {
         return this.diskSizeGB;
@@ -48,7 +48,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
@@ -62,73 +62,64 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public DataDiskResponse(
-        @Nullable String caching,
-        Integer diskSizeGB,
-        Integer lun,
-        @Nullable String storageAccountType) {
-        this.caching = caching;
-        this.diskSizeGB = Objects.requireNonNull(diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.storageAccountType = storageAccountType;
-    }
+    private DataDiskResponse() {}
 
-    private DataDiskResponse() {
-        this.caching = null;
-        this.diskSizeGB = null;
-        this.lun = null;
-        this.storageAccountType = null;
+    private DataDiskResponse(DataDiskResponse $) {
+        this.caching = $.caching;
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String caching;
-        private Integer diskSizeGB;
-        private Integer lun;
-        private @Nullable String storageAccountType;
+        private DataDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskResponse();
         }
 
         public Builder(DataDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new DataDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder diskSizeGB(Integer diskSizeGB) {
-            this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
-        }        public DataDiskResponse build() {
-            return new DataDiskResponse(caching, diskSizeGB, lun, storageAccountType);
+        }
+
+        public DataDiskResponse build() {
+            $.diskSizeGB = Objects.requireNonNull($.diskSizeGB, "expected parameter 'diskSizeGB' to be non-null");
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class RuleGroupRuleVariablesArgs extends com.pulumi.resources.Resou
     public static final RuleGroupRuleVariablesArgs Empty = new RuleGroupRuleVariablesArgs();
 
     @Import(name="iPSets")
-      private final @Nullable Output<Object> iPSets;
+    private @Nullable Output<Object> iPSets;
 
-    public Output<Object> iPSets() {
-        return this.iPSets == null ? Codegen.empty() : this.iPSets;
+    public Optional<Output<Object>> iPSets() {
+        return Optional.ofNullable(this.iPSets);
     }
 
     @Import(name="portSets")
-      private final @Nullable Output<Object> portSets;
+    private @Nullable Output<Object> portSets;
 
-    public Output<Object> portSets() {
-        return this.portSets == null ? Codegen.empty() : this.portSets;
+    public Optional<Output<Object>> portSets() {
+        return Optional.ofNullable(this.portSets);
     }
 
-    public RuleGroupRuleVariablesArgs(
-        @Nullable Output<Object> iPSets,
-        @Nullable Output<Object> portSets) {
-        this.iPSets = iPSets;
-        this.portSets = portSets;
-    }
+    private RuleGroupRuleVariablesArgs() {}
 
-    private RuleGroupRuleVariablesArgs() {
-        this.iPSets = Codegen.empty();
-        this.portSets = Codegen.empty();
+    private RuleGroupRuleVariablesArgs(RuleGroupRuleVariablesArgs $) {
+        this.iPSets = $.iPSets;
+        this.portSets = $.portSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleVariablesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> iPSets;
-        private @Nullable Output<Object> portSets;
+        private RuleGroupRuleVariablesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleVariablesArgs();
         }
 
         public Builder(RuleGroupRuleVariablesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iPSets = defaults.iPSets;
-    	      this.portSets = defaults.portSets;
+            $ = new RuleGroupRuleVariablesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iPSets(@Nullable Output<Object> iPSets) {
-            this.iPSets = iPSets;
+            $.iPSets = iPSets;
             return this;
         }
-        public Builder iPSets(@Nullable Object iPSets) {
-            this.iPSets = Codegen.ofNullable(iPSets);
-            return this;
+
+        public Builder iPSets(Object iPSets) {
+            return iPSets(Output.of(iPSets));
         }
+
         public Builder portSets(@Nullable Output<Object> portSets) {
-            this.portSets = portSets;
+            $.portSets = portSets;
             return this;
         }
-        public Builder portSets(@Nullable Object portSets) {
-            this.portSets = Codegen.ofNullable(portSets);
-            return this;
-        }        public RuleGroupRuleVariablesArgs build() {
-            return new RuleGroupRuleVariablesArgs(iPSets, portSets);
+
+        public Builder portSets(Object portSets) {
+            return portSets(Output.of(portSets));
+        }
+
+        public RuleGroupRuleVariablesArgs build() {
+            return $;
         }
     }
+
 }

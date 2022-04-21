@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ssmcontacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="contactId", required=true)
-      private final Output<String> contactId;
+    private Output<String> contactId;
 
     public Output<String> contactId() {
         return this.contactId;
@@ -35,63 +34,60 @@ public final class ContactTargetInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="isEssential", required=true)
-      private final Output<Boolean> isEssential;
+    private Output<Boolean> isEssential;
 
     public Output<Boolean> isEssential() {
         return this.isEssential;
     }
 
-    public ContactTargetInfoArgs(
-        Output<String> contactId,
-        Output<Boolean> isEssential) {
-        this.contactId = Objects.requireNonNull(contactId, "expected parameter 'contactId' to be non-null");
-        this.isEssential = Objects.requireNonNull(isEssential, "expected parameter 'isEssential' to be non-null");
-    }
+    private ContactTargetInfoArgs() {}
 
-    private ContactTargetInfoArgs() {
-        this.contactId = Codegen.empty();
-        this.isEssential = Codegen.empty();
+    private ContactTargetInfoArgs(ContactTargetInfoArgs $) {
+        this.contactId = $.contactId;
+        this.isEssential = $.isEssential;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactTargetInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contactId;
-        private Output<Boolean> isEssential;
+        private ContactTargetInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactTargetInfoArgs();
         }
 
         public Builder(ContactTargetInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactId = defaults.contactId;
-    	      this.isEssential = defaults.isEssential;
+            $ = new ContactTargetInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactId(Output<String> contactId) {
-            this.contactId = Objects.requireNonNull(contactId);
+            $.contactId = contactId;
             return this;
         }
+
         public Builder contactId(String contactId) {
-            this.contactId = Output.of(Objects.requireNonNull(contactId));
-            return this;
+            return contactId(Output.of(contactId));
         }
+
         public Builder isEssential(Output<Boolean> isEssential) {
-            this.isEssential = Objects.requireNonNull(isEssential);
+            $.isEssential = isEssential;
             return this;
         }
+
         public Builder isEssential(Boolean isEssential) {
-            this.isEssential = Output.of(Objects.requireNonNull(isEssential));
-            return this;
-        }        public ContactTargetInfoArgs build() {
-            return new ContactTargetInfoArgs(contactId, isEssential);
+            return isEssential(Output.of(isEssential));
+        }
+
+        public ContactTargetInfoArgs build() {
+            $.contactId = Objects.requireNonNull($.contactId, "expected parameter 'contactId' to be non-null");
+            $.isEssential = Objects.requireNonNull($.isEssential, "expected parameter 'isEssential' to be non-null");
+            return $;
         }
     }
+
 }

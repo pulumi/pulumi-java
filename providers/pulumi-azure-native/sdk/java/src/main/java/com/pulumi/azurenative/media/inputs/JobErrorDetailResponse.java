@@ -21,7 +21,7 @@ public final class JobErrorDetailResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,55 +32,52 @@ public final class JobErrorDetailResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public JobErrorDetailResponse(
-        String code,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private JobErrorDetailResponse() {}
 
-    private JobErrorDetailResponse() {
-        this.code = null;
-        this.message = null;
+    private JobErrorDetailResponse(JobErrorDetailResponse $) {
+        this.code = $.code;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobErrorDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String message;
+        private JobErrorDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobErrorDetailResponse();
         }
 
         public Builder(JobErrorDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
+            $ = new JobErrorDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public JobErrorDetailResponse build() {
-            return new JobErrorDetailResponse(code, message);
+        }
+
+        public JobErrorDetailResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

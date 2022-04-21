@@ -5,9 +5,9 @@ package com.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CloudFunctionEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public CloudFunctionEndpointArgs(@Nullable Output<String> uri) {
-        this.uri = uri;
-    }
+    private CloudFunctionEndpointArgs() {}
 
-    private CloudFunctionEndpointArgs() {
-        this.uri = Codegen.empty();
+    private CloudFunctionEndpointArgs(CloudFunctionEndpointArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFunctionEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> uri;
+        private CloudFunctionEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFunctionEndpointArgs();
         }
 
         public Builder(CloudFunctionEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new CloudFunctionEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public CloudFunctionEndpointArgs build() {
-            return new CloudFunctionEndpointArgs(uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public CloudFunctionEndpointArgs build() {
+            return $;
         }
     }
+
 }

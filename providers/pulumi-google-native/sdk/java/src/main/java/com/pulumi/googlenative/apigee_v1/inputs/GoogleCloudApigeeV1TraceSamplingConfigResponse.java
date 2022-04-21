@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends com.pu
      * 
      */
     @Import(name="sampler", required=true)
-      private final String sampler;
+    private String sampler;
 
     public String sampler() {
         return this.sampler;
@@ -33,55 +33,52 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse extends com.pu
      * 
      */
     @Import(name="samplingRate", required=true)
-      private final Double samplingRate;
+    private Double samplingRate;
 
     public Double samplingRate() {
         return this.samplingRate;
     }
 
-    public GoogleCloudApigeeV1TraceSamplingConfigResponse(
-        String sampler,
-        Double samplingRate) {
-        this.sampler = Objects.requireNonNull(sampler, "expected parameter 'sampler' to be non-null");
-        this.samplingRate = Objects.requireNonNull(samplingRate, "expected parameter 'samplingRate' to be non-null");
-    }
+    private GoogleCloudApigeeV1TraceSamplingConfigResponse() {}
 
-    private GoogleCloudApigeeV1TraceSamplingConfigResponse() {
-        this.sampler = null;
-        this.samplingRate = null;
+    private GoogleCloudApigeeV1TraceSamplingConfigResponse(GoogleCloudApigeeV1TraceSamplingConfigResponse $) {
+        this.sampler = $.sampler;
+        this.samplingRate = $.samplingRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1TraceSamplingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sampler;
-        private Double samplingRate;
+        private GoogleCloudApigeeV1TraceSamplingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1TraceSamplingConfigResponse();
         }
 
         public Builder(GoogleCloudApigeeV1TraceSamplingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sampler = defaults.sampler;
-    	      this.samplingRate = defaults.samplingRate;
+            $ = new GoogleCloudApigeeV1TraceSamplingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sampler(String sampler) {
-            this.sampler = Objects.requireNonNull(sampler);
+            $.sampler = sampler;
             return this;
         }
+
         public Builder samplingRate(Double samplingRate) {
-            this.samplingRate = Objects.requireNonNull(samplingRate);
+            $.samplingRate = samplingRate;
             return this;
-        }        public GoogleCloudApigeeV1TraceSamplingConfigResponse build() {
-            return new GoogleCloudApigeeV1TraceSamplingConfigResponse(sampler, samplingRate);
+        }
+
+        public GoogleCloudApigeeV1TraceSamplingConfigResponse build() {
+            $.sampler = Objects.requireNonNull($.sampler, "expected parameter 'sampler' to be non-null");
+            $.samplingRate = Objects.requireNonNull($.samplingRate, "expected parameter 'samplingRate' to be non-null");
+            return $;
         }
     }
+
 }

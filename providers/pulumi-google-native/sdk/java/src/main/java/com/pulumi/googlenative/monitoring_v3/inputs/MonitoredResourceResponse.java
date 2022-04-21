@@ -22,7 +22,7 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -33,55 +33,52 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MonitoredResourceResponse(
-        Map<String,String> labels,
-        String type) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private MonitoredResourceResponse() {}
 
-    private MonitoredResourceResponse() {
-        this.labels = Map.of();
-        this.type = null;
+    private MonitoredResourceResponse(MonitoredResourceResponse $) {
+        this.labels = $.labels;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> labels;
-        private String type;
+        private MonitoredResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredResourceResponse();
         }
 
         public Builder(MonitoredResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.type = defaults.type;
+            $ = new MonitoredResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MonitoredResourceResponse build() {
-            return new MonitoredResourceResponse(labels, type);
+        }
+
+        public MonitoredResourceResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

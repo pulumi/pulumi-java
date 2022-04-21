@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="restApiId", required=true)
-      private final Output<String> restApiId;
+    private Output<String> restApiId;
 
     public Output<String> restApiId() {
         return this.restApiId;
@@ -42,76 +42,70 @@ public final class DocumentationVersionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public DocumentationVersionArgs(
-        @Nullable Output<String> description,
-        Output<String> restApiId,
-        Output<String> version) {
-        this.description = description;
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private DocumentationVersionArgs() {}
 
-    private DocumentationVersionArgs() {
-        this.description = Codegen.empty();
-        this.restApiId = Codegen.empty();
-        this.version = Codegen.empty();
+    private DocumentationVersionArgs(DocumentationVersionArgs $) {
+        this.description = $.description;
+        this.restApiId = $.restApiId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> restApiId;
-        private Output<String> version;
+        private DocumentationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationVersionArgs();
         }
 
         public Builder(DocumentationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.restApiId = defaults.restApiId;
-    	      this.version = defaults.version;
+            $ = new DocumentationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder restApiId(Output<String> restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
-            return this;
+            return restApiId(Output.of(restApiId));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public DocumentationVersionArgs build() {
-            return new DocumentationVersionArgs(description, restApiId, version);
+            return version(Output.of(version));
+        }
+
+        public DocumentationVersionArgs build() {
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

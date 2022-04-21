@@ -18,48 +18,49 @@ public final class CapacityReservationGroupInstanceViewResponse extends com.pulu
      * 
      */
     @Import(name="capacityReservations", required=true)
-      private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
+    private List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
     public List<CapacityReservationInstanceViewWithNameResponse> capacityReservations() {
         return this.capacityReservations;
     }
 
-    public CapacityReservationGroupInstanceViewResponse(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
-        this.capacityReservations = Objects.requireNonNull(capacityReservations, "expected parameter 'capacityReservations' to be non-null");
-    }
+    private CapacityReservationGroupInstanceViewResponse() {}
 
-    private CapacityReservationGroupInstanceViewResponse() {
-        this.capacityReservations = List.of();
+    private CapacityReservationGroupInstanceViewResponse(CapacityReservationGroupInstanceViewResponse $) {
+        this.capacityReservations = $.capacityReservations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationGroupInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
+        private CapacityReservationGroupInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationGroupInstanceViewResponse();
         }
 
         public Builder(CapacityReservationGroupInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityReservations = defaults.capacityReservations;
+            $ = new CapacityReservationGroupInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityReservations(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
-            this.capacityReservations = Objects.requireNonNull(capacityReservations);
+            $.capacityReservations = capacityReservations;
             return this;
         }
+
         public Builder capacityReservations(CapacityReservationInstanceViewWithNameResponse... capacityReservations) {
             return capacityReservations(List.of(capacityReservations));
-        }        public CapacityReservationGroupInstanceViewResponse build() {
-            return new CapacityReservationGroupInstanceViewResponse(capacityReservations);
+        }
+
+        public CapacityReservationGroupInstanceViewResponse build() {
+            $.capacityReservations = Objects.requireNonNull($.capacityReservations, "expected parameter 'capacityReservations' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -28,7 +28,7 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetServiceRunnerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetServiceRunnerArgs(
-        String labName,
-        String name,
-        String resourceGroupName) {
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetServiceRunnerArgs() {}
 
-    private GetServiceRunnerArgs() {
-        this.labName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetServiceRunnerArgs(GetServiceRunnerArgs $) {
+        this.labName = $.labName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceRunnerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labName;
-        private String name;
-        private String resourceGroupName;
+        private GetServiceRunnerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceRunnerArgs();
         }
 
         public Builder(GetServiceRunnerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labName = defaults.labName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetServiceRunnerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetServiceRunnerArgs build() {
-            return new GetServiceRunnerArgs(labName, name, resourceGroupName);
+        }
+
+        public GetServiceRunnerArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

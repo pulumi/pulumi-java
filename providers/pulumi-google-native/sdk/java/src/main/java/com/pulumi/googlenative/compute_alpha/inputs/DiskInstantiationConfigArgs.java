@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.DiskInstantiationConfigInstantiateFrom;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="autoDelete")
-      private final @Nullable Output<Boolean> autoDelete;
+    private @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> autoDelete() {
-        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
+    public Optional<Output<Boolean>> autoDelete() {
+        return Optional.ofNullable(this.autoDelete);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="customImage")
-      private final @Nullable Output<String> customImage;
+    private @Nullable Output<String> customImage;
 
-    public Output<String> customImage() {
-        return this.customImage == null ? Codegen.empty() : this.customImage;
+    public Optional<Output<String>> customImage() {
+        return Optional.ofNullable(this.customImage);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class DiskInstantiationConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="instantiateFrom")
-      private final @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
+    private @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
-    public Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom() {
-        return this.instantiateFrom == null ? Codegen.empty() : this.instantiateFrom;
+    public Optional<Output<DiskInstantiationConfigInstantiateFrom>> instantiateFrom() {
+        return Optional.ofNullable(this.instantiateFrom);
     }
 
-    public DiskInstantiationConfigArgs(
-        @Nullable Output<Boolean> autoDelete,
-        @Nullable Output<String> customImage,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
-        this.autoDelete = autoDelete;
-        this.customImage = customImage;
-        this.deviceName = deviceName;
-        this.instantiateFrom = instantiateFrom;
-    }
+    private DiskInstantiationConfigArgs() {}
 
-    private DiskInstantiationConfigArgs() {
-        this.autoDelete = Codegen.empty();
-        this.customImage = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.instantiateFrom = Codegen.empty();
+    private DiskInstantiationConfigArgs(DiskInstantiationConfigArgs $) {
+        this.autoDelete = $.autoDelete;
+        this.customImage = $.customImage;
+        this.deviceName = $.deviceName;
+        this.instantiateFrom = $.instantiateFrom;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskInstantiationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoDelete;
-        private @Nullable Output<String> customImage;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
+        private DiskInstantiationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskInstantiationConfigArgs();
         }
 
         public Builder(DiskInstantiationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.customImage = defaults.customImage;
-    	      this.deviceName = defaults.deviceName;
-    	      this.instantiateFrom = defaults.instantiateFrom;
+            $ = new DiskInstantiationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
-            this.autoDelete = autoDelete;
+            $.autoDelete = autoDelete;
             return this;
         }
-        public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Codegen.ofNullable(autoDelete);
-            return this;
+
+        public Builder autoDelete(Boolean autoDelete) {
+            return autoDelete(Output.of(autoDelete));
         }
+
         public Builder customImage(@Nullable Output<String> customImage) {
-            this.customImage = customImage;
+            $.customImage = customImage;
             return this;
         }
-        public Builder customImage(@Nullable String customImage) {
-            this.customImage = Codegen.ofNullable(customImage);
-            return this;
+
+        public Builder customImage(String customImage) {
+            return customImage(Output.of(customImage));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder instantiateFrom(@Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
-            this.instantiateFrom = instantiateFrom;
+            $.instantiateFrom = instantiateFrom;
             return this;
         }
-        public Builder instantiateFrom(@Nullable DiskInstantiationConfigInstantiateFrom instantiateFrom) {
-            this.instantiateFrom = Codegen.ofNullable(instantiateFrom);
-            return this;
-        }        public DiskInstantiationConfigArgs build() {
-            return new DiskInstantiationConfigArgs(autoDelete, customImage, deviceName, instantiateFrom);
+
+        public Builder instantiateFrom(DiskInstantiationConfigInstantiateFrom instantiateFrom) {
+            return instantiateFrom(Output.of(instantiateFrom));
+        }
+
+        public DiskInstantiationConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.redis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.redis_v1.enums.PersistenceConfigPersistenceMode;
 import com.pulumi.googlenative.redis_v1.enums.PersistenceConfigRdbSnapshotPeriod;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="persistenceMode")
-      private final @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode;
+    private @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode;
 
-    public Output<PersistenceConfigPersistenceMode> persistenceMode() {
-        return this.persistenceMode == null ? Codegen.empty() : this.persistenceMode;
+    public Optional<Output<PersistenceConfigPersistenceMode>> persistenceMode() {
+        return Optional.ofNullable(this.persistenceMode);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rdbSnapshotPeriod")
-      private final @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
+    private @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
 
-    public Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod() {
-        return this.rdbSnapshotPeriod == null ? Codegen.empty() : this.rdbSnapshotPeriod;
+    public Optional<Output<PersistenceConfigRdbSnapshotPeriod>> rdbSnapshotPeriod() {
+        return Optional.ofNullable(this.rdbSnapshotPeriod);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PersistenceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rdbSnapshotStartTime")
-      private final @Nullable Output<String> rdbSnapshotStartTime;
+    private @Nullable Output<String> rdbSnapshotStartTime;
 
-    public Output<String> rdbSnapshotStartTime() {
-        return this.rdbSnapshotStartTime == null ? Codegen.empty() : this.rdbSnapshotStartTime;
+    public Optional<Output<String>> rdbSnapshotStartTime() {
+        return Optional.ofNullable(this.rdbSnapshotStartTime);
     }
 
-    public PersistenceConfigArgs(
-        @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode,
-        @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod,
-        @Nullable Output<String> rdbSnapshotStartTime) {
-        this.persistenceMode = persistenceMode;
-        this.rdbSnapshotPeriod = rdbSnapshotPeriod;
-        this.rdbSnapshotStartTime = rdbSnapshotStartTime;
-    }
+    private PersistenceConfigArgs() {}
 
-    private PersistenceConfigArgs() {
-        this.persistenceMode = Codegen.empty();
-        this.rdbSnapshotPeriod = Codegen.empty();
-        this.rdbSnapshotStartTime = Codegen.empty();
+    private PersistenceConfigArgs(PersistenceConfigArgs $) {
+        this.persistenceMode = $.persistenceMode;
+        this.rdbSnapshotPeriod = $.rdbSnapshotPeriod;
+        this.rdbSnapshotStartTime = $.rdbSnapshotStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistenceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PersistenceConfigPersistenceMode> persistenceMode;
-        private @Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod;
-        private @Nullable Output<String> rdbSnapshotStartTime;
+        private PersistenceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistenceConfigArgs();
         }
 
         public Builder(PersistenceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.persistenceMode = defaults.persistenceMode;
-    	      this.rdbSnapshotPeriod = defaults.rdbSnapshotPeriod;
-    	      this.rdbSnapshotStartTime = defaults.rdbSnapshotStartTime;
+            $ = new PersistenceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder persistenceMode(@Nullable Output<PersistenceConfigPersistenceMode> persistenceMode) {
-            this.persistenceMode = persistenceMode;
+            $.persistenceMode = persistenceMode;
             return this;
         }
-        public Builder persistenceMode(@Nullable PersistenceConfigPersistenceMode persistenceMode) {
-            this.persistenceMode = Codegen.ofNullable(persistenceMode);
-            return this;
+
+        public Builder persistenceMode(PersistenceConfigPersistenceMode persistenceMode) {
+            return persistenceMode(Output.of(persistenceMode));
         }
+
         public Builder rdbSnapshotPeriod(@Nullable Output<PersistenceConfigRdbSnapshotPeriod> rdbSnapshotPeriod) {
-            this.rdbSnapshotPeriod = rdbSnapshotPeriod;
+            $.rdbSnapshotPeriod = rdbSnapshotPeriod;
             return this;
         }
-        public Builder rdbSnapshotPeriod(@Nullable PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
-            this.rdbSnapshotPeriod = Codegen.ofNullable(rdbSnapshotPeriod);
-            return this;
+
+        public Builder rdbSnapshotPeriod(PersistenceConfigRdbSnapshotPeriod rdbSnapshotPeriod) {
+            return rdbSnapshotPeriod(Output.of(rdbSnapshotPeriod));
         }
+
         public Builder rdbSnapshotStartTime(@Nullable Output<String> rdbSnapshotStartTime) {
-            this.rdbSnapshotStartTime = rdbSnapshotStartTime;
+            $.rdbSnapshotStartTime = rdbSnapshotStartTime;
             return this;
         }
-        public Builder rdbSnapshotStartTime(@Nullable String rdbSnapshotStartTime) {
-            this.rdbSnapshotStartTime = Codegen.ofNullable(rdbSnapshotStartTime);
-            return this;
-        }        public PersistenceConfigArgs build() {
-            return new PersistenceConfigArgs(persistenceMode, rdbSnapshotPeriod, rdbSnapshotStartTime);
+
+        public Builder rdbSnapshotStartTime(String rdbSnapshotStartTime) {
+            return rdbSnapshotStartTime(Output.of(rdbSnapshotStartTime));
+        }
+
+        public PersistenceConfigArgs build() {
+            return $;
         }
     }
+
 }

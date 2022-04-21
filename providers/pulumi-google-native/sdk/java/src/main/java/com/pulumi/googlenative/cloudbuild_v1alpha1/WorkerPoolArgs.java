@@ -5,12 +5,12 @@ package com.pulumi.googlenative.cloudbuild_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1alpha1.enums.WorkerPoolRegionsItem;
 import com.pulumi.googlenative.cloudbuild_v1alpha1.inputs.WorkerConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regions")
-      private final @Nullable Output<List<WorkerPoolRegionsItem>> regions;
+    private @Nullable Output<List<WorkerPoolRegionsItem>> regions;
 
-    public Output<List<WorkerPoolRegionsItem>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<WorkerPoolRegionsItem>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<WorkerConfigArgs> workerConfig;
+    private @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Output<WorkerConfigArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<WorkerConfigArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
     /**
@@ -67,105 +67,92 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerCount")
-      private final @Nullable Output<String> workerCount;
+    private @Nullable Output<String> workerCount;
 
-    public Output<String> workerCount() {
-        return this.workerCount == null ? Codegen.empty() : this.workerCount;
+    public Optional<Output<String>> workerCount() {
+        return Optional.ofNullable(this.workerCount);
     }
 
-    public WorkerPoolArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<WorkerPoolRegionsItem>> regions,
-        @Nullable Output<WorkerConfigArgs> workerConfig,
-        @Nullable Output<String> workerCount) {
-        this.name = name;
-        this.project = project;
-        this.regions = regions;
-        this.workerConfig = workerConfig;
-        this.workerCount = workerCount;
-    }
+    private WorkerPoolArgs() {}
 
-    private WorkerPoolArgs() {
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.regions = Codegen.empty();
-        this.workerConfig = Codegen.empty();
-        this.workerCount = Codegen.empty();
+    private WorkerPoolArgs(WorkerPoolArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.regions = $.regions;
+        this.workerConfig = $.workerConfig;
+        this.workerCount = $.workerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<WorkerPoolRegionsItem>> regions;
-        private @Nullable Output<WorkerConfigArgs> workerConfig;
-        private @Nullable Output<String> workerCount;
+        private WorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolArgs();
         }
 
         public Builder(WorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.regions = defaults.regions;
-    	      this.workerConfig = defaults.workerConfig;
-    	      this.workerCount = defaults.workerCount;
+            $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder regions(@Nullable Output<List<WorkerPoolRegionsItem>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<WorkerPoolRegionsItem> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<WorkerPoolRegionsItem> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(WorkerPoolRegionsItem... regions) {
             return regions(List.of(regions));
         }
+
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
+
+        public Builder workerConfig(WorkerConfigArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
         }
+
         public Builder workerCount(@Nullable Output<String> workerCount) {
-            this.workerCount = workerCount;
+            $.workerCount = workerCount;
             return this;
         }
-        public Builder workerCount(@Nullable String workerCount) {
-            this.workerCount = Codegen.ofNullable(workerCount);
-            return this;
-        }        public WorkerPoolArgs build() {
-            return new WorkerPoolArgs(name, project, regions, workerConfig, workerCount);
+
+        public Builder workerCount(String workerCount) {
+            return workerCount(Output.of(workerCount));
+        }
+
+        public WorkerPoolArgs build() {
+            return $;
         }
     }
+
 }

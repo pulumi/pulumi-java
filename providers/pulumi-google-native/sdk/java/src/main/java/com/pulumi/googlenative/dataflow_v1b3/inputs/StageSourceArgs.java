@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StageSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StageSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originalTransformOrCollection")
-      private final @Nullable Output<String> originalTransformOrCollection;
+    private @Nullable Output<String> originalTransformOrCollection;
 
-    public Output<String> originalTransformOrCollection() {
-        return this.originalTransformOrCollection == null ? Codegen.empty() : this.originalTransformOrCollection;
+    public Optional<Output<String>> originalTransformOrCollection() {
+        return Optional.ofNullable(this.originalTransformOrCollection);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StageSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeBytes")
-      private final @Nullable Output<String> sizeBytes;
+    private @Nullable Output<String> sizeBytes;
 
-    public Output<String> sizeBytes() {
-        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
+    public Optional<Output<String>> sizeBytes() {
+        return Optional.ofNullable(this.sizeBytes);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class StageSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public StageSourceArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> originalTransformOrCollection,
-        @Nullable Output<String> sizeBytes,
-        @Nullable Output<String> userName) {
-        this.name = name;
-        this.originalTransformOrCollection = originalTransformOrCollection;
-        this.sizeBytes = sizeBytes;
-        this.userName = userName;
-    }
+    private StageSourceArgs() {}
 
-    private StageSourceArgs() {
-        this.name = Codegen.empty();
-        this.originalTransformOrCollection = Codegen.empty();
-        this.sizeBytes = Codegen.empty();
-        this.userName = Codegen.empty();
+    private StageSourceArgs(StageSourceArgs $) {
+        this.name = $.name;
+        this.originalTransformOrCollection = $.originalTransformOrCollection;
+        this.sizeBytes = $.sizeBytes;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StageSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> originalTransformOrCollection;
-        private @Nullable Output<String> sizeBytes;
-        private @Nullable Output<String> userName;
+        private StageSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StageSourceArgs();
         }
 
         public Builder(StageSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.originalTransformOrCollection = defaults.originalTransformOrCollection;
-    	      this.sizeBytes = defaults.sizeBytes;
-    	      this.userName = defaults.userName;
+            $ = new StageSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder originalTransformOrCollection(@Nullable Output<String> originalTransformOrCollection) {
-            this.originalTransformOrCollection = originalTransformOrCollection;
+            $.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
-        public Builder originalTransformOrCollection(@Nullable String originalTransformOrCollection) {
-            this.originalTransformOrCollection = Codegen.ofNullable(originalTransformOrCollection);
-            return this;
+
+        public Builder originalTransformOrCollection(String originalTransformOrCollection) {
+            return originalTransformOrCollection(Output.of(originalTransformOrCollection));
         }
+
         public Builder sizeBytes(@Nullable Output<String> sizeBytes) {
-            this.sizeBytes = sizeBytes;
+            $.sizeBytes = sizeBytes;
             return this;
         }
-        public Builder sizeBytes(@Nullable String sizeBytes) {
-            this.sizeBytes = Codegen.ofNullable(sizeBytes);
-            return this;
+
+        public Builder sizeBytes(String sizeBytes) {
+            return sizeBytes(Output.of(sizeBytes));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public StageSourceArgs build() {
-            return new StageSourceArgs(name, originalTransformOrCollection, sizeBytes, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public StageSourceArgs build() {
+            return $;
         }
     }
+
 }

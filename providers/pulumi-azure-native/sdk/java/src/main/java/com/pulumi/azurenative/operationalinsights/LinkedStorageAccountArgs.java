@@ -5,10 +5,10 @@ package com.pulumi.azurenative.operationalinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dataSourceType")
-      private final @Nullable Output<String> dataSourceType;
+    private @Nullable Output<String> dataSourceType;
 
-    public Output<String> dataSourceType() {
-        return this.dataSourceType == null ? Codegen.empty() : this.dataSourceType;
+    public Optional<Output<String>> dataSourceType() {
+        return Optional.ofNullable(this.dataSourceType);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -43,10 +43,10 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="storageAccountIds")
-      private final @Nullable Output<List<String>> storageAccountIds;
+    private @Nullable Output<List<String>> storageAccountIds;
 
-    public Output<List<String>> storageAccountIds() {
-        return this.storageAccountIds == null ? Codegen.empty() : this.storageAccountIds;
+    public Optional<Output<List<String>>> storageAccountIds() {
+        return Optional.ofNullable(this.storageAccountIds);
     }
 
     /**
@@ -54,92 +54,84 @@ public final class LinkedStorageAccountArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public LinkedStorageAccountArgs(
-        @Nullable Output<String> dataSourceType,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<String>> storageAccountIds,
-        Output<String> workspaceName) {
-        this.dataSourceType = dataSourceType;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountIds = storageAccountIds;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private LinkedStorageAccountArgs() {}
 
-    private LinkedStorageAccountArgs() {
-        this.dataSourceType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountIds = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private LinkedStorageAccountArgs(LinkedStorageAccountArgs $) {
+        this.dataSourceType = $.dataSourceType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountIds = $.storageAccountIds;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedStorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataSourceType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<String>> storageAccountIds;
-        private Output<String> workspaceName;
+        private LinkedStorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedStorageAccountArgs();
         }
 
         public Builder(LinkedStorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceType = defaults.dataSourceType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountIds = defaults.storageAccountIds;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new LinkedStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceType(@Nullable Output<String> dataSourceType) {
-            this.dataSourceType = dataSourceType;
+            $.dataSourceType = dataSourceType;
             return this;
         }
-        public Builder dataSourceType(@Nullable String dataSourceType) {
-            this.dataSourceType = Codegen.ofNullable(dataSourceType);
-            return this;
+
+        public Builder dataSourceType(String dataSourceType) {
+            return dataSourceType(Output.of(dataSourceType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountIds(@Nullable Output<List<String>> storageAccountIds) {
-            this.storageAccountIds = storageAccountIds;
+            $.storageAccountIds = storageAccountIds;
             return this;
         }
-        public Builder storageAccountIds(@Nullable List<String> storageAccountIds) {
-            this.storageAccountIds = Codegen.ofNullable(storageAccountIds);
-            return this;
+
+        public Builder storageAccountIds(List<String> storageAccountIds) {
+            return storageAccountIds(Output.of(storageAccountIds));
         }
+
         public Builder storageAccountIds(String... storageAccountIds) {
             return storageAccountIds(List.of(storageAccountIds));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public LinkedStorageAccountArgs build() {
-            return new LinkedStorageAccountArgs(dataSourceType, resourceGroupName, storageAccountIds, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public LinkedStorageAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,12 +8,12 @@ import com.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterArgs;
 import com.pulumi.aws.ssm.inputs.PatchBaselineSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvalRules")
-      private final @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
+    private @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
 
-    public Output<List<PatchBaselineApprovalRuleArgs>> approvalRules() {
-        return this.approvalRules == null ? Codegen.empty() : this.approvalRules;
+    public Optional<Output<List<PatchBaselineApprovalRuleArgs>>> approvalRules() {
+        return Optional.ofNullable(this.approvalRules);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvedPatches")
-      private final @Nullable Output<List<String>> approvedPatches;
+    private @Nullable Output<List<String>> approvedPatches;
 
-    public Output<List<String>> approvedPatches() {
-        return this.approvedPatches == null ? Codegen.empty() : this.approvedPatches;
+    public Optional<Output<List<String>>> approvedPatches() {
+        return Optional.ofNullable(this.approvedPatches);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvedPatchesComplianceLevel")
-      private final @Nullable Output<String> approvedPatchesComplianceLevel;
+    private @Nullable Output<String> approvedPatchesComplianceLevel;
 
-    public Output<String> approvedPatchesComplianceLevel() {
-        return this.approvedPatchesComplianceLevel == null ? Codegen.empty() : this.approvedPatchesComplianceLevel;
+    public Optional<Output<String>> approvedPatchesComplianceLevel() {
+        return Optional.ofNullable(this.approvedPatchesComplianceLevel);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvedPatchesEnableNonSecurity")
-      private final @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
+    private @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
 
-    public Output<Boolean> approvedPatchesEnableNonSecurity() {
-        return this.approvedPatchesEnableNonSecurity == null ? Codegen.empty() : this.approvedPatchesEnableNonSecurity;
+    public Optional<Output<Boolean>> approvedPatchesEnableNonSecurity() {
+        return Optional.ofNullable(this.approvedPatchesEnableNonSecurity);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalFilters")
-      private final @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
+    private @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
 
-    public Output<List<PatchBaselineGlobalFilterArgs>> globalFilters() {
-        return this.globalFilters == null ? Codegen.empty() : this.globalFilters;
+    public Optional<Output<List<PatchBaselineGlobalFilterArgs>>> globalFilters() {
+        return Optional.ofNullable(this.globalFilters);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatingSystem")
-      private final @Nullable Output<String> operatingSystem;
+    private @Nullable Output<String> operatingSystem;
 
-    public Output<String> operatingSystem() {
-        return this.operatingSystem == null ? Codegen.empty() : this.operatingSystem;
+    public Optional<Output<String>> operatingSystem() {
+        return Optional.ofNullable(this.operatingSystem);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rejectedPatches")
-      private final @Nullable Output<List<String>> rejectedPatches;
+    private @Nullable Output<List<String>> rejectedPatches;
 
-    public Output<List<String>> rejectedPatches() {
-        return this.rejectedPatches == null ? Codegen.empty() : this.rejectedPatches;
+    public Optional<Output<List<String>>> rejectedPatches() {
+        return Optional.ofNullable(this.rejectedPatches);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rejectedPatchesAction")
-      private final @Nullable Output<String> rejectedPatchesAction;
+    private @Nullable Output<String> rejectedPatchesAction;
 
-    public Output<String> rejectedPatchesAction() {
-        return this.rejectedPatchesAction == null ? Codegen.empty() : this.rejectedPatchesAction;
+    public Optional<Output<String>> rejectedPatchesAction() {
+        return Optional.ofNullable(this.rejectedPatchesAction);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<PatchBaselineSourceArgs>> sources;
+    private @Nullable Output<List<PatchBaselineSourceArgs>> sources;
 
-    public Output<List<PatchBaselineSourceArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<PatchBaselineSourceArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -147,208 +147,178 @@ public final class PatchBaselineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PatchBaselineArgs(
-        @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules,
-        @Nullable Output<List<String>> approvedPatches,
-        @Nullable Output<String> approvedPatchesComplianceLevel,
-        @Nullable Output<Boolean> approvedPatchesEnableNonSecurity,
-        @Nullable Output<String> description,
-        @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters,
-        @Nullable Output<String> name,
-        @Nullable Output<String> operatingSystem,
-        @Nullable Output<List<String>> rejectedPatches,
-        @Nullable Output<String> rejectedPatchesAction,
-        @Nullable Output<List<PatchBaselineSourceArgs>> sources,
-        @Nullable Output<Map<String,String>> tags) {
-        this.approvalRules = approvalRules;
-        this.approvedPatches = approvedPatches;
-        this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
-        this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
-        this.description = description;
-        this.globalFilters = globalFilters;
-        this.name = name;
-        this.operatingSystem = operatingSystem;
-        this.rejectedPatches = rejectedPatches;
-        this.rejectedPatchesAction = rejectedPatchesAction;
-        this.sources = sources;
-        this.tags = tags;
-    }
+    private PatchBaselineArgs() {}
 
-    private PatchBaselineArgs() {
-        this.approvalRules = Codegen.empty();
-        this.approvedPatches = Codegen.empty();
-        this.approvedPatchesComplianceLevel = Codegen.empty();
-        this.approvedPatchesEnableNonSecurity = Codegen.empty();
-        this.description = Codegen.empty();
-        this.globalFilters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operatingSystem = Codegen.empty();
-        this.rejectedPatches = Codegen.empty();
-        this.rejectedPatchesAction = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PatchBaselineArgs(PatchBaselineArgs $) {
+        this.approvalRules = $.approvalRules;
+        this.approvedPatches = $.approvedPatches;
+        this.approvedPatchesComplianceLevel = $.approvedPatchesComplianceLevel;
+        this.approvedPatchesEnableNonSecurity = $.approvedPatchesEnableNonSecurity;
+        this.description = $.description;
+        this.globalFilters = $.globalFilters;
+        this.name = $.name;
+        this.operatingSystem = $.operatingSystem;
+        this.rejectedPatches = $.rejectedPatches;
+        this.rejectedPatchesAction = $.rejectedPatchesAction;
+        this.sources = $.sources;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchBaselineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
-        private @Nullable Output<List<String>> approvedPatches;
-        private @Nullable Output<String> approvedPatchesComplianceLevel;
-        private @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> operatingSystem;
-        private @Nullable Output<List<String>> rejectedPatches;
-        private @Nullable Output<String> rejectedPatchesAction;
-        private @Nullable Output<List<PatchBaselineSourceArgs>> sources;
-        private @Nullable Output<Map<String,String>> tags;
+        private PatchBaselineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchBaselineArgs();
         }
 
         public Builder(PatchBaselineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalRules = defaults.approvalRules;
-    	      this.approvedPatches = defaults.approvedPatches;
-    	      this.approvedPatchesComplianceLevel = defaults.approvedPatchesComplianceLevel;
-    	      this.approvedPatchesEnableNonSecurity = defaults.approvedPatchesEnableNonSecurity;
-    	      this.description = defaults.description;
-    	      this.globalFilters = defaults.globalFilters;
-    	      this.name = defaults.name;
-    	      this.operatingSystem = defaults.operatingSystem;
-    	      this.rejectedPatches = defaults.rejectedPatches;
-    	      this.rejectedPatchesAction = defaults.rejectedPatchesAction;
-    	      this.sources = defaults.sources;
-    	      this.tags = defaults.tags;
+            $ = new PatchBaselineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalRules(@Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules) {
-            this.approvalRules = approvalRules;
+            $.approvalRules = approvalRules;
             return this;
         }
-        public Builder approvalRules(@Nullable List<PatchBaselineApprovalRuleArgs> approvalRules) {
-            this.approvalRules = Codegen.ofNullable(approvalRules);
-            return this;
+
+        public Builder approvalRules(List<PatchBaselineApprovalRuleArgs> approvalRules) {
+            return approvalRules(Output.of(approvalRules));
         }
+
         public Builder approvalRules(PatchBaselineApprovalRuleArgs... approvalRules) {
             return approvalRules(List.of(approvalRules));
         }
+
         public Builder approvedPatches(@Nullable Output<List<String>> approvedPatches) {
-            this.approvedPatches = approvedPatches;
+            $.approvedPatches = approvedPatches;
             return this;
         }
-        public Builder approvedPatches(@Nullable List<String> approvedPatches) {
-            this.approvedPatches = Codegen.ofNullable(approvedPatches);
-            return this;
+
+        public Builder approvedPatches(List<String> approvedPatches) {
+            return approvedPatches(Output.of(approvedPatches));
         }
+
         public Builder approvedPatches(String... approvedPatches) {
             return approvedPatches(List.of(approvedPatches));
         }
+
         public Builder approvedPatchesComplianceLevel(@Nullable Output<String> approvedPatchesComplianceLevel) {
-            this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
+            $.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
             return this;
         }
-        public Builder approvedPatchesComplianceLevel(@Nullable String approvedPatchesComplianceLevel) {
-            this.approvedPatchesComplianceLevel = Codegen.ofNullable(approvedPatchesComplianceLevel);
-            return this;
+
+        public Builder approvedPatchesComplianceLevel(String approvedPatchesComplianceLevel) {
+            return approvedPatchesComplianceLevel(Output.of(approvedPatchesComplianceLevel));
         }
+
         public Builder approvedPatchesEnableNonSecurity(@Nullable Output<Boolean> approvedPatchesEnableNonSecurity) {
-            this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
+            $.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
             return this;
         }
-        public Builder approvedPatchesEnableNonSecurity(@Nullable Boolean approvedPatchesEnableNonSecurity) {
-            this.approvedPatchesEnableNonSecurity = Codegen.ofNullable(approvedPatchesEnableNonSecurity);
-            return this;
+
+        public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
+            return approvedPatchesEnableNonSecurity(Output.of(approvedPatchesEnableNonSecurity));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalFilters(@Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters) {
-            this.globalFilters = globalFilters;
+            $.globalFilters = globalFilters;
             return this;
         }
-        public Builder globalFilters(@Nullable List<PatchBaselineGlobalFilterArgs> globalFilters) {
-            this.globalFilters = Codegen.ofNullable(globalFilters);
-            return this;
+
+        public Builder globalFilters(List<PatchBaselineGlobalFilterArgs> globalFilters) {
+            return globalFilters(Output.of(globalFilters));
         }
+
         public Builder globalFilters(PatchBaselineGlobalFilterArgs... globalFilters) {
             return globalFilters(List.of(globalFilters));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder operatingSystem(@Nullable Output<String> operatingSystem) {
-            this.operatingSystem = operatingSystem;
+            $.operatingSystem = operatingSystem;
             return this;
         }
-        public Builder operatingSystem(@Nullable String operatingSystem) {
-            this.operatingSystem = Codegen.ofNullable(operatingSystem);
-            return this;
+
+        public Builder operatingSystem(String operatingSystem) {
+            return operatingSystem(Output.of(operatingSystem));
         }
+
         public Builder rejectedPatches(@Nullable Output<List<String>> rejectedPatches) {
-            this.rejectedPatches = rejectedPatches;
+            $.rejectedPatches = rejectedPatches;
             return this;
         }
-        public Builder rejectedPatches(@Nullable List<String> rejectedPatches) {
-            this.rejectedPatches = Codegen.ofNullable(rejectedPatches);
-            return this;
+
+        public Builder rejectedPatches(List<String> rejectedPatches) {
+            return rejectedPatches(Output.of(rejectedPatches));
         }
+
         public Builder rejectedPatches(String... rejectedPatches) {
             return rejectedPatches(List.of(rejectedPatches));
         }
+
         public Builder rejectedPatchesAction(@Nullable Output<String> rejectedPatchesAction) {
-            this.rejectedPatchesAction = rejectedPatchesAction;
+            $.rejectedPatchesAction = rejectedPatchesAction;
             return this;
         }
-        public Builder rejectedPatchesAction(@Nullable String rejectedPatchesAction) {
-            this.rejectedPatchesAction = Codegen.ofNullable(rejectedPatchesAction);
-            return this;
+
+        public Builder rejectedPatchesAction(String rejectedPatchesAction) {
+            return rejectedPatchesAction(Output.of(rejectedPatchesAction));
         }
+
         public Builder sources(@Nullable Output<List<PatchBaselineSourceArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<PatchBaselineSourceArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<PatchBaselineSourceArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(PatchBaselineSourceArgs... sources) {
             return sources(List.of(sources));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PatchBaselineArgs build() {
-            return new PatchBaselineArgs(approvalRules, approvedPatches, approvedPatchesComplianceLevel, approvedPatchesEnableNonSecurity, description, globalFilters, name, operatingSystem, rejectedPatches, rejectedPatchesAction, sources, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PatchBaselineArgs build() {
+            return $;
         }
     }
+
 }

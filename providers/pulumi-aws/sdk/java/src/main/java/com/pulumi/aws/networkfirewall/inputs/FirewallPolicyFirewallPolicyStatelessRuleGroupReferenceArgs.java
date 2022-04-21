@@ -5,7 +5,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs e
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -31,63 +30,60 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs e
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
-    public FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs(
-        Output<Integer> priority,
-        Output<String> resourceArn) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs() {}
 
-    private FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs() {
-        this.priority = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs(FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs $) {
+        this.priority = $.priority;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> priority;
-        private Output<String> resourceArn;
+        private FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs();
         }
 
         public Builder(FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
-        }        public FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs build() {
-            return new FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs(priority, resourceArn);
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

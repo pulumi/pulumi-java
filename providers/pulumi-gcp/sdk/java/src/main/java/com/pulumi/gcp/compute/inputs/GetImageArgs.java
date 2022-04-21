@@ -19,17 +19,17 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable String family;
+    private @Nullable String family;
 
     public Optional<String> family() {
-        return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
+        return Optional.ofNullable(this.family);
     }
 
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,73 +50,62 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetImageArgs(
-        @Nullable String family,
-        @Nullable String filter,
-        @Nullable String name,
-        @Nullable String project) {
-        this.family = family;
-        this.filter = filter;
-        this.name = name;
-        this.project = project;
-    }
+    private GetImageArgs() {}
 
-    private GetImageArgs() {
-        this.family = null;
-        this.filter = null;
-        this.name = null;
-        this.project = null;
+    private GetImageArgs(GetImageArgs $) {
+        this.family = $.family;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String family;
-        private @Nullable String filter;
-        private @Nullable String name;
-        private @Nullable String project;
+        private GetImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageArgs();
         }
 
         public Builder(GetImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.family = defaults.family;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder family(@Nullable String family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
+
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetImageArgs build() {
-            return new GetImageArgs(family, filter, name, project);
+        }
+
+        public GetImageArgs build() {
+            return $;
         }
     }
+
 }

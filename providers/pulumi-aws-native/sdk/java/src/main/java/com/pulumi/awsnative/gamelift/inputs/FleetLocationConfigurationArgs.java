@@ -6,9 +6,9 @@ package com.pulumi.awsnative.gamelift.inputs;
 import com.pulumi.awsnative.gamelift.inputs.FleetLocationCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class FleetLocationConfigurationArgs extends com.pulumi.resources.R
     public static final FleetLocationConfigurationArgs Empty = new FleetLocationConfigurationArgs();
 
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
     }
 
     @Import(name="locationCapacity")
-      private final @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
+    private @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
 
-    public Output<FleetLocationCapacityArgs> locationCapacity() {
-        return this.locationCapacity == null ? Codegen.empty() : this.locationCapacity;
+    public Optional<Output<FleetLocationCapacityArgs>> locationCapacity() {
+        return Optional.ofNullable(this.locationCapacity);
     }
 
-    public FleetLocationConfigurationArgs(
-        Output<String> location,
-        @Nullable Output<FleetLocationCapacityArgs> locationCapacity) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.locationCapacity = locationCapacity;
-    }
+    private FleetLocationConfigurationArgs() {}
 
-    private FleetLocationConfigurationArgs() {
-        this.location = Codegen.empty();
-        this.locationCapacity = Codegen.empty();
+    private FleetLocationConfigurationArgs(FleetLocationConfigurationArgs $) {
+        this.location = $.location;
+        this.locationCapacity = $.locationCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetLocationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> location;
-        private @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
+        private FleetLocationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetLocationConfigurationArgs();
         }
 
         public Builder(FleetLocationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.locationCapacity = defaults.locationCapacity;
+            $ = new FleetLocationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder locationCapacity(@Nullable Output<FleetLocationCapacityArgs> locationCapacity) {
-            this.locationCapacity = locationCapacity;
+            $.locationCapacity = locationCapacity;
             return this;
         }
-        public Builder locationCapacity(@Nullable FleetLocationCapacityArgs locationCapacity) {
-            this.locationCapacity = Codegen.ofNullable(locationCapacity);
-            return this;
-        }        public FleetLocationConfigurationArgs build() {
-            return new FleetLocationConfigurationArgs(location, locationCapacity);
+
+        public Builder locationCapacity(FleetLocationCapacityArgs locationCapacity) {
+            return locationCapacity(Output.of(locationCapacity));
+        }
+
+        public FleetLocationConfigurationArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

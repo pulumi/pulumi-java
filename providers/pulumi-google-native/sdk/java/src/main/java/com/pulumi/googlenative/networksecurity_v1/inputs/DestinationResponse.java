@@ -24,7 +24,7 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hosts", required=true)
-      private final List<String> hosts;
+    private List<String> hosts;
 
     public List<String> hosts() {
         return this.hosts;
@@ -35,7 +35,7 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpHeaderMatch", required=true)
-      private final HttpHeaderMatchResponse httpHeaderMatch;
+    private HttpHeaderMatchResponse httpHeaderMatch;
 
     public HttpHeaderMatchResponse httpHeaderMatch() {
         return this.httpHeaderMatch;
@@ -46,7 +46,7 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="methods", required=true)
-      private final List<String> methods;
+    private List<String> methods;
 
     public List<String> methods() {
         return this.methods;
@@ -57,82 +57,78 @@ public final class DestinationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ports", required=true)
-      private final List<Integer> ports;
+    private List<Integer> ports;
 
     public List<Integer> ports() {
         return this.ports;
     }
 
-    public DestinationResponse(
-        List<String> hosts,
-        HttpHeaderMatchResponse httpHeaderMatch,
-        List<String> methods,
-        List<Integer> ports) {
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.httpHeaderMatch = Objects.requireNonNull(httpHeaderMatch, "expected parameter 'httpHeaderMatch' to be non-null");
-        this.methods = Objects.requireNonNull(methods, "expected parameter 'methods' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private DestinationResponse() {}
 
-    private DestinationResponse() {
-        this.hosts = List.of();
-        this.httpHeaderMatch = null;
-        this.methods = List.of();
-        this.ports = List.of();
+    private DestinationResponse(DestinationResponse $) {
+        this.hosts = $.hosts;
+        this.httpHeaderMatch = $.httpHeaderMatch;
+        this.methods = $.methods;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> hosts;
-        private HttpHeaderMatchResponse httpHeaderMatch;
-        private List<String> methods;
-        private List<Integer> ports;
+        private DestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationResponse();
         }
 
         public Builder(DestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
-    	      this.httpHeaderMatch = defaults.httpHeaderMatch;
-    	      this.methods = defaults.methods;
-    	      this.ports = defaults.ports;
+            $ = new DestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(List<String> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder httpHeaderMatch(HttpHeaderMatchResponse httpHeaderMatch) {
-            this.httpHeaderMatch = Objects.requireNonNull(httpHeaderMatch);
+            $.httpHeaderMatch = httpHeaderMatch;
             return this;
         }
+
         public Builder methods(List<String> methods) {
-            this.methods = Objects.requireNonNull(methods);
+            $.methods = methods;
             return this;
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder ports(List<Integer> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(Integer... ports) {
             return ports(List.of(ports));
-        }        public DestinationResponse build() {
-            return new DestinationResponse(hosts, httpHeaderMatch, methods, ports);
+        }
+
+        public DestinationResponse build() {
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.httpHeaderMatch = Objects.requireNonNull($.httpHeaderMatch, "expected parameter 'httpHeaderMatch' to be non-null");
+            $.methods = Objects.requireNonNull($.methods, "expected parameter 'methods' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

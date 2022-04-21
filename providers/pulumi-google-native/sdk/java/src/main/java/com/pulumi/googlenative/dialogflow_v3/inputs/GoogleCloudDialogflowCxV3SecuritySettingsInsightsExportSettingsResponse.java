@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      * 
      */
     @Import(name="enableInsightsExport", required=true)
-      private final Boolean enableInsightsExport;
+    private Boolean enableInsightsExport;
 
     public Boolean enableInsightsExport() {
         return this.enableInsightsExport;
     }
 
-    public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(Boolean enableInsightsExport) {
-        this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport, "expected parameter 'enableInsightsExport' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse() {}
 
-    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse() {
-        this.enableInsightsExport = null;
+    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse $) {
+        this.enableInsightsExport = $.enableInsightsExport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableInsightsExport;
+        private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInsightsExport = defaults.enableInsightsExport;
+            $ = new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInsightsExport(Boolean enableInsightsExport) {
-            this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
+            $.enableInsightsExport = enableInsightsExport;
             return this;
-        }        public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse build() {
-            return new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(enableInsightsExport);
+        }
+
+        public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse build() {
+            $.enableInsightsExport = Objects.requireNonNull($.enableInsightsExport, "expected parameter 'enableInsightsExport' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="daysOfWeek")
-      private final @Nullable List<String> daysOfWeek;
+    private @Nullable List<String> daysOfWeek;
 
-    public List<String> daysOfWeek() {
-        return this.daysOfWeek == null ? List.of() : this.daysOfWeek;
+    public Optional<List<String>> daysOfWeek() {
+        return Optional.ofNullable(this.daysOfWeek);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="offPeakLoadBalancingAlgorithm")
-      private final @Nullable String offPeakLoadBalancingAlgorithm;
+    private @Nullable String offPeakLoadBalancingAlgorithm;
 
     public Optional<String> offPeakLoadBalancingAlgorithm() {
-        return this.offPeakLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.offPeakLoadBalancingAlgorithm);
+        return Optional.ofNullable(this.offPeakLoadBalancingAlgorithm);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="offPeakStartTime")
-      private final @Nullable String offPeakStartTime;
+    private @Nullable String offPeakStartTime;
 
     public Optional<String> offPeakStartTime() {
-        return this.offPeakStartTime == null ? Optional.empty() : Optional.ofNullable(this.offPeakStartTime);
+        return Optional.ofNullable(this.offPeakStartTime);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="peakLoadBalancingAlgorithm")
-      private final @Nullable String peakLoadBalancingAlgorithm;
+    private @Nullable String peakLoadBalancingAlgorithm;
 
     public Optional<String> peakLoadBalancingAlgorithm() {
-        return this.peakLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.peakLoadBalancingAlgorithm);
+        return Optional.ofNullable(this.peakLoadBalancingAlgorithm);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="peakStartTime")
-      private final @Nullable String peakStartTime;
+    private @Nullable String peakStartTime;
 
     public Optional<String> peakStartTime() {
-        return this.peakStartTime == null ? Optional.empty() : Optional.ofNullable(this.peakStartTime);
+        return Optional.ofNullable(this.peakStartTime);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownCapacityThresholdPct")
-      private final @Nullable Integer rampDownCapacityThresholdPct;
+    private @Nullable Integer rampDownCapacityThresholdPct;
 
     public Optional<Integer> rampDownCapacityThresholdPct() {
-        return this.rampDownCapacityThresholdPct == null ? Optional.empty() : Optional.ofNullable(this.rampDownCapacityThresholdPct);
+        return Optional.ofNullable(this.rampDownCapacityThresholdPct);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownForceLogoffUsers")
-      private final @Nullable Boolean rampDownForceLogoffUsers;
+    private @Nullable Boolean rampDownForceLogoffUsers;
 
     public Optional<Boolean> rampDownForceLogoffUsers() {
-        return this.rampDownForceLogoffUsers == null ? Optional.empty() : Optional.ofNullable(this.rampDownForceLogoffUsers);
+        return Optional.ofNullable(this.rampDownForceLogoffUsers);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownLoadBalancingAlgorithm")
-      private final @Nullable String rampDownLoadBalancingAlgorithm;
+    private @Nullable String rampDownLoadBalancingAlgorithm;
 
     public Optional<String> rampDownLoadBalancingAlgorithm() {
-        return this.rampDownLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.rampDownLoadBalancingAlgorithm);
+        return Optional.ofNullable(this.rampDownLoadBalancingAlgorithm);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownMinimumHostsPct")
-      private final @Nullable Integer rampDownMinimumHostsPct;
+    private @Nullable Integer rampDownMinimumHostsPct;
 
     public Optional<Integer> rampDownMinimumHostsPct() {
-        return this.rampDownMinimumHostsPct == null ? Optional.empty() : Optional.ofNullable(this.rampDownMinimumHostsPct);
+        return Optional.ofNullable(this.rampDownMinimumHostsPct);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownNotificationMessage")
-      private final @Nullable String rampDownNotificationMessage;
+    private @Nullable String rampDownNotificationMessage;
 
     public Optional<String> rampDownNotificationMessage() {
-        return this.rampDownNotificationMessage == null ? Optional.empty() : Optional.ofNullable(this.rampDownNotificationMessage);
+        return Optional.ofNullable(this.rampDownNotificationMessage);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownStartTime")
-      private final @Nullable String rampDownStartTime;
+    private @Nullable String rampDownStartTime;
 
     public Optional<String> rampDownStartTime() {
-        return this.rampDownStartTime == null ? Optional.empty() : Optional.ofNullable(this.rampDownStartTime);
+        return Optional.ofNullable(this.rampDownStartTime);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownStopHostsWhen")
-      private final @Nullable String rampDownStopHostsWhen;
+    private @Nullable String rampDownStopHostsWhen;
 
     public Optional<String> rampDownStopHostsWhen() {
-        return this.rampDownStopHostsWhen == null ? Optional.empty() : Optional.ofNullable(this.rampDownStopHostsWhen);
+        return Optional.ofNullable(this.rampDownStopHostsWhen);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampDownWaitTimeMinutes")
-      private final @Nullable Integer rampDownWaitTimeMinutes;
+    private @Nullable Integer rampDownWaitTimeMinutes;
 
     public Optional<Integer> rampDownWaitTimeMinutes() {
-        return this.rampDownWaitTimeMinutes == null ? Optional.empty() : Optional.ofNullable(this.rampDownWaitTimeMinutes);
+        return Optional.ofNullable(this.rampDownWaitTimeMinutes);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampUpCapacityThresholdPct")
-      private final @Nullable Integer rampUpCapacityThresholdPct;
+    private @Nullable Integer rampUpCapacityThresholdPct;
 
     public Optional<Integer> rampUpCapacityThresholdPct() {
-        return this.rampUpCapacityThresholdPct == null ? Optional.empty() : Optional.ofNullable(this.rampUpCapacityThresholdPct);
+        return Optional.ofNullable(this.rampUpCapacityThresholdPct);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampUpLoadBalancingAlgorithm")
-      private final @Nullable String rampUpLoadBalancingAlgorithm;
+    private @Nullable String rampUpLoadBalancingAlgorithm;
 
     public Optional<String> rampUpLoadBalancingAlgorithm() {
-        return this.rampUpLoadBalancingAlgorithm == null ? Optional.empty() : Optional.ofNullable(this.rampUpLoadBalancingAlgorithm);
+        return Optional.ofNullable(this.rampUpLoadBalancingAlgorithm);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampUpMinimumHostsPct")
-      private final @Nullable Integer rampUpMinimumHostsPct;
+    private @Nullable Integer rampUpMinimumHostsPct;
 
     public Optional<Integer> rampUpMinimumHostsPct() {
-        return this.rampUpMinimumHostsPct == null ? Optional.empty() : Optional.ofNullable(this.rampUpMinimumHostsPct);
+        return Optional.ofNullable(this.rampUpMinimumHostsPct);
     }
 
     /**
@@ -213,202 +213,150 @@ public final class ScalingScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rampUpStartTime")
-      private final @Nullable String rampUpStartTime;
+    private @Nullable String rampUpStartTime;
 
     public Optional<String> rampUpStartTime() {
-        return this.rampUpStartTime == null ? Optional.empty() : Optional.ofNullable(this.rampUpStartTime);
+        return Optional.ofNullable(this.rampUpStartTime);
     }
 
-    public ScalingScheduleResponse(
-        @Nullable List<String> daysOfWeek,
-        @Nullable String name,
-        @Nullable String offPeakLoadBalancingAlgorithm,
-        @Nullable String offPeakStartTime,
-        @Nullable String peakLoadBalancingAlgorithm,
-        @Nullable String peakStartTime,
-        @Nullable Integer rampDownCapacityThresholdPct,
-        @Nullable Boolean rampDownForceLogoffUsers,
-        @Nullable String rampDownLoadBalancingAlgorithm,
-        @Nullable Integer rampDownMinimumHostsPct,
-        @Nullable String rampDownNotificationMessage,
-        @Nullable String rampDownStartTime,
-        @Nullable String rampDownStopHostsWhen,
-        @Nullable Integer rampDownWaitTimeMinutes,
-        @Nullable Integer rampUpCapacityThresholdPct,
-        @Nullable String rampUpLoadBalancingAlgorithm,
-        @Nullable Integer rampUpMinimumHostsPct,
-        @Nullable String rampUpStartTime) {
-        this.daysOfWeek = daysOfWeek;
-        this.name = name;
-        this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
-        this.offPeakStartTime = offPeakStartTime;
-        this.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
-        this.peakStartTime = peakStartTime;
-        this.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
-        this.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
-        this.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
-        this.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
-        this.rampDownNotificationMessage = rampDownNotificationMessage;
-        this.rampDownStartTime = rampDownStartTime;
-        this.rampDownStopHostsWhen = rampDownStopHostsWhen;
-        this.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
-        this.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
-        this.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
-        this.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
-        this.rampUpStartTime = rampUpStartTime;
-    }
+    private ScalingScheduleResponse() {}
 
-    private ScalingScheduleResponse() {
-        this.daysOfWeek = List.of();
-        this.name = null;
-        this.offPeakLoadBalancingAlgorithm = null;
-        this.offPeakStartTime = null;
-        this.peakLoadBalancingAlgorithm = null;
-        this.peakStartTime = null;
-        this.rampDownCapacityThresholdPct = null;
-        this.rampDownForceLogoffUsers = null;
-        this.rampDownLoadBalancingAlgorithm = null;
-        this.rampDownMinimumHostsPct = null;
-        this.rampDownNotificationMessage = null;
-        this.rampDownStartTime = null;
-        this.rampDownStopHostsWhen = null;
-        this.rampDownWaitTimeMinutes = null;
-        this.rampUpCapacityThresholdPct = null;
-        this.rampUpLoadBalancingAlgorithm = null;
-        this.rampUpMinimumHostsPct = null;
-        this.rampUpStartTime = null;
+    private ScalingScheduleResponse(ScalingScheduleResponse $) {
+        this.daysOfWeek = $.daysOfWeek;
+        this.name = $.name;
+        this.offPeakLoadBalancingAlgorithm = $.offPeakLoadBalancingAlgorithm;
+        this.offPeakStartTime = $.offPeakStartTime;
+        this.peakLoadBalancingAlgorithm = $.peakLoadBalancingAlgorithm;
+        this.peakStartTime = $.peakStartTime;
+        this.rampDownCapacityThresholdPct = $.rampDownCapacityThresholdPct;
+        this.rampDownForceLogoffUsers = $.rampDownForceLogoffUsers;
+        this.rampDownLoadBalancingAlgorithm = $.rampDownLoadBalancingAlgorithm;
+        this.rampDownMinimumHostsPct = $.rampDownMinimumHostsPct;
+        this.rampDownNotificationMessage = $.rampDownNotificationMessage;
+        this.rampDownStartTime = $.rampDownStartTime;
+        this.rampDownStopHostsWhen = $.rampDownStopHostsWhen;
+        this.rampDownWaitTimeMinutes = $.rampDownWaitTimeMinutes;
+        this.rampUpCapacityThresholdPct = $.rampUpCapacityThresholdPct;
+        this.rampUpLoadBalancingAlgorithm = $.rampUpLoadBalancingAlgorithm;
+        this.rampUpMinimumHostsPct = $.rampUpMinimumHostsPct;
+        this.rampUpStartTime = $.rampUpStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> daysOfWeek;
-        private @Nullable String name;
-        private @Nullable String offPeakLoadBalancingAlgorithm;
-        private @Nullable String offPeakStartTime;
-        private @Nullable String peakLoadBalancingAlgorithm;
-        private @Nullable String peakStartTime;
-        private @Nullable Integer rampDownCapacityThresholdPct;
-        private @Nullable Boolean rampDownForceLogoffUsers;
-        private @Nullable String rampDownLoadBalancingAlgorithm;
-        private @Nullable Integer rampDownMinimumHostsPct;
-        private @Nullable String rampDownNotificationMessage;
-        private @Nullable String rampDownStartTime;
-        private @Nullable String rampDownStopHostsWhen;
-        private @Nullable Integer rampDownWaitTimeMinutes;
-        private @Nullable Integer rampUpCapacityThresholdPct;
-        private @Nullable String rampUpLoadBalancingAlgorithm;
-        private @Nullable Integer rampUpMinimumHostsPct;
-        private @Nullable String rampUpStartTime;
+        private ScalingScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingScheduleResponse();
         }
 
         public Builder(ScalingScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfWeek = defaults.daysOfWeek;
-    	      this.name = defaults.name;
-    	      this.offPeakLoadBalancingAlgorithm = defaults.offPeakLoadBalancingAlgorithm;
-    	      this.offPeakStartTime = defaults.offPeakStartTime;
-    	      this.peakLoadBalancingAlgorithm = defaults.peakLoadBalancingAlgorithm;
-    	      this.peakStartTime = defaults.peakStartTime;
-    	      this.rampDownCapacityThresholdPct = defaults.rampDownCapacityThresholdPct;
-    	      this.rampDownForceLogoffUsers = defaults.rampDownForceLogoffUsers;
-    	      this.rampDownLoadBalancingAlgorithm = defaults.rampDownLoadBalancingAlgorithm;
-    	      this.rampDownMinimumHostsPct = defaults.rampDownMinimumHostsPct;
-    	      this.rampDownNotificationMessage = defaults.rampDownNotificationMessage;
-    	      this.rampDownStartTime = defaults.rampDownStartTime;
-    	      this.rampDownStopHostsWhen = defaults.rampDownStopHostsWhen;
-    	      this.rampDownWaitTimeMinutes = defaults.rampDownWaitTimeMinutes;
-    	      this.rampUpCapacityThresholdPct = defaults.rampUpCapacityThresholdPct;
-    	      this.rampUpLoadBalancingAlgorithm = defaults.rampUpLoadBalancingAlgorithm;
-    	      this.rampUpMinimumHostsPct = defaults.rampUpMinimumHostsPct;
-    	      this.rampUpStartTime = defaults.rampUpStartTime;
+            $ = new ScalingScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfWeek(@Nullable List<String> daysOfWeek) {
-            this.daysOfWeek = daysOfWeek;
+            $.daysOfWeek = daysOfWeek;
             return this;
         }
+
         public Builder daysOfWeek(String... daysOfWeek) {
             return daysOfWeek(List.of(daysOfWeek));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder offPeakLoadBalancingAlgorithm(@Nullable String offPeakLoadBalancingAlgorithm) {
-            this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
+            $.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
             return this;
         }
+
         public Builder offPeakStartTime(@Nullable String offPeakStartTime) {
-            this.offPeakStartTime = offPeakStartTime;
+            $.offPeakStartTime = offPeakStartTime;
             return this;
         }
+
         public Builder peakLoadBalancingAlgorithm(@Nullable String peakLoadBalancingAlgorithm) {
-            this.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
+            $.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
             return this;
         }
+
         public Builder peakStartTime(@Nullable String peakStartTime) {
-            this.peakStartTime = peakStartTime;
+            $.peakStartTime = peakStartTime;
             return this;
         }
+
         public Builder rampDownCapacityThresholdPct(@Nullable Integer rampDownCapacityThresholdPct) {
-            this.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
+            $.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
             return this;
         }
+
         public Builder rampDownForceLogoffUsers(@Nullable Boolean rampDownForceLogoffUsers) {
-            this.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
+            $.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
             return this;
         }
+
         public Builder rampDownLoadBalancingAlgorithm(@Nullable String rampDownLoadBalancingAlgorithm) {
-            this.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
+            $.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
             return this;
         }
+
         public Builder rampDownMinimumHostsPct(@Nullable Integer rampDownMinimumHostsPct) {
-            this.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
+            $.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
             return this;
         }
+
         public Builder rampDownNotificationMessage(@Nullable String rampDownNotificationMessage) {
-            this.rampDownNotificationMessage = rampDownNotificationMessage;
+            $.rampDownNotificationMessage = rampDownNotificationMessage;
             return this;
         }
+
         public Builder rampDownStartTime(@Nullable String rampDownStartTime) {
-            this.rampDownStartTime = rampDownStartTime;
+            $.rampDownStartTime = rampDownStartTime;
             return this;
         }
+
         public Builder rampDownStopHostsWhen(@Nullable String rampDownStopHostsWhen) {
-            this.rampDownStopHostsWhen = rampDownStopHostsWhen;
+            $.rampDownStopHostsWhen = rampDownStopHostsWhen;
             return this;
         }
+
         public Builder rampDownWaitTimeMinutes(@Nullable Integer rampDownWaitTimeMinutes) {
-            this.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
+            $.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
             return this;
         }
+
         public Builder rampUpCapacityThresholdPct(@Nullable Integer rampUpCapacityThresholdPct) {
-            this.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
+            $.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
             return this;
         }
+
         public Builder rampUpLoadBalancingAlgorithm(@Nullable String rampUpLoadBalancingAlgorithm) {
-            this.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
+            $.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
             return this;
         }
+
         public Builder rampUpMinimumHostsPct(@Nullable Integer rampUpMinimumHostsPct) {
-            this.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
+            $.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
             return this;
         }
+
         public Builder rampUpStartTime(@Nullable String rampUpStartTime) {
-            this.rampUpStartTime = rampUpStartTime;
+            $.rampUpStartTime = rampUpStartTime;
             return this;
-        }        public ScalingScheduleResponse build() {
-            return new ScalingScheduleResponse(daysOfWeek, name, offPeakLoadBalancingAlgorithm, offPeakStartTime, peakLoadBalancingAlgorithm, peakStartTime, rampDownCapacityThresholdPct, rampDownForceLogoffUsers, rampDownLoadBalancingAlgorithm, rampDownMinimumHostsPct, rampDownNotificationMessage, rampDownStartTime, rampDownStopHostsWhen, rampDownWaitTimeMinutes, rampUpCapacityThresholdPct, rampUpLoadBalancingAlgorithm, rampUpMinimumHostsPct, rampUpStartTime);
+        }
+
+        public ScalingScheduleResponse build() {
+            return $;
         }
     }
+
 }

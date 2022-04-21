@@ -7,12 +7,12 @@ import com.pulumi.aws.rds.enums.InstanceType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="applyImmediately")
-      private final @Nullable Output<Boolean> applyImmediately;
+    private @Nullable Output<Boolean> applyImmediately;
 
-    public Output<Boolean> applyImmediately() {
-        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
+    public Optional<Output<Boolean>> applyImmediately() {
+        return Optional.ofNullable(this.applyImmediately);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="autoMinorVersionUpgrade")
-      private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
+    private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
-    public Output<Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
+    public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
+        return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="caCertIdentifier")
-      private final @Nullable Output<String> caCertIdentifier;
+    private @Nullable Output<String> caCertIdentifier;
 
-    public Output<String> caCertIdentifier() {
-        return this.caCertIdentifier == null ? Codegen.empty() : this.caCertIdentifier;
+    public Optional<Output<String>> caCertIdentifier() {
+        return Optional.ofNullable(this.caCertIdentifier);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final Output<String> clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
@@ -81,10 +81,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="copyTagsToSnapshot")
-      private final @Nullable Output<Boolean> copyTagsToSnapshot;
+    private @Nullable Output<Boolean> copyTagsToSnapshot;
 
-    public Output<Boolean> copyTagsToSnapshot() {
-        return this.copyTagsToSnapshot == null ? Codegen.empty() : this.copyTagsToSnapshot;
+    public Optional<Output<Boolean>> copyTagsToSnapshot() {
+        return Optional.ofNullable(this.copyTagsToSnapshot);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dbParameterGroupName")
-      private final @Nullable Output<String> dbParameterGroupName;
+    private @Nullable Output<String> dbParameterGroupName;
 
-    public Output<String> dbParameterGroupName() {
-        return this.dbParameterGroupName == null ? Codegen.empty() : this.dbParameterGroupName;
+    public Optional<Output<String>> dbParameterGroupName() {
+        return Optional.ofNullable(this.dbParameterGroupName);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dbSubnetGroupName")
-      private final @Nullable Output<String> dbSubnetGroupName;
+    private @Nullable Output<String> dbSubnetGroupName;
 
-    public Output<String> dbSubnetGroupName() {
-        return this.dbSubnetGroupName == null ? Codegen.empty() : this.dbSubnetGroupName;
+    public Optional<Output<String>> dbSubnetGroupName() {
+        return Optional.ofNullable(this.dbSubnetGroupName);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identifierPrefix")
-      private final @Nullable Output<String> identifierPrefix;
+    private @Nullable Output<String> identifierPrefix;
 
-    public Output<String> identifierPrefix() {
-        return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
+    public Optional<Output<String>> identifierPrefix() {
+        return Optional.ofNullable(this.identifierPrefix);
     }
 
     /**
@@ -162,7 +162,7 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceClass", required=true)
-      private final Output<Either<String,InstanceType>> instanceClass;
+    private Output<Either<String,InstanceType>> instanceClass;
 
     public Output<Either<String,InstanceType>> instanceClass() {
         return this.instanceClass;
@@ -173,10 +173,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="monitoringInterval")
-      private final @Nullable Output<Integer> monitoringInterval;
+    private @Nullable Output<Integer> monitoringInterval;
 
-    public Output<Integer> monitoringInterval() {
-        return this.monitoringInterval == null ? Codegen.empty() : this.monitoringInterval;
+    public Optional<Output<Integer>> monitoringInterval() {
+        return Optional.ofNullable(this.monitoringInterval);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="monitoringRoleArn")
-      private final @Nullable Output<String> monitoringRoleArn;
+    private @Nullable Output<String> monitoringRoleArn;
 
-    public Output<String> monitoringRoleArn() {
-        return this.monitoringRoleArn == null ? Codegen.empty() : this.monitoringRoleArn;
+    public Optional<Output<String>> monitoringRoleArn() {
+        return Optional.ofNullable(this.monitoringRoleArn);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="performanceInsightsEnabled")
-      private final @Nullable Output<Boolean> performanceInsightsEnabled;
+    private @Nullable Output<Boolean> performanceInsightsEnabled;
 
-    public Output<Boolean> performanceInsightsEnabled() {
-        return this.performanceInsightsEnabled == null ? Codegen.empty() : this.performanceInsightsEnabled;
+    public Optional<Output<Boolean>> performanceInsightsEnabled() {
+        return Optional.ofNullable(this.performanceInsightsEnabled);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="performanceInsightsKmsKeyId")
-      private final @Nullable Output<String> performanceInsightsKmsKeyId;
+    private @Nullable Output<String> performanceInsightsKmsKeyId;
 
-    public Output<String> performanceInsightsKmsKeyId() {
-        return this.performanceInsightsKmsKeyId == null ? Codegen.empty() : this.performanceInsightsKmsKeyId;
+    public Optional<Output<String>> performanceInsightsKmsKeyId() {
+        return Optional.ofNullable(this.performanceInsightsKmsKeyId);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="performanceInsightsRetentionPeriod")
-      private final @Nullable Output<Integer> performanceInsightsRetentionPeriod;
+    private @Nullable Output<Integer> performanceInsightsRetentionPeriod;
 
-    public Output<Integer> performanceInsightsRetentionPeriod() {
-        return this.performanceInsightsRetentionPeriod == null ? Codegen.empty() : this.performanceInsightsRetentionPeriod;
+    public Optional<Output<Integer>> performanceInsightsRetentionPeriod() {
+        return Optional.ofNullable(this.performanceInsightsRetentionPeriod);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="preferredBackupWindow")
-      private final @Nullable Output<String> preferredBackupWindow;
+    private @Nullable Output<String> preferredBackupWindow;
 
-    public Output<String> preferredBackupWindow() {
-        return this.preferredBackupWindow == null ? Codegen.empty() : this.preferredBackupWindow;
+    public Optional<Output<String>> preferredBackupWindow() {
+        return Optional.ofNullable(this.preferredBackupWindow);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="preferredMaintenanceWindow")
-      private final @Nullable Output<String> preferredMaintenanceWindow;
+    private @Nullable Output<String> preferredMaintenanceWindow;
 
-    public Output<String> preferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
+    public Optional<Output<String>> preferredMaintenanceWindow() {
+        return Optional.ofNullable(this.preferredMaintenanceWindow);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="promotionTier")
-      private final @Nullable Output<Integer> promotionTier;
+    private @Nullable Output<Integer> promotionTier;
 
-    public Output<Integer> promotionTier() {
-        return this.promotionTier == null ? Codegen.empty() : this.promotionTier;
+    public Optional<Output<Integer>> promotionTier() {
+        return Optional.ofNullable(this.promotionTier);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="publiclyAccessible")
-      private final @Nullable Output<Boolean> publiclyAccessible;
+    private @Nullable Output<Boolean> publiclyAccessible;
 
-    public Output<Boolean> publiclyAccessible() {
-        return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
+    public Optional<Output<Boolean>> publiclyAccessible() {
+        return Optional.ofNullable(this.publiclyAccessible);
     }
 
     /**
@@ -278,336 +278,270 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClusterInstanceArgs(
-        @Nullable Output<Boolean> applyImmediately,
-        @Nullable Output<Boolean> autoMinorVersionUpgrade,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> caCertIdentifier,
-        Output<String> clusterIdentifier,
-        @Nullable Output<Boolean> copyTagsToSnapshot,
-        @Nullable Output<String> dbParameterGroupName,
-        @Nullable Output<String> dbSubnetGroupName,
-        @Nullable Output<String> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> identifierPrefix,
-        Output<Either<String,InstanceType>> instanceClass,
-        @Nullable Output<Integer> monitoringInterval,
-        @Nullable Output<String> monitoringRoleArn,
-        @Nullable Output<Boolean> performanceInsightsEnabled,
-        @Nullable Output<String> performanceInsightsKmsKeyId,
-        @Nullable Output<Integer> performanceInsightsRetentionPeriod,
-        @Nullable Output<String> preferredBackupWindow,
-        @Nullable Output<String> preferredMaintenanceWindow,
-        @Nullable Output<Integer> promotionTier,
-        @Nullable Output<Boolean> publiclyAccessible,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applyImmediately = applyImmediately;
-        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
-        this.availabilityZone = availabilityZone;
-        this.caCertIdentifier = caCertIdentifier;
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-        this.copyTagsToSnapshot = copyTagsToSnapshot;
-        this.dbParameterGroupName = dbParameterGroupName;
-        this.dbSubnetGroupName = dbSubnetGroupName;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.identifier = identifier;
-        this.identifierPrefix = identifierPrefix;
-        this.instanceClass = Objects.requireNonNull(instanceClass, "expected parameter 'instanceClass' to be non-null");
-        this.monitoringInterval = monitoringInterval;
-        this.monitoringRoleArn = monitoringRoleArn;
-        this.performanceInsightsEnabled = performanceInsightsEnabled;
-        this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
-        this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
-        this.preferredBackupWindow = preferredBackupWindow;
-        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
-        this.promotionTier = promotionTier;
-        this.publiclyAccessible = publiclyAccessible;
-        this.tags = tags;
-    }
+    private ClusterInstanceArgs() {}
 
-    private ClusterInstanceArgs() {
-        this.applyImmediately = Codegen.empty();
-        this.autoMinorVersionUpgrade = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.caCertIdentifier = Codegen.empty();
-        this.clusterIdentifier = Codegen.empty();
-        this.copyTagsToSnapshot = Codegen.empty();
-        this.dbParameterGroupName = Codegen.empty();
-        this.dbSubnetGroupName = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.identifierPrefix = Codegen.empty();
-        this.instanceClass = Codegen.empty();
-        this.monitoringInterval = Codegen.empty();
-        this.monitoringRoleArn = Codegen.empty();
-        this.performanceInsightsEnabled = Codegen.empty();
-        this.performanceInsightsKmsKeyId = Codegen.empty();
-        this.performanceInsightsRetentionPeriod = Codegen.empty();
-        this.preferredBackupWindow = Codegen.empty();
-        this.preferredMaintenanceWindow = Codegen.empty();
-        this.promotionTier = Codegen.empty();
-        this.publiclyAccessible = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClusterInstanceArgs(ClusterInstanceArgs $) {
+        this.applyImmediately = $.applyImmediately;
+        this.autoMinorVersionUpgrade = $.autoMinorVersionUpgrade;
+        this.availabilityZone = $.availabilityZone;
+        this.caCertIdentifier = $.caCertIdentifier;
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.copyTagsToSnapshot = $.copyTagsToSnapshot;
+        this.dbParameterGroupName = $.dbParameterGroupName;
+        this.dbSubnetGroupName = $.dbSubnetGroupName;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.identifier = $.identifier;
+        this.identifierPrefix = $.identifierPrefix;
+        this.instanceClass = $.instanceClass;
+        this.monitoringInterval = $.monitoringInterval;
+        this.monitoringRoleArn = $.monitoringRoleArn;
+        this.performanceInsightsEnabled = $.performanceInsightsEnabled;
+        this.performanceInsightsKmsKeyId = $.performanceInsightsKmsKeyId;
+        this.performanceInsightsRetentionPeriod = $.performanceInsightsRetentionPeriod;
+        this.preferredBackupWindow = $.preferredBackupWindow;
+        this.preferredMaintenanceWindow = $.preferredMaintenanceWindow;
+        this.promotionTier = $.promotionTier;
+        this.publiclyAccessible = $.publiclyAccessible;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applyImmediately;
-        private @Nullable Output<Boolean> autoMinorVersionUpgrade;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> caCertIdentifier;
-        private Output<String> clusterIdentifier;
-        private @Nullable Output<Boolean> copyTagsToSnapshot;
-        private @Nullable Output<String> dbParameterGroupName;
-        private @Nullable Output<String> dbSubnetGroupName;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> identifierPrefix;
-        private Output<Either<String,InstanceType>> instanceClass;
-        private @Nullable Output<Integer> monitoringInterval;
-        private @Nullable Output<String> monitoringRoleArn;
-        private @Nullable Output<Boolean> performanceInsightsEnabled;
-        private @Nullable Output<String> performanceInsightsKmsKeyId;
-        private @Nullable Output<Integer> performanceInsightsRetentionPeriod;
-        private @Nullable Output<String> preferredBackupWindow;
-        private @Nullable Output<String> preferredMaintenanceWindow;
-        private @Nullable Output<Integer> promotionTier;
-        private @Nullable Output<Boolean> publiclyAccessible;
-        private @Nullable Output<Map<String,String>> tags;
+        private ClusterInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterInstanceArgs();
         }
 
         public Builder(ClusterInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applyImmediately = defaults.applyImmediately;
-    	      this.autoMinorVersionUpgrade = defaults.autoMinorVersionUpgrade;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.caCertIdentifier = defaults.caCertIdentifier;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.copyTagsToSnapshot = defaults.copyTagsToSnapshot;
-    	      this.dbParameterGroupName = defaults.dbParameterGroupName;
-    	      this.dbSubnetGroupName = defaults.dbSubnetGroupName;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.identifier = defaults.identifier;
-    	      this.identifierPrefix = defaults.identifierPrefix;
-    	      this.instanceClass = defaults.instanceClass;
-    	      this.monitoringInterval = defaults.monitoringInterval;
-    	      this.monitoringRoleArn = defaults.monitoringRoleArn;
-    	      this.performanceInsightsEnabled = defaults.performanceInsightsEnabled;
-    	      this.performanceInsightsKmsKeyId = defaults.performanceInsightsKmsKeyId;
-    	      this.performanceInsightsRetentionPeriod = defaults.performanceInsightsRetentionPeriod;
-    	      this.preferredBackupWindow = defaults.preferredBackupWindow;
-    	      this.preferredMaintenanceWindow = defaults.preferredMaintenanceWindow;
-    	      this.promotionTier = defaults.promotionTier;
-    	      this.publiclyAccessible = defaults.publiclyAccessible;
-    	      this.tags = defaults.tags;
+            $ = new ClusterInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
-            this.applyImmediately = applyImmediately;
+            $.applyImmediately = applyImmediately;
             return this;
         }
-        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Codegen.ofNullable(applyImmediately);
-            return this;
+
+        public Builder applyImmediately(Boolean applyImmediately) {
+            return applyImmediately(Output.of(applyImmediately));
         }
+
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+            $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
-        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Codegen.ofNullable(autoMinorVersionUpgrade);
-            return this;
+
+        public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+            return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
-            this.caCertIdentifier = caCertIdentifier;
+            $.caCertIdentifier = caCertIdentifier;
             return this;
         }
-        public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
-            this.caCertIdentifier = Codegen.ofNullable(caCertIdentifier);
-            return this;
+
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            return caCertIdentifier(Output.of(caCertIdentifier));
         }
+
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
-            return this;
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder copyTagsToSnapshot(@Nullable Output<Boolean> copyTagsToSnapshot) {
-            this.copyTagsToSnapshot = copyTagsToSnapshot;
+            $.copyTagsToSnapshot = copyTagsToSnapshot;
             return this;
         }
-        public Builder copyTagsToSnapshot(@Nullable Boolean copyTagsToSnapshot) {
-            this.copyTagsToSnapshot = Codegen.ofNullable(copyTagsToSnapshot);
-            return this;
+
+        public Builder copyTagsToSnapshot(Boolean copyTagsToSnapshot) {
+            return copyTagsToSnapshot(Output.of(copyTagsToSnapshot));
         }
+
         public Builder dbParameterGroupName(@Nullable Output<String> dbParameterGroupName) {
-            this.dbParameterGroupName = dbParameterGroupName;
+            $.dbParameterGroupName = dbParameterGroupName;
             return this;
         }
-        public Builder dbParameterGroupName(@Nullable String dbParameterGroupName) {
-            this.dbParameterGroupName = Codegen.ofNullable(dbParameterGroupName);
-            return this;
+
+        public Builder dbParameterGroupName(String dbParameterGroupName) {
+            return dbParameterGroupName(Output.of(dbParameterGroupName));
         }
+
         public Builder dbSubnetGroupName(@Nullable Output<String> dbSubnetGroupName) {
-            this.dbSubnetGroupName = dbSubnetGroupName;
+            $.dbSubnetGroupName = dbSubnetGroupName;
             return this;
         }
-        public Builder dbSubnetGroupName(@Nullable String dbSubnetGroupName) {
-            this.dbSubnetGroupName = Codegen.ofNullable(dbSubnetGroupName);
-            return this;
+
+        public Builder dbSubnetGroupName(String dbSubnetGroupName) {
+            return dbSubnetGroupName(Output.of(dbSubnetGroupName));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
-            this.identifierPrefix = identifierPrefix;
+            $.identifierPrefix = identifierPrefix;
             return this;
         }
-        public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Codegen.ofNullable(identifierPrefix);
-            return this;
+
+        public Builder identifierPrefix(String identifierPrefix) {
+            return identifierPrefix(Output.of(identifierPrefix));
         }
+
         public Builder instanceClass(Output<Either<String,InstanceType>> instanceClass) {
-            this.instanceClass = Objects.requireNonNull(instanceClass);
+            $.instanceClass = instanceClass;
             return this;
         }
+
         public Builder instanceClass(Either<String,InstanceType> instanceClass) {
-            this.instanceClass = Output.of(Objects.requireNonNull(instanceClass));
-            return this;
+            return instanceClass(Output.of(instanceClass));
         }
+
         public Builder monitoringInterval(@Nullable Output<Integer> monitoringInterval) {
-            this.monitoringInterval = monitoringInterval;
+            $.monitoringInterval = monitoringInterval;
             return this;
         }
-        public Builder monitoringInterval(@Nullable Integer monitoringInterval) {
-            this.monitoringInterval = Codegen.ofNullable(monitoringInterval);
-            return this;
+
+        public Builder monitoringInterval(Integer monitoringInterval) {
+            return monitoringInterval(Output.of(monitoringInterval));
         }
+
         public Builder monitoringRoleArn(@Nullable Output<String> monitoringRoleArn) {
-            this.monitoringRoleArn = monitoringRoleArn;
+            $.monitoringRoleArn = monitoringRoleArn;
             return this;
         }
-        public Builder monitoringRoleArn(@Nullable String monitoringRoleArn) {
-            this.monitoringRoleArn = Codegen.ofNullable(monitoringRoleArn);
-            return this;
+
+        public Builder monitoringRoleArn(String monitoringRoleArn) {
+            return monitoringRoleArn(Output.of(monitoringRoleArn));
         }
+
         public Builder performanceInsightsEnabled(@Nullable Output<Boolean> performanceInsightsEnabled) {
-            this.performanceInsightsEnabled = performanceInsightsEnabled;
+            $.performanceInsightsEnabled = performanceInsightsEnabled;
             return this;
         }
-        public Builder performanceInsightsEnabled(@Nullable Boolean performanceInsightsEnabled) {
-            this.performanceInsightsEnabled = Codegen.ofNullable(performanceInsightsEnabled);
-            return this;
+
+        public Builder performanceInsightsEnabled(Boolean performanceInsightsEnabled) {
+            return performanceInsightsEnabled(Output.of(performanceInsightsEnabled));
         }
+
         public Builder performanceInsightsKmsKeyId(@Nullable Output<String> performanceInsightsKmsKeyId) {
-            this.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
+            $.performanceInsightsKmsKeyId = performanceInsightsKmsKeyId;
             return this;
         }
-        public Builder performanceInsightsKmsKeyId(@Nullable String performanceInsightsKmsKeyId) {
-            this.performanceInsightsKmsKeyId = Codegen.ofNullable(performanceInsightsKmsKeyId);
-            return this;
+
+        public Builder performanceInsightsKmsKeyId(String performanceInsightsKmsKeyId) {
+            return performanceInsightsKmsKeyId(Output.of(performanceInsightsKmsKeyId));
         }
+
         public Builder performanceInsightsRetentionPeriod(@Nullable Output<Integer> performanceInsightsRetentionPeriod) {
-            this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
+            $.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
             return this;
         }
-        public Builder performanceInsightsRetentionPeriod(@Nullable Integer performanceInsightsRetentionPeriod) {
-            this.performanceInsightsRetentionPeriod = Codegen.ofNullable(performanceInsightsRetentionPeriod);
-            return this;
+
+        public Builder performanceInsightsRetentionPeriod(Integer performanceInsightsRetentionPeriod) {
+            return performanceInsightsRetentionPeriod(Output.of(performanceInsightsRetentionPeriod));
         }
+
         public Builder preferredBackupWindow(@Nullable Output<String> preferredBackupWindow) {
-            this.preferredBackupWindow = preferredBackupWindow;
+            $.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
-        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
-            this.preferredBackupWindow = Codegen.ofNullable(preferredBackupWindow);
-            return this;
+
+        public Builder preferredBackupWindow(String preferredBackupWindow) {
+            return preferredBackupWindow(Output.of(preferredBackupWindow));
         }
+
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+            $.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
-        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
-            return this;
+
+        public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
+            return preferredMaintenanceWindow(Output.of(preferredMaintenanceWindow));
         }
+
         public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
-            this.promotionTier = promotionTier;
+            $.promotionTier = promotionTier;
             return this;
         }
-        public Builder promotionTier(@Nullable Integer promotionTier) {
-            this.promotionTier = Codegen.ofNullable(promotionTier);
-            return this;
+
+        public Builder promotionTier(Integer promotionTier) {
+            return promotionTier(Output.of(promotionTier));
         }
+
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
-            this.publiclyAccessible = publiclyAccessible;
+            $.publiclyAccessible = publiclyAccessible;
             return this;
         }
-        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Codegen.ofNullable(publiclyAccessible);
-            return this;
+
+        public Builder publiclyAccessible(Boolean publiclyAccessible) {
+            return publiclyAccessible(Output.of(publiclyAccessible));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ClusterInstanceArgs build() {
-            return new ClusterInstanceArgs(applyImmediately, autoMinorVersionUpgrade, availabilityZone, caCertIdentifier, clusterIdentifier, copyTagsToSnapshot, dbParameterGroupName, dbSubnetGroupName, engine, engineVersion, identifier, identifierPrefix, instanceClass, monitoringInterval, monitoringRoleArn, performanceInsightsEnabled, performanceInsightsKmsKeyId, performanceInsightsRetentionPeriod, preferredBackupWindow, preferredMaintenanceWindow, promotionTier, publiclyAccessible, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ClusterInstanceArgs build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            $.instanceClass = Objects.requireNonNull($.instanceClass, "expected parameter 'instanceClass' to be non-null");
+            return $;
         }
     }
+
 }

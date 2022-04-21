@@ -7,8 +7,8 @@ import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExclu
 import com.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends com.pulum
      * 
      */
     @Import(name="excludes")
-      private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes;
+    private @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes() {
-        return this.excludes == null ? Codegen.empty() : this.excludes;
+    public Optional<Output<ClassificationJobS3JobDefinitionScopingExcludesArgs>> excludes() {
+        return Optional.ofNullable(this.excludes);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ClassificationJobS3JobDefinitionScopingArgs extends com.pulum
      * 
      */
     @Import(name="includes")
-      private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes;
+    private @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes;
 
-    public Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes() {
-        return this.includes == null ? Codegen.empty() : this.includes;
+    public Optional<Output<ClassificationJobS3JobDefinitionScopingIncludesArgs>> includes() {
+        return Optional.ofNullable(this.includes);
     }
 
-    public ClassificationJobS3JobDefinitionScopingArgs(
-        @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes,
-        @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes) {
-        this.excludes = excludes;
-        this.includes = includes;
-    }
+    private ClassificationJobS3JobDefinitionScopingArgs() {}
 
-    private ClassificationJobS3JobDefinitionScopingArgs() {
-        this.excludes = Codegen.empty();
-        this.includes = Codegen.empty();
+    private ClassificationJobS3JobDefinitionScopingArgs(ClassificationJobS3JobDefinitionScopingArgs $) {
+        this.excludes = $.excludes;
+        this.includes = $.includes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassificationJobS3JobDefinitionScopingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes;
-        private @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes;
+        private ClassificationJobS3JobDefinitionScopingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassificationJobS3JobDefinitionScopingArgs();
         }
 
         public Builder(ClassificationJobS3JobDefinitionScopingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludes = defaults.excludes;
-    	      this.includes = defaults.includes;
+            $ = new ClassificationJobS3JobDefinitionScopingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludes(@Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesArgs> excludes) {
-            this.excludes = excludes;
+            $.excludes = excludes;
             return this;
         }
-        public Builder excludes(@Nullable ClassificationJobS3JobDefinitionScopingExcludesArgs excludes) {
-            this.excludes = Codegen.ofNullable(excludes);
-            return this;
+
+        public Builder excludes(ClassificationJobS3JobDefinitionScopingExcludesArgs excludes) {
+            return excludes(Output.of(excludes));
         }
+
         public Builder includes(@Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesArgs> includes) {
-            this.includes = includes;
+            $.includes = includes;
             return this;
         }
-        public Builder includes(@Nullable ClassificationJobS3JobDefinitionScopingIncludesArgs includes) {
-            this.includes = Codegen.ofNullable(includes);
-            return this;
-        }        public ClassificationJobS3JobDefinitionScopingArgs build() {
-            return new ClassificationJobS3JobDefinitionScopingArgs(excludes, includes);
+
+        public Builder includes(ClassificationJobS3JobDefinitionScopingIncludesArgs includes) {
+            return includes(Output.of(includes));
+        }
+
+        public ClassificationJobS3JobDefinitionScopingArgs build() {
+            return $;
         }
     }
+
 }

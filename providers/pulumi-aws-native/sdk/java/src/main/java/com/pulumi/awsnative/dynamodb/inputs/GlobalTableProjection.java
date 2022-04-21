@@ -16,65 +16,61 @@ public final class GlobalTableProjection extends com.pulumi.resources.InvokeArgs
     public static final GlobalTableProjection Empty = new GlobalTableProjection();
 
     @Import(name="nonKeyAttributes")
-      private final @Nullable List<String> nonKeyAttributes;
+    private @Nullable List<String> nonKeyAttributes;
 
-    public List<String> nonKeyAttributes() {
-        return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
+    public Optional<List<String>> nonKeyAttributes() {
+        return Optional.ofNullable(this.nonKeyAttributes);
     }
 
     @Import(name="projectionType")
-      private final @Nullable String projectionType;
+    private @Nullable String projectionType;
 
     public Optional<String> projectionType() {
-        return this.projectionType == null ? Optional.empty() : Optional.ofNullable(this.projectionType);
+        return Optional.ofNullable(this.projectionType);
     }
 
-    public GlobalTableProjection(
-        @Nullable List<String> nonKeyAttributes,
-        @Nullable String projectionType) {
-        this.nonKeyAttributes = nonKeyAttributes;
-        this.projectionType = projectionType;
-    }
+    private GlobalTableProjection() {}
 
-    private GlobalTableProjection() {
-        this.nonKeyAttributes = List.of();
-        this.projectionType = null;
+    private GlobalTableProjection(GlobalTableProjection $) {
+        this.nonKeyAttributes = $.nonKeyAttributes;
+        this.projectionType = $.projectionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableProjection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> nonKeyAttributes;
-        private @Nullable String projectionType;
+        private GlobalTableProjection $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableProjection();
         }
 
         public Builder(GlobalTableProjection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonKeyAttributes = defaults.nonKeyAttributes;
-    	      this.projectionType = defaults.projectionType;
+            $ = new GlobalTableProjection(Objects.requireNonNull(defaults));
         }
 
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = nonKeyAttributes;
+            $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
+
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
+
         public Builder projectionType(@Nullable String projectionType) {
-            this.projectionType = projectionType;
+            $.projectionType = projectionType;
             return this;
-        }        public GlobalTableProjection build() {
-            return new GlobalTableProjection(nonKeyAttributes, projectionType);
+        }
+
+        public GlobalTableProjection build() {
+            return $;
         }
     }
+
 }

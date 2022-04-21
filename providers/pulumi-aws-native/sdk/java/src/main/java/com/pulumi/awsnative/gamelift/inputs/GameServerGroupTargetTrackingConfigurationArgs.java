@@ -5,7 +5,6 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends com.pu
     public static final GameServerGroupTargetTrackingConfigurationArgs Empty = new GameServerGroupTargetTrackingConfigurationArgs();
 
     @Import(name="targetValue", required=true)
-      private final Output<Double> targetValue;
+    private Output<Double> targetValue;
 
     public Output<Double> targetValue() {
         return this.targetValue;
     }
 
-    public GameServerGroupTargetTrackingConfigurationArgs(Output<Double> targetValue) {
-        this.targetValue = Objects.requireNonNull(targetValue, "expected parameter 'targetValue' to be non-null");
-    }
+    private GameServerGroupTargetTrackingConfigurationArgs() {}
 
-    private GameServerGroupTargetTrackingConfigurationArgs() {
-        this.targetValue = Codegen.empty();
+    private GameServerGroupTargetTrackingConfigurationArgs(GameServerGroupTargetTrackingConfigurationArgs $) {
+        this.targetValue = $.targetValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerGroupTargetTrackingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> targetValue;
+        private GameServerGroupTargetTrackingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerGroupTargetTrackingConfigurationArgs();
         }
 
         public Builder(GameServerGroupTargetTrackingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetValue = defaults.targetValue;
+            $ = new GameServerGroupTargetTrackingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetValue(Output<Double> targetValue) {
-            this.targetValue = Objects.requireNonNull(targetValue);
+            $.targetValue = targetValue;
             return this;
         }
+
         public Builder targetValue(Double targetValue) {
-            this.targetValue = Output.of(Objects.requireNonNull(targetValue));
-            return this;
-        }        public GameServerGroupTargetTrackingConfigurationArgs build() {
-            return new GameServerGroupTargetTrackingConfigurationArgs(targetValue);
+            return targetValue(Output.of(targetValue));
+        }
+
+        public GameServerGroupTargetTrackingConfigurationArgs build() {
+            $.targetValue = Objects.requireNonNull($.targetValue, "expected parameter 'targetValue' to be non-null");
+            return $;
         }
     }
+
 }

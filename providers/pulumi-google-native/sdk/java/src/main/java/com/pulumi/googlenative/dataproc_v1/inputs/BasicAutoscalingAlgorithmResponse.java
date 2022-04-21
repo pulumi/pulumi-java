@@ -23,7 +23,7 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
      * 
      */
     @Import(name="cooldownPeriod", required=true)
-      private final String cooldownPeriod;
+    private String cooldownPeriod;
 
     public String cooldownPeriod() {
         return this.cooldownPeriod;
@@ -34,7 +34,7 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sparkStandaloneConfig", required=true)
-      private final SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig;
+    private SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig;
 
     public SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig() {
         return this.sparkStandaloneConfig;
@@ -45,64 +45,59 @@ public final class BasicAutoscalingAlgorithmResponse extends com.pulumi.resource
      * 
      */
     @Import(name="yarnConfig", required=true)
-      private final BasicYarnAutoscalingConfigResponse yarnConfig;
+    private BasicYarnAutoscalingConfigResponse yarnConfig;
 
     public BasicYarnAutoscalingConfigResponse yarnConfig() {
         return this.yarnConfig;
     }
 
-    public BasicAutoscalingAlgorithmResponse(
-        String cooldownPeriod,
-        SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig,
-        BasicYarnAutoscalingConfigResponse yarnConfig) {
-        this.cooldownPeriod = Objects.requireNonNull(cooldownPeriod, "expected parameter 'cooldownPeriod' to be non-null");
-        this.sparkStandaloneConfig = Objects.requireNonNull(sparkStandaloneConfig, "expected parameter 'sparkStandaloneConfig' to be non-null");
-        this.yarnConfig = Objects.requireNonNull(yarnConfig, "expected parameter 'yarnConfig' to be non-null");
-    }
+    private BasicAutoscalingAlgorithmResponse() {}
 
-    private BasicAutoscalingAlgorithmResponse() {
-        this.cooldownPeriod = null;
-        this.sparkStandaloneConfig = null;
-        this.yarnConfig = null;
+    private BasicAutoscalingAlgorithmResponse(BasicAutoscalingAlgorithmResponse $) {
+        this.cooldownPeriod = $.cooldownPeriod;
+        this.sparkStandaloneConfig = $.sparkStandaloneConfig;
+        this.yarnConfig = $.yarnConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicAutoscalingAlgorithmResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cooldownPeriod;
-        private SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig;
-        private BasicYarnAutoscalingConfigResponse yarnConfig;
+        private BasicAutoscalingAlgorithmResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicAutoscalingAlgorithmResponse();
         }
 
         public Builder(BasicAutoscalingAlgorithmResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cooldownPeriod = defaults.cooldownPeriod;
-    	      this.sparkStandaloneConfig = defaults.sparkStandaloneConfig;
-    	      this.yarnConfig = defaults.yarnConfig;
+            $ = new BasicAutoscalingAlgorithmResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cooldownPeriod(String cooldownPeriod) {
-            this.cooldownPeriod = Objects.requireNonNull(cooldownPeriod);
+            $.cooldownPeriod = cooldownPeriod;
             return this;
         }
+
         public Builder sparkStandaloneConfig(SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig) {
-            this.sparkStandaloneConfig = Objects.requireNonNull(sparkStandaloneConfig);
+            $.sparkStandaloneConfig = sparkStandaloneConfig;
             return this;
         }
+
         public Builder yarnConfig(BasicYarnAutoscalingConfigResponse yarnConfig) {
-            this.yarnConfig = Objects.requireNonNull(yarnConfig);
+            $.yarnConfig = yarnConfig;
             return this;
-        }        public BasicAutoscalingAlgorithmResponse build() {
-            return new BasicAutoscalingAlgorithmResponse(cooldownPeriod, sparkStandaloneConfig, yarnConfig);
+        }
+
+        public BasicAutoscalingAlgorithmResponse build() {
+            $.cooldownPeriod = Objects.requireNonNull($.cooldownPeriod, "expected parameter 'cooldownPeriod' to be non-null");
+            $.sparkStandaloneConfig = Objects.requireNonNull($.sparkStandaloneConfig, "expected parameter 'sparkStandaloneConfig' to be non-null");
+            $.yarnConfig = Objects.requireNonNull($.yarnConfig, "expected parameter 'yarnConfig' to be non-null");
+            return $;
         }
     }
+
 }

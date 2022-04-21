@@ -17,7 +17,7 @@ public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetResourcePoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourcePoolName", required=true)
-      private final String resourcePoolName;
+    private String resourcePoolName;
 
     public String resourcePoolName() {
         return this.resourcePoolName;
     }
 
-    public GetResourcePoolArgs(
-        String resourceGroupName,
-        String resourcePoolName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourcePoolName = Objects.requireNonNull(resourcePoolName, "expected parameter 'resourcePoolName' to be non-null");
-    }
+    private GetResourcePoolArgs() {}
 
-    private GetResourcePoolArgs() {
-        this.resourceGroupName = null;
-        this.resourcePoolName = null;
+    private GetResourcePoolArgs(GetResourcePoolArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourcePoolName = $.resourcePoolName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourcePoolName;
+        private GetResourcePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePoolArgs();
         }
 
         public Builder(GetResourcePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourcePoolName = defaults.resourcePoolName;
+            $ = new GetResourcePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourcePoolName(String resourcePoolName) {
-            this.resourcePoolName = Objects.requireNonNull(resourcePoolName);
+            $.resourcePoolName = resourcePoolName;
             return this;
-        }        public GetResourcePoolArgs build() {
-            return new GetResourcePoolArgs(resourceGroupName, resourcePoolName);
+        }
+
+        public GetResourcePoolArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourcePoolName = Objects.requireNonNull($.resourcePoolName, "expected parameter 'resourcePoolName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class TopicRuleStepFunctionsAction extends com.pulumi.resources.Inv
     public static final TopicRuleStepFunctionsAction Empty = new TopicRuleStepFunctionsAction();
 
     @Import(name="executionNamePrefix")
-      private final @Nullable String executionNamePrefix;
+    private @Nullable String executionNamePrefix;
 
     public Optional<String> executionNamePrefix() {
-        return this.executionNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.executionNamePrefix);
+        return Optional.ofNullable(this.executionNamePrefix);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stateMachineName", required=true)
-      private final String stateMachineName;
+    private String stateMachineName;
 
     public String stateMachineName() {
         return this.stateMachineName;
     }
 
-    public TopicRuleStepFunctionsAction(
-        @Nullable String executionNamePrefix,
-        String roleArn,
-        String stateMachineName) {
-        this.executionNamePrefix = executionNamePrefix;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stateMachineName = Objects.requireNonNull(stateMachineName, "expected parameter 'stateMachineName' to be non-null");
-    }
+    private TopicRuleStepFunctionsAction() {}
 
-    private TopicRuleStepFunctionsAction() {
-        this.executionNamePrefix = null;
-        this.roleArn = null;
-        this.stateMachineName = null;
+    private TopicRuleStepFunctionsAction(TopicRuleStepFunctionsAction $) {
+        this.executionNamePrefix = $.executionNamePrefix;
+        this.roleArn = $.roleArn;
+        this.stateMachineName = $.stateMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleStepFunctionsAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String executionNamePrefix;
-        private String roleArn;
-        private String stateMachineName;
+        private TopicRuleStepFunctionsAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleStepFunctionsAction();
         }
 
         public Builder(TopicRuleStepFunctionsAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionNamePrefix = defaults.executionNamePrefix;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stateMachineName = defaults.stateMachineName;
+            $ = new TopicRuleStepFunctionsAction(Objects.requireNonNull(defaults));
         }
 
         public Builder executionNamePrefix(@Nullable String executionNamePrefix) {
-            this.executionNamePrefix = executionNamePrefix;
+            $.executionNamePrefix = executionNamePrefix;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder stateMachineName(String stateMachineName) {
-            this.stateMachineName = Objects.requireNonNull(stateMachineName);
+            $.stateMachineName = stateMachineName;
             return this;
-        }        public TopicRuleStepFunctionsAction build() {
-            return new TopicRuleStepFunctionsAction(executionNamePrefix, roleArn, stateMachineName);
+        }
+
+        public TopicRuleStepFunctionsAction build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.stateMachineName = Objects.requireNonNull($.stateMachineName, "expected parameter 'stateMachineName' to be non-null");
+            return $;
         }
     }
+
 }

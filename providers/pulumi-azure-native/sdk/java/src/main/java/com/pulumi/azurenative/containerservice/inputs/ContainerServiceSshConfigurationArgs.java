@@ -6,7 +6,6 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.ContainerServiceSshPublicKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class ContainerServiceSshConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="publicKeys", required=true)
-      private final Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
+    private Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
 
     public Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys() {
         return this.publicKeys;
     }
 
-    public ContainerServiceSshConfigurationArgs(Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
-        this.publicKeys = Objects.requireNonNull(publicKeys, "expected parameter 'publicKeys' to be non-null");
-    }
+    private ContainerServiceSshConfigurationArgs() {}
 
-    private ContainerServiceSshConfigurationArgs() {
-        this.publicKeys = Codegen.empty();
+    private ContainerServiceSshConfigurationArgs(ContainerServiceSshConfigurationArgs $) {
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceSshConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
+        private ContainerServiceSshConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceSshConfigurationArgs();
         }
 
         public Builder(ContainerServiceSshConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new ContainerServiceSshConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeys(Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
-            this.publicKeys = Objects.requireNonNull(publicKeys);
+            $.publicKeys = publicKeys;
             return this;
         }
+
         public Builder publicKeys(List<ContainerServiceSshPublicKeyArgs> publicKeys) {
-            this.publicKeys = Output.of(Objects.requireNonNull(publicKeys));
-            return this;
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(ContainerServiceSshPublicKeyArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public ContainerServiceSshConfigurationArgs build() {
-            return new ContainerServiceSshConfigurationArgs(publicKeys);
+        }
+
+        public ContainerServiceSshConfigurationArgs build() {
+            $.publicKeys = Objects.requireNonNull($.publicKeys, "expected parameter 'publicKeys' to be non-null");
+            return $;
         }
     }
+
 }

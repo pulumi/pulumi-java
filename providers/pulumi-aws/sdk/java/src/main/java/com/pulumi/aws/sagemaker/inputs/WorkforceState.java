@@ -8,9 +8,9 @@ import com.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigGetArgs;
 import com.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cognitoConfig")
-      private final @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
+    private @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
 
-    public Output<WorkforceCognitoConfigGetArgs> cognitoConfig() {
-        return this.cognitoConfig == null ? Codegen.empty() : this.cognitoConfig;
+    public Optional<Output<WorkforceCognitoConfigGetArgs>> cognitoConfig() {
+        return Optional.ofNullable(this.cognitoConfig);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oidcConfig")
-      private final @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
+    private @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
 
-    public Output<WorkforceOidcConfigGetArgs> oidcConfig() {
-        return this.oidcConfig == null ? Codegen.empty() : this.oidcConfig;
+    public Optional<Output<WorkforceOidcConfigGetArgs>> oidcConfig() {
+        return Optional.ofNullable(this.oidcConfig);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceIpConfig")
-      private final @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
+    private @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
 
-    public Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig() {
-        return this.sourceIpConfig == null ? Codegen.empty() : this.sourceIpConfig;
+    public Optional<Output<WorkforceSourceIpConfigGetArgs>> sourceIpConfig() {
+        return Optional.ofNullable(this.sourceIpConfig);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdomain")
-      private final @Nullable Output<String> subdomain;
+    private @Nullable Output<String> subdomain;
 
-    public Output<String> subdomain() {
-        return this.subdomain == null ? Codegen.empty() : this.subdomain;
+    public Optional<Output<String>> subdomain() {
+        return Optional.ofNullable(this.subdomain);
     }
 
     /**
@@ -78,115 +78,98 @@ public final class WorkforceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workforceName")
-      private final @Nullable Output<String> workforceName;
+    private @Nullable Output<String> workforceName;
 
-    public Output<String> workforceName() {
-        return this.workforceName == null ? Codegen.empty() : this.workforceName;
+    public Optional<Output<String>> workforceName() {
+        return Optional.ofNullable(this.workforceName);
     }
 
-    public WorkforceState(
-        @Nullable Output<String> arn,
-        @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig,
-        @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig,
-        @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig,
-        @Nullable Output<String> subdomain,
-        @Nullable Output<String> workforceName) {
-        this.arn = arn;
-        this.cognitoConfig = cognitoConfig;
-        this.oidcConfig = oidcConfig;
-        this.sourceIpConfig = sourceIpConfig;
-        this.subdomain = subdomain;
-        this.workforceName = workforceName;
-    }
+    private WorkforceState() {}
 
-    private WorkforceState() {
-        this.arn = Codegen.empty();
-        this.cognitoConfig = Codegen.empty();
-        this.oidcConfig = Codegen.empty();
-        this.sourceIpConfig = Codegen.empty();
-        this.subdomain = Codegen.empty();
-        this.workforceName = Codegen.empty();
+    private WorkforceState(WorkforceState $) {
+        this.arn = $.arn;
+        this.cognitoConfig = $.cognitoConfig;
+        this.oidcConfig = $.oidcConfig;
+        this.sourceIpConfig = $.sourceIpConfig;
+        this.subdomain = $.subdomain;
+        this.workforceName = $.workforceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkforceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
-        private @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
-        private @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
-        private @Nullable Output<String> subdomain;
-        private @Nullable Output<String> workforceName;
+        private WorkforceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkforceState();
         }
 
         public Builder(WorkforceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.cognitoConfig = defaults.cognitoConfig;
-    	      this.oidcConfig = defaults.oidcConfig;
-    	      this.sourceIpConfig = defaults.sourceIpConfig;
-    	      this.subdomain = defaults.subdomain;
-    	      this.workforceName = defaults.workforceName;
+            $ = new WorkforceState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cognitoConfig(@Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig) {
-            this.cognitoConfig = cognitoConfig;
+            $.cognitoConfig = cognitoConfig;
             return this;
         }
-        public Builder cognitoConfig(@Nullable WorkforceCognitoConfigGetArgs cognitoConfig) {
-            this.cognitoConfig = Codegen.ofNullable(cognitoConfig);
-            return this;
+
+        public Builder cognitoConfig(WorkforceCognitoConfigGetArgs cognitoConfig) {
+            return cognitoConfig(Output.of(cognitoConfig));
         }
+
         public Builder oidcConfig(@Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig) {
-            this.oidcConfig = oidcConfig;
+            $.oidcConfig = oidcConfig;
             return this;
         }
-        public Builder oidcConfig(@Nullable WorkforceOidcConfigGetArgs oidcConfig) {
-            this.oidcConfig = Codegen.ofNullable(oidcConfig);
-            return this;
+
+        public Builder oidcConfig(WorkforceOidcConfigGetArgs oidcConfig) {
+            return oidcConfig(Output.of(oidcConfig));
         }
+
         public Builder sourceIpConfig(@Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
-            this.sourceIpConfig = sourceIpConfig;
+            $.sourceIpConfig = sourceIpConfig;
             return this;
         }
-        public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigGetArgs sourceIpConfig) {
-            this.sourceIpConfig = Codegen.ofNullable(sourceIpConfig);
-            return this;
+
+        public Builder sourceIpConfig(WorkforceSourceIpConfigGetArgs sourceIpConfig) {
+            return sourceIpConfig(Output.of(sourceIpConfig));
         }
+
         public Builder subdomain(@Nullable Output<String> subdomain) {
-            this.subdomain = subdomain;
+            $.subdomain = subdomain;
             return this;
         }
-        public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Codegen.ofNullable(subdomain);
-            return this;
+
+        public Builder subdomain(String subdomain) {
+            return subdomain(Output.of(subdomain));
         }
+
         public Builder workforceName(@Nullable Output<String> workforceName) {
-            this.workforceName = workforceName;
+            $.workforceName = workforceName;
             return this;
         }
-        public Builder workforceName(@Nullable String workforceName) {
-            this.workforceName = Codegen.ofNullable(workforceName);
-            return this;
-        }        public WorkforceState build() {
-            return new WorkforceState(arn, cognitoConfig, oidcConfig, sourceIpConfig, subdomain, workforceName);
+
+        public Builder workforceName(String workforceName) {
+            return workforceName(Output.of(workforceName));
+        }
+
+        public WorkforceState build() {
+            return $;
         }
     }
+
 }

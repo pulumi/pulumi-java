@@ -15,62 +15,58 @@ public final class EnvironmentSettingResponse extends com.pulumi.resources.Invok
     public static final EnvironmentSettingResponse Empty = new EnvironmentSettingResponse();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public EnvironmentSettingResponse(
-        String name,
-        @Nullable String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = value;
-    }
+    private EnvironmentSettingResponse() {}
 
-    private EnvironmentSettingResponse() {
-        this.name = null;
-        this.value = null;
+    private EnvironmentSettingResponse(EnvironmentSettingResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentSettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String value;
+        private EnvironmentSettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentSettingResponse();
         }
 
         public Builder(EnvironmentSettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new EnvironmentSettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public EnvironmentSettingResponse build() {
-            return new EnvironmentSettingResponse(name, value);
+        }
+
+        public EnvironmentSettingResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

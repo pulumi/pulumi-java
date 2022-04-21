@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.FileNoteFileType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<List<String>> checksum;
+    private @Nullable Output<List<String>> checksum;
 
-    public Output<List<String>> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<List<String>>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileType")
-      private final @Nullable Output<FileNoteFileType> fileType;
+    private @Nullable Output<FileNoteFileType> fileType;
 
-    public Output<FileNoteFileType> fileType() {
-        return this.fileType == null ? Codegen.empty() : this.fileType;
+    public Optional<Output<FileNoteFileType>> fileType() {
+        return Optional.ofNullable(this.fileType);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class FileNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public FileNoteArgs(
-        @Nullable Output<List<String>> checksum,
-        @Nullable Output<FileNoteFileType> fileType,
-        @Nullable Output<String> title) {
-        this.checksum = checksum;
-        this.fileType = fileType;
-        this.title = title;
-    }
+    private FileNoteArgs() {}
 
-    private FileNoteArgs() {
-        this.checksum = Codegen.empty();
-        this.fileType = Codegen.empty();
-        this.title = Codegen.empty();
+    private FileNoteArgs(FileNoteArgs $) {
+        this.checksum = $.checksum;
+        this.fileType = $.fileType;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> checksum;
-        private @Nullable Output<FileNoteFileType> fileType;
-        private @Nullable Output<String> title;
+        private FileNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileNoteArgs();
         }
 
         public Builder(FileNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.fileType = defaults.fileType;
-    	      this.title = defaults.title;
+            $ = new FileNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(@Nullable Output<List<String>> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable List<String> checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(List<String> checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder checksum(String... checksum) {
             return checksum(List.of(checksum));
         }
+
         public Builder fileType(@Nullable Output<FileNoteFileType> fileType) {
-            this.fileType = fileType;
+            $.fileType = fileType;
             return this;
         }
-        public Builder fileType(@Nullable FileNoteFileType fileType) {
-            this.fileType = Codegen.ofNullable(fileType);
-            return this;
+
+        public Builder fileType(FileNoteFileType fileType) {
+            return fileType(Output.of(fileType));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public FileNoteArgs build() {
-            return new FileNoteArgs(checksum, fileType, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public FileNoteArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -16,73 +15,71 @@ public final class DistributionStatusCodesArgs extends com.pulumi.resources.Reso
     public static final DistributionStatusCodesArgs Empty = new DistributionStatusCodesArgs();
 
     @Import(name="items", required=true)
-      private final Output<List<Integer>> items;
+    private Output<List<Integer>> items;
 
     public Output<List<Integer>> items() {
         return this.items;
     }
 
     @Import(name="quantity", required=true)
-      private final Output<Integer> quantity;
+    private Output<Integer> quantity;
 
     public Output<Integer> quantity() {
         return this.quantity;
     }
 
-    public DistributionStatusCodesArgs(
-        Output<List<Integer>> items,
-        Output<Integer> quantity) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.quantity = Objects.requireNonNull(quantity, "expected parameter 'quantity' to be non-null");
-    }
+    private DistributionStatusCodesArgs() {}
 
-    private DistributionStatusCodesArgs() {
-        this.items = Codegen.empty();
-        this.quantity = Codegen.empty();
+    private DistributionStatusCodesArgs(DistributionStatusCodesArgs $) {
+        this.items = $.items;
+        this.quantity = $.quantity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionStatusCodesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Integer>> items;
-        private Output<Integer> quantity;
+        private DistributionStatusCodesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionStatusCodesArgs();
         }
 
         public Builder(DistributionStatusCodesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.quantity = defaults.quantity;
+            $ = new DistributionStatusCodesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(Output<List<Integer>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<Integer> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(Integer... items) {
             return items(List.of(items));
         }
+
         public Builder quantity(Output<Integer> quantity) {
-            this.quantity = Objects.requireNonNull(quantity);
+            $.quantity = quantity;
             return this;
         }
+
         public Builder quantity(Integer quantity) {
-            this.quantity = Output.of(Objects.requireNonNull(quantity));
-            return this;
-        }        public DistributionStatusCodesArgs build() {
-            return new DistributionStatusCodesArgs(items, quantity);
+            return quantity(Output.of(quantity));
+        }
+
+        public DistributionStatusCodesArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.quantity = Objects.requireNonNull($.quantity, "expected parameter 'quantity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -30,38 +30,38 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
     public static final DatastoreResponse Empty = new DatastoreResponse();
 
     @Import(name="azureDataLakeSection")
-      private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
+    private @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
 
     public Optional<AzureDataLakeSectionResponse> azureDataLakeSection() {
-        return this.azureDataLakeSection == null ? Optional.empty() : Optional.ofNullable(this.azureDataLakeSection);
+        return Optional.ofNullable(this.azureDataLakeSection);
     }
 
     @Import(name="azureMySqlSection")
-      private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
+    private @Nullable AzureMySqlSectionResponse azureMySqlSection;
 
     public Optional<AzureMySqlSectionResponse> azureMySqlSection() {
-        return this.azureMySqlSection == null ? Optional.empty() : Optional.ofNullable(this.azureMySqlSection);
+        return Optional.ofNullable(this.azureMySqlSection);
     }
 
     @Import(name="azurePostgreSqlSection")
-      private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
+    private @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
 
     public Optional<AzurePostgreSqlSectionResponse> azurePostgreSqlSection() {
-        return this.azurePostgreSqlSection == null ? Optional.empty() : Optional.ofNullable(this.azurePostgreSqlSection);
+        return Optional.ofNullable(this.azurePostgreSqlSection);
     }
 
     @Import(name="azureSqlDatabaseSection")
-      private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
+    private @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
 
     public Optional<AzureSqlDatabaseSectionResponse> azureSqlDatabaseSection() {
-        return this.azureSqlDatabaseSection == null ? Optional.empty() : Optional.ofNullable(this.azureSqlDatabaseSection);
+        return Optional.ofNullable(this.azureSqlDatabaseSection);
     }
 
     @Import(name="azureStorageSection")
-      private final @Nullable AzureStorageSectionResponse azureStorageSection;
+    private @Nullable AzureStorageSectionResponse azureStorageSection;
 
     public Optional<AzureStorageSectionResponse> azureStorageSection() {
-        return this.azureStorageSection == null ? Optional.empty() : Optional.ofNullable(this.azureStorageSection);
+        return Optional.ofNullable(this.azureStorageSection);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdBy", required=true)
-      private final UserInfoResponse createdBy;
+    private UserInfoResponse createdBy;
 
     public UserInfoResponse createdBy() {
         return this.createdBy;
@@ -80,7 +80,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime", required=true)
-      private final String createdTime;
+    private String createdTime;
 
     public String createdTime() {
         return this.createdTime;
@@ -91,10 +91,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataStoreType")
-      private final @Nullable String dataStoreType;
+    private @Nullable String dataStoreType;
 
     public Optional<String> dataStoreType() {
-        return this.dataStoreType == null ? Optional.empty() : Optional.ofNullable(this.dataStoreType);
+        return Optional.ofNullable(this.dataStoreType);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glusterFsSection")
-      private final @Nullable GlusterFsSectionResponse glusterFsSection;
+    private @Nullable GlusterFsSectionResponse glusterFsSection;
 
     public Optional<GlusterFsSectionResponse> glusterFsSection() {
-        return this.glusterFsSection == null ? Optional.empty() : Optional.ofNullable(this.glusterFsSection);
+        return Optional.ofNullable(this.glusterFsSection);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hasBeenValidated")
-      private final @Nullable Boolean hasBeenValidated;
+    private @Nullable Boolean hasBeenValidated;
 
     public Optional<Boolean> hasBeenValidated() {
-        return this.hasBeenValidated == null ? Optional.empty() : Optional.ofNullable(this.hasBeenValidated);
+        return Optional.ofNullable(this.hasBeenValidated);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkedInfo")
-      private final @Nullable LinkedInfoResponse linkedInfo;
+    private @Nullable LinkedInfoResponse linkedInfo;
 
     public Optional<LinkedInfoResponse> linkedInfo() {
-        return this.linkedInfo == null ? Optional.empty() : Optional.ofNullable(this.linkedInfo);
+        return Optional.ofNullable(this.linkedInfo);
     }
 
     /**
@@ -146,7 +146,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="modifiedBy", required=true)
-      private final UserInfoResponse modifiedBy;
+    private UserInfoResponse modifiedBy;
 
     public UserInfoResponse modifiedBy() {
         return this.modifiedBy;
@@ -157,7 +157,7 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="modifiedTime", required=true)
-      private final String modifiedTime;
+    private String modifiedTime;
 
     public String modifiedTime() {
         return this.modifiedTime;
@@ -168,10 +168,10 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -179,181 +179,140 @@ public final class DatastoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
     }
 
-    public DatastoreResponse(
-        @Nullable AzureDataLakeSectionResponse azureDataLakeSection,
-        @Nullable AzureMySqlSectionResponse azureMySqlSection,
-        @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection,
-        @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection,
-        @Nullable AzureStorageSectionResponse azureStorageSection,
-        UserInfoResponse createdBy,
-        String createdTime,
-        @Nullable String dataStoreType,
-        @Nullable String description,
-        @Nullable GlusterFsSectionResponse glusterFsSection,
-        @Nullable Boolean hasBeenValidated,
-        @Nullable LinkedInfoResponse linkedInfo,
-        UserInfoResponse modifiedBy,
-        String modifiedTime,
-        @Nullable String name,
-        Map<String,String> tags) {
-        this.azureDataLakeSection = azureDataLakeSection;
-        this.azureMySqlSection = azureMySqlSection;
-        this.azurePostgreSqlSection = azurePostgreSqlSection;
-        this.azureSqlDatabaseSection = azureSqlDatabaseSection;
-        this.azureStorageSection = azureStorageSection;
-        this.createdBy = Objects.requireNonNull(createdBy, "expected parameter 'createdBy' to be non-null");
-        this.createdTime = Objects.requireNonNull(createdTime, "expected parameter 'createdTime' to be non-null");
-        this.dataStoreType = dataStoreType;
-        this.description = description;
-        this.glusterFsSection = glusterFsSection;
-        this.hasBeenValidated = Codegen.booleanProp("hasBeenValidated").arg(hasBeenValidated).def(false).getNullable();
-        this.linkedInfo = linkedInfo;
-        this.modifiedBy = Objects.requireNonNull(modifiedBy, "expected parameter 'modifiedBy' to be non-null");
-        this.modifiedTime = Objects.requireNonNull(modifiedTime, "expected parameter 'modifiedTime' to be non-null");
-        this.name = name;
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private DatastoreResponse() {}
 
-    private DatastoreResponse() {
-        this.azureDataLakeSection = null;
-        this.azureMySqlSection = null;
-        this.azurePostgreSqlSection = null;
-        this.azureSqlDatabaseSection = null;
-        this.azureStorageSection = null;
-        this.createdBy = null;
-        this.createdTime = null;
-        this.dataStoreType = null;
-        this.description = null;
-        this.glusterFsSection = null;
-        this.hasBeenValidated = null;
-        this.linkedInfo = null;
-        this.modifiedBy = null;
-        this.modifiedTime = null;
-        this.name = null;
-        this.tags = Map.of();
+    private DatastoreResponse(DatastoreResponse $) {
+        this.azureDataLakeSection = $.azureDataLakeSection;
+        this.azureMySqlSection = $.azureMySqlSection;
+        this.azurePostgreSqlSection = $.azurePostgreSqlSection;
+        this.azureSqlDatabaseSection = $.azureSqlDatabaseSection;
+        this.azureStorageSection = $.azureStorageSection;
+        this.createdBy = $.createdBy;
+        this.createdTime = $.createdTime;
+        this.dataStoreType = $.dataStoreType;
+        this.description = $.description;
+        this.glusterFsSection = $.glusterFsSection;
+        this.hasBeenValidated = $.hasBeenValidated;
+        this.linkedInfo = $.linkedInfo;
+        this.modifiedBy = $.modifiedBy;
+        this.modifiedTime = $.modifiedTime;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
-        private @Nullable AzureMySqlSectionResponse azureMySqlSection;
-        private @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
-        private @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
-        private @Nullable AzureStorageSectionResponse azureStorageSection;
-        private UserInfoResponse createdBy;
-        private String createdTime;
-        private @Nullable String dataStoreType;
-        private @Nullable String description;
-        private @Nullable GlusterFsSectionResponse glusterFsSection;
-        private @Nullable Boolean hasBeenValidated;
-        private @Nullable LinkedInfoResponse linkedInfo;
-        private UserInfoResponse modifiedBy;
-        private String modifiedTime;
-        private @Nullable String name;
-        private Map<String,String> tags;
+        private DatastoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreResponse();
         }
 
         public Builder(DatastoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureDataLakeSection = defaults.azureDataLakeSection;
-    	      this.azureMySqlSection = defaults.azureMySqlSection;
-    	      this.azurePostgreSqlSection = defaults.azurePostgreSqlSection;
-    	      this.azureSqlDatabaseSection = defaults.azureSqlDatabaseSection;
-    	      this.azureStorageSection = defaults.azureStorageSection;
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdTime = defaults.createdTime;
-    	      this.dataStoreType = defaults.dataStoreType;
-    	      this.description = defaults.description;
-    	      this.glusterFsSection = defaults.glusterFsSection;
-    	      this.hasBeenValidated = defaults.hasBeenValidated;
-    	      this.linkedInfo = defaults.linkedInfo;
-    	      this.modifiedBy = defaults.modifiedBy;
-    	      this.modifiedTime = defaults.modifiedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DatastoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureDataLakeSection(@Nullable AzureDataLakeSectionResponse azureDataLakeSection) {
-            this.azureDataLakeSection = azureDataLakeSection;
+            $.azureDataLakeSection = azureDataLakeSection;
             return this;
         }
+
         public Builder azureMySqlSection(@Nullable AzureMySqlSectionResponse azureMySqlSection) {
-            this.azureMySqlSection = azureMySqlSection;
+            $.azureMySqlSection = azureMySqlSection;
             return this;
         }
+
         public Builder azurePostgreSqlSection(@Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection) {
-            this.azurePostgreSqlSection = azurePostgreSqlSection;
+            $.azurePostgreSqlSection = azurePostgreSqlSection;
             return this;
         }
+
         public Builder azureSqlDatabaseSection(@Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection) {
-            this.azureSqlDatabaseSection = azureSqlDatabaseSection;
+            $.azureSqlDatabaseSection = azureSqlDatabaseSection;
             return this;
         }
+
         public Builder azureStorageSection(@Nullable AzureStorageSectionResponse azureStorageSection) {
-            this.azureStorageSection = azureStorageSection;
+            $.azureStorageSection = azureStorageSection;
             return this;
         }
+
         public Builder createdBy(UserInfoResponse createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder createdTime(String createdTime) {
-            this.createdTime = Objects.requireNonNull(createdTime);
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder dataStoreType(@Nullable String dataStoreType) {
-            this.dataStoreType = dataStoreType;
+            $.dataStoreType = dataStoreType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder glusterFsSection(@Nullable GlusterFsSectionResponse glusterFsSection) {
-            this.glusterFsSection = glusterFsSection;
+            $.glusterFsSection = glusterFsSection;
             return this;
         }
+
         public Builder hasBeenValidated(@Nullable Boolean hasBeenValidated) {
-            this.hasBeenValidated = hasBeenValidated;
+            $.hasBeenValidated = hasBeenValidated;
             return this;
         }
+
         public Builder linkedInfo(@Nullable LinkedInfoResponse linkedInfo) {
-            this.linkedInfo = linkedInfo;
+            $.linkedInfo = linkedInfo;
             return this;
         }
+
         public Builder modifiedBy(UserInfoResponse modifiedBy) {
-            this.modifiedBy = Objects.requireNonNull(modifiedBy);
+            $.modifiedBy = modifiedBy;
             return this;
         }
+
         public Builder modifiedTime(String modifiedTime) {
-            this.modifiedTime = Objects.requireNonNull(modifiedTime);
+            $.modifiedTime = modifiedTime;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
-        }        public DatastoreResponse build() {
-            return new DatastoreResponse(azureDataLakeSection, azureMySqlSection, azurePostgreSqlSection, azureSqlDatabaseSection, azureStorageSection, createdBy, createdTime, dataStoreType, description, glusterFsSection, hasBeenValidated, linkedInfo, modifiedBy, modifiedTime, name, tags);
+        }
+
+        public DatastoreResponse build() {
+            $.createdBy = Objects.requireNonNull($.createdBy, "expected parameter 'createdBy' to be non-null");
+            $.createdTime = Objects.requireNonNull($.createdTime, "expected parameter 'createdTime' to be non-null");
+            $.hasBeenValidated = Codegen.booleanProp("hasBeenValidated").arg($.hasBeenValidated).def(false).getNullable();
+            $.modifiedBy = Objects.requireNonNull($.modifiedBy, "expected parameter 'modifiedBy' to be non-null");
+            $.modifiedTime = Objects.requireNonNull($.modifiedTime, "expected parameter 'modifiedTime' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

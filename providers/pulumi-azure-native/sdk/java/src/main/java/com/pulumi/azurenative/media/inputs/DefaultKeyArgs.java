@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DefaultKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DefaultKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
-    public DefaultKeyArgs(
-        @Nullable Output<String> label,
-        @Nullable Output<String> policyName) {
-        this.label = label;
-        this.policyName = policyName;
-    }
+    private DefaultKeyArgs() {}
 
-    private DefaultKeyArgs() {
-        this.label = Codegen.empty();
-        this.policyName = Codegen.empty();
+    private DefaultKeyArgs(DefaultKeyArgs $) {
+        this.label = $.label;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> policyName;
+        private DefaultKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultKeyArgs();
         }
 
         public Builder(DefaultKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.policyName = defaults.policyName;
+            $ = new DefaultKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
-        }        public DefaultKeyArgs build() {
-            return new DefaultKeyArgs(label, policyName);
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
+        }
+
+        public DefaultKeyArgs build() {
+            return $;
         }
     }
+
 }

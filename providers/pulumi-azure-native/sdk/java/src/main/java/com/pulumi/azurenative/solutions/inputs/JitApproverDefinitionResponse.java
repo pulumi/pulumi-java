@@ -23,10 +23,10 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,64 +45,57 @@ public final class JitApproverDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public JitApproverDefinitionResponse(
-        @Nullable String displayName,
-        String id,
-        @Nullable String type) {
-        this.displayName = displayName;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = type;
-    }
+    private JitApproverDefinitionResponse() {}
 
-    private JitApproverDefinitionResponse() {
-        this.displayName = null;
-        this.id = null;
-        this.type = null;
+    private JitApproverDefinitionResponse(JitApproverDefinitionResponse $) {
+        this.displayName = $.displayName;
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitApproverDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private String id;
-        private @Nullable String type;
+        private JitApproverDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitApproverDefinitionResponse();
         }
 
         public Builder(JitApproverDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new JitApproverDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public JitApproverDefinitionResponse build() {
-            return new JitApproverDefinitionResponse(displayName, id, type);
+        }
+
+        public JitApproverDefinitionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

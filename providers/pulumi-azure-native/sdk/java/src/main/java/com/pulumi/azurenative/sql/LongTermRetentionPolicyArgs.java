@@ -5,10 +5,10 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -32,10 +32,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="monthlyRetention")
-      private final @Nullable Output<String> monthlyRetention;
+    private @Nullable Output<String> monthlyRetention;
 
-    public Output<String> monthlyRetention() {
-        return this.monthlyRetention == null ? Codegen.empty() : this.monthlyRetention;
+    public Optional<Output<String>> monthlyRetention() {
+        return Optional.ofNullable(this.monthlyRetention);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="policyName")
-      private final @Nullable Output<String> policyName;
+    private @Nullable Output<String> policyName;
 
-    public Output<String> policyName() {
-        return this.policyName == null ? Codegen.empty() : this.policyName;
+    public Optional<Output<String>> policyName() {
+        return Optional.ofNullable(this.policyName);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -76,10 +76,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="weekOfYear")
-      private final @Nullable Output<Integer> weekOfYear;
+    private @Nullable Output<Integer> weekOfYear;
 
-    public Output<Integer> weekOfYear() {
-        return this.weekOfYear == null ? Codegen.empty() : this.weekOfYear;
+    public Optional<Output<Integer>> weekOfYear() {
+        return Optional.ofNullable(this.weekOfYear);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="weeklyRetention")
-      private final @Nullable Output<String> weeklyRetention;
+    private @Nullable Output<String> weeklyRetention;
 
-    public Output<String> weeklyRetention() {
-        return this.weeklyRetention == null ? Codegen.empty() : this.weeklyRetention;
+    public Optional<Output<String>> weeklyRetention() {
+        return Optional.ofNullable(this.weeklyRetention);
     }
 
     /**
@@ -98,141 +98,121 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="yearlyRetention")
-      private final @Nullable Output<String> yearlyRetention;
+    private @Nullable Output<String> yearlyRetention;
 
-    public Output<String> yearlyRetention() {
-        return this.yearlyRetention == null ? Codegen.empty() : this.yearlyRetention;
+    public Optional<Output<String>> yearlyRetention() {
+        return Optional.ofNullable(this.yearlyRetention);
     }
 
-    public LongTermRetentionPolicyArgs(
-        Output<String> databaseName,
-        @Nullable Output<String> monthlyRetention,
-        @Nullable Output<String> policyName,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<Integer> weekOfYear,
-        @Nullable Output<String> weeklyRetention,
-        @Nullable Output<String> yearlyRetention) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.monthlyRetention = monthlyRetention;
-        this.policyName = policyName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.weekOfYear = weekOfYear;
-        this.weeklyRetention = weeklyRetention;
-        this.yearlyRetention = yearlyRetention;
-    }
+    private LongTermRetentionPolicyArgs() {}
 
-    private LongTermRetentionPolicyArgs() {
-        this.databaseName = Codegen.empty();
-        this.monthlyRetention = Codegen.empty();
-        this.policyName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.weekOfYear = Codegen.empty();
-        this.weeklyRetention = Codegen.empty();
-        this.yearlyRetention = Codegen.empty();
+    private LongTermRetentionPolicyArgs(LongTermRetentionPolicyArgs $) {
+        this.databaseName = $.databaseName;
+        this.monthlyRetention = $.monthlyRetention;
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.weekOfYear = $.weekOfYear;
+        this.weeklyRetention = $.weeklyRetention;
+        this.yearlyRetention = $.yearlyRetention;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LongTermRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private @Nullable Output<String> monthlyRetention;
-        private @Nullable Output<String> policyName;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<Integer> weekOfYear;
-        private @Nullable Output<String> weeklyRetention;
-        private @Nullable Output<String> yearlyRetention;
+        private LongTermRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LongTermRetentionPolicyArgs();
         }
 
         public Builder(LongTermRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.monthlyRetention = defaults.monthlyRetention;
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.weekOfYear = defaults.weekOfYear;
-    	      this.weeklyRetention = defaults.weeklyRetention;
-    	      this.yearlyRetention = defaults.yearlyRetention;
+            $ = new LongTermRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder monthlyRetention(@Nullable Output<String> monthlyRetention) {
-            this.monthlyRetention = monthlyRetention;
+            $.monthlyRetention = monthlyRetention;
             return this;
         }
-        public Builder monthlyRetention(@Nullable String monthlyRetention) {
-            this.monthlyRetention = Codegen.ofNullable(monthlyRetention);
-            return this;
+
+        public Builder monthlyRetention(String monthlyRetention) {
+            return monthlyRetention(Output.of(monthlyRetention));
         }
+
         public Builder policyName(@Nullable Output<String> policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
         }
-        public Builder policyName(@Nullable String policyName) {
-            this.policyName = Codegen.ofNullable(policyName);
-            return this;
+
+        public Builder policyName(String policyName) {
+            return policyName(Output.of(policyName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder weekOfYear(@Nullable Output<Integer> weekOfYear) {
-            this.weekOfYear = weekOfYear;
+            $.weekOfYear = weekOfYear;
             return this;
         }
-        public Builder weekOfYear(@Nullable Integer weekOfYear) {
-            this.weekOfYear = Codegen.ofNullable(weekOfYear);
-            return this;
+
+        public Builder weekOfYear(Integer weekOfYear) {
+            return weekOfYear(Output.of(weekOfYear));
         }
+
         public Builder weeklyRetention(@Nullable Output<String> weeklyRetention) {
-            this.weeklyRetention = weeklyRetention;
+            $.weeklyRetention = weeklyRetention;
             return this;
         }
-        public Builder weeklyRetention(@Nullable String weeklyRetention) {
-            this.weeklyRetention = Codegen.ofNullable(weeklyRetention);
-            return this;
+
+        public Builder weeklyRetention(String weeklyRetention) {
+            return weeklyRetention(Output.of(weeklyRetention));
         }
+
         public Builder yearlyRetention(@Nullable Output<String> yearlyRetention) {
-            this.yearlyRetention = yearlyRetention;
+            $.yearlyRetention = yearlyRetention;
             return this;
         }
-        public Builder yearlyRetention(@Nullable String yearlyRetention) {
-            this.yearlyRetention = Codegen.ofNullable(yearlyRetention);
-            return this;
-        }        public LongTermRetentionPolicyArgs build() {
-            return new LongTermRetentionPolicyArgs(databaseName, monthlyRetention, policyName, resourceGroupName, serverName, weekOfYear, weeklyRetention, yearlyRetention);
+
+        public Builder yearlyRetention(String yearlyRetention) {
+            return yearlyRetention(Output.of(yearlyRetention));
+        }
+
+        public LongTermRetentionPolicyArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

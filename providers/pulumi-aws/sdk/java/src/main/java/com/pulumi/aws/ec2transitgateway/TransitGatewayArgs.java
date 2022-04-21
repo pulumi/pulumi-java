@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="amazonSideAsn")
-      private final @Nullable Output<Integer> amazonSideAsn;
+    private @Nullable Output<Integer> amazonSideAsn;
 
-    public Output<Integer> amazonSideAsn() {
-        return this.amazonSideAsn == null ? Codegen.empty() : this.amazonSideAsn;
+    public Optional<Output<Integer>> amazonSideAsn() {
+        return Optional.ofNullable(this.amazonSideAsn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autoAcceptSharedAttachments")
-      private final @Nullable Output<String> autoAcceptSharedAttachments;
+    private @Nullable Output<String> autoAcceptSharedAttachments;
 
-    public Output<String> autoAcceptSharedAttachments() {
-        return this.autoAcceptSharedAttachments == null ? Codegen.empty() : this.autoAcceptSharedAttachments;
+    public Optional<Output<String>> autoAcceptSharedAttachments() {
+        return Optional.ofNullable(this.autoAcceptSharedAttachments);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultRouteTableAssociation")
-      private final @Nullable Output<String> defaultRouteTableAssociation;
+    private @Nullable Output<String> defaultRouteTableAssociation;
 
-    public Output<String> defaultRouteTableAssociation() {
-        return this.defaultRouteTableAssociation == null ? Codegen.empty() : this.defaultRouteTableAssociation;
+    public Optional<Output<String>> defaultRouteTableAssociation() {
+        return Optional.ofNullable(this.defaultRouteTableAssociation);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultRouteTablePropagation")
-      private final @Nullable Output<String> defaultRouteTablePropagation;
+    private @Nullable Output<String> defaultRouteTablePropagation;
 
-    public Output<String> defaultRouteTablePropagation() {
-        return this.defaultRouteTablePropagation == null ? Codegen.empty() : this.defaultRouteTablePropagation;
+    public Optional<Output<String>> defaultRouteTablePropagation() {
+        return Optional.ofNullable(this.defaultRouteTablePropagation);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dnsSupport")
-      private final @Nullable Output<String> dnsSupport;
+    private @Nullable Output<String> dnsSupport;
 
-    public Output<String> dnsSupport() {
-        return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
+    public Optional<Output<String>> dnsSupport() {
+        return Optional.ofNullable(this.dnsSupport);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -99,141 +99,118 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vpnEcmpSupport")
-      private final @Nullable Output<String> vpnEcmpSupport;
+    private @Nullable Output<String> vpnEcmpSupport;
 
-    public Output<String> vpnEcmpSupport() {
-        return this.vpnEcmpSupport == null ? Codegen.empty() : this.vpnEcmpSupport;
+    public Optional<Output<String>> vpnEcmpSupport() {
+        return Optional.ofNullable(this.vpnEcmpSupport);
     }
 
-    public TransitGatewayArgs(
-        @Nullable Output<Integer> amazonSideAsn,
-        @Nullable Output<String> autoAcceptSharedAttachments,
-        @Nullable Output<String> defaultRouteTableAssociation,
-        @Nullable Output<String> defaultRouteTablePropagation,
-        @Nullable Output<String> description,
-        @Nullable Output<String> dnsSupport,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vpnEcmpSupport) {
-        this.amazonSideAsn = amazonSideAsn;
-        this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
-        this.defaultRouteTableAssociation = defaultRouteTableAssociation;
-        this.defaultRouteTablePropagation = defaultRouteTablePropagation;
-        this.description = description;
-        this.dnsSupport = dnsSupport;
-        this.tags = tags;
-        this.vpnEcmpSupport = vpnEcmpSupport;
-    }
+    private TransitGatewayArgs() {}
 
-    private TransitGatewayArgs() {
-        this.amazonSideAsn = Codegen.empty();
-        this.autoAcceptSharedAttachments = Codegen.empty();
-        this.defaultRouteTableAssociation = Codegen.empty();
-        this.defaultRouteTablePropagation = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dnsSupport = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpnEcmpSupport = Codegen.empty();
+    private TransitGatewayArgs(TransitGatewayArgs $) {
+        this.amazonSideAsn = $.amazonSideAsn;
+        this.autoAcceptSharedAttachments = $.autoAcceptSharedAttachments;
+        this.defaultRouteTableAssociation = $.defaultRouteTableAssociation;
+        this.defaultRouteTablePropagation = $.defaultRouteTablePropagation;
+        this.description = $.description;
+        this.dnsSupport = $.dnsSupport;
+        this.tags = $.tags;
+        this.vpnEcmpSupport = $.vpnEcmpSupport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> amazonSideAsn;
-        private @Nullable Output<String> autoAcceptSharedAttachments;
-        private @Nullable Output<String> defaultRouteTableAssociation;
-        private @Nullable Output<String> defaultRouteTablePropagation;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> dnsSupport;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vpnEcmpSupport;
+        private TransitGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayArgs();
         }
 
         public Builder(TransitGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amazonSideAsn = defaults.amazonSideAsn;
-    	      this.autoAcceptSharedAttachments = defaults.autoAcceptSharedAttachments;
-    	      this.defaultRouteTableAssociation = defaults.defaultRouteTableAssociation;
-    	      this.defaultRouteTablePropagation = defaults.defaultRouteTablePropagation;
-    	      this.description = defaults.description;
-    	      this.dnsSupport = defaults.dnsSupport;
-    	      this.tags = defaults.tags;
-    	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
+            $ = new TransitGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amazonSideAsn(@Nullable Output<Integer> amazonSideAsn) {
-            this.amazonSideAsn = amazonSideAsn;
+            $.amazonSideAsn = amazonSideAsn;
             return this;
         }
-        public Builder amazonSideAsn(@Nullable Integer amazonSideAsn) {
-            this.amazonSideAsn = Codegen.ofNullable(amazonSideAsn);
-            return this;
+
+        public Builder amazonSideAsn(Integer amazonSideAsn) {
+            return amazonSideAsn(Output.of(amazonSideAsn));
         }
+
         public Builder autoAcceptSharedAttachments(@Nullable Output<String> autoAcceptSharedAttachments) {
-            this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
+            $.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
-        public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
-            this.autoAcceptSharedAttachments = Codegen.ofNullable(autoAcceptSharedAttachments);
-            return this;
+
+        public Builder autoAcceptSharedAttachments(String autoAcceptSharedAttachments) {
+            return autoAcceptSharedAttachments(Output.of(autoAcceptSharedAttachments));
         }
+
         public Builder defaultRouteTableAssociation(@Nullable Output<String> defaultRouteTableAssociation) {
-            this.defaultRouteTableAssociation = defaultRouteTableAssociation;
+            $.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
-        public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
-            this.defaultRouteTableAssociation = Codegen.ofNullable(defaultRouteTableAssociation);
-            return this;
+
+        public Builder defaultRouteTableAssociation(String defaultRouteTableAssociation) {
+            return defaultRouteTableAssociation(Output.of(defaultRouteTableAssociation));
         }
+
         public Builder defaultRouteTablePropagation(@Nullable Output<String> defaultRouteTablePropagation) {
-            this.defaultRouteTablePropagation = defaultRouteTablePropagation;
+            $.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
-        public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
-            this.defaultRouteTablePropagation = Codegen.ofNullable(defaultRouteTablePropagation);
-            return this;
+
+        public Builder defaultRouteTablePropagation(String defaultRouteTablePropagation) {
+            return defaultRouteTablePropagation(Output.of(defaultRouteTablePropagation));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
-            this.dnsSupport = dnsSupport;
+            $.dnsSupport = dnsSupport;
             return this;
         }
-        public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Codegen.ofNullable(dnsSupport);
-            return this;
+
+        public Builder dnsSupport(String dnsSupport) {
+            return dnsSupport(Output.of(dnsSupport));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpnEcmpSupport(@Nullable Output<String> vpnEcmpSupport) {
-            this.vpnEcmpSupport = vpnEcmpSupport;
+            $.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
-        public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
-            this.vpnEcmpSupport = Codegen.ofNullable(vpnEcmpSupport);
-            return this;
-        }        public TransitGatewayArgs build() {
-            return new TransitGatewayArgs(amazonSideAsn, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, tags, vpnEcmpSupport);
+
+        public Builder vpnEcmpSupport(String vpnEcmpSupport) {
+            return vpnEcmpSupport(Output.of(vpnEcmpSupport));
+        }
+
+        public TransitGatewayArgs build() {
+            return $;
         }
     }
+
 }

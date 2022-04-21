@@ -23,45 +23,44 @@ public final class BodyDiagnosticSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="bytes")
-      private final @Nullable Integer bytes;
+    private @Nullable Integer bytes;
 
     public Optional<Integer> bytes() {
-        return this.bytes == null ? Optional.empty() : Optional.ofNullable(this.bytes);
+        return Optional.ofNullable(this.bytes);
     }
 
-    public BodyDiagnosticSettingsResponse(@Nullable Integer bytes) {
-        this.bytes = bytes;
-    }
+    private BodyDiagnosticSettingsResponse() {}
 
-    private BodyDiagnosticSettingsResponse() {
-        this.bytes = null;
+    private BodyDiagnosticSettingsResponse(BodyDiagnosticSettingsResponse $) {
+        this.bytes = $.bytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BodyDiagnosticSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer bytes;
+        private BodyDiagnosticSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BodyDiagnosticSettingsResponse();
         }
 
         public Builder(BodyDiagnosticSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bytes = defaults.bytes;
+            $ = new BodyDiagnosticSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bytes(@Nullable Integer bytes) {
-            this.bytes = bytes;
+            $.bytes = bytes;
             return this;
-        }        public BodyDiagnosticSettingsResponse build() {
-            return new BodyDiagnosticSettingsResponse(bytes);
+        }
+
+        public BodyDiagnosticSettingsResponse build() {
+            return $;
         }
     }
+
 }

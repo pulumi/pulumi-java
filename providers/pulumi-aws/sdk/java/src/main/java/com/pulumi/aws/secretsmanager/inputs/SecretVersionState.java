@@ -5,10 +5,10 @@ package com.pulumi.aws.secretsmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secretBinary")
-      private final @Nullable Output<String> secretBinary;
+    private @Nullable Output<String> secretBinary;
 
-    public Output<String> secretBinary() {
-        return this.secretBinary == null ? Codegen.empty() : this.secretBinary;
+    public Optional<Output<String>> secretBinary() {
+        return Optional.ofNullable(this.secretBinary);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secretId")
-      private final @Nullable Output<String> secretId;
+    private @Nullable Output<String> secretId;
 
-    public Output<String> secretId() {
-        return this.secretId == null ? Codegen.empty() : this.secretId;
+    public Optional<Output<String>> secretId() {
+        return Optional.ofNullable(this.secretId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secretString")
-      private final @Nullable Output<String> secretString;
+    private @Nullable Output<String> secretString;
 
-    public Output<String> secretString() {
-        return this.secretString == null ? Codegen.empty() : this.secretString;
+    public Optional<Output<String>> secretString() {
+        return Optional.ofNullable(this.secretString);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionId")
-      private final @Nullable Output<String> versionId;
+    private @Nullable Output<String> versionId;
 
-    public Output<String> versionId() {
-        return this.versionId == null ? Codegen.empty() : this.versionId;
+    public Optional<Output<String>> versionId() {
+        return Optional.ofNullable(this.versionId);
     }
 
     /**
@@ -76,118 +76,102 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionStages")
-      private final @Nullable Output<List<String>> versionStages;
+    private @Nullable Output<List<String>> versionStages;
 
-    public Output<List<String>> versionStages() {
-        return this.versionStages == null ? Codegen.empty() : this.versionStages;
+    public Optional<Output<List<String>>> versionStages() {
+        return Optional.ofNullable(this.versionStages);
     }
 
-    public SecretVersionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> secretBinary,
-        @Nullable Output<String> secretId,
-        @Nullable Output<String> secretString,
-        @Nullable Output<String> versionId,
-        @Nullable Output<List<String>> versionStages) {
-        this.arn = arn;
-        this.secretBinary = secretBinary;
-        this.secretId = secretId;
-        this.secretString = secretString;
-        this.versionId = versionId;
-        this.versionStages = versionStages;
-    }
+    private SecretVersionState() {}
 
-    private SecretVersionState() {
-        this.arn = Codegen.empty();
-        this.secretBinary = Codegen.empty();
-        this.secretId = Codegen.empty();
-        this.secretString = Codegen.empty();
-        this.versionId = Codegen.empty();
-        this.versionStages = Codegen.empty();
+    private SecretVersionState(SecretVersionState $) {
+        this.arn = $.arn;
+        this.secretBinary = $.secretBinary;
+        this.secretId = $.secretId;
+        this.secretString = $.secretString;
+        this.versionId = $.versionId;
+        this.versionStages = $.versionStages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> secretBinary;
-        private @Nullable Output<String> secretId;
-        private @Nullable Output<String> secretString;
-        private @Nullable Output<String> versionId;
-        private @Nullable Output<List<String>> versionStages;
+        private SecretVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVersionState();
         }
 
         public Builder(SecretVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.secretBinary = defaults.secretBinary;
-    	      this.secretId = defaults.secretId;
-    	      this.secretString = defaults.secretString;
-    	      this.versionId = defaults.versionId;
-    	      this.versionStages = defaults.versionStages;
+            $ = new SecretVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder secretBinary(@Nullable Output<String> secretBinary) {
-            this.secretBinary = secretBinary;
+            $.secretBinary = secretBinary;
             return this;
         }
-        public Builder secretBinary(@Nullable String secretBinary) {
-            this.secretBinary = Codegen.ofNullable(secretBinary);
-            return this;
+
+        public Builder secretBinary(String secretBinary) {
+            return secretBinary(Output.of(secretBinary));
         }
+
         public Builder secretId(@Nullable Output<String> secretId) {
-            this.secretId = secretId;
+            $.secretId = secretId;
             return this;
         }
-        public Builder secretId(@Nullable String secretId) {
-            this.secretId = Codegen.ofNullable(secretId);
-            return this;
+
+        public Builder secretId(String secretId) {
+            return secretId(Output.of(secretId));
         }
+
         public Builder secretString(@Nullable Output<String> secretString) {
-            this.secretString = secretString;
+            $.secretString = secretString;
             return this;
         }
-        public Builder secretString(@Nullable String secretString) {
-            this.secretString = Codegen.ofNullable(secretString);
-            return this;
+
+        public Builder secretString(String secretString) {
+            return secretString(Output.of(secretString));
         }
+
         public Builder versionId(@Nullable Output<String> versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
         }
-        public Builder versionId(@Nullable String versionId) {
-            this.versionId = Codegen.ofNullable(versionId);
-            return this;
+
+        public Builder versionId(String versionId) {
+            return versionId(Output.of(versionId));
         }
+
         public Builder versionStages(@Nullable Output<List<String>> versionStages) {
-            this.versionStages = versionStages;
+            $.versionStages = versionStages;
             return this;
         }
-        public Builder versionStages(@Nullable List<String> versionStages) {
-            this.versionStages = Codegen.ofNullable(versionStages);
-            return this;
+
+        public Builder versionStages(List<String> versionStages) {
+            return versionStages(Output.of(versionStages));
         }
+
         public Builder versionStages(String... versionStages) {
             return versionStages(List.of(versionStages));
-        }        public SecretVersionState build() {
-            return new SecretVersionState(arn, secretBinary, secretId, secretString, versionId, versionStages);
+        }
+
+        public SecretVersionState build() {
+            return $;
         }
     }
+
 }

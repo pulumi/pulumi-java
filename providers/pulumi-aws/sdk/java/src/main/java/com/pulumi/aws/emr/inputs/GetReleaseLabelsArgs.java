@@ -19,45 +19,44 @@ public final class GetReleaseLabelsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable GetReleaseLabelsFilters filters;
+    private @Nullable GetReleaseLabelsFilters filters;
 
     public Optional<GetReleaseLabelsFilters> filters() {
-        return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetReleaseLabelsArgs(@Nullable GetReleaseLabelsFilters filters) {
-        this.filters = filters;
-    }
+    private GetReleaseLabelsArgs() {}
 
-    private GetReleaseLabelsArgs() {
-        this.filters = null;
+    private GetReleaseLabelsArgs(GetReleaseLabelsArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReleaseLabelsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GetReleaseLabelsFilters filters;
+        private GetReleaseLabelsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReleaseLabelsArgs();
         }
 
         public Builder(GetReleaseLabelsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new GetReleaseLabelsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable GetReleaseLabelsFilters filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
-        }        public GetReleaseLabelsArgs build() {
-            return new GetReleaseLabelsArgs(filters);
+        }
+
+        public GetReleaseLabelsArgs build() {
+            return $;
         }
     }
+
 }

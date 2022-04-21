@@ -17,7 +17,7 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="collectionId", required=true)
-      private final String collectionId;
+    private String collectionId;
 
     public String collectionId() {
         return this.collectionId;
@@ -28,55 +28,52 @@ public final class GetPrivateStoreCollectionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateStoreId", required=true)
-      private final String privateStoreId;
+    private String privateStoreId;
 
     public String privateStoreId() {
         return this.privateStoreId;
     }
 
-    public GetPrivateStoreCollectionArgs(
-        String collectionId,
-        String privateStoreId) {
-        this.collectionId = Objects.requireNonNull(collectionId, "expected parameter 'collectionId' to be non-null");
-        this.privateStoreId = Objects.requireNonNull(privateStoreId, "expected parameter 'privateStoreId' to be non-null");
-    }
+    private GetPrivateStoreCollectionArgs() {}
 
-    private GetPrivateStoreCollectionArgs() {
-        this.collectionId = null;
-        this.privateStoreId = null;
+    private GetPrivateStoreCollectionArgs(GetPrivateStoreCollectionArgs $) {
+        this.collectionId = $.collectionId;
+        this.privateStoreId = $.privateStoreId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateStoreCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String collectionId;
-        private String privateStoreId;
+        private GetPrivateStoreCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateStoreCollectionArgs();
         }
 
         public Builder(GetPrivateStoreCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectionId = defaults.collectionId;
-    	      this.privateStoreId = defaults.privateStoreId;
+            $ = new GetPrivateStoreCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collectionId(String collectionId) {
-            this.collectionId = Objects.requireNonNull(collectionId);
+            $.collectionId = collectionId;
             return this;
         }
+
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Objects.requireNonNull(privateStoreId);
+            $.privateStoreId = privateStoreId;
             return this;
-        }        public GetPrivateStoreCollectionArgs build() {
-            return new GetPrivateStoreCollectionArgs(collectionId, privateStoreId);
+        }
+
+        public GetPrivateStoreCollectionArgs build() {
+            $.collectionId = Objects.requireNonNull($.collectionId, "expected parameter 'collectionId' to be non-null");
+            $.privateStoreId = Objects.requireNonNull($.privateStoreId, "expected parameter 'privateStoreId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.route53;
 import com.pulumi.aws.route53.inputs.ResolverRuleTargetIpArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -34,10 +34,10 @@ public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resolverEndpointId")
-      private final @Nullable Output<String> resolverEndpointId;
+    private @Nullable Output<String> resolverEndpointId;
 
-    public Output<String> resolverEndpointId() {
-        return this.resolverEndpointId == null ? Codegen.empty() : this.resolverEndpointId;
+    public Optional<Output<String>> resolverEndpointId() {
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleType", required=true)
-      private final Output<String> ruleType;
+    private Output<String> ruleType;
 
     public Output<String> ruleType() {
         return this.ruleType;
@@ -68,10 +68,10 @@ public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -80,118 +80,104 @@ public final class ResolverRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetIps")
-      private final @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps;
+    private @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps;
 
-    public Output<List<ResolverRuleTargetIpArgs>> targetIps() {
-        return this.targetIps == null ? Codegen.empty() : this.targetIps;
+    public Optional<Output<List<ResolverRuleTargetIpArgs>>> targetIps() {
+        return Optional.ofNullable(this.targetIps);
     }
 
-    public ResolverRuleArgs(
-        Output<String> domainName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> resolverEndpointId,
-        Output<String> ruleType,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.name = name;
-        this.resolverEndpointId = resolverEndpointId;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
-        this.tags = tags;
-        this.targetIps = targetIps;
-    }
+    private ResolverRuleArgs() {}
 
-    private ResolverRuleArgs() {
-        this.domainName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resolverEndpointId = Codegen.empty();
-        this.ruleType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetIps = Codegen.empty();
+    private ResolverRuleArgs(ResolverRuleArgs $) {
+        this.domainName = $.domainName;
+        this.name = $.name;
+        this.resolverEndpointId = $.resolverEndpointId;
+        this.ruleType = $.ruleType;
+        this.tags = $.tags;
+        this.targetIps = $.targetIps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resolverEndpointId;
-        private Output<String> ruleType;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps;
+        private ResolverRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverRuleArgs();
         }
 
         public Builder(ResolverRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.name = defaults.name;
-    	      this.resolverEndpointId = defaults.resolverEndpointId;
-    	      this.ruleType = defaults.ruleType;
-    	      this.tags = defaults.tags;
-    	      this.targetIps = defaults.targetIps;
+            $ = new ResolverRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resolverEndpointId(@Nullable Output<String> resolverEndpointId) {
-            this.resolverEndpointId = resolverEndpointId;
+            $.resolverEndpointId = resolverEndpointId;
             return this;
         }
-        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = Codegen.ofNullable(resolverEndpointId);
-            return this;
+
+        public Builder resolverEndpointId(String resolverEndpointId) {
+            return resolverEndpointId(Output.of(resolverEndpointId));
         }
+
         public Builder ruleType(Output<String> ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
-            return this;
+            return ruleType(Output.of(ruleType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetIps(@Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps) {
-            this.targetIps = targetIps;
+            $.targetIps = targetIps;
             return this;
         }
-        public Builder targetIps(@Nullable List<ResolverRuleTargetIpArgs> targetIps) {
-            this.targetIps = Codegen.ofNullable(targetIps);
-            return this;
+
+        public Builder targetIps(List<ResolverRuleTargetIpArgs> targetIps) {
+            return targetIps(Output.of(targetIps));
         }
+
         public Builder targetIps(ResolverRuleTargetIpArgs... targetIps) {
             return targetIps(List.of(targetIps));
-        }        public ResolverRuleArgs build() {
-            return new ResolverRuleArgs(domainName, name, resolverEndpointId, ruleType, tags, targetIps);
+        }
+
+        public ResolverRuleArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.ruleType = Objects.requireNonNull($.ruleType, "expected parameter 'ruleType' to be non-null");
+            return $;
         }
     }
+
 }

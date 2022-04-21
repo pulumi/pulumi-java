@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="interimSchemaName")
-      private final @Nullable Output<Object> interimSchemaName;
+    private @Nullable Output<Object> interimSchemaName;
 
-    public Output<Object> interimSchemaName() {
-        return this.interimSchemaName == null ? Codegen.empty() : this.interimSchemaName;
+    public Optional<Output<Object>> interimSchemaName() {
+        return Optional.ofNullable(this.interimSchemaName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<Object> keys;
+    private @Nullable Output<Object> keys;
 
-    public Output<Object> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<Object>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="useTempDB")
-      private final @Nullable Output<Object> useTempDB;
+    private @Nullable Output<Object> useTempDB;
 
-    public Output<Object> useTempDB() {
-        return this.useTempDB == null ? Codegen.empty() : this.useTempDB;
+    public Optional<Output<Object>> useTempDB() {
+        return Optional.ofNullable(this.useTempDB);
     }
 
-    public SqlUpsertSettingsArgs(
-        @Nullable Output<Object> interimSchemaName,
-        @Nullable Output<Object> keys,
-        @Nullable Output<Object> useTempDB) {
-        this.interimSchemaName = interimSchemaName;
-        this.keys = keys;
-        this.useTempDB = useTempDB;
-    }
+    private SqlUpsertSettingsArgs() {}
 
-    private SqlUpsertSettingsArgs() {
-        this.interimSchemaName = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.useTempDB = Codegen.empty();
+    private SqlUpsertSettingsArgs(SqlUpsertSettingsArgs $) {
+        this.interimSchemaName = $.interimSchemaName;
+        this.keys = $.keys;
+        this.useTempDB = $.useTempDB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlUpsertSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> interimSchemaName;
-        private @Nullable Output<Object> keys;
-        private @Nullable Output<Object> useTempDB;
+        private SqlUpsertSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlUpsertSettingsArgs();
         }
 
         public Builder(SqlUpsertSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interimSchemaName = defaults.interimSchemaName;
-    	      this.keys = defaults.keys;
-    	      this.useTempDB = defaults.useTempDB;
+            $ = new SqlUpsertSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interimSchemaName(@Nullable Output<Object> interimSchemaName) {
-            this.interimSchemaName = interimSchemaName;
+            $.interimSchemaName = interimSchemaName;
             return this;
         }
-        public Builder interimSchemaName(@Nullable Object interimSchemaName) {
-            this.interimSchemaName = Codegen.ofNullable(interimSchemaName);
-            return this;
+
+        public Builder interimSchemaName(Object interimSchemaName) {
+            return interimSchemaName(Output.of(interimSchemaName));
         }
+
         public Builder keys(@Nullable Output<Object> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable Object keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(Object keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder useTempDB(@Nullable Output<Object> useTempDB) {
-            this.useTempDB = useTempDB;
+            $.useTempDB = useTempDB;
             return this;
         }
-        public Builder useTempDB(@Nullable Object useTempDB) {
-            this.useTempDB = Codegen.ofNullable(useTempDB);
-            return this;
-        }        public SqlUpsertSettingsArgs build() {
-            return new SqlUpsertSettingsArgs(interimSchemaName, keys, useTempDB);
+
+        public Builder useTempDB(Object useTempDB) {
+            return useTempDB(Output.of(useTempDB));
+        }
+
+        public SqlUpsertSettingsArgs build() {
+            return $;
         }
     }
+
 }

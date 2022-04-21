@@ -23,45 +23,44 @@ public final class VirtualHardDiskResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public VirtualHardDiskResponse(@Nullable String uri) {
-        this.uri = uri;
-    }
+    private VirtualHardDiskResponse() {}
 
-    private VirtualHardDiskResponse() {
-        this.uri = null;
+    private VirtualHardDiskResponse(VirtualHardDiskResponse $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHardDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String uri;
+        private VirtualHardDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHardDiskResponse();
         }
 
         public Builder(VirtualHardDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new VirtualHardDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public VirtualHardDiskResponse build() {
-            return new VirtualHardDiskResponse(uri);
+        }
+
+        public VirtualHardDiskResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.IntentFulfillmentActivityCodeHookGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IntentFulfillmentActivityGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="codeHook")
-      private final @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
+    private @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
 
-    public Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook() {
-        return this.codeHook == null ? Codegen.empty() : this.codeHook;
+    public Optional<Output<IntentFulfillmentActivityCodeHookGetArgs>> codeHook() {
+        return Optional.ofNullable(this.codeHook);
     }
 
     /**
@@ -34,63 +34,59 @@ public final class IntentFulfillmentActivityGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public IntentFulfillmentActivityGetArgs(
-        @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook,
-        Output<String> type) {
-        this.codeHook = codeHook;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IntentFulfillmentActivityGetArgs() {}
 
-    private IntentFulfillmentActivityGetArgs() {
-        this.codeHook = Codegen.empty();
-        this.type = Codegen.empty();
+    private IntentFulfillmentActivityGetArgs(IntentFulfillmentActivityGetArgs $) {
+        this.codeHook = $.codeHook;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentFulfillmentActivityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
-        private Output<String> type;
+        private IntentFulfillmentActivityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentFulfillmentActivityGetArgs();
         }
 
         public Builder(IntentFulfillmentActivityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeHook = defaults.codeHook;
-    	      this.type = defaults.type;
+            $ = new IntentFulfillmentActivityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeHook(@Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook) {
-            this.codeHook = codeHook;
+            $.codeHook = codeHook;
             return this;
         }
-        public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHookGetArgs codeHook) {
-            this.codeHook = Codegen.ofNullable(codeHook);
-            return this;
+
+        public Builder codeHook(IntentFulfillmentActivityCodeHookGetArgs codeHook) {
+            return codeHook(Output.of(codeHook));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public IntentFulfillmentActivityGetArgs build() {
-            return new IntentFulfillmentActivityGetArgs(codeHook, type);
+            return type(Output.of(type));
+        }
+
+        public IntentFulfillmentActivityGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

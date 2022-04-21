@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      * 
      */
     @Import(name="gcePdKmsKeyName")
-      private final @Nullable Output<String> gcePdKmsKeyName;
+    private @Nullable Output<String> gcePdKmsKeyName;
 
-    public Output<String> gcePdKmsKeyName() {
-        return this.gcePdKmsKeyName == null ? Codegen.empty() : this.gcePdKmsKeyName;
+    public Optional<Output<String>> gcePdKmsKeyName() {
+        return Optional.ofNullable(this.gcePdKmsKeyName);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(@Nullable Output<String> gcePdKmsKeyName) {
-        this.gcePdKmsKeyName = gcePdKmsKeyName;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs() {
-        this.gcePdKmsKeyName = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs $) {
+        this.gcePdKmsKeyName = $.gcePdKmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcePdKmsKeyName;
+        private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcePdKmsKeyName(@Nullable Output<String> gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = gcePdKmsKeyName;
+            $.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
-        public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Codegen.ofNullable(gcePdKmsKeyName);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs(gcePdKmsKeyName);
+
+        public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
+            return gcePdKmsKeyName(Output.of(gcePdKmsKeyName));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs build() {
+            return $;
         }
     }
+
 }

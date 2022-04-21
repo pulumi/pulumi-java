@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ecr;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -14,49 +13,49 @@ public final class ReplicationConfigurationArgs extends com.pulumi.resources.Res
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 
     @Import(name="replicationConfiguration", required=true)
-      private final Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
+    private Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
 
     public Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration() {
         return this.replicationConfiguration;
     }
 
-    public ReplicationConfigurationArgs(Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration) {
-        this.replicationConfiguration = Objects.requireNonNull(replicationConfiguration, "expected parameter 'replicationConfiguration' to be non-null");
-    }
+    private ReplicationConfigurationArgs() {}
 
-    private ReplicationConfigurationArgs() {
-        this.replicationConfiguration = Codegen.empty();
+    private ReplicationConfigurationArgs(ReplicationConfigurationArgs $) {
+        this.replicationConfiguration = $.replicationConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
+        private ReplicationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationArgs();
         }
 
         public Builder(ReplicationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicationConfiguration = defaults.replicationConfiguration;
+            $ = new ReplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicationConfiguration(Output<com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration) {
-            this.replicationConfiguration = Objects.requireNonNull(replicationConfiguration);
+            $.replicationConfiguration = replicationConfiguration;
             return this;
         }
+
         public Builder replicationConfiguration(com.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Output.of(Objects.requireNonNull(replicationConfiguration));
-            return this;
-        }        public ReplicationConfigurationArgs build() {
-            return new ReplicationConfigurationArgs(replicationConfiguration);
+            return replicationConfiguration(Output.of(replicationConfiguration));
+        }
+
+        public ReplicationConfigurationArgs build() {
+            $.replicationConfiguration = Objects.requireNonNull($.replicationConfiguration, "expected parameter 'replicationConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

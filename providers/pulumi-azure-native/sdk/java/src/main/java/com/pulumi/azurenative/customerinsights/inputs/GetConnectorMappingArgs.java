@@ -17,7 +17,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="connectorName", required=true)
-      private final String connectorName;
+    private String connectorName;
 
     public String connectorName() {
         return this.connectorName;
@@ -28,7 +28,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -39,7 +39,7 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="mappingName", required=true)
-      private final String mappingName;
+    private String mappingName;
 
     public String mappingName() {
         return this.mappingName;
@@ -50,73 +50,66 @@ public final class GetConnectorMappingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConnectorMappingArgs(
-        String connectorName,
-        String hubName,
-        String mappingName,
-        String resourceGroupName) {
-        this.connectorName = Objects.requireNonNull(connectorName, "expected parameter 'connectorName' to be non-null");
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.mappingName = Objects.requireNonNull(mappingName, "expected parameter 'mappingName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConnectorMappingArgs() {}
 
-    private GetConnectorMappingArgs() {
-        this.connectorName = null;
-        this.hubName = null;
-        this.mappingName = null;
-        this.resourceGroupName = null;
+    private GetConnectorMappingArgs(GetConnectorMappingArgs $) {
+        this.connectorName = $.connectorName;
+        this.hubName = $.hubName;
+        this.mappingName = $.mappingName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectorMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectorName;
-        private String hubName;
-        private String mappingName;
-        private String resourceGroupName;
+        private GetConnectorMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectorMappingArgs();
         }
 
         public Builder(GetConnectorMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorName = defaults.connectorName;
-    	      this.hubName = defaults.hubName;
-    	      this.mappingName = defaults.mappingName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConnectorMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorName(String connectorName) {
-            this.connectorName = Objects.requireNonNull(connectorName);
+            $.connectorName = connectorName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder mappingName(String mappingName) {
-            this.mappingName = Objects.requireNonNull(mappingName);
+            $.mappingName = mappingName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConnectorMappingArgs build() {
-            return new GetConnectorMappingArgs(connectorName, hubName, mappingName, resourceGroupName);
+        }
+
+        public GetConnectorMappingArgs build() {
+            $.connectorName = Objects.requireNonNull($.connectorName, "expected parameter 'connectorName' to be non-null");
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.mappingName = Objects.requireNonNull($.mappingName, "expected parameter 'mappingName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

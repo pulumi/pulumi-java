@@ -15,110 +15,96 @@ public final class PackageStorageLocation extends com.pulumi.resources.InvokeArg
     public static final PackageStorageLocation Empty = new PackageStorageLocation();
 
     @Import(name="binaryPrefixLocation")
-      private final @Nullable String binaryPrefixLocation;
+    private @Nullable String binaryPrefixLocation;
 
     public Optional<String> binaryPrefixLocation() {
-        return this.binaryPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.binaryPrefixLocation);
+        return Optional.ofNullable(this.binaryPrefixLocation);
     }
 
     @Import(name="bucket")
-      private final @Nullable String bucket;
+    private @Nullable String bucket;
 
     public Optional<String> bucket() {
-        return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
+        return Optional.ofNullable(this.bucket);
     }
 
     @Import(name="generatedPrefixLocation")
-      private final @Nullable String generatedPrefixLocation;
+    private @Nullable String generatedPrefixLocation;
 
     public Optional<String> generatedPrefixLocation() {
-        return this.generatedPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.generatedPrefixLocation);
+        return Optional.ofNullable(this.generatedPrefixLocation);
     }
 
     @Import(name="manifestPrefixLocation")
-      private final @Nullable String manifestPrefixLocation;
+    private @Nullable String manifestPrefixLocation;
 
     public Optional<String> manifestPrefixLocation() {
-        return this.manifestPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.manifestPrefixLocation);
+        return Optional.ofNullable(this.manifestPrefixLocation);
     }
 
     @Import(name="repoPrefixLocation")
-      private final @Nullable String repoPrefixLocation;
+    private @Nullable String repoPrefixLocation;
 
     public Optional<String> repoPrefixLocation() {
-        return this.repoPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.repoPrefixLocation);
+        return Optional.ofNullable(this.repoPrefixLocation);
     }
 
-    public PackageStorageLocation(
-        @Nullable String binaryPrefixLocation,
-        @Nullable String bucket,
-        @Nullable String generatedPrefixLocation,
-        @Nullable String manifestPrefixLocation,
-        @Nullable String repoPrefixLocation) {
-        this.binaryPrefixLocation = binaryPrefixLocation;
-        this.bucket = bucket;
-        this.generatedPrefixLocation = generatedPrefixLocation;
-        this.manifestPrefixLocation = manifestPrefixLocation;
-        this.repoPrefixLocation = repoPrefixLocation;
-    }
+    private PackageStorageLocation() {}
 
-    private PackageStorageLocation() {
-        this.binaryPrefixLocation = null;
-        this.bucket = null;
-        this.generatedPrefixLocation = null;
-        this.manifestPrefixLocation = null;
-        this.repoPrefixLocation = null;
+    private PackageStorageLocation(PackageStorageLocation $) {
+        this.binaryPrefixLocation = $.binaryPrefixLocation;
+        this.bucket = $.bucket;
+        this.generatedPrefixLocation = $.generatedPrefixLocation;
+        this.manifestPrefixLocation = $.manifestPrefixLocation;
+        this.repoPrefixLocation = $.repoPrefixLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageStorageLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String binaryPrefixLocation;
-        private @Nullable String bucket;
-        private @Nullable String generatedPrefixLocation;
-        private @Nullable String manifestPrefixLocation;
-        private @Nullable String repoPrefixLocation;
+        private PackageStorageLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageStorageLocation();
         }
 
         public Builder(PackageStorageLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryPrefixLocation = defaults.binaryPrefixLocation;
-    	      this.bucket = defaults.bucket;
-    	      this.generatedPrefixLocation = defaults.generatedPrefixLocation;
-    	      this.manifestPrefixLocation = defaults.manifestPrefixLocation;
-    	      this.repoPrefixLocation = defaults.repoPrefixLocation;
+            $ = new PackageStorageLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryPrefixLocation(@Nullable String binaryPrefixLocation) {
-            this.binaryPrefixLocation = binaryPrefixLocation;
+            $.binaryPrefixLocation = binaryPrefixLocation;
             return this;
         }
+
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
+
         public Builder generatedPrefixLocation(@Nullable String generatedPrefixLocation) {
-            this.generatedPrefixLocation = generatedPrefixLocation;
+            $.generatedPrefixLocation = generatedPrefixLocation;
             return this;
         }
+
         public Builder manifestPrefixLocation(@Nullable String manifestPrefixLocation) {
-            this.manifestPrefixLocation = manifestPrefixLocation;
+            $.manifestPrefixLocation = manifestPrefixLocation;
             return this;
         }
+
         public Builder repoPrefixLocation(@Nullable String repoPrefixLocation) {
-            this.repoPrefixLocation = repoPrefixLocation;
+            $.repoPrefixLocation = repoPrefixLocation;
             return this;
-        }        public PackageStorageLocation build() {
-            return new PackageStorageLocation(binaryPrefixLocation, bucket, generatedPrefixLocation, manifestPrefixLocation, repoPrefixLocation);
+        }
+
+        public PackageStorageLocation build() {
+            return $;
         }
     }
+
 }

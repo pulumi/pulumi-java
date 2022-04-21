@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LoggingDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<List<String>> logs;
+    private @Nullable Output<List<String>> logs;
 
-    public Output<List<String>> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<List<String>>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class LoggingDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="monitoredResource")
-      private final @Nullable Output<String> monitoredResource;
+    private @Nullable Output<String> monitoredResource;
 
-    public Output<String> monitoredResource() {
-        return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
+    public Optional<Output<String>> monitoredResource() {
+        return Optional.ofNullable(this.monitoredResource);
     }
 
-    public LoggingDestinationArgs(
-        @Nullable Output<List<String>> logs,
-        @Nullable Output<String> monitoredResource) {
-        this.logs = logs;
-        this.monitoredResource = monitoredResource;
-    }
+    private LoggingDestinationArgs() {}
 
-    private LoggingDestinationArgs() {
-        this.logs = Codegen.empty();
-        this.monitoredResource = Codegen.empty();
+    private LoggingDestinationArgs(LoggingDestinationArgs $) {
+        this.logs = $.logs;
+        this.monitoredResource = $.monitoredResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> logs;
-        private @Nullable Output<String> monitoredResource;
+        private LoggingDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingDestinationArgs();
         }
 
         public Builder(LoggingDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logs = defaults.logs;
-    	      this.monitoredResource = defaults.monitoredResource;
+            $ = new LoggingDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logs(@Nullable Output<List<String>> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable List<String> logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
+
+        public Builder logs(List<String> logs) {
+            return logs(Output.of(logs));
         }
+
         public Builder logs(String... logs) {
             return logs(List.of(logs));
         }
+
         public Builder monitoredResource(@Nullable Output<String> monitoredResource) {
-            this.monitoredResource = monitoredResource;
+            $.monitoredResource = monitoredResource;
             return this;
         }
-        public Builder monitoredResource(@Nullable String monitoredResource) {
-            this.monitoredResource = Codegen.ofNullable(monitoredResource);
-            return this;
-        }        public LoggingDestinationArgs build() {
-            return new LoggingDestinationArgs(logs, monitoredResource);
+
+        public Builder monitoredResource(String monitoredResource) {
+            return monitoredResource(Output.of(monitoredResource));
+        }
+
+        public LoggingDestinationArgs build() {
+            return $;
         }
     }
+
 }

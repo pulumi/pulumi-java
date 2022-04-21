@@ -13,45 +13,45 @@ public final class WebACLLabel extends com.pulumi.resources.InvokeArgs {
     public static final WebACLLabel Empty = new WebACLLabel();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public WebACLLabel(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private WebACLLabel() {}
 
-    private WebACLLabel() {
-        this.name = null;
+    private WebACLLabel(WebACLLabel $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLLabel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private WebACLLabel $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLLabel();
         }
 
         public Builder(WebACLLabel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new WebACLLabel(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public WebACLLabel build() {
-            return new WebACLLabel(name);
+        }
+
+        public WebACLLabel build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

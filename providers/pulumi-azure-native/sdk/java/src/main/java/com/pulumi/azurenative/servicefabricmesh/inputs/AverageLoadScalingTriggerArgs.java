@@ -27,7 +27,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -38,7 +38,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="lowerLoadThreshold", required=true)
-      private final Output<Double> lowerLoadThreshold;
+    private Output<Double> lowerLoadThreshold;
 
     public Output<Double> lowerLoadThreshold() {
         return this.lowerLoadThreshold;
@@ -49,7 +49,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<AutoScalingResourceMetricArgs> metric;
+    private Output<AutoScalingResourceMetricArgs> metric;
 
     public Output<AutoScalingResourceMetricArgs> metric() {
         return this.metric;
@@ -60,7 +60,7 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="scaleIntervalInSeconds", required=true)
-      private final Output<Integer> scaleIntervalInSeconds;
+    private Output<Integer> scaleIntervalInSeconds;
 
     public Output<Integer> scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
@@ -71,102 +71,93 @@ public final class AverageLoadScalingTriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="upperLoadThreshold", required=true)
-      private final Output<Double> upperLoadThreshold;
+    private Output<Double> upperLoadThreshold;
 
     public Output<Double> upperLoadThreshold() {
         return this.upperLoadThreshold;
     }
 
-    public AverageLoadScalingTriggerArgs(
-        Output<String> kind,
-        Output<Double> lowerLoadThreshold,
-        Output<AutoScalingResourceMetricArgs> metric,
-        Output<Integer> scaleIntervalInSeconds,
-        Output<Double> upperLoadThreshold) {
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold, "expected parameter 'lowerLoadThreshold' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds, "expected parameter 'scaleIntervalInSeconds' to be non-null");
-        this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold, "expected parameter 'upperLoadThreshold' to be non-null");
-    }
+    private AverageLoadScalingTriggerArgs() {}
 
-    private AverageLoadScalingTriggerArgs() {
-        this.kind = Codegen.empty();
-        this.lowerLoadThreshold = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.scaleIntervalInSeconds = Codegen.empty();
-        this.upperLoadThreshold = Codegen.empty();
+    private AverageLoadScalingTriggerArgs(AverageLoadScalingTriggerArgs $) {
+        this.kind = $.kind;
+        this.lowerLoadThreshold = $.lowerLoadThreshold;
+        this.metric = $.metric;
+        this.scaleIntervalInSeconds = $.scaleIntervalInSeconds;
+        this.upperLoadThreshold = $.upperLoadThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AverageLoadScalingTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kind;
-        private Output<Double> lowerLoadThreshold;
-        private Output<AutoScalingResourceMetricArgs> metric;
-        private Output<Integer> scaleIntervalInSeconds;
-        private Output<Double> upperLoadThreshold;
+        private AverageLoadScalingTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AverageLoadScalingTriggerArgs();
         }
 
         public Builder(AverageLoadScalingTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.lowerLoadThreshold = defaults.lowerLoadThreshold;
-    	      this.metric = defaults.metric;
-    	      this.scaleIntervalInSeconds = defaults.scaleIntervalInSeconds;
-    	      this.upperLoadThreshold = defaults.upperLoadThreshold;
+            $ = new AverageLoadScalingTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder lowerLoadThreshold(Output<Double> lowerLoadThreshold) {
-            this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
+            $.lowerLoadThreshold = lowerLoadThreshold;
             return this;
         }
+
         public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
-            this.lowerLoadThreshold = Output.of(Objects.requireNonNull(lowerLoadThreshold));
-            return this;
+            return lowerLoadThreshold(Output.of(lowerLoadThreshold));
         }
+
         public Builder metric(Output<AutoScalingResourceMetricArgs> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(AutoScalingResourceMetricArgs metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
+            return metric(Output.of(metric));
         }
+
         public Builder scaleIntervalInSeconds(Output<Integer> scaleIntervalInSeconds) {
-            this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
+            $.scaleIntervalInSeconds = scaleIntervalInSeconds;
             return this;
         }
+
         public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
-            this.scaleIntervalInSeconds = Output.of(Objects.requireNonNull(scaleIntervalInSeconds));
-            return this;
+            return scaleIntervalInSeconds(Output.of(scaleIntervalInSeconds));
         }
+
         public Builder upperLoadThreshold(Output<Double> upperLoadThreshold) {
-            this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
+            $.upperLoadThreshold = upperLoadThreshold;
             return this;
         }
+
         public Builder upperLoadThreshold(Double upperLoadThreshold) {
-            this.upperLoadThreshold = Output.of(Objects.requireNonNull(upperLoadThreshold));
-            return this;
-        }        public AverageLoadScalingTriggerArgs build() {
-            return new AverageLoadScalingTriggerArgs(kind, lowerLoadThreshold, metric, scaleIntervalInSeconds, upperLoadThreshold);
+            return upperLoadThreshold(Output.of(upperLoadThreshold));
+        }
+
+        public AverageLoadScalingTriggerArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.lowerLoadThreshold = Objects.requireNonNull($.lowerLoadThreshold, "expected parameter 'lowerLoadThreshold' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            $.scaleIntervalInSeconds = Objects.requireNonNull($.scaleIntervalInSeconds, "expected parameter 'scaleIntervalInSeconds' to be non-null");
+            $.upperLoadThreshold = Objects.requireNonNull($.upperLoadThreshold, "expected parameter 'upperLoadThreshold' to be non-null");
+            return $;
         }
     }
+
 }

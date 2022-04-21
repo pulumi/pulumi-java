@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     public static final AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs Empty = new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs();
 
     @Import(name="sns")
-      private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
+    private @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
 
-    public Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns() {
-        return this.sns == null ? Codegen.empty() : this.sns;
+    public Optional<Output<AccountAuditConfigurationAuditNotificationTargetArgs>> sns() {
+        return Optional.ofNullable(this.sns);
     }
 
-    public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
-        this.sns = sns;
-    }
+    private AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs() {}
 
-    private AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs() {
-        this.sns = Codegen.empty();
+    private AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs $) {
+        this.sns = $.sns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns;
+        private AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs();
         }
 
         public Builder(AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sns = defaults.sns;
+            $ = new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sns(@Nullable Output<AccountAuditConfigurationAuditNotificationTargetArgs> sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
-        public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTargetArgs sns) {
-            this.sns = Codegen.ofNullable(sns);
-            return this;
-        }        public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {
-            return new AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs(sns);
+
+        public Builder sns(AccountAuditConfigurationAuditNotificationTargetArgs sns) {
+            return sns(Output.of(sns));
+        }
+
+        public AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class ConnectionClientParameters extends com.pulumi.resources.Invok
     public static final ConnectionClientParameters Empty = new ConnectionClientParameters();
 
     @Import(name="clientID", required=true)
-      private final String clientID;
+    private String clientID;
 
     public String clientID() {
         return this.clientID;
     }
 
     @Import(name="clientSecret", required=true)
-      private final String clientSecret;
+    private String clientSecret;
 
     public String clientSecret() {
         return this.clientSecret;
     }
 
-    public ConnectionClientParameters(
-        String clientID,
-        String clientSecret) {
-        this.clientID = Objects.requireNonNull(clientID, "expected parameter 'clientID' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-    }
+    private ConnectionClientParameters() {}
 
-    private ConnectionClientParameters() {
-        this.clientID = null;
-        this.clientSecret = null;
+    private ConnectionClientParameters(ConnectionClientParameters $) {
+        this.clientID = $.clientID;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionClientParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientID;
-        private String clientSecret;
+        private ConnectionClientParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionClientParameters();
         }
 
         public Builder(ConnectionClientParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientID = defaults.clientID;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new ConnectionClientParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder clientID(String clientID) {
-            this.clientID = Objects.requireNonNull(clientID);
+            $.clientID = clientID;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
-        }        public ConnectionClientParameters build() {
-            return new ConnectionClientParameters(clientID, clientSecret);
+        }
+
+        public ConnectionClientParameters build() {
+            $.clientID = Objects.requireNonNull($.clientID, "expected parameter 'clientID' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            return $;
         }
     }
+
 }

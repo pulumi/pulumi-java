@@ -5,9 +5,9 @@ package com.pulumi.gcp.endpoints.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceEndpointGetArgs extends com.pulumi.resources.ResourceA
     public static final ServiceEndpointGetArgs Empty = new ServiceEndpointGetArgs();
 
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ServiceEndpointGetArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<String> name) {
-        this.address = address;
-        this.name = name;
-    }
+    private ServiceEndpointGetArgs() {}
 
-    private ServiceEndpointGetArgs() {
-        this.address = Codegen.empty();
-        this.name = Codegen.empty();
+    private ServiceEndpointGetArgs(ServiceEndpointGetArgs $) {
+        this.address = $.address;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> name;
+        private ServiceEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointGetArgs();
         }
 
         public Builder(ServiceEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.name = defaults.name;
+            $ = new ServiceEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ServiceEndpointGetArgs build() {
-            return new ServiceEndpointGetArgs(address, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ServiceEndpointGetArgs build() {
+            return $;
         }
     }
+
 }

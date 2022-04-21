@@ -23,10 +23,10 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable String accessToken;
+    private @Nullable String accessToken;
 
     public Optional<String> accessToken() {
-        return this.accessToken == null ? Optional.empty() : Optional.ofNullable(this.accessToken);
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public FacebookPageResponse(
-        @Nullable String accessToken,
-        String id) {
-        this.accessToken = accessToken;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private FacebookPageResponse() {}
 
-    private FacebookPageResponse() {
-        this.accessToken = null;
-        this.id = null;
+    private FacebookPageResponse(FacebookPageResponse $) {
+        this.accessToken = $.accessToken;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FacebookPageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessToken;
-        private String id;
+        private FacebookPageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FacebookPageResponse();
         }
 
         public Builder(FacebookPageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.id = defaults.id;
+            $ = new FacebookPageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public FacebookPageResponse build() {
-            return new FacebookPageResponse(accessToken, id);
+        }
+
+        public FacebookPageResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

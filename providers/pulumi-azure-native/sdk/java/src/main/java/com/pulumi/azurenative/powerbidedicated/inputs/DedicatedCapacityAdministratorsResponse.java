@@ -24,48 +24,48 @@ public final class DedicatedCapacityAdministratorsResponse extends com.pulumi.re
      * 
      */
     @Import(name="members")
-      private final @Nullable List<String> members;
+    private @Nullable List<String> members;
 
-    public List<String> members() {
-        return this.members == null ? List.of() : this.members;
+    public Optional<List<String>> members() {
+        return Optional.ofNullable(this.members);
     }
 
-    public DedicatedCapacityAdministratorsResponse(@Nullable List<String> members) {
-        this.members = members;
-    }
+    private DedicatedCapacityAdministratorsResponse() {}
 
-    private DedicatedCapacityAdministratorsResponse() {
-        this.members = List.of();
+    private DedicatedCapacityAdministratorsResponse(DedicatedCapacityAdministratorsResponse $) {
+        this.members = $.members;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedCapacityAdministratorsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> members;
+        private DedicatedCapacityAdministratorsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedCapacityAdministratorsResponse();
         }
 
         public Builder(DedicatedCapacityAdministratorsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.members = defaults.members;
+            $ = new DedicatedCapacityAdministratorsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
-        }        public DedicatedCapacityAdministratorsResponse build() {
-            return new DedicatedCapacityAdministratorsResponse(members);
+        }
+
+        public DedicatedCapacityAdministratorsResponse build() {
+            return $;
         }
     }
+
 }

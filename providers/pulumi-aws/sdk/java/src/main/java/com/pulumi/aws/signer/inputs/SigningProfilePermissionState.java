@@ -5,9 +5,9 @@ package com.pulumi.aws.signer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="profileName")
-      private final @Nullable Output<String> profileName;
+    private @Nullable Output<String> profileName;
 
-    public Output<String> profileName() {
-        return this.profileName == null ? Codegen.empty() : this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="profileVersion")
-      private final @Nullable Output<String> profileVersion;
+    private @Nullable Output<String> profileVersion;
 
-    public Output<String> profileVersion() {
-        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
+    public Optional<Output<String>> profileVersion() {
+        return Optional.ofNullable(this.profileVersion);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="statementId")
-      private final @Nullable Output<String> statementId;
+    private @Nullable Output<String> statementId;
 
-    public Output<String> statementId() {
-        return this.statementId == null ? Codegen.empty() : this.statementId;
+    public Optional<Output<String>> statementId() {
+        return Optional.ofNullable(this.statementId);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class SigningProfilePermissionState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="statementIdPrefix")
-      private final @Nullable Output<String> statementIdPrefix;
+    private @Nullable Output<String> statementIdPrefix;
 
-    public Output<String> statementIdPrefix() {
-        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
+    public Optional<Output<String>> statementIdPrefix() {
+        return Optional.ofNullable(this.statementIdPrefix);
     }
 
-    public SigningProfilePermissionState(
-        @Nullable Output<String> action,
-        @Nullable Output<String> principal,
-        @Nullable Output<String> profileName,
-        @Nullable Output<String> profileVersion,
-        @Nullable Output<String> statementId,
-        @Nullable Output<String> statementIdPrefix) {
-        this.action = action;
-        this.principal = principal;
-        this.profileName = profileName;
-        this.profileVersion = profileVersion;
-        this.statementId = statementId;
-        this.statementIdPrefix = statementIdPrefix;
-    }
+    private SigningProfilePermissionState() {}
 
-    private SigningProfilePermissionState() {
-        this.action = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.profileVersion = Codegen.empty();
-        this.statementId = Codegen.empty();
-        this.statementIdPrefix = Codegen.empty();
+    private SigningProfilePermissionState(SigningProfilePermissionState $) {
+        this.action = $.action;
+        this.principal = $.principal;
+        this.profileName = $.profileName;
+        this.profileVersion = $.profileVersion;
+        this.statementId = $.statementId;
+        this.statementIdPrefix = $.statementIdPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningProfilePermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> principal;
-        private @Nullable Output<String> profileName;
-        private @Nullable Output<String> profileVersion;
-        private @Nullable Output<String> statementId;
-        private @Nullable Output<String> statementIdPrefix;
+        private SigningProfilePermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningProfilePermissionState();
         }
 
         public Builder(SigningProfilePermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.principal = defaults.principal;
-    	      this.profileName = defaults.profileName;
-    	      this.profileVersion = defaults.profileVersion;
-    	      this.statementId = defaults.statementId;
-    	      this.statementIdPrefix = defaults.statementIdPrefix;
+            $ = new SigningProfilePermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder profileName(@Nullable Output<String> profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
-        public Builder profileName(@Nullable String profileName) {
-            this.profileName = Codegen.ofNullable(profileName);
-            return this;
+
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
+
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
-            this.profileVersion = profileVersion;
+            $.profileVersion = profileVersion;
             return this;
         }
-        public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Codegen.ofNullable(profileVersion);
-            return this;
+
+        public Builder profileVersion(String profileVersion) {
+            return profileVersion(Output.of(profileVersion));
         }
+
         public Builder statementId(@Nullable Output<String> statementId) {
-            this.statementId = statementId;
+            $.statementId = statementId;
             return this;
         }
-        public Builder statementId(@Nullable String statementId) {
-            this.statementId = Codegen.ofNullable(statementId);
-            return this;
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
         }
+
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
-            this.statementIdPrefix = statementIdPrefix;
+            $.statementIdPrefix = statementIdPrefix;
             return this;
         }
-        public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
-            return this;
-        }        public SigningProfilePermissionState build() {
-            return new SigningProfilePermissionState(action, principal, profileName, profileVersion, statementId, statementIdPrefix);
+
+        public Builder statementIdPrefix(String statementIdPrefix) {
+            return statementIdPrefix(Output.of(statementIdPrefix));
+        }
+
+        public SigningProfilePermissionState build() {
+            return $;
         }
     }
+
 }

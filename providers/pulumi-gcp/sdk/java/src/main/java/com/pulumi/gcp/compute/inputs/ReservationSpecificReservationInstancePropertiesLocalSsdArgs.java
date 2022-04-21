@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Output<Integer> diskSizeGb;
+    private Output<Integer> diskSizeGb;
 
     public Output<Integer> diskSizeGb() {
         return this.diskSizeGb;
@@ -34,63 +34,59 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdArgs 
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> interface_;
+    private @Nullable Output<String> interface_;
 
-    public Output<String> interface_() {
-        return this.interface_ == null ? Codegen.empty() : this.interface_;
+    public Optional<Output<String>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
-    public ReservationSpecificReservationInstancePropertiesLocalSsdArgs(
-        Output<Integer> diskSizeGb,
-        @Nullable Output<String> interface_) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.interface_ = interface_;
-    }
+    private ReservationSpecificReservationInstancePropertiesLocalSsdArgs() {}
 
-    private ReservationSpecificReservationInstancePropertiesLocalSsdArgs() {
-        this.diskSizeGb = Codegen.empty();
-        this.interface_ = Codegen.empty();
+    private ReservationSpecificReservationInstancePropertiesLocalSsdArgs(ReservationSpecificReservationInstancePropertiesLocalSsdArgs $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.interface_ = $.interface_;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationSpecificReservationInstancePropertiesLocalSsdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> diskSizeGb;
-        private @Nullable Output<String> interface_;
+        private ReservationSpecificReservationInstancePropertiesLocalSsdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationSpecificReservationInstancePropertiesLocalSsdArgs();
         }
 
         public Builder(ReservationSpecificReservationInstancePropertiesLocalSsdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.interface_ = defaults.interface_;
+            $ = new ReservationSpecificReservationInstancePropertiesLocalSsdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(Output<Integer> diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Output.of(Objects.requireNonNull(diskSizeGb));
-            return this;
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder interface_(@Nullable Output<String> interface_) {
-            this.interface_ = interface_;
+            $.interface_ = interface_;
             return this;
         }
-        public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Codegen.ofNullable(interface_);
-            return this;
-        }        public ReservationSpecificReservationInstancePropertiesLocalSsdArgs build() {
-            return new ReservationSpecificReservationInstancePropertiesLocalSsdArgs(diskSizeGb, interface_);
+
+        public Builder interface_(String interface_) {
+            return interface_(Output.of(interface_));
+        }
+
+        public ReservationSpecificReservationInstancePropertiesLocalSsdArgs build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            return $;
         }
     }
+
 }

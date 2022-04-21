@@ -5,9 +5,9 @@ package com.pulumi.azurenative.offazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SiteAgentPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable Output<String> keyVaultId;
+    private @Nullable Output<String> keyVaultId;
 
-    public Output<String> keyVaultId() {
-        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
+    public Optional<Output<String>> keyVaultId() {
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SiteAgentPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable Output<String> keyVaultUri;
+    private @Nullable Output<String> keyVaultUri;
 
-    public Output<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
+    public Optional<Output<String>> keyVaultUri() {
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
-    public SiteAgentPropertiesArgs(
-        @Nullable Output<String> keyVaultId,
-        @Nullable Output<String> keyVaultUri) {
-        this.keyVaultId = keyVaultId;
-        this.keyVaultUri = keyVaultUri;
-    }
+    private SiteAgentPropertiesArgs() {}
 
-    private SiteAgentPropertiesArgs() {
-        this.keyVaultId = Codegen.empty();
-        this.keyVaultUri = Codegen.empty();
+    private SiteAgentPropertiesArgs(SiteAgentPropertiesArgs $) {
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultUri = $.keyVaultUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteAgentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultId;
-        private @Nullable Output<String> keyVaultUri;
+        private SiteAgentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteAgentPropertiesArgs();
         }
 
         public Builder(SiteAgentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultUri = defaults.keyVaultUri;
+            $ = new SiteAgentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
-        public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Codegen.ofNullable(keyVaultId);
-            return this;
+
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
         }
+
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
-        public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Codegen.ofNullable(keyVaultUri);
-            return this;
-        }        public SiteAgentPropertiesArgs build() {
-            return new SiteAgentPropertiesArgs(keyVaultId, keyVaultUri);
+
+        public Builder keyVaultUri(String keyVaultUri) {
+            return keyVaultUri(Output.of(keyVaultUri));
+        }
+
+        public SiteAgentPropertiesArgs build() {
+            return $;
         }
     }
+
 }

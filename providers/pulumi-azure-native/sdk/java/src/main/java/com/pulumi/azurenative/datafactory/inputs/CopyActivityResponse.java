@@ -170,10 +170,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dataIntegrationUnits")
-      private final @Nullable Object dataIntegrationUnits;
+    private @Nullable Object dataIntegrationUnits;
 
     public Optional<Object> dataIntegrationUnits() {
-        return this.dataIntegrationUnits == null ? Optional.empty() : Optional.ofNullable(this.dataIntegrationUnits);
+        return Optional.ofNullable(this.dataIntegrationUnits);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enableSkipIncompatibleRow")
-      private final @Nullable Object enableSkipIncompatibleRow;
+    private @Nullable Object enableSkipIncompatibleRow;
 
     public Optional<Object> enableSkipIncompatibleRow() {
-        return this.enableSkipIncompatibleRow == null ? Optional.empty() : Optional.ofNullable(this.enableSkipIncompatibleRow);
+        return Optional.ofNullable(this.enableSkipIncompatibleRow);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enableStaging")
-      private final @Nullable Object enableStaging;
+    private @Nullable Object enableStaging;
 
     public Optional<Object> enableStaging() {
-        return this.enableStaging == null ? Optional.empty() : Optional.ofNullable(this.enableStaging);
+        return Optional.ofNullable(this.enableStaging);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inputs")
-      private final @Nullable List<DatasetReferenceResponse> inputs;
+    private @Nullable List<DatasetReferenceResponse> inputs;
 
-    public List<DatasetReferenceResponse> inputs() {
-        return this.inputs == null ? List.of() : this.inputs;
+    public Optional<List<DatasetReferenceResponse>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="logSettings")
-      private final @Nullable LogSettingsResponse logSettings;
+    private @Nullable LogSettingsResponse logSettings;
 
     public Optional<LogSettingsResponse> logSettings() {
-        return this.logSettings == null ? Optional.empty() : Optional.ofNullable(this.logSettings);
+        return Optional.ofNullable(this.logSettings);
     }
 
     /**
@@ -258,10 +258,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="logStorageSettings")
-      private final @Nullable LogStorageSettingsResponse logStorageSettings;
+    private @Nullable LogStorageSettingsResponse logStorageSettings;
 
     public Optional<LogStorageSettingsResponse> logStorageSettings() {
-        return this.logStorageSettings == null ? Optional.empty() : Optional.ofNullable(this.logStorageSettings);
+        return Optional.ofNullable(this.logStorageSettings);
     }
 
     /**
@@ -269,7 +269,7 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -280,10 +280,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="outputs")
-      private final @Nullable List<DatasetReferenceResponse> outputs;
+    private @Nullable List<DatasetReferenceResponse> outputs;
 
-    public List<DatasetReferenceResponse> outputs() {
-        return this.outputs == null ? List.of() : this.outputs;
+    public Optional<List<DatasetReferenceResponse>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="parallelCopies")
-      private final @Nullable Object parallelCopies;
+    private @Nullable Object parallelCopies;
 
     public Optional<Object> parallelCopies() {
-        return this.parallelCopies == null ? Optional.empty() : Optional.ofNullable(this.parallelCopies);
+        return Optional.ofNullable(this.parallelCopies);
     }
 
     /**
@@ -302,10 +302,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -313,10 +313,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="preserve")
-      private final @Nullable List<Object> preserve;
+    private @Nullable List<Object> preserve;
 
-    public List<Object> preserve() {
-        return this.preserve == null ? List.of() : this.preserve;
+    public Optional<List<Object>> preserve() {
+        return Optional.ofNullable(this.preserve);
     }
 
     /**
@@ -324,10 +324,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="preserveRules")
-      private final @Nullable List<Object> preserveRules;
+    private @Nullable List<Object> preserveRules;
 
-    public List<Object> preserveRules() {
-        return this.preserveRules == null ? List.of() : this.preserveRules;
+    public Optional<List<Object>> preserveRules() {
+        return Optional.ofNullable(this.preserveRules);
     }
 
     /**
@@ -335,10 +335,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="redirectIncompatibleRowSettings")
-      private final @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
+    private @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
 
     public Optional<RedirectIncompatibleRowSettingsResponse> redirectIncompatibleRowSettings() {
-        return this.redirectIncompatibleRowSettings == null ? Optional.empty() : Optional.ofNullable(this.redirectIncompatibleRowSettings);
+        return Optional.ofNullable(this.redirectIncompatibleRowSettings);
     }
 
     /**
@@ -346,7 +346,7 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sink", required=true)
-      private final Object sink;
+    private Object sink;
 
     public Object sink() {
         return this.sink;
@@ -357,10 +357,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="skipErrorFile")
-      private final @Nullable SkipErrorFileResponse skipErrorFile;
+    private @Nullable SkipErrorFileResponse skipErrorFile;
 
     public Optional<SkipErrorFileResponse> skipErrorFile() {
-        return this.skipErrorFile == null ? Optional.empty() : Optional.ofNullable(this.skipErrorFile);
+        return Optional.ofNullable(this.skipErrorFile);
     }
 
     /**
@@ -368,7 +368,7 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="source", required=true)
-      private final Object source;
+    private Object source;
 
     public Object source() {
         return this.source;
@@ -379,10 +379,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="stagingSettings")
-      private final @Nullable StagingSettingsResponse stagingSettings;
+    private @Nullable StagingSettingsResponse stagingSettings;
 
     public Optional<StagingSettingsResponse> stagingSettings() {
-        return this.stagingSettings == null ? Optional.empty() : Optional.ofNullable(this.stagingSettings);
+        return Optional.ofNullable(this.stagingSettings);
     }
 
     /**
@@ -390,10 +390,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="translator")
-      private final @Nullable Object translator;
+    private @Nullable Object translator;
 
     public Optional<Object> translator() {
-        return this.translator == null ? Optional.empty() : Optional.ofNullable(this.translator);
+        return Optional.ofNullable(this.translator);
     }
 
     /**
@@ -402,7 +402,7 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -413,10 +413,10 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -424,271 +424,210 @@ public final class CopyActivityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="validateDataConsistency")
-      private final @Nullable Object validateDataConsistency;
+    private @Nullable Object validateDataConsistency;
 
     public Optional<Object> validateDataConsistency() {
-        return this.validateDataConsistency == null ? Optional.empty() : Optional.ofNullable(this.validateDataConsistency);
+        return Optional.ofNullable(this.validateDataConsistency);
     }
 
-    public CopyActivityResponse(
-        @Nullable Object dataIntegrationUnits,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object enableSkipIncompatibleRow,
-        @Nullable Object enableStaging,
-        @Nullable List<DatasetReferenceResponse> inputs,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable LogSettingsResponse logSettings,
-        @Nullable LogStorageSettingsResponse logStorageSettings,
-        String name,
-        @Nullable List<DatasetReferenceResponse> outputs,
-        @Nullable Object parallelCopies,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<Object> preserve,
-        @Nullable List<Object> preserveRules,
-        @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
-        Object sink,
-        @Nullable SkipErrorFileResponse skipErrorFile,
-        Object source,
-        @Nullable StagingSettingsResponse stagingSettings,
-        @Nullable Object translator,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Object validateDataConsistency) {
-        this.dataIntegrationUnits = dataIntegrationUnits;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
-        this.enableStaging = enableStaging;
-        this.inputs = inputs;
-        this.linkedServiceName = linkedServiceName;
-        this.logSettings = logSettings;
-        this.logStorageSettings = logStorageSettings;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputs = outputs;
-        this.parallelCopies = parallelCopies;
-        this.policy = policy;
-        this.preserve = preserve;
-        this.preserveRules = preserveRules;
-        this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
-        this.sink = Objects.requireNonNull(sink, "expected parameter 'sink' to be non-null");
-        this.skipErrorFile = skipErrorFile;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.stagingSettings = stagingSettings;
-        this.translator = translator;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-        this.validateDataConsistency = validateDataConsistency;
-    }
+    private CopyActivityResponse() {}
 
-    private CopyActivityResponse() {
-        this.dataIntegrationUnits = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.enableSkipIncompatibleRow = null;
-        this.enableStaging = null;
-        this.inputs = List.of();
-        this.linkedServiceName = null;
-        this.logSettings = null;
-        this.logStorageSettings = null;
-        this.name = null;
-        this.outputs = List.of();
-        this.parallelCopies = null;
-        this.policy = null;
-        this.preserve = List.of();
-        this.preserveRules = List.of();
-        this.redirectIncompatibleRowSettings = null;
-        this.sink = null;
-        this.skipErrorFile = null;
-        this.source = null;
-        this.stagingSettings = null;
-        this.translator = null;
-        this.type = null;
-        this.userProperties = List.of();
-        this.validateDataConsistency = null;
+    private CopyActivityResponse(CopyActivityResponse $) {
+        this.dataIntegrationUnits = $.dataIntegrationUnits;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.enableSkipIncompatibleRow = $.enableSkipIncompatibleRow;
+        this.enableStaging = $.enableStaging;
+        this.inputs = $.inputs;
+        this.linkedServiceName = $.linkedServiceName;
+        this.logSettings = $.logSettings;
+        this.logStorageSettings = $.logStorageSettings;
+        this.name = $.name;
+        this.outputs = $.outputs;
+        this.parallelCopies = $.parallelCopies;
+        this.policy = $.policy;
+        this.preserve = $.preserve;
+        this.preserveRules = $.preserveRules;
+        this.redirectIncompatibleRowSettings = $.redirectIncompatibleRowSettings;
+        this.sink = $.sink;
+        this.skipErrorFile = $.skipErrorFile;
+        this.source = $.source;
+        this.stagingSettings = $.stagingSettings;
+        this.translator = $.translator;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.validateDataConsistency = $.validateDataConsistency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object dataIntegrationUnits;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Object enableSkipIncompatibleRow;
-        private @Nullable Object enableStaging;
-        private @Nullable List<DatasetReferenceResponse> inputs;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable LogSettingsResponse logSettings;
-        private @Nullable LogStorageSettingsResponse logStorageSettings;
-        private String name;
-        private @Nullable List<DatasetReferenceResponse> outputs;
-        private @Nullable Object parallelCopies;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable List<Object> preserve;
-        private @Nullable List<Object> preserveRules;
-        private @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
-        private Object sink;
-        private @Nullable SkipErrorFileResponse skipErrorFile;
-        private Object source;
-        private @Nullable StagingSettingsResponse stagingSettings;
-        private @Nullable Object translator;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
-        private @Nullable Object validateDataConsistency;
+        private CopyActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyActivityResponse();
         }
 
         public Builder(CopyActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataIntegrationUnits = defaults.dataIntegrationUnits;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.enableSkipIncompatibleRow = defaults.enableSkipIncompatibleRow;
-    	      this.enableStaging = defaults.enableStaging;
-    	      this.inputs = defaults.inputs;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.logSettings = defaults.logSettings;
-    	      this.logStorageSettings = defaults.logStorageSettings;
-    	      this.name = defaults.name;
-    	      this.outputs = defaults.outputs;
-    	      this.parallelCopies = defaults.parallelCopies;
-    	      this.policy = defaults.policy;
-    	      this.preserve = defaults.preserve;
-    	      this.preserveRules = defaults.preserveRules;
-    	      this.redirectIncompatibleRowSettings = defaults.redirectIncompatibleRowSettings;
-    	      this.sink = defaults.sink;
-    	      this.skipErrorFile = defaults.skipErrorFile;
-    	      this.source = defaults.source;
-    	      this.stagingSettings = defaults.stagingSettings;
-    	      this.translator = defaults.translator;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.validateDataConsistency = defaults.validateDataConsistency;
+            $ = new CopyActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
-            this.dataIntegrationUnits = dataIntegrationUnits;
+            $.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
-            this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
+            $.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
+
         public Builder enableStaging(@Nullable Object enableStaging) {
-            this.enableStaging = enableStaging;
+            $.enableStaging = enableStaging;
             return this;
         }
+
         public Builder inputs(@Nullable List<DatasetReferenceResponse> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(DatasetReferenceResponse... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder logSettings(@Nullable LogSettingsResponse logSettings) {
-            this.logSettings = logSettings;
+            $.logSettings = logSettings;
             return this;
         }
+
         public Builder logStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
-            this.logStorageSettings = logStorageSettings;
+            $.logStorageSettings = logStorageSettings;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder outputs(@Nullable List<DatasetReferenceResponse> outputs) {
-            this.outputs = outputs;
+            $.outputs = outputs;
             return this;
         }
+
         public Builder outputs(DatasetReferenceResponse... outputs) {
             return outputs(List.of(outputs));
         }
+
         public Builder parallelCopies(@Nullable Object parallelCopies) {
-            this.parallelCopies = parallelCopies;
+            $.parallelCopies = parallelCopies;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder preserve(@Nullable List<Object> preserve) {
-            this.preserve = preserve;
+            $.preserve = preserve;
             return this;
         }
+
         public Builder preserve(Object... preserve) {
             return preserve(List.of(preserve));
         }
+
         public Builder preserveRules(@Nullable List<Object> preserveRules) {
-            this.preserveRules = preserveRules;
+            $.preserveRules = preserveRules;
             return this;
         }
+
         public Builder preserveRules(Object... preserveRules) {
             return preserveRules(List.of(preserveRules));
         }
+
         public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings) {
-            this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
+            $.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
+
         public Builder sink(Object sink) {
-            this.sink = Objects.requireNonNull(sink);
+            $.sink = sink;
             return this;
         }
+
         public Builder skipErrorFile(@Nullable SkipErrorFileResponse skipErrorFile) {
-            this.skipErrorFile = skipErrorFile;
+            $.skipErrorFile = skipErrorFile;
             return this;
         }
+
         public Builder source(Object source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder stagingSettings(@Nullable StagingSettingsResponse stagingSettings) {
-            this.stagingSettings = stagingSettings;
+            $.stagingSettings = stagingSettings;
             return this;
         }
+
         public Builder translator(@Nullable Object translator) {
-            this.translator = translator;
+            $.translator = translator;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
-            this.validateDataConsistency = validateDataConsistency;
+            $.validateDataConsistency = validateDataConsistency;
             return this;
-        }        public CopyActivityResponse build() {
-            return new CopyActivityResponse(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
+        }
+
+        public CopyActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sink = Objects.requireNonNull($.sink, "expected parameter 'sink' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

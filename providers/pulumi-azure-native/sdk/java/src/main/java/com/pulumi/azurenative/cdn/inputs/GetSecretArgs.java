@@ -17,7 +17,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -28,7 +28,7 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretName", required=true)
-      private final String secretName;
+    private String secretName;
 
     public String secretName() {
         return this.secretName;
     }
 
-    public GetSecretArgs(
-        String profileName,
-        String resourceGroupName,
-        String secretName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-    }
+    private GetSecretArgs() {}
 
-    private GetSecretArgs() {
-        this.profileName = null;
-        this.resourceGroupName = null;
-        this.secretName = null;
+    private GetSecretArgs(GetSecretArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String resourceGroupName;
-        private String secretName;
+        private GetSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretArgs();
         }
 
         public Builder(GetSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secretName = defaults.secretName;
+            $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
-        }        public GetSecretArgs build() {
-            return new GetSecretArgs(profileName, resourceGroupName, secretName);
+        }
+
+        public GetSecretArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

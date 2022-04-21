@@ -24,48 +24,48 @@ public final class VirtualHubRouteTableResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="routes")
-      private final @Nullable List<VirtualHubRouteResponse> routes;
+    private @Nullable List<VirtualHubRouteResponse> routes;
 
-    public List<VirtualHubRouteResponse> routes() {
-        return this.routes == null ? List.of() : this.routes;
+    public Optional<List<VirtualHubRouteResponse>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public VirtualHubRouteTableResponse(@Nullable List<VirtualHubRouteResponse> routes) {
-        this.routes = routes;
-    }
+    private VirtualHubRouteTableResponse() {}
 
-    private VirtualHubRouteTableResponse() {
-        this.routes = List.of();
+    private VirtualHubRouteTableResponse(VirtualHubRouteTableResponse $) {
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<VirtualHubRouteResponse> routes;
+        private VirtualHubRouteTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteTableResponse();
         }
 
         public Builder(VirtualHubRouteTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routes = defaults.routes;
+            $ = new VirtualHubRouteTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder routes(@Nullable List<VirtualHubRouteResponse> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
+
         public Builder routes(VirtualHubRouteResponse... routes) {
             return routes(List.of(routes));
-        }        public VirtualHubRouteTableResponse build() {
-            return new VirtualHubRouteTableResponse(routes);
+        }
+
+        public VirtualHubRouteTableResponse build() {
+            return $;
         }
     }
+
 }

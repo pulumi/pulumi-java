@@ -17,84 +17,78 @@ public final class GroupQuery extends com.pulumi.resources.InvokeArgs {
     public static final GroupQuery Empty = new GroupQuery();
 
     @Import(name="resourceTypeFilters")
-      private final @Nullable List<String> resourceTypeFilters;
+    private @Nullable List<String> resourceTypeFilters;
 
-    public List<String> resourceTypeFilters() {
-        return this.resourceTypeFilters == null ? List.of() : this.resourceTypeFilters;
+    public Optional<List<String>> resourceTypeFilters() {
+        return Optional.ofNullable(this.resourceTypeFilters);
     }
 
     @Import(name="stackIdentifier")
-      private final @Nullable String stackIdentifier;
+    private @Nullable String stackIdentifier;
 
     public Optional<String> stackIdentifier() {
-        return this.stackIdentifier == null ? Optional.empty() : Optional.ofNullable(this.stackIdentifier);
+        return Optional.ofNullable(this.stackIdentifier);
     }
 
     @Import(name="tagFilters")
-      private final @Nullable List<GroupTagFilter> tagFilters;
+    private @Nullable List<GroupTagFilter> tagFilters;
 
-    public List<GroupTagFilter> tagFilters() {
-        return this.tagFilters == null ? List.of() : this.tagFilters;
+    public Optional<List<GroupTagFilter>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public GroupQuery(
-        @Nullable List<String> resourceTypeFilters,
-        @Nullable String stackIdentifier,
-        @Nullable List<GroupTagFilter> tagFilters) {
-        this.resourceTypeFilters = resourceTypeFilters;
-        this.stackIdentifier = stackIdentifier;
-        this.tagFilters = tagFilters;
-    }
+    private GroupQuery() {}
 
-    private GroupQuery() {
-        this.resourceTypeFilters = List.of();
-        this.stackIdentifier = null;
-        this.tagFilters = List.of();
+    private GroupQuery(GroupQuery $) {
+        this.resourceTypeFilters = $.resourceTypeFilters;
+        this.stackIdentifier = $.stackIdentifier;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupQuery defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> resourceTypeFilters;
-        private @Nullable String stackIdentifier;
-        private @Nullable List<GroupTagFilter> tagFilters;
+        private GroupQuery $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupQuery();
         }
 
         public Builder(GroupQuery defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceTypeFilters = defaults.resourceTypeFilters;
-    	      this.stackIdentifier = defaults.stackIdentifier;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new GroupQuery(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
-            this.resourceTypeFilters = resourceTypeFilters;
+            $.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
+
         public Builder resourceTypeFilters(String... resourceTypeFilters) {
             return resourceTypeFilters(List.of(resourceTypeFilters));
         }
+
         public Builder stackIdentifier(@Nullable String stackIdentifier) {
-            this.stackIdentifier = stackIdentifier;
+            $.stackIdentifier = stackIdentifier;
             return this;
         }
+
         public Builder tagFilters(@Nullable List<GroupTagFilter> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
+
         public Builder tagFilters(GroupTagFilter... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public GroupQuery build() {
-            return new GroupQuery(resourceTypeFilters, stackIdentifier, tagFilters);
+        }
+
+        public GroupQuery build() {
+            return $;
         }
     }
+
 }

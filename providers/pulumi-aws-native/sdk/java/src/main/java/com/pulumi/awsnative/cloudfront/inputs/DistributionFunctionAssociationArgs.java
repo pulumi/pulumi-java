@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class DistributionFunctionAssociationArgs extends com.pulumi.resour
     public static final DistributionFunctionAssociationArgs Empty = new DistributionFunctionAssociationArgs();
 
     @Import(name="eventType")
-      private final @Nullable Output<String> eventType;
+    private @Nullable Output<String> eventType;
 
-    public Output<String> eventType() {
-        return this.eventType == null ? Codegen.empty() : this.eventType;
+    public Optional<Output<String>> eventType() {
+        return Optional.ofNullable(this.eventType);
     }
 
     @Import(name="functionARN")
-      private final @Nullable Output<String> functionARN;
+    private @Nullable Output<String> functionARN;
 
-    public Output<String> functionARN() {
-        return this.functionARN == null ? Codegen.empty() : this.functionARN;
+    public Optional<Output<String>> functionARN() {
+        return Optional.ofNullable(this.functionARN);
     }
 
-    public DistributionFunctionAssociationArgs(
-        @Nullable Output<String> eventType,
-        @Nullable Output<String> functionARN) {
-        this.eventType = eventType;
-        this.functionARN = functionARN;
-    }
+    private DistributionFunctionAssociationArgs() {}
 
-    private DistributionFunctionAssociationArgs() {
-        this.eventType = Codegen.empty();
-        this.functionARN = Codegen.empty();
+    private DistributionFunctionAssociationArgs(DistributionFunctionAssociationArgs $) {
+        this.eventType = $.eventType;
+        this.functionARN = $.functionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionFunctionAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eventType;
-        private @Nullable Output<String> functionARN;
+        private DistributionFunctionAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionFunctionAssociationArgs();
         }
 
         public Builder(DistributionFunctionAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.functionARN = defaults.functionARN;
+            $ = new DistributionFunctionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(@Nullable Output<String> eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
-        public Builder eventType(@Nullable String eventType) {
-            this.eventType = Codegen.ofNullable(eventType);
-            return this;
+
+        public Builder eventType(String eventType) {
+            return eventType(Output.of(eventType));
         }
+
         public Builder functionARN(@Nullable Output<String> functionARN) {
-            this.functionARN = functionARN;
+            $.functionARN = functionARN;
             return this;
         }
-        public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = Codegen.ofNullable(functionARN);
-            return this;
-        }        public DistributionFunctionAssociationArgs build() {
-            return new DistributionFunctionAssociationArgs(eventType, functionARN);
+
+        public Builder functionARN(String functionARN) {
+            return functionARN(Output.of(functionARN));
+        }
+
+        public DistributionFunctionAssociationArgs build() {
+            return $;
         }
     }
+
 }

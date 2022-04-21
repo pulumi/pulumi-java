@@ -23,45 +23,44 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="eventName")
-      private final @Nullable String eventName;
+    private @Nullable String eventName;
 
     public Optional<String> eventName() {
-        return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
+        return Optional.ofNullable(this.eventName);
     }
 
-    public EventResponse(@Nullable String eventName) {
-        this.eventName = eventName;
-    }
+    private EventResponse() {}
 
-    private EventResponse() {
-        this.eventName = null;
+    private EventResponse(EventResponse $) {
+        this.eventName = $.eventName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eventName;
+        private EventResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventResponse();
         }
 
         public Builder(EventResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventName = defaults.eventName;
+            $ = new EventResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventName(@Nullable String eventName) {
-            this.eventName = eventName;
+            $.eventName = eventName;
             return this;
-        }        public EventResponse build() {
-            return new EventResponse(eventName);
+        }
+
+        public EventResponse build() {
+            return $;
         }
     }
+
 }

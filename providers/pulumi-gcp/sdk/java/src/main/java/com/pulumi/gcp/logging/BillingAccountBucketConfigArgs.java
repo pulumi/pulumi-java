@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BillingAccountBucketConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="billingAccount", required=true)
-      private final Output<String> billingAccount;
+    private Output<String> billingAccount;
 
     public Output<String> billingAccount() {
         return this.billingAccount;
@@ -32,7 +32,7 @@ public final class BillingAccountBucketConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="bucketId", required=true)
-      private final Output<String> bucketId;
+    private Output<String> bucketId;
 
     public Output<String> bucketId() {
         return this.bucketId;
@@ -43,10 +43,10 @@ public final class BillingAccountBucketConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class BillingAccountBucketConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -65,102 +65,91 @@ public final class BillingAccountBucketConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="retentionDays")
-      private final @Nullable Output<Integer> retentionDays;
+    private @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> retentionDays() {
-        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
+    public Optional<Output<Integer>> retentionDays() {
+        return Optional.ofNullable(this.retentionDays);
     }
 
-    public BillingAccountBucketConfigArgs(
-        Output<String> billingAccount,
-        Output<String> bucketId,
-        @Nullable Output<String> description,
-        Output<String> location,
-        @Nullable Output<Integer> retentionDays) {
-        this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
-        this.bucketId = Objects.requireNonNull(bucketId, "expected parameter 'bucketId' to be non-null");
-        this.description = description;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.retentionDays = retentionDays;
-    }
+    private BillingAccountBucketConfigArgs() {}
 
-    private BillingAccountBucketConfigArgs() {
-        this.billingAccount = Codegen.empty();
-        this.bucketId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.location = Codegen.empty();
-        this.retentionDays = Codegen.empty();
+    private BillingAccountBucketConfigArgs(BillingAccountBucketConfigArgs $) {
+        this.billingAccount = $.billingAccount;
+        this.bucketId = $.bucketId;
+        this.description = $.description;
+        this.location = $.location;
+        this.retentionDays = $.retentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingAccountBucketConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccount;
-        private Output<String> bucketId;
-        private @Nullable Output<String> description;
-        private Output<String> location;
-        private @Nullable Output<Integer> retentionDays;
+        private BillingAccountBucketConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingAccountBucketConfigArgs();
         }
 
         public Builder(BillingAccountBucketConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.bucketId = defaults.bucketId;
-    	      this.description = defaults.description;
-    	      this.location = defaults.location;
-    	      this.retentionDays = defaults.retentionDays;
+            $ = new BillingAccountBucketConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccount(Output<String> billingAccount) {
-            this.billingAccount = Objects.requireNonNull(billingAccount);
+            $.billingAccount = billingAccount;
             return this;
         }
+
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
-            return this;
+            return billingAccount(Output.of(billingAccount));
         }
+
         public Builder bucketId(Output<String> bucketId) {
-            this.bucketId = Objects.requireNonNull(bucketId);
+            $.bucketId = bucketId;
             return this;
         }
+
         public Builder bucketId(String bucketId) {
-            this.bucketId = Output.of(Objects.requireNonNull(bucketId));
-            return this;
+            return bucketId(Output.of(bucketId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
-            this.retentionDays = retentionDays;
+            $.retentionDays = retentionDays;
             return this;
         }
-        public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Codegen.ofNullable(retentionDays);
-            return this;
-        }        public BillingAccountBucketConfigArgs build() {
-            return new BillingAccountBucketConfigArgs(billingAccount, bucketId, description, location, retentionDays);
+
+        public Builder retentionDays(Integer retentionDays) {
+            return retentionDays(Output.of(retentionDays));
+        }
+
+        public BillingAccountBucketConfigArgs build() {
+            $.billingAccount = Objects.requireNonNull($.billingAccount, "expected parameter 'billingAccount' to be non-null");
+            $.bucketId = Objects.requireNonNull($.bucketId, "expected parameter 'bucketId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

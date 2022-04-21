@@ -5,7 +5,6 @@ package com.pulumi.googlenative.run_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.enums.ServiceIngress;
 import com.pulumi.googlenative.run_v2.enums.ServiceLaunchStage;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2BinaryAuthorizationArgs;
@@ -15,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="binaryAuthorization")
-      private final @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
+    private @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
 
-    public Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization() {
-        return this.binaryAuthorization == null ? Codegen.empty() : this.binaryAuthorization;
+    public Optional<Output<GoogleCloudRunOpV2BinaryAuthorizationArgs>> binaryAuthorization() {
+        return Optional.ofNullable(this.binaryAuthorization);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="client")
-      private final @Nullable Output<String> client;
+    private @Nullable Output<String> client;
 
-    public Output<String> client() {
-        return this.client == null ? Codegen.empty() : this.client;
+    public Optional<Output<String>> client() {
+        return Optional.ofNullable(this.client);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientVersion")
-      private final @Nullable Output<String> clientVersion;
+    private @Nullable Output<String> clientVersion;
 
-    public Output<String> clientVersion() {
-        return this.clientVersion == null ? Codegen.empty() : this.clientVersion;
+    public Optional<Output<String>> clientVersion() {
+        return Optional.ofNullable(this.clientVersion);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<ServiceIngress> ingress;
+    private @Nullable Output<ServiceIngress> ingress;
 
-    public Output<ServiceIngress> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<ServiceIngress>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -104,17 +104,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="launchStage")
-      private final @Nullable Output<ServiceLaunchStage> launchStage;
+    private @Nullable Output<ServiceLaunchStage> launchStage;
 
-    public Output<ServiceLaunchStage> launchStage() {
-        return this.launchStage == null ? Codegen.empty() : this.launchStage;
+    public Optional<Output<ServiceLaunchStage>> launchStage() {
+        return Optional.ofNullable(this.launchStage);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -122,21 +122,21 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceId", required=true)
-      private final Output<String> serviceId;
+    private Output<String> serviceId;
 
     public Output<String> serviceId() {
         return this.serviceId;
@@ -147,7 +147,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template", required=true)
-      private final Output<GoogleCloudRunOpV2RevisionTemplateArgs> template;
+    private Output<GoogleCloudRunOpV2RevisionTemplateArgs> template;
 
     public Output<GoogleCloudRunOpV2RevisionTemplateArgs> template() {
         return this.template;
@@ -158,242 +158,201 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffic")
-      private final @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
+    private @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
 
-    public Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic() {
-        return this.traffic == null ? Codegen.empty() : this.traffic;
+    public Optional<Output<List<GoogleCloudRunOpV2TrafficTargetArgs>>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public ServiceArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization,
-        @Nullable Output<String> client,
-        @Nullable Output<String> clientVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<ServiceIngress> ingress,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<ServiceLaunchStage> launchStage,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> serviceId,
-        Output<GoogleCloudRunOpV2RevisionTemplateArgs> template,
-        @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic,
-        @Nullable Output<String> validateOnly) {
-        this.annotations = annotations;
-        this.binaryAuthorization = binaryAuthorization;
-        this.client = client;
-        this.clientVersion = clientVersion;
-        this.description = description;
-        this.ingress = ingress;
-        this.labels = labels;
-        this.launchStage = launchStage;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-        this.traffic = traffic;
-        this.validateOnly = validateOnly;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.binaryAuthorization = Codegen.empty();
-        this.client = Codegen.empty();
-        this.clientVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.launchStage = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.template = Codegen.empty();
-        this.traffic = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.annotations = $.annotations;
+        this.binaryAuthorization = $.binaryAuthorization;
+        this.client = $.client;
+        this.clientVersion = $.clientVersion;
+        this.description = $.description;
+        this.ingress = $.ingress;
+        this.labels = $.labels;
+        this.launchStage = $.launchStage;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
+        this.template = $.template;
+        this.traffic = $.traffic;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
-        private @Nullable Output<String> client;
-        private @Nullable Output<String> clientVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ServiceIngress> ingress;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<ServiceLaunchStage> launchStage;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> serviceId;
-        private Output<GoogleCloudRunOpV2RevisionTemplateArgs> template;
-        private @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
-        private @Nullable Output<String> validateOnly;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.binaryAuthorization = defaults.binaryAuthorization;
-    	      this.client = defaults.client;
-    	      this.clientVersion = defaults.clientVersion;
-    	      this.description = defaults.description;
-    	      this.ingress = defaults.ingress;
-    	      this.labels = defaults.labels;
-    	      this.launchStage = defaults.launchStage;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
-    	      this.template = defaults.template;
-    	      this.traffic = defaults.traffic;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder binaryAuthorization(@Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
-            this.binaryAuthorization = binaryAuthorization;
+            $.binaryAuthorization = binaryAuthorization;
             return this;
         }
-        public Builder binaryAuthorization(@Nullable GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
-            this.binaryAuthorization = Codegen.ofNullable(binaryAuthorization);
-            return this;
+
+        public Builder binaryAuthorization(GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
+            return binaryAuthorization(Output.of(binaryAuthorization));
         }
+
         public Builder client(@Nullable Output<String> client) {
-            this.client = client;
+            $.client = client;
             return this;
         }
-        public Builder client(@Nullable String client) {
-            this.client = Codegen.ofNullable(client);
-            return this;
+
+        public Builder client(String client) {
+            return client(Output.of(client));
         }
+
         public Builder clientVersion(@Nullable Output<String> clientVersion) {
-            this.clientVersion = clientVersion;
+            $.clientVersion = clientVersion;
             return this;
         }
-        public Builder clientVersion(@Nullable String clientVersion) {
-            this.clientVersion = Codegen.ofNullable(clientVersion);
-            return this;
+
+        public Builder clientVersion(String clientVersion) {
+            return clientVersion(Output.of(clientVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ingress(@Nullable Output<ServiceIngress> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable ServiceIngress ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(ServiceIngress ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder launchStage(@Nullable Output<ServiceLaunchStage> launchStage) {
-            this.launchStage = launchStage;
+            $.launchStage = launchStage;
             return this;
         }
-        public Builder launchStage(@Nullable ServiceLaunchStage launchStage) {
-            this.launchStage = Codegen.ofNullable(launchStage);
-            return this;
+
+        public Builder launchStage(ServiceLaunchStage launchStage) {
+            return launchStage(Output.of(launchStage));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceId(Output<String> serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
-            return this;
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder template(Output<GoogleCloudRunOpV2RevisionTemplateArgs> template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder template(GoogleCloudRunOpV2RevisionTemplateArgs template) {
-            this.template = Output.of(Objects.requireNonNull(template));
-            return this;
+            return template(Output.of(template));
         }
+
         public Builder traffic(@Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
         }
-        public Builder traffic(@Nullable List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
-            this.traffic = Codegen.ofNullable(traffic);
-            return this;
+
+        public Builder traffic(List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
+            return traffic(Output.of(traffic));
         }
+
         public Builder traffic(GoogleCloudRunOpV2TrafficTargetArgs... traffic) {
             return traffic(List.of(traffic));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(annotations, binaryAuthorization, client, clientVersion, description, ingress, labels, launchStage, location, name, project, serviceId, template, traffic, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public ServiceArgs build() {
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

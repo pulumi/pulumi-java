@@ -17,7 +17,7 @@ public final class GetDeploymentLogFileUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -28,7 +28,7 @@ public final class GetDeploymentLogFileUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -39,7 +39,7 @@ public final class GetDeploymentLogFileUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetDeploymentLogFileUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetDeploymentLogFileUrlArgs(
-        String appName,
-        String deploymentName,
-        String resourceGroupName,
-        String serviceName) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetDeploymentLogFileUrlArgs() {}
 
-    private GetDeploymentLogFileUrlArgs() {
-        this.appName = null;
-        this.deploymentName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetDeploymentLogFileUrlArgs(GetDeploymentLogFileUrlArgs $) {
+        this.appName = $.appName;
+        this.deploymentName = $.deploymentName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentLogFileUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appName;
-        private String deploymentName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetDeploymentLogFileUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentLogFileUrlArgs();
         }
 
         public Builder(GetDeploymentLogFileUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetDeploymentLogFileUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetDeploymentLogFileUrlArgs build() {
-            return new GetDeploymentLogFileUrlArgs(appName, deploymentName, resourceGroupName, serviceName);
+        }
+
+        public GetDeploymentLogFileUrlArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

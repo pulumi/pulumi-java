@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="durationSec", required=true)
-      private final Output<Integer> durationSec;
+    private Output<Integer> durationSec;
 
     public Output<Integer> durationSec() {
         return this.durationSec;
@@ -55,7 +55,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="minRequiredReplicas", required=true)
-      private final Output<Integer> minRequiredReplicas;
+    private Output<Integer> minRequiredReplicas;
 
     public Output<Integer> minRequiredReplicas() {
         return this.minRequiredReplicas;
@@ -66,7 +66,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -77,7 +77,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<String> schedule;
+    private Output<String> schedule;
 
     public Output<String> schedule() {
         return this.schedule;
@@ -88,128 +88,112 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        Output<Integer> durationSec,
-        Output<Integer> minRequiredReplicas,
-        Output<String> name,
-        Output<String> schedule,
-        @Nullable Output<String> timeZone) {
-        this.description = description;
-        this.disabled = disabled;
-        this.durationSec = Objects.requireNonNull(durationSec, "expected parameter 'durationSec' to be non-null");
-        this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas, "expected parameter 'minRequiredReplicas' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.timeZone = timeZone;
-    }
+    private RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs() {}
 
-    private RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs() {
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.durationSec = Codegen.empty();
-        this.minRequiredReplicas = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs(RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs $) {
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.durationSec = $.durationSec;
+        this.minRequiredReplicas = $.minRequiredReplicas;
+        this.name = $.name;
+        this.schedule = $.schedule;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private Output<Integer> durationSec;
-        private Output<Integer> minRequiredReplicas;
-        private Output<String> name;
-        private Output<String> schedule;
-        private @Nullable Output<String> timeZone;
+        private RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs();
         }
 
         public Builder(RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.durationSec = defaults.durationSec;
-    	      this.minRequiredReplicas = defaults.minRequiredReplicas;
-    	      this.name = defaults.name;
-    	      this.schedule = defaults.schedule;
-    	      this.timeZone = defaults.timeZone;
+            $ = new RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder durationSec(Output<Integer> durationSec) {
-            this.durationSec = Objects.requireNonNull(durationSec);
+            $.durationSec = durationSec;
             return this;
         }
+
         public Builder durationSec(Integer durationSec) {
-            this.durationSec = Output.of(Objects.requireNonNull(durationSec));
-            return this;
+            return durationSec(Output.of(durationSec));
         }
+
         public Builder minRequiredReplicas(Output<Integer> minRequiredReplicas) {
-            this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
+            $.minRequiredReplicas = minRequiredReplicas;
             return this;
         }
+
         public Builder minRequiredReplicas(Integer minRequiredReplicas) {
-            this.minRequiredReplicas = Output.of(Objects.requireNonNull(minRequiredReplicas));
-            return this;
+            return minRequiredReplicas(Output.of(minRequiredReplicas));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder schedule(Output<String> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs build() {
-            return new RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs build() {
+            $.durationSec = Objects.requireNonNull($.durationSec, "expected parameter 'durationSec' to be non-null");
+            $.minRequiredReplicas = Objects.requireNonNull($.minRequiredReplicas, "expected parameter 'minRequiredReplicas' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

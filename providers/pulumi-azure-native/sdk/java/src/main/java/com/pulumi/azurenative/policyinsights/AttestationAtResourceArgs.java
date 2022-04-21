@@ -8,10 +8,10 @@ import com.pulumi.azurenative.policyinsights.inputs.AttestationEvidenceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="attestationName")
-      private final @Nullable Output<String> attestationName;
+    private @Nullable Output<String> attestationName;
 
-    public Output<String> attestationName() {
-        return this.attestationName == null ? Codegen.empty() : this.attestationName;
+    public Optional<Output<String>> attestationName() {
+        return Optional.ofNullable(this.attestationName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="comments")
-      private final @Nullable Output<String> comments;
+    private @Nullable Output<String> comments;
 
-    public Output<String> comments() {
-        return this.comments == null ? Codegen.empty() : this.comments;
+    public Optional<Output<String>> comments() {
+        return Optional.ofNullable(this.comments);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="complianceState")
-      private final @Nullable Output<Either<String,ComplianceState>> complianceState;
+    private @Nullable Output<Either<String,ComplianceState>> complianceState;
 
-    public Output<Either<String,ComplianceState>> complianceState() {
-        return this.complianceState == null ? Codegen.empty() : this.complianceState;
+    public Optional<Output<Either<String,ComplianceState>>> complianceState() {
+        return Optional.ofNullable(this.complianceState);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="evidence")
-      private final @Nullable Output<List<AttestationEvidenceArgs>> evidence;
+    private @Nullable Output<List<AttestationEvidenceArgs>> evidence;
 
-    public Output<List<AttestationEvidenceArgs>> evidence() {
-        return this.evidence == null ? Codegen.empty() : this.evidence;
+    public Optional<Output<List<AttestationEvidenceArgs>>> evidence() {
+        return Optional.ofNullable(this.evidence);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="expiresOn")
-      private final @Nullable Output<String> expiresOn;
+    private @Nullable Output<String> expiresOn;
 
-    public Output<String> expiresOn() {
-        return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
+    public Optional<Output<String>> expiresOn() {
+        return Optional.ofNullable(this.expiresOn);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyAssignmentId", required=true)
-      private final Output<String> policyAssignmentId;
+    private Output<String> policyAssignmentId;
 
     public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
@@ -101,10 +101,10 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyDefinitionReferenceId")
-      private final @Nullable Output<String> policyDefinitionReferenceId;
+    private @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
+    public Optional<Output<String>> policyDefinitionReferenceId() {
+        return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 
     /**
@@ -112,157 +112,134 @@ public final class AttestationAtResourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public AttestationAtResourceArgs(
-        @Nullable Output<String> attestationName,
-        @Nullable Output<String> comments,
-        @Nullable Output<Either<String,ComplianceState>> complianceState,
-        @Nullable Output<List<AttestationEvidenceArgs>> evidence,
-        @Nullable Output<String> expiresOn,
-        @Nullable Output<String> owner,
-        Output<String> policyAssignmentId,
-        @Nullable Output<String> policyDefinitionReferenceId,
-        Output<String> resourceId) {
-        this.attestationName = attestationName;
-        this.comments = comments;
-        this.complianceState = complianceState;
-        this.evidence = evidence;
-        this.expiresOn = expiresOn;
-        this.owner = owner;
-        this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId, "expected parameter 'policyAssignmentId' to be non-null");
-        this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private AttestationAtResourceArgs() {}
 
-    private AttestationAtResourceArgs() {
-        this.attestationName = Codegen.empty();
-        this.comments = Codegen.empty();
-        this.complianceState = Codegen.empty();
-        this.evidence = Codegen.empty();
-        this.expiresOn = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.policyAssignmentId = Codegen.empty();
-        this.policyDefinitionReferenceId = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private AttestationAtResourceArgs(AttestationAtResourceArgs $) {
+        this.attestationName = $.attestationName;
+        this.comments = $.comments;
+        this.complianceState = $.complianceState;
+        this.evidence = $.evidence;
+        this.expiresOn = $.expiresOn;
+        this.owner = $.owner;
+        this.policyAssignmentId = $.policyAssignmentId;
+        this.policyDefinitionReferenceId = $.policyDefinitionReferenceId;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationAtResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attestationName;
-        private @Nullable Output<String> comments;
-        private @Nullable Output<Either<String,ComplianceState>> complianceState;
-        private @Nullable Output<List<AttestationEvidenceArgs>> evidence;
-        private @Nullable Output<String> expiresOn;
-        private @Nullable Output<String> owner;
-        private Output<String> policyAssignmentId;
-        private @Nullable Output<String> policyDefinitionReferenceId;
-        private Output<String> resourceId;
+        private AttestationAtResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationAtResourceArgs();
         }
 
         public Builder(AttestationAtResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestationName = defaults.attestationName;
-    	      this.comments = defaults.comments;
-    	      this.complianceState = defaults.complianceState;
-    	      this.evidence = defaults.evidence;
-    	      this.expiresOn = defaults.expiresOn;
-    	      this.owner = defaults.owner;
-    	      this.policyAssignmentId = defaults.policyAssignmentId;
-    	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
-    	      this.resourceId = defaults.resourceId;
+            $ = new AttestationAtResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestationName(@Nullable Output<String> attestationName) {
-            this.attestationName = attestationName;
+            $.attestationName = attestationName;
             return this;
         }
-        public Builder attestationName(@Nullable String attestationName) {
-            this.attestationName = Codegen.ofNullable(attestationName);
-            return this;
+
+        public Builder attestationName(String attestationName) {
+            return attestationName(Output.of(attestationName));
         }
+
         public Builder comments(@Nullable Output<String> comments) {
-            this.comments = comments;
+            $.comments = comments;
             return this;
         }
-        public Builder comments(@Nullable String comments) {
-            this.comments = Codegen.ofNullable(comments);
-            return this;
+
+        public Builder comments(String comments) {
+            return comments(Output.of(comments));
         }
+
         public Builder complianceState(@Nullable Output<Either<String,ComplianceState>> complianceState) {
-            this.complianceState = complianceState;
+            $.complianceState = complianceState;
             return this;
         }
-        public Builder complianceState(@Nullable Either<String,ComplianceState> complianceState) {
-            this.complianceState = Codegen.ofNullable(complianceState);
-            return this;
+
+        public Builder complianceState(Either<String,ComplianceState> complianceState) {
+            return complianceState(Output.of(complianceState));
         }
+
         public Builder evidence(@Nullable Output<List<AttestationEvidenceArgs>> evidence) {
-            this.evidence = evidence;
+            $.evidence = evidence;
             return this;
         }
-        public Builder evidence(@Nullable List<AttestationEvidenceArgs> evidence) {
-            this.evidence = Codegen.ofNullable(evidence);
-            return this;
+
+        public Builder evidence(List<AttestationEvidenceArgs> evidence) {
+            return evidence(Output.of(evidence));
         }
+
         public Builder evidence(AttestationEvidenceArgs... evidence) {
             return evidence(List.of(evidence));
         }
+
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
-            this.expiresOn = expiresOn;
+            $.expiresOn = expiresOn;
             return this;
         }
-        public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Codegen.ofNullable(expiresOn);
-            return this;
+
+        public Builder expiresOn(String expiresOn) {
+            return expiresOn(Output.of(expiresOn));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
-            this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
+            $.policyAssignmentId = policyAssignmentId;
             return this;
         }
+
         public Builder policyAssignmentId(String policyAssignmentId) {
-            this.policyAssignmentId = Output.of(Objects.requireNonNull(policyAssignmentId));
-            return this;
+            return policyAssignmentId(Output.of(policyAssignmentId));
         }
+
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = policyDefinitionReferenceId;
+            $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
-            return this;
+
+        public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
+            return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public AttestationAtResourceArgs build() {
-            return new AttestationAtResourceArgs(attestationName, comments, complianceState, evidence, expiresOn, owner, policyAssignmentId, policyDefinitionReferenceId, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public AttestationAtResourceArgs build() {
+            $.policyAssignmentId = Objects.requireNonNull($.policyAssignmentId, "expected parameter 'policyAssignmentId' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

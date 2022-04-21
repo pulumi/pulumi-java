@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
+    private @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
 
-    public Output<InstanceIAMBindingConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<InstanceIAMBindingConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -90,131 +90,112 @@ public final class InstanceIAMBindingState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceIAMBindingState(
-        @Nullable Output<InstanceIAMBindingConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> project,
-        @Nullable Output<String> role,
-        @Nullable Output<String> zone) {
-        this.condition = condition;
-        this.etag = etag;
-        this.instanceName = instanceName;
-        this.members = members;
-        this.project = project;
-        this.role = role;
-        this.zone = zone;
-    }
+    private InstanceIAMBindingState() {}
 
-    private InstanceIAMBindingState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceIAMBindingState(InstanceIAMBindingState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.instanceName = $.instanceName;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceIAMBindingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> zone;
+        private InstanceIAMBindingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceIAMBindingState();
         }
 
         public Builder(InstanceIAMBindingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.instanceName = defaults.instanceName;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.zone = defaults.zone;
+            $ = new InstanceIAMBindingState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<InstanceIAMBindingConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable InstanceIAMBindingConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(InstanceIAMBindingConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceIAMBindingState build() {
-            return new InstanceIAMBindingState(condition, etag, instanceName, members, project, role, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceIAMBindingState build() {
+            return $;
         }
     }
+
 }

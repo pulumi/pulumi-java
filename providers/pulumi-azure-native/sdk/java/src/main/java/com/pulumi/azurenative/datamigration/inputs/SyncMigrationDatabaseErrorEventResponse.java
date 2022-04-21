@@ -21,7 +21,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
      * 
      */
     @Import(name="eventText", required=true)
-      private final String eventText;
+    private String eventText;
 
     public String eventText() {
         return this.eventText;
@@ -32,7 +32,7 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
      * 
      */
     @Import(name="eventTypeString", required=true)
-      private final String eventTypeString;
+    private String eventTypeString;
 
     public String eventTypeString() {
         return this.eventTypeString;
@@ -43,64 +43,59 @@ public final class SyncMigrationDatabaseErrorEventResponse extends com.pulumi.re
      * 
      */
     @Import(name="timestampString", required=true)
-      private final String timestampString;
+    private String timestampString;
 
     public String timestampString() {
         return this.timestampString;
     }
 
-    public SyncMigrationDatabaseErrorEventResponse(
-        String eventText,
-        String eventTypeString,
-        String timestampString) {
-        this.eventText = Objects.requireNonNull(eventText, "expected parameter 'eventText' to be non-null");
-        this.eventTypeString = Objects.requireNonNull(eventTypeString, "expected parameter 'eventTypeString' to be non-null");
-        this.timestampString = Objects.requireNonNull(timestampString, "expected parameter 'timestampString' to be non-null");
-    }
+    private SyncMigrationDatabaseErrorEventResponse() {}
 
-    private SyncMigrationDatabaseErrorEventResponse() {
-        this.eventText = null;
-        this.eventTypeString = null;
-        this.timestampString = null;
+    private SyncMigrationDatabaseErrorEventResponse(SyncMigrationDatabaseErrorEventResponse $) {
+        this.eventText = $.eventText;
+        this.eventTypeString = $.eventTypeString;
+        this.timestampString = $.timestampString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncMigrationDatabaseErrorEventResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventText;
-        private String eventTypeString;
-        private String timestampString;
+        private SyncMigrationDatabaseErrorEventResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncMigrationDatabaseErrorEventResponse();
         }
 
         public Builder(SyncMigrationDatabaseErrorEventResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventText = defaults.eventText;
-    	      this.eventTypeString = defaults.eventTypeString;
-    	      this.timestampString = defaults.timestampString;
+            $ = new SyncMigrationDatabaseErrorEventResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventText(String eventText) {
-            this.eventText = Objects.requireNonNull(eventText);
+            $.eventText = eventText;
             return this;
         }
+
         public Builder eventTypeString(String eventTypeString) {
-            this.eventTypeString = Objects.requireNonNull(eventTypeString);
+            $.eventTypeString = eventTypeString;
             return this;
         }
+
         public Builder timestampString(String timestampString) {
-            this.timestampString = Objects.requireNonNull(timestampString);
+            $.timestampString = timestampString;
             return this;
-        }        public SyncMigrationDatabaseErrorEventResponse build() {
-            return new SyncMigrationDatabaseErrorEventResponse(eventText, eventTypeString, timestampString);
+        }
+
+        public SyncMigrationDatabaseErrorEventResponse build() {
+            $.eventText = Objects.requireNonNull($.eventText, "expected parameter 'eventText' to be non-null");
+            $.eventTypeString = Objects.requireNonNull($.eventTypeString, "expected parameter 'eventTypeString' to be non-null");
+            $.timestampString = Objects.requireNonNull($.timestampString, "expected parameter 'timestampString' to be non-null");
+            return $;
         }
     }
+
 }

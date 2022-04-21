@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="excludePrefixes")
-      private final @Nullable Output<List<String>> excludePrefixes;
+    private @Nullable Output<List<String>> excludePrefixes;
 
-    public Output<List<String>> excludePrefixes() {
-        return this.excludePrefixes == null ? Codegen.empty() : this.excludePrefixes;
+    public Optional<Output<List<String>>> excludePrefixes() {
+        return Optional.ofNullable(this.excludePrefixes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="includePrefixes")
-      private final @Nullable Output<List<String>> includePrefixes;
+    private @Nullable Output<List<String>> includePrefixes;
 
-    public Output<List<String>> includePrefixes() {
-        return this.includePrefixes == null ? Codegen.empty() : this.includePrefixes;
+    public Optional<Output<List<String>>> includePrefixes() {
+        return Optional.ofNullable(this.includePrefixes);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lastModifiedBefore")
-      private final @Nullable Output<String> lastModifiedBefore;
+    private @Nullable Output<String> lastModifiedBefore;
 
-    public Output<String> lastModifiedBefore() {
-        return this.lastModifiedBefore == null ? Codegen.empty() : this.lastModifiedBefore;
+    public Optional<Output<String>> lastModifiedBefore() {
+        return Optional.ofNullable(this.lastModifiedBefore);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lastModifiedSince")
-      private final @Nullable Output<String> lastModifiedSince;
+    private @Nullable Output<String> lastModifiedSince;
 
-    public Output<String> lastModifiedSince() {
-        return this.lastModifiedSince == null ? Codegen.empty() : this.lastModifiedSince;
+    public Optional<Output<String>> lastModifiedSince() {
+        return Optional.ofNullable(this.lastModifiedSince);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxTimeElapsedSinceLastModification")
-      private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
+    private @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
-    public Output<String> maxTimeElapsedSinceLastModification() {
-        return this.maxTimeElapsedSinceLastModification == null ? Codegen.empty() : this.maxTimeElapsedSinceLastModification;
+    public Optional<Output<String>> maxTimeElapsedSinceLastModification() {
+        return Optional.ofNullable(this.maxTimeElapsedSinceLastModification);
     }
 
     /**
@@ -80,121 +80,106 @@ public final class ObjectConditionsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="minTimeElapsedSinceLastModification")
-      private final @Nullable Output<String> minTimeElapsedSinceLastModification;
+    private @Nullable Output<String> minTimeElapsedSinceLastModification;
 
-    public Output<String> minTimeElapsedSinceLastModification() {
-        return this.minTimeElapsedSinceLastModification == null ? Codegen.empty() : this.minTimeElapsedSinceLastModification;
+    public Optional<Output<String>> minTimeElapsedSinceLastModification() {
+        return Optional.ofNullable(this.minTimeElapsedSinceLastModification);
     }
 
-    public ObjectConditionsArgs(
-        @Nullable Output<List<String>> excludePrefixes,
-        @Nullable Output<List<String>> includePrefixes,
-        @Nullable Output<String> lastModifiedBefore,
-        @Nullable Output<String> lastModifiedSince,
-        @Nullable Output<String> maxTimeElapsedSinceLastModification,
-        @Nullable Output<String> minTimeElapsedSinceLastModification) {
-        this.excludePrefixes = excludePrefixes;
-        this.includePrefixes = includePrefixes;
-        this.lastModifiedBefore = lastModifiedBefore;
-        this.lastModifiedSince = lastModifiedSince;
-        this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
-        this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
-    }
+    private ObjectConditionsArgs() {}
 
-    private ObjectConditionsArgs() {
-        this.excludePrefixes = Codegen.empty();
-        this.includePrefixes = Codegen.empty();
-        this.lastModifiedBefore = Codegen.empty();
-        this.lastModifiedSince = Codegen.empty();
-        this.maxTimeElapsedSinceLastModification = Codegen.empty();
-        this.minTimeElapsedSinceLastModification = Codegen.empty();
+    private ObjectConditionsArgs(ObjectConditionsArgs $) {
+        this.excludePrefixes = $.excludePrefixes;
+        this.includePrefixes = $.includePrefixes;
+        this.lastModifiedBefore = $.lastModifiedBefore;
+        this.lastModifiedSince = $.lastModifiedSince;
+        this.maxTimeElapsedSinceLastModification = $.maxTimeElapsedSinceLastModification;
+        this.minTimeElapsedSinceLastModification = $.minTimeElapsedSinceLastModification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectConditionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludePrefixes;
-        private @Nullable Output<List<String>> includePrefixes;
-        private @Nullable Output<String> lastModifiedBefore;
-        private @Nullable Output<String> lastModifiedSince;
-        private @Nullable Output<String> maxTimeElapsedSinceLastModification;
-        private @Nullable Output<String> minTimeElapsedSinceLastModification;
+        private ObjectConditionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectConditionsArgs();
         }
 
         public Builder(ObjectConditionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludePrefixes = defaults.excludePrefixes;
-    	      this.includePrefixes = defaults.includePrefixes;
-    	      this.lastModifiedBefore = defaults.lastModifiedBefore;
-    	      this.lastModifiedSince = defaults.lastModifiedSince;
-    	      this.maxTimeElapsedSinceLastModification = defaults.maxTimeElapsedSinceLastModification;
-    	      this.minTimeElapsedSinceLastModification = defaults.minTimeElapsedSinceLastModification;
+            $ = new ObjectConditionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludePrefixes(@Nullable Output<List<String>> excludePrefixes) {
-            this.excludePrefixes = excludePrefixes;
+            $.excludePrefixes = excludePrefixes;
             return this;
         }
-        public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
-            this.excludePrefixes = Codegen.ofNullable(excludePrefixes);
-            return this;
+
+        public Builder excludePrefixes(List<String> excludePrefixes) {
+            return excludePrefixes(Output.of(excludePrefixes));
         }
+
         public Builder excludePrefixes(String... excludePrefixes) {
             return excludePrefixes(List.of(excludePrefixes));
         }
+
         public Builder includePrefixes(@Nullable Output<List<String>> includePrefixes) {
-            this.includePrefixes = includePrefixes;
+            $.includePrefixes = includePrefixes;
             return this;
         }
-        public Builder includePrefixes(@Nullable List<String> includePrefixes) {
-            this.includePrefixes = Codegen.ofNullable(includePrefixes);
-            return this;
+
+        public Builder includePrefixes(List<String> includePrefixes) {
+            return includePrefixes(Output.of(includePrefixes));
         }
+
         public Builder includePrefixes(String... includePrefixes) {
             return includePrefixes(List.of(includePrefixes));
         }
+
         public Builder lastModifiedBefore(@Nullable Output<String> lastModifiedBefore) {
-            this.lastModifiedBefore = lastModifiedBefore;
+            $.lastModifiedBefore = lastModifiedBefore;
             return this;
         }
-        public Builder lastModifiedBefore(@Nullable String lastModifiedBefore) {
-            this.lastModifiedBefore = Codegen.ofNullable(lastModifiedBefore);
-            return this;
+
+        public Builder lastModifiedBefore(String lastModifiedBefore) {
+            return lastModifiedBefore(Output.of(lastModifiedBefore));
         }
+
         public Builder lastModifiedSince(@Nullable Output<String> lastModifiedSince) {
-            this.lastModifiedSince = lastModifiedSince;
+            $.lastModifiedSince = lastModifiedSince;
             return this;
         }
-        public Builder lastModifiedSince(@Nullable String lastModifiedSince) {
-            this.lastModifiedSince = Codegen.ofNullable(lastModifiedSince);
-            return this;
+
+        public Builder lastModifiedSince(String lastModifiedSince) {
+            return lastModifiedSince(Output.of(lastModifiedSince));
         }
+
         public Builder maxTimeElapsedSinceLastModification(@Nullable Output<String> maxTimeElapsedSinceLastModification) {
-            this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
+            $.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
-        public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
-            this.maxTimeElapsedSinceLastModification = Codegen.ofNullable(maxTimeElapsedSinceLastModification);
-            return this;
+
+        public Builder maxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
+            return maxTimeElapsedSinceLastModification(Output.of(maxTimeElapsedSinceLastModification));
         }
+
         public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
-            this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
+            $.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
-        public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
-            this.minTimeElapsedSinceLastModification = Codegen.ofNullable(minTimeElapsedSinceLastModification);
-            return this;
-        }        public ObjectConditionsArgs build() {
-            return new ObjectConditionsArgs(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);
+
+        public Builder minTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {
+            return minTimeElapsedSinceLastModification(Output.of(minTimeElapsedSinceLastModification));
+        }
+
+        public ObjectConditionsArgs build() {
+            return $;
         }
     }
+
 }

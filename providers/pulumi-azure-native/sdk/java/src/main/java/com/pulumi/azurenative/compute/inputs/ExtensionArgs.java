@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.CloudServiceExtensionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<CloudServiceExtensionPropertiesArgs> properties;
+    private @Nullable Output<CloudServiceExtensionPropertiesArgs> properties;
 
-    public Output<CloudServiceExtensionPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CloudServiceExtensionPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public ExtensionArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<CloudServiceExtensionPropertiesArgs> properties) {
-        this.name = name;
-        this.properties = properties;
-    }
+    private ExtensionArgs() {}
 
-    private ExtensionArgs() {
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ExtensionArgs(ExtensionArgs $) {
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<CloudServiceExtensionPropertiesArgs> properties;
+        private ExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionArgs();
         }
 
         public Builder(ExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<CloudServiceExtensionPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CloudServiceExtensionPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public ExtensionArgs build() {
-            return new ExtensionArgs(name, properties);
+
+        public Builder properties(CloudServiceExtensionPropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public ExtensionArgs build() {
+            return $;
         }
     }
+
 }

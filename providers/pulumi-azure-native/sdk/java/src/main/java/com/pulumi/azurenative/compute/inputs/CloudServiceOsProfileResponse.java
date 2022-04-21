@@ -24,48 +24,48 @@ public final class CloudServiceOsProfileResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="secrets")
-      private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
+    private @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
-    public List<CloudServiceVaultSecretGroupResponse> secrets() {
-        return this.secrets == null ? List.of() : this.secrets;
+    public Optional<List<CloudServiceVaultSecretGroupResponse>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
-    public CloudServiceOsProfileResponse(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
-        this.secrets = secrets;
-    }
+    private CloudServiceOsProfileResponse() {}
 
-    private CloudServiceOsProfileResponse() {
-        this.secrets = List.of();
+    private CloudServiceOsProfileResponse(CloudServiceOsProfileResponse $) {
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceOsProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
+        private CloudServiceOsProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceOsProfileResponse();
         }
 
         public Builder(CloudServiceOsProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secrets = defaults.secrets;
+            $ = new CloudServiceOsProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(CloudServiceVaultSecretGroupResponse... secrets) {
             return secrets(List.of(secrets));
-        }        public CloudServiceOsProfileResponse build() {
-            return new CloudServiceOsProfileResponse(secrets);
+        }
+
+        public CloudServiceOsProfileResponse build() {
+            return $;
         }
     }
+
 }

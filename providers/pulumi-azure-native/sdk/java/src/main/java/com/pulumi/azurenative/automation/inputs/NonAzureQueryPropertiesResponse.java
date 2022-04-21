@@ -23,10 +23,10 @@ public final class NonAzureQueryPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="functionAlias")
-      private final @Nullable String functionAlias;
+    private @Nullable String functionAlias;
 
     public Optional<String> functionAlias() {
-        return this.functionAlias == null ? Optional.empty() : Optional.ofNullable(this.functionAlias);
+        return Optional.ofNullable(this.functionAlias);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class NonAzureQueryPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable String workspaceId;
+    private @Nullable String workspaceId;
 
     public Optional<String> workspaceId() {
-        return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
+        return Optional.ofNullable(this.workspaceId);
     }
 
-    public NonAzureQueryPropertiesResponse(
-        @Nullable String functionAlias,
-        @Nullable String workspaceId) {
-        this.functionAlias = functionAlias;
-        this.workspaceId = workspaceId;
-    }
+    private NonAzureQueryPropertiesResponse() {}
 
-    private NonAzureQueryPropertiesResponse() {
-        this.functionAlias = null;
-        this.workspaceId = null;
+    private NonAzureQueryPropertiesResponse(NonAzureQueryPropertiesResponse $) {
+        this.functionAlias = $.functionAlias;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonAzureQueryPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String functionAlias;
-        private @Nullable String workspaceId;
+        private NonAzureQueryPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonAzureQueryPropertiesResponse();
         }
 
         public Builder(NonAzureQueryPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionAlias = defaults.functionAlias;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new NonAzureQueryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = functionAlias;
+            $.functionAlias = functionAlias;
             return this;
         }
+
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
-        }        public NonAzureQueryPropertiesResponse build() {
-            return new NonAzureQueryPropertiesResponse(functionAlias, workspaceId);
+        }
+
+        public NonAzureQueryPropertiesResponse build() {
+            return $;
         }
     }
+
 }

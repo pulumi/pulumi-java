@@ -7,9 +7,9 @@ import com.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskId", required=true)
-      private final Output<String> diskId;
+    private Output<String> diskId;
 
     public Output<String> diskId() {
         return this.diskId;
@@ -37,10 +37,10 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<Either<String,DiskAccountType>> diskType;
+    private @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Output<Either<String,DiskAccountType>> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<Either<String,DiskAccountType>>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="isOSDisk", required=true)
-      private final Output<String> isOSDisk;
+    private Output<String> isOSDisk;
 
     public Output<String> isOSDisk() {
         return this.isOSDisk;
@@ -59,7 +59,7 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logStorageAccountId", required=true)
-      private final Output<String> logStorageAccountId;
+    private Output<String> logStorageAccountId;
 
     public Output<String> logStorageAccountId() {
         return this.logStorageAccountId;
@@ -70,102 +70,92 @@ public final class VMwareCbtDiskInputArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="logStorageAccountSasSecretName", required=true)
-      private final Output<String> logStorageAccountSasSecretName;
+    private Output<String> logStorageAccountSasSecretName;
 
     public Output<String> logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
     }
 
-    public VMwareCbtDiskInputArgs(
-        Output<String> diskId,
-        @Nullable Output<Either<String,DiskAccountType>> diskType,
-        Output<String> isOSDisk,
-        Output<String> logStorageAccountId,
-        Output<String> logStorageAccountSasSecretName) {
-        this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
-        this.diskType = diskType;
-        this.isOSDisk = Objects.requireNonNull(isOSDisk, "expected parameter 'isOSDisk' to be non-null");
-        this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId, "expected parameter 'logStorageAccountId' to be non-null");
-        this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName, "expected parameter 'logStorageAccountSasSecretName' to be non-null");
-    }
+    private VMwareCbtDiskInputArgs() {}
 
-    private VMwareCbtDiskInputArgs() {
-        this.diskId = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.isOSDisk = Codegen.empty();
-        this.logStorageAccountId = Codegen.empty();
-        this.logStorageAccountSasSecretName = Codegen.empty();
+    private VMwareCbtDiskInputArgs(VMwareCbtDiskInputArgs $) {
+        this.diskId = $.diskId;
+        this.diskType = $.diskType;
+        this.isOSDisk = $.isOSDisk;
+        this.logStorageAccountId = $.logStorageAccountId;
+        this.logStorageAccountSasSecretName = $.logStorageAccountSasSecretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtDiskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> diskId;
-        private @Nullable Output<Either<String,DiskAccountType>> diskType;
-        private Output<String> isOSDisk;
-        private Output<String> logStorageAccountId;
-        private Output<String> logStorageAccountSasSecretName;
+        private VMwareCbtDiskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtDiskInputArgs();
         }
 
         public Builder(VMwareCbtDiskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskId = defaults.diskId;
-    	      this.diskType = defaults.diskType;
-    	      this.isOSDisk = defaults.isOSDisk;
-    	      this.logStorageAccountId = defaults.logStorageAccountId;
-    	      this.logStorageAccountSasSecretName = defaults.logStorageAccountSasSecretName;
+            $ = new VMwareCbtDiskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskId(Output<String> diskId) {
-            this.diskId = Objects.requireNonNull(diskId);
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskId(String diskId) {
-            this.diskId = Output.of(Objects.requireNonNull(diskId));
-            return this;
+            return diskId(Output.of(diskId));
         }
+
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(Either<String,DiskAccountType> diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder isOSDisk(Output<String> isOSDisk) {
-            this.isOSDisk = Objects.requireNonNull(isOSDisk);
+            $.isOSDisk = isOSDisk;
             return this;
         }
+
         public Builder isOSDisk(String isOSDisk) {
-            this.isOSDisk = Output.of(Objects.requireNonNull(isOSDisk));
-            return this;
+            return isOSDisk(Output.of(isOSDisk));
         }
+
         public Builder logStorageAccountId(Output<String> logStorageAccountId) {
-            this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
+            $.logStorageAccountId = logStorageAccountId;
             return this;
         }
+
         public Builder logStorageAccountId(String logStorageAccountId) {
-            this.logStorageAccountId = Output.of(Objects.requireNonNull(logStorageAccountId));
-            return this;
+            return logStorageAccountId(Output.of(logStorageAccountId));
         }
+
         public Builder logStorageAccountSasSecretName(Output<String> logStorageAccountSasSecretName) {
-            this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
+            $.logStorageAccountSasSecretName = logStorageAccountSasSecretName;
             return this;
         }
+
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
-            this.logStorageAccountSasSecretName = Output.of(Objects.requireNonNull(logStorageAccountSasSecretName));
-            return this;
-        }        public VMwareCbtDiskInputArgs build() {
-            return new VMwareCbtDiskInputArgs(diskId, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName);
+            return logStorageAccountSasSecretName(Output.of(logStorageAccountSasSecretName));
+        }
+
+        public VMwareCbtDiskInputArgs build() {
+            $.diskId = Objects.requireNonNull($.diskId, "expected parameter 'diskId' to be non-null");
+            $.isOSDisk = Objects.requireNonNull($.isOSDisk, "expected parameter 'isOSDisk' to be non-null");
+            $.logStorageAccountId = Objects.requireNonNull($.logStorageAccountId, "expected parameter 'logStorageAccountId' to be non-null");
+            $.logStorageAccountSasSecretName = Objects.requireNonNull($.logStorageAccountSasSecretName, "expected parameter 'logStorageAccountSasSecretName' to be non-null");
+            return $;
         }
     }
+
 }

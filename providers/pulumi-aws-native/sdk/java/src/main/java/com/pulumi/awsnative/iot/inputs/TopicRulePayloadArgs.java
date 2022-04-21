@@ -6,11 +6,11 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,153 +19,139 @@ public final class TopicRulePayloadArgs extends com.pulumi.resources.ResourceArg
     public static final TopicRulePayloadArgs Empty = new TopicRulePayloadArgs();
 
     @Import(name="actions", required=true)
-      private final Output<List<TopicRuleActionArgs>> actions;
+    private Output<List<TopicRuleActionArgs>> actions;
 
     public Output<List<TopicRuleActionArgs>> actions() {
         return this.actions;
     }
 
     @Import(name="awsIotSqlVersion")
-      private final @Nullable Output<String> awsIotSqlVersion;
+    private @Nullable Output<String> awsIotSqlVersion;
 
-    public Output<String> awsIotSqlVersion() {
-        return this.awsIotSqlVersion == null ? Codegen.empty() : this.awsIotSqlVersion;
+    public Optional<Output<String>> awsIotSqlVersion() {
+        return Optional.ofNullable(this.awsIotSqlVersion);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="errorAction")
-      private final @Nullable Output<TopicRuleActionArgs> errorAction;
+    private @Nullable Output<TopicRuleActionArgs> errorAction;
 
-    public Output<TopicRuleActionArgs> errorAction() {
-        return this.errorAction == null ? Codegen.empty() : this.errorAction;
+    public Optional<Output<TopicRuleActionArgs>> errorAction() {
+        return Optional.ofNullable(this.errorAction);
     }
 
     @Import(name="ruleDisabled")
-      private final @Nullable Output<Boolean> ruleDisabled;
+    private @Nullable Output<Boolean> ruleDisabled;
 
-    public Output<Boolean> ruleDisabled() {
-        return this.ruleDisabled == null ? Codegen.empty() : this.ruleDisabled;
+    public Optional<Output<Boolean>> ruleDisabled() {
+        return Optional.ofNullable(this.ruleDisabled);
     }
 
     @Import(name="sql", required=true)
-      private final Output<String> sql;
+    private Output<String> sql;
 
     public Output<String> sql() {
         return this.sql;
     }
 
-    public TopicRulePayloadArgs(
-        Output<List<TopicRuleActionArgs>> actions,
-        @Nullable Output<String> awsIotSqlVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<TopicRuleActionArgs> errorAction,
-        @Nullable Output<Boolean> ruleDisabled,
-        Output<String> sql) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.awsIotSqlVersion = awsIotSqlVersion;
-        this.description = description;
-        this.errorAction = errorAction;
-        this.ruleDisabled = ruleDisabled;
-        this.sql = Objects.requireNonNull(sql, "expected parameter 'sql' to be non-null");
-    }
+    private TopicRulePayloadArgs() {}
 
-    private TopicRulePayloadArgs() {
-        this.actions = Codegen.empty();
-        this.awsIotSqlVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.errorAction = Codegen.empty();
-        this.ruleDisabled = Codegen.empty();
-        this.sql = Codegen.empty();
+    private TopicRulePayloadArgs(TopicRulePayloadArgs $) {
+        this.actions = $.actions;
+        this.awsIotSqlVersion = $.awsIotSqlVersion;
+        this.description = $.description;
+        this.errorAction = $.errorAction;
+        this.ruleDisabled = $.ruleDisabled;
+        this.sql = $.sql;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRulePayloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TopicRuleActionArgs>> actions;
-        private @Nullable Output<String> awsIotSqlVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<TopicRuleActionArgs> errorAction;
-        private @Nullable Output<Boolean> ruleDisabled;
-        private Output<String> sql;
+        private TopicRulePayloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRulePayloadArgs();
         }
 
         public Builder(TopicRulePayloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.awsIotSqlVersion = defaults.awsIotSqlVersion;
-    	      this.description = defaults.description;
-    	      this.errorAction = defaults.errorAction;
-    	      this.ruleDisabled = defaults.ruleDisabled;
-    	      this.sql = defaults.sql;
+            $ = new TopicRulePayloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<TopicRuleActionArgs>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<TopicRuleActionArgs> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(TopicRuleActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder awsIotSqlVersion(@Nullable Output<String> awsIotSqlVersion) {
-            this.awsIotSqlVersion = awsIotSqlVersion;
+            $.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
-        public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
-            this.awsIotSqlVersion = Codegen.ofNullable(awsIotSqlVersion);
-            return this;
+
+        public Builder awsIotSqlVersion(String awsIotSqlVersion) {
+            return awsIotSqlVersion(Output.of(awsIotSqlVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder errorAction(@Nullable Output<TopicRuleActionArgs> errorAction) {
-            this.errorAction = errorAction;
+            $.errorAction = errorAction;
             return this;
         }
-        public Builder errorAction(@Nullable TopicRuleActionArgs errorAction) {
-            this.errorAction = Codegen.ofNullable(errorAction);
-            return this;
+
+        public Builder errorAction(TopicRuleActionArgs errorAction) {
+            return errorAction(Output.of(errorAction));
         }
+
         public Builder ruleDisabled(@Nullable Output<Boolean> ruleDisabled) {
-            this.ruleDisabled = ruleDisabled;
+            $.ruleDisabled = ruleDisabled;
             return this;
         }
-        public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
-            this.ruleDisabled = Codegen.ofNullable(ruleDisabled);
-            return this;
+
+        public Builder ruleDisabled(Boolean ruleDisabled) {
+            return ruleDisabled(Output.of(ruleDisabled));
         }
+
         public Builder sql(Output<String> sql) {
-            this.sql = Objects.requireNonNull(sql);
+            $.sql = sql;
             return this;
         }
+
         public Builder sql(String sql) {
-            this.sql = Output.of(Objects.requireNonNull(sql));
-            return this;
-        }        public TopicRulePayloadArgs build() {
-            return new TopicRulePayloadArgs(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
+            return sql(Output.of(sql));
+        }
+
+        public TopicRulePayloadArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.sql = Objects.requireNonNull($.sql, "expected parameter 'sql' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hours")
-      private final @Nullable List<Integer> hours;
+    private @Nullable List<Integer> hours;
 
-    public List<Integer> hours() {
-        return this.hours == null ? List.of() : this.hours;
+    public Optional<List<Integer>> hours() {
+        return Optional.ofNullable(this.hours);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="minutes")
-      private final @Nullable List<Integer> minutes;
+    private @Nullable List<Integer> minutes;
 
-    public List<Integer> minutes() {
-        return this.minutes == null ? List.of() : this.minutes;
+    public Optional<List<Integer>> minutes() {
+        return Optional.ofNullable(this.minutes);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="monthDays")
-      private final @Nullable List<Integer> monthDays;
+    private @Nullable List<Integer> monthDays;
 
-    public List<Integer> monthDays() {
-        return this.monthDays == null ? List.of() : this.monthDays;
+    public Optional<List<Integer>> monthDays() {
+        return Optional.ofNullable(this.monthDays);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="monthlyOccurrences")
-      private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
+    private @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
 
-    public List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences() {
-        return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
+    public Optional<List<RecurrenceScheduleOccurrenceResponse>> monthlyOccurrences() {
+        return Optional.ofNullable(this.monthlyOccurrences);
     }
 
     /**
@@ -70,97 +70,88 @@ public final class RecurrenceScheduleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="weekDays")
-      private final @Nullable List<String> weekDays;
+    private @Nullable List<String> weekDays;
 
-    public List<String> weekDays() {
-        return this.weekDays == null ? List.of() : this.weekDays;
+    public Optional<List<String>> weekDays() {
+        return Optional.ofNullable(this.weekDays);
     }
 
-    public RecurrenceScheduleResponse(
-        @Nullable List<Integer> hours,
-        @Nullable List<Integer> minutes,
-        @Nullable List<Integer> monthDays,
-        @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
-        this.hours = hours;
-        this.minutes = minutes;
-        this.monthDays = monthDays;
-        this.monthlyOccurrences = monthlyOccurrences;
-        this.weekDays = weekDays;
-    }
+    private RecurrenceScheduleResponse() {}
 
-    private RecurrenceScheduleResponse() {
-        this.hours = List.of();
-        this.minutes = List.of();
-        this.monthDays = List.of();
-        this.monthlyOccurrences = List.of();
-        this.weekDays = List.of();
+    private RecurrenceScheduleResponse(RecurrenceScheduleResponse $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.monthDays = $.monthDays;
+        this.monthlyOccurrences = $.monthlyOccurrences;
+        this.weekDays = $.weekDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrenceScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Integer> hours;
-        private @Nullable List<Integer> minutes;
-        private @Nullable List<Integer> monthDays;
-        private @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
-        private @Nullable List<String> weekDays;
+        private RecurrenceScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrenceScheduleResponse();
         }
 
         public Builder(RecurrenceScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.monthDays = defaults.monthDays;
-    	      this.monthlyOccurrences = defaults.monthlyOccurrences;
-    	      this.weekDays = defaults.weekDays;
+            $ = new RecurrenceScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(@Nullable List<Integer> hours) {
-            this.hours = hours;
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
+
         public Builder minutes(@Nullable List<Integer> minutes) {
-            this.minutes = minutes;
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
+
         public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = monthDays;
+            $.monthDays = monthDays;
             return this;
         }
+
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
+
         public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences) {
-            this.monthlyOccurrences = monthlyOccurrences;
+            $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
+
         public Builder monthlyOccurrences(RecurrenceScheduleOccurrenceResponse... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
+
         public Builder weekDays(@Nullable List<String> weekDays) {
-            this.weekDays = weekDays;
+            $.weekDays = weekDays;
             return this;
         }
+
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
-        }        public RecurrenceScheduleResponse build() {
-            return new RecurrenceScheduleResponse(hours, minutes, monthDays, monthlyOccurrences, weekDays);
+        }
+
+        public RecurrenceScheduleResponse build() {
+            return $;
         }
     }
+
 }

@@ -14,7 +14,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends com.pulumi.
     public static final ResourcePolicyVmMaintenancePolicyResponse Empty = new ResourcePolicyVmMaintenancePolicyResponse();
 
     @Import(name="concurrencyControlGroup", required=true)
-      private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
 
     public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup() {
         return this.concurrencyControlGroup;
@@ -25,55 +25,52 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends com.pulumi.
      * 
      */
     @Import(name="maintenanceWindow", required=true)
-      private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
+    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
     }
 
-    public ResourcePolicyVmMaintenancePolicyResponse(
-        ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
-        ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
-        this.concurrencyControlGroup = Objects.requireNonNull(concurrencyControlGroup, "expected parameter 'concurrencyControlGroup' to be non-null");
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow, "expected parameter 'maintenanceWindow' to be non-null");
-    }
+    private ResourcePolicyVmMaintenancePolicyResponse() {}
 
-    private ResourcePolicyVmMaintenancePolicyResponse() {
-        this.concurrencyControlGroup = null;
-        this.maintenanceWindow = null;
+    private ResourcePolicyVmMaintenancePolicyResponse(ResourcePolicyVmMaintenancePolicyResponse $) {
+        this.concurrencyControlGroup = $.concurrencyControlGroup;
+        this.maintenanceWindow = $.maintenanceWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyVmMaintenancePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
-        private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
+        private ResourcePolicyVmMaintenancePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyVmMaintenancePolicyResponse();
         }
 
         public Builder(ResourcePolicyVmMaintenancePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.concurrencyControlGroup = defaults.concurrencyControlGroup;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
+            $ = new ResourcePolicyVmMaintenancePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder concurrencyControlGroup(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup) {
-            this.concurrencyControlGroup = Objects.requireNonNull(concurrencyControlGroup);
+            $.concurrencyControlGroup = concurrencyControlGroup;
             return this;
         }
+
         public Builder maintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
-            this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
+            $.maintenanceWindow = maintenanceWindow;
             return this;
-        }        public ResourcePolicyVmMaintenancePolicyResponse build() {
-            return new ResourcePolicyVmMaintenancePolicyResponse(concurrencyControlGroup, maintenanceWindow);
+        }
+
+        public ResourcePolicyVmMaintenancePolicyResponse build() {
+            $.concurrencyControlGroup = Objects.requireNonNull($.concurrencyControlGroup, "expected parameter 'concurrencyControlGroup' to be non-null");
+            $.maintenanceWindow = Objects.requireNonNull($.maintenanceWindow, "expected parameter 'maintenanceWindow' to be non-null");
+            return $;
         }
     }
+
 }

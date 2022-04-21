@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
      * 
      */
     @Import(name="isCloudFunction")
-      private final @Nullable Output<Boolean> isCloudFunction;
+    private @Nullable Output<Boolean> isCloudFunction;
 
-    public Output<Boolean> isCloudFunction() {
-        return this.isCloudFunction == null ? Codegen.empty() : this.isCloudFunction;
+    public Optional<Output<Boolean>> isCloudFunction() {
+        return Optional.ofNullable(this.isCloudFunction);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
      * 
      */
     @Import(name="requestHeaders")
-      private final @Nullable Output<Map<String,String>> requestHeaders;
+    private @Nullable Output<Map<String,String>> requestHeaders;
 
-    public Output<Map<String,String>> requestHeaders() {
-        return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
+    public Optional<Output<Map<String,String>>> requestHeaders() {
+        return Optional.ofNullable(this.requestHeaders);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
@@ -70,102 +70,89 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs exten
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs(
-        @Nullable Output<Boolean> isCloudFunction,
-        @Nullable Output<String> password,
-        @Nullable Output<Map<String,String>> requestHeaders,
-        Output<String> uri,
-        @Nullable Output<String> username) {
-        this.isCloudFunction = isCloudFunction;
-        this.password = password;
-        this.requestHeaders = requestHeaders;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.username = username;
-    }
+    private GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs() {}
 
-    private GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs() {
-        this.isCloudFunction = Codegen.empty();
-        this.password = Codegen.empty();
-        this.requestHeaders = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.username = Codegen.empty();
+    private GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs(GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs $) {
+        this.isCloudFunction = $.isCloudFunction;
+        this.password = $.password;
+        this.requestHeaders = $.requestHeaders;
+        this.uri = $.uri;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isCloudFunction;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Map<String,String>> requestHeaders;
-        private Output<String> uri;
-        private @Nullable Output<String> username;
+        private GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isCloudFunction = defaults.isCloudFunction;
-    	      this.password = defaults.password;
-    	      this.requestHeaders = defaults.requestHeaders;
-    	      this.uri = defaults.uri;
-    	      this.username = defaults.username;
+            $ = new GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isCloudFunction(@Nullable Output<Boolean> isCloudFunction) {
-            this.isCloudFunction = isCloudFunction;
+            $.isCloudFunction = isCloudFunction;
             return this;
         }
-        public Builder isCloudFunction(@Nullable Boolean isCloudFunction) {
-            this.isCloudFunction = Codegen.ofNullable(isCloudFunction);
-            return this;
+
+        public Builder isCloudFunction(Boolean isCloudFunction) {
+            return isCloudFunction(Output.of(isCloudFunction));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
-            this.requestHeaders = requestHeaders;
+            $.requestHeaders = requestHeaders;
             return this;
         }
-        public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
-            this.requestHeaders = Codegen.ofNullable(requestHeaders);
-            return this;
+
+        public Builder requestHeaders(Map<String,String> requestHeaders) {
+            return requestHeaders(Output.of(requestHeaders));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
+            return uri(Output.of(uri));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs build() {
-            return new GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs(isCloudFunction, password, requestHeaders, uri, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

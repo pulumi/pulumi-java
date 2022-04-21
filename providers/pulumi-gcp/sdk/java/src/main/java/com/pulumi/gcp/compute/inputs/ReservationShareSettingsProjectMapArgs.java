@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ReservationShareSettingsProjectMapArgs extends com.pulumi.res
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -31,63 +31,59 @@ public final class ReservationShareSettingsProjectMapArgs extends com.pulumi.res
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
-    public ReservationShareSettingsProjectMapArgs(
-        Output<String> id,
-        @Nullable Output<String> projectId) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.projectId = projectId;
-    }
+    private ReservationShareSettingsProjectMapArgs() {}
 
-    private ReservationShareSettingsProjectMapArgs() {
-        this.id = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private ReservationShareSettingsProjectMapArgs(ReservationShareSettingsProjectMapArgs $) {
+        this.id = $.id;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationShareSettingsProjectMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private @Nullable Output<String> projectId;
+        private ReservationShareSettingsProjectMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationShareSettingsProjectMapArgs();
         }
 
         public Builder(ReservationShareSettingsProjectMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.projectId = defaults.projectId;
+            $ = new ReservationShareSettingsProjectMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
-        }        public ReservationShareSettingsProjectMapArgs build() {
-            return new ReservationShareSettingsProjectMapArgs(id, projectId);
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public ReservationShareSettingsProjectMapArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

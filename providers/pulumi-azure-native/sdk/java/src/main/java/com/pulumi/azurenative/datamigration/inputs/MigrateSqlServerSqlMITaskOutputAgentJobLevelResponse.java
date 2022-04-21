@@ -21,7 +21,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -43,7 +43,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -88,7 +88,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -99,7 +99,7 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -110,121 +110,105 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        Boolean isEnabled,
-        String message,
-        String name,
-        String resultType,
-        String startedOn,
-        String state) {
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse() {}
 
-    private MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse() {
-        this.endedOn = null;
-        this.exceptionsAndWarnings = List.of();
-        this.id = null;
-        this.isEnabled = null;
-        this.message = null;
-        this.name = null;
-        this.resultType = null;
-        this.startedOn = null;
-        this.state = null;
+    private MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse $) {
+        this.endedOn = $.endedOn;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.id = $.id;
+        this.isEnabled = $.isEnabled;
+        this.message = $.message;
+        this.name = $.name;
+        this.resultType = $.resultType;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endedOn;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private String id;
-        private Boolean isEnabled;
-        private String message;
-        private String name;
-        private String resultType;
-        private String startedOn;
-        private String state;
+        private MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endedOn = defaults.endedOn;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.id = defaults.id;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.message = defaults.message;
-    	      this.name = defaults.name;
-    	      this.resultType = defaults.resultType;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
+            $ = new MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse build() {
-            return new MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(endedOn, exceptionsAndWarnings, id, isEnabled, message, name, resultType, startedOn, state);
+        }
+
+        public MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse build() {
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

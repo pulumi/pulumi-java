@@ -23,45 +23,44 @@ public final class SecurityPolicyLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public SecurityPolicyLinkResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private SecurityPolicyLinkResponse() {}
 
-    private SecurityPolicyLinkResponse() {
-        this.id = null;
+    private SecurityPolicyLinkResponse(SecurityPolicyLinkResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private SecurityPolicyLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyLinkResponse();
         }
 
         public Builder(SecurityPolicyLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SecurityPolicyLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public SecurityPolicyLinkResponse build() {
-            return new SecurityPolicyLinkResponse(id);
+        }
+
+        public SecurityPolicyLinkResponse build() {
+            return $;
         }
     }
+
 }

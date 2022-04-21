@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,150 +17,134 @@ public final class ContainerUploadGetArgs extends com.pulumi.resources.ResourceA
     public static final ContainerUploadGetArgs Empty = new ContainerUploadGetArgs();
 
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     @Import(name="contentBase64")
-      private final @Nullable Output<String> contentBase64;
+    private @Nullable Output<String> contentBase64;
 
-    public Output<String> contentBase64() {
-        return this.contentBase64 == null ? Codegen.empty() : this.contentBase64;
+    public Optional<Output<String>> contentBase64() {
+        return Optional.ofNullable(this.contentBase64);
     }
 
     @Import(name="executable")
-      private final @Nullable Output<Boolean> executable;
+    private @Nullable Output<Boolean> executable;
 
-    public Output<Boolean> executable() {
-        return this.executable == null ? Codegen.empty() : this.executable;
+    public Optional<Output<Boolean>> executable() {
+        return Optional.ofNullable(this.executable);
     }
 
     @Import(name="file", required=true)
-      private final Output<String> file;
+    private Output<String> file;
 
     public Output<String> file() {
         return this.file;
     }
 
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     @Import(name="sourceHash")
-      private final @Nullable Output<String> sourceHash;
+    private @Nullable Output<String> sourceHash;
 
-    public Output<String> sourceHash() {
-        return this.sourceHash == null ? Codegen.empty() : this.sourceHash;
+    public Optional<Output<String>> sourceHash() {
+        return Optional.ofNullable(this.sourceHash);
     }
 
-    public ContainerUploadGetArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> contentBase64,
-        @Nullable Output<Boolean> executable,
-        Output<String> file,
-        @Nullable Output<String> source,
-        @Nullable Output<String> sourceHash) {
-        this.content = content;
-        this.contentBase64 = contentBase64;
-        this.executable = executable;
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.source = source;
-        this.sourceHash = sourceHash;
-    }
+    private ContainerUploadGetArgs() {}
 
-    private ContainerUploadGetArgs() {
-        this.content = Codegen.empty();
-        this.contentBase64 = Codegen.empty();
-        this.executable = Codegen.empty();
-        this.file = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceHash = Codegen.empty();
+    private ContainerUploadGetArgs(ContainerUploadGetArgs $) {
+        this.content = $.content;
+        this.contentBase64 = $.contentBase64;
+        this.executable = $.executable;
+        this.file = $.file;
+        this.source = $.source;
+        this.sourceHash = $.sourceHash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerUploadGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> contentBase64;
-        private @Nullable Output<Boolean> executable;
-        private Output<String> file;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> sourceHash;
+        private ContainerUploadGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerUploadGetArgs();
         }
 
         public Builder(ContainerUploadGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.contentBase64 = defaults.contentBase64;
-    	      this.executable = defaults.executable;
-    	      this.file = defaults.file;
-    	      this.source = defaults.source;
-    	      this.sourceHash = defaults.sourceHash;
+            $ = new ContainerUploadGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder contentBase64(@Nullable Output<String> contentBase64) {
-            this.contentBase64 = contentBase64;
+            $.contentBase64 = contentBase64;
             return this;
         }
-        public Builder contentBase64(@Nullable String contentBase64) {
-            this.contentBase64 = Codegen.ofNullable(contentBase64);
-            return this;
+
+        public Builder contentBase64(String contentBase64) {
+            return contentBase64(Output.of(contentBase64));
         }
+
         public Builder executable(@Nullable Output<Boolean> executable) {
-            this.executable = executable;
+            $.executable = executable;
             return this;
         }
-        public Builder executable(@Nullable Boolean executable) {
-            this.executable = Codegen.ofNullable(executable);
-            return this;
+
+        public Builder executable(Boolean executable) {
+            return executable(Output.of(executable));
         }
+
         public Builder file(Output<String> file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder file(String file) {
-            this.file = Output.of(Objects.requireNonNull(file));
-            return this;
+            return file(Output.of(file));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder sourceHash(@Nullable Output<String> sourceHash) {
-            this.sourceHash = sourceHash;
+            $.sourceHash = sourceHash;
             return this;
         }
-        public Builder sourceHash(@Nullable String sourceHash) {
-            this.sourceHash = Codegen.ofNullable(sourceHash);
-            return this;
-        }        public ContainerUploadGetArgs build() {
-            return new ContainerUploadGetArgs(content, contentBase64, executable, file, source, sourceHash);
+
+        public Builder sourceHash(String sourceHash) {
+            return sourceHash(Output.of(sourceHash));
+        }
+
+        public ContainerUploadGetArgs build() {
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            return $;
         }
     }
+
 }

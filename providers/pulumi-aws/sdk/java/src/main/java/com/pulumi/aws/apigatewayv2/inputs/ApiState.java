@@ -6,11 +6,11 @@ package com.pulumi.aws.apigatewayv2.inputs;
 import com.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiEndpoint")
-      private final @Nullable Output<String> apiEndpoint;
+    private @Nullable Output<String> apiEndpoint;
 
-    public Output<String> apiEndpoint() {
-        return this.apiEndpoint == null ? Codegen.empty() : this.apiEndpoint;
+    public Optional<Output<String>> apiEndpoint() {
+        return Optional.ofNullable(this.apiEndpoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKeySelectionExpression")
-      private final @Nullable Output<String> apiKeySelectionExpression;
+    private @Nullable Output<String> apiKeySelectionExpression;
 
-    public Output<String> apiKeySelectionExpression() {
-        return this.apiKeySelectionExpression == null ? Codegen.empty() : this.apiKeySelectionExpression;
+    public Optional<Output<String>> apiKeySelectionExpression() {
+        return Optional.ofNullable(this.apiKeySelectionExpression);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="corsConfiguration")
-      private final @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration;
+    private @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration;
 
-    public Output<ApiCorsConfigurationGetArgs> corsConfiguration() {
-        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
+    public Optional<Output<ApiCorsConfigurationGetArgs>> corsConfiguration() {
+        return Optional.ofNullable(this.corsConfiguration);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentialsArn")
-      private final @Nullable Output<String> credentialsArn;
+    private @Nullable Output<String> credentialsArn;
 
-    public Output<String> credentialsArn() {
-        return this.credentialsArn == null ? Codegen.empty() : this.credentialsArn;
+    public Optional<Output<String>> credentialsArn() {
+        return Optional.ofNullable(this.credentialsArn);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableExecuteApiEndpoint")
-      private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
+    private @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Output<Boolean> disableExecuteApiEndpoint() {
-        return this.disableExecuteApiEndpoint == null ? Codegen.empty() : this.disableExecuteApiEndpoint;
+    public Optional<Output<Boolean>> disableExecuteApiEndpoint() {
+        return Optional.ofNullable(this.disableExecuteApiEndpoint);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionArn")
-      private final @Nullable Output<String> executionArn;
+    private @Nullable Output<String> executionArn;
 
-    public Output<String> executionArn() {
-        return this.executionArn == null ? Codegen.empty() : this.executionArn;
+    public Optional<Output<String>> executionArn() {
+        return Optional.ofNullable(this.executionArn);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failOnWarnings")
-      private final @Nullable Output<Boolean> failOnWarnings;
+    private @Nullable Output<Boolean> failOnWarnings;
 
-    public Output<Boolean> failOnWarnings() {
-        return this.failOnWarnings == null ? Codegen.empty() : this.failOnWarnings;
+    public Optional<Output<Boolean>> failOnWarnings() {
+        return Optional.ofNullable(this.failOnWarnings);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocolType")
-      private final @Nullable Output<String> protocolType;
+    private @Nullable Output<String> protocolType;
 
-    public Output<String> protocolType() {
-        return this.protocolType == null ? Codegen.empty() : this.protocolType;
+    public Optional<Output<String>> protocolType() {
+        return Optional.ofNullable(this.protocolType);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeKey")
-      private final @Nullable Output<String> routeKey;
+    private @Nullable Output<String> routeKey;
 
-    public Output<String> routeKey() {
-        return this.routeKey == null ? Codegen.empty() : this.routeKey;
+    public Optional<Output<String>> routeKey() {
+        return Optional.ofNullable(this.routeKey);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeSelectionExpression")
-      private final @Nullable Output<String> routeSelectionExpression;
+    private @Nullable Output<String> routeSelectionExpression;
 
-    public Output<String> routeSelectionExpression() {
-        return this.routeSelectionExpression == null ? Codegen.empty() : this.routeSelectionExpression;
+    public Optional<Output<String>> routeSelectionExpression() {
+        return Optional.ofNullable(this.routeSelectionExpression);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -219,271 +219,218 @@ public final class ApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ApiState(
-        @Nullable Output<String> apiEndpoint,
-        @Nullable Output<String> apiKeySelectionExpression,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> body,
-        @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration,
-        @Nullable Output<String> credentialsArn,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disableExecuteApiEndpoint,
-        @Nullable Output<String> executionArn,
-        @Nullable Output<Boolean> failOnWarnings,
-        @Nullable Output<String> name,
-        @Nullable Output<String> protocolType,
-        @Nullable Output<String> routeKey,
-        @Nullable Output<String> routeSelectionExpression,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> target,
-        @Nullable Output<String> version) {
-        this.apiEndpoint = apiEndpoint;
-        this.apiKeySelectionExpression = apiKeySelectionExpression;
-        this.arn = arn;
-        this.body = body;
-        this.corsConfiguration = corsConfiguration;
-        this.credentialsArn = credentialsArn;
-        this.description = description;
-        this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
-        this.executionArn = executionArn;
-        this.failOnWarnings = failOnWarnings;
-        this.name = name;
-        this.protocolType = protocolType;
-        this.routeKey = routeKey;
-        this.routeSelectionExpression = routeSelectionExpression;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.target = target;
-        this.version = version;
-    }
+    private ApiState() {}
 
-    private ApiState() {
-        this.apiEndpoint = Codegen.empty();
-        this.apiKeySelectionExpression = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.body = Codegen.empty();
-        this.corsConfiguration = Codegen.empty();
-        this.credentialsArn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disableExecuteApiEndpoint = Codegen.empty();
-        this.executionArn = Codegen.empty();
-        this.failOnWarnings = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocolType = Codegen.empty();
-        this.routeKey = Codegen.empty();
-        this.routeSelectionExpression = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.target = Codegen.empty();
-        this.version = Codegen.empty();
+    private ApiState(ApiState $) {
+        this.apiEndpoint = $.apiEndpoint;
+        this.apiKeySelectionExpression = $.apiKeySelectionExpression;
+        this.arn = $.arn;
+        this.body = $.body;
+        this.corsConfiguration = $.corsConfiguration;
+        this.credentialsArn = $.credentialsArn;
+        this.description = $.description;
+        this.disableExecuteApiEndpoint = $.disableExecuteApiEndpoint;
+        this.executionArn = $.executionArn;
+        this.failOnWarnings = $.failOnWarnings;
+        this.name = $.name;
+        this.protocolType = $.protocolType;
+        this.routeKey = $.routeKey;
+        this.routeSelectionExpression = $.routeSelectionExpression;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.target = $.target;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiEndpoint;
-        private @Nullable Output<String> apiKeySelectionExpression;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> body;
-        private @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration;
-        private @Nullable Output<String> credentialsArn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disableExecuteApiEndpoint;
-        private @Nullable Output<String> executionArn;
-        private @Nullable Output<Boolean> failOnWarnings;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> protocolType;
-        private @Nullable Output<String> routeKey;
-        private @Nullable Output<String> routeSelectionExpression;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> target;
-        private @Nullable Output<String> version;
+        private ApiState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiState();
         }
 
         public Builder(ApiState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiEndpoint = defaults.apiEndpoint;
-    	      this.apiKeySelectionExpression = defaults.apiKeySelectionExpression;
-    	      this.arn = defaults.arn;
-    	      this.body = defaults.body;
-    	      this.corsConfiguration = defaults.corsConfiguration;
-    	      this.credentialsArn = defaults.credentialsArn;
-    	      this.description = defaults.description;
-    	      this.disableExecuteApiEndpoint = defaults.disableExecuteApiEndpoint;
-    	      this.executionArn = defaults.executionArn;
-    	      this.failOnWarnings = defaults.failOnWarnings;
-    	      this.name = defaults.name;
-    	      this.protocolType = defaults.protocolType;
-    	      this.routeKey = defaults.routeKey;
-    	      this.routeSelectionExpression = defaults.routeSelectionExpression;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.target = defaults.target;
-    	      this.version = defaults.version;
+            $ = new ApiState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiEndpoint(@Nullable Output<String> apiEndpoint) {
-            this.apiEndpoint = apiEndpoint;
+            $.apiEndpoint = apiEndpoint;
             return this;
         }
-        public Builder apiEndpoint(@Nullable String apiEndpoint) {
-            this.apiEndpoint = Codegen.ofNullable(apiEndpoint);
-            return this;
+
+        public Builder apiEndpoint(String apiEndpoint) {
+            return apiEndpoint(Output.of(apiEndpoint));
         }
+
         public Builder apiKeySelectionExpression(@Nullable Output<String> apiKeySelectionExpression) {
-            this.apiKeySelectionExpression = apiKeySelectionExpression;
+            $.apiKeySelectionExpression = apiKeySelectionExpression;
             return this;
         }
-        public Builder apiKeySelectionExpression(@Nullable String apiKeySelectionExpression) {
-            this.apiKeySelectionExpression = Codegen.ofNullable(apiKeySelectionExpression);
-            return this;
+
+        public Builder apiKeySelectionExpression(String apiKeySelectionExpression) {
+            return apiKeySelectionExpression(Output.of(apiKeySelectionExpression));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder corsConfiguration(@Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration) {
-            this.corsConfiguration = corsConfiguration;
+            $.corsConfiguration = corsConfiguration;
             return this;
         }
-        public Builder corsConfiguration(@Nullable ApiCorsConfigurationGetArgs corsConfiguration) {
-            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
-            return this;
+
+        public Builder corsConfiguration(ApiCorsConfigurationGetArgs corsConfiguration) {
+            return corsConfiguration(Output.of(corsConfiguration));
         }
+
         public Builder credentialsArn(@Nullable Output<String> credentialsArn) {
-            this.credentialsArn = credentialsArn;
+            $.credentialsArn = credentialsArn;
             return this;
         }
-        public Builder credentialsArn(@Nullable String credentialsArn) {
-            this.credentialsArn = Codegen.ofNullable(credentialsArn);
-            return this;
+
+        public Builder credentialsArn(String credentialsArn) {
+            return credentialsArn(Output.of(credentialsArn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
+            $.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
             return this;
         }
-        public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = Codegen.ofNullable(disableExecuteApiEndpoint);
-            return this;
+
+        public Builder disableExecuteApiEndpoint(Boolean disableExecuteApiEndpoint) {
+            return disableExecuteApiEndpoint(Output.of(disableExecuteApiEndpoint));
         }
+
         public Builder executionArn(@Nullable Output<String> executionArn) {
-            this.executionArn = executionArn;
+            $.executionArn = executionArn;
             return this;
         }
-        public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Codegen.ofNullable(executionArn);
-            return this;
+
+        public Builder executionArn(String executionArn) {
+            return executionArn(Output.of(executionArn));
         }
+
         public Builder failOnWarnings(@Nullable Output<Boolean> failOnWarnings) {
-            this.failOnWarnings = failOnWarnings;
+            $.failOnWarnings = failOnWarnings;
             return this;
         }
-        public Builder failOnWarnings(@Nullable Boolean failOnWarnings) {
-            this.failOnWarnings = Codegen.ofNullable(failOnWarnings);
-            return this;
+
+        public Builder failOnWarnings(Boolean failOnWarnings) {
+            return failOnWarnings(Output.of(failOnWarnings));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocolType(@Nullable Output<String> protocolType) {
-            this.protocolType = protocolType;
+            $.protocolType = protocolType;
             return this;
         }
-        public Builder protocolType(@Nullable String protocolType) {
-            this.protocolType = Codegen.ofNullable(protocolType);
-            return this;
+
+        public Builder protocolType(String protocolType) {
+            return protocolType(Output.of(protocolType));
         }
+
         public Builder routeKey(@Nullable Output<String> routeKey) {
-            this.routeKey = routeKey;
+            $.routeKey = routeKey;
             return this;
         }
-        public Builder routeKey(@Nullable String routeKey) {
-            this.routeKey = Codegen.ofNullable(routeKey);
-            return this;
+
+        public Builder routeKey(String routeKey) {
+            return routeKey(Output.of(routeKey));
         }
+
         public Builder routeSelectionExpression(@Nullable Output<String> routeSelectionExpression) {
-            this.routeSelectionExpression = routeSelectionExpression;
+            $.routeSelectionExpression = routeSelectionExpression;
             return this;
         }
-        public Builder routeSelectionExpression(@Nullable String routeSelectionExpression) {
-            this.routeSelectionExpression = Codegen.ofNullable(routeSelectionExpression);
-            return this;
+
+        public Builder routeSelectionExpression(String routeSelectionExpression) {
+            return routeSelectionExpression(Output.of(routeSelectionExpression));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ApiState build() {
-            return new ApiState(apiEndpoint, apiKeySelectionExpression, arn, body, corsConfiguration, credentialsArn, description, disableExecuteApiEndpoint, executionArn, failOnWarnings, name, protocolType, routeKey, routeSelectionExpression, tags, tagsAll, target, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ApiState build() {
+            return $;
         }
     }
+
 }

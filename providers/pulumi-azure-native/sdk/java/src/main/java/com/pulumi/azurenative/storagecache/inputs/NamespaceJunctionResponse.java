@@ -24,10 +24,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="namespacePath")
-      private final @Nullable String namespacePath;
+    private @Nullable String namespacePath;
 
     public Optional<String> namespacePath() {
-        return this.namespacePath == null ? Optional.empty() : Optional.ofNullable(this.namespacePath);
+        return Optional.ofNullable(this.namespacePath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nfsAccessPolicy")
-      private final @Nullable String nfsAccessPolicy;
+    private @Nullable String nfsAccessPolicy;
 
     public Optional<String> nfsAccessPolicy() {
-        return this.nfsAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.nfsAccessPolicy);
+        return Optional.ofNullable(this.nfsAccessPolicy);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nfsExport")
-      private final @Nullable String nfsExport;
+    private @Nullable String nfsExport;
 
     public Optional<String> nfsExport() {
-        return this.nfsExport == null ? Optional.empty() : Optional.ofNullable(this.nfsExport);
+        return Optional.ofNullable(this.nfsExport);
     }
 
     /**
@@ -57,73 +57,63 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetPath")
-      private final @Nullable String targetPath;
+    private @Nullable String targetPath;
 
     public Optional<String> targetPath() {
-        return this.targetPath == null ? Optional.empty() : Optional.ofNullable(this.targetPath);
+        return Optional.ofNullable(this.targetPath);
     }
 
-    public NamespaceJunctionResponse(
-        @Nullable String namespacePath,
-        @Nullable String nfsAccessPolicy,
-        @Nullable String nfsExport,
-        @Nullable String targetPath) {
-        this.namespacePath = namespacePath;
-        this.nfsAccessPolicy = Codegen.stringProp("nfsAccessPolicy").arg(nfsAccessPolicy).def("default").getNullable();
-        this.nfsExport = nfsExport;
-        this.targetPath = targetPath;
-    }
+    private NamespaceJunctionResponse() {}
 
-    private NamespaceJunctionResponse() {
-        this.namespacePath = null;
-        this.nfsAccessPolicy = null;
-        this.nfsExport = null;
-        this.targetPath = null;
+    private NamespaceJunctionResponse(NamespaceJunctionResponse $) {
+        this.namespacePath = $.namespacePath;
+        this.nfsAccessPolicy = $.nfsAccessPolicy;
+        this.nfsExport = $.nfsExport;
+        this.targetPath = $.targetPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceJunctionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String namespacePath;
-        private @Nullable String nfsAccessPolicy;
-        private @Nullable String nfsExport;
-        private @Nullable String targetPath;
+        private NamespaceJunctionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceJunctionResponse();
         }
 
         public Builder(NamespaceJunctionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespacePath = defaults.namespacePath;
-    	      this.nfsAccessPolicy = defaults.nfsAccessPolicy;
-    	      this.nfsExport = defaults.nfsExport;
-    	      this.targetPath = defaults.targetPath;
+            $ = new NamespaceJunctionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder namespacePath(@Nullable String namespacePath) {
-            this.namespacePath = namespacePath;
+            $.namespacePath = namespacePath;
             return this;
         }
+
         public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
-            this.nfsAccessPolicy = nfsAccessPolicy;
+            $.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
+
         public Builder nfsExport(@Nullable String nfsExport) {
-            this.nfsExport = nfsExport;
+            $.nfsExport = nfsExport;
             return this;
         }
+
         public Builder targetPath(@Nullable String targetPath) {
-            this.targetPath = targetPath;
+            $.targetPath = targetPath;
             return this;
-        }        public NamespaceJunctionResponse build() {
-            return new NamespaceJunctionResponse(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
+        }
+
+        public NamespaceJunctionResponse build() {
+            $.nfsAccessPolicy = Codegen.stringProp("nfsAccessPolicy").arg($.nfsAccessPolicy).def("default").getNullable();
+            return $;
         }
     }
+
 }

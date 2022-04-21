@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AwsClusterControlPlaneConfigEncryptionGetArgs extends com.pul
      * 
      */
     @Import(name="kmsKeyArn", required=true)
-      private final Output<String> kmsKeyArn;
+    private Output<String> kmsKeyArn;
 
     public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
 
-    public AwsClusterControlPlaneConfigEncryptionGetArgs(Output<String> kmsKeyArn) {
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
-    }
+    private AwsClusterControlPlaneConfigEncryptionGetArgs() {}
 
-    private AwsClusterControlPlaneConfigEncryptionGetArgs() {
-        this.kmsKeyArn = Codegen.empty();
+    private AwsClusterControlPlaneConfigEncryptionGetArgs(AwsClusterControlPlaneConfigEncryptionGetArgs $) {
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterControlPlaneConfigEncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyArn;
+        private AwsClusterControlPlaneConfigEncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterControlPlaneConfigEncryptionGetArgs();
         }
 
         public Builder(AwsClusterControlPlaneConfigEncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new AwsClusterControlPlaneConfigEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(Output<String> kmsKeyArn) {
-            this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
+
         public Builder kmsKeyArn(String kmsKeyArn) {
-            this.kmsKeyArn = Output.of(Objects.requireNonNull(kmsKeyArn));
-            return this;
-        }        public AwsClusterControlPlaneConfigEncryptionGetArgs build() {
-            return new AwsClusterControlPlaneConfigEncryptionGetArgs(kmsKeyArn);
+            return kmsKeyArn(Output.of(kmsKeyArn));
+        }
+
+        public AwsClusterControlPlaneConfigEncryptionGetArgs build() {
+            $.kmsKeyArn = Objects.requireNonNull($.kmsKeyArn, "expected parameter 'kmsKeyArn' to be non-null");
+            return $;
         }
     }
+
 }

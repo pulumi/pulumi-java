@@ -23,7 +23,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
      * 
      */
     @Import(name="authType", required=true)
-      private final String authType;
+    private String authType;
 
     public String authType() {
         return this.authType;
@@ -34,7 +34,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
      * 
      */
     @Import(name="certificate", required=true)
-      private final String certificate;
+    private String certificate;
 
     public String certificate() {
         return this.certificate;
@@ -45,7 +45,7 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -56,73 +56,66 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
     }
 
-    public ServicePrincipalCertificateAuthInfoResponse(
-        String authType,
-        String certificate,
-        String clientId,
-        String principalId) {
-        this.authType = Codegen.stringProp("authType").arg(authType).require();
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-    }
+    private ServicePrincipalCertificateAuthInfoResponse() {}
 
-    private ServicePrincipalCertificateAuthInfoResponse() {
-        this.authType = null;
-        this.certificate = null;
-        this.clientId = null;
-        this.principalId = null;
+    private ServicePrincipalCertificateAuthInfoResponse(ServicePrincipalCertificateAuthInfoResponse $) {
+        this.authType = $.authType;
+        this.certificate = $.certificate;
+        this.clientId = $.clientId;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalCertificateAuthInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authType;
-        private String certificate;
-        private String clientId;
-        private String principalId;
+        private ServicePrincipalCertificateAuthInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalCertificateAuthInfoResponse();
         }
 
         public Builder(ServicePrincipalCertificateAuthInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.certificate = defaults.certificate;
-    	      this.clientId = defaults.clientId;
-    	      this.principalId = defaults.principalId;
+            $ = new ServicePrincipalCertificateAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(String authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder certificate(String certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
-        }        public ServicePrincipalCertificateAuthInfoResponse build() {
-            return new ServicePrincipalCertificateAuthInfoResponse(authType, certificate, clientId, principalId);
+        }
+
+        public ServicePrincipalCertificateAuthInfoResponse build() {
+            $.authType = Codegen.stringProp("authType").arg($.authType).require();
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            return $;
         }
     }
+
 }

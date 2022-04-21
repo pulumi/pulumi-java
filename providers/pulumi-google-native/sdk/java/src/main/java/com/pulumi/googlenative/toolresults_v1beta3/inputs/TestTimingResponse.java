@@ -21,45 +21,45 @@ public final class TestTimingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testProcessDuration", required=true)
-      private final DurationResponse testProcessDuration;
+    private DurationResponse testProcessDuration;
 
     public DurationResponse testProcessDuration() {
         return this.testProcessDuration;
     }
 
-    public TestTimingResponse(DurationResponse testProcessDuration) {
-        this.testProcessDuration = Objects.requireNonNull(testProcessDuration, "expected parameter 'testProcessDuration' to be non-null");
-    }
+    private TestTimingResponse() {}
 
-    private TestTimingResponse() {
-        this.testProcessDuration = null;
+    private TestTimingResponse(TestTimingResponse $) {
+        this.testProcessDuration = $.testProcessDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestTimingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse testProcessDuration;
+        private TestTimingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestTimingResponse();
         }
 
         public Builder(TestTimingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testProcessDuration = defaults.testProcessDuration;
+            $ = new TestTimingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder testProcessDuration(DurationResponse testProcessDuration) {
-            this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
+            $.testProcessDuration = testProcessDuration;
             return this;
-        }        public TestTimingResponse build() {
-            return new TestTimingResponse(testProcessDuration);
+        }
+
+        public TestTimingResponse build() {
+            $.testProcessDuration = Objects.requireNonNull($.testProcessDuration, "expected parameter 'testProcessDuration' to be non-null");
+            return $;
         }
     }
+
 }

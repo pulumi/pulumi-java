@@ -17,7 +17,7 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -28,55 +28,52 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sensorName", required=true)
-      private final String sensorName;
+    private String sensorName;
 
     public String sensorName() {
         return this.sensorName;
     }
 
-    public GetSensorArgs(
-        String scope,
-        String sensorName) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.sensorName = Objects.requireNonNull(sensorName, "expected parameter 'sensorName' to be non-null");
-    }
+    private GetSensorArgs() {}
 
-    private GetSensorArgs() {
-        this.scope = null;
-        this.sensorName = null;
+    private GetSensorArgs(GetSensorArgs $) {
+        this.scope = $.scope;
+        this.sensorName = $.sensorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSensorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
-        private String sensorName;
+        private GetSensorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSensorArgs();
         }
 
         public Builder(GetSensorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.sensorName = defaults.sensorName;
+            $ = new GetSensorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder sensorName(String sensorName) {
-            this.sensorName = Objects.requireNonNull(sensorName);
+            $.sensorName = sensorName;
             return this;
-        }        public GetSensorArgs build() {
-            return new GetSensorArgs(scope, sensorName);
+        }
+
+        public GetSensorArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.sensorName = Objects.requireNonNull($.sensorName, "expected parameter 'sensorName' to be non-null");
+            return $;
         }
     }
+
 }

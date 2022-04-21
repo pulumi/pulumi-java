@@ -18,48 +18,49 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * 
      */
     @Import(name="items", required=true)
-      private final List<String> items;
+    private List<String> items;
 
     public List<String> items() {
         return this.items;
     }
 
-    public GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(List<String> items) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie() {}
 
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie() {
-        this.items = List.of();
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> items;
+        private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie();
         }
 
         public Builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<String> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie build() {
-            return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(items);
+        }
+
+        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

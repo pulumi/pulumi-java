@@ -19,7 +19,7 @@ public final class ScriptStatisticsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="evaluationKind", required=true)
-      private final String evaluationKind;
+    private String evaluationKind;
 
     public String evaluationKind() {
         return this.evaluationKind;
@@ -30,58 +30,56 @@ public final class ScriptStatisticsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="stackFrames", required=true)
-      private final List<ScriptStackFrameResponse> stackFrames;
+    private List<ScriptStackFrameResponse> stackFrames;
 
     public List<ScriptStackFrameResponse> stackFrames() {
         return this.stackFrames;
     }
 
-    public ScriptStatisticsResponse(
-        String evaluationKind,
-        List<ScriptStackFrameResponse> stackFrames) {
-        this.evaluationKind = Objects.requireNonNull(evaluationKind, "expected parameter 'evaluationKind' to be non-null");
-        this.stackFrames = Objects.requireNonNull(stackFrames, "expected parameter 'stackFrames' to be non-null");
-    }
+    private ScriptStatisticsResponse() {}
 
-    private ScriptStatisticsResponse() {
-        this.evaluationKind = null;
-        this.stackFrames = List.of();
+    private ScriptStatisticsResponse(ScriptStatisticsResponse $) {
+        this.evaluationKind = $.evaluationKind;
+        this.stackFrames = $.stackFrames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String evaluationKind;
-        private List<ScriptStackFrameResponse> stackFrames;
+        private ScriptStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptStatisticsResponse();
         }
 
         public Builder(ScriptStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.evaluationKind = defaults.evaluationKind;
-    	      this.stackFrames = defaults.stackFrames;
+            $ = new ScriptStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder evaluationKind(String evaluationKind) {
-            this.evaluationKind = Objects.requireNonNull(evaluationKind);
+            $.evaluationKind = evaluationKind;
             return this;
         }
+
         public Builder stackFrames(List<ScriptStackFrameResponse> stackFrames) {
-            this.stackFrames = Objects.requireNonNull(stackFrames);
+            $.stackFrames = stackFrames;
             return this;
         }
+
         public Builder stackFrames(ScriptStackFrameResponse... stackFrames) {
             return stackFrames(List.of(stackFrames));
-        }        public ScriptStatisticsResponse build() {
-            return new ScriptStatisticsResponse(evaluationKind, stackFrames);
+        }
+
+        public ScriptStatisticsResponse build() {
+            $.evaluationKind = Objects.requireNonNull($.evaluationKind, "expected parameter 'evaluationKind' to be non-null");
+            $.stackFrames = Objects.requireNonNull($.stackFrames, "expected parameter 'stackFrames' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetModelPackageGroupArgs extends com.pulumi.resources.InvokeA
     public static final GetModelPackageGroupArgs Empty = new GetModelPackageGroupArgs();
 
     @Import(name="modelPackageGroupArn", required=true)
-      private final String modelPackageGroupArn;
+    private String modelPackageGroupArn;
 
     public String modelPackageGroupArn() {
         return this.modelPackageGroupArn;
     }
 
-    public GetModelPackageGroupArgs(String modelPackageGroupArn) {
-        this.modelPackageGroupArn = Objects.requireNonNull(modelPackageGroupArn, "expected parameter 'modelPackageGroupArn' to be non-null");
-    }
+    private GetModelPackageGroupArgs() {}
 
-    private GetModelPackageGroupArgs() {
-        this.modelPackageGroupArn = null;
+    private GetModelPackageGroupArgs(GetModelPackageGroupArgs $) {
+        this.modelPackageGroupArn = $.modelPackageGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModelPackageGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String modelPackageGroupArn;
+        private GetModelPackageGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModelPackageGroupArgs();
         }
 
         public Builder(GetModelPackageGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelPackageGroupArn = defaults.modelPackageGroupArn;
+            $ = new GetModelPackageGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelPackageGroupArn(String modelPackageGroupArn) {
-            this.modelPackageGroupArn = Objects.requireNonNull(modelPackageGroupArn);
+            $.modelPackageGroupArn = modelPackageGroupArn;
             return this;
-        }        public GetModelPackageGroupArgs build() {
-            return new GetModelPackageGroupArgs(modelPackageGroupArn);
+        }
+
+        public GetModelPackageGroupArgs build() {
+            $.modelPackageGroupArn = Objects.requireNonNull($.modelPackageGroupArn, "expected parameter 'modelPackageGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

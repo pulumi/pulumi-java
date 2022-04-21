@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationAddresses")
-      private final @Nullable Output<List<String>> destinationAddresses;
+    private @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> destinationAddresses() {
-        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
+    public Optional<Output<List<String>>> destinationAddresses() {
+        return Optional.ofNullable(this.destinationAddresses);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationFqdns")
-      private final @Nullable Output<List<String>> destinationFqdns;
+    private @Nullable Output<List<String>> destinationFqdns;
 
-    public Output<List<String>> destinationFqdns() {
-        return this.destinationFqdns == null ? Codegen.empty() : this.destinationFqdns;
+    public Optional<Output<List<String>>> destinationFqdns() {
+        return Optional.ofNullable(this.destinationFqdns);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationIpGroups")
-      private final @Nullable Output<List<String>> destinationIpGroups;
+    private @Nullable Output<List<String>> destinationIpGroups;
 
-    public Output<List<String>> destinationIpGroups() {
-        return this.destinationIpGroups == null ? Codegen.empty() : this.destinationIpGroups;
+    public Optional<Output<List<String>>> destinationIpGroups() {
+        return Optional.ofNullable(this.destinationIpGroups);
     }
 
     /**
@@ -71,10 +72,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationPorts")
-      private final @Nullable Output<List<String>> destinationPorts;
+    private @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> destinationPorts() {
-        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
+    public Optional<Output<List<String>>> destinationPorts() {
+        return Optional.ofNullable(this.destinationPorts);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipProtocols")
-      private final @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
+    private @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
 
-    public Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols() {
-        return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
+    public Optional<Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>>> ipProtocols() {
+        return Optional.ofNullable(this.ipProtocols);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,7 +106,7 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleType", required=true)
-      private final Output<String> ruleType;
+    private Output<String> ruleType;
 
     public Output<String> ruleType() {
         return this.ruleType;
@@ -116,10 +117,10 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAddresses")
-      private final @Nullable Output<List<String>> sourceAddresses;
+    private @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> sourceAddresses() {
-        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
+    public Optional<Output<List<String>>> sourceAddresses() {
+        return Optional.ofNullable(this.sourceAddresses);
     }
 
     /**
@@ -127,188 +128,167 @@ public final class NetworkRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceIpGroups")
-      private final @Nullable Output<List<String>> sourceIpGroups;
+    private @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> sourceIpGroups() {
-        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
+    public Optional<Output<List<String>>> sourceIpGroups() {
+        return Optional.ofNullable(this.sourceIpGroups);
     }
 
-    public NetworkRuleArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> destinationAddresses,
-        @Nullable Output<List<String>> destinationFqdns,
-        @Nullable Output<List<String>> destinationIpGroups,
-        @Nullable Output<List<String>> destinationPorts,
-        @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols,
-        @Nullable Output<String> name,
-        Output<String> ruleType,
-        @Nullable Output<List<String>> sourceAddresses,
-        @Nullable Output<List<String>> sourceIpGroups) {
-        this.description = description;
-        this.destinationAddresses = destinationAddresses;
-        this.destinationFqdns = destinationFqdns;
-        this.destinationIpGroups = destinationIpGroups;
-        this.destinationPorts = destinationPorts;
-        this.ipProtocols = ipProtocols;
-        this.name = name;
-        this.ruleType = Codegen.stringProp("ruleType").output().arg(ruleType).require();
-        this.sourceAddresses = sourceAddresses;
-        this.sourceIpGroups = sourceIpGroups;
-    }
+    private NetworkRuleArgs() {}
 
-    private NetworkRuleArgs() {
-        this.description = Codegen.empty();
-        this.destinationAddresses = Codegen.empty();
-        this.destinationFqdns = Codegen.empty();
-        this.destinationIpGroups = Codegen.empty();
-        this.destinationPorts = Codegen.empty();
-        this.ipProtocols = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleType = Codegen.empty();
-        this.sourceAddresses = Codegen.empty();
-        this.sourceIpGroups = Codegen.empty();
+    private NetworkRuleArgs(NetworkRuleArgs $) {
+        this.description = $.description;
+        this.destinationAddresses = $.destinationAddresses;
+        this.destinationFqdns = $.destinationFqdns;
+        this.destinationIpGroups = $.destinationIpGroups;
+        this.destinationPorts = $.destinationPorts;
+        this.ipProtocols = $.ipProtocols;
+        this.name = $.name;
+        this.ruleType = $.ruleType;
+        this.sourceAddresses = $.sourceAddresses;
+        this.sourceIpGroups = $.sourceIpGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> destinationAddresses;
-        private @Nullable Output<List<String>> destinationFqdns;
-        private @Nullable Output<List<String>> destinationIpGroups;
-        private @Nullable Output<List<String>> destinationPorts;
-        private @Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols;
-        private @Nullable Output<String> name;
-        private Output<String> ruleType;
-        private @Nullable Output<List<String>> sourceAddresses;
-        private @Nullable Output<List<String>> sourceIpGroups;
+        private NetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleArgs();
         }
 
         public Builder(NetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationAddresses = defaults.destinationAddresses;
-    	      this.destinationFqdns = defaults.destinationFqdns;
-    	      this.destinationIpGroups = defaults.destinationIpGroups;
-    	      this.destinationPorts = defaults.destinationPorts;
-    	      this.ipProtocols = defaults.ipProtocols;
-    	      this.name = defaults.name;
-    	      this.ruleType = defaults.ruleType;
-    	      this.sourceAddresses = defaults.sourceAddresses;
-    	      this.sourceIpGroups = defaults.sourceIpGroups;
+            $ = new NetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
-            this.destinationAddresses = destinationAddresses;
+            $.destinationAddresses = destinationAddresses;
             return this;
         }
-        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
-            return this;
+
+        public Builder destinationAddresses(List<String> destinationAddresses) {
+            return destinationAddresses(Output.of(destinationAddresses));
         }
+
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
+
         public Builder destinationFqdns(@Nullable Output<List<String>> destinationFqdns) {
-            this.destinationFqdns = destinationFqdns;
+            $.destinationFqdns = destinationFqdns;
             return this;
         }
-        public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
-            this.destinationFqdns = Codegen.ofNullable(destinationFqdns);
-            return this;
+
+        public Builder destinationFqdns(List<String> destinationFqdns) {
+            return destinationFqdns(Output.of(destinationFqdns));
         }
+
         public Builder destinationFqdns(String... destinationFqdns) {
             return destinationFqdns(List.of(destinationFqdns));
         }
+
         public Builder destinationIpGroups(@Nullable Output<List<String>> destinationIpGroups) {
-            this.destinationIpGroups = destinationIpGroups;
+            $.destinationIpGroups = destinationIpGroups;
             return this;
         }
-        public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
-            this.destinationIpGroups = Codegen.ofNullable(destinationIpGroups);
-            return this;
+
+        public Builder destinationIpGroups(List<String> destinationIpGroups) {
+            return destinationIpGroups(Output.of(destinationIpGroups));
         }
+
         public Builder destinationIpGroups(String... destinationIpGroups) {
             return destinationIpGroups(List.of(destinationIpGroups));
         }
+
         public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
-            this.destinationPorts = destinationPorts;
+            $.destinationPorts = destinationPorts;
             return this;
         }
-        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Codegen.ofNullable(destinationPorts);
-            return this;
+
+        public Builder destinationPorts(List<String> destinationPorts) {
+            return destinationPorts(Output.of(destinationPorts));
         }
+
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
+
         public Builder ipProtocols(@Nullable Output<List<Either<String,FirewallPolicyRuleNetworkProtocol>>> ipProtocols) {
-            this.ipProtocols = ipProtocols;
+            $.ipProtocols = ipProtocols;
             return this;
         }
-        public Builder ipProtocols(@Nullable List<Either<String,FirewallPolicyRuleNetworkProtocol>> ipProtocols) {
-            this.ipProtocols = Codegen.ofNullable(ipProtocols);
-            return this;
+
+        public Builder ipProtocols(List<Either<String,FirewallPolicyRuleNetworkProtocol>> ipProtocols) {
+            return ipProtocols(Output.of(ipProtocols));
         }
+
         public Builder ipProtocols(Either<String,FirewallPolicyRuleNetworkProtocol>... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleType(Output<String> ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Output.of(Objects.requireNonNull(ruleType));
-            return this;
+            return ruleType(Output.of(ruleType));
         }
+
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
-            this.sourceAddresses = sourceAddresses;
+            $.sourceAddresses = sourceAddresses;
             return this;
         }
-        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
-            return this;
+
+        public Builder sourceAddresses(List<String> sourceAddresses) {
+            return sourceAddresses(Output.of(sourceAddresses));
         }
+
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
+
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
-            this.sourceIpGroups = sourceIpGroups;
+            $.sourceIpGroups = sourceIpGroups;
             return this;
         }
-        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
-            return this;
+
+        public Builder sourceIpGroups(List<String> sourceIpGroups) {
+            return sourceIpGroups(Output.of(sourceIpGroups));
         }
+
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
-        }        public NetworkRuleArgs build() {
-            return new NetworkRuleArgs(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, ipProtocols, name, ruleType, sourceAddresses, sourceIpGroups);
+        }
+
+        public NetworkRuleArgs build() {
+            $.ruleType = Codegen.stringProp("ruleType").output().arg($.ruleType).require();
+            return $;
         }
     }
+
 }

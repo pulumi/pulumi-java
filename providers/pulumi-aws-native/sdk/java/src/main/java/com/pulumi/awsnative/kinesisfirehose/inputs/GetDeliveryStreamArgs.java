@@ -13,45 +13,45 @@ public final class GetDeliveryStreamArgs extends com.pulumi.resources.InvokeArgs
     public static final GetDeliveryStreamArgs Empty = new GetDeliveryStreamArgs();
 
     @Import(name="deliveryStreamName", required=true)
-      private final String deliveryStreamName;
+    private String deliveryStreamName;
 
     public String deliveryStreamName() {
         return this.deliveryStreamName;
     }
 
-    public GetDeliveryStreamArgs(String deliveryStreamName) {
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
-    }
+    private GetDeliveryStreamArgs() {}
 
-    private GetDeliveryStreamArgs() {
-        this.deliveryStreamName = null;
+    private GetDeliveryStreamArgs(GetDeliveryStreamArgs $) {
+        this.deliveryStreamName = $.deliveryStreamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeliveryStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deliveryStreamName;
+        private GetDeliveryStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeliveryStreamArgs();
         }
 
         public Builder(GetDeliveryStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryStreamName = defaults.deliveryStreamName;
+            $ = new GetDeliveryStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryStreamName(String deliveryStreamName) {
-            this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
+            $.deliveryStreamName = deliveryStreamName;
             return this;
-        }        public GetDeliveryStreamArgs build() {
-            return new GetDeliveryStreamArgs(deliveryStreamName);
+        }
+
+        public GetDeliveryStreamArgs build() {
+            $.deliveryStreamName = Objects.requireNonNull($.deliveryStreamName, "expected parameter 'deliveryStreamName' to be non-null");
+            return $;
         }
     }
+
 }

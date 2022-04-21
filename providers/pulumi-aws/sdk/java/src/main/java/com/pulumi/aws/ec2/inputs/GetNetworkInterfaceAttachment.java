@@ -14,94 +14,87 @@ public final class GetNetworkInterfaceAttachment extends com.pulumi.resources.In
     public static final GetNetworkInterfaceAttachment Empty = new GetNetworkInterfaceAttachment();
 
     @Import(name="attachmentId", required=true)
-      private final String attachmentId;
+    private String attachmentId;
 
     public String attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="deviceIndex", required=true)
-      private final Integer deviceIndex;
+    private Integer deviceIndex;
 
     public Integer deviceIndex() {
         return this.deviceIndex;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="instanceOwnerId", required=true)
-      private final String instanceOwnerId;
+    private String instanceOwnerId;
 
     public String instanceOwnerId() {
         return this.instanceOwnerId;
     }
 
-    public GetNetworkInterfaceAttachment(
-        String attachmentId,
-        Integer deviceIndex,
-        String instanceId,
-        String instanceOwnerId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId, "expected parameter 'attachmentId' to be non-null");
-        this.deviceIndex = Objects.requireNonNull(deviceIndex, "expected parameter 'deviceIndex' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.instanceOwnerId = Objects.requireNonNull(instanceOwnerId, "expected parameter 'instanceOwnerId' to be non-null");
-    }
+    private GetNetworkInterfaceAttachment() {}
 
-    private GetNetworkInterfaceAttachment() {
-        this.attachmentId = null;
-        this.deviceIndex = null;
-        this.instanceId = null;
-        this.instanceOwnerId = null;
+    private GetNetworkInterfaceAttachment(GetNetworkInterfaceAttachment $) {
+        this.attachmentId = $.attachmentId;
+        this.deviceIndex = $.deviceIndex;
+        this.instanceId = $.instanceId;
+        this.instanceOwnerId = $.instanceOwnerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInterfaceAttachment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachmentId;
-        private Integer deviceIndex;
-        private String instanceId;
-        private String instanceOwnerId;
+        private GetNetworkInterfaceAttachment $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInterfaceAttachment();
         }
 
         public Builder(GetNetworkInterfaceAttachment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.deviceIndex = defaults.deviceIndex;
-    	      this.instanceId = defaults.instanceId;
-    	      this.instanceOwnerId = defaults.instanceOwnerId;
+            $ = new GetNetworkInterfaceAttachment(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(String attachmentId) {
-            this.attachmentId = Objects.requireNonNull(attachmentId);
+            $.attachmentId = attachmentId;
             return this;
         }
+
         public Builder deviceIndex(Integer deviceIndex) {
-            this.deviceIndex = Objects.requireNonNull(deviceIndex);
+            $.deviceIndex = deviceIndex;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceOwnerId(String instanceOwnerId) {
-            this.instanceOwnerId = Objects.requireNonNull(instanceOwnerId);
+            $.instanceOwnerId = instanceOwnerId;
             return this;
-        }        public GetNetworkInterfaceAttachment build() {
-            return new GetNetworkInterfaceAttachment(attachmentId, deviceIndex, instanceId, instanceOwnerId);
+        }
+
+        public GetNetworkInterfaceAttachment build() {
+            $.attachmentId = Objects.requireNonNull($.attachmentId, "expected parameter 'attachmentId' to be non-null");
+            $.deviceIndex = Objects.requireNonNull($.deviceIndex, "expected parameter 'deviceIndex' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.instanceOwnerId = Objects.requireNonNull($.instanceOwnerId, "expected parameter 'instanceOwnerId' to be non-null");
+            return $;
         }
     }
+
 }

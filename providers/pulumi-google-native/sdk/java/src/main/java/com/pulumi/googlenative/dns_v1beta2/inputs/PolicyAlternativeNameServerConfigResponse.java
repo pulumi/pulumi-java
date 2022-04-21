@@ -15,7 +15,7 @@ public final class PolicyAlternativeNameServerConfigResponse extends com.pulumi.
     public static final PolicyAlternativeNameServerConfigResponse Empty = new PolicyAlternativeNameServerConfigResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -26,58 +26,56 @@ public final class PolicyAlternativeNameServerConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="targetNameServers", required=true)
-      private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
+    private List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
     public List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers() {
         return this.targetNameServers;
     }
 
-    public PolicyAlternativeNameServerConfigResponse(
-        String kind,
-        List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.targetNameServers = Objects.requireNonNull(targetNameServers, "expected parameter 'targetNameServers' to be non-null");
-    }
+    private PolicyAlternativeNameServerConfigResponse() {}
 
-    private PolicyAlternativeNameServerConfigResponse() {
-        this.kind = null;
-        this.targetNameServers = List.of();
+    private PolicyAlternativeNameServerConfigResponse(PolicyAlternativeNameServerConfigResponse $) {
+        this.kind = $.kind;
+        this.targetNameServers = $.targetNameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAlternativeNameServerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
+        private PolicyAlternativeNameServerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAlternativeNameServerConfigResponse();
         }
 
         public Builder(PolicyAlternativeNameServerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.targetNameServers = defaults.targetNameServers;
+            $ = new PolicyAlternativeNameServerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
-            this.targetNameServers = Objects.requireNonNull(targetNameServers);
+            $.targetNameServers = targetNameServers;
             return this;
         }
+
         public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerResponse... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
-        }        public PolicyAlternativeNameServerConfigResponse build() {
-            return new PolicyAlternativeNameServerConfigResponse(kind, targetNameServers);
+        }
+
+        public PolicyAlternativeNameServerConfigResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.targetNameServers = Objects.requireNonNull($.targetNameServers, "expected parameter 'targetNameServers' to be non-null");
+            return $;
         }
     }
+
 }

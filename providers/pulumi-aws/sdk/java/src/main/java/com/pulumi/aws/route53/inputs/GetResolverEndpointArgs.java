@@ -23,10 +23,10 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetResolverEndpointFilter> filters;
+    private @Nullable List<GetResolverEndpointFilter> filters;
 
-    public List<GetResolverEndpointFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetResolverEndpointFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetResolverEndpointArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resolverEndpointId")
-      private final @Nullable String resolverEndpointId;
+    private @Nullable String resolverEndpointId;
 
     public Optional<String> resolverEndpointId() {
-        return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
-    public GetResolverEndpointArgs(
-        @Nullable List<GetResolverEndpointFilter> filters,
-        @Nullable String resolverEndpointId) {
-        this.filters = filters;
-        this.resolverEndpointId = resolverEndpointId;
-    }
+    private GetResolverEndpointArgs() {}
 
-    private GetResolverEndpointArgs() {
-        this.filters = List.of();
-        this.resolverEndpointId = null;
+    private GetResolverEndpointArgs(GetResolverEndpointArgs $) {
+        this.filters = $.filters;
+        this.resolverEndpointId = $.resolverEndpointId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetResolverEndpointFilter> filters;
-        private @Nullable String resolverEndpointId;
+        private GetResolverEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverEndpointArgs();
         }
 
         public Builder(GetResolverEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.resolverEndpointId = defaults.resolverEndpointId;
+            $ = new GetResolverEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetResolverEndpointFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetResolverEndpointFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = resolverEndpointId;
+            $.resolverEndpointId = resolverEndpointId;
             return this;
-        }        public GetResolverEndpointArgs build() {
-            return new GetResolverEndpointArgs(filters, resolverEndpointId);
+        }
+
+        public GetResolverEndpointArgs build() {
+            return $;
         }
     }
+
 }

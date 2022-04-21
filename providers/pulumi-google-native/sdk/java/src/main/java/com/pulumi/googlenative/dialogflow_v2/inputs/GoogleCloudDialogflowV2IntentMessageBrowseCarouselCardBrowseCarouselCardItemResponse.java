@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @Import(name="footer", required=true)
-      private final String footer;
+    private String footer;
 
     public String footer() {
         return this.footer;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @Import(name="image", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+    private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @Import(name="openUriAction", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
+    private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
 
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction() {
         return this.openUriAction;
@@ -67,82 +67,73 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(
-        String description,
-        String footer,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
-        String title) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.footer = Objects.requireNonNull(footer, "expected parameter 'footer' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.openUriAction = Objects.requireNonNull(openUriAction, "expected parameter 'openUriAction' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse() {
-        this.description = null;
-        this.footer = null;
-        this.image = null;
-        this.openUriAction = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse $) {
+        this.description = $.description;
+        this.footer = $.footer;
+        this.image = $.image;
+        this.openUriAction = $.openUriAction;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String footer;
-        private GoogleCloudDialogflowV2IntentMessageImageResponse image;
-        private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
-        private String title;
+        private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.footer = defaults.footer;
-    	      this.image = defaults.image;
-    	      this.openUriAction = defaults.openUriAction;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder footer(String footer) {
-            this.footer = Objects.requireNonNull(footer);
+            $.footer = footer;
             return this;
         }
+
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction) {
-            this.openUriAction = Objects.requireNonNull(openUriAction);
+            $.openUriAction = openUriAction;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(description, footer, image, openUriAction, title);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.footer = Objects.requireNonNull($.footer, "expected parameter 'footer' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.openUriAction = Objects.requireNonNull($.openUriAction, "expected parameter 'openUriAction' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

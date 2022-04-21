@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="anonymousConnectPolicy")
-      private final @Nullable Output<String> anonymousConnectPolicy;
+    private @Nullable Output<String> anonymousConnectPolicy;
 
-    public Output<String> anonymousConnectPolicy() {
-        return this.anonymousConnectPolicy == null ? Codegen.empty() : this.anonymousConnectPolicy;
+    public Optional<Output<String>> anonymousConnectPolicy() {
+        return Optional.ofNullable(this.anonymousConnectPolicy);
     }
 
     /**
@@ -37,66 +38,63 @@ public final class WebPubSubHubPropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="eventHandlers")
-      private final @Nullable Output<List<EventHandlerArgs>> eventHandlers;
+    private @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
-    public Output<List<EventHandlerArgs>> eventHandlers() {
-        return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
+    public Optional<Output<List<EventHandlerArgs>>> eventHandlers() {
+        return Optional.ofNullable(this.eventHandlers);
     }
 
-    public WebPubSubHubPropertiesArgs(
-        @Nullable Output<String> anonymousConnectPolicy,
-        @Nullable Output<List<EventHandlerArgs>> eventHandlers) {
-        this.anonymousConnectPolicy = Codegen.stringProp("anonymousConnectPolicy").output().arg(anonymousConnectPolicy).def("deny").getNullable();
-        this.eventHandlers = eventHandlers;
-    }
+    private WebPubSubHubPropertiesArgs() {}
 
-    private WebPubSubHubPropertiesArgs() {
-        this.anonymousConnectPolicy = Codegen.empty();
-        this.eventHandlers = Codegen.empty();
+    private WebPubSubHubPropertiesArgs(WebPubSubHubPropertiesArgs $) {
+        this.anonymousConnectPolicy = $.anonymousConnectPolicy;
+        this.eventHandlers = $.eventHandlers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubHubPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> anonymousConnectPolicy;
-        private @Nullable Output<List<EventHandlerArgs>> eventHandlers;
+        private WebPubSubHubPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubHubPropertiesArgs();
         }
 
         public Builder(WebPubSubHubPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.anonymousConnectPolicy = defaults.anonymousConnectPolicy;
-    	      this.eventHandlers = defaults.eventHandlers;
+            $ = new WebPubSubHubPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder anonymousConnectPolicy(@Nullable Output<String> anonymousConnectPolicy) {
-            this.anonymousConnectPolicy = anonymousConnectPolicy;
+            $.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
-        public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
-            this.anonymousConnectPolicy = Codegen.ofNullable(anonymousConnectPolicy);
-            return this;
+
+        public Builder anonymousConnectPolicy(String anonymousConnectPolicy) {
+            return anonymousConnectPolicy(Output.of(anonymousConnectPolicy));
         }
+
         public Builder eventHandlers(@Nullable Output<List<EventHandlerArgs>> eventHandlers) {
-            this.eventHandlers = eventHandlers;
+            $.eventHandlers = eventHandlers;
             return this;
         }
-        public Builder eventHandlers(@Nullable List<EventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Codegen.ofNullable(eventHandlers);
-            return this;
+
+        public Builder eventHandlers(List<EventHandlerArgs> eventHandlers) {
+            return eventHandlers(Output.of(eventHandlers));
         }
+
         public Builder eventHandlers(EventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
-        }        public WebPubSubHubPropertiesArgs build() {
-            return new WebPubSubHubPropertiesArgs(anonymousConnectPolicy, eventHandlers);
+        }
+
+        public WebPubSubHubPropertiesArgs build() {
+            $.anonymousConnectPolicy = Codegen.stringProp("anonymousConnectPolicy").output().arg($.anonymousConnectPolicy).def("deny").getNullable();
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.DashboardSourceTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DashboardSourceEntityArgs extends com.pulumi.resources.Resour
     public static final DashboardSourceEntityArgs Empty = new DashboardSourceEntityArgs();
 
     @Import(name="sourceTemplate")
-      private final @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
+    private @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
 
-    public Output<DashboardSourceTemplateArgs> sourceTemplate() {
-        return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
+    public Optional<Output<DashboardSourceTemplateArgs>> sourceTemplate() {
+        return Optional.ofNullable(this.sourceTemplate);
     }
 
-    public DashboardSourceEntityArgs(@Nullable Output<DashboardSourceTemplateArgs> sourceTemplate) {
-        this.sourceTemplate = sourceTemplate;
-    }
+    private DashboardSourceEntityArgs() {}
 
-    private DashboardSourceEntityArgs() {
-        this.sourceTemplate = Codegen.empty();
+    private DashboardSourceEntityArgs(DashboardSourceEntityArgs $) {
+        this.sourceTemplate = $.sourceTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardSourceEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DashboardSourceTemplateArgs> sourceTemplate;
+        private DashboardSourceEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardSourceEntityArgs();
         }
 
         public Builder(DashboardSourceEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceTemplate = defaults.sourceTemplate;
+            $ = new DashboardSourceEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceTemplate(@Nullable Output<DashboardSourceTemplateArgs> sourceTemplate) {
-            this.sourceTemplate = sourceTemplate;
+            $.sourceTemplate = sourceTemplate;
             return this;
         }
-        public Builder sourceTemplate(@Nullable DashboardSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Codegen.ofNullable(sourceTemplate);
-            return this;
-        }        public DashboardSourceEntityArgs build() {
-            return new DashboardSourceEntityArgs(sourceTemplate);
+
+        public Builder sourceTemplate(DashboardSourceTemplateArgs sourceTemplate) {
+            return sourceTemplate(Output.of(sourceTemplate));
+        }
+
+        public DashboardSourceEntityArgs build() {
+            return $;
         }
     }
+
 }

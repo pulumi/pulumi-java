@@ -5,7 +5,6 @@ package com.pulumi.awsnative.timestream.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ScheduledQueryScheduleConfigurationArgs extends com.pulumi.re
     public static final ScheduledQueryScheduleConfigurationArgs Empty = new ScheduledQueryScheduleConfigurationArgs();
 
     @Import(name="scheduleExpression", required=true)
-      private final Output<String> scheduleExpression;
+    private Output<String> scheduleExpression;
 
     public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public ScheduledQueryScheduleConfigurationArgs(Output<String> scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private ScheduledQueryScheduleConfigurationArgs() {}
 
-    private ScheduledQueryScheduleConfigurationArgs() {
-        this.scheduleExpression = Codegen.empty();
+    private ScheduledQueryScheduleConfigurationArgs(ScheduledQueryScheduleConfigurationArgs $) {
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledQueryScheduleConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> scheduleExpression;
+        private ScheduledQueryScheduleConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledQueryScheduleConfigurationArgs();
         }
 
         public Builder(ScheduledQueryScheduleConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new ScheduledQueryScheduleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleExpression(Output<String> scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
+
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
-            return this;
-        }        public ScheduledQueryScheduleConfigurationArgs build() {
-            return new ScheduledQueryScheduleConfigurationArgs(scheduleExpression);
+            return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        public ScheduledQueryScheduleConfigurationArgs build() {
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

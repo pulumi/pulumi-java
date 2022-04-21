@@ -23,45 +23,44 @@ public final class DefenderForContainersAwsOfferingResponseKubernetesService ext
      * 
      */
     @Import(name="cloudRoleArn")
-      private final @Nullable String cloudRoleArn;
+    private @Nullable String cloudRoleArn;
 
     public Optional<String> cloudRoleArn() {
-        return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
+        return Optional.ofNullable(this.cloudRoleArn);
     }
 
-    public DefenderForContainersAwsOfferingResponseKubernetesService(@Nullable String cloudRoleArn) {
-        this.cloudRoleArn = cloudRoleArn;
-    }
+    private DefenderForContainersAwsOfferingResponseKubernetesService() {}
 
-    private DefenderForContainersAwsOfferingResponseKubernetesService() {
-        this.cloudRoleArn = null;
+    private DefenderForContainersAwsOfferingResponseKubernetesService(DefenderForContainersAwsOfferingResponseKubernetesService $) {
+        this.cloudRoleArn = $.cloudRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForContainersAwsOfferingResponseKubernetesService defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cloudRoleArn;
+        private DefenderForContainersAwsOfferingResponseKubernetesService $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForContainersAwsOfferingResponseKubernetesService();
         }
 
         public Builder(DefenderForContainersAwsOfferingResponseKubernetesService defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRoleArn = defaults.cloudRoleArn;
+            $ = new DefenderForContainersAwsOfferingResponseKubernetesService(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
-            this.cloudRoleArn = cloudRoleArn;
+            $.cloudRoleArn = cloudRoleArn;
             return this;
-        }        public DefenderForContainersAwsOfferingResponseKubernetesService build() {
-            return new DefenderForContainersAwsOfferingResponseKubernetesService(cloudRoleArn);
+        }
+
+        public DefenderForContainersAwsOfferingResponseKubernetesService build() {
+            return $;
         }
     }
+
 }

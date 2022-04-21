@@ -11,11 +11,11 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="autoScalingPolicies")
-      private final @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
+    private @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
-    public Output<List<AutoScalingPolicyArgs>> autoScalingPolicies() {
-        return this.autoScalingPolicies == null ? Codegen.empty() : this.autoScalingPolicies;
+    public Optional<Output<List<AutoScalingPolicyArgs>>> autoScalingPolicies() {
+        return Optional.ofNullable(this.autoScalingPolicies);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="codePackages", required=true)
-      private final Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
+    private Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
     public Output<List<ContainerCodePackagePropertiesArgs>> codePackages() {
         return this.codePackages;
@@ -54,10 +54,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="diagnostics")
-      private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
+    private @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
-    public Output<DiagnosticsRefArgs> diagnostics() {
-        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
+    public Optional<Output<DiagnosticsRefArgs>> diagnostics() {
+        return Optional.ofNullable(this.diagnostics);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="networkRefs")
-      private final @Nullable Output<List<NetworkRefArgs>> networkRefs;
+    private @Nullable Output<List<NetworkRefArgs>> networkRefs;
 
-    public Output<List<NetworkRefArgs>> networkRefs() {
-        return this.networkRefs == null ? Codegen.empty() : this.networkRefs;
+    public Optional<Output<List<NetworkRefArgs>>> networkRefs() {
+        return Optional.ofNullable(this.networkRefs);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<Either<String,OperatingSystemType>> osType;
+    private Output<Either<String,OperatingSystemType>> osType;
 
     public Output<Either<String,OperatingSystemType>> osType() {
         return this.osType;
@@ -109,150 +109,132 @@ public final class ServiceResourceDescriptionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="replicaCount")
-      private final @Nullable Output<Integer> replicaCount;
+    private @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> replicaCount() {
-        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
+    public Optional<Output<Integer>> replicaCount() {
+        return Optional.ofNullable(this.replicaCount);
     }
 
-    public ServiceResourceDescriptionArgs(
-        @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies,
-        Output<List<ContainerCodePackagePropertiesArgs>> codePackages,
-        @Nullable Output<String> description,
-        @Nullable Output<DiagnosticsRefArgs> diagnostics,
-        @Nullable Output<String> name,
-        @Nullable Output<List<NetworkRefArgs>> networkRefs,
-        Output<Either<String,OperatingSystemType>> osType,
-        @Nullable Output<Integer> replicaCount) {
-        this.autoScalingPolicies = autoScalingPolicies;
-        this.codePackages = Objects.requireNonNull(codePackages, "expected parameter 'codePackages' to be non-null");
-        this.description = description;
-        this.diagnostics = diagnostics;
-        this.name = name;
-        this.networkRefs = networkRefs;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.replicaCount = replicaCount;
-    }
+    private ServiceResourceDescriptionArgs() {}
 
-    private ServiceResourceDescriptionArgs() {
-        this.autoScalingPolicies = Codegen.empty();
-        this.codePackages = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diagnostics = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkRefs = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.replicaCount = Codegen.empty();
+    private ServiceResourceDescriptionArgs(ServiceResourceDescriptionArgs $) {
+        this.autoScalingPolicies = $.autoScalingPolicies;
+        this.codePackages = $.codePackages;
+        this.description = $.description;
+        this.diagnostics = $.diagnostics;
+        this.name = $.name;
+        this.networkRefs = $.networkRefs;
+        this.osType = $.osType;
+        this.replicaCount = $.replicaCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceResourceDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
-        private Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DiagnosticsRefArgs> diagnostics;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<NetworkRefArgs>> networkRefs;
-        private Output<Either<String,OperatingSystemType>> osType;
-        private @Nullable Output<Integer> replicaCount;
+        private ServiceResourceDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceResourceDescriptionArgs();
         }
 
         public Builder(ServiceResourceDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingPolicies = defaults.autoScalingPolicies;
-    	      this.codePackages = defaults.codePackages;
-    	      this.description = defaults.description;
-    	      this.diagnostics = defaults.diagnostics;
-    	      this.name = defaults.name;
-    	      this.networkRefs = defaults.networkRefs;
-    	      this.osType = defaults.osType;
-    	      this.replicaCount = defaults.replicaCount;
+            $ = new ServiceResourceDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingPolicies(@Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies) {
-            this.autoScalingPolicies = autoScalingPolicies;
+            $.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
-        public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyArgs> autoScalingPolicies) {
-            this.autoScalingPolicies = Codegen.ofNullable(autoScalingPolicies);
-            return this;
+
+        public Builder autoScalingPolicies(List<AutoScalingPolicyArgs> autoScalingPolicies) {
+            return autoScalingPolicies(Output.of(autoScalingPolicies));
         }
+
         public Builder autoScalingPolicies(AutoScalingPolicyArgs... autoScalingPolicies) {
             return autoScalingPolicies(List.of(autoScalingPolicies));
         }
+
         public Builder codePackages(Output<List<ContainerCodePackagePropertiesArgs>> codePackages) {
-            this.codePackages = Objects.requireNonNull(codePackages);
+            $.codePackages = codePackages;
             return this;
         }
+
         public Builder codePackages(List<ContainerCodePackagePropertiesArgs> codePackages) {
-            this.codePackages = Output.of(Objects.requireNonNull(codePackages));
-            return this;
+            return codePackages(Output.of(codePackages));
         }
+
         public Builder codePackages(ContainerCodePackagePropertiesArgs... codePackages) {
             return codePackages(List.of(codePackages));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
-            this.diagnostics = diagnostics;
+            $.diagnostics = diagnostics;
             return this;
         }
-        public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
-            this.diagnostics = Codegen.ofNullable(diagnostics);
-            return this;
+
+        public Builder diagnostics(DiagnosticsRefArgs diagnostics) {
+            return diagnostics(Output.of(diagnostics));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkRefs(@Nullable Output<List<NetworkRefArgs>> networkRefs) {
-            this.networkRefs = networkRefs;
+            $.networkRefs = networkRefs;
             return this;
         }
-        public Builder networkRefs(@Nullable List<NetworkRefArgs> networkRefs) {
-            this.networkRefs = Codegen.ofNullable(networkRefs);
-            return this;
+
+        public Builder networkRefs(List<NetworkRefArgs> networkRefs) {
+            return networkRefs(Output.of(networkRefs));
         }
+
         public Builder networkRefs(NetworkRefArgs... networkRefs) {
             return networkRefs(List.of(networkRefs));
         }
+
         public Builder osType(Output<Either<String,OperatingSystemType>> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(Either<String,OperatingSystemType> osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
-            this.replicaCount = replicaCount;
+            $.replicaCount = replicaCount;
             return this;
         }
-        public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Codegen.ofNullable(replicaCount);
-            return this;
-        }        public ServiceResourceDescriptionArgs build() {
-            return new ServiceResourceDescriptionArgs(autoScalingPolicies, codePackages, description, diagnostics, name, networkRefs, osType, replicaCount);
+
+        public Builder replicaCount(Integer replicaCount) {
+            return replicaCount(Output.of(replicaCount));
+        }
+
+        public ServiceResourceDescriptionArgs build() {
+            $.codePackages = Objects.requireNonNull($.codePackages, "expected parameter 'codePackages' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

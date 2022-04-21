@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ImageGuestOsFeatureArgs;
 import com.pulumi.gcp.compute.inputs.ImageRawDiskArgs;
 import java.lang.Integer;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="family")
-      private final @Nullable Output<String> family;
+    private @Nullable Output<String> family;
 
-    public Output<String> family() {
-        return this.family == null ? Codegen.empty() : this.family;
+    public Optional<Output<String>> family() {
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guestOsFeatures")
-      private final @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
+    private @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
 
-    public Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures() {
-        return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
+    public Optional<Output<List<ImageGuestOsFeatureArgs>>> guestOsFeatures() {
+        return Optional.ofNullable(this.guestOsFeatures);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenses")
-      private final @Nullable Output<List<String>> licenses;
+    private @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> licenses() {
-        return this.licenses == null ? Codegen.empty() : this.licenses;
+    public Optional<Output<List<String>>> licenses() {
+        return Optional.ofNullable(this.licenses);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rawDisk")
-      private final @Nullable Output<ImageRawDiskArgs> rawDisk;
+    private @Nullable Output<ImageRawDiskArgs> rawDisk;
 
-    public Output<ImageRawDiskArgs> rawDisk() {
-        return this.rawDisk == null ? Codegen.empty() : this.rawDisk;
+    public Optional<Output<ImageRawDiskArgs>> rawDisk() {
+        return Optional.ofNullable(this.rawDisk);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDisk")
-      private final @Nullable Output<String> sourceDisk;
+    private @Nullable Output<String> sourceDisk;
 
-    public Output<String> sourceDisk() {
-        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
+    public Optional<Output<String>> sourceDisk() {
+        return Optional.ofNullable(this.sourceDisk);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceImage")
-      private final @Nullable Output<String> sourceImage;
+    private @Nullable Output<String> sourceImage;
 
-    public Output<String> sourceImage() {
-        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
+    public Optional<Output<String>> sourceImage() {
+        return Optional.ofNullable(this.sourceImage);
     }
 
     /**
@@ -174,199 +174,166 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSnapshot")
-      private final @Nullable Output<String> sourceSnapshot;
+    private @Nullable Output<String> sourceSnapshot;
 
-    public Output<String> sourceSnapshot() {
-        return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
+    public Optional<Output<String>> sourceSnapshot() {
+        return Optional.ofNullable(this.sourceSnapshot);
     }
 
-    public ImageArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> family,
-        @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> licenses,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<ImageRawDiskArgs> rawDisk,
-        @Nullable Output<String> sourceDisk,
-        @Nullable Output<String> sourceImage,
-        @Nullable Output<String> sourceSnapshot) {
-        this.description = description;
-        this.diskSizeGb = diskSizeGb;
-        this.family = family;
-        this.guestOsFeatures = guestOsFeatures;
-        this.labels = labels;
-        this.licenses = licenses;
-        this.name = name;
-        this.project = project;
-        this.rawDisk = rawDisk;
-        this.sourceDisk = sourceDisk;
-        this.sourceImage = sourceImage;
-        this.sourceSnapshot = sourceSnapshot;
-    }
+    private ImageArgs() {}
 
-    private ImageArgs() {
-        this.description = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.family = Codegen.empty();
-        this.guestOsFeatures = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.licenses = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rawDisk = Codegen.empty();
-        this.sourceDisk = Codegen.empty();
-        this.sourceImage = Codegen.empty();
-        this.sourceSnapshot = Codegen.empty();
+    private ImageArgs(ImageArgs $) {
+        this.description = $.description;
+        this.diskSizeGb = $.diskSizeGb;
+        this.family = $.family;
+        this.guestOsFeatures = $.guestOsFeatures;
+        this.labels = $.labels;
+        this.licenses = $.licenses;
+        this.name = $.name;
+        this.project = $.project;
+        this.rawDisk = $.rawDisk;
+        this.sourceDisk = $.sourceDisk;
+        this.sourceImage = $.sourceImage;
+        this.sourceSnapshot = $.sourceSnapshot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> family;
-        private @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> licenses;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ImageRawDiskArgs> rawDisk;
-        private @Nullable Output<String> sourceDisk;
-        private @Nullable Output<String> sourceImage;
-        private @Nullable Output<String> sourceSnapshot;
+        private ImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageArgs();
         }
 
         public Builder(ImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.family = defaults.family;
-    	      this.guestOsFeatures = defaults.guestOsFeatures;
-    	      this.labels = defaults.labels;
-    	      this.licenses = defaults.licenses;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rawDisk = defaults.rawDisk;
-    	      this.sourceDisk = defaults.sourceDisk;
-    	      this.sourceImage = defaults.sourceImage;
-    	      this.sourceSnapshot = defaults.sourceSnapshot;
+            $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder family(@Nullable Output<String> family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
-        public Builder family(@Nullable String family) {
-            this.family = Codegen.ofNullable(family);
-            return this;
+
+        public Builder family(String family) {
+            return family(Output.of(family));
         }
+
         public Builder guestOsFeatures(@Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures) {
-            this.guestOsFeatures = guestOsFeatures;
+            $.guestOsFeatures = guestOsFeatures;
             return this;
         }
-        public Builder guestOsFeatures(@Nullable List<ImageGuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Codegen.ofNullable(guestOsFeatures);
-            return this;
+
+        public Builder guestOsFeatures(List<ImageGuestOsFeatureArgs> guestOsFeatures) {
+            return guestOsFeatures(Output.of(guestOsFeatures));
         }
+
         public Builder guestOsFeatures(ImageGuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder licenses(@Nullable Output<List<String>> licenses) {
-            this.licenses = licenses;
+            $.licenses = licenses;
             return this;
         }
-        public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Codegen.ofNullable(licenses);
-            return this;
+
+        public Builder licenses(List<String> licenses) {
+            return licenses(Output.of(licenses));
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rawDisk(@Nullable Output<ImageRawDiskArgs> rawDisk) {
-            this.rawDisk = rawDisk;
+            $.rawDisk = rawDisk;
             return this;
         }
-        public Builder rawDisk(@Nullable ImageRawDiskArgs rawDisk) {
-            this.rawDisk = Codegen.ofNullable(rawDisk);
-            return this;
+
+        public Builder rawDisk(ImageRawDiskArgs rawDisk) {
+            return rawDisk(Output.of(rawDisk));
         }
+
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
-            this.sourceDisk = sourceDisk;
+            $.sourceDisk = sourceDisk;
             return this;
         }
-        public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Codegen.ofNullable(sourceDisk);
-            return this;
+
+        public Builder sourceDisk(String sourceDisk) {
+            return sourceDisk(Output.of(sourceDisk));
         }
+
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
-            this.sourceImage = sourceImage;
+            $.sourceImage = sourceImage;
             return this;
         }
-        public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Codegen.ofNullable(sourceImage);
-            return this;
+
+        public Builder sourceImage(String sourceImage) {
+            return sourceImage(Output.of(sourceImage));
         }
+
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
-            this.sourceSnapshot = sourceSnapshot;
+            $.sourceSnapshot = sourceSnapshot;
             return this;
         }
-        public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Codegen.ofNullable(sourceSnapshot);
-            return this;
-        }        public ImageArgs build() {
-            return new ImageArgs(description, diskSizeGb, family, guestOsFeatures, labels, licenses, name, project, rawDisk, sourceDisk, sourceImage, sourceSnapshot);
+
+        public Builder sourceSnapshot(String sourceSnapshot) {
+            return sourceSnapshot(Output.of(sourceSnapshot));
+        }
+
+        public ImageArgs build() {
+            return $;
         }
     }
+
 }

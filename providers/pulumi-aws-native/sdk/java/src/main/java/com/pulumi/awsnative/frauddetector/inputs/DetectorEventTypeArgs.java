@@ -9,11 +9,11 @@ import com.pulumi.awsnative.frauddetector.inputs.DetectorLabelArgs;
 import com.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -48,38 +48,38 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="entityTypes")
-      private final @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
+    private @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
 
-    public Output<List<DetectorEntityTypeArgs>> entityTypes() {
-        return this.entityTypes == null ? Codegen.empty() : this.entityTypes;
+    public Optional<Output<List<DetectorEntityTypeArgs>>> entityTypes() {
+        return Optional.ofNullable(this.entityTypes);
     }
 
     @Import(name="eventVariables")
-      private final @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
+    private @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
 
-    public Output<List<DetectorEventVariableArgs>> eventVariables() {
-        return this.eventVariables == null ? Codegen.empty() : this.eventVariables;
+    public Optional<Output<List<DetectorEventVariableArgs>>> eventVariables() {
+        return Optional.ofNullable(this.eventVariables);
     }
 
     @Import(name="inline")
-      private final @Nullable Output<Boolean> inline;
+    private @Nullable Output<Boolean> inline;
 
-    public Output<Boolean> inline() {
-        return this.inline == null ? Codegen.empty() : this.inline;
+    public Optional<Output<Boolean>> inline() {
+        return Optional.ofNullable(this.inline);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<List<DetectorLabelArgs>> labels;
+    private @Nullable Output<List<DetectorLabelArgs>> labels;
 
-    public Output<List<DetectorLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<DetectorLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable Output<String> lastUpdatedTime;
+    private @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
+    public Optional<Output<String>> lastUpdatedTime() {
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -109,179 +109,154 @@ public final class DetectorEventTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DetectorTagArgs>> tags;
+    private @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DetectorTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DetectorEventTypeArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> description,
-        @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes,
-        @Nullable Output<List<DetectorEventVariableArgs>> eventVariables,
-        @Nullable Output<Boolean> inline,
-        @Nullable Output<List<DetectorLabelArgs>> labels,
-        @Nullable Output<String> lastUpdatedTime,
-        @Nullable Output<String> name,
-        @Nullable Output<List<DetectorTagArgs>> tags) {
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.description = description;
-        this.entityTypes = entityTypes;
-        this.eventVariables = eventVariables;
-        this.inline = inline;
-        this.labels = labels;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.tags = tags;
-    }
+    private DetectorEventTypeArgs() {}
 
-    private DetectorEventTypeArgs() {
-        this.arn = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.entityTypes = Codegen.empty();
-        this.eventVariables = Codegen.empty();
-        this.inline = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lastUpdatedTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DetectorEventTypeArgs(DetectorEventTypeArgs $) {
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.description = $.description;
+        this.entityTypes = $.entityTypes;
+        this.eventVariables = $.eventVariables;
+        this.inline = $.inline;
+        this.labels = $.labels;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorEventTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
-        private @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
-        private @Nullable Output<Boolean> inline;
-        private @Nullable Output<List<DetectorLabelArgs>> labels;
-        private @Nullable Output<String> lastUpdatedTime;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<DetectorTagArgs>> tags;
+        private DetectorEventTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorEventTypeArgs();
         }
 
         public Builder(DetectorEventTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.description = defaults.description;
-    	      this.entityTypes = defaults.entityTypes;
-    	      this.eventVariables = defaults.eventVariables;
-    	      this.inline = defaults.inline;
-    	      this.labels = defaults.labels;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DetectorEventTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder entityTypes(@Nullable Output<List<DetectorEntityTypeArgs>> entityTypes) {
-            this.entityTypes = entityTypes;
+            $.entityTypes = entityTypes;
             return this;
         }
-        public Builder entityTypes(@Nullable List<DetectorEntityTypeArgs> entityTypes) {
-            this.entityTypes = Codegen.ofNullable(entityTypes);
-            return this;
+
+        public Builder entityTypes(List<DetectorEntityTypeArgs> entityTypes) {
+            return entityTypes(Output.of(entityTypes));
         }
+
         public Builder entityTypes(DetectorEntityTypeArgs... entityTypes) {
             return entityTypes(List.of(entityTypes));
         }
+
         public Builder eventVariables(@Nullable Output<List<DetectorEventVariableArgs>> eventVariables) {
-            this.eventVariables = eventVariables;
+            $.eventVariables = eventVariables;
             return this;
         }
-        public Builder eventVariables(@Nullable List<DetectorEventVariableArgs> eventVariables) {
-            this.eventVariables = Codegen.ofNullable(eventVariables);
-            return this;
+
+        public Builder eventVariables(List<DetectorEventVariableArgs> eventVariables) {
+            return eventVariables(Output.of(eventVariables));
         }
+
         public Builder eventVariables(DetectorEventVariableArgs... eventVariables) {
             return eventVariables(List.of(eventVariables));
         }
+
         public Builder inline(@Nullable Output<Boolean> inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
-        public Builder inline(@Nullable Boolean inline) {
-            this.inline = Codegen.ofNullable(inline);
-            return this;
+
+        public Builder inline(Boolean inline) {
+            return inline(Output.of(inline));
         }
+
         public Builder labels(@Nullable Output<List<DetectorLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<DetectorLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<DetectorLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(DetectorLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
-            return this;
+
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
+            return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DetectorTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DetectorTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DetectorEventTypeArgs build() {
-            return new DetectorEventTypeArgs(arn, createdTime, description, entityTypes, eventVariables, inline, labels, lastUpdatedTime, name, tags);
+        }
+
+        public DetectorEventTypeArgs build() {
+            return $;
         }
     }
+
 }

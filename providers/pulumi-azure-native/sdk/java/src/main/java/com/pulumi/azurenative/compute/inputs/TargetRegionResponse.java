@@ -25,10 +25,10 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="encryption")
-      private final @Nullable EncryptionImagesResponse encryption;
+    private @Nullable EncryptionImagesResponse encryption;
 
     public Optional<EncryptionImagesResponse> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,10 +47,10 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="regionalReplicaCount")
-      private final @Nullable Integer regionalReplicaCount;
+    private @Nullable Integer regionalReplicaCount;
 
     public Optional<Integer> regionalReplicaCount() {
-        return this.regionalReplicaCount == null ? Optional.empty() : Optional.ofNullable(this.regionalReplicaCount);
+        return Optional.ofNullable(this.regionalReplicaCount);
     }
 
     /**
@@ -58,73 +58,63 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public TargetRegionResponse(
-        @Nullable EncryptionImagesResponse encryption,
-        String name,
-        @Nullable Integer regionalReplicaCount,
-        @Nullable String storageAccountType) {
-        this.encryption = encryption;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.regionalReplicaCount = regionalReplicaCount;
-        this.storageAccountType = storageAccountType;
-    }
+    private TargetRegionResponse() {}
 
-    private TargetRegionResponse() {
-        this.encryption = null;
-        this.name = null;
-        this.regionalReplicaCount = null;
-        this.storageAccountType = null;
+    private TargetRegionResponse(TargetRegionResponse $) {
+        this.encryption = $.encryption;
+        this.name = $.name;
+        this.regionalReplicaCount = $.regionalReplicaCount;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetRegionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EncryptionImagesResponse encryption;
-        private String name;
-        private @Nullable Integer regionalReplicaCount;
-        private @Nullable String storageAccountType;
+        private TargetRegionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetRegionResponse();
         }
 
         public Builder(TargetRegionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.name = defaults.name;
-    	      this.regionalReplicaCount = defaults.regionalReplicaCount;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new TargetRegionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable EncryptionImagesResponse encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
-            this.regionalReplicaCount = regionalReplicaCount;
+            $.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
-        }        public TargetRegionResponse build() {
-            return new TargetRegionResponse(encryption, name, regionalReplicaCount, storageAccountType);
+        }
+
+        public TargetRegionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

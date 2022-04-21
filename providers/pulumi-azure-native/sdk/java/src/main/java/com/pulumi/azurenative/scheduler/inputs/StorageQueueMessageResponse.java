@@ -19,10 +19,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="queueName")
-      private final @Nullable String queueName;
+    private @Nullable String queueName;
 
     public Optional<String> queueName() {
-        return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable String sasToken;
+    private @Nullable String sasToken;
 
     public Optional<String> sasToken() {
-        return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
+        return Optional.ofNullable(this.sasToken);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class StorageQueueMessageResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="storageAccount")
-      private final @Nullable String storageAccount;
+    private @Nullable String storageAccount;
 
     public Optional<String> storageAccount() {
-        return this.storageAccount == null ? Optional.empty() : Optional.ofNullable(this.storageAccount);
+        return Optional.ofNullable(this.storageAccount);
     }
 
-    public StorageQueueMessageResponse(
-        @Nullable String message,
-        @Nullable String queueName,
-        @Nullable String sasToken,
-        @Nullable String storageAccount) {
-        this.message = message;
-        this.queueName = queueName;
-        this.sasToken = sasToken;
-        this.storageAccount = storageAccount;
-    }
+    private StorageQueueMessageResponse() {}
 
-    private StorageQueueMessageResponse() {
-        this.message = null;
-        this.queueName = null;
-        this.sasToken = null;
-        this.storageAccount = null;
+    private StorageQueueMessageResponse(StorageQueueMessageResponse $) {
+        this.message = $.message;
+        this.queueName = $.queueName;
+        this.sasToken = $.sasToken;
+        this.storageAccount = $.storageAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageQueueMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String message;
-        private @Nullable String queueName;
-        private @Nullable String sasToken;
-        private @Nullable String storageAccount;
+        private StorageQueueMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageQueueMessageResponse();
         }
 
         public Builder(StorageQueueMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.queueName = defaults.queueName;
-    	      this.sasToken = defaults.sasToken;
-    	      this.storageAccount = defaults.storageAccount;
+            $ = new StorageQueueMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
+
         public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
+
         public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = storageAccount;
+            $.storageAccount = storageAccount;
             return this;
-        }        public StorageQueueMessageResponse build() {
-            return new StorageQueueMessageResponse(message, queueName, sasToken, storageAccount);
+        }
+
+        public StorageQueueMessageResponse build() {
+            return $;
         }
     }
+
 }

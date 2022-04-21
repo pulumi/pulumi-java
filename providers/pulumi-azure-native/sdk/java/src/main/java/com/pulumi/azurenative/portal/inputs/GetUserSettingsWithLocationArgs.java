@@ -17,7 +17,7 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -28,55 +28,52 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="userSettingsName", required=true)
-      private final String userSettingsName;
+    private String userSettingsName;
 
     public String userSettingsName() {
         return this.userSettingsName;
     }
 
-    public GetUserSettingsWithLocationArgs(
-        String location,
-        String userSettingsName) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.userSettingsName = Objects.requireNonNull(userSettingsName, "expected parameter 'userSettingsName' to be non-null");
-    }
+    private GetUserSettingsWithLocationArgs() {}
 
-    private GetUserSettingsWithLocationArgs() {
-        this.location = null;
-        this.userSettingsName = null;
+    private GetUserSettingsWithLocationArgs(GetUserSettingsWithLocationArgs $) {
+        this.location = $.location;
+        this.userSettingsName = $.userSettingsName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserSettingsWithLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String userSettingsName;
+        private GetUserSettingsWithLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserSettingsWithLocationArgs();
         }
 
         public Builder(GetUserSettingsWithLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.userSettingsName = defaults.userSettingsName;
+            $ = new GetUserSettingsWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder userSettingsName(String userSettingsName) {
-            this.userSettingsName = Objects.requireNonNull(userSettingsName);
+            $.userSettingsName = userSettingsName;
             return this;
-        }        public GetUserSettingsWithLocationArgs build() {
-            return new GetUserSettingsWithLocationArgs(location, userSettingsName);
+        }
+
+        public GetUserSettingsWithLocationArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.userSettingsName = Objects.requireNonNull($.userSettingsName, "expected parameter 'userSettingsName' to be non-null");
+            return $;
         }
     }
+
 }

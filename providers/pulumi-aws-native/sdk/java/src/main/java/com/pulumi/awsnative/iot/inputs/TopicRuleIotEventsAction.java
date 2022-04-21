@@ -16,94 +16,85 @@ public final class TopicRuleIotEventsAction extends com.pulumi.resources.InvokeA
     public static final TopicRuleIotEventsAction Empty = new TopicRuleIotEventsAction();
 
     @Import(name="batchMode")
-      private final @Nullable Boolean batchMode;
+    private @Nullable Boolean batchMode;
 
     public Optional<Boolean> batchMode() {
-        return this.batchMode == null ? Optional.empty() : Optional.ofNullable(this.batchMode);
+        return Optional.ofNullable(this.batchMode);
     }
 
     @Import(name="inputName", required=true)
-      private final String inputName;
+    private String inputName;
 
     public String inputName() {
         return this.inputName;
     }
 
     @Import(name="messageId")
-      private final @Nullable String messageId;
+    private @Nullable String messageId;
 
     public Optional<String> messageId() {
-        return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
+        return Optional.ofNullable(this.messageId);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleIotEventsAction(
-        @Nullable Boolean batchMode,
-        String inputName,
-        @Nullable String messageId,
-        String roleArn) {
-        this.batchMode = batchMode;
-        this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
-        this.messageId = messageId;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleIotEventsAction() {}
 
-    private TopicRuleIotEventsAction() {
-        this.batchMode = null;
-        this.inputName = null;
-        this.messageId = null;
-        this.roleArn = null;
+    private TopicRuleIotEventsAction(TopicRuleIotEventsAction $) {
+        this.batchMode = $.batchMode;
+        this.inputName = $.inputName;
+        this.messageId = $.messageId;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleIotEventsAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean batchMode;
-        private String inputName;
-        private @Nullable String messageId;
-        private String roleArn;
+        private TopicRuleIotEventsAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleIotEventsAction();
         }
 
         public Builder(TopicRuleIotEventsAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
-    	      this.inputName = defaults.inputName;
-    	      this.messageId = defaults.messageId;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleIotEventsAction(Objects.requireNonNull(defaults));
         }
 
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = batchMode;
+            $.batchMode = batchMode;
             return this;
         }
+
         public Builder inputName(String inputName) {
-            this.inputName = Objects.requireNonNull(inputName);
+            $.inputName = inputName;
             return this;
         }
+
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleIotEventsAction build() {
-            return new TopicRuleIotEventsAction(batchMode, inputName, messageId, roleArn);
+        }
+
+        public TopicRuleIotEventsAction build() {
+            $.inputName = Objects.requireNonNull($.inputName, "expected parameter 'inputName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

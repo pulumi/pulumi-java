@@ -5,12 +5,12 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destroyScheduledDuration")
-      private final @Nullable Output<String> destroyScheduledDuration;
+    private @Nullable Output<String> destroyScheduledDuration;
 
-    public Output<String> destroyScheduledDuration() {
-        return this.destroyScheduledDuration == null ? Codegen.empty() : this.destroyScheduledDuration;
+    public Optional<Output<String>> destroyScheduledDuration() {
+        return Optional.ofNullable(this.destroyScheduledDuration);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="importOnly")
-      private final @Nullable Output<Boolean> importOnly;
+    private @Nullable Output<Boolean> importOnly;
 
-    public Output<Boolean> importOnly() {
-        return this.importOnly == null ? Codegen.empty() : this.importOnly;
+    public Optional<Output<Boolean>> importOnly() {
+        return Optional.ofNullable(this.importOnly);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyRing", required=true)
-      private final Output<String> keyRing;
+    private Output<String> keyRing;
 
     public Output<String> keyRing() {
         return this.keyRing;
@@ -58,10 +58,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purpose")
-      private final @Nullable Output<String> purpose;
+    private @Nullable Output<String> purpose;
 
-    public Output<String> purpose() {
-        return this.purpose == null ? Codegen.empty() : this.purpose;
+    public Optional<Output<String>> purpose() {
+        return Optional.ofNullable(this.purpose);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rotationPeriod")
-      private final @Nullable Output<String> rotationPeriod;
+    private @Nullable Output<String> rotationPeriod;
 
-    public Output<String> rotationPeriod() {
-        return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
+    public Optional<Output<String>> rotationPeriod() {
+        return Optional.ofNullable(this.rotationPeriod);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipInitialVersionCreation")
-      private final @Nullable Output<Boolean> skipInitialVersionCreation;
+    private @Nullable Output<Boolean> skipInitialVersionCreation;
 
-    public Output<Boolean> skipInitialVersionCreation() {
-        return this.skipInitialVersionCreation == null ? Codegen.empty() : this.skipInitialVersionCreation;
+    public Optional<Output<Boolean>> skipInitialVersionCreation() {
+        return Optional.ofNullable(this.skipInitialVersionCreation);
     }
 
     /**
@@ -122,154 +122,129 @@ public final class CryptoKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionTemplate")
-      private final @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
+    private @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
 
-    public Output<CryptoKeyVersionTemplateArgs> versionTemplate() {
-        return this.versionTemplate == null ? Codegen.empty() : this.versionTemplate;
+    public Optional<Output<CryptoKeyVersionTemplateArgs>> versionTemplate() {
+        return Optional.ofNullable(this.versionTemplate);
     }
 
-    public CryptoKeyArgs(
-        @Nullable Output<String> destroyScheduledDuration,
-        @Nullable Output<Boolean> importOnly,
-        Output<String> keyRing,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> purpose,
-        @Nullable Output<String> rotationPeriod,
-        @Nullable Output<Boolean> skipInitialVersionCreation,
-        @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate) {
-        this.destroyScheduledDuration = destroyScheduledDuration;
-        this.importOnly = importOnly;
-        this.keyRing = Objects.requireNonNull(keyRing, "expected parameter 'keyRing' to be non-null");
-        this.labels = labels;
-        this.name = name;
-        this.purpose = purpose;
-        this.rotationPeriod = rotationPeriod;
-        this.skipInitialVersionCreation = skipInitialVersionCreation;
-        this.versionTemplate = versionTemplate;
-    }
+    private CryptoKeyArgs() {}
 
-    private CryptoKeyArgs() {
-        this.destroyScheduledDuration = Codegen.empty();
-        this.importOnly = Codegen.empty();
-        this.keyRing = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.purpose = Codegen.empty();
-        this.rotationPeriod = Codegen.empty();
-        this.skipInitialVersionCreation = Codegen.empty();
-        this.versionTemplate = Codegen.empty();
+    private CryptoKeyArgs(CryptoKeyArgs $) {
+        this.destroyScheduledDuration = $.destroyScheduledDuration;
+        this.importOnly = $.importOnly;
+        this.keyRing = $.keyRing;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.purpose = $.purpose;
+        this.rotationPeriod = $.rotationPeriod;
+        this.skipInitialVersionCreation = $.skipInitialVersionCreation;
+        this.versionTemplate = $.versionTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destroyScheduledDuration;
-        private @Nullable Output<Boolean> importOnly;
-        private Output<String> keyRing;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> purpose;
-        private @Nullable Output<String> rotationPeriod;
-        private @Nullable Output<Boolean> skipInitialVersionCreation;
-        private @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
+        private CryptoKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyArgs();
         }
 
         public Builder(CryptoKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destroyScheduledDuration = defaults.destroyScheduledDuration;
-    	      this.importOnly = defaults.importOnly;
-    	      this.keyRing = defaults.keyRing;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.purpose = defaults.purpose;
-    	      this.rotationPeriod = defaults.rotationPeriod;
-    	      this.skipInitialVersionCreation = defaults.skipInitialVersionCreation;
-    	      this.versionTemplate = defaults.versionTemplate;
+            $ = new CryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destroyScheduledDuration(@Nullable Output<String> destroyScheduledDuration) {
-            this.destroyScheduledDuration = destroyScheduledDuration;
+            $.destroyScheduledDuration = destroyScheduledDuration;
             return this;
         }
-        public Builder destroyScheduledDuration(@Nullable String destroyScheduledDuration) {
-            this.destroyScheduledDuration = Codegen.ofNullable(destroyScheduledDuration);
-            return this;
+
+        public Builder destroyScheduledDuration(String destroyScheduledDuration) {
+            return destroyScheduledDuration(Output.of(destroyScheduledDuration));
         }
+
         public Builder importOnly(@Nullable Output<Boolean> importOnly) {
-            this.importOnly = importOnly;
+            $.importOnly = importOnly;
             return this;
         }
-        public Builder importOnly(@Nullable Boolean importOnly) {
-            this.importOnly = Codegen.ofNullable(importOnly);
-            return this;
+
+        public Builder importOnly(Boolean importOnly) {
+            return importOnly(Output.of(importOnly));
         }
+
         public Builder keyRing(Output<String> keyRing) {
-            this.keyRing = Objects.requireNonNull(keyRing);
+            $.keyRing = keyRing;
             return this;
         }
+
         public Builder keyRing(String keyRing) {
-            this.keyRing = Output.of(Objects.requireNonNull(keyRing));
-            return this;
+            return keyRing(Output.of(keyRing));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder purpose(@Nullable Output<String> purpose) {
-            this.purpose = purpose;
+            $.purpose = purpose;
             return this;
         }
-        public Builder purpose(@Nullable String purpose) {
-            this.purpose = Codegen.ofNullable(purpose);
-            return this;
+
+        public Builder purpose(String purpose) {
+            return purpose(Output.of(purpose));
         }
+
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
-            this.rotationPeriod = rotationPeriod;
+            $.rotationPeriod = rotationPeriod;
             return this;
         }
-        public Builder rotationPeriod(@Nullable String rotationPeriod) {
-            this.rotationPeriod = Codegen.ofNullable(rotationPeriod);
-            return this;
+
+        public Builder rotationPeriod(String rotationPeriod) {
+            return rotationPeriod(Output.of(rotationPeriod));
         }
+
         public Builder skipInitialVersionCreation(@Nullable Output<Boolean> skipInitialVersionCreation) {
-            this.skipInitialVersionCreation = skipInitialVersionCreation;
+            $.skipInitialVersionCreation = skipInitialVersionCreation;
             return this;
         }
-        public Builder skipInitialVersionCreation(@Nullable Boolean skipInitialVersionCreation) {
-            this.skipInitialVersionCreation = Codegen.ofNullable(skipInitialVersionCreation);
-            return this;
+
+        public Builder skipInitialVersionCreation(Boolean skipInitialVersionCreation) {
+            return skipInitialVersionCreation(Output.of(skipInitialVersionCreation));
         }
+
         public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate) {
-            this.versionTemplate = versionTemplate;
+            $.versionTemplate = versionTemplate;
             return this;
         }
-        public Builder versionTemplate(@Nullable CryptoKeyVersionTemplateArgs versionTemplate) {
-            this.versionTemplate = Codegen.ofNullable(versionTemplate);
-            return this;
-        }        public CryptoKeyArgs build() {
-            return new CryptoKeyArgs(destroyScheduledDuration, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplate);
+
+        public Builder versionTemplate(CryptoKeyVersionTemplateArgs versionTemplate) {
+            return versionTemplate(Output.of(versionTemplate));
+        }
+
+        public CryptoKeyArgs build() {
+            $.keyRing = Objects.requireNonNull($.keyRing, "expected parameter 'keyRing' to be non-null");
+            return $;
         }
     }
+
 }

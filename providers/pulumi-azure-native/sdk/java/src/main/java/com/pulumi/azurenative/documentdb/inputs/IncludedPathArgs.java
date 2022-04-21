@@ -6,10 +6,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.IndexesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="indexes")
-      private final @Nullable Output<List<IndexesArgs>> indexes;
+    private @Nullable Output<List<IndexesArgs>> indexes;
 
-    public Output<List<IndexesArgs>> indexes() {
-        return this.indexes == null ? Codegen.empty() : this.indexes;
+    public Optional<Output<List<IndexesArgs>>> indexes() {
+        return Optional.ofNullable(this.indexes);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public IncludedPathArgs(
-        @Nullable Output<List<IndexesArgs>> indexes,
-        @Nullable Output<String> path) {
-        this.indexes = indexes;
-        this.path = path;
-    }
+    private IncludedPathArgs() {}
 
-    private IncludedPathArgs() {
-        this.indexes = Codegen.empty();
-        this.path = Codegen.empty();
+    private IncludedPathArgs(IncludedPathArgs $) {
+        this.indexes = $.indexes;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncludedPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IndexesArgs>> indexes;
-        private @Nullable Output<String> path;
+        private IncludedPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncludedPathArgs();
         }
 
         public Builder(IncludedPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexes = defaults.indexes;
-    	      this.path = defaults.path;
+            $ = new IncludedPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder indexes(@Nullable Output<List<IndexesArgs>> indexes) {
-            this.indexes = indexes;
+            $.indexes = indexes;
             return this;
         }
-        public Builder indexes(@Nullable List<IndexesArgs> indexes) {
-            this.indexes = Codegen.ofNullable(indexes);
-            return this;
+
+        public Builder indexes(List<IndexesArgs> indexes) {
+            return indexes(Output.of(indexes));
         }
+
         public Builder indexes(IndexesArgs... indexes) {
             return indexes(List.of(indexes));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public IncludedPathArgs build() {
-            return new IncludedPathArgs(indexes, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public IncludedPathArgs build() {
+            return $;
         }
     }
+
 }

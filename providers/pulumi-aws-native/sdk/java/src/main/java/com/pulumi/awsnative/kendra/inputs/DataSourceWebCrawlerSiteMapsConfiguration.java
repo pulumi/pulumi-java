@@ -14,48 +14,49 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration extends com.pulumi.
     public static final DataSourceWebCrawlerSiteMapsConfiguration Empty = new DataSourceWebCrawlerSiteMapsConfiguration();
 
     @Import(name="siteMaps", required=true)
-      private final List<String> siteMaps;
+    private List<String> siteMaps;
 
     public List<String> siteMaps() {
         return this.siteMaps;
     }
 
-    public DataSourceWebCrawlerSiteMapsConfiguration(List<String> siteMaps) {
-        this.siteMaps = Objects.requireNonNull(siteMaps, "expected parameter 'siteMaps' to be non-null");
-    }
+    private DataSourceWebCrawlerSiteMapsConfiguration() {}
 
-    private DataSourceWebCrawlerSiteMapsConfiguration() {
-        this.siteMaps = List.of();
+    private DataSourceWebCrawlerSiteMapsConfiguration(DataSourceWebCrawlerSiteMapsConfiguration $) {
+        this.siteMaps = $.siteMaps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWebCrawlerSiteMapsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> siteMaps;
+        private DataSourceWebCrawlerSiteMapsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWebCrawlerSiteMapsConfiguration();
         }
 
         public Builder(DataSourceWebCrawlerSiteMapsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteMaps = defaults.siteMaps;
+            $ = new DataSourceWebCrawlerSiteMapsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder siteMaps(List<String> siteMaps) {
-            this.siteMaps = Objects.requireNonNull(siteMaps);
+            $.siteMaps = siteMaps;
             return this;
         }
+
         public Builder siteMaps(String... siteMaps) {
             return siteMaps(List.of(siteMaps));
-        }        public DataSourceWebCrawlerSiteMapsConfiguration build() {
-            return new DataSourceWebCrawlerSiteMapsConfiguration(siteMaps);
+        }
+
+        public DataSourceWebCrawlerSiteMapsConfiguration build() {
+            $.siteMaps = Objects.requireNonNull($.siteMaps, "expected parameter 'siteMaps' to be non-null");
+            return $;
         }
     }
+
 }

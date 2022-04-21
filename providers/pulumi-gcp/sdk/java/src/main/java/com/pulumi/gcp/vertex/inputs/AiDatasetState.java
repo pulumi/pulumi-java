@@ -5,11 +5,11 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSpec")
-      private final @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
+    private @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
-    public Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec() {
-        return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
+    public Optional<Output<AiDatasetEncryptionSpecGetArgs>> encryptionSpec() {
+        return Optional.ofNullable(this.encryptionSpec);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataSchemaUri")
-      private final @Nullable Output<String> metadataSchemaUri;
+    private @Nullable Output<String> metadataSchemaUri;
 
-    public Output<String> metadataSchemaUri() {
-        return this.metadataSchemaUri == null ? Codegen.empty() : this.metadataSchemaUri;
+    public Optional<Output<String>> metadataSchemaUri() {
+        return Optional.ofNullable(this.metadataSchemaUri);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -114,154 +114,128 @@ public final class AiDatasetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public AiDatasetState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> displayName,
-        @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> metadataSchemaUri,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.displayName = displayName;
-        this.encryptionSpec = encryptionSpec;
-        this.labels = labels;
-        this.metadataSchemaUri = metadataSchemaUri;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.updateTime = updateTime;
-    }
+    private AiDatasetState() {}
 
-    private AiDatasetState() {
-        this.createTime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.encryptionSpec = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.metadataSchemaUri = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private AiDatasetState(AiDatasetState $) {
+        this.createTime = $.createTime;
+        this.displayName = $.displayName;
+        this.encryptionSpec = $.encryptionSpec;
+        this.labels = $.labels;
+        this.metadataSchemaUri = $.metadataSchemaUri;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiDatasetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> metadataSchemaUri;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> updateTime;
+        private AiDatasetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiDatasetState();
         }
 
         public Builder(AiDatasetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.displayName = defaults.displayName;
-    	      this.encryptionSpec = defaults.encryptionSpec;
-    	      this.labels = defaults.labels;
-    	      this.metadataSchemaUri = defaults.metadataSchemaUri;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.updateTime = defaults.updateTime;
+            $ = new AiDatasetState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
-            this.encryptionSpec = encryptionSpec;
+            $.encryptionSpec = encryptionSpec;
             return this;
         }
-        public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecGetArgs encryptionSpec) {
-            this.encryptionSpec = Codegen.ofNullable(encryptionSpec);
-            return this;
+
+        public Builder encryptionSpec(AiDatasetEncryptionSpecGetArgs encryptionSpec) {
+            return encryptionSpec(Output.of(encryptionSpec));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder metadataSchemaUri(@Nullable Output<String> metadataSchemaUri) {
-            this.metadataSchemaUri = metadataSchemaUri;
+            $.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
-        public Builder metadataSchemaUri(@Nullable String metadataSchemaUri) {
-            this.metadataSchemaUri = Codegen.ofNullable(metadataSchemaUri);
-            return this;
+
+        public Builder metadataSchemaUri(String metadataSchemaUri) {
+            return metadataSchemaUri(Output.of(metadataSchemaUri));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public AiDatasetState build() {
-            return new AiDatasetState(createTime, displayName, encryptionSpec, labels, metadataSchemaUri, name, project, region, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public AiDatasetState build() {
+            return $;
         }
     }
+
 }

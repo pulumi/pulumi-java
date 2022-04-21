@@ -8,11 +8,11 @@ import com.pulumi.azurenative.logic.inputs.AgreementContentArgs;
 import com.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="agreementName")
-      private final @Nullable Output<String> agreementName;
+    private @Nullable Output<String> agreementName;
 
-    public Output<String> agreementName() {
-        return this.agreementName == null ? Codegen.empty() : this.agreementName;
+    public Optional<Output<String>> agreementName() {
+        return Optional.ofNullable(this.agreementName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="agreementType", required=true)
-      private final Output<AgreementType> agreementType;
+    private Output<AgreementType> agreementType;
 
     public Output<AgreementType> agreementType() {
         return this.agreementType;
@@ -47,7 +47,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="content", required=true)
-      private final Output<AgreementContentArgs> content;
+    private Output<AgreementContentArgs> content;
 
     public Output<AgreementContentArgs> content() {
         return this.content;
@@ -58,7 +58,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="guestIdentity", required=true)
-      private final Output<BusinessIdentityArgs> guestIdentity;
+    private Output<BusinessIdentityArgs> guestIdentity;
 
     public Output<BusinessIdentityArgs> guestIdentity() {
         return this.guestIdentity;
@@ -69,7 +69,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="guestPartner", required=true)
-      private final Output<String> guestPartner;
+    private Output<String> guestPartner;
 
     public Output<String> guestPartner() {
         return this.guestPartner;
@@ -80,7 +80,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="hostIdentity", required=true)
-      private final Output<BusinessIdentityArgs> hostIdentity;
+    private Output<BusinessIdentityArgs> hostIdentity;
 
     public Output<BusinessIdentityArgs> hostIdentity() {
         return this.hostIdentity;
@@ -91,7 +91,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="hostPartner", required=true)
-      private final Output<String> hostPartner;
+    private Output<String> hostPartner;
 
     public Output<String> hostPartner() {
         return this.hostPartner;
@@ -102,7 +102,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final Output<String> integrationAccountName;
+    private Output<String> integrationAccountName;
 
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
@@ -113,10 +113,10 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -135,7 +135,7 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -146,193 +146,166 @@ public final class IntegrationAccountAgreementArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationAccountAgreementArgs(
-        @Nullable Output<String> agreementName,
-        Output<AgreementType> agreementType,
-        Output<AgreementContentArgs> content,
-        Output<BusinessIdentityArgs> guestIdentity,
-        Output<String> guestPartner,
-        Output<BusinessIdentityArgs> hostIdentity,
-        Output<String> hostPartner,
-        Output<String> integrationAccountName,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> metadata,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.agreementName = agreementName;
-        this.agreementType = Objects.requireNonNull(agreementType, "expected parameter 'agreementType' to be non-null");
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.guestIdentity = Objects.requireNonNull(guestIdentity, "expected parameter 'guestIdentity' to be non-null");
-        this.guestPartner = Objects.requireNonNull(guestPartner, "expected parameter 'guestPartner' to be non-null");
-        this.hostIdentity = Objects.requireNonNull(hostIdentity, "expected parameter 'hostIdentity' to be non-null");
-        this.hostPartner = Objects.requireNonNull(hostPartner, "expected parameter 'hostPartner' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.location = location;
-        this.metadata = metadata;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private IntegrationAccountAgreementArgs() {}
 
-    private IntegrationAccountAgreementArgs() {
-        this.agreementName = Codegen.empty();
-        this.agreementType = Codegen.empty();
-        this.content = Codegen.empty();
-        this.guestIdentity = Codegen.empty();
-        this.guestPartner = Codegen.empty();
-        this.hostIdentity = Codegen.empty();
-        this.hostPartner = Codegen.empty();
-        this.integrationAccountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationAccountAgreementArgs(IntegrationAccountAgreementArgs $) {
+        this.agreementName = $.agreementName;
+        this.agreementType = $.agreementType;
+        this.content = $.content;
+        this.guestIdentity = $.guestIdentity;
+        this.guestPartner = $.guestPartner;
+        this.hostIdentity = $.hostIdentity;
+        this.hostPartner = $.hostPartner;
+        this.integrationAccountName = $.integrationAccountName;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountAgreementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agreementName;
-        private Output<AgreementType> agreementType;
-        private Output<AgreementContentArgs> content;
-        private Output<BusinessIdentityArgs> guestIdentity;
-        private Output<String> guestPartner;
-        private Output<BusinessIdentityArgs> hostIdentity;
-        private Output<String> hostPartner;
-        private Output<String> integrationAccountName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> metadata;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationAccountAgreementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountAgreementArgs();
         }
 
         public Builder(IntegrationAccountAgreementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreementName = defaults.agreementName;
-    	      this.agreementType = defaults.agreementType;
-    	      this.content = defaults.content;
-    	      this.guestIdentity = defaults.guestIdentity;
-    	      this.guestPartner = defaults.guestPartner;
-    	      this.hostIdentity = defaults.hostIdentity;
-    	      this.hostPartner = defaults.hostPartner;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationAccountAgreementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agreementName(@Nullable Output<String> agreementName) {
-            this.agreementName = agreementName;
+            $.agreementName = agreementName;
             return this;
         }
-        public Builder agreementName(@Nullable String agreementName) {
-            this.agreementName = Codegen.ofNullable(agreementName);
-            return this;
+
+        public Builder agreementName(String agreementName) {
+            return agreementName(Output.of(agreementName));
         }
+
         public Builder agreementType(Output<AgreementType> agreementType) {
-            this.agreementType = Objects.requireNonNull(agreementType);
+            $.agreementType = agreementType;
             return this;
         }
+
         public Builder agreementType(AgreementType agreementType) {
-            this.agreementType = Output.of(Objects.requireNonNull(agreementType));
-            return this;
+            return agreementType(Output.of(agreementType));
         }
+
         public Builder content(Output<AgreementContentArgs> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(AgreementContentArgs content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder guestIdentity(Output<BusinessIdentityArgs> guestIdentity) {
-            this.guestIdentity = Objects.requireNonNull(guestIdentity);
+            $.guestIdentity = guestIdentity;
             return this;
         }
+
         public Builder guestIdentity(BusinessIdentityArgs guestIdentity) {
-            this.guestIdentity = Output.of(Objects.requireNonNull(guestIdentity));
-            return this;
+            return guestIdentity(Output.of(guestIdentity));
         }
+
         public Builder guestPartner(Output<String> guestPartner) {
-            this.guestPartner = Objects.requireNonNull(guestPartner);
+            $.guestPartner = guestPartner;
             return this;
         }
+
         public Builder guestPartner(String guestPartner) {
-            this.guestPartner = Output.of(Objects.requireNonNull(guestPartner));
-            return this;
+            return guestPartner(Output.of(guestPartner));
         }
+
         public Builder hostIdentity(Output<BusinessIdentityArgs> hostIdentity) {
-            this.hostIdentity = Objects.requireNonNull(hostIdentity);
+            $.hostIdentity = hostIdentity;
             return this;
         }
+
         public Builder hostIdentity(BusinessIdentityArgs hostIdentity) {
-            this.hostIdentity = Output.of(Objects.requireNonNull(hostIdentity));
-            return this;
+            return hostIdentity(Output.of(hostIdentity));
         }
+
         public Builder hostPartner(Output<String> hostPartner) {
-            this.hostPartner = Objects.requireNonNull(hostPartner);
+            $.hostPartner = hostPartner;
             return this;
         }
+
         public Builder hostPartner(String hostPartner) {
-            this.hostPartner = Output.of(Objects.requireNonNull(hostPartner));
-            return this;
+            return hostPartner(Output.of(hostPartner));
         }
+
         public Builder integrationAccountName(Output<String> integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
-            return this;
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationAccountAgreementArgs build() {
-            return new IntegrationAccountAgreementArgs(agreementName, agreementType, content, guestIdentity, guestPartner, hostIdentity, hostPartner, integrationAccountName, location, metadata, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationAccountAgreementArgs build() {
+            $.agreementType = Objects.requireNonNull($.agreementType, "expected parameter 'agreementType' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.guestIdentity = Objects.requireNonNull($.guestIdentity, "expected parameter 'guestIdentity' to be non-null");
+            $.guestPartner = Objects.requireNonNull($.guestPartner, "expected parameter 'guestPartner' to be non-null");
+            $.hostIdentity = Objects.requireNonNull($.hostIdentity, "expected parameter 'hostIdentity' to be non-null");
+            $.hostPartner = Objects.requireNonNull($.hostPartner, "expected parameter 'hostPartner' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

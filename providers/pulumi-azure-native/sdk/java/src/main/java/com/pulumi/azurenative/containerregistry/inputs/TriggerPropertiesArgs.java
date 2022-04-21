@@ -8,9 +8,9 @@ import com.pulumi.azurenative.containerregistry.inputs.SourceTriggerArgs;
 import com.pulumi.azurenative.containerregistry.inputs.TimerTriggerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="baseImageTrigger")
-      private final @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
+    private @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
 
-    public Output<BaseImageTriggerArgs> baseImageTrigger() {
-        return this.baseImageTrigger == null ? Codegen.empty() : this.baseImageTrigger;
+    public Optional<Output<BaseImageTriggerArgs>> baseImageTrigger() {
+        return Optional.ofNullable(this.baseImageTrigger);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceTriggers")
-      private final @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
+    private @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
 
-    public Output<List<SourceTriggerArgs>> sourceTriggers() {
-        return this.sourceTriggers == null ? Codegen.empty() : this.sourceTriggers;
+    public Optional<Output<List<SourceTriggerArgs>>> sourceTriggers() {
+        return Optional.ofNullable(this.sourceTriggers);
     }
 
     /**
@@ -49,82 +49,76 @@ public final class TriggerPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timerTriggers")
-      private final @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
+    private @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
-    public Output<List<TimerTriggerArgs>> timerTriggers() {
-        return this.timerTriggers == null ? Codegen.empty() : this.timerTriggers;
+    public Optional<Output<List<TimerTriggerArgs>>> timerTriggers() {
+        return Optional.ofNullable(this.timerTriggers);
     }
 
-    public TriggerPropertiesArgs(
-        @Nullable Output<BaseImageTriggerArgs> baseImageTrigger,
-        @Nullable Output<List<SourceTriggerArgs>> sourceTriggers,
-        @Nullable Output<List<TimerTriggerArgs>> timerTriggers) {
-        this.baseImageTrigger = baseImageTrigger;
-        this.sourceTriggers = sourceTriggers;
-        this.timerTriggers = timerTriggers;
-    }
+    private TriggerPropertiesArgs() {}
 
-    private TriggerPropertiesArgs() {
-        this.baseImageTrigger = Codegen.empty();
-        this.sourceTriggers = Codegen.empty();
-        this.timerTriggers = Codegen.empty();
+    private TriggerPropertiesArgs(TriggerPropertiesArgs $) {
+        this.baseImageTrigger = $.baseImageTrigger;
+        this.sourceTriggers = $.sourceTriggers;
+        this.timerTriggers = $.timerTriggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
-        private @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
-        private @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
+        private TriggerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPropertiesArgs();
         }
 
         public Builder(TriggerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseImageTrigger = defaults.baseImageTrigger;
-    	      this.sourceTriggers = defaults.sourceTriggers;
-    	      this.timerTriggers = defaults.timerTriggers;
+            $ = new TriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseImageTrigger(@Nullable Output<BaseImageTriggerArgs> baseImageTrigger) {
-            this.baseImageTrigger = baseImageTrigger;
+            $.baseImageTrigger = baseImageTrigger;
             return this;
         }
-        public Builder baseImageTrigger(@Nullable BaseImageTriggerArgs baseImageTrigger) {
-            this.baseImageTrigger = Codegen.ofNullable(baseImageTrigger);
-            return this;
+
+        public Builder baseImageTrigger(BaseImageTriggerArgs baseImageTrigger) {
+            return baseImageTrigger(Output.of(baseImageTrigger));
         }
+
         public Builder sourceTriggers(@Nullable Output<List<SourceTriggerArgs>> sourceTriggers) {
-            this.sourceTriggers = sourceTriggers;
+            $.sourceTriggers = sourceTriggers;
             return this;
         }
-        public Builder sourceTriggers(@Nullable List<SourceTriggerArgs> sourceTriggers) {
-            this.sourceTriggers = Codegen.ofNullable(sourceTriggers);
-            return this;
+
+        public Builder sourceTriggers(List<SourceTriggerArgs> sourceTriggers) {
+            return sourceTriggers(Output.of(sourceTriggers));
         }
+
         public Builder sourceTriggers(SourceTriggerArgs... sourceTriggers) {
             return sourceTriggers(List.of(sourceTriggers));
         }
+
         public Builder timerTriggers(@Nullable Output<List<TimerTriggerArgs>> timerTriggers) {
-            this.timerTriggers = timerTriggers;
+            $.timerTriggers = timerTriggers;
             return this;
         }
-        public Builder timerTriggers(@Nullable List<TimerTriggerArgs> timerTriggers) {
-            this.timerTriggers = Codegen.ofNullable(timerTriggers);
-            return this;
+
+        public Builder timerTriggers(List<TimerTriggerArgs> timerTriggers) {
+            return timerTriggers(Output.of(timerTriggers));
         }
+
         public Builder timerTriggers(TimerTriggerArgs... timerTriggers) {
             return timerTriggers(List.of(timerTriggers));
-        }        public TriggerPropertiesArgs build() {
-            return new TriggerPropertiesArgs(baseImageTrigger, sourceTriggers, timerTriggers);
+        }
+
+        public TriggerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

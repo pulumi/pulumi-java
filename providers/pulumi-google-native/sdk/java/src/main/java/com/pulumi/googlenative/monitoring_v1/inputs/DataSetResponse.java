@@ -22,7 +22,7 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="legendTemplate", required=true)
-      private final String legendTemplate;
+    private String legendTemplate;
 
     public String legendTemplate() {
         return this.legendTemplate;
@@ -33,7 +33,7 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minAlignmentPeriod", required=true)
-      private final String minAlignmentPeriod;
+    private String minAlignmentPeriod;
 
     public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
@@ -44,7 +44,7 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="plotType", required=true)
-      private final String plotType;
+    private String plotType;
 
     public String plotType() {
         return this.plotType;
@@ -55,7 +55,7 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetAxis", required=true)
-      private final String targetAxis;
+    private String targetAxis;
 
     public String targetAxis() {
         return this.targetAxis;
@@ -66,82 +66,73 @@ public final class DataSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeSeriesQuery", required=true)
-      private final TimeSeriesQueryResponse timeSeriesQuery;
+    private TimeSeriesQueryResponse timeSeriesQuery;
 
     public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
-    public DataSetResponse(
-        String legendTemplate,
-        String minAlignmentPeriod,
-        String plotType,
-        String targetAxis,
-        TimeSeriesQueryResponse timeSeriesQuery) {
-        this.legendTemplate = Objects.requireNonNull(legendTemplate, "expected parameter 'legendTemplate' to be non-null");
-        this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod, "expected parameter 'minAlignmentPeriod' to be non-null");
-        this.plotType = Objects.requireNonNull(plotType, "expected parameter 'plotType' to be non-null");
-        this.targetAxis = Objects.requireNonNull(targetAxis, "expected parameter 'targetAxis' to be non-null");
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
-    }
+    private DataSetResponse() {}
 
-    private DataSetResponse() {
-        this.legendTemplate = null;
-        this.minAlignmentPeriod = null;
-        this.plotType = null;
-        this.targetAxis = null;
-        this.timeSeriesQuery = null;
+    private DataSetResponse(DataSetResponse $) {
+        this.legendTemplate = $.legendTemplate;
+        this.minAlignmentPeriod = $.minAlignmentPeriod;
+        this.plotType = $.plotType;
+        this.targetAxis = $.targetAxis;
+        this.timeSeriesQuery = $.timeSeriesQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String legendTemplate;
-        private String minAlignmentPeriod;
-        private String plotType;
-        private String targetAxis;
-        private TimeSeriesQueryResponse timeSeriesQuery;
+        private DataSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetResponse();
         }
 
         public Builder(DataSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.legendTemplate = defaults.legendTemplate;
-    	      this.minAlignmentPeriod = defaults.minAlignmentPeriod;
-    	      this.plotType = defaults.plotType;
-    	      this.targetAxis = defaults.targetAxis;
-    	      this.timeSeriesQuery = defaults.timeSeriesQuery;
+            $ = new DataSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder legendTemplate(String legendTemplate) {
-            this.legendTemplate = Objects.requireNonNull(legendTemplate);
+            $.legendTemplate = legendTemplate;
             return this;
         }
+
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
+            $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
+
         public Builder plotType(String plotType) {
-            this.plotType = Objects.requireNonNull(plotType);
+            $.plotType = plotType;
             return this;
         }
+
         public Builder targetAxis(String targetAxis) {
-            this.targetAxis = Objects.requireNonNull(targetAxis);
+            $.targetAxis = targetAxis;
             return this;
         }
+
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
-            this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+            $.timeSeriesQuery = timeSeriesQuery;
             return this;
-        }        public DataSetResponse build() {
-            return new DataSetResponse(legendTemplate, minAlignmentPeriod, plotType, targetAxis, timeSeriesQuery);
+        }
+
+        public DataSetResponse build() {
+            $.legendTemplate = Objects.requireNonNull($.legendTemplate, "expected parameter 'legendTemplate' to be non-null");
+            $.minAlignmentPeriod = Objects.requireNonNull($.minAlignmentPeriod, "expected parameter 'minAlignmentPeriod' to be non-null");
+            $.plotType = Objects.requireNonNull($.plotType, "expected parameter 'plotType' to be non-null");
+            $.targetAxis = Objects.requireNonNull($.targetAxis, "expected parameter 'targetAxis' to be non-null");
+            $.timeSeriesQuery = Objects.requireNonNull($.timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
+            return $;
         }
     }
+
 }

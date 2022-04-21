@@ -24,7 +24,7 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="all", required=true)
-      private final Boolean all;
+    private Boolean all;
 
     public Boolean all() {
         return this.all;
@@ -35,7 +35,7 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="groupLabels", required=true)
-      private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
+    private List<PatchInstanceFilterGroupLabelResponse> groupLabels;
 
     public List<PatchInstanceFilterGroupLabelResponse> groupLabels() {
         return this.groupLabels;
@@ -46,7 +46,7 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instanceNamePrefixes", required=true)
-      private final List<String> instanceNamePrefixes;
+    private List<String> instanceNamePrefixes;
 
     public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
@@ -57,7 +57,7 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instances", required=true)
-      private final List<String> instances;
+    private List<String> instances;
 
     public List<String> instances() {
         return this.instances;
@@ -68,94 +68,89 @@ public final class PatchInstanceFilterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="zones", required=true)
-      private final List<String> zones;
+    private List<String> zones;
 
     public List<String> zones() {
         return this.zones;
     }
 
-    public PatchInstanceFilterResponse(
-        Boolean all,
-        List<PatchInstanceFilterGroupLabelResponse> groupLabels,
-        List<String> instanceNamePrefixes,
-        List<String> instances,
-        List<String> zones) {
-        this.all = Objects.requireNonNull(all, "expected parameter 'all' to be non-null");
-        this.groupLabels = Objects.requireNonNull(groupLabels, "expected parameter 'groupLabels' to be non-null");
-        this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes, "expected parameter 'instanceNamePrefixes' to be non-null");
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.zones = Objects.requireNonNull(zones, "expected parameter 'zones' to be non-null");
-    }
+    private PatchInstanceFilterResponse() {}
 
-    private PatchInstanceFilterResponse() {
-        this.all = null;
-        this.groupLabels = List.of();
-        this.instanceNamePrefixes = List.of();
-        this.instances = List.of();
-        this.zones = List.of();
+    private PatchInstanceFilterResponse(PatchInstanceFilterResponse $) {
+        this.all = $.all;
+        this.groupLabels = $.groupLabels;
+        this.instanceNamePrefixes = $.instanceNamePrefixes;
+        this.instances = $.instances;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchInstanceFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean all;
-        private List<PatchInstanceFilterGroupLabelResponse> groupLabels;
-        private List<String> instanceNamePrefixes;
-        private List<String> instances;
-        private List<String> zones;
+        private PatchInstanceFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchInstanceFilterResponse();
         }
 
         public Builder(PatchInstanceFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.groupLabels = defaults.groupLabels;
-    	      this.instanceNamePrefixes = defaults.instanceNamePrefixes;
-    	      this.instances = defaults.instances;
-    	      this.zones = defaults.zones;
+            $ = new PatchInstanceFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder all(Boolean all) {
-            this.all = Objects.requireNonNull(all);
+            $.all = all;
             return this;
         }
+
         public Builder groupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
-            this.groupLabels = Objects.requireNonNull(groupLabels);
+            $.groupLabels = groupLabels;
             return this;
         }
+
         public Builder groupLabels(PatchInstanceFilterGroupLabelResponse... groupLabels) {
             return groupLabels(List.of(groupLabels));
         }
+
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
-            this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
+            $.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
+
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
             return instanceNamePrefixes(List.of(instanceNamePrefixes));
         }
+
         public Builder instances(List<String> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
+
         public Builder zones(List<String> zones) {
-            this.zones = Objects.requireNonNull(zones);
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public PatchInstanceFilterResponse build() {
-            return new PatchInstanceFilterResponse(all, groupLabels, instanceNamePrefixes, instances, zones);
+        }
+
+        public PatchInstanceFilterResponse build() {
+            $.all = Objects.requireNonNull($.all, "expected parameter 'all' to be non-null");
+            $.groupLabels = Objects.requireNonNull($.groupLabels, "expected parameter 'groupLabels' to be non-null");
+            $.instanceNamePrefixes = Objects.requireNonNull($.instanceNamePrefixes, "expected parameter 'instanceNamePrefixes' to be non-null");
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.zones = Objects.requireNonNull($.zones, "expected parameter 'zones' to be non-null");
+            return $;
         }
     }
+
 }

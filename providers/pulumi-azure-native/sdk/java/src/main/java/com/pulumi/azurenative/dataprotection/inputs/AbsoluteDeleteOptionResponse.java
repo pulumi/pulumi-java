@@ -22,7 +22,7 @@ public final class AbsoluteDeleteOptionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -34,55 +34,52 @@ public final class AbsoluteDeleteOptionResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public AbsoluteDeleteOptionResponse(
-        String duration,
-        String objectType) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-    }
+    private AbsoluteDeleteOptionResponse() {}
 
-    private AbsoluteDeleteOptionResponse() {
-        this.duration = null;
-        this.objectType = null;
+    private AbsoluteDeleteOptionResponse(AbsoluteDeleteOptionResponse $) {
+        this.duration = $.duration;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AbsoluteDeleteOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String duration;
-        private String objectType;
+        private AbsoluteDeleteOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AbsoluteDeleteOptionResponse();
         }
 
         public Builder(AbsoluteDeleteOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.objectType = defaults.objectType;
+            $ = new AbsoluteDeleteOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public AbsoluteDeleteOptionResponse build() {
-            return new AbsoluteDeleteOptionResponse(duration, objectType);
+        }
+
+        public AbsoluteDeleteOptionResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

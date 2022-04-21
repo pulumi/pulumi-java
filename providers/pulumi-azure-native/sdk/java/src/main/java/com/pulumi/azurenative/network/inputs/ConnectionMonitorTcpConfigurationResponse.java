@@ -25,10 +25,10 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
      * 
      */
     @Import(name="destinationPortBehavior")
-      private final @Nullable String destinationPortBehavior;
+    private @Nullable String destinationPortBehavior;
 
     public Optional<String> destinationPortBehavior() {
-        return this.destinationPortBehavior == null ? Optional.empty() : Optional.ofNullable(this.destinationPortBehavior);
+        return Optional.ofNullable(this.destinationPortBehavior);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
      * 
      */
     @Import(name="disableTraceRoute")
-      private final @Nullable Boolean disableTraceRoute;
+    private @Nullable Boolean disableTraceRoute;
 
     public Optional<Boolean> disableTraceRoute() {
-        return this.disableTraceRoute == null ? Optional.empty() : Optional.ofNullable(this.disableTraceRoute);
+        return Optional.ofNullable(this.disableTraceRoute);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class ConnectionMonitorTcpConfigurationResponse extends com.pulumi.
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
-    public ConnectionMonitorTcpConfigurationResponse(
-        @Nullable String destinationPortBehavior,
-        @Nullable Boolean disableTraceRoute,
-        @Nullable Integer port) {
-        this.destinationPortBehavior = destinationPortBehavior;
-        this.disableTraceRoute = disableTraceRoute;
-        this.port = port;
-    }
+    private ConnectionMonitorTcpConfigurationResponse() {}
 
-    private ConnectionMonitorTcpConfigurationResponse() {
-        this.destinationPortBehavior = null;
-        this.disableTraceRoute = null;
-        this.port = null;
+    private ConnectionMonitorTcpConfigurationResponse(ConnectionMonitorTcpConfigurationResponse $) {
+        this.destinationPortBehavior = $.destinationPortBehavior;
+        this.disableTraceRoute = $.disableTraceRoute;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorTcpConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destinationPortBehavior;
-        private @Nullable Boolean disableTraceRoute;
-        private @Nullable Integer port;
+        private ConnectionMonitorTcpConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorTcpConfigurationResponse();
         }
 
         public Builder(ConnectionMonitorTcpConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPortBehavior = defaults.destinationPortBehavior;
-    	      this.disableTraceRoute = defaults.disableTraceRoute;
-    	      this.port = defaults.port;
+            $ = new ConnectionMonitorTcpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPortBehavior(@Nullable String destinationPortBehavior) {
-            this.destinationPortBehavior = destinationPortBehavior;
+            $.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
+
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
-            this.disableTraceRoute = disableTraceRoute;
+            $.disableTraceRoute = disableTraceRoute;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
-        }        public ConnectionMonitorTcpConfigurationResponse build() {
-            return new ConnectionMonitorTcpConfigurationResponse(destinationPortBehavior, disableTraceRoute, port);
+        }
+
+        public ConnectionMonitorTcpConfigurationResponse build() {
+            return $;
         }
     }
+
 }

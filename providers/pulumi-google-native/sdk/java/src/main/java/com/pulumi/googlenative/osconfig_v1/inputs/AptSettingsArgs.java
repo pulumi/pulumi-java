@@ -5,11 +5,11 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1.enums.AptSettingsType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AptSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludes")
-      private final @Nullable Output<List<String>> excludes;
+    private @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> excludes() {
-        return this.excludes == null ? Codegen.empty() : this.excludes;
+    public Optional<Output<List<String>>> excludes() {
+        return Optional.ofNullable(this.excludes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AptSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exclusivePackages")
-      private final @Nullable Output<List<String>> exclusivePackages;
+    private @Nullable Output<List<String>> exclusivePackages;
 
-    public Output<List<String>> exclusivePackages() {
-        return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
+    public Optional<Output<List<String>>> exclusivePackages() {
+        return Optional.ofNullable(this.exclusivePackages);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class AptSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<AptSettingsType> type;
+    private @Nullable Output<AptSettingsType> type;
 
-    public Output<AptSettingsType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<AptSettingsType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AptSettingsArgs(
-        @Nullable Output<List<String>> excludes,
-        @Nullable Output<List<String>> exclusivePackages,
-        @Nullable Output<AptSettingsType> type) {
-        this.excludes = excludes;
-        this.exclusivePackages = exclusivePackages;
-        this.type = type;
-    }
+    private AptSettingsArgs() {}
 
-    private AptSettingsArgs() {
-        this.excludes = Codegen.empty();
-        this.exclusivePackages = Codegen.empty();
-        this.type = Codegen.empty();
+    private AptSettingsArgs(AptSettingsArgs $) {
+        this.excludes = $.excludes;
+        this.exclusivePackages = $.exclusivePackages;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AptSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludes;
-        private @Nullable Output<List<String>> exclusivePackages;
-        private @Nullable Output<AptSettingsType> type;
+        private AptSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AptSettingsArgs();
         }
 
         public Builder(AptSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePackages = defaults.exclusivePackages;
-    	      this.type = defaults.type;
+            $ = new AptSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludes(@Nullable Output<List<String>> excludes) {
-            this.excludes = excludes;
+            $.excludes = excludes;
             return this;
         }
-        public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Codegen.ofNullable(excludes);
-            return this;
+
+        public Builder excludes(List<String> excludes) {
+            return excludes(Output.of(excludes));
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
-            this.exclusivePackages = exclusivePackages;
+            $.exclusivePackages = exclusivePackages;
             return this;
         }
-        public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Codegen.ofNullable(exclusivePackages);
-            return this;
+
+        public Builder exclusivePackages(List<String> exclusivePackages) {
+            return exclusivePackages(Output.of(exclusivePackages));
         }
+
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
+
         public Builder type(@Nullable Output<AptSettingsType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable AptSettingsType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AptSettingsArgs build() {
-            return new AptSettingsArgs(excludes, exclusivePackages, type);
+
+        public Builder type(AptSettingsType type) {
+            return type(Output.of(type));
+        }
+
+        public AptSettingsArgs build() {
+            return $;
         }
     }
+
 }

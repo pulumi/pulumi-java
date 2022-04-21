@@ -7,10 +7,10 @@ import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.aws.eks.Cluster;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clusterSecurityGroup", required=true)
-      private final Output<SecurityGroup> clusterSecurityGroup;
+    private Output<SecurityGroup> clusterSecurityGroup;
 
     public Output<SecurityGroup> clusterSecurityGroup() {
         return this.clusterSecurityGroup;
@@ -34,7 +34,7 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="eksCluster", required=true)
-      private final Output<Cluster> eksCluster;
+    private Output<Cluster> eksCluster;
 
     public Output<Cluster> eksCluster() {
         return this.eksCluster;
@@ -45,10 +45,10 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -56,89 +56,81 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public NodeGroupSecurityGroupArgs(
-        Output<SecurityGroup> clusterSecurityGroup,
-        Output<Cluster> eksCluster,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> vpcId) {
-        this.clusterSecurityGroup = Objects.requireNonNull(clusterSecurityGroup, "expected parameter 'clusterSecurityGroup' to be non-null");
-        this.eksCluster = Objects.requireNonNull(eksCluster, "expected parameter 'eksCluster' to be non-null");
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private NodeGroupSecurityGroupArgs() {}
 
-    private NodeGroupSecurityGroupArgs() {
-        this.clusterSecurityGroup = Codegen.empty();
-        this.eksCluster = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private NodeGroupSecurityGroupArgs(NodeGroupSecurityGroupArgs $) {
+        this.clusterSecurityGroup = $.clusterSecurityGroup;
+        this.eksCluster = $.eksCluster;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupSecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SecurityGroup> clusterSecurityGroup;
-        private Output<Cluster> eksCluster;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> vpcId;
+        private NodeGroupSecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupSecurityGroupArgs();
         }
 
         public Builder(NodeGroupSecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSecurityGroup = defaults.clusterSecurityGroup;
-    	      this.eksCluster = defaults.eksCluster;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new NodeGroupSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSecurityGroup(Output<SecurityGroup> clusterSecurityGroup) {
-            this.clusterSecurityGroup = Objects.requireNonNull(clusterSecurityGroup);
+            $.clusterSecurityGroup = clusterSecurityGroup;
             return this;
         }
+
         public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
-            this.clusterSecurityGroup = Output.of(Objects.requireNonNull(clusterSecurityGroup));
-            return this;
+            return clusterSecurityGroup(Output.of(clusterSecurityGroup));
         }
+
         public Builder eksCluster(Output<Cluster> eksCluster) {
-            this.eksCluster = Objects.requireNonNull(eksCluster);
+            $.eksCluster = eksCluster;
             return this;
         }
+
         public Builder eksCluster(Cluster eksCluster) {
-            this.eksCluster = Output.of(Objects.requireNonNull(eksCluster));
-            return this;
+            return eksCluster(Output.of(eksCluster));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public NodeGroupSecurityGroupArgs build() {
-            return new NodeGroupSecurityGroupArgs(clusterSecurityGroup, eksCluster, tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public NodeGroupSecurityGroupArgs build() {
+            $.clusterSecurityGroup = Objects.requireNonNull($.clusterSecurityGroup, "expected parameter 'clusterSecurityGroup' to be non-null");
+            $.eksCluster = Objects.requireNonNull($.eksCluster, "expected parameter 'eksCluster' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs exten
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs() {}
 
-    private ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs() {
-        this.enabled = Codegen.empty();
+    private ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs(ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs();
         }
 
         public Builder(ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs build() {
-            return new ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

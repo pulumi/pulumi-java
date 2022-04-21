@@ -8,9 +8,9 @@ import com.pulumi.azurenative.kusto.inputs.TableLevelSharingPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="attachedDatabaseConfigurationName")
-      private final @Nullable Output<String> attachedDatabaseConfigurationName;
+    private @Nullable Output<String> attachedDatabaseConfigurationName;
 
-    public Output<String> attachedDatabaseConfigurationName() {
-        return this.attachedDatabaseConfigurationName == null ? Codegen.empty() : this.attachedDatabaseConfigurationName;
+    public Optional<Output<String>> attachedDatabaseConfigurationName() {
+        return Optional.ofNullable(this.attachedDatabaseConfigurationName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -45,7 +45,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterResourceId", required=true)
-      private final Output<String> clusterResourceId;
+    private Output<String> clusterResourceId;
 
     public Output<String> clusterResourceId() {
         return this.clusterResourceId;
@@ -56,7 +56,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -67,7 +67,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="defaultPrincipalsModificationKind", required=true)
-      private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
+    private Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
     public Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
@@ -78,10 +78,10 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -100,141 +100,123 @@ public final class AttachedDatabaseConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tableLevelSharingProperties")
-      private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+    private @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
-    public Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties() {
-        return this.tableLevelSharingProperties == null ? Codegen.empty() : this.tableLevelSharingProperties;
+    public Optional<Output<TableLevelSharingPropertiesArgs>> tableLevelSharingProperties() {
+        return Optional.ofNullable(this.tableLevelSharingProperties);
     }
 
-    public AttachedDatabaseConfigurationArgs(
-        @Nullable Output<String> attachedDatabaseConfigurationName,
-        Output<String> clusterName,
-        Output<String> clusterResourceId,
-        Output<String> databaseName,
-        Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
-        this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.clusterResourceId = Objects.requireNonNull(clusterResourceId, "expected parameter 'clusterResourceId' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind, "expected parameter 'defaultPrincipalsModificationKind' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tableLevelSharingProperties = tableLevelSharingProperties;
-    }
+    private AttachedDatabaseConfigurationArgs() {}
 
-    private AttachedDatabaseConfigurationArgs() {
-        this.attachedDatabaseConfigurationName = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.clusterResourceId = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.defaultPrincipalsModificationKind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tableLevelSharingProperties = Codegen.empty();
+    private AttachedDatabaseConfigurationArgs(AttachedDatabaseConfigurationArgs $) {
+        this.attachedDatabaseConfigurationName = $.attachedDatabaseConfigurationName;
+        this.clusterName = $.clusterName;
+        this.clusterResourceId = $.clusterResourceId;
+        this.databaseName = $.databaseName;
+        this.defaultPrincipalsModificationKind = $.defaultPrincipalsModificationKind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tableLevelSharingProperties = $.tableLevelSharingProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachedDatabaseConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attachedDatabaseConfigurationName;
-        private Output<String> clusterName;
-        private Output<String> clusterResourceId;
-        private Output<String> databaseName;
-        private Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
+        private AttachedDatabaseConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachedDatabaseConfigurationArgs();
         }
 
         public Builder(AttachedDatabaseConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedDatabaseConfigurationName = defaults.attachedDatabaseConfigurationName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.clusterResourceId = defaults.clusterResourceId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.defaultPrincipalsModificationKind = defaults.defaultPrincipalsModificationKind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tableLevelSharingProperties = defaults.tableLevelSharingProperties;
+            $ = new AttachedDatabaseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedDatabaseConfigurationName(@Nullable Output<String> attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
+            $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
-        public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Codegen.ofNullable(attachedDatabaseConfigurationName);
-            return this;
+
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+            return attachedDatabaseConfigurationName(Output.of(attachedDatabaseConfigurationName));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder clusterResourceId(Output<String> clusterResourceId) {
-            this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
+            $.clusterResourceId = clusterResourceId;
             return this;
         }
+
         public Builder clusterResourceId(String clusterResourceId) {
-            this.clusterResourceId = Output.of(Objects.requireNonNull(clusterResourceId));
-            return this;
+            return clusterResourceId(Output.of(clusterResourceId));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder defaultPrincipalsModificationKind(Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
-            this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
+            $.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;
             return this;
         }
+
         public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
-            this.defaultPrincipalsModificationKind = Output.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
-            return this;
+            return defaultPrincipalsModificationKind(Output.of(defaultPrincipalsModificationKind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tableLevelSharingProperties(@Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
-            this.tableLevelSharingProperties = tableLevelSharingProperties;
+            $.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
-        public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
-            this.tableLevelSharingProperties = Codegen.ofNullable(tableLevelSharingProperties);
-            return this;
-        }        public AttachedDatabaseConfigurationArgs build() {
-            return new AttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, clusterName, clusterResourceId, databaseName, defaultPrincipalsModificationKind, location, resourceGroupName, tableLevelSharingProperties);
+
+        public Builder tableLevelSharingProperties(TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
+            return tableLevelSharingProperties(Output.of(tableLevelSharingProperties));
+        }
+
+        public AttachedDatabaseConfigurationArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.clusterResourceId = Objects.requireNonNull($.clusterResourceId, "expected parameter 'clusterResourceId' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.defaultPrincipalsModificationKind = Objects.requireNonNull($.defaultPrincipalsModificationKind, "expected parameter 'defaultPrincipalsModificationKind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.securitycenter.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configId")
-      private final @Nullable Output<String> configId;
+    private @Nullable Output<String> configId;
 
-    public Output<String> configId() {
-        return this.configId == null ? Codegen.empty() : this.configId;
+    public Optional<Output<String>> configId() {
+        return Optional.ofNullable(this.configId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="organization")
-      private final @Nullable Output<String> organization;
+    private @Nullable Output<String> organization;
 
-    public Output<String> organization() {
-        return this.organization == null ? Codegen.empty() : this.organization;
+    public Optional<Output<String>> organization() {
+        return Optional.ofNullable(this.organization);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pubsubTopic")
-      private final @Nullable Output<String> pubsubTopic;
+    private @Nullable Output<String> pubsubTopic;
 
-    public Output<String> pubsubTopic() {
-        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
+    public Optional<Output<String>> pubsubTopic() {
+        return Optional.ofNullable(this.pubsubTopic);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -91,128 +91,108 @@ public final class NotificationConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="streamingConfig")
-      private final @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig;
+    private @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig;
 
-    public Output<NotificationConfigStreamingConfigGetArgs> streamingConfig() {
-        return this.streamingConfig == null ? Codegen.empty() : this.streamingConfig;
+    public Optional<Output<NotificationConfigStreamingConfigGetArgs>> streamingConfig() {
+        return Optional.ofNullable(this.streamingConfig);
     }
 
-    public NotificationConfigState(
-        @Nullable Output<String> configId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> organization,
-        @Nullable Output<String> pubsubTopic,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig) {
-        this.configId = configId;
-        this.description = description;
-        this.name = name;
-        this.organization = organization;
-        this.pubsubTopic = pubsubTopic;
-        this.serviceAccount = serviceAccount;
-        this.streamingConfig = streamingConfig;
-    }
+    private NotificationConfigState() {}
 
-    private NotificationConfigState() {
-        this.configId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organization = Codegen.empty();
-        this.pubsubTopic = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.streamingConfig = Codegen.empty();
+    private NotificationConfigState(NotificationConfigState $) {
+        this.configId = $.configId;
+        this.description = $.description;
+        this.name = $.name;
+        this.organization = $.organization;
+        this.pubsubTopic = $.pubsubTopic;
+        this.serviceAccount = $.serviceAccount;
+        this.streamingConfig = $.streamingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> organization;
-        private @Nullable Output<String> pubsubTopic;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig;
+        private NotificationConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigState();
         }
 
         public Builder(NotificationConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.organization = defaults.organization;
-    	      this.pubsubTopic = defaults.pubsubTopic;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.streamingConfig = defaults.streamingConfig;
+            $ = new NotificationConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(@Nullable Output<String> configId) {
-            this.configId = configId;
+            $.configId = configId;
             return this;
         }
-        public Builder configId(@Nullable String configId) {
-            this.configId = Codegen.ofNullable(configId);
-            return this;
+
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organization(@Nullable Output<String> organization) {
-            this.organization = organization;
+            $.organization = organization;
             return this;
         }
-        public Builder organization(@Nullable String organization) {
-            this.organization = Codegen.ofNullable(organization);
-            return this;
+
+        public Builder organization(String organization) {
+            return organization(Output.of(organization));
         }
+
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
-            this.pubsubTopic = pubsubTopic;
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
-        public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
-            return this;
+
+        public Builder pubsubTopic(String pubsubTopic) {
+            return pubsubTopic(Output.of(pubsubTopic));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder streamingConfig(@Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig) {
-            this.streamingConfig = streamingConfig;
+            $.streamingConfig = streamingConfig;
             return this;
         }
-        public Builder streamingConfig(@Nullable NotificationConfigStreamingConfigGetArgs streamingConfig) {
-            this.streamingConfig = Codegen.ofNullable(streamingConfig);
-            return this;
-        }        public NotificationConfigState build() {
-            return new NotificationConfigState(configId, description, name, organization, pubsubTopic, serviceAccount, streamingConfig);
+
+        public Builder streamingConfig(NotificationConfigStreamingConfigGetArgs streamingConfig) {
+            return streamingConfig(Output.of(streamingConfig));
+        }
+
+        public NotificationConfigState build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class GitHubClientSecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="byoaSecretAkvUrl")
-      private final @Nullable String byoaSecretAkvUrl;
+    private @Nullable String byoaSecretAkvUrl;
 
     public Optional<String> byoaSecretAkvUrl() {
-        return this.byoaSecretAkvUrl == null ? Optional.empty() : Optional.ofNullable(this.byoaSecretAkvUrl);
+        return Optional.ofNullable(this.byoaSecretAkvUrl);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class GitHubClientSecretResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="byoaSecretName")
-      private final @Nullable String byoaSecretName;
+    private @Nullable String byoaSecretName;
 
     public Optional<String> byoaSecretName() {
-        return this.byoaSecretName == null ? Optional.empty() : Optional.ofNullable(this.byoaSecretName);
+        return Optional.ofNullable(this.byoaSecretName);
     }
 
-    public GitHubClientSecretResponse(
-        @Nullable String byoaSecretAkvUrl,
-        @Nullable String byoaSecretName) {
-        this.byoaSecretAkvUrl = byoaSecretAkvUrl;
-        this.byoaSecretName = byoaSecretName;
-    }
+    private GitHubClientSecretResponse() {}
 
-    private GitHubClientSecretResponse() {
-        this.byoaSecretAkvUrl = null;
-        this.byoaSecretName = null;
+    private GitHubClientSecretResponse(GitHubClientSecretResponse $) {
+        this.byoaSecretAkvUrl = $.byoaSecretAkvUrl;
+        this.byoaSecretName = $.byoaSecretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubClientSecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String byoaSecretAkvUrl;
-        private @Nullable String byoaSecretName;
+        private GitHubClientSecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubClientSecretResponse();
         }
 
         public Builder(GitHubClientSecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byoaSecretAkvUrl = defaults.byoaSecretAkvUrl;
-    	      this.byoaSecretName = defaults.byoaSecretName;
+            $ = new GitHubClientSecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder byoaSecretAkvUrl(@Nullable String byoaSecretAkvUrl) {
-            this.byoaSecretAkvUrl = byoaSecretAkvUrl;
+            $.byoaSecretAkvUrl = byoaSecretAkvUrl;
             return this;
         }
+
         public Builder byoaSecretName(@Nullable String byoaSecretName) {
-            this.byoaSecretName = byoaSecretName;
+            $.byoaSecretName = byoaSecretName;
             return this;
-        }        public GitHubClientSecretResponse build() {
-            return new GitHubClientSecretResponse(byoaSecretAkvUrl, byoaSecretName);
+        }
+
+        public GitHubClientSecretResponse build() {
+            return $;
         }
     }
+
 }

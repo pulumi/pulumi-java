@@ -24,10 +24,10 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flags")
-      private final @Nullable Integer flags;
+    private @Nullable Integer flags;
 
     public Optional<Integer> flags() {
-        return this.flags == null ? Optional.empty() : Optional.ofNullable(this.flags);
+        return Optional.ofNullable(this.flags);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class CaaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public CaaRecordResponse(
-        @Nullable Integer flags,
-        @Nullable String tag,
-        @Nullable String value) {
-        this.flags = flags;
-        this.tag = tag;
-        this.value = value;
-    }
+    private CaaRecordResponse() {}
 
-    private CaaRecordResponse() {
-        this.flags = null;
-        this.tag = null;
-        this.value = null;
+    private CaaRecordResponse(CaaRecordResponse $) {
+        this.flags = $.flags;
+        this.tag = $.tag;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaaRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer flags;
-        private @Nullable String tag;
-        private @Nullable String value;
+        private CaaRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaaRecordResponse();
         }
 
         public Builder(CaaRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flags = defaults.flags;
-    	      this.tag = defaults.tag;
-    	      this.value = defaults.value;
+            $ = new CaaRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder flags(@Nullable Integer flags) {
-            this.flags = flags;
+            $.flags = flags;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public CaaRecordResponse build() {
-            return new CaaRecordResponse(flags, tag, value);
+        }
+
+        public CaaRecordResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cost")
-      private final @Nullable Output<Double> cost;
+    private @Nullable Output<Double> cost;
 
-    public Output<Double> cost() {
-        return this.cost == null ? Codegen.empty() : this.cost;
+    public Optional<Output<Double>> cost() {
+        return Optional.ofNullable(this.cost);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="currencyCode")
-      private final @Nullable Output<String> currencyCode;
+    private @Nullable Output<String> currencyCode;
 
-    public Output<String> currencyCode() {
-        return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
+    public Optional<Output<String>> currencyCode() {
+        return Optional.ofNullable(this.currencyCode);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="originalPrice")
-      private final @Nullable Output<Double> originalPrice;
+    private @Nullable Output<Double> originalPrice;
 
-    public Output<Double> originalPrice() {
-        return this.originalPrice == null ? Codegen.empty() : this.originalPrice;
+    public Optional<Output<Double>> originalPrice() {
+        return Optional.ofNullable(this.originalPrice);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="price")
-      private final @Nullable Output<Double> price;
+    private @Nullable Output<Double> price;
 
-    public Output<Double> price() {
-        return this.price == null ? Codegen.empty() : this.price;
+    public Optional<Output<Double>> price() {
+        return Optional.ofNullable(this.price);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="priceEffectiveTime")
-      private final @Nullable Output<String> priceEffectiveTime;
+    private @Nullable Output<String> priceEffectiveTime;
 
-    public Output<String> priceEffectiveTime() {
-        return this.priceEffectiveTime == null ? Codegen.empty() : this.priceEffectiveTime;
+    public Optional<Output<String>> priceEffectiveTime() {
+        return Optional.ofNullable(this.priceEffectiveTime);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class GoogleCloudRetailV2PriceInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="priceExpireTime")
-      private final @Nullable Output<String> priceExpireTime;
+    private @Nullable Output<String> priceExpireTime;
 
-    public Output<String> priceExpireTime() {
-        return this.priceExpireTime == null ? Codegen.empty() : this.priceExpireTime;
+    public Optional<Output<String>> priceExpireTime() {
+        return Optional.ofNullable(this.priceExpireTime);
     }
 
-    public GoogleCloudRetailV2PriceInfoArgs(
-        @Nullable Output<Double> cost,
-        @Nullable Output<String> currencyCode,
-        @Nullable Output<Double> originalPrice,
-        @Nullable Output<Double> price,
-        @Nullable Output<String> priceEffectiveTime,
-        @Nullable Output<String> priceExpireTime) {
-        this.cost = cost;
-        this.currencyCode = currencyCode;
-        this.originalPrice = originalPrice;
-        this.price = price;
-        this.priceEffectiveTime = priceEffectiveTime;
-        this.priceExpireTime = priceExpireTime;
-    }
+    private GoogleCloudRetailV2PriceInfoArgs() {}
 
-    private GoogleCloudRetailV2PriceInfoArgs() {
-        this.cost = Codegen.empty();
-        this.currencyCode = Codegen.empty();
-        this.originalPrice = Codegen.empty();
-        this.price = Codegen.empty();
-        this.priceEffectiveTime = Codegen.empty();
-        this.priceExpireTime = Codegen.empty();
+    private GoogleCloudRetailV2PriceInfoArgs(GoogleCloudRetailV2PriceInfoArgs $) {
+        this.cost = $.cost;
+        this.currencyCode = $.currencyCode;
+        this.originalPrice = $.originalPrice;
+        this.price = $.price;
+        this.priceEffectiveTime = $.priceEffectiveTime;
+        this.priceExpireTime = $.priceExpireTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2PriceInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> cost;
-        private @Nullable Output<String> currencyCode;
-        private @Nullable Output<Double> originalPrice;
-        private @Nullable Output<Double> price;
-        private @Nullable Output<String> priceEffectiveTime;
-        private @Nullable Output<String> priceExpireTime;
+        private GoogleCloudRetailV2PriceInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2PriceInfoArgs();
         }
 
         public Builder(GoogleCloudRetailV2PriceInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cost = defaults.cost;
-    	      this.currencyCode = defaults.currencyCode;
-    	      this.originalPrice = defaults.originalPrice;
-    	      this.price = defaults.price;
-    	      this.priceEffectiveTime = defaults.priceEffectiveTime;
-    	      this.priceExpireTime = defaults.priceExpireTime;
+            $ = new GoogleCloudRetailV2PriceInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cost(@Nullable Output<Double> cost) {
-            this.cost = cost;
+            $.cost = cost;
             return this;
         }
-        public Builder cost(@Nullable Double cost) {
-            this.cost = Codegen.ofNullable(cost);
-            return this;
+
+        public Builder cost(Double cost) {
+            return cost(Output.of(cost));
         }
+
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
-            this.currencyCode = currencyCode;
+            $.currencyCode = currencyCode;
             return this;
         }
-        public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Codegen.ofNullable(currencyCode);
-            return this;
+
+        public Builder currencyCode(String currencyCode) {
+            return currencyCode(Output.of(currencyCode));
         }
+
         public Builder originalPrice(@Nullable Output<Double> originalPrice) {
-            this.originalPrice = originalPrice;
+            $.originalPrice = originalPrice;
             return this;
         }
-        public Builder originalPrice(@Nullable Double originalPrice) {
-            this.originalPrice = Codegen.ofNullable(originalPrice);
-            return this;
+
+        public Builder originalPrice(Double originalPrice) {
+            return originalPrice(Output.of(originalPrice));
         }
+
         public Builder price(@Nullable Output<Double> price) {
-            this.price = price;
+            $.price = price;
             return this;
         }
-        public Builder price(@Nullable Double price) {
-            this.price = Codegen.ofNullable(price);
-            return this;
+
+        public Builder price(Double price) {
+            return price(Output.of(price));
         }
+
         public Builder priceEffectiveTime(@Nullable Output<String> priceEffectiveTime) {
-            this.priceEffectiveTime = priceEffectiveTime;
+            $.priceEffectiveTime = priceEffectiveTime;
             return this;
         }
-        public Builder priceEffectiveTime(@Nullable String priceEffectiveTime) {
-            this.priceEffectiveTime = Codegen.ofNullable(priceEffectiveTime);
-            return this;
+
+        public Builder priceEffectiveTime(String priceEffectiveTime) {
+            return priceEffectiveTime(Output.of(priceEffectiveTime));
         }
+
         public Builder priceExpireTime(@Nullable Output<String> priceExpireTime) {
-            this.priceExpireTime = priceExpireTime;
+            $.priceExpireTime = priceExpireTime;
             return this;
         }
-        public Builder priceExpireTime(@Nullable String priceExpireTime) {
-            this.priceExpireTime = Codegen.ofNullable(priceExpireTime);
-            return this;
-        }        public GoogleCloudRetailV2PriceInfoArgs build() {
-            return new GoogleCloudRetailV2PriceInfoArgs(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime);
+
+        public Builder priceExpireTime(String priceExpireTime) {
+            return priceExpireTime(Output.of(priceExpireTime));
+        }
+
+        public GoogleCloudRetailV2PriceInfoArgs build() {
+            return $;
         }
     }
+
 }

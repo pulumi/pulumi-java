@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends com.pulumi.re
      * 
      */
     @Import(name="infoType", required=true)
-      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+    private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxFindings", required=true)
-      private final Integer maxFindings;
+    private Integer maxFindings;
 
     public Integer maxFindings() {
         return this.maxFindings;
     }
 
-    public GooglePrivacyDlpV2InfoTypeLimitResponse(
-        GooglePrivacyDlpV2InfoTypeResponse infoType,
-        Integer maxFindings) {
-        this.infoType = Objects.requireNonNull(infoType, "expected parameter 'infoType' to be non-null");
-        this.maxFindings = Objects.requireNonNull(maxFindings, "expected parameter 'maxFindings' to be non-null");
-    }
+    private GooglePrivacyDlpV2InfoTypeLimitResponse() {}
 
-    private GooglePrivacyDlpV2InfoTypeLimitResponse() {
-        this.infoType = null;
-        this.maxFindings = null;
+    private GooglePrivacyDlpV2InfoTypeLimitResponse(GooglePrivacyDlpV2InfoTypeLimitResponse $) {
+        this.infoType = $.infoType;
+        this.maxFindings = $.maxFindings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InfoTypeLimitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2InfoTypeResponse infoType;
-        private Integer maxFindings;
+        private GooglePrivacyDlpV2InfoTypeLimitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InfoTypeLimitResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InfoTypeLimitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoType = defaults.infoType;
-    	      this.maxFindings = defaults.maxFindings;
+            $ = new GooglePrivacyDlpV2InfoTypeLimitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
-            this.infoType = Objects.requireNonNull(infoType);
+            $.infoType = infoType;
             return this;
         }
+
         public Builder maxFindings(Integer maxFindings) {
-            this.maxFindings = Objects.requireNonNull(maxFindings);
+            $.maxFindings = maxFindings;
             return this;
-        }        public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
-            return new GooglePrivacyDlpV2InfoTypeLimitResponse(infoType, maxFindings);
+        }
+
+        public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
+            $.infoType = Objects.requireNonNull($.infoType, "expected parameter 'infoType' to be non-null");
+            $.maxFindings = Objects.requireNonNull($.maxFindings, "expected parameter 'maxFindings' to be non-null");
+            return $;
         }
     }
+
 }

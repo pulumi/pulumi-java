@@ -24,10 +24,10 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publishInternetEndpoints")
-      private final @Nullable Boolean publishInternetEndpoints;
+    private @Nullable Boolean publishInternetEndpoints;
 
     public Optional<Boolean> publishInternetEndpoints() {
-        return this.publishInternetEndpoints == null ? Optional.empty() : Optional.ofNullable(this.publishInternetEndpoints);
+        return Optional.ofNullable(this.publishInternetEndpoints);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publishMicrosoftEndpoints")
-      private final @Nullable Boolean publishMicrosoftEndpoints;
+    private @Nullable Boolean publishMicrosoftEndpoints;
 
     public Optional<Boolean> publishMicrosoftEndpoints() {
-        return this.publishMicrosoftEndpoints == null ? Optional.empty() : Optional.ofNullable(this.publishMicrosoftEndpoints);
+        return Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class RoutingPreferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routingChoice")
-      private final @Nullable String routingChoice;
+    private @Nullable String routingChoice;
 
     public Optional<String> routingChoice() {
-        return this.routingChoice == null ? Optional.empty() : Optional.ofNullable(this.routingChoice);
+        return Optional.ofNullable(this.routingChoice);
     }
 
-    public RoutingPreferenceResponse(
-        @Nullable Boolean publishInternetEndpoints,
-        @Nullable Boolean publishMicrosoftEndpoints,
-        @Nullable String routingChoice) {
-        this.publishInternetEndpoints = publishInternetEndpoints;
-        this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
-        this.routingChoice = routingChoice;
-    }
+    private RoutingPreferenceResponse() {}
 
-    private RoutingPreferenceResponse() {
-        this.publishInternetEndpoints = null;
-        this.publishMicrosoftEndpoints = null;
-        this.routingChoice = null;
+    private RoutingPreferenceResponse(RoutingPreferenceResponse $) {
+        this.publishInternetEndpoints = $.publishInternetEndpoints;
+        this.publishMicrosoftEndpoints = $.publishMicrosoftEndpoints;
+        this.routingChoice = $.routingChoice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingPreferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean publishInternetEndpoints;
-        private @Nullable Boolean publishMicrosoftEndpoints;
-        private @Nullable String routingChoice;
+        private RoutingPreferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingPreferenceResponse();
         }
 
         public Builder(RoutingPreferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishInternetEndpoints = defaults.publishInternetEndpoints;
-    	      this.publishMicrosoftEndpoints = defaults.publishMicrosoftEndpoints;
-    	      this.routingChoice = defaults.routingChoice;
+            $ = new RoutingPreferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
-            this.publishInternetEndpoints = publishInternetEndpoints;
+            $.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
+
         public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
-            this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
+            $.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
+
         public Builder routingChoice(@Nullable String routingChoice) {
-            this.routingChoice = routingChoice;
+            $.routingChoice = routingChoice;
             return this;
-        }        public RoutingPreferenceResponse build() {
-            return new RoutingPreferenceResponse(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
+        }
+
+        public RoutingPreferenceResponse build() {
+            return $;
         }
     }
+
 }

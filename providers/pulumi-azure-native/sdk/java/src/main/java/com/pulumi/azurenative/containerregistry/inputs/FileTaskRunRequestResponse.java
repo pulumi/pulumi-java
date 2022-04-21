@@ -31,10 +31,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentConfiguration")
-      private final @Nullable AgentPropertiesResponse agentConfiguration;
+    private @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> agentConfiguration() {
-        return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
+        return Optional.ofNullable(this.agentConfiguration);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="agentPoolName")
-      private final @Nullable String agentPoolName;
+    private @Nullable String agentPoolName;
 
     public Optional<String> agentPoolName() {
-        return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
+        return Optional.ofNullable(this.agentPoolName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="credentials")
-      private final @Nullable CredentialsResponse credentials;
+    private @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="isArchiveEnabled")
-      private final @Nullable Boolean isArchiveEnabled;
+    private @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> isArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
+        return Optional.ofNullable(this.isArchiveEnabled);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logTemplate")
-      private final @Nullable String logTemplate;
+    private @Nullable String logTemplate;
 
     public Optional<String> logTemplate() {
-        return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
+        return Optional.ofNullable(this.logTemplate);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="platform", required=true)
-      private final PlatformPropertiesResponse platform;
+    private PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse platform() {
         return this.platform;
@@ -98,10 +98,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sourceLocation")
-      private final @Nullable String sourceLocation;
+    private @Nullable String sourceLocation;
 
     public Optional<String> sourceLocation() {
-        return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
+        return Optional.ofNullable(this.sourceLocation);
     }
 
     /**
@@ -109,7 +109,7 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="taskFilePath", required=true)
-      private final String taskFilePath;
+    private String taskFilePath;
 
     public String taskFilePath() {
         return this.taskFilePath;
@@ -120,10 +120,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Integer timeout;
+    private @Nullable Integer timeout;
 
     public Optional<Integer> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -143,10 +143,10 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="values")
-      private final @Nullable List<SetValueResponse> values;
+    private @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<SetValueResponse>> values() {
+        return Optional.ofNullable(this.values);
     }
 
     /**
@@ -154,148 +154,119 @@ public final class FileTaskRunRequestResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="valuesFilePath")
-      private final @Nullable String valuesFilePath;
+    private @Nullable String valuesFilePath;
 
     public Optional<String> valuesFilePath() {
-        return this.valuesFilePath == null ? Optional.empty() : Optional.ofNullable(this.valuesFilePath);
+        return Optional.ofNullable(this.valuesFilePath);
     }
 
-    public FileTaskRunRequestResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable CredentialsResponse credentials,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String logTemplate,
-        PlatformPropertiesResponse platform,
-        @Nullable String sourceLocation,
-        String taskFilePath,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable List<SetValueResponse> values,
-        @Nullable String valuesFilePath) {
-        this.agentConfiguration = agentConfiguration;
-        this.agentPoolName = agentPoolName;
-        this.credentials = credentials;
-        this.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg(isArchiveEnabled).def(false).getNullable();
-        this.logTemplate = logTemplate;
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.sourceLocation = sourceLocation;
-        this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.timeout = Codegen.integerProp("timeout").arg(timeout).def(3600).getNullable();
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.values = values;
-        this.valuesFilePath = valuesFilePath;
-    }
+    private FileTaskRunRequestResponse() {}
 
-    private FileTaskRunRequestResponse() {
-        this.agentConfiguration = null;
-        this.agentPoolName = null;
-        this.credentials = null;
-        this.isArchiveEnabled = null;
-        this.logTemplate = null;
-        this.platform = null;
-        this.sourceLocation = null;
-        this.taskFilePath = null;
-        this.timeout = null;
-        this.type = null;
-        this.values = List.of();
-        this.valuesFilePath = null;
+    private FileTaskRunRequestResponse(FileTaskRunRequestResponse $) {
+        this.agentConfiguration = $.agentConfiguration;
+        this.agentPoolName = $.agentPoolName;
+        this.credentials = $.credentials;
+        this.isArchiveEnabled = $.isArchiveEnabled;
+        this.logTemplate = $.logTemplate;
+        this.platform = $.platform;
+        this.sourceLocation = $.sourceLocation;
+        this.taskFilePath = $.taskFilePath;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.values = $.values;
+        this.valuesFilePath = $.valuesFilePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileTaskRunRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AgentPropertiesResponse agentConfiguration;
-        private @Nullable String agentPoolName;
-        private @Nullable CredentialsResponse credentials;
-        private @Nullable Boolean isArchiveEnabled;
-        private @Nullable String logTemplate;
-        private PlatformPropertiesResponse platform;
-        private @Nullable String sourceLocation;
-        private String taskFilePath;
-        private @Nullable Integer timeout;
-        private String type;
-        private @Nullable List<SetValueResponse> values;
-        private @Nullable String valuesFilePath;
+        private FileTaskRunRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileTaskRunRequestResponse();
         }
 
         public Builder(FileTaskRunRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentConfiguration = defaults.agentConfiguration;
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.credentials = defaults.credentials;
-    	      this.isArchiveEnabled = defaults.isArchiveEnabled;
-    	      this.logTemplate = defaults.logTemplate;
-    	      this.platform = defaults.platform;
-    	      this.sourceLocation = defaults.sourceLocation;
-    	      this.taskFilePath = defaults.taskFilePath;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
-    	      this.valuesFilePath = defaults.valuesFilePath;
+            $ = new FileTaskRunRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
-            this.agentConfiguration = agentConfiguration;
+            $.agentConfiguration = agentConfiguration;
             return this;
         }
+
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = agentPoolName;
+            $.agentPoolName = agentPoolName;
             return this;
         }
+
         public Builder credentials(@Nullable CredentialsResponse credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = isArchiveEnabled;
+            $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
+
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = logTemplate;
+            $.logTemplate = logTemplate;
             return this;
         }
+
         public Builder platform(PlatformPropertiesResponse platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder sourceLocation(@Nullable String sourceLocation) {
-            this.sourceLocation = sourceLocation;
+            $.sourceLocation = sourceLocation;
             return this;
         }
+
         public Builder taskFilePath(String taskFilePath) {
-            this.taskFilePath = Objects.requireNonNull(taskFilePath);
+            $.taskFilePath = taskFilePath;
             return this;
         }
+
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder values(@Nullable List<SetValueResponse> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
         }
+
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
-            this.valuesFilePath = valuesFilePath;
+            $.valuesFilePath = valuesFilePath;
             return this;
-        }        public FileTaskRunRequestResponse build() {
-            return new FileTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, isArchiveEnabled, logTemplate, platform, sourceLocation, taskFilePath, timeout, type, values, valuesFilePath);
+        }
+
+        public FileTaskRunRequestResponse build() {
+            $.isArchiveEnabled = Codegen.booleanProp("isArchiveEnabled").arg($.isArchiveEnabled).def(false).getNullable();
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.taskFilePath = Objects.requireNonNull($.taskFilePath, "expected parameter 'taskFilePath' to be non-null");
+            $.timeout = Codegen.integerProp("timeout").arg($.timeout).def(3600).getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

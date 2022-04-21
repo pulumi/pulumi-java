@@ -21,7 +21,7 @@ public final class CompositeTypeLabelEntryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -32,55 +32,52 @@ public final class CompositeTypeLabelEntryResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public CompositeTypeLabelEntryResponse(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private CompositeTypeLabelEntryResponse() {}
 
-    private CompositeTypeLabelEntryResponse() {
-        this.key = null;
-        this.value = null;
+    private CompositeTypeLabelEntryResponse(CompositeTypeLabelEntryResponse $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositeTypeLabelEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private CompositeTypeLabelEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositeTypeLabelEntryResponse();
         }
 
         public Builder(CompositeTypeLabelEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new CompositeTypeLabelEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public CompositeTypeLabelEntryResponse build() {
-            return new CompositeTypeLabelEntryResponse(key, value);
+        }
+
+        public CompositeTypeLabelEntryResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

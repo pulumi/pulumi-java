@@ -26,7 +26,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="areAssessmentsRunning", required=true)
-      private final Boolean areAssessmentsRunning;
+    private Boolean areAssessmentsRunning;
 
     public Boolean areAssessmentsRunning() {
         return this.areAssessmentsRunning;
@@ -37,7 +37,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="assessments", required=true)
-      private final List<String> assessments;
+    private List<String> assessments;
 
     public List<String> assessments() {
         return this.assessments;
@@ -48,7 +48,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="createdTimestamp", required=true)
-      private final String createdTimestamp;
+    private String createdTimestamp;
 
     public String createdTimestamp() {
         return this.createdTimestamp;
@@ -59,7 +59,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupStatus", required=true)
-      private final String groupStatus;
+    private String groupStatus;
 
     public String groupStatus() {
         return this.groupStatus;
@@ -70,10 +70,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="groupType")
-      private final @Nullable String groupType;
+    private @Nullable String groupType;
 
     public Optional<String> groupType() {
-        return this.groupType == null ? Optional.empty() : Optional.ofNullable(this.groupType);
+        return Optional.ofNullable(this.groupType);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="machineCount", required=true)
-      private final Integer machineCount;
+    private Integer machineCount;
 
     public Integer machineCount() {
         return this.machineCount;
@@ -92,103 +92,90 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="updatedTimestamp", required=true)
-      private final String updatedTimestamp;
+    private String updatedTimestamp;
 
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
 
-    public GroupPropertiesResponse(
-        Boolean areAssessmentsRunning,
-        List<String> assessments,
-        String createdTimestamp,
-        String groupStatus,
-        @Nullable String groupType,
-        Integer machineCount,
-        String updatedTimestamp) {
-        this.areAssessmentsRunning = Objects.requireNonNull(areAssessmentsRunning, "expected parameter 'areAssessmentsRunning' to be non-null");
-        this.assessments = Objects.requireNonNull(assessments, "expected parameter 'assessments' to be non-null");
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
-        this.groupStatus = Objects.requireNonNull(groupStatus, "expected parameter 'groupStatus' to be non-null");
-        this.groupType = groupType;
-        this.machineCount = Objects.requireNonNull(machineCount, "expected parameter 'machineCount' to be non-null");
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
-    }
+    private GroupPropertiesResponse() {}
 
-    private GroupPropertiesResponse() {
-        this.areAssessmentsRunning = null;
-        this.assessments = List.of();
-        this.createdTimestamp = null;
-        this.groupStatus = null;
-        this.groupType = null;
-        this.machineCount = null;
-        this.updatedTimestamp = null;
+    private GroupPropertiesResponse(GroupPropertiesResponse $) {
+        this.areAssessmentsRunning = $.areAssessmentsRunning;
+        this.assessments = $.assessments;
+        this.createdTimestamp = $.createdTimestamp;
+        this.groupStatus = $.groupStatus;
+        this.groupType = $.groupType;
+        this.machineCount = $.machineCount;
+        this.updatedTimestamp = $.updatedTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean areAssessmentsRunning;
-        private List<String> assessments;
-        private String createdTimestamp;
-        private String groupStatus;
-        private @Nullable String groupType;
-        private Integer machineCount;
-        private String updatedTimestamp;
+        private GroupPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupPropertiesResponse();
         }
 
         public Builder(GroupPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.areAssessmentsRunning = defaults.areAssessmentsRunning;
-    	      this.assessments = defaults.assessments;
-    	      this.createdTimestamp = defaults.createdTimestamp;
-    	      this.groupStatus = defaults.groupStatus;
-    	      this.groupType = defaults.groupType;
-    	      this.machineCount = defaults.machineCount;
-    	      this.updatedTimestamp = defaults.updatedTimestamp;
+            $ = new GroupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder areAssessmentsRunning(Boolean areAssessmentsRunning) {
-            this.areAssessmentsRunning = Objects.requireNonNull(areAssessmentsRunning);
+            $.areAssessmentsRunning = areAssessmentsRunning;
             return this;
         }
+
         public Builder assessments(List<String> assessments) {
-            this.assessments = Objects.requireNonNull(assessments);
+            $.assessments = assessments;
             return this;
         }
+
         public Builder assessments(String... assessments) {
             return assessments(List.of(assessments));
         }
+
         public Builder createdTimestamp(String createdTimestamp) {
-            this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+            $.createdTimestamp = createdTimestamp;
             return this;
         }
+
         public Builder groupStatus(String groupStatus) {
-            this.groupStatus = Objects.requireNonNull(groupStatus);
+            $.groupStatus = groupStatus;
             return this;
         }
+
         public Builder groupType(@Nullable String groupType) {
-            this.groupType = groupType;
+            $.groupType = groupType;
             return this;
         }
+
         public Builder machineCount(Integer machineCount) {
-            this.machineCount = Objects.requireNonNull(machineCount);
+            $.machineCount = machineCount;
             return this;
         }
+
         public Builder updatedTimestamp(String updatedTimestamp) {
-            this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+            $.updatedTimestamp = updatedTimestamp;
             return this;
-        }        public GroupPropertiesResponse build() {
-            return new GroupPropertiesResponse(areAssessmentsRunning, assessments, createdTimestamp, groupStatus, groupType, machineCount, updatedTimestamp);
+        }
+
+        public GroupPropertiesResponse build() {
+            $.areAssessmentsRunning = Objects.requireNonNull($.areAssessmentsRunning, "expected parameter 'areAssessmentsRunning' to be non-null");
+            $.assessments = Objects.requireNonNull($.assessments, "expected parameter 'assessments' to be non-null");
+            $.createdTimestamp = Objects.requireNonNull($.createdTimestamp, "expected parameter 'createdTimestamp' to be non-null");
+            $.groupStatus = Objects.requireNonNull($.groupStatus, "expected parameter 'groupStatus' to be non-null");
+            $.machineCount = Objects.requireNonNull($.machineCount, "expected parameter 'machineCount' to be non-null");
+            $.updatedTimestamp = Objects.requireNonNull($.updatedTimestamp, "expected parameter 'updatedTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

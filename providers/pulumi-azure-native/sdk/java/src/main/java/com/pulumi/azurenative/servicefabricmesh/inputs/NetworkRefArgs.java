@@ -6,10 +6,10 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.EndpointRefArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointRefs")
-      private final @Nullable Output<List<EndpointRefArgs>> endpointRefs;
+    private @Nullable Output<List<EndpointRefArgs>> endpointRefs;
 
-    public Output<List<EndpointRefArgs>> endpointRefs() {
-        return this.endpointRefs == null ? Codegen.empty() : this.endpointRefs;
+    public Optional<Output<List<EndpointRefArgs>>> endpointRefs() {
+        return Optional.ofNullable(this.endpointRefs);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class NetworkRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public NetworkRefArgs(
-        @Nullable Output<List<EndpointRefArgs>> endpointRefs,
-        @Nullable Output<String> name) {
-        this.endpointRefs = endpointRefs;
-        this.name = name;
-    }
+    private NetworkRefArgs() {}
 
-    private NetworkRefArgs() {
-        this.endpointRefs = Codegen.empty();
-        this.name = Codegen.empty();
+    private NetworkRefArgs(NetworkRefArgs $) {
+        this.endpointRefs = $.endpointRefs;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRefArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EndpointRefArgs>> endpointRefs;
-        private @Nullable Output<String> name;
+        private NetworkRefArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRefArgs();
         }
 
         public Builder(NetworkRefArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointRefs = defaults.endpointRefs;
-    	      this.name = defaults.name;
+            $ = new NetworkRefArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointRefs(@Nullable Output<List<EndpointRefArgs>> endpointRefs) {
-            this.endpointRefs = endpointRefs;
+            $.endpointRefs = endpointRefs;
             return this;
         }
-        public Builder endpointRefs(@Nullable List<EndpointRefArgs> endpointRefs) {
-            this.endpointRefs = Codegen.ofNullable(endpointRefs);
-            return this;
+
+        public Builder endpointRefs(List<EndpointRefArgs> endpointRefs) {
+            return endpointRefs(Output.of(endpointRefs));
         }
+
         public Builder endpointRefs(EndpointRefArgs... endpointRefs) {
             return endpointRefs(List.of(endpointRefs));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public NetworkRefArgs build() {
-            return new NetworkRefArgs(endpointRefs, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public NetworkRefArgs build() {
+            return $;
         }
     }
+
 }

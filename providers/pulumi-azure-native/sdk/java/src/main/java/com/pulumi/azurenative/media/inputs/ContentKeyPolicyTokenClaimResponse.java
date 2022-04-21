@@ -23,10 +23,10 @@ public final class ContentKeyPolicyTokenClaimResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="claimType")
-      private final @Nullable String claimType;
+    private @Nullable String claimType;
 
     public Optional<String> claimType() {
-        return this.claimType == null ? Optional.empty() : Optional.ofNullable(this.claimType);
+        return Optional.ofNullable(this.claimType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ContentKeyPolicyTokenClaimResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="claimValue")
-      private final @Nullable String claimValue;
+    private @Nullable String claimValue;
 
     public Optional<String> claimValue() {
-        return this.claimValue == null ? Optional.empty() : Optional.ofNullable(this.claimValue);
+        return Optional.ofNullable(this.claimValue);
     }
 
-    public ContentKeyPolicyTokenClaimResponse(
-        @Nullable String claimType,
-        @Nullable String claimValue) {
-        this.claimType = claimType;
-        this.claimValue = claimValue;
-    }
+    private ContentKeyPolicyTokenClaimResponse() {}
 
-    private ContentKeyPolicyTokenClaimResponse() {
-        this.claimType = null;
-        this.claimValue = null;
+    private ContentKeyPolicyTokenClaimResponse(ContentKeyPolicyTokenClaimResponse $) {
+        this.claimType = $.claimType;
+        this.claimValue = $.claimValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyTokenClaimResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String claimType;
-        private @Nullable String claimValue;
+        private ContentKeyPolicyTokenClaimResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyTokenClaimResponse();
         }
 
         public Builder(ContentKeyPolicyTokenClaimResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimType = defaults.claimType;
-    	      this.claimValue = defaults.claimValue;
+            $ = new ContentKeyPolicyTokenClaimResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder claimType(@Nullable String claimType) {
-            this.claimType = claimType;
+            $.claimType = claimType;
             return this;
         }
+
         public Builder claimValue(@Nullable String claimValue) {
-            this.claimValue = claimValue;
+            $.claimValue = claimValue;
             return this;
-        }        public ContentKeyPolicyTokenClaimResponse build() {
-            return new ContentKeyPolicyTokenClaimResponse(claimType, claimValue);
+        }
+
+        public ContentKeyPolicyTokenClaimResponse build() {
+            return $;
         }
     }
+
 }

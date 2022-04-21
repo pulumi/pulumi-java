@@ -25,10 +25,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable String oldestRecoveryPoint;
+    private @Nullable String oldestRecoveryPoint;
 
     public Optional<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
      * 
      */
     @Import(name="policyInconsistent")
-      private final @Nullable Boolean policyInconsistent;
+    private @Nullable Boolean policyInconsistent;
 
     public Optional<Boolean> policyInconsistent() {
-        return this.policyInconsistent == null ? Optional.empty() : Optional.ofNullable(this.policyInconsistent);
+        return Optional.ofNullable(this.policyInconsistent);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse extends com.pulu
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Integer recoveryPointCount;
+    private @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
-    public AzureIaaSVMProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable Boolean policyInconsistent,
-        @Nullable Integer recoveryPointCount) {
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.policyInconsistent = policyInconsistent;
-        this.recoveryPointCount = recoveryPointCount;
-    }
+    private AzureIaaSVMProtectedItemExtendedInfoResponse() {}
 
-    private AzureIaaSVMProtectedItemExtendedInfoResponse() {
-        this.oldestRecoveryPoint = null;
-        this.policyInconsistent = null;
-        this.recoveryPointCount = null;
+    private AzureIaaSVMProtectedItemExtendedInfoResponse(AzureIaaSVMProtectedItemExtendedInfoResponse $) {
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.policyInconsistent = $.policyInconsistent;
+        this.recoveryPointCount = $.recoveryPointCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureIaaSVMProtectedItemExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String oldestRecoveryPoint;
-        private @Nullable Boolean policyInconsistent;
-        private @Nullable Integer recoveryPointCount;
+        private AzureIaaSVMProtectedItemExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureIaaSVMProtectedItemExtendedInfoResponse();
         }
 
         public Builder(AzureIaaSVMProtectedItemExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.policyInconsistent = defaults.policyInconsistent;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
+            $ = new AzureIaaSVMProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
+
         public Builder policyInconsistent(@Nullable Boolean policyInconsistent) {
-            this.policyInconsistent = policyInconsistent;
+            $.policyInconsistent = policyInconsistent;
             return this;
         }
+
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
-        }        public AzureIaaSVMProtectedItemExtendedInfoResponse build() {
-            return new AzureIaaSVMProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyInconsistent, recoveryPointCount);
+        }
+
+        public AzureIaaSVMProtectedItemExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

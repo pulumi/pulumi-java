@@ -5,12 +5,12 @@ package com.pulumi.googlenative.managedidentities_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.managedidentities_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,7 +19,7 @@ public final class DomainBackupIamPolicyArgs extends com.pulumi.resources.Resour
     public static final DomainBackupIamPolicyArgs Empty = new DomainBackupIamPolicyArgs();
 
     @Import(name="backupId", required=true)
-      private final Output<String> backupId;
+    private Output<String> backupId;
 
     public Output<String> backupId() {
         return this.backupId;
@@ -30,14 +30,14 @@ public final class DomainBackupIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     @Import(name="domainId", required=true)
-      private final Output<String> domainId;
+    private Output<String> domainId;
 
     public Output<String> domainId() {
         return this.domainId;
@@ -48,17 +48,17 @@ public final class DomainBackupIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -66,118 +66,104 @@ public final class DomainBackupIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public DomainBackupIamPolicyArgs(
-        Output<String> backupId,
-        @Nullable Output<List<BindingArgs>> bindings,
-        Output<String> domainId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> version) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.bindings = bindings;
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.etag = etag;
-        this.project = project;
-        this.version = version;
-    }
+    private DomainBackupIamPolicyArgs() {}
 
-    private DomainBackupIamPolicyArgs() {
-        this.backupId = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.domainId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.project = Codegen.empty();
-        this.version = Codegen.empty();
+    private DomainBackupIamPolicyArgs(DomainBackupIamPolicyArgs $) {
+        this.backupId = $.backupId;
+        this.bindings = $.bindings;
+        this.domainId = $.domainId;
+        this.etag = $.etag;
+        this.project = $.project;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainBackupIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupId;
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private Output<String> domainId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> version;
+        private DomainBackupIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainBackupIamPolicyArgs();
         }
 
         public Builder(DomainBackupIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.bindings = defaults.bindings;
-    	      this.domainId = defaults.domainId;
-    	      this.etag = defaults.etag;
-    	      this.project = defaults.project;
-    	      this.version = defaults.version;
+            $ = new DomainBackupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(Output<String> backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder backupId(String backupId) {
-            this.backupId = Output.of(Objects.requireNonNull(backupId));
-            return this;
+            return backupId(Output.of(backupId));
         }
+
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder domainId(Output<String> domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder domainId(String domainId) {
-            this.domainId = Output.of(Objects.requireNonNull(domainId));
-            return this;
+            return domainId(Output.of(domainId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public DomainBackupIamPolicyArgs build() {
-            return new DomainBackupIamPolicyArgs(backupId, bindings, domainId, etag, project, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public DomainBackupIamPolicyArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            return $;
         }
     }
+
 }

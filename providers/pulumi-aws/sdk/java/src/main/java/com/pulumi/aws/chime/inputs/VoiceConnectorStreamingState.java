@@ -5,12 +5,12 @@ package com.pulumi.aws.chime.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VoiceConnectorStreamingState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataRetention")
-      private final @Nullable Output<Integer> dataRetention;
+    private @Nullable Output<Integer> dataRetention;
 
-    public Output<Integer> dataRetention() {
-        return this.dataRetention == null ? Codegen.empty() : this.dataRetention;
+    public Optional<Output<Integer>> dataRetention() {
+        return Optional.ofNullable(this.dataRetention);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VoiceConnectorStreamingState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VoiceConnectorStreamingState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="streamingNotificationTargets")
-      private final @Nullable Output<List<String>> streamingNotificationTargets;
+    private @Nullable Output<List<String>> streamingNotificationTargets;
 
-    public Output<List<String>> streamingNotificationTargets() {
-        return this.streamingNotificationTargets == null ? Codegen.empty() : this.streamingNotificationTargets;
+    public Optional<Output<List<String>>> streamingNotificationTargets() {
+        return Optional.ofNullable(this.streamingNotificationTargets);
     }
 
     /**
@@ -56,92 +56,82 @@ public final class VoiceConnectorStreamingState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="voiceConnectorId")
-      private final @Nullable Output<String> voiceConnectorId;
+    private @Nullable Output<String> voiceConnectorId;
 
-    public Output<String> voiceConnectorId() {
-        return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
+    public Optional<Output<String>> voiceConnectorId() {
+        return Optional.ofNullable(this.voiceConnectorId);
     }
 
-    public VoiceConnectorStreamingState(
-        @Nullable Output<Integer> dataRetention,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<List<String>> streamingNotificationTargets,
-        @Nullable Output<String> voiceConnectorId) {
-        this.dataRetention = dataRetention;
-        this.disabled = disabled;
-        this.streamingNotificationTargets = streamingNotificationTargets;
-        this.voiceConnectorId = voiceConnectorId;
-    }
+    private VoiceConnectorStreamingState() {}
 
-    private VoiceConnectorStreamingState() {
-        this.dataRetention = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.streamingNotificationTargets = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorStreamingState(VoiceConnectorStreamingState $) {
+        this.dataRetention = $.dataRetention;
+        this.disabled = $.disabled;
+        this.streamingNotificationTargets = $.streamingNotificationTargets;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorStreamingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> dataRetention;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<List<String>> streamingNotificationTargets;
-        private @Nullable Output<String> voiceConnectorId;
+        private VoiceConnectorStreamingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorStreamingState();
         }
 
         public Builder(VoiceConnectorStreamingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataRetention = defaults.dataRetention;
-    	      this.disabled = defaults.disabled;
-    	      this.streamingNotificationTargets = defaults.streamingNotificationTargets;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorStreamingState(Objects.requireNonNull(defaults));
         }
 
         public Builder dataRetention(@Nullable Output<Integer> dataRetention) {
-            this.dataRetention = dataRetention;
+            $.dataRetention = dataRetention;
             return this;
         }
-        public Builder dataRetention(@Nullable Integer dataRetention) {
-            this.dataRetention = Codegen.ofNullable(dataRetention);
-            return this;
+
+        public Builder dataRetention(Integer dataRetention) {
+            return dataRetention(Output.of(dataRetention));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder streamingNotificationTargets(@Nullable Output<List<String>> streamingNotificationTargets) {
-            this.streamingNotificationTargets = streamingNotificationTargets;
+            $.streamingNotificationTargets = streamingNotificationTargets;
             return this;
         }
-        public Builder streamingNotificationTargets(@Nullable List<String> streamingNotificationTargets) {
-            this.streamingNotificationTargets = Codegen.ofNullable(streamingNotificationTargets);
-            return this;
+
+        public Builder streamingNotificationTargets(List<String> streamingNotificationTargets) {
+            return streamingNotificationTargets(Output.of(streamingNotificationTargets));
         }
+
         public Builder streamingNotificationTargets(String... streamingNotificationTargets) {
             return streamingNotificationTargets(List.of(streamingNotificationTargets));
         }
+
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
-            this.voiceConnectorId = voiceConnectorId;
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
-        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Codegen.ofNullable(voiceConnectorId);
-            return this;
-        }        public VoiceConnectorStreamingState build() {
-            return new VoiceConnectorStreamingState(dataRetention, disabled, streamingNotificationTargets, voiceConnectorId);
+
+        public Builder voiceConnectorId(String voiceConnectorId) {
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorStreamingState build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="premierAddOnName", required=true)
-      private final String premierAddOnName;
+    private String premierAddOnName;
 
     public String premierAddOnName() {
         return this.premierAddOnName;
@@ -39,7 +39,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppPremierAddOnSlotArgs(
-        String name,
-        String premierAddOnName,
-        String resourceGroupName,
-        String slot) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.premierAddOnName = Objects.requireNonNull(premierAddOnName, "expected parameter 'premierAddOnName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppPremierAddOnSlotArgs() {}
 
-    private GetWebAppPremierAddOnSlotArgs() {
-        this.name = null;
-        this.premierAddOnName = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppPremierAddOnSlotArgs(GetWebAppPremierAddOnSlotArgs $) {
+        this.name = $.name;
+        this.premierAddOnName = $.premierAddOnName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppPremierAddOnSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String premierAddOnName;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppPremierAddOnSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppPremierAddOnSlotArgs();
         }
 
         public Builder(GetWebAppPremierAddOnSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.premierAddOnName = defaults.premierAddOnName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppPremierAddOnSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder premierAddOnName(String premierAddOnName) {
-            this.premierAddOnName = Objects.requireNonNull(premierAddOnName);
+            $.premierAddOnName = premierAddOnName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppPremierAddOnSlotArgs build() {
-            return new GetWebAppPremierAddOnSlotArgs(name, premierAddOnName, resourceGroupName, slot);
+        }
+
+        public GetWebAppPremierAddOnSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.premierAddOnName = Objects.requireNonNull($.premierAddOnName, "expected parameter 'premierAddOnName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

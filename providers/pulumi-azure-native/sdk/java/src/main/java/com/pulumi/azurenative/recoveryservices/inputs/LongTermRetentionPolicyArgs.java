@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dailySchedule")
-      private final @Nullable Output<DailyRetentionScheduleArgs> dailySchedule;
+    private @Nullable Output<DailyRetentionScheduleArgs> dailySchedule;
 
-    public Output<DailyRetentionScheduleArgs> dailySchedule() {
-        return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
+    public Optional<Output<DailyRetentionScheduleArgs>> dailySchedule() {
+        return Optional.ofNullable(this.dailySchedule);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="monthlySchedule")
-      private final @Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule;
+    private @Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule;
 
-    public Output<MonthlyRetentionScheduleArgs> monthlySchedule() {
-        return this.monthlySchedule == null ? Codegen.empty() : this.monthlySchedule;
+    public Optional<Output<MonthlyRetentionScheduleArgs>> monthlySchedule() {
+        return Optional.ofNullable(this.monthlySchedule);
     }
 
     /**
@@ -51,7 +52,7 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="retentionPolicyType", required=true)
-      private final Output<String> retentionPolicyType;
+    private Output<String> retentionPolicyType;
 
     public Output<String> retentionPolicyType() {
         return this.retentionPolicyType;
@@ -62,10 +63,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="weeklySchedule")
-      private final @Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule;
+    private @Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule;
 
-    public Output<WeeklyRetentionScheduleArgs> weeklySchedule() {
-        return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
+    public Optional<Output<WeeklyRetentionScheduleArgs>> weeklySchedule() {
+        return Optional.ofNullable(this.weeklySchedule);
     }
 
     /**
@@ -73,102 +74,89 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="yearlySchedule")
-      private final @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule;
+    private @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule;
 
-    public Output<YearlyRetentionScheduleArgs> yearlySchedule() {
-        return this.yearlySchedule == null ? Codegen.empty() : this.yearlySchedule;
+    public Optional<Output<YearlyRetentionScheduleArgs>> yearlySchedule() {
+        return Optional.ofNullable(this.yearlySchedule);
     }
 
-    public LongTermRetentionPolicyArgs(
-        @Nullable Output<DailyRetentionScheduleArgs> dailySchedule,
-        @Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule,
-        Output<String> retentionPolicyType,
-        @Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule,
-        @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule) {
-        this.dailySchedule = dailySchedule;
-        this.monthlySchedule = monthlySchedule;
-        this.retentionPolicyType = Codegen.stringProp("retentionPolicyType").output().arg(retentionPolicyType).require();
-        this.weeklySchedule = weeklySchedule;
-        this.yearlySchedule = yearlySchedule;
-    }
+    private LongTermRetentionPolicyArgs() {}
 
-    private LongTermRetentionPolicyArgs() {
-        this.dailySchedule = Codegen.empty();
-        this.monthlySchedule = Codegen.empty();
-        this.retentionPolicyType = Codegen.empty();
-        this.weeklySchedule = Codegen.empty();
-        this.yearlySchedule = Codegen.empty();
+    private LongTermRetentionPolicyArgs(LongTermRetentionPolicyArgs $) {
+        this.dailySchedule = $.dailySchedule;
+        this.monthlySchedule = $.monthlySchedule;
+        this.retentionPolicyType = $.retentionPolicyType;
+        this.weeklySchedule = $.weeklySchedule;
+        this.yearlySchedule = $.yearlySchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LongTermRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DailyRetentionScheduleArgs> dailySchedule;
-        private @Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule;
-        private Output<String> retentionPolicyType;
-        private @Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule;
-        private @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule;
+        private LongTermRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LongTermRetentionPolicyArgs();
         }
 
         public Builder(LongTermRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailySchedule = defaults.dailySchedule;
-    	      this.monthlySchedule = defaults.monthlySchedule;
-    	      this.retentionPolicyType = defaults.retentionPolicyType;
-    	      this.weeklySchedule = defaults.weeklySchedule;
-    	      this.yearlySchedule = defaults.yearlySchedule;
+            $ = new LongTermRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dailySchedule(@Nullable Output<DailyRetentionScheduleArgs> dailySchedule) {
-            this.dailySchedule = dailySchedule;
+            $.dailySchedule = dailySchedule;
             return this;
         }
-        public Builder dailySchedule(@Nullable DailyRetentionScheduleArgs dailySchedule) {
-            this.dailySchedule = Codegen.ofNullable(dailySchedule);
-            return this;
+
+        public Builder dailySchedule(DailyRetentionScheduleArgs dailySchedule) {
+            return dailySchedule(Output.of(dailySchedule));
         }
+
         public Builder monthlySchedule(@Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule) {
-            this.monthlySchedule = monthlySchedule;
+            $.monthlySchedule = monthlySchedule;
             return this;
         }
-        public Builder monthlySchedule(@Nullable MonthlyRetentionScheduleArgs monthlySchedule) {
-            this.monthlySchedule = Codegen.ofNullable(monthlySchedule);
-            return this;
+
+        public Builder monthlySchedule(MonthlyRetentionScheduleArgs monthlySchedule) {
+            return monthlySchedule(Output.of(monthlySchedule));
         }
+
         public Builder retentionPolicyType(Output<String> retentionPolicyType) {
-            this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
+            $.retentionPolicyType = retentionPolicyType;
             return this;
         }
+
         public Builder retentionPolicyType(String retentionPolicyType) {
-            this.retentionPolicyType = Output.of(Objects.requireNonNull(retentionPolicyType));
-            return this;
+            return retentionPolicyType(Output.of(retentionPolicyType));
         }
+
         public Builder weeklySchedule(@Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule) {
-            this.weeklySchedule = weeklySchedule;
+            $.weeklySchedule = weeklySchedule;
             return this;
         }
-        public Builder weeklySchedule(@Nullable WeeklyRetentionScheduleArgs weeklySchedule) {
-            this.weeklySchedule = Codegen.ofNullable(weeklySchedule);
-            return this;
+
+        public Builder weeklySchedule(WeeklyRetentionScheduleArgs weeklySchedule) {
+            return weeklySchedule(Output.of(weeklySchedule));
         }
+
         public Builder yearlySchedule(@Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule) {
-            this.yearlySchedule = yearlySchedule;
+            $.yearlySchedule = yearlySchedule;
             return this;
         }
-        public Builder yearlySchedule(@Nullable YearlyRetentionScheduleArgs yearlySchedule) {
-            this.yearlySchedule = Codegen.ofNullable(yearlySchedule);
-            return this;
-        }        public LongTermRetentionPolicyArgs build() {
-            return new LongTermRetentionPolicyArgs(dailySchedule, monthlySchedule, retentionPolicyType, weeklySchedule, yearlySchedule);
+
+        public Builder yearlySchedule(YearlyRetentionScheduleArgs yearlySchedule) {
+            return yearlySchedule(Output.of(yearlySchedule));
+        }
+
+        public LongTermRetentionPolicyArgs build() {
+            $.retentionPolicyType = Codegen.stringProp("retentionPolicyType").output().arg($.retentionPolicyType).require();
+            return $;
         }
     }
+
 }

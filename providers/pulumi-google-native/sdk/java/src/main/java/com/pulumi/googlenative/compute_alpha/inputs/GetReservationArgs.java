@@ -15,78 +15,72 @@ public final class GetReservationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReservationArgs Empty = new GetReservationArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="reservation", required=true)
-      private final String reservation;
+    private String reservation;
 
     public String reservation() {
         return this.reservation;
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetReservationArgs(
-        @Nullable String project,
-        String reservation,
-        String zone) {
-        this.project = project;
-        this.reservation = Objects.requireNonNull(reservation, "expected parameter 'reservation' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetReservationArgs() {}
 
-    private GetReservationArgs() {
-        this.project = null;
-        this.reservation = null;
-        this.zone = null;
+    private GetReservationArgs(GetReservationArgs $) {
+        this.project = $.project;
+        this.reservation = $.reservation;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String reservation;
-        private String zone;
+        private GetReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReservationArgs();
         }
 
         public Builder(GetReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.reservation = defaults.reservation;
-    	      this.zone = defaults.zone;
+            $ = new GetReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder reservation(String reservation) {
-            this.reservation = Objects.requireNonNull(reservation);
+            $.reservation = reservation;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetReservationArgs build() {
-            return new GetReservationArgs(project, reservation, zone);
+        }
+
+        public GetReservationArgs build() {
+            $.reservation = Objects.requireNonNull($.reservation, "expected parameter 'reservation' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

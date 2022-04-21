@@ -6,10 +6,10 @@ package com.pulumi.aws.s3outposts.inputs;
 import com.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable Output<String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
+    private @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
 
-    public Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<EndpointNetworkInterfaceGetArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outpostId")
-      private final @Nullable Output<String> outpostId;
+    private @Nullable Output<String> outpostId;
 
-    public Output<String> outpostId() {
-        return this.outpostId == null ? Codegen.empty() : this.outpostId;
+    public Optional<Output<String>> outpostId() {
+        return Optional.ofNullable(this.outpostId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupId")
-      private final @Nullable Output<String> securityGroupId;
+    private @Nullable Output<String> securityGroupId;
 
-    public Output<String> securityGroupId() {
-        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
+    public Optional<Output<String>> securityGroupId() {
+        return Optional.ofNullable(this.securityGroupId);
     }
 
     /**
@@ -88,131 +88,112 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public EndpointState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> cidrBlock,
-        @Nullable Output<String> creationTime,
-        @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces,
-        @Nullable Output<String> outpostId,
-        @Nullable Output<String> securityGroupId,
-        @Nullable Output<String> subnetId) {
-        this.arn = arn;
-        this.cidrBlock = cidrBlock;
-        this.creationTime = creationTime;
-        this.networkInterfaces = networkInterfaces;
-        this.outpostId = outpostId;
-        this.securityGroupId = securityGroupId;
-        this.subnetId = subnetId;
-    }
+    private EndpointState() {}
 
-    private EndpointState() {
-        this.arn = Codegen.empty();
-        this.cidrBlock = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.networkInterfaces = Codegen.empty();
-        this.outpostId = Codegen.empty();
-        this.securityGroupId = Codegen.empty();
-        this.subnetId = Codegen.empty();
+    private EndpointState(EndpointState $) {
+        this.arn = $.arn;
+        this.cidrBlock = $.cidrBlock;
+        this.creationTime = $.creationTime;
+        this.networkInterfaces = $.networkInterfaces;
+        this.outpostId = $.outpostId;
+        this.securityGroupId = $.securityGroupId;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> cidrBlock;
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
-        private @Nullable Output<String> outpostId;
-        private @Nullable Output<String> securityGroupId;
-        private @Nullable Output<String> subnetId;
+        private EndpointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointState();
         }
 
         public Builder(EndpointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.creationTime = defaults.creationTime;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.outpostId = defaults.outpostId;
-    	      this.securityGroupId = defaults.securityGroupId;
-    	      this.subnetId = defaults.subnetId;
+            $ = new EndpointState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Codegen.ofNullable(cidrBlock);
-            return this;
+
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder networkInterfaces(@Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(EndpointNetworkInterfaceGetArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder outpostId(@Nullable Output<String> outpostId) {
-            this.outpostId = outpostId;
+            $.outpostId = outpostId;
             return this;
         }
-        public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Codegen.ofNullable(outpostId);
-            return this;
+
+        public Builder outpostId(String outpostId) {
+            return outpostId(Output.of(outpostId));
         }
+
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
-            this.securityGroupId = securityGroupId;
+            $.securityGroupId = securityGroupId;
             return this;
         }
-        public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Codegen.ofNullable(securityGroupId);
-            return this;
+
+        public Builder securityGroupId(String securityGroupId) {
+            return securityGroupId(Output.of(securityGroupId));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
-        }        public EndpointState build() {
-            return new EndpointState(arn, cidrBlock, creationTime, networkInterfaces, outpostId, securityGroupId, subnetId);
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
+        }
+
+        public EndpointState build() {
+            return $;
         }
     }
+
 }

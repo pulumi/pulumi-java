@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      * 
      */
     @Import(name="recentSentencesCount")
-      private final @Nullable Output<Integer> recentSentencesCount;
+    private @Nullable Output<Integer> recentSentencesCount;
 
-    public Output<Integer> recentSentencesCount() {
-        return this.recentSentencesCount == null ? Codegen.empty() : this.recentSentencesCount;
+    public Optional<Output<Integer>> recentSentencesCount() {
+        return Optional.ofNullable(this.recentSentencesCount);
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(@Nullable Output<Integer> recentSentencesCount) {
-        this.recentSentencesCount = recentSentencesCount;
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs() {
-        this.recentSentencesCount = Codegen.empty();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs $) {
+        this.recentSentencesCount = $.recentSentencesCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> recentSentencesCount;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recentSentencesCount = defaults.recentSentencesCount;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recentSentencesCount(@Nullable Output<Integer> recentSentencesCount) {
-            this.recentSentencesCount = recentSentencesCount;
+            $.recentSentencesCount = recentSentencesCount;
             return this;
         }
-        public Builder recentSentencesCount(@Nullable Integer recentSentencesCount) {
-            this.recentSentencesCount = Codegen.ofNullable(recentSentencesCount);
-            return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(recentSentencesCount);
+
+        public Builder recentSentencesCount(Integer recentSentencesCount) {
+            return recentSentencesCount(Output.of(recentSentencesCount));
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {
+            return $;
         }
     }
+
 }

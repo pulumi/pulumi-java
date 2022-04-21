@@ -17,7 +17,7 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="policyAssignmentName", required=true)
-      private final String policyAssignmentName;
+    private String policyAssignmentName;
 
     public String policyAssignmentName() {
         return this.policyAssignmentName;
@@ -28,55 +28,52 @@ public final class GetPolicyAssignmentArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetPolicyAssignmentArgs(
-        String policyAssignmentName,
-        String scope) {
-        this.policyAssignmentName = Objects.requireNonNull(policyAssignmentName, "expected parameter 'policyAssignmentName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetPolicyAssignmentArgs() {}
 
-    private GetPolicyAssignmentArgs() {
-        this.policyAssignmentName = null;
-        this.scope = null;
+    private GetPolicyAssignmentArgs(GetPolicyAssignmentArgs $) {
+        this.policyAssignmentName = $.policyAssignmentName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyAssignmentName;
-        private String scope;
+        private GetPolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyAssignmentArgs();
         }
 
         public Builder(GetPolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyAssignmentName = defaults.policyAssignmentName;
-    	      this.scope = defaults.scope;
+            $ = new GetPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyAssignmentName(String policyAssignmentName) {
-            this.policyAssignmentName = Objects.requireNonNull(policyAssignmentName);
+            $.policyAssignmentName = policyAssignmentName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetPolicyAssignmentArgs build() {
-            return new GetPolicyAssignmentArgs(policyAssignmentName, scope);
+        }
+
+        public GetPolicyAssignmentArgs build() {
+            $.policyAssignmentName = Objects.requireNonNull($.policyAssignmentName, "expected parameter 'policyAssignmentName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

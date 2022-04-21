@@ -24,10 +24,10 @@ public final class SizeAvailabilityResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isAvailable")
-      private final @Nullable Boolean isAvailable;
+    private @Nullable Boolean isAvailable;
 
     public Optional<Boolean> isAvailable() {
-        return this.isAvailable == null ? Optional.empty() : Optional.ofNullable(this.isAvailable);
+        return Optional.ofNullable(this.isAvailable);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class SizeAvailabilityResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sizeCategory")
-      private final @Nullable String sizeCategory;
+    private @Nullable String sizeCategory;
 
     public Optional<String> sizeCategory() {
-        return this.sizeCategory == null ? Optional.empty() : Optional.ofNullable(this.sizeCategory);
+        return Optional.ofNullable(this.sizeCategory);
     }
 
-    public SizeAvailabilityResponse(
-        @Nullable Boolean isAvailable,
-        @Nullable String sizeCategory) {
-        this.isAvailable = isAvailable;
-        this.sizeCategory = sizeCategory;
-    }
+    private SizeAvailabilityResponse() {}
 
-    private SizeAvailabilityResponse() {
-        this.isAvailable = null;
-        this.sizeCategory = null;
+    private SizeAvailabilityResponse(SizeAvailabilityResponse $) {
+        this.isAvailable = $.isAvailable;
+        this.sizeCategory = $.sizeCategory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SizeAvailabilityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isAvailable;
-        private @Nullable String sizeCategory;
+        private SizeAvailabilityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SizeAvailabilityResponse();
         }
 
         public Builder(SizeAvailabilityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isAvailable = defaults.isAvailable;
-    	      this.sizeCategory = defaults.sizeCategory;
+            $ = new SizeAvailabilityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isAvailable(@Nullable Boolean isAvailable) {
-            this.isAvailable = isAvailable;
+            $.isAvailable = isAvailable;
             return this;
         }
+
         public Builder sizeCategory(@Nullable String sizeCategory) {
-            this.sizeCategory = sizeCategory;
+            $.sizeCategory = sizeCategory;
             return this;
-        }        public SizeAvailabilityResponse build() {
-            return new SizeAvailabilityResponse(isAvailable, sizeCategory);
+        }
+
+        public SizeAvailabilityResponse build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetBrokerLogs extends com.pulumi.resources.InvokeArgs {
     public static final GetBrokerLogs Empty = new GetBrokerLogs();
 
     @Import(name="audit", required=true)
-      private final Boolean audit;
+    private Boolean audit;
 
     public Boolean audit() {
         return this.audit;
     }
 
     @Import(name="general", required=true)
-      private final Boolean general;
+    private Boolean general;
 
     public Boolean general() {
         return this.general;
     }
 
-    public GetBrokerLogs(
-        Boolean audit,
-        Boolean general) {
-        this.audit = Objects.requireNonNull(audit, "expected parameter 'audit' to be non-null");
-        this.general = Objects.requireNonNull(general, "expected parameter 'general' to be non-null");
-    }
+    private GetBrokerLogs() {}
 
-    private GetBrokerLogs() {
-        this.audit = null;
-        this.general = null;
+    private GetBrokerLogs(GetBrokerLogs $) {
+        this.audit = $.audit;
+        this.general = $.general;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerLogs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean audit;
-        private Boolean general;
+        private GetBrokerLogs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerLogs();
         }
 
         public Builder(GetBrokerLogs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audit = defaults.audit;
-    	      this.general = defaults.general;
+            $ = new GetBrokerLogs(Objects.requireNonNull(defaults));
         }
 
         public Builder audit(Boolean audit) {
-            this.audit = Objects.requireNonNull(audit);
+            $.audit = audit;
             return this;
         }
+
         public Builder general(Boolean general) {
-            this.general = Objects.requireNonNull(general);
+            $.general = general;
             return this;
-        }        public GetBrokerLogs build() {
-            return new GetBrokerLogs(audit, general);
+        }
+
+        public GetBrokerLogs build() {
+            $.audit = Objects.requireNonNull($.audit, "expected parameter 'audit' to be non-null");
+            $.general = Objects.requireNonNull($.general, "expected parameter 'general' to be non-null");
+            return $;
         }
     }
+
 }

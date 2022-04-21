@@ -7,9 +7,9 @@ import com.pulumi.azurenative.sql.enums.ReplicationMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="distributedAvailabilityGroupName")
-      private final @Nullable Output<String> distributedAvailabilityGroupName;
+    private @Nullable Output<String> distributedAvailabilityGroupName;
 
-    public Output<String> distributedAvailabilityGroupName() {
-        return this.distributedAvailabilityGroupName == null ? Codegen.empty() : this.distributedAvailabilityGroupName;
+    public Optional<Output<String>> distributedAvailabilityGroupName() {
+        return Optional.ofNullable(this.distributedAvailabilityGroupName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -44,10 +44,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="primaryAvailabilityGroupName")
-      private final @Nullable Output<String> primaryAvailabilityGroupName;
+    private @Nullable Output<String> primaryAvailabilityGroupName;
 
-    public Output<String> primaryAvailabilityGroupName() {
-        return this.primaryAvailabilityGroupName == null ? Codegen.empty() : this.primaryAvailabilityGroupName;
+    public Optional<Output<String>> primaryAvailabilityGroupName() {
+        return Optional.ofNullable(this.primaryAvailabilityGroupName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="replicationMode")
-      private final @Nullable Output<Either<String,ReplicationMode>> replicationMode;
+    private @Nullable Output<Either<String,ReplicationMode>> replicationMode;
 
-    public Output<Either<String,ReplicationMode>> replicationMode() {
-        return this.replicationMode == null ? Codegen.empty() : this.replicationMode;
+    public Optional<Output<Either<String,ReplicationMode>>> replicationMode() {
+        return Optional.ofNullable(this.replicationMode);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,10 +77,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secondaryAvailabilityGroupName")
-      private final @Nullable Output<String> secondaryAvailabilityGroupName;
+    private @Nullable Output<String> secondaryAvailabilityGroupName;
 
-    public Output<String> secondaryAvailabilityGroupName() {
-        return this.secondaryAvailabilityGroupName == null ? Codegen.empty() : this.secondaryAvailabilityGroupName;
+    public Optional<Output<String>> secondaryAvailabilityGroupName() {
+        return Optional.ofNullable(this.secondaryAvailabilityGroupName);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourceEndpoint")
-      private final @Nullable Output<String> sourceEndpoint;
+    private @Nullable Output<String> sourceEndpoint;
 
-    public Output<String> sourceEndpoint() {
-        return this.sourceEndpoint == null ? Codegen.empty() : this.sourceEndpoint;
+    public Optional<Output<String>> sourceEndpoint() {
+        return Optional.ofNullable(this.sourceEndpoint);
     }
 
     /**
@@ -99,141 +99,120 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="targetDatabase")
-      private final @Nullable Output<String> targetDatabase;
+    private @Nullable Output<String> targetDatabase;
 
-    public Output<String> targetDatabase() {
-        return this.targetDatabase == null ? Codegen.empty() : this.targetDatabase;
+    public Optional<Output<String>> targetDatabase() {
+        return Optional.ofNullable(this.targetDatabase);
     }
 
-    public DistributedAvailabilityGroupArgs(
-        @Nullable Output<String> distributedAvailabilityGroupName,
-        Output<String> managedInstanceName,
-        @Nullable Output<String> primaryAvailabilityGroupName,
-        @Nullable Output<Either<String,ReplicationMode>> replicationMode,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> secondaryAvailabilityGroupName,
-        @Nullable Output<String> sourceEndpoint,
-        @Nullable Output<String> targetDatabase) {
-        this.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
-        this.replicationMode = replicationMode;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
-        this.sourceEndpoint = sourceEndpoint;
-        this.targetDatabase = targetDatabase;
-    }
+    private DistributedAvailabilityGroupArgs() {}
 
-    private DistributedAvailabilityGroupArgs() {
-        this.distributedAvailabilityGroupName = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.primaryAvailabilityGroupName = Codegen.empty();
-        this.replicationMode = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.secondaryAvailabilityGroupName = Codegen.empty();
-        this.sourceEndpoint = Codegen.empty();
-        this.targetDatabase = Codegen.empty();
+    private DistributedAvailabilityGroupArgs(DistributedAvailabilityGroupArgs $) {
+        this.distributedAvailabilityGroupName = $.distributedAvailabilityGroupName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.primaryAvailabilityGroupName = $.primaryAvailabilityGroupName;
+        this.replicationMode = $.replicationMode;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secondaryAvailabilityGroupName = $.secondaryAvailabilityGroupName;
+        this.sourceEndpoint = $.sourceEndpoint;
+        this.targetDatabase = $.targetDatabase;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributedAvailabilityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> distributedAvailabilityGroupName;
-        private Output<String> managedInstanceName;
-        private @Nullable Output<String> primaryAvailabilityGroupName;
-        private @Nullable Output<Either<String,ReplicationMode>> replicationMode;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> secondaryAvailabilityGroupName;
-        private @Nullable Output<String> sourceEndpoint;
-        private @Nullable Output<String> targetDatabase;
+        private DistributedAvailabilityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributedAvailabilityGroupArgs();
         }
 
         public Builder(DistributedAvailabilityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributedAvailabilityGroupName = defaults.distributedAvailabilityGroupName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.primaryAvailabilityGroupName = defaults.primaryAvailabilityGroupName;
-    	      this.replicationMode = defaults.replicationMode;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secondaryAvailabilityGroupName = defaults.secondaryAvailabilityGroupName;
-    	      this.sourceEndpoint = defaults.sourceEndpoint;
-    	      this.targetDatabase = defaults.targetDatabase;
+            $ = new DistributedAvailabilityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributedAvailabilityGroupName(@Nullable Output<String> distributedAvailabilityGroupName) {
-            this.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
+            $.distributedAvailabilityGroupName = distributedAvailabilityGroupName;
             return this;
         }
-        public Builder distributedAvailabilityGroupName(@Nullable String distributedAvailabilityGroupName) {
-            this.distributedAvailabilityGroupName = Codegen.ofNullable(distributedAvailabilityGroupName);
-            return this;
+
+        public Builder distributedAvailabilityGroupName(String distributedAvailabilityGroupName) {
+            return distributedAvailabilityGroupName(Output.of(distributedAvailabilityGroupName));
         }
+
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder primaryAvailabilityGroupName(@Nullable Output<String> primaryAvailabilityGroupName) {
-            this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
+            $.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
-        public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
-            this.primaryAvailabilityGroupName = Codegen.ofNullable(primaryAvailabilityGroupName);
-            return this;
+
+        public Builder primaryAvailabilityGroupName(String primaryAvailabilityGroupName) {
+            return primaryAvailabilityGroupName(Output.of(primaryAvailabilityGroupName));
         }
+
         public Builder replicationMode(@Nullable Output<Either<String,ReplicationMode>> replicationMode) {
-            this.replicationMode = replicationMode;
+            $.replicationMode = replicationMode;
             return this;
         }
-        public Builder replicationMode(@Nullable Either<String,ReplicationMode> replicationMode) {
-            this.replicationMode = Codegen.ofNullable(replicationMode);
-            return this;
+
+        public Builder replicationMode(Either<String,ReplicationMode> replicationMode) {
+            return replicationMode(Output.of(replicationMode));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder secondaryAvailabilityGroupName(@Nullable Output<String> secondaryAvailabilityGroupName) {
-            this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
+            $.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
-        public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
-            this.secondaryAvailabilityGroupName = Codegen.ofNullable(secondaryAvailabilityGroupName);
-            return this;
+
+        public Builder secondaryAvailabilityGroupName(String secondaryAvailabilityGroupName) {
+            return secondaryAvailabilityGroupName(Output.of(secondaryAvailabilityGroupName));
         }
+
         public Builder sourceEndpoint(@Nullable Output<String> sourceEndpoint) {
-            this.sourceEndpoint = sourceEndpoint;
+            $.sourceEndpoint = sourceEndpoint;
             return this;
         }
-        public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
-            this.sourceEndpoint = Codegen.ofNullable(sourceEndpoint);
-            return this;
+
+        public Builder sourceEndpoint(String sourceEndpoint) {
+            return sourceEndpoint(Output.of(sourceEndpoint));
         }
+
         public Builder targetDatabase(@Nullable Output<String> targetDatabase) {
-            this.targetDatabase = targetDatabase;
+            $.targetDatabase = targetDatabase;
             return this;
         }
-        public Builder targetDatabase(@Nullable String targetDatabase) {
-            this.targetDatabase = Codegen.ofNullable(targetDatabase);
-            return this;
-        }        public DistributedAvailabilityGroupArgs build() {
-            return new DistributedAvailabilityGroupArgs(distributedAvailabilityGroupName, managedInstanceName, primaryAvailabilityGroupName, replicationMode, resourceGroupName, secondaryAvailabilityGroupName, sourceEndpoint, targetDatabase);
+
+        public Builder targetDatabase(String targetDatabase) {
+            return targetDatabase(Output.of(targetDatabase));
+        }
+
+        public DistributedAvailabilityGroupArgs build() {
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

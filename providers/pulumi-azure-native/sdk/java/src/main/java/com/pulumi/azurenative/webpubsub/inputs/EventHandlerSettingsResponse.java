@@ -26,45 +26,44 @@ public final class EventHandlerSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="items")
-      private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
+    private @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
-    public Map<String,List<EventHandlerTemplateResponse>> items() {
-        return this.items == null ? Map.of() : this.items;
+    public Optional<Map<String,List<EventHandlerTemplateResponse>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public EventHandlerSettingsResponse(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
-        this.items = items;
-    }
+    private EventHandlerSettingsResponse() {}
 
-    private EventHandlerSettingsResponse() {
-        this.items = Map.of();
+    private EventHandlerSettingsResponse(EventHandlerSettingsResponse $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHandlerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
+        private EventHandlerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHandlerSettingsResponse();
         }
 
         public Builder(EventHandlerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new EventHandlerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
-            this.items = items;
+            $.items = items;
             return this;
-        }        public EventHandlerSettingsResponse build() {
-            return new EventHandlerSettingsResponse(items);
+        }
+
+        public EventHandlerSettingsResponse build() {
+            return $;
         }
     }
+
 }

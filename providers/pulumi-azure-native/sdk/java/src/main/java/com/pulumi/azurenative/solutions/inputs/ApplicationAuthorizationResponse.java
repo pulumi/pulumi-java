@@ -21,7 +21,7 @@ public final class ApplicationAuthorizationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -32,55 +32,52 @@ public final class ApplicationAuthorizationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final String roleDefinitionId;
+    private String roleDefinitionId;
 
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public ApplicationAuthorizationResponse(
-        String principalId,
-        String roleDefinitionId) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private ApplicationAuthorizationResponse() {}
 
-    private ApplicationAuthorizationResponse() {
-        this.principalId = null;
-        this.roleDefinitionId = null;
+    private ApplicationAuthorizationResponse(ApplicationAuthorizationResponse $) {
+        this.principalId = $.principalId;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationAuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String roleDefinitionId;
+        private ApplicationAuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationAuthorizationResponse();
         }
 
         public Builder(ApplicationAuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new ApplicationAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
-        }        public ApplicationAuthorizationResponse build() {
-            return new ApplicationAuthorizationResponse(principalId, roleDefinitionId);
+        }
+
+        public ApplicationAuthorizationResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetReportPlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reportPlanArn", required=true)
-      private final String reportPlanArn;
+    private String reportPlanArn;
 
     public String reportPlanArn() {
         return this.reportPlanArn;
     }
 
-    public GetReportPlanArgs(String reportPlanArn) {
-        this.reportPlanArn = Objects.requireNonNull(reportPlanArn, "expected parameter 'reportPlanArn' to be non-null");
-    }
+    private GetReportPlanArgs() {}
 
-    private GetReportPlanArgs() {
-        this.reportPlanArn = null;
+    private GetReportPlanArgs(GetReportPlanArgs $) {
+        this.reportPlanArn = $.reportPlanArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String reportPlanArn;
+        private GetReportPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportPlanArgs();
         }
 
         public Builder(GetReportPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reportPlanArn = defaults.reportPlanArn;
+            $ = new GetReportPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reportPlanArn(String reportPlanArn) {
-            this.reportPlanArn = Objects.requireNonNull(reportPlanArn);
+            $.reportPlanArn = reportPlanArn;
             return this;
-        }        public GetReportPlanArgs build() {
-            return new GetReportPlanArgs(reportPlanArn);
+        }
+
+        public GetReportPlanArgs build() {
+            $.reportPlanArn = Objects.requireNonNull($.reportPlanArn, "expected parameter 'reportPlanArn' to be non-null");
+            return $;
         }
     }
+
 }

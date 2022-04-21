@@ -23,45 +23,45 @@ public final class VmmToVmmNetworkMappingSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
     }
 
-    public VmmToVmmNetworkMappingSettingsResponse(String instanceType) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-    }
+    private VmmToVmmNetworkMappingSettingsResponse() {}
 
-    private VmmToVmmNetworkMappingSettingsResponse() {
-        this.instanceType = null;
+    private VmmToVmmNetworkMappingSettingsResponse(VmmToVmmNetworkMappingSettingsResponse $) {
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmmToVmmNetworkMappingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
+        private VmmToVmmNetworkMappingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmmToVmmNetworkMappingSettingsResponse();
         }
 
         public Builder(VmmToVmmNetworkMappingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
+            $ = new VmmToVmmNetworkMappingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
-        }        public VmmToVmmNetworkMappingSettingsResponse build() {
-            return new VmmToVmmNetworkMappingSettingsResponse(instanceType);
+        }
+
+        public VmmToVmmNetworkMappingSettingsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

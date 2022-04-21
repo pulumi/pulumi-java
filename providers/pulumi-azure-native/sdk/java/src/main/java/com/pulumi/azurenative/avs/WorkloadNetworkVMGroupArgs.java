@@ -5,11 +5,11 @@ package com.pulumi.azurenative.avs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -55,7 +55,7 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,10 +66,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Double> revision;
+    private @Nullable Output<Double> revision;
 
-    public Output<Double> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Double>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -77,118 +77,104 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vmGroupId")
-      private final @Nullable Output<String> vmGroupId;
+    private @Nullable Output<String> vmGroupId;
 
-    public Output<String> vmGroupId() {
-        return this.vmGroupId == null ? Codegen.empty() : this.vmGroupId;
+    public Optional<Output<String>> vmGroupId() {
+        return Optional.ofNullable(this.vmGroupId);
     }
 
-    public WorkloadNetworkVMGroupArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<String>> members,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Double> revision,
-        @Nullable Output<String> vmGroupId) {
-        this.displayName = displayName;
-        this.members = members;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.revision = revision;
-        this.vmGroupId = vmGroupId;
-    }
+    private WorkloadNetworkVMGroupArgs() {}
 
-    private WorkloadNetworkVMGroupArgs() {
-        this.displayName = Codegen.empty();
-        this.members = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.vmGroupId = Codegen.empty();
+    private WorkloadNetworkVMGroupArgs(WorkloadNetworkVMGroupArgs $) {
+        this.displayName = $.displayName;
+        this.members = $.members;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.revision = $.revision;
+        this.vmGroupId = $.vmGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadNetworkVMGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<String>> members;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Double> revision;
-        private @Nullable Output<String> vmGroupId;
+        private WorkloadNetworkVMGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadNetworkVMGroupArgs();
         }
 
         public Builder(WorkloadNetworkVMGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.members = defaults.members;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.revision = defaults.revision;
-    	      this.vmGroupId = defaults.vmGroupId;
+            $ = new WorkloadNetworkVMGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder revision(@Nullable Output<Double> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Double revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(Double revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder vmGroupId(@Nullable Output<String> vmGroupId) {
-            this.vmGroupId = vmGroupId;
+            $.vmGroupId = vmGroupId;
             return this;
         }
-        public Builder vmGroupId(@Nullable String vmGroupId) {
-            this.vmGroupId = Codegen.ofNullable(vmGroupId);
-            return this;
-        }        public WorkloadNetworkVMGroupArgs build() {
-            return new WorkloadNetworkVMGroupArgs(displayName, members, privateCloudName, resourceGroupName, revision, vmGroupId);
+
+        public Builder vmGroupId(String vmGroupId) {
+            return vmGroupId(Output.of(vmGroupId));
+        }
+
+        public WorkloadNetworkVMGroupArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.azurenative.insights;
 import com.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="categories", required=true)
-      private final Output<List<String>> categories;
+    private Output<List<String>> categories;
 
     public Output<List<String>> categories() {
         return this.categories;
@@ -34,10 +34,10 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locations", required=true)
-      private final Output<List<String>> locations;
+    private Output<List<String>> locations;
 
     public Output<List<String>> locations() {
         return this.locations;
@@ -56,10 +56,10 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logProfileName")
-      private final @Nullable Output<String> logProfileName;
+    private @Nullable Output<String> logProfileName;
 
-    public Output<String> logProfileName() {
-        return this.logProfileName == null ? Codegen.empty() : this.logProfileName;
+    public Optional<Output<String>> logProfileName() {
+        return Optional.ofNullable(this.logProfileName);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionPolicy", required=true)
-      private final Output<RetentionPolicyArgs> retentionPolicy;
+    private Output<RetentionPolicyArgs> retentionPolicy;
 
     public Output<RetentionPolicyArgs> retentionPolicy() {
         return this.retentionPolicy;
@@ -78,10 +78,10 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceBusRuleId")
-      private final @Nullable Output<String> serviceBusRuleId;
+    private @Nullable Output<String> serviceBusRuleId;
 
-    public Output<String> serviceBusRuleId() {
-        return this.serviceBusRuleId == null ? Codegen.empty() : this.serviceBusRuleId;
+    public Optional<Output<String>> serviceBusRuleId() {
+        return Optional.ofNullable(this.serviceBusRuleId);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountId")
-      private final @Nullable Output<String> storageAccountId;
+    private @Nullable Output<String> storageAccountId;
 
-    public Output<String> storageAccountId() {
-        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
+    public Optional<Output<String>> storageAccountId() {
+        return Optional.ofNullable(this.storageAccountId);
     }
 
     /**
@@ -100,147 +100,129 @@ public final class LogProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LogProfileArgs(
-        Output<List<String>> categories,
-        @Nullable Output<String> location,
-        Output<List<String>> locations,
-        @Nullable Output<String> logProfileName,
-        Output<RetentionPolicyArgs> retentionPolicy,
-        @Nullable Output<String> serviceBusRuleId,
-        @Nullable Output<String> storageAccountId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.location = location;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.logProfileName = logProfileName;
-        this.retentionPolicy = Objects.requireNonNull(retentionPolicy, "expected parameter 'retentionPolicy' to be non-null");
-        this.serviceBusRuleId = serviceBusRuleId;
-        this.storageAccountId = storageAccountId;
-        this.tags = tags;
-    }
+    private LogProfileArgs() {}
 
-    private LogProfileArgs() {
-        this.categories = Codegen.empty();
-        this.location = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.logProfileName = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
-        this.serviceBusRuleId = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LogProfileArgs(LogProfileArgs $) {
+        this.categories = $.categories;
+        this.location = $.location;
+        this.locations = $.locations;
+        this.logProfileName = $.logProfileName;
+        this.retentionPolicy = $.retentionPolicy;
+        this.serviceBusRuleId = $.serviceBusRuleId;
+        this.storageAccountId = $.storageAccountId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> categories;
-        private @Nullable Output<String> location;
-        private Output<List<String>> locations;
-        private @Nullable Output<String> logProfileName;
-        private Output<RetentionPolicyArgs> retentionPolicy;
-        private @Nullable Output<String> serviceBusRuleId;
-        private @Nullable Output<String> storageAccountId;
-        private @Nullable Output<Map<String,String>> tags;
+        private LogProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogProfileArgs();
         }
 
         public Builder(LogProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.location = defaults.location;
-    	      this.locations = defaults.locations;
-    	      this.logProfileName = defaults.logProfileName;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.serviceBusRuleId = defaults.serviceBusRuleId;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.tags = defaults.tags;
+            $ = new LogProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(Output<List<String>> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(List<String> categories) {
-            this.categories = Output.of(Objects.requireNonNull(categories));
-            return this;
+            return categories(Output.of(categories));
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder locations(Output<List<String>> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(List<String> locations) {
-            this.locations = Output.of(Objects.requireNonNull(locations));
-            return this;
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder logProfileName(@Nullable Output<String> logProfileName) {
-            this.logProfileName = logProfileName;
+            $.logProfileName = logProfileName;
             return this;
         }
-        public Builder logProfileName(@Nullable String logProfileName) {
-            this.logProfileName = Codegen.ofNullable(logProfileName);
-            return this;
+
+        public Builder logProfileName(String logProfileName) {
+            return logProfileName(Output.of(logProfileName));
         }
+
         public Builder retentionPolicy(Output<RetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder retentionPolicy(RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Output.of(Objects.requireNonNull(retentionPolicy));
-            return this;
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder serviceBusRuleId(@Nullable Output<String> serviceBusRuleId) {
-            this.serviceBusRuleId = serviceBusRuleId;
+            $.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
-        public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
-            this.serviceBusRuleId = Codegen.ofNullable(serviceBusRuleId);
-            return this;
+
+        public Builder serviceBusRuleId(String serviceBusRuleId) {
+            return serviceBusRuleId(Output.of(serviceBusRuleId));
         }
+
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
-            this.storageAccountId = storageAccountId;
+            $.storageAccountId = storageAccountId;
             return this;
         }
-        public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Codegen.ofNullable(storageAccountId);
-            return this;
+
+        public Builder storageAccountId(String storageAccountId) {
+            return storageAccountId(Output.of(storageAccountId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LogProfileArgs build() {
-            return new LogProfileArgs(categories, location, locations, logProfileName, retentionPolicy, serviceBusRuleId, storageAccountId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LogProfileArgs build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.retentionPolicy = Objects.requireNonNull($.retentionPolicy, "expected parameter 'retentionPolicy' to be non-null");
+            return $;
         }
     }
+
 }

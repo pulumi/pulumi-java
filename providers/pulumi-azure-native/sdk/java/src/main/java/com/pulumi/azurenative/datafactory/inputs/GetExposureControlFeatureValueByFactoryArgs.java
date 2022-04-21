@@ -19,7 +19,7 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -30,10 +30,10 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="featureName")
-      private final @Nullable String featureName;
+    private @Nullable String featureName;
 
     public Optional<String> featureName() {
-        return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
+        return Optional.ofNullable(this.featureName);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="featureType")
-      private final @Nullable String featureType;
+    private @Nullable String featureType;
 
     public Optional<String> featureType() {
-        return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
+        return Optional.ofNullable(this.featureType);
     }
 
     /**
@@ -52,73 +52,64 @@ public final class GetExposureControlFeatureValueByFactoryArgs extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExposureControlFeatureValueByFactoryArgs(
-        String factoryName,
-        @Nullable String featureName,
-        @Nullable String featureType,
-        String resourceGroupName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.featureName = featureName;
-        this.featureType = featureType;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExposureControlFeatureValueByFactoryArgs() {}
 
-    private GetExposureControlFeatureValueByFactoryArgs() {
-        this.factoryName = null;
-        this.featureName = null;
-        this.featureType = null;
-        this.resourceGroupName = null;
+    private GetExposureControlFeatureValueByFactoryArgs(GetExposureControlFeatureValueByFactoryArgs $) {
+        this.factoryName = $.factoryName;
+        this.featureName = $.featureName;
+        this.featureType = $.featureType;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExposureControlFeatureValueByFactoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private @Nullable String featureName;
-        private @Nullable String featureType;
-        private String resourceGroupName;
+        private GetExposureControlFeatureValueByFactoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExposureControlFeatureValueByFactoryArgs();
         }
 
         public Builder(GetExposureControlFeatureValueByFactoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.featureName = defaults.featureName;
-    	      this.featureType = defaults.featureType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExposureControlFeatureValueByFactoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = featureName;
+            $.featureName = featureName;
             return this;
         }
+
         public Builder featureType(@Nullable String featureType) {
-            this.featureType = featureType;
+            $.featureType = featureType;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExposureControlFeatureValueByFactoryArgs build() {
-            return new GetExposureControlFeatureValueByFactoryArgs(factoryName, featureName, featureType, resourceGroupName);
+        }
+
+        public GetExposureControlFeatureValueByFactoryArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

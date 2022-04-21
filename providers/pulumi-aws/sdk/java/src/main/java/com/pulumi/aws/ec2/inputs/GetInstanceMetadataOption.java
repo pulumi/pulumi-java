@@ -18,7 +18,7 @@ public final class GetInstanceMetadataOption extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="httpEndpoint", required=true)
-      private final String httpEndpoint;
+    private String httpEndpoint;
 
     public String httpEndpoint() {
         return this.httpEndpoint;
@@ -29,7 +29,7 @@ public final class GetInstanceMetadataOption extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="httpPutResponseHopLimit", required=true)
-      private final Integer httpPutResponseHopLimit;
+    private Integer httpPutResponseHopLimit;
 
     public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
@@ -40,7 +40,7 @@ public final class GetInstanceMetadataOption extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="httpTokens", required=true)
-      private final String httpTokens;
+    private String httpTokens;
 
     public String httpTokens() {
         return this.httpTokens;
@@ -51,73 +51,66 @@ public final class GetInstanceMetadataOption extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instanceMetadataTags", required=true)
-      private final String instanceMetadataTags;
+    private String instanceMetadataTags;
 
     public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }
 
-    public GetInstanceMetadataOption(
-        String httpEndpoint,
-        Integer httpPutResponseHopLimit,
-        String httpTokens,
-        String instanceMetadataTags) {
-        this.httpEndpoint = Objects.requireNonNull(httpEndpoint, "expected parameter 'httpEndpoint' to be non-null");
-        this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit, "expected parameter 'httpPutResponseHopLimit' to be non-null");
-        this.httpTokens = Objects.requireNonNull(httpTokens, "expected parameter 'httpTokens' to be non-null");
-        this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags, "expected parameter 'instanceMetadataTags' to be non-null");
-    }
+    private GetInstanceMetadataOption() {}
 
-    private GetInstanceMetadataOption() {
-        this.httpEndpoint = null;
-        this.httpPutResponseHopLimit = null;
-        this.httpTokens = null;
-        this.instanceMetadataTags = null;
+    private GetInstanceMetadataOption(GetInstanceMetadataOption $) {
+        this.httpEndpoint = $.httpEndpoint;
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
+        this.instanceMetadataTags = $.instanceMetadataTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceMetadataOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpEndpoint;
-        private Integer httpPutResponseHopLimit;
-        private String httpTokens;
-        private String instanceMetadataTags;
+        private GetInstanceMetadataOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceMetadataOption();
         }
 
         public Builder(GetInstanceMetadataOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEndpoint = defaults.httpEndpoint;
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
-    	      this.instanceMetadataTags = defaults.instanceMetadataTags;
+            $ = new GetInstanceMetadataOption(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEndpoint(String httpEndpoint) {
-            this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
+            $.httpEndpoint = httpEndpoint;
             return this;
         }
+
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
+
         public Builder httpTokens(String httpTokens) {
-            this.httpTokens = Objects.requireNonNull(httpTokens);
+            $.httpTokens = httpTokens;
             return this;
         }
+
         public Builder instanceMetadataTags(String instanceMetadataTags) {
-            this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
+            $.instanceMetadataTags = instanceMetadataTags;
             return this;
-        }        public GetInstanceMetadataOption build() {
-            return new GetInstanceMetadataOption(httpEndpoint, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
+        }
+
+        public GetInstanceMetadataOption build() {
+            $.httpEndpoint = Objects.requireNonNull($.httpEndpoint, "expected parameter 'httpEndpoint' to be non-null");
+            $.httpPutResponseHopLimit = Objects.requireNonNull($.httpPutResponseHopLimit, "expected parameter 'httpPutResponseHopLimit' to be non-null");
+            $.httpTokens = Objects.requireNonNull($.httpTokens, "expected parameter 'httpTokens' to be non-null");
+            $.instanceMetadataTags = Objects.requireNonNull($.instanceMetadataTags, "expected parameter 'instanceMetadataTags' to be non-null");
+            return $;
         }
     }
+
 }

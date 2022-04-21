@@ -15,110 +15,99 @@ public final class GetDatasetHl7V2StoreIamPolicyArgs extends com.pulumi.resource
     public static final GetDatasetHl7V2StoreIamPolicyArgs Empty = new GetDatasetHl7V2StoreIamPolicyArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId", required=true)
-      private final String hl7V2StoreId;
+    private String hl7V2StoreId;
 
     public String hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDatasetHl7V2StoreIamPolicyArgs(
-        String datasetId,
-        String hl7V2StoreId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetDatasetHl7V2StoreIamPolicyArgs() {}
 
-    private GetDatasetHl7V2StoreIamPolicyArgs() {
-        this.datasetId = null;
-        this.hl7V2StoreId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetDatasetHl7V2StoreIamPolicyArgs(GetDatasetHl7V2StoreIamPolicyArgs $) {
+        this.datasetId = $.datasetId;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatasetHl7V2StoreIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String hl7V2StoreId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetDatasetHl7V2StoreIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatasetHl7V2StoreIamPolicyArgs();
         }
 
         public Builder(GetDatasetHl7V2StoreIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetDatasetHl7V2StoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDatasetHl7V2StoreIamPolicyArgs build() {
-            return new GetDatasetHl7V2StoreIamPolicyArgs(datasetId, hl7V2StoreId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetDatasetHl7V2StoreIamPolicyArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

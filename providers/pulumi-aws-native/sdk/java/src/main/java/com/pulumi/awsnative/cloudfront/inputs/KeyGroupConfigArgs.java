@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,93 +17,88 @@ public final class KeyGroupConfigArgs extends com.pulumi.resources.ResourceArgs 
     public static final KeyGroupConfigArgs Empty = new KeyGroupConfigArgs();
 
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="items", required=true)
-      private final Output<List<String>> items;
+    private Output<List<String>> items;
 
     public Output<List<String>> items() {
         return this.items;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public KeyGroupConfigArgs(
-        @Nullable Output<String> comment,
-        Output<List<String>> items,
-        Output<String> name) {
-        this.comment = comment;
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private KeyGroupConfigArgs() {}
 
-    private KeyGroupConfigArgs() {
-        this.comment = Codegen.empty();
-        this.items = Codegen.empty();
-        this.name = Codegen.empty();
+    private KeyGroupConfigArgs(KeyGroupConfigArgs $) {
+        this.comment = $.comment;
+        this.items = $.items;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyGroupConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<List<String>> items;
-        private Output<String> name;
+        private KeyGroupConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyGroupConfigArgs();
         }
 
         public Builder(KeyGroupConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.items = defaults.items;
-    	      this.name = defaults.name;
+            $ = new KeyGroupConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder items(Output<List<String>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<String> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public KeyGroupConfigArgs build() {
-            return new KeyGroupConfigArgs(comment, items, name);
+            return name(Output.of(name));
+        }
+
+        public KeyGroupConfigArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

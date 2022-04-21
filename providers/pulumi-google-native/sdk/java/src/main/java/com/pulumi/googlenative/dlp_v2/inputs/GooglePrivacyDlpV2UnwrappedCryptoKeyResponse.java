@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse extends com.pulu
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
-    public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(String key) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse() {}
 
-    private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse() {
-        this.key = null;
+    private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse $) {
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
+        private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse();
         }
 
         public Builder(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
+            $ = new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
-        }        public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse build() {
-            return new GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(key);
+        }
+
+        public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

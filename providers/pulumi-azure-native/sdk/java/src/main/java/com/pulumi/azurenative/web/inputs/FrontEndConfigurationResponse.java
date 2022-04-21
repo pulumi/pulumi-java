@@ -15,45 +15,44 @@ public final class FrontEndConfigurationResponse extends com.pulumi.resources.In
     public static final FrontEndConfigurationResponse Empty = new FrontEndConfigurationResponse();
 
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
-    public FrontEndConfigurationResponse(@Nullable String kind) {
-        this.kind = kind;
-    }
+    private FrontEndConfigurationResponse() {}
 
-    private FrontEndConfigurationResponse() {
-        this.kind = null;
+    private FrontEndConfigurationResponse(FrontEndConfigurationResponse $) {
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontEndConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kind;
+        private FrontEndConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontEndConfigurationResponse();
         }
 
         public Builder(FrontEndConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
+            $ = new FrontEndConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
-        }        public FrontEndConfigurationResponse build() {
-            return new FrontEndConfigurationResponse(kind);
+        }
+
+        public FrontEndConfigurationResponse build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * 
      */
     @Import(name="force", required=true)
-      private final Boolean force;
+    private Boolean force;
 
     public Boolean force() {
         return this.force;
@@ -33,7 +33,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * 
      */
     @Import(name="tableUri", required=true)
-      private final String tableUri;
+    private String tableUri;
 
     public String tableUri() {
         return this.tableUri;
@@ -44,64 +44,59 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * 
      */
     @Import(name="writeDisposition", required=true)
-      private final String writeDisposition;
+    private String writeDisposition;
 
     public String writeDisposition() {
         return this.writeDisposition;
     }
 
-    public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(
-        Boolean force,
-        String tableUri,
-        String writeDisposition) {
-        this.force = Objects.requireNonNull(force, "expected parameter 'force' to be non-null");
-        this.tableUri = Objects.requireNonNull(tableUri, "expected parameter 'tableUri' to be non-null");
-        this.writeDisposition = Objects.requireNonNull(writeDisposition, "expected parameter 'writeDisposition' to be non-null");
-    }
+    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse() {}
 
-    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse() {
-        this.force = null;
-        this.tableUri = null;
-        this.writeDisposition = null;
+    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse $) {
+        this.force = $.force;
+        this.tableUri = $.tableUri;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean force;
-        private String tableUri;
-        private String writeDisposition;
+        private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse();
         }
 
         public Builder(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.force = defaults.force;
-    	      this.tableUri = defaults.tableUri;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder force(Boolean force) {
-            this.force = Objects.requireNonNull(force);
+            $.force = force;
             return this;
         }
+
         public Builder tableUri(String tableUri) {
-            this.tableUri = Objects.requireNonNull(tableUri);
+            $.tableUri = tableUri;
             return this;
         }
+
         public Builder writeDisposition(String writeDisposition) {
-            this.writeDisposition = Objects.requireNonNull(writeDisposition);
+            $.writeDisposition = writeDisposition;
             return this;
-        }        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse build() {
-            return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(force, tableUri, writeDisposition);
+        }
+
+        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse build() {
+            $.force = Objects.requireNonNull($.force, "expected parameter 'force' to be non-null");
+            $.tableUri = Objects.requireNonNull($.tableUri, "expected parameter 'tableUri' to be non-null");
+            $.writeDisposition = Objects.requireNonNull($.writeDisposition, "expected parameter 'writeDisposition' to be non-null");
+            return $;
         }
     }
+
 }

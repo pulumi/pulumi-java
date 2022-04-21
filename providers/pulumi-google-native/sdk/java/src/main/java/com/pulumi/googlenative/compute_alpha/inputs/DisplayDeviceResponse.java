@@ -21,45 +21,45 @@ public final class DisplayDeviceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableDisplay", required=true)
-      private final Boolean enableDisplay;
+    private Boolean enableDisplay;
 
     public Boolean enableDisplay() {
         return this.enableDisplay;
     }
 
-    public DisplayDeviceResponse(Boolean enableDisplay) {
-        this.enableDisplay = Objects.requireNonNull(enableDisplay, "expected parameter 'enableDisplay' to be non-null");
-    }
+    private DisplayDeviceResponse() {}
 
-    private DisplayDeviceResponse() {
-        this.enableDisplay = null;
+    private DisplayDeviceResponse(DisplayDeviceResponse $) {
+        this.enableDisplay = $.enableDisplay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisplayDeviceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableDisplay;
+        private DisplayDeviceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisplayDeviceResponse();
         }
 
         public Builder(DisplayDeviceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDisplay = defaults.enableDisplay;
+            $ = new DisplayDeviceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDisplay(Boolean enableDisplay) {
-            this.enableDisplay = Objects.requireNonNull(enableDisplay);
+            $.enableDisplay = enableDisplay;
             return this;
-        }        public DisplayDeviceResponse build() {
-            return new DisplayDeviceResponse(enableDisplay);
+        }
+
+        public DisplayDeviceResponse build() {
+            $.enableDisplay = Objects.requireNonNull($.enableDisplay, "expected parameter 'enableDisplay' to be non-null");
+            return $;
         }
     }
+
 }

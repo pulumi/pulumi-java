@@ -6,10 +6,10 @@ package com.pulumi.azurenative.media;
 import com.pulumi.azurenative.media.inputs.StreamingLocatorContentKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,10 +33,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="alternativeMediaId")
-      private final @Nullable Output<String> alternativeMediaId;
+    private @Nullable Output<String> alternativeMediaId;
 
-    public Output<String> alternativeMediaId() {
-        return this.alternativeMediaId == null ? Codegen.empty() : this.alternativeMediaId;
+    public Optional<Output<String>> alternativeMediaId() {
+        return Optional.ofNullable(this.alternativeMediaId);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="assetName", required=true)
-      private final Output<String> assetName;
+    private Output<String> assetName;
 
     public Output<String> assetName() {
         return this.assetName;
@@ -55,10 +55,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="contentKeys")
-      private final @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys;
+    private @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys;
 
-    public Output<List<StreamingLocatorContentKeyArgs>> contentKeys() {
-        return this.contentKeys == null ? Codegen.empty() : this.contentKeys;
+    public Optional<Output<List<StreamingLocatorContentKeyArgs>>> contentKeys() {
+        return Optional.ofNullable(this.contentKeys);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="defaultContentKeyPolicyName")
-      private final @Nullable Output<String> defaultContentKeyPolicyName;
+    private @Nullable Output<String> defaultContentKeyPolicyName;
 
-    public Output<String> defaultContentKeyPolicyName() {
-        return this.defaultContentKeyPolicyName == null ? Codegen.empty() : this.defaultContentKeyPolicyName;
+    public Optional<Output<String>> defaultContentKeyPolicyName() {
+        return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<String>> filters;
+    private @Nullable Output<List<String>> filters;
 
-    public Output<List<String>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<String>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -110,10 +110,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="streamingLocatorId")
-      private final @Nullable Output<String> streamingLocatorId;
+    private @Nullable Output<String> streamingLocatorId;
 
-    public Output<String> streamingLocatorId() {
-        return this.streamingLocatorId == null ? Codegen.empty() : this.streamingLocatorId;
+    public Optional<Output<String>> streamingLocatorId() {
+        return Optional.ofNullable(this.streamingLocatorId);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="streamingLocatorName")
-      private final @Nullable Output<String> streamingLocatorName;
+    private @Nullable Output<String> streamingLocatorName;
 
-    public Output<String> streamingLocatorName() {
-        return this.streamingLocatorName == null ? Codegen.empty() : this.streamingLocatorName;
+    public Optional<Output<String>> streamingLocatorName() {
+        return Optional.ofNullable(this.streamingLocatorName);
     }
 
     /**
@@ -143,199 +143,170 @@ public final class StreamingLocatorArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="streamingPolicyName", required=true)
-      private final Output<String> streamingPolicyName;
+    private Output<String> streamingPolicyName;
 
     public Output<String> streamingPolicyName() {
         return this.streamingPolicyName;
     }
 
-    public StreamingLocatorArgs(
-        Output<String> accountName,
-        @Nullable Output<String> alternativeMediaId,
-        Output<String> assetName,
-        @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys,
-        @Nullable Output<String> defaultContentKeyPolicyName,
-        @Nullable Output<String> endTime,
-        @Nullable Output<List<String>> filters,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> streamingLocatorId,
-        @Nullable Output<String> streamingLocatorName,
-        Output<String> streamingPolicyName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.alternativeMediaId = alternativeMediaId;
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.contentKeys = contentKeys;
-        this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
-        this.endTime = endTime;
-        this.filters = filters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.startTime = startTime;
-        this.streamingLocatorId = streamingLocatorId;
-        this.streamingLocatorName = streamingLocatorName;
-        this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName, "expected parameter 'streamingPolicyName' to be non-null");
-    }
+    private StreamingLocatorArgs() {}
 
-    private StreamingLocatorArgs() {
-        this.accountName = Codegen.empty();
-        this.alternativeMediaId = Codegen.empty();
-        this.assetName = Codegen.empty();
-        this.contentKeys = Codegen.empty();
-        this.defaultContentKeyPolicyName = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.streamingLocatorId = Codegen.empty();
-        this.streamingLocatorName = Codegen.empty();
-        this.streamingPolicyName = Codegen.empty();
+    private StreamingLocatorArgs(StreamingLocatorArgs $) {
+        this.accountName = $.accountName;
+        this.alternativeMediaId = $.alternativeMediaId;
+        this.assetName = $.assetName;
+        this.contentKeys = $.contentKeys;
+        this.defaultContentKeyPolicyName = $.defaultContentKeyPolicyName;
+        this.endTime = $.endTime;
+        this.filters = $.filters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.startTime = $.startTime;
+        this.streamingLocatorId = $.streamingLocatorId;
+        this.streamingLocatorName = $.streamingLocatorName;
+        this.streamingPolicyName = $.streamingPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingLocatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> alternativeMediaId;
-        private Output<String> assetName;
-        private @Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys;
-        private @Nullable Output<String> defaultContentKeyPolicyName;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<List<String>> filters;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> streamingLocatorId;
-        private @Nullable Output<String> streamingLocatorName;
-        private Output<String> streamingPolicyName;
+        private StreamingLocatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingLocatorArgs();
         }
 
         public Builder(StreamingLocatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.alternativeMediaId = defaults.alternativeMediaId;
-    	      this.assetName = defaults.assetName;
-    	      this.contentKeys = defaults.contentKeys;
-    	      this.defaultContentKeyPolicyName = defaults.defaultContentKeyPolicyName;
-    	      this.endTime = defaults.endTime;
-    	      this.filters = defaults.filters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.startTime = defaults.startTime;
-    	      this.streamingLocatorId = defaults.streamingLocatorId;
-    	      this.streamingLocatorName = defaults.streamingLocatorName;
-    	      this.streamingPolicyName = defaults.streamingPolicyName;
+            $ = new StreamingLocatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder alternativeMediaId(@Nullable Output<String> alternativeMediaId) {
-            this.alternativeMediaId = alternativeMediaId;
+            $.alternativeMediaId = alternativeMediaId;
             return this;
         }
-        public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
-            this.alternativeMediaId = Codegen.ofNullable(alternativeMediaId);
-            return this;
+
+        public Builder alternativeMediaId(String alternativeMediaId) {
+            return alternativeMediaId(Output.of(alternativeMediaId));
         }
+
         public Builder assetName(Output<String> assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Output.of(Objects.requireNonNull(assetName));
-            return this;
+            return assetName(Output.of(assetName));
         }
+
         public Builder contentKeys(@Nullable Output<List<StreamingLocatorContentKeyArgs>> contentKeys) {
-            this.contentKeys = contentKeys;
+            $.contentKeys = contentKeys;
             return this;
         }
-        public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyArgs> contentKeys) {
-            this.contentKeys = Codegen.ofNullable(contentKeys);
-            return this;
+
+        public Builder contentKeys(List<StreamingLocatorContentKeyArgs> contentKeys) {
+            return contentKeys(Output.of(contentKeys));
         }
+
         public Builder contentKeys(StreamingLocatorContentKeyArgs... contentKeys) {
             return contentKeys(List.of(contentKeys));
         }
+
         public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
+            $.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
-        public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = Codegen.ofNullable(defaultContentKeyPolicyName);
-            return this;
+
+        public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
+            return defaultContentKeyPolicyName(Output.of(defaultContentKeyPolicyName));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder filters(@Nullable Output<List<String>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<String> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<String> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(String... filters) {
             return filters(List.of(filters));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder streamingLocatorId(@Nullable Output<String> streamingLocatorId) {
-            this.streamingLocatorId = streamingLocatorId;
+            $.streamingLocatorId = streamingLocatorId;
             return this;
         }
-        public Builder streamingLocatorId(@Nullable String streamingLocatorId) {
-            this.streamingLocatorId = Codegen.ofNullable(streamingLocatorId);
-            return this;
+
+        public Builder streamingLocatorId(String streamingLocatorId) {
+            return streamingLocatorId(Output.of(streamingLocatorId));
         }
+
         public Builder streamingLocatorName(@Nullable Output<String> streamingLocatorName) {
-            this.streamingLocatorName = streamingLocatorName;
+            $.streamingLocatorName = streamingLocatorName;
             return this;
         }
-        public Builder streamingLocatorName(@Nullable String streamingLocatorName) {
-            this.streamingLocatorName = Codegen.ofNullable(streamingLocatorName);
-            return this;
+
+        public Builder streamingLocatorName(String streamingLocatorName) {
+            return streamingLocatorName(Output.of(streamingLocatorName));
         }
+
         public Builder streamingPolicyName(Output<String> streamingPolicyName) {
-            this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
+            $.streamingPolicyName = streamingPolicyName;
             return this;
         }
+
         public Builder streamingPolicyName(String streamingPolicyName) {
-            this.streamingPolicyName = Output.of(Objects.requireNonNull(streamingPolicyName));
-            return this;
-        }        public StreamingLocatorArgs build() {
-            return new StreamingLocatorArgs(accountName, alternativeMediaId, assetName, contentKeys, defaultContentKeyPolicyName, endTime, filters, resourceGroupName, startTime, streamingLocatorId, streamingLocatorName, streamingPolicyName);
+            return streamingPolicyName(Output.of(streamingPolicyName));
+        }
+
+        public StreamingLocatorArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.streamingPolicyName = Objects.requireNonNull($.streamingPolicyName, "expected parameter 'streamingPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

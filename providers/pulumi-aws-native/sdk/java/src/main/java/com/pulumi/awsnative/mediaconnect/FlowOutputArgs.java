@@ -8,11 +8,11 @@ import com.pulumi.awsnative.mediaconnect.inputs.FlowOutputEncryptionArgs;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowOutputVpcInterfaceAttachmentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrAllowList")
-      private final @Nullable Output<List<String>> cidrAllowList;
+    private @Nullable Output<List<String>> cidrAllowList;
 
-    public Output<List<String>> cidrAllowList() {
-        return this.cidrAllowList == null ? Codegen.empty() : this.cidrAllowList;
+    public Optional<Output<List<String>>> cidrAllowList() {
+        return Optional.ofNullable(this.cidrAllowList);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<FlowOutputEncryptionArgs> encryption;
+    private @Nullable Output<FlowOutputEncryptionArgs> encryption;
 
-    public Output<FlowOutputEncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<FlowOutputEncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flowArn", required=true)
-      private final Output<String> flowArn;
+    private Output<String> flowArn;
 
     public Output<String> flowArn() {
         return this.flowArn;
@@ -80,10 +80,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxLatency")
-      private final @Nullable Output<Integer> maxLatency;
+    private @Nullable Output<Integer> maxLatency;
 
-    public Output<Integer> maxLatency() {
-        return this.maxLatency == null ? Codegen.empty() : this.maxLatency;
+    public Optional<Output<Integer>> maxLatency() {
+        return Optional.ofNullable(this.maxLatency);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minLatency")
-      private final @Nullable Output<Integer> minLatency;
+    private @Nullable Output<Integer> minLatency;
 
-    public Output<Integer> minLatency() {
-        return this.minLatency == null ? Codegen.empty() : this.minLatency;
+    public Optional<Output<Integer>> minLatency() {
+        return Optional.ofNullable(this.minLatency);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<FlowOutputProtocol> protocol;
+    private Output<FlowOutputProtocol> protocol;
 
     public Output<FlowOutputProtocol> protocol() {
         return this.protocol;
@@ -135,10 +135,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteId")
-      private final @Nullable Output<String> remoteId;
+    private @Nullable Output<String> remoteId;
 
-    public Output<String> remoteId() {
-        return this.remoteId == null ? Codegen.empty() : this.remoteId;
+    public Optional<Output<String>> remoteId() {
+        return Optional.ofNullable(this.remoteId);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smoothingLatency")
-      private final @Nullable Output<Integer> smoothingLatency;
+    private @Nullable Output<Integer> smoothingLatency;
 
-    public Output<Integer> smoothingLatency() {
-        return this.smoothingLatency == null ? Codegen.empty() : this.smoothingLatency;
+    public Optional<Output<Integer>> smoothingLatency() {
+        return Optional.ofNullable(this.smoothingLatency);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamId")
-      private final @Nullable Output<String> streamId;
+    private @Nullable Output<String> streamId;
 
-    public Output<String> streamId() {
-        return this.streamId == null ? Codegen.empty() : this.streamId;
+    public Optional<Output<String>> streamId() {
+        return Optional.ofNullable(this.streamId);
     }
 
     /**
@@ -168,222 +168,184 @@ public final class FlowOutputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcInterfaceAttachment")
-      private final @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
+    private @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
 
-    public Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment() {
-        return this.vpcInterfaceAttachment == null ? Codegen.empty() : this.vpcInterfaceAttachment;
+    public Optional<Output<FlowOutputVpcInterfaceAttachmentArgs>> vpcInterfaceAttachment() {
+        return Optional.ofNullable(this.vpcInterfaceAttachment);
     }
 
-    public FlowOutputArgs(
-        @Nullable Output<List<String>> cidrAllowList,
-        @Nullable Output<String> description,
-        @Nullable Output<String> destination,
-        @Nullable Output<FlowOutputEncryptionArgs> encryption,
-        Output<String> flowArn,
-        @Nullable Output<Integer> maxLatency,
-        @Nullable Output<Integer> minLatency,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> port,
-        Output<FlowOutputProtocol> protocol,
-        @Nullable Output<String> remoteId,
-        @Nullable Output<Integer> smoothingLatency,
-        @Nullable Output<String> streamId,
-        @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment) {
-        this.cidrAllowList = cidrAllowList;
-        this.description = description;
-        this.destination = destination;
-        this.encryption = encryption;
-        this.flowArn = Objects.requireNonNull(flowArn, "expected parameter 'flowArn' to be non-null");
-        this.maxLatency = maxLatency;
-        this.minLatency = minLatency;
-        this.name = name;
-        this.port = port;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.remoteId = remoteId;
-        this.smoothingLatency = smoothingLatency;
-        this.streamId = streamId;
-        this.vpcInterfaceAttachment = vpcInterfaceAttachment;
-    }
+    private FlowOutputArgs() {}
 
-    private FlowOutputArgs() {
-        this.cidrAllowList = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.flowArn = Codegen.empty();
-        this.maxLatency = Codegen.empty();
-        this.minLatency = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.remoteId = Codegen.empty();
-        this.smoothingLatency = Codegen.empty();
-        this.streamId = Codegen.empty();
-        this.vpcInterfaceAttachment = Codegen.empty();
+    private FlowOutputArgs(FlowOutputArgs $) {
+        this.cidrAllowList = $.cidrAllowList;
+        this.description = $.description;
+        this.destination = $.destination;
+        this.encryption = $.encryption;
+        this.flowArn = $.flowArn;
+        this.maxLatency = $.maxLatency;
+        this.minLatency = $.minLatency;
+        this.name = $.name;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.remoteId = $.remoteId;
+        this.smoothingLatency = $.smoothingLatency;
+        this.streamId = $.streamId;
+        this.vpcInterfaceAttachment = $.vpcInterfaceAttachment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cidrAllowList;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> destination;
-        private @Nullable Output<FlowOutputEncryptionArgs> encryption;
-        private Output<String> flowArn;
-        private @Nullable Output<Integer> maxLatency;
-        private @Nullable Output<Integer> minLatency;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> port;
-        private Output<FlowOutputProtocol> protocol;
-        private @Nullable Output<String> remoteId;
-        private @Nullable Output<Integer> smoothingLatency;
-        private @Nullable Output<String> streamId;
-        private @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
+        private FlowOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowOutputArgs();
         }
 
         public Builder(FlowOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrAllowList = defaults.cidrAllowList;
-    	      this.description = defaults.description;
-    	      this.destination = defaults.destination;
-    	      this.encryption = defaults.encryption;
-    	      this.flowArn = defaults.flowArn;
-    	      this.maxLatency = defaults.maxLatency;
-    	      this.minLatency = defaults.minLatency;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.remoteId = defaults.remoteId;
-    	      this.smoothingLatency = defaults.smoothingLatency;
-    	      this.streamId = defaults.streamId;
-    	      this.vpcInterfaceAttachment = defaults.vpcInterfaceAttachment;
+            $ = new FlowOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrAllowList(@Nullable Output<List<String>> cidrAllowList) {
-            this.cidrAllowList = cidrAllowList;
+            $.cidrAllowList = cidrAllowList;
             return this;
         }
-        public Builder cidrAllowList(@Nullable List<String> cidrAllowList) {
-            this.cidrAllowList = Codegen.ofNullable(cidrAllowList);
-            return this;
+
+        public Builder cidrAllowList(List<String> cidrAllowList) {
+            return cidrAllowList(Output.of(cidrAllowList));
         }
+
         public Builder cidrAllowList(String... cidrAllowList) {
             return cidrAllowList(List.of(cidrAllowList));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder encryption(@Nullable Output<FlowOutputEncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable FlowOutputEncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(FlowOutputEncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder flowArn(Output<String> flowArn) {
-            this.flowArn = Objects.requireNonNull(flowArn);
+            $.flowArn = flowArn;
             return this;
         }
+
         public Builder flowArn(String flowArn) {
-            this.flowArn = Output.of(Objects.requireNonNull(flowArn));
-            return this;
+            return flowArn(Output.of(flowArn));
         }
+
         public Builder maxLatency(@Nullable Output<Integer> maxLatency) {
-            this.maxLatency = maxLatency;
+            $.maxLatency = maxLatency;
             return this;
         }
-        public Builder maxLatency(@Nullable Integer maxLatency) {
-            this.maxLatency = Codegen.ofNullable(maxLatency);
-            return this;
+
+        public Builder maxLatency(Integer maxLatency) {
+            return maxLatency(Output.of(maxLatency));
         }
+
         public Builder minLatency(@Nullable Output<Integer> minLatency) {
-            this.minLatency = minLatency;
+            $.minLatency = minLatency;
             return this;
         }
-        public Builder minLatency(@Nullable Integer minLatency) {
-            this.minLatency = Codegen.ofNullable(minLatency);
-            return this;
+
+        public Builder minLatency(Integer minLatency) {
+            return minLatency(Output.of(minLatency));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(Output<FlowOutputProtocol> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(FlowOutputProtocol protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder remoteId(@Nullable Output<String> remoteId) {
-            this.remoteId = remoteId;
+            $.remoteId = remoteId;
             return this;
         }
-        public Builder remoteId(@Nullable String remoteId) {
-            this.remoteId = Codegen.ofNullable(remoteId);
-            return this;
+
+        public Builder remoteId(String remoteId) {
+            return remoteId(Output.of(remoteId));
         }
+
         public Builder smoothingLatency(@Nullable Output<Integer> smoothingLatency) {
-            this.smoothingLatency = smoothingLatency;
+            $.smoothingLatency = smoothingLatency;
             return this;
         }
-        public Builder smoothingLatency(@Nullable Integer smoothingLatency) {
-            this.smoothingLatency = Codegen.ofNullable(smoothingLatency);
-            return this;
+
+        public Builder smoothingLatency(Integer smoothingLatency) {
+            return smoothingLatency(Output.of(smoothingLatency));
         }
+
         public Builder streamId(@Nullable Output<String> streamId) {
-            this.streamId = streamId;
+            $.streamId = streamId;
             return this;
         }
-        public Builder streamId(@Nullable String streamId) {
-            this.streamId = Codegen.ofNullable(streamId);
-            return this;
+
+        public Builder streamId(String streamId) {
+            return streamId(Output.of(streamId));
         }
+
         public Builder vpcInterfaceAttachment(@Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment) {
-            this.vpcInterfaceAttachment = vpcInterfaceAttachment;
+            $.vpcInterfaceAttachment = vpcInterfaceAttachment;
             return this;
         }
-        public Builder vpcInterfaceAttachment(@Nullable FlowOutputVpcInterfaceAttachmentArgs vpcInterfaceAttachment) {
-            this.vpcInterfaceAttachment = Codegen.ofNullable(vpcInterfaceAttachment);
-            return this;
-        }        public FlowOutputArgs build() {
-            return new FlowOutputArgs(cidrAllowList, description, destination, encryption, flowArn, maxLatency, minLatency, name, port, protocol, remoteId, smoothingLatency, streamId, vpcInterfaceAttachment);
+
+        public Builder vpcInterfaceAttachment(FlowOutputVpcInterfaceAttachmentArgs vpcInterfaceAttachment) {
+            return vpcInterfaceAttachment(Output.of(vpcInterfaceAttachment));
+        }
+
+        public FlowOutputArgs build() {
+            $.flowArn = Objects.requireNonNull($.flowArn, "expected parameter 'flowArn' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

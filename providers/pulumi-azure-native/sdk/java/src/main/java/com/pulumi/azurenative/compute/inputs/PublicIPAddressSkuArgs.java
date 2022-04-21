@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.enums.PublicIPAddressSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
+    private @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
 
-    public Output<Either<String,PublicIPAddressSkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,PublicIPAddressSkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
+    private @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
 
-    public Output<Either<String,PublicIPAddressSkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,PublicIPAddressSkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public PublicIPAddressSkuArgs(
-        @Nullable Output<Either<String,PublicIPAddressSkuName>> name,
-        @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private PublicIPAddressSkuArgs() {}
 
-    private PublicIPAddressSkuArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private PublicIPAddressSkuArgs(PublicIPAddressSkuArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
-        private @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
+        private PublicIPAddressSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressSkuArgs();
         }
 
         public Builder(PublicIPAddressSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new PublicIPAddressSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,PublicIPAddressSkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,PublicIPAddressSkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,PublicIPAddressSkuName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,PublicIPAddressSkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public PublicIPAddressSkuArgs build() {
-            return new PublicIPAddressSkuArgs(name, tier);
+
+        public Builder tier(Either<String,PublicIPAddressSkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public PublicIPAddressSkuArgs build() {
+            return $;
         }
     }
+
 }

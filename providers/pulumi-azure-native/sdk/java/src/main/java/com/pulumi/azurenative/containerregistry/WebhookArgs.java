@@ -8,11 +8,11 @@ import com.pulumi.azurenative.containerregistry.enums.WebhookStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<Either<String,WebhookAction>>> actions;
+    private Output<List<Either<String,WebhookAction>>> actions;
 
     public Output<List<Either<String,WebhookAction>>> actions() {
         return this.actions;
@@ -36,10 +36,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customHeaders")
-      private final @Nullable Output<Map<String,String>> customHeaders;
+    private @Nullable Output<Map<String,String>> customHeaders;
 
-    public Output<Map<String,String>> customHeaders() {
-        return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
+    public Optional<Output<Map<String,String>>> customHeaders() {
+        return Optional.ofNullable(this.customHeaders);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -69,7 +69,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -80,10 +80,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceUri", required=true)
-      private final Output<String> serviceUri;
+    private Output<String> serviceUri;
 
     public Output<String> serviceUri() {
         return this.serviceUri;
@@ -102,10 +102,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,WebhookStatus>> status;
+    private @Nullable Output<Either<String,WebhookStatus>> status;
 
-    public Output<Either<String,WebhookStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,WebhookStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -124,170 +124,146 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookName")
-      private final @Nullable Output<String> webhookName;
+    private @Nullable Output<String> webhookName;
 
-    public Output<String> webhookName() {
-        return this.webhookName == null ? Codegen.empty() : this.webhookName;
+    public Optional<Output<String>> webhookName() {
+        return Optional.ofNullable(this.webhookName);
     }
 
-    public WebhookArgs(
-        Output<List<Either<String,WebhookAction>>> actions,
-        @Nullable Output<Map<String,String>> customHeaders,
-        @Nullable Output<String> location,
-        Output<String> registryName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scope,
-        Output<String> serviceUri,
-        @Nullable Output<Either<String,WebhookStatus>> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> webhookName) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.customHeaders = customHeaders;
-        this.location = location;
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scope = scope;
-        this.serviceUri = Objects.requireNonNull(serviceUri, "expected parameter 'serviceUri' to be non-null");
-        this.status = status;
-        this.tags = tags;
-        this.webhookName = webhookName;
-    }
+    private WebhookArgs() {}
 
-    private WebhookArgs() {
-        this.actions = Codegen.empty();
-        this.customHeaders = Codegen.empty();
-        this.location = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.serviceUri = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.webhookName = Codegen.empty();
+    private WebhookArgs(WebhookArgs $) {
+        this.actions = $.actions;
+        this.customHeaders = $.customHeaders;
+        this.location = $.location;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scope = $.scope;
+        this.serviceUri = $.serviceUri;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.webhookName = $.webhookName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Either<String,WebhookAction>>> actions;
-        private @Nullable Output<Map<String,String>> customHeaders;
-        private @Nullable Output<String> location;
-        private Output<String> registryName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scope;
-        private Output<String> serviceUri;
-        private @Nullable Output<Either<String,WebhookStatus>> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> webhookName;
+        private WebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookArgs();
         }
 
         public Builder(WebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.customHeaders = defaults.customHeaders;
-    	      this.location = defaults.location;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scope = defaults.scope;
-    	      this.serviceUri = defaults.serviceUri;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.webhookName = defaults.webhookName;
+            $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<Either<String,WebhookAction>>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<Either<String,WebhookAction>> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(Either<String,WebhookAction>... actions) {
             return actions(List.of(actions));
         }
+
         public Builder customHeaders(@Nullable Output<Map<String,String>> customHeaders) {
-            this.customHeaders = customHeaders;
+            $.customHeaders = customHeaders;
             return this;
         }
-        public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
-            this.customHeaders = Codegen.ofNullable(customHeaders);
-            return this;
+
+        public Builder customHeaders(Map<String,String> customHeaders) {
+            return customHeaders(Output.of(customHeaders));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder serviceUri(Output<String> serviceUri) {
-            this.serviceUri = Objects.requireNonNull(serviceUri);
+            $.serviceUri = serviceUri;
             return this;
         }
+
         public Builder serviceUri(String serviceUri) {
-            this.serviceUri = Output.of(Objects.requireNonNull(serviceUri));
-            return this;
+            return serviceUri(Output.of(serviceUri));
         }
+
         public Builder status(@Nullable Output<Either<String,WebhookStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,WebhookStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,WebhookStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder webhookName(@Nullable Output<String> webhookName) {
-            this.webhookName = webhookName;
+            $.webhookName = webhookName;
             return this;
         }
-        public Builder webhookName(@Nullable String webhookName) {
-            this.webhookName = Codegen.ofNullable(webhookName);
-            return this;
-        }        public WebhookArgs build() {
-            return new WebhookArgs(actions, customHeaders, location, registryName, resourceGroupName, scope, serviceUri, status, tags, webhookName);
+
+        public Builder webhookName(String webhookName) {
+            return webhookName(Output.of(webhookName));
+        }
+
+        public WebhookArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceUri = Objects.requireNonNull($.serviceUri, "expected parameter 'serviceUri' to be non-null");
+            return $;
         }
     }
+
 }

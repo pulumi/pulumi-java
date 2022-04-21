@@ -10,11 +10,11 @@ import com.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceConfigura
 import com.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeTargetContainerRepositoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="components")
-      private final @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
+    private @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
 
-    public Output<List<ContainerRecipeComponentConfigurationArgs>> components() {
-        return this.components == null ? Codegen.empty() : this.components;
+    public Optional<Output<List<ContainerRecipeComponentConfigurationArgs>>> components() {
+        return Optional.ofNullable(this.components);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="containerType")
-      private final @Nullable Output<ContainerRecipeContainerType> containerType;
+    private @Nullable Output<ContainerRecipeContainerType> containerType;
 
-    public Output<ContainerRecipeContainerType> containerType() {
-        return this.containerType == null ? Codegen.empty() : this.containerType;
+    public Optional<Output<ContainerRecipeContainerType>> containerType() {
+        return Optional.ofNullable(this.containerType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dockerfileTemplateData")
-      private final @Nullable Output<String> dockerfileTemplateData;
+    private @Nullable Output<String> dockerfileTemplateData;
 
-    public Output<String> dockerfileTemplateData() {
-        return this.dockerfileTemplateData == null ? Codegen.empty() : this.dockerfileTemplateData;
+    public Optional<Output<String>> dockerfileTemplateData() {
+        return Optional.ofNullable(this.dockerfileTemplateData);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dockerfileTemplateUri")
-      private final @Nullable Output<String> dockerfileTemplateUri;
+    private @Nullable Output<String> dockerfileTemplateUri;
 
-    public Output<String> dockerfileTemplateUri() {
-        return this.dockerfileTemplateUri == null ? Codegen.empty() : this.dockerfileTemplateUri;
+    public Optional<Output<String>> dockerfileTemplateUri() {
+        return Optional.ofNullable(this.dockerfileTemplateUri);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="imageOsVersionOverride")
-      private final @Nullable Output<String> imageOsVersionOverride;
+    private @Nullable Output<String> imageOsVersionOverride;
 
-    public Output<String> imageOsVersionOverride() {
-        return this.imageOsVersionOverride == null ? Codegen.empty() : this.imageOsVersionOverride;
+    public Optional<Output<String>> imageOsVersionOverride() {
+        return Optional.ofNullable(this.imageOsVersionOverride);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceConfiguration")
-      private final @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
+    private @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
-    public Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration() {
-        return this.instanceConfiguration == null ? Codegen.empty() : this.instanceConfiguration;
+    public Optional<Output<ContainerRecipeInstanceConfigurationArgs>> instanceConfiguration() {
+        return Optional.ofNullable(this.instanceConfiguration);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parentImage")
-      private final @Nullable Output<String> parentImage;
+    private @Nullable Output<String> parentImage;
 
-    public Output<String> parentImage() {
-        return this.parentImage == null ? Codegen.empty() : this.parentImage;
+    public Optional<Output<String>> parentImage() {
+        return Optional.ofNullable(this.parentImage);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="platformOverride")
-      private final @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
+    private @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
 
-    public Output<ContainerRecipePlatformOverride> platformOverride() {
-        return this.platformOverride == null ? Codegen.empty() : this.platformOverride;
+    public Optional<Output<ContainerRecipePlatformOverride>> platformOverride() {
+        return Optional.ofNullable(this.platformOverride);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Object> tags;
+    private @Nullable Output<Object> tags;
 
-    public Output<Object> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Object>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetRepository")
-      private final @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
+    private @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
-    public Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository() {
-        return this.targetRepository == null ? Codegen.empty() : this.targetRepository;
+    public Optional<Output<ContainerRecipeTargetContainerRepositoryArgs>> targetRepository() {
+        return Optional.ofNullable(this.targetRepository);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -181,235 +181,192 @@ public final class ContainerRecipeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workingDirectory")
-      private final @Nullable Output<String> workingDirectory;
+    private @Nullable Output<String> workingDirectory;
 
-    public Output<String> workingDirectory() {
-        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
+    public Optional<Output<String>> workingDirectory() {
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public ContainerRecipeArgs(
-        @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components,
-        @Nullable Output<ContainerRecipeContainerType> containerType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> dockerfileTemplateData,
-        @Nullable Output<String> dockerfileTemplateUri,
-        @Nullable Output<String> imageOsVersionOverride,
-        @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentImage,
-        @Nullable Output<ContainerRecipePlatformOverride> platformOverride,
-        @Nullable Output<Object> tags,
-        @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository,
-        @Nullable Output<String> version,
-        @Nullable Output<String> workingDirectory) {
-        this.components = components;
-        this.containerType = containerType;
-        this.description = description;
-        this.dockerfileTemplateData = dockerfileTemplateData;
-        this.dockerfileTemplateUri = dockerfileTemplateUri;
-        this.imageOsVersionOverride = imageOsVersionOverride;
-        this.instanceConfiguration = instanceConfiguration;
-        this.kmsKeyId = kmsKeyId;
-        this.name = name;
-        this.parentImage = parentImage;
-        this.platformOverride = platformOverride;
-        this.tags = tags;
-        this.targetRepository = targetRepository;
-        this.version = version;
-        this.workingDirectory = workingDirectory;
-    }
+    private ContainerRecipeArgs() {}
 
-    private ContainerRecipeArgs() {
-        this.components = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dockerfileTemplateData = Codegen.empty();
-        this.dockerfileTemplateUri = Codegen.empty();
-        this.imageOsVersionOverride = Codegen.empty();
-        this.instanceConfiguration = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentImage = Codegen.empty();
-        this.platformOverride = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetRepository = Codegen.empty();
-        this.version = Codegen.empty();
-        this.workingDirectory = Codegen.empty();
+    private ContainerRecipeArgs(ContainerRecipeArgs $) {
+        this.components = $.components;
+        this.containerType = $.containerType;
+        this.description = $.description;
+        this.dockerfileTemplateData = $.dockerfileTemplateData;
+        this.dockerfileTemplateUri = $.dockerfileTemplateUri;
+        this.imageOsVersionOverride = $.imageOsVersionOverride;
+        this.instanceConfiguration = $.instanceConfiguration;
+        this.kmsKeyId = $.kmsKeyId;
+        this.name = $.name;
+        this.parentImage = $.parentImage;
+        this.platformOverride = $.platformOverride;
+        this.tags = $.tags;
+        this.targetRepository = $.targetRepository;
+        this.version = $.version;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
-        private @Nullable Output<ContainerRecipeContainerType> containerType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> dockerfileTemplateData;
-        private @Nullable Output<String> dockerfileTemplateUri;
-        private @Nullable Output<String> imageOsVersionOverride;
-        private @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentImage;
-        private @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
-        private @Nullable Output<Object> tags;
-        private @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
-        private @Nullable Output<String> version;
-        private @Nullable Output<String> workingDirectory;
+        private ContainerRecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRecipeArgs();
         }
 
         public Builder(ContainerRecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.components = defaults.components;
-    	      this.containerType = defaults.containerType;
-    	      this.description = defaults.description;
-    	      this.dockerfileTemplateData = defaults.dockerfileTemplateData;
-    	      this.dockerfileTemplateUri = defaults.dockerfileTemplateUri;
-    	      this.imageOsVersionOverride = defaults.imageOsVersionOverride;
-    	      this.instanceConfiguration = defaults.instanceConfiguration;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.name = defaults.name;
-    	      this.parentImage = defaults.parentImage;
-    	      this.platformOverride = defaults.platformOverride;
-    	      this.tags = defaults.tags;
-    	      this.targetRepository = defaults.targetRepository;
-    	      this.version = defaults.version;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new ContainerRecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder components(@Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components) {
-            this.components = components;
+            $.components = components;
             return this;
         }
-        public Builder components(@Nullable List<ContainerRecipeComponentConfigurationArgs> components) {
-            this.components = Codegen.ofNullable(components);
-            return this;
+
+        public Builder components(List<ContainerRecipeComponentConfigurationArgs> components) {
+            return components(Output.of(components));
         }
+
         public Builder components(ContainerRecipeComponentConfigurationArgs... components) {
             return components(List.of(components));
         }
+
         public Builder containerType(@Nullable Output<ContainerRecipeContainerType> containerType) {
-            this.containerType = containerType;
+            $.containerType = containerType;
             return this;
         }
-        public Builder containerType(@Nullable ContainerRecipeContainerType containerType) {
-            this.containerType = Codegen.ofNullable(containerType);
-            return this;
+
+        public Builder containerType(ContainerRecipeContainerType containerType) {
+            return containerType(Output.of(containerType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dockerfileTemplateData(@Nullable Output<String> dockerfileTemplateData) {
-            this.dockerfileTemplateData = dockerfileTemplateData;
+            $.dockerfileTemplateData = dockerfileTemplateData;
             return this;
         }
-        public Builder dockerfileTemplateData(@Nullable String dockerfileTemplateData) {
-            this.dockerfileTemplateData = Codegen.ofNullable(dockerfileTemplateData);
-            return this;
+
+        public Builder dockerfileTemplateData(String dockerfileTemplateData) {
+            return dockerfileTemplateData(Output.of(dockerfileTemplateData));
         }
+
         public Builder dockerfileTemplateUri(@Nullable Output<String> dockerfileTemplateUri) {
-            this.dockerfileTemplateUri = dockerfileTemplateUri;
+            $.dockerfileTemplateUri = dockerfileTemplateUri;
             return this;
         }
-        public Builder dockerfileTemplateUri(@Nullable String dockerfileTemplateUri) {
-            this.dockerfileTemplateUri = Codegen.ofNullable(dockerfileTemplateUri);
-            return this;
+
+        public Builder dockerfileTemplateUri(String dockerfileTemplateUri) {
+            return dockerfileTemplateUri(Output.of(dockerfileTemplateUri));
         }
+
         public Builder imageOsVersionOverride(@Nullable Output<String> imageOsVersionOverride) {
-            this.imageOsVersionOverride = imageOsVersionOverride;
+            $.imageOsVersionOverride = imageOsVersionOverride;
             return this;
         }
-        public Builder imageOsVersionOverride(@Nullable String imageOsVersionOverride) {
-            this.imageOsVersionOverride = Codegen.ofNullable(imageOsVersionOverride);
-            return this;
+
+        public Builder imageOsVersionOverride(String imageOsVersionOverride) {
+            return imageOsVersionOverride(Output.of(imageOsVersionOverride));
         }
+
         public Builder instanceConfiguration(@Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
-            this.instanceConfiguration = instanceConfiguration;
+            $.instanceConfiguration = instanceConfiguration;
             return this;
         }
-        public Builder instanceConfiguration(@Nullable ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
-            this.instanceConfiguration = Codegen.ofNullable(instanceConfiguration);
-            return this;
+
+        public Builder instanceConfiguration(ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
+            return instanceConfiguration(Output.of(instanceConfiguration));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentImage(@Nullable Output<String> parentImage) {
-            this.parentImage = parentImage;
+            $.parentImage = parentImage;
             return this;
         }
-        public Builder parentImage(@Nullable String parentImage) {
-            this.parentImage = Codegen.ofNullable(parentImage);
-            return this;
+
+        public Builder parentImage(String parentImage) {
+            return parentImage(Output.of(parentImage));
         }
+
         public Builder platformOverride(@Nullable Output<ContainerRecipePlatformOverride> platformOverride) {
-            this.platformOverride = platformOverride;
+            $.platformOverride = platformOverride;
             return this;
         }
-        public Builder platformOverride(@Nullable ContainerRecipePlatformOverride platformOverride) {
-            this.platformOverride = Codegen.ofNullable(platformOverride);
-            return this;
+
+        public Builder platformOverride(ContainerRecipePlatformOverride platformOverride) {
+            return platformOverride(Output.of(platformOverride));
         }
+
         public Builder tags(@Nullable Output<Object> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Object tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Object tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder targetRepository(@Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
-            this.targetRepository = targetRepository;
+            $.targetRepository = targetRepository;
             return this;
         }
-        public Builder targetRepository(@Nullable ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
-            this.targetRepository = Codegen.ofNullable(targetRepository);
-            return this;
+
+        public Builder targetRepository(ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
+            return targetRepository(Output.of(targetRepository));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
         }
-        public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Codegen.ofNullable(workingDirectory);
-            return this;
-        }        public ContainerRecipeArgs build() {
-            return new ContainerRecipeArgs(components, containerType, description, dockerfileTemplateData, dockerfileTemplateUri, imageOsVersionOverride, instanceConfiguration, kmsKeyId, name, parentImage, platformOverride, tags, targetRepository, version, workingDirectory);
+
+        public Builder workingDirectory(String workingDirectory) {
+            return workingDirectory(Output.of(workingDirectory));
+        }
+
+        public ContainerRecipeArgs build() {
+            return $;
         }
     }
+
 }

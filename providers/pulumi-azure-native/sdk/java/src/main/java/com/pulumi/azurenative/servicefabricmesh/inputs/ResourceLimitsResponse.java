@@ -23,10 +23,10 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="cpu")
-      private final @Nullable Double cpu;
+    private @Nullable Double cpu;
 
     public Optional<Double> cpu() {
-        return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
+        return Optional.ofNullable(this.cpu);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="memoryInGB")
-      private final @Nullable Double memoryInGB;
+    private @Nullable Double memoryInGB;
 
     public Optional<Double> memoryInGB() {
-        return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
+        return Optional.ofNullable(this.memoryInGB);
     }
 
-    public ResourceLimitsResponse(
-        @Nullable Double cpu,
-        @Nullable Double memoryInGB) {
-        this.cpu = cpu;
-        this.memoryInGB = memoryInGB;
-    }
+    private ResourceLimitsResponse() {}
 
-    private ResourceLimitsResponse() {
-        this.cpu = null;
-        this.memoryInGB = null;
+    private ResourceLimitsResponse(ResourceLimitsResponse $) {
+        this.cpu = $.cpu;
+        this.memoryInGB = $.memoryInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceLimitsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double cpu;
-        private @Nullable Double memoryInGB;
+        private ResourceLimitsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceLimitsResponse();
         }
 
         public Builder(ResourceLimitsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.memoryInGB = defaults.memoryInGB;
+            $ = new ResourceLimitsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = memoryInGB;
+            $.memoryInGB = memoryInGB;
             return this;
-        }        public ResourceLimitsResponse build() {
-            return new ResourceLimitsResponse(cpu, memoryInGB);
+        }
+
+        public ResourceLimitsResponse build() {
+            return $;
         }
     }
+
 }

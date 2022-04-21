@@ -5,9 +5,9 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends com.pulum
     public static final FlowLookoutMetricsDestinationPropertiesArgs Empty = new FlowLookoutMetricsDestinationPropertiesArgs();
 
     @Import(name="object")
-      private final @Nullable Output<String> object;
+    private @Nullable Output<String> object;
 
-    public Output<String> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<String>> object() {
+        return Optional.ofNullable(this.object);
     }
 
-    public FlowLookoutMetricsDestinationPropertiesArgs(@Nullable Output<String> object) {
-        this.object = object;
-    }
+    private FlowLookoutMetricsDestinationPropertiesArgs() {}
 
-    private FlowLookoutMetricsDestinationPropertiesArgs() {
-        this.object = Codegen.empty();
+    private FlowLookoutMetricsDestinationPropertiesArgs(FlowLookoutMetricsDestinationPropertiesArgs $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowLookoutMetricsDestinationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> object;
+        private FlowLookoutMetricsDestinationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowLookoutMetricsDestinationPropertiesArgs();
         }
 
         public Builder(FlowLookoutMetricsDestinationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowLookoutMetricsDestinationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder object(@Nullable Output<String> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable String object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
-        }        public FlowLookoutMetricsDestinationPropertiesArgs build() {
-            return new FlowLookoutMetricsDestinationPropertiesArgs(object);
+
+        public Builder object(String object) {
+            return object(Output.of(object));
+        }
+
+        public FlowLookoutMetricsDestinationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

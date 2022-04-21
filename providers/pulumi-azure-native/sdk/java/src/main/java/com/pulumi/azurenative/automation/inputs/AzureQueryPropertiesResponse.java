@@ -25,10 +25,10 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scope")
-      private final @Nullable List<String> scope;
+    private @Nullable List<String> scope;
 
-    public List<String> scope() {
-        return this.scope == null ? List.of() : this.scope;
+    public Optional<List<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -47,70 +47,64 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tagSettings")
-      private final @Nullable TagSettingsPropertiesResponse tagSettings;
+    private @Nullable TagSettingsPropertiesResponse tagSettings;
 
     public Optional<TagSettingsPropertiesResponse> tagSettings() {
-        return this.tagSettings == null ? Optional.empty() : Optional.ofNullable(this.tagSettings);
+        return Optional.ofNullable(this.tagSettings);
     }
 
-    public AzureQueryPropertiesResponse(
-        @Nullable List<String> locations,
-        @Nullable List<String> scope,
-        @Nullable TagSettingsPropertiesResponse tagSettings) {
-        this.locations = locations;
-        this.scope = scope;
-        this.tagSettings = tagSettings;
-    }
+    private AzureQueryPropertiesResponse() {}
 
-    private AzureQueryPropertiesResponse() {
-        this.locations = List.of();
-        this.scope = List.of();
-        this.tagSettings = null;
+    private AzureQueryPropertiesResponse(AzureQueryPropertiesResponse $) {
+        this.locations = $.locations;
+        this.scope = $.scope;
+        this.tagSettings = $.tagSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureQueryPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> locations;
-        private @Nullable List<String> scope;
-        private @Nullable TagSettingsPropertiesResponse tagSettings;
+        private AzureQueryPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureQueryPropertiesResponse();
         }
 
         public Builder(AzureQueryPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.scope = defaults.scope;
-    	      this.tagSettings = defaults.tagSettings;
+            $ = new AzureQueryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder scope(@Nullable List<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }
+
         public Builder tagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
-            this.tagSettings = tagSettings;
+            $.tagSettings = tagSettings;
             return this;
-        }        public AzureQueryPropertiesResponse build() {
-            return new AzureQueryPropertiesResponse(locations, scope, tagSettings);
+        }
+
+        public AzureQueryPropertiesResponse build() {
+            return $;
         }
     }
+
 }

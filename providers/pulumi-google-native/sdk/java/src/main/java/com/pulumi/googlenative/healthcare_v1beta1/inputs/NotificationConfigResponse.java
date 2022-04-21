@@ -22,7 +22,7 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final String pubsubTopic;
+    private String pubsubTopic;
 
     public String pubsubTopic() {
         return this.pubsubTopic;
@@ -33,55 +33,52 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sendForBulkImport", required=true)
-      private final Boolean sendForBulkImport;
+    private Boolean sendForBulkImport;
 
     public Boolean sendForBulkImport() {
         return this.sendForBulkImport;
     }
 
-    public NotificationConfigResponse(
-        String pubsubTopic,
-        Boolean sendForBulkImport) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-        this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport, "expected parameter 'sendForBulkImport' to be non-null");
-    }
+    private NotificationConfigResponse() {}
 
-    private NotificationConfigResponse() {
-        this.pubsubTopic = null;
-        this.sendForBulkImport = null;
+    private NotificationConfigResponse(NotificationConfigResponse $) {
+        this.pubsubTopic = $.pubsubTopic;
+        this.sendForBulkImport = $.sendForBulkImport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pubsubTopic;
-        private Boolean sendForBulkImport;
+        private NotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigResponse();
         }
 
         public Builder(NotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopic = defaults.pubsubTopic;
-    	      this.sendForBulkImport = defaults.sendForBulkImport;
+            $ = new NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
+
         public Builder sendForBulkImport(Boolean sendForBulkImport) {
-            this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport);
+            $.sendForBulkImport = sendForBulkImport;
             return this;
-        }        public NotificationConfigResponse build() {
-            return new NotificationConfigResponse(pubsubTopic, sendForBulkImport);
+        }
+
+        public NotificationConfigResponse build() {
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            $.sendForBulkImport = Objects.requireNonNull($.sendForBulkImport, "expected parameter 'sendForBulkImport' to be non-null");
+            return $;
         }
     }
+
 }

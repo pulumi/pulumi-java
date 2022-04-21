@@ -23,45 +23,44 @@ public final class ServiceExportConfigurationInfoResponse extends com.pulumi.res
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable String storageAccountName;
+    private @Nullable String storageAccountName;
 
     public Optional<String> storageAccountName() {
-        return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);
+        return Optional.ofNullable(this.storageAccountName);
     }
 
-    public ServiceExportConfigurationInfoResponse(@Nullable String storageAccountName) {
-        this.storageAccountName = storageAccountName;
-    }
+    private ServiceExportConfigurationInfoResponse() {}
 
-    private ServiceExportConfigurationInfoResponse() {
-        this.storageAccountName = null;
+    private ServiceExportConfigurationInfoResponse(ServiceExportConfigurationInfoResponse $) {
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceExportConfigurationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String storageAccountName;
+        private ServiceExportConfigurationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceExportConfigurationInfoResponse();
         }
 
         public Builder(ServiceExportConfigurationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new ServiceExportConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public ServiceExportConfigurationInfoResponse build() {
-            return new ServiceExportConfigurationInfoResponse(storageAccountName);
+        }
+
+        public ServiceExportConfigurationInfoResponse build() {
+            return $;
         }
     }
+
 }

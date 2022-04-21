@@ -11,9 +11,9 @@ import com.pulumi.azurenative.resources.inputs.ParametersLinkArgs;
 import com.pulumi.azurenative.resources.inputs.TemplateLinkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="debugSetting")
-      private final @Nullable Output<DebugSettingArgs> debugSetting;
+    private @Nullable Output<DebugSettingArgs> debugSetting;
 
-    public Output<DebugSettingArgs> debugSetting() {
-        return this.debugSetting == null ? Codegen.empty() : this.debugSetting;
+    public Optional<Output<DebugSettingArgs>> debugSetting() {
+        return Optional.ofNullable(this.debugSetting);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="expressionEvaluationOptions")
-      private final @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
+    private @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
 
-    public Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions() {
-        return this.expressionEvaluationOptions == null ? Codegen.empty() : this.expressionEvaluationOptions;
+    public Optional<Output<ExpressionEvaluationOptionsArgs>> expressionEvaluationOptions() {
+        return Optional.ofNullable(this.expressionEvaluationOptions);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<DeploymentMode> mode;
+    private Output<DeploymentMode> mode;
 
     public Output<DeploymentMode> mode() {
         return this.mode;
@@ -63,10 +63,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="onErrorDeployment")
-      private final @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
+    private @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
 
-    public Output<OnErrorDeploymentArgs> onErrorDeployment() {
-        return this.onErrorDeployment == null ? Codegen.empty() : this.onErrorDeployment;
+    public Optional<Output<OnErrorDeploymentArgs>> onErrorDeployment() {
+        return Optional.ofNullable(this.onErrorDeployment);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Object> parameters;
+    private @Nullable Output<Object> parameters;
 
-    public Output<Object> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="parametersLink")
-      private final @Nullable Output<ParametersLinkArgs> parametersLink;
+    private @Nullable Output<ParametersLinkArgs> parametersLink;
 
-    public Output<ParametersLinkArgs> parametersLink() {
-        return this.parametersLink == null ? Codegen.empty() : this.parametersLink;
+    public Optional<Output<ParametersLinkArgs>> parametersLink() {
+        return Optional.ofNullable(this.parametersLink);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<Object> template;
+    private @Nullable Output<Object> template;
 
-    public Output<Object> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<Object>> template() {
+        return Optional.ofNullable(this.template);
     }
 
     /**
@@ -107,141 +107,119 @@ public final class DeploymentPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="templateLink")
-      private final @Nullable Output<TemplateLinkArgs> templateLink;
+    private @Nullable Output<TemplateLinkArgs> templateLink;
 
-    public Output<TemplateLinkArgs> templateLink() {
-        return this.templateLink == null ? Codegen.empty() : this.templateLink;
+    public Optional<Output<TemplateLinkArgs>> templateLink() {
+        return Optional.ofNullable(this.templateLink);
     }
 
-    public DeploymentPropertiesArgs(
-        @Nullable Output<DebugSettingArgs> debugSetting,
-        @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions,
-        Output<DeploymentMode> mode,
-        @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment,
-        @Nullable Output<Object> parameters,
-        @Nullable Output<ParametersLinkArgs> parametersLink,
-        @Nullable Output<Object> template,
-        @Nullable Output<TemplateLinkArgs> templateLink) {
-        this.debugSetting = debugSetting;
-        this.expressionEvaluationOptions = expressionEvaluationOptions;
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.onErrorDeployment = onErrorDeployment;
-        this.parameters = parameters;
-        this.parametersLink = parametersLink;
-        this.template = template;
-        this.templateLink = templateLink;
-    }
+    private DeploymentPropertiesArgs() {}
 
-    private DeploymentPropertiesArgs() {
-        this.debugSetting = Codegen.empty();
-        this.expressionEvaluationOptions = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.onErrorDeployment = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.parametersLink = Codegen.empty();
-        this.template = Codegen.empty();
-        this.templateLink = Codegen.empty();
+    private DeploymentPropertiesArgs(DeploymentPropertiesArgs $) {
+        this.debugSetting = $.debugSetting;
+        this.expressionEvaluationOptions = $.expressionEvaluationOptions;
+        this.mode = $.mode;
+        this.onErrorDeployment = $.onErrorDeployment;
+        this.parameters = $.parameters;
+        this.parametersLink = $.parametersLink;
+        this.template = $.template;
+        this.templateLink = $.templateLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DebugSettingArgs> debugSetting;
-        private @Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions;
-        private Output<DeploymentMode> mode;
-        private @Nullable Output<OnErrorDeploymentArgs> onErrorDeployment;
-        private @Nullable Output<Object> parameters;
-        private @Nullable Output<ParametersLinkArgs> parametersLink;
-        private @Nullable Output<Object> template;
-        private @Nullable Output<TemplateLinkArgs> templateLink;
+        private DeploymentPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentPropertiesArgs();
         }
 
         public Builder(DeploymentPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.debugSetting = defaults.debugSetting;
-    	      this.expressionEvaluationOptions = defaults.expressionEvaluationOptions;
-    	      this.mode = defaults.mode;
-    	      this.onErrorDeployment = defaults.onErrorDeployment;
-    	      this.parameters = defaults.parameters;
-    	      this.parametersLink = defaults.parametersLink;
-    	      this.template = defaults.template;
-    	      this.templateLink = defaults.templateLink;
+            $ = new DeploymentPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder debugSetting(@Nullable Output<DebugSettingArgs> debugSetting) {
-            this.debugSetting = debugSetting;
+            $.debugSetting = debugSetting;
             return this;
         }
-        public Builder debugSetting(@Nullable DebugSettingArgs debugSetting) {
-            this.debugSetting = Codegen.ofNullable(debugSetting);
-            return this;
+
+        public Builder debugSetting(DebugSettingArgs debugSetting) {
+            return debugSetting(Output.of(debugSetting));
         }
+
         public Builder expressionEvaluationOptions(@Nullable Output<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
-            this.expressionEvaluationOptions = expressionEvaluationOptions;
+            $.expressionEvaluationOptions = expressionEvaluationOptions;
             return this;
         }
-        public Builder expressionEvaluationOptions(@Nullable ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
-            this.expressionEvaluationOptions = Codegen.ofNullable(expressionEvaluationOptions);
-            return this;
+
+        public Builder expressionEvaluationOptions(ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
+            return expressionEvaluationOptions(Output.of(expressionEvaluationOptions));
         }
+
         public Builder mode(Output<DeploymentMode> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(DeploymentMode mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder onErrorDeployment(@Nullable Output<OnErrorDeploymentArgs> onErrorDeployment) {
-            this.onErrorDeployment = onErrorDeployment;
+            $.onErrorDeployment = onErrorDeployment;
             return this;
         }
-        public Builder onErrorDeployment(@Nullable OnErrorDeploymentArgs onErrorDeployment) {
-            this.onErrorDeployment = Codegen.ofNullable(onErrorDeployment);
-            return this;
+
+        public Builder onErrorDeployment(OnErrorDeploymentArgs onErrorDeployment) {
+            return onErrorDeployment(Output.of(onErrorDeployment));
         }
+
         public Builder parameters(@Nullable Output<Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Object parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parametersLink(@Nullable Output<ParametersLinkArgs> parametersLink) {
-            this.parametersLink = parametersLink;
+            $.parametersLink = parametersLink;
             return this;
         }
-        public Builder parametersLink(@Nullable ParametersLinkArgs parametersLink) {
-            this.parametersLink = Codegen.ofNullable(parametersLink);
-            return this;
+
+        public Builder parametersLink(ParametersLinkArgs parametersLink) {
+            return parametersLink(Output.of(parametersLink));
         }
+
         public Builder template(@Nullable Output<Object> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable Object template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
+
+        public Builder template(Object template) {
+            return template(Output.of(template));
         }
+
         public Builder templateLink(@Nullable Output<TemplateLinkArgs> templateLink) {
-            this.templateLink = templateLink;
+            $.templateLink = templateLink;
             return this;
         }
-        public Builder templateLink(@Nullable TemplateLinkArgs templateLink) {
-            this.templateLink = Codegen.ofNullable(templateLink);
-            return this;
-        }        public DeploymentPropertiesArgs build() {
-            return new DeploymentPropertiesArgs(debugSetting, expressionEvaluationOptions, mode, onErrorDeployment, parameters, parametersLink, template, templateLink);
+
+        public Builder templateLink(TemplateLinkArgs templateLink) {
+            return templateLink(Output.of(templateLink));
+        }
+
+        public DeploymentPropertiesArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

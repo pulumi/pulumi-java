@@ -27,7 +27,7 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="flag", required=true)
-      private final String flag;
+    private String flag;
 
     public String flag() {
         return this.flag;
@@ -38,10 +38,10 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -49,64 +49,58 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public WebPubSubFeatureResponse(
-        String flag,
-        @Nullable Map<String,String> properties,
-        String value) {
-        this.flag = Objects.requireNonNull(flag, "expected parameter 'flag' to be non-null");
-        this.properties = properties;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private WebPubSubFeatureResponse() {}
 
-    private WebPubSubFeatureResponse() {
-        this.flag = null;
-        this.properties = Map.of();
-        this.value = null;
+    private WebPubSubFeatureResponse(WebPubSubFeatureResponse $) {
+        this.flag = $.flag;
+        this.properties = $.properties;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubFeatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String flag;
-        private @Nullable Map<String,String> properties;
-        private String value;
+        private WebPubSubFeatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubFeatureResponse();
         }
 
         public Builder(WebPubSubFeatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flag = defaults.flag;
-    	      this.properties = defaults.properties;
-    	      this.value = defaults.value;
+            $ = new WebPubSubFeatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder flag(String flag) {
-            this.flag = Objects.requireNonNull(flag);
+            $.flag = flag;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public WebPubSubFeatureResponse build() {
-            return new WebPubSubFeatureResponse(flag, properties, value);
+        }
+
+        public WebPubSubFeatureResponse build() {
+            $.flag = Objects.requireNonNull($.flag, "expected parameter 'flag' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

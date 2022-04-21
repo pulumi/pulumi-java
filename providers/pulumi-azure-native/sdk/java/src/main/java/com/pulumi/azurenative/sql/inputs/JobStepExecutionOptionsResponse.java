@@ -25,10 +25,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="initialRetryIntervalSeconds")
-      private final @Nullable Integer initialRetryIntervalSeconds;
+    private @Nullable Integer initialRetryIntervalSeconds;
 
     public Optional<Integer> initialRetryIntervalSeconds() {
-        return this.initialRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.initialRetryIntervalSeconds);
+        return Optional.ofNullable(this.initialRetryIntervalSeconds);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="maximumRetryIntervalSeconds")
-      private final @Nullable Integer maximumRetryIntervalSeconds;
+    private @Nullable Integer maximumRetryIntervalSeconds;
 
     public Optional<Integer> maximumRetryIntervalSeconds() {
-        return this.maximumRetryIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.maximumRetryIntervalSeconds);
+        return Optional.ofNullable(this.maximumRetryIntervalSeconds);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retryAttempts")
-      private final @Nullable Integer retryAttempts;
+    private @Nullable Integer retryAttempts;
 
     public Optional<Integer> retryAttempts() {
-        return this.retryAttempts == null ? Optional.empty() : Optional.ofNullable(this.retryAttempts);
+        return Optional.ofNullable(this.retryAttempts);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retryIntervalBackoffMultiplier")
-      private final @Nullable Double retryIntervalBackoffMultiplier;
+    private @Nullable Double retryIntervalBackoffMultiplier;
 
     public Optional<Double> retryIntervalBackoffMultiplier() {
-        return this.retryIntervalBackoffMultiplier == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalBackoffMultiplier);
+        return Optional.ofNullable(this.retryIntervalBackoffMultiplier);
     }
 
     /**
@@ -69,82 +69,73 @@ public final class JobStepExecutionOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Integer timeoutSeconds;
+    private @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutSeconds);
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public JobStepExecutionOptionsResponse(
-        @Nullable Integer initialRetryIntervalSeconds,
-        @Nullable Integer maximumRetryIntervalSeconds,
-        @Nullable Integer retryAttempts,
-        @Nullable Double retryIntervalBackoffMultiplier,
-        @Nullable Integer timeoutSeconds) {
-        this.initialRetryIntervalSeconds = Codegen.integerProp("initialRetryIntervalSeconds").arg(initialRetryIntervalSeconds).def(1).getNullable();
-        this.maximumRetryIntervalSeconds = Codegen.integerProp("maximumRetryIntervalSeconds").arg(maximumRetryIntervalSeconds).def(120).getNullable();
-        this.retryAttempts = Codegen.integerProp("retryAttempts").arg(retryAttempts).def(10).getNullable();
-        this.retryIntervalBackoffMultiplier = Codegen.doubleProp("retryIntervalBackoffMultiplier").arg(retryIntervalBackoffMultiplier).def(2e+00).getNullable();
-        this.timeoutSeconds = Codegen.integerProp("timeoutSeconds").arg(timeoutSeconds).def(43200).getNullable();
-    }
+    private JobStepExecutionOptionsResponse() {}
 
-    private JobStepExecutionOptionsResponse() {
-        this.initialRetryIntervalSeconds = null;
-        this.maximumRetryIntervalSeconds = null;
-        this.retryAttempts = null;
-        this.retryIntervalBackoffMultiplier = null;
-        this.timeoutSeconds = null;
+    private JobStepExecutionOptionsResponse(JobStepExecutionOptionsResponse $) {
+        this.initialRetryIntervalSeconds = $.initialRetryIntervalSeconds;
+        this.maximumRetryIntervalSeconds = $.maximumRetryIntervalSeconds;
+        this.retryAttempts = $.retryAttempts;
+        this.retryIntervalBackoffMultiplier = $.retryIntervalBackoffMultiplier;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStepExecutionOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer initialRetryIntervalSeconds;
-        private @Nullable Integer maximumRetryIntervalSeconds;
-        private @Nullable Integer retryAttempts;
-        private @Nullable Double retryIntervalBackoffMultiplier;
-        private @Nullable Integer timeoutSeconds;
+        private JobStepExecutionOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStepExecutionOptionsResponse();
         }
 
         public Builder(JobStepExecutionOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialRetryIntervalSeconds = defaults.initialRetryIntervalSeconds;
-    	      this.maximumRetryIntervalSeconds = defaults.maximumRetryIntervalSeconds;
-    	      this.retryAttempts = defaults.retryAttempts;
-    	      this.retryIntervalBackoffMultiplier = defaults.retryIntervalBackoffMultiplier;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new JobStepExecutionOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder initialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
-            this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
+            $.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
+
         public Builder maximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
-            this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
+            $.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
+
         public Builder retryAttempts(@Nullable Integer retryAttempts) {
-            this.retryAttempts = retryAttempts;
+            $.retryAttempts = retryAttempts;
             return this;
         }
+
         public Builder retryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
-            this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
+            $.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
+
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
-        }        public JobStepExecutionOptionsResponse build() {
-            return new JobStepExecutionOptionsResponse(initialRetryIntervalSeconds, maximumRetryIntervalSeconds, retryAttempts, retryIntervalBackoffMultiplier, timeoutSeconds);
+        }
+
+        public JobStepExecutionOptionsResponse build() {
+            $.initialRetryIntervalSeconds = Codegen.integerProp("initialRetryIntervalSeconds").arg($.initialRetryIntervalSeconds).def(1).getNullable();
+            $.maximumRetryIntervalSeconds = Codegen.integerProp("maximumRetryIntervalSeconds").arg($.maximumRetryIntervalSeconds).def(120).getNullable();
+            $.retryAttempts = Codegen.integerProp("retryAttempts").arg($.retryAttempts).def(10).getNullable();
+            $.retryIntervalBackoffMultiplier = Codegen.doubleProp("retryIntervalBackoffMultiplier").arg($.retryIntervalBackoffMultiplier).def(2e+00).getNullable();
+            $.timeoutSeconds = Codegen.integerProp("timeoutSeconds").arg($.timeoutSeconds).def(43200).getNullable();
+            return $;
         }
     }
+
 }

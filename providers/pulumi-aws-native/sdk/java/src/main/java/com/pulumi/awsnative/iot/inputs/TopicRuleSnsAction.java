@@ -15,78 +15,72 @@ public final class TopicRuleSnsAction extends com.pulumi.resources.InvokeArgs {
     public static final TopicRuleSnsAction Empty = new TopicRuleSnsAction();
 
     @Import(name="messageFormat")
-      private final @Nullable String messageFormat;
+    private @Nullable String messageFormat;
 
     public Optional<String> messageFormat() {
-        return this.messageFormat == null ? Optional.empty() : Optional.ofNullable(this.messageFormat);
+        return Optional.ofNullable(this.messageFormat);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="targetArn", required=true)
-      private final String targetArn;
+    private String targetArn;
 
     public String targetArn() {
         return this.targetArn;
     }
 
-    public TopicRuleSnsAction(
-        @Nullable String messageFormat,
-        String roleArn,
-        String targetArn) {
-        this.messageFormat = messageFormat;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private TopicRuleSnsAction() {}
 
-    private TopicRuleSnsAction() {
-        this.messageFormat = null;
-        this.roleArn = null;
-        this.targetArn = null;
+    private TopicRuleSnsAction(TopicRuleSnsAction $) {
+        this.messageFormat = $.messageFormat;
+        this.roleArn = $.roleArn;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleSnsAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String messageFormat;
-        private String roleArn;
-        private String targetArn;
+        private TopicRuleSnsAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleSnsAction();
         }
 
         public Builder(TopicRuleSnsAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetArn = defaults.targetArn;
+            $ = new TopicRuleSnsAction(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = messageFormat;
+            $.messageFormat = messageFormat;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder targetArn(String targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
-        }        public TopicRuleSnsAction build() {
-            return new TopicRuleSnsAction(messageFormat, roleArn, targetArn);
+        }
+
+        public TopicRuleSnsAction build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetDashboardArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
     @Import(name="dashboardId", required=true)
-      private final String dashboardId;
+    private String dashboardId;
 
     public String dashboardId() {
         return this.dashboardId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDashboardArgs(
-        String dashboardId,
-        @Nullable String project) {
-        this.dashboardId = Objects.requireNonNull(dashboardId, "expected parameter 'dashboardId' to be non-null");
-        this.project = project;
-    }
+    private GetDashboardArgs() {}
 
-    private GetDashboardArgs() {
-        this.dashboardId = null;
-        this.project = null;
+    private GetDashboardArgs(GetDashboardArgs $) {
+        this.dashboardId = $.dashboardId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dashboardId;
-        private @Nullable String project;
+        private GetDashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDashboardArgs();
         }
 
         public Builder(GetDashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardId = defaults.dashboardId;
-    	      this.project = defaults.project;
+            $ = new GetDashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardId(String dashboardId) {
-            this.dashboardId = Objects.requireNonNull(dashboardId);
+            $.dashboardId = dashboardId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDashboardArgs build() {
-            return new GetDashboardArgs(dashboardId, project);
+        }
+
+        public GetDashboardArgs build() {
+            $.dashboardId = Objects.requireNonNull($.dashboardId, "expected parameter 'dashboardId' to be non-null");
+            return $;
         }
     }
+
 }

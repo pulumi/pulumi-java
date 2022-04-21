@@ -23,45 +23,45 @@ public final class AvroSerializationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AvroSerializationResponse(String type) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AvroSerializationResponse() {}
 
-    private AvroSerializationResponse() {
-        this.type = null;
+    private AvroSerializationResponse(AvroSerializationResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroSerializationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private AvroSerializationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroSerializationResponse();
         }
 
         public Builder(AvroSerializationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new AvroSerializationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AvroSerializationResponse build() {
-            return new AvroSerializationResponse(type);
+        }
+
+        public AvroSerializationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

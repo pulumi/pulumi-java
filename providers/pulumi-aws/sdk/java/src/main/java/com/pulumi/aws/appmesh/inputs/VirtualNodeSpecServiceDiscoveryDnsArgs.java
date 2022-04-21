@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends com.pulumi.res
      * 
      */
     @Import(name="hostname", required=true)
-      private final Output<String> hostname;
+    private Output<String> hostname;
 
     public Output<String> hostname() {
         return this.hostname;
     }
 
-    public VirtualNodeSpecServiceDiscoveryDnsArgs(Output<String> hostname) {
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-    }
+    private VirtualNodeSpecServiceDiscoveryDnsArgs() {}
 
-    private VirtualNodeSpecServiceDiscoveryDnsArgs() {
-        this.hostname = Codegen.empty();
+    private VirtualNodeSpecServiceDiscoveryDnsArgs(VirtualNodeSpecServiceDiscoveryDnsArgs $) {
+        this.hostname = $.hostname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecServiceDiscoveryDnsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostname;
+        private VirtualNodeSpecServiceDiscoveryDnsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecServiceDiscoveryDnsArgs();
         }
 
         public Builder(VirtualNodeSpecServiceDiscoveryDnsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
+            $ = new VirtualNodeSpecServiceDiscoveryDnsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(Output<String> hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Output.of(Objects.requireNonNull(hostname));
-            return this;
-        }        public VirtualNodeSpecServiceDiscoveryDnsArgs build() {
-            return new VirtualNodeSpecServiceDiscoveryDnsArgs(hostname);
+            return hostname(Output.of(hostname));
+        }
+
+        public VirtualNodeSpecServiceDiscoveryDnsArgs build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            return $;
         }
     }
+
 }

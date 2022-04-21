@@ -23,7 +23,7 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -34,7 +34,7 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final FilterResponse filter;
+    private FilterResponse filter;
 
     public FilterResponse filter() {
         return this.filter;
@@ -45,64 +45,59 @@ public final class PubSubResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public PubSubResponse(
-        Boolean enabled,
-        FilterResponse filter,
-        String topic) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private PubSubResponse() {}
 
-    private PubSubResponse() {
-        this.enabled = null;
-        this.filter = null;
-        this.topic = null;
+    private PubSubResponse(PubSubResponse $) {
+        this.enabled = $.enabled;
+        this.filter = $.filter;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubSubResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private FilterResponse filter;
-        private String topic;
+        private PubSubResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubSubResponse();
         }
 
         public Builder(PubSubResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.filter = defaults.filter;
-    	      this.topic = defaults.topic;
+            $ = new PubSubResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder filter(FilterResponse filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public PubSubResponse build() {
-            return new PubSubResponse(enabled, filter, topic);
+        }
+
+        public PubSubResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

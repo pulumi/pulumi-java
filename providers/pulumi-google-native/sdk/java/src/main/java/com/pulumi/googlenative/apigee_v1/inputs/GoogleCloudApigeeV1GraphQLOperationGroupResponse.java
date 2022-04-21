@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends com.
      * 
      */
     @Import(name="operationConfigType", required=true)
-      private final String operationConfigType;
+    private String operationConfigType;
 
     public String operationConfigType() {
         return this.operationConfigType;
@@ -34,58 +34,56 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends com.
      * 
      */
     @Import(name="operationConfigs", required=true)
-      private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
+    private List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
 
     public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs() {
         return this.operationConfigs;
     }
 
-    public GoogleCloudApigeeV1GraphQLOperationGroupResponse(
-        String operationConfigType,
-        List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
-        this.operationConfigType = Objects.requireNonNull(operationConfigType, "expected parameter 'operationConfigType' to be non-null");
-        this.operationConfigs = Objects.requireNonNull(operationConfigs, "expected parameter 'operationConfigs' to be non-null");
-    }
+    private GoogleCloudApigeeV1GraphQLOperationGroupResponse() {}
 
-    private GoogleCloudApigeeV1GraphQLOperationGroupResponse() {
-        this.operationConfigType = null;
-        this.operationConfigs = List.of();
+    private GoogleCloudApigeeV1GraphQLOperationGroupResponse(GoogleCloudApigeeV1GraphQLOperationGroupResponse $) {
+        this.operationConfigType = $.operationConfigType;
+        this.operationConfigs = $.operationConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1GraphQLOperationGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationConfigType;
-        private List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
+        private GoogleCloudApigeeV1GraphQLOperationGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1GraphQLOperationGroupResponse();
         }
 
         public Builder(GoogleCloudApigeeV1GraphQLOperationGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationConfigType = defaults.operationConfigType;
-    	      this.operationConfigs = defaults.operationConfigs;
+            $ = new GoogleCloudApigeeV1GraphQLOperationGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operationConfigType(String operationConfigType) {
-            this.operationConfigType = Objects.requireNonNull(operationConfigType);
+            $.operationConfigType = operationConfigType;
             return this;
         }
+
         public Builder operationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
-            this.operationConfigs = Objects.requireNonNull(operationConfigs);
+            $.operationConfigs = operationConfigs;
             return this;
         }
+
         public Builder operationConfigs(GoogleCloudApigeeV1GraphQLOperationConfigResponse... operationConfigs) {
             return operationConfigs(List.of(operationConfigs));
-        }        public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
-            return new GoogleCloudApigeeV1GraphQLOperationGroupResponse(operationConfigType, operationConfigs);
+        }
+
+        public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
+            $.operationConfigType = Objects.requireNonNull($.operationConfigType, "expected parameter 'operationConfigType' to be non-null");
+            $.operationConfigs = Objects.requireNonNull($.operationConfigs, "expected parameter 'operationConfigs' to be non-null");
+            return $;
         }
     }
+
 }

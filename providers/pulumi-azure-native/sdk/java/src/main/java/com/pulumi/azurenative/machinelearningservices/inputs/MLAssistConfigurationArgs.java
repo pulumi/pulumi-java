@@ -6,11 +6,11 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.ComputeBindingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class MLAssistConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="inferencingComputeBinding", required=true)
-      private final Output<ComputeBindingArgs> inferencingComputeBinding;
+    private Output<ComputeBindingArgs> inferencingComputeBinding;
 
     public Output<ComputeBindingArgs> inferencingComputeBinding() {
         return this.inferencingComputeBinding;
@@ -38,10 +38,10 @@ public final class MLAssistConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mlAssistEnabled")
-      private final @Nullable Output<Boolean> mlAssistEnabled;
+    private @Nullable Output<Boolean> mlAssistEnabled;
 
-    public Output<Boolean> mlAssistEnabled() {
-        return this.mlAssistEnabled == null ? Codegen.empty() : this.mlAssistEnabled;
+    public Optional<Output<Boolean>> mlAssistEnabled() {
+        return Optional.ofNullable(this.mlAssistEnabled);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class MLAssistConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="modelNamePrefix", required=true)
-      private final Output<String> modelNamePrefix;
+    private Output<String> modelNamePrefix;
 
     public Output<String> modelNamePrefix() {
         return this.modelNamePrefix;
@@ -60,10 +60,10 @@ public final class MLAssistConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="prelabelAccuracyThreshold")
-      private final @Nullable Output<Double> prelabelAccuracyThreshold;
+    private @Nullable Output<Double> prelabelAccuracyThreshold;
 
-    public Output<Double> prelabelAccuracyThreshold() {
-        return this.prelabelAccuracyThreshold == null ? Codegen.empty() : this.prelabelAccuracyThreshold;
+    public Optional<Output<Double>> prelabelAccuracyThreshold() {
+        return Optional.ofNullable(this.prelabelAccuracyThreshold);
     }
 
     /**
@@ -71,102 +71,91 @@ public final class MLAssistConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="trainingComputeBinding", required=true)
-      private final Output<ComputeBindingArgs> trainingComputeBinding;
+    private Output<ComputeBindingArgs> trainingComputeBinding;
 
     public Output<ComputeBindingArgs> trainingComputeBinding() {
         return this.trainingComputeBinding;
     }
 
-    public MLAssistConfigurationArgs(
-        Output<ComputeBindingArgs> inferencingComputeBinding,
-        @Nullable Output<Boolean> mlAssistEnabled,
-        Output<String> modelNamePrefix,
-        @Nullable Output<Double> prelabelAccuracyThreshold,
-        Output<ComputeBindingArgs> trainingComputeBinding) {
-        this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding, "expected parameter 'inferencingComputeBinding' to be non-null");
-        this.mlAssistEnabled = mlAssistEnabled;
-        this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix, "expected parameter 'modelNamePrefix' to be non-null");
-        this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
-        this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding, "expected parameter 'trainingComputeBinding' to be non-null");
-    }
+    private MLAssistConfigurationArgs() {}
 
-    private MLAssistConfigurationArgs() {
-        this.inferencingComputeBinding = Codegen.empty();
-        this.mlAssistEnabled = Codegen.empty();
-        this.modelNamePrefix = Codegen.empty();
-        this.prelabelAccuracyThreshold = Codegen.empty();
-        this.trainingComputeBinding = Codegen.empty();
+    private MLAssistConfigurationArgs(MLAssistConfigurationArgs $) {
+        this.inferencingComputeBinding = $.inferencingComputeBinding;
+        this.mlAssistEnabled = $.mlAssistEnabled;
+        this.modelNamePrefix = $.modelNamePrefix;
+        this.prelabelAccuracyThreshold = $.prelabelAccuracyThreshold;
+        this.trainingComputeBinding = $.trainingComputeBinding;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MLAssistConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ComputeBindingArgs> inferencingComputeBinding;
-        private @Nullable Output<Boolean> mlAssistEnabled;
-        private Output<String> modelNamePrefix;
-        private @Nullable Output<Double> prelabelAccuracyThreshold;
-        private Output<ComputeBindingArgs> trainingComputeBinding;
+        private MLAssistConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MLAssistConfigurationArgs();
         }
 
         public Builder(MLAssistConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inferencingComputeBinding = defaults.inferencingComputeBinding;
-    	      this.mlAssistEnabled = defaults.mlAssistEnabled;
-    	      this.modelNamePrefix = defaults.modelNamePrefix;
-    	      this.prelabelAccuracyThreshold = defaults.prelabelAccuracyThreshold;
-    	      this.trainingComputeBinding = defaults.trainingComputeBinding;
+            $ = new MLAssistConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inferencingComputeBinding(Output<ComputeBindingArgs> inferencingComputeBinding) {
-            this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding);
+            $.inferencingComputeBinding = inferencingComputeBinding;
             return this;
         }
+
         public Builder inferencingComputeBinding(ComputeBindingArgs inferencingComputeBinding) {
-            this.inferencingComputeBinding = Output.of(Objects.requireNonNull(inferencingComputeBinding));
-            return this;
+            return inferencingComputeBinding(Output.of(inferencingComputeBinding));
         }
+
         public Builder mlAssistEnabled(@Nullable Output<Boolean> mlAssistEnabled) {
-            this.mlAssistEnabled = mlAssistEnabled;
+            $.mlAssistEnabled = mlAssistEnabled;
             return this;
         }
-        public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
-            this.mlAssistEnabled = Codegen.ofNullable(mlAssistEnabled);
-            return this;
+
+        public Builder mlAssistEnabled(Boolean mlAssistEnabled) {
+            return mlAssistEnabled(Output.of(mlAssistEnabled));
         }
+
         public Builder modelNamePrefix(Output<String> modelNamePrefix) {
-            this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix);
+            $.modelNamePrefix = modelNamePrefix;
             return this;
         }
+
         public Builder modelNamePrefix(String modelNamePrefix) {
-            this.modelNamePrefix = Output.of(Objects.requireNonNull(modelNamePrefix));
-            return this;
+            return modelNamePrefix(Output.of(modelNamePrefix));
         }
+
         public Builder prelabelAccuracyThreshold(@Nullable Output<Double> prelabelAccuracyThreshold) {
-            this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
+            $.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
             return this;
         }
-        public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
-            this.prelabelAccuracyThreshold = Codegen.ofNullable(prelabelAccuracyThreshold);
-            return this;
+
+        public Builder prelabelAccuracyThreshold(Double prelabelAccuracyThreshold) {
+            return prelabelAccuracyThreshold(Output.of(prelabelAccuracyThreshold));
         }
+
         public Builder trainingComputeBinding(Output<ComputeBindingArgs> trainingComputeBinding) {
-            this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
+            $.trainingComputeBinding = trainingComputeBinding;
             return this;
         }
+
         public Builder trainingComputeBinding(ComputeBindingArgs trainingComputeBinding) {
-            this.trainingComputeBinding = Output.of(Objects.requireNonNull(trainingComputeBinding));
-            return this;
-        }        public MLAssistConfigurationArgs build() {
-            return new MLAssistConfigurationArgs(inferencingComputeBinding, mlAssistEnabled, modelNamePrefix, prelabelAccuracyThreshold, trainingComputeBinding);
+            return trainingComputeBinding(Output.of(trainingComputeBinding));
+        }
+
+        public MLAssistConfigurationArgs build() {
+            $.inferencingComputeBinding = Objects.requireNonNull($.inferencingComputeBinding, "expected parameter 'inferencingComputeBinding' to be non-null");
+            $.modelNamePrefix = Objects.requireNonNull($.modelNamePrefix, "expected parameter 'modelNamePrefix' to be non-null");
+            $.trainingComputeBinding = Objects.requireNonNull($.trainingComputeBinding, "expected parameter 'trainingComputeBinding' to be non-null");
+            return $;
         }
     }
+
 }

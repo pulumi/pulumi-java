@@ -10,11 +10,11 @@ import com.pulumi.azurenative.network.inputs.ApplicationSecurityGroupArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,7 +31,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="access", required=true)
-      private final Output<Either<String,SecurityRuleAccess>> access;
+    private Output<Either<String,SecurityRuleAccess>> access;
 
     public Output<Either<String,SecurityRuleAccess>> access() {
         return this.access;
@@ -42,10 +42,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationAddressPrefix")
-      private final @Nullable Output<String> destinationAddressPrefix;
+    private @Nullable Output<String> destinationAddressPrefix;
 
-    public Output<String> destinationAddressPrefix() {
-        return this.destinationAddressPrefix == null ? Codegen.empty() : this.destinationAddressPrefix;
+    public Optional<Output<String>> destinationAddressPrefix() {
+        return Optional.ofNullable(this.destinationAddressPrefix);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationAddressPrefixes")
-      private final @Nullable Output<List<String>> destinationAddressPrefixes;
+    private @Nullable Output<List<String>> destinationAddressPrefixes;
 
-    public Output<List<String>> destinationAddressPrefixes() {
-        return this.destinationAddressPrefixes == null ? Codegen.empty() : this.destinationAddressPrefixes;
+    public Optional<Output<List<String>>> destinationAddressPrefixes() {
+        return Optional.ofNullable(this.destinationAddressPrefixes);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationApplicationSecurityGroups")
-      private final @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
+    private @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
 
-    public Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups() {
-        return this.destinationApplicationSecurityGroups == null ? Codegen.empty() : this.destinationApplicationSecurityGroups;
+    public Optional<Output<List<ApplicationSecurityGroupArgs>>> destinationApplicationSecurityGroups() {
+        return Optional.ofNullable(this.destinationApplicationSecurityGroups);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationPortRange")
-      private final @Nullable Output<String> destinationPortRange;
+    private @Nullable Output<String> destinationPortRange;
 
-    public Output<String> destinationPortRange() {
-        return this.destinationPortRange == null ? Codegen.empty() : this.destinationPortRange;
+    public Optional<Output<String>> destinationPortRange() {
+        return Optional.ofNullable(this.destinationPortRange);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationPortRanges")
-      private final @Nullable Output<List<String>> destinationPortRanges;
+    private @Nullable Output<List<String>> destinationPortRanges;
 
-    public Output<List<String>> destinationPortRanges() {
-        return this.destinationPortRanges == null ? Codegen.empty() : this.destinationPortRanges;
+    public Optional<Output<List<String>>> destinationPortRanges() {
+        return Optional.ofNullable(this.destinationPortRanges);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<Either<String,SecurityRuleDirection>> direction;
+    private Output<Either<String,SecurityRuleDirection>> direction;
 
     public Output<Either<String,SecurityRuleDirection>> direction() {
         return this.direction;
@@ -119,10 +119,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<Either<String,SecurityRuleProtocol>> protocol;
+    private Output<Either<String,SecurityRuleProtocol>> protocol;
 
     public Output<Either<String,SecurityRuleProtocol>> protocol() {
         return this.protocol;
@@ -163,10 +163,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAddressPrefix")
-      private final @Nullable Output<String> sourceAddressPrefix;
+    private @Nullable Output<String> sourceAddressPrefix;
 
-    public Output<String> sourceAddressPrefix() {
-        return this.sourceAddressPrefix == null ? Codegen.empty() : this.sourceAddressPrefix;
+    public Optional<Output<String>> sourceAddressPrefix() {
+        return Optional.ofNullable(this.sourceAddressPrefix);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceAddressPrefixes")
-      private final @Nullable Output<List<String>> sourceAddressPrefixes;
+    private @Nullable Output<List<String>> sourceAddressPrefixes;
 
-    public Output<List<String>> sourceAddressPrefixes() {
-        return this.sourceAddressPrefixes == null ? Codegen.empty() : this.sourceAddressPrefixes;
+    public Optional<Output<List<String>>> sourceAddressPrefixes() {
+        return Optional.ofNullable(this.sourceAddressPrefixes);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceApplicationSecurityGroups")
-      private final @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
+    private @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
 
-    public Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups() {
-        return this.sourceApplicationSecurityGroups == null ? Codegen.empty() : this.sourceApplicationSecurityGroups;
+    public Optional<Output<List<ApplicationSecurityGroupArgs>>> sourceApplicationSecurityGroups() {
+        return Optional.ofNullable(this.sourceApplicationSecurityGroups);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourcePortRange")
-      private final @Nullable Output<String> sourcePortRange;
+    private @Nullable Output<String> sourcePortRange;
 
-    public Output<String> sourcePortRange() {
-        return this.sourcePortRange == null ? Codegen.empty() : this.sourcePortRange;
+    public Optional<Output<String>> sourcePortRange() {
+        return Optional.ofNullable(this.sourcePortRange);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourcePortRanges")
-      private final @Nullable Output<List<String>> sourcePortRanges;
+    private @Nullable Output<List<String>> sourcePortRanges;
 
-    public Output<List<String>> sourcePortRanges() {
-        return this.sourcePortRanges == null ? Codegen.empty() : this.sourcePortRanges;
+    public Optional<Output<List<String>>> sourcePortRanges() {
+        return Optional.ofNullable(this.sourcePortRanges);
     }
 
     /**
@@ -218,289 +218,245 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SecurityRuleArgs(
-        Output<Either<String,SecurityRuleAccess>> access,
-        @Nullable Output<String> description,
-        @Nullable Output<String> destinationAddressPrefix,
-        @Nullable Output<List<String>> destinationAddressPrefixes,
-        @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups,
-        @Nullable Output<String> destinationPortRange,
-        @Nullable Output<List<String>> destinationPortRanges,
-        Output<Either<String,SecurityRuleDirection>> direction,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        Output<Either<String,SecurityRuleProtocol>> protocol,
-        @Nullable Output<String> sourceAddressPrefix,
-        @Nullable Output<List<String>> sourceAddressPrefixes,
-        @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups,
-        @Nullable Output<String> sourcePortRange,
-        @Nullable Output<List<String>> sourcePortRanges,
-        @Nullable Output<String> type) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.description = description;
-        this.destinationAddressPrefix = destinationAddressPrefix;
-        this.destinationAddressPrefixes = destinationAddressPrefixes;
-        this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
-        this.destinationPortRange = destinationPortRange;
-        this.destinationPortRanges = destinationPortRanges;
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.priority = priority;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.sourceAddressPrefix = sourceAddressPrefix;
-        this.sourceAddressPrefixes = sourceAddressPrefixes;
-        this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
-        this.sourcePortRange = sourcePortRange;
-        this.sourcePortRanges = sourcePortRanges;
-        this.type = type;
-    }
+    private SecurityRuleArgs() {}
 
-    private SecurityRuleArgs() {
-        this.access = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destinationAddressPrefix = Codegen.empty();
-        this.destinationAddressPrefixes = Codegen.empty();
-        this.destinationApplicationSecurityGroups = Codegen.empty();
-        this.destinationPortRange = Codegen.empty();
-        this.destinationPortRanges = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.sourceAddressPrefix = Codegen.empty();
-        this.sourceAddressPrefixes = Codegen.empty();
-        this.sourceApplicationSecurityGroups = Codegen.empty();
-        this.sourcePortRange = Codegen.empty();
-        this.sourcePortRanges = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecurityRuleArgs(SecurityRuleArgs $) {
+        this.access = $.access;
+        this.description = $.description;
+        this.destinationAddressPrefix = $.destinationAddressPrefix;
+        this.destinationAddressPrefixes = $.destinationAddressPrefixes;
+        this.destinationApplicationSecurityGroups = $.destinationApplicationSecurityGroups;
+        this.destinationPortRange = $.destinationPortRange;
+        this.destinationPortRanges = $.destinationPortRanges;
+        this.direction = $.direction;
+        this.id = $.id;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.protocol = $.protocol;
+        this.sourceAddressPrefix = $.sourceAddressPrefix;
+        this.sourceAddressPrefixes = $.sourceAddressPrefixes;
+        this.sourceApplicationSecurityGroups = $.sourceApplicationSecurityGroups;
+        this.sourcePortRange = $.sourcePortRange;
+        this.sourcePortRanges = $.sourcePortRanges;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SecurityRuleAccess>> access;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> destinationAddressPrefix;
-        private @Nullable Output<List<String>> destinationAddressPrefixes;
-        private @Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
-        private @Nullable Output<String> destinationPortRange;
-        private @Nullable Output<List<String>> destinationPortRanges;
-        private Output<Either<String,SecurityRuleDirection>> direction;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private Output<Either<String,SecurityRuleProtocol>> protocol;
-        private @Nullable Output<String> sourceAddressPrefix;
-        private @Nullable Output<List<String>> sourceAddressPrefixes;
-        private @Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
-        private @Nullable Output<String> sourcePortRange;
-        private @Nullable Output<List<String>> sourcePortRanges;
-        private @Nullable Output<String> type;
+        private SecurityRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityRuleArgs();
         }
 
         public Builder(SecurityRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.description = defaults.description;
-    	      this.destinationAddressPrefix = defaults.destinationAddressPrefix;
-    	      this.destinationAddressPrefixes = defaults.destinationAddressPrefixes;
-    	      this.destinationApplicationSecurityGroups = defaults.destinationApplicationSecurityGroups;
-    	      this.destinationPortRange = defaults.destinationPortRange;
-    	      this.destinationPortRanges = defaults.destinationPortRanges;
-    	      this.direction = defaults.direction;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.protocol = defaults.protocol;
-    	      this.sourceAddressPrefix = defaults.sourceAddressPrefix;
-    	      this.sourceAddressPrefixes = defaults.sourceAddressPrefixes;
-    	      this.sourceApplicationSecurityGroups = defaults.sourceApplicationSecurityGroups;
-    	      this.sourcePortRange = defaults.sourcePortRange;
-    	      this.sourcePortRanges = defaults.sourcePortRanges;
-    	      this.type = defaults.type;
+            $ = new SecurityRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder access(Output<Either<String,SecurityRuleAccess>> access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder access(Either<String,SecurityRuleAccess> access) {
-            this.access = Output.of(Objects.requireNonNull(access));
-            return this;
+            return access(Output.of(access));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationAddressPrefix(@Nullable Output<String> destinationAddressPrefix) {
-            this.destinationAddressPrefix = destinationAddressPrefix;
+            $.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
-        public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
-            this.destinationAddressPrefix = Codegen.ofNullable(destinationAddressPrefix);
-            return this;
+
+        public Builder destinationAddressPrefix(String destinationAddressPrefix) {
+            return destinationAddressPrefix(Output.of(destinationAddressPrefix));
         }
+
         public Builder destinationAddressPrefixes(@Nullable Output<List<String>> destinationAddressPrefixes) {
-            this.destinationAddressPrefixes = destinationAddressPrefixes;
+            $.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
-        public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
-            this.destinationAddressPrefixes = Codegen.ofNullable(destinationAddressPrefixes);
-            return this;
+
+        public Builder destinationAddressPrefixes(List<String> destinationAddressPrefixes) {
+            return destinationAddressPrefixes(Output.of(destinationAddressPrefixes));
         }
+
         public Builder destinationAddressPrefixes(String... destinationAddressPrefixes) {
             return destinationAddressPrefixes(List.of(destinationAddressPrefixes));
         }
+
         public Builder destinationApplicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups) {
-            this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
+            $.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
-        public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> destinationApplicationSecurityGroups) {
-            this.destinationApplicationSecurityGroups = Codegen.ofNullable(destinationApplicationSecurityGroups);
-            return this;
+
+        public Builder destinationApplicationSecurityGroups(List<ApplicationSecurityGroupArgs> destinationApplicationSecurityGroups) {
+            return destinationApplicationSecurityGroups(Output.of(destinationApplicationSecurityGroups));
         }
+
         public Builder destinationApplicationSecurityGroups(ApplicationSecurityGroupArgs... destinationApplicationSecurityGroups) {
             return destinationApplicationSecurityGroups(List.of(destinationApplicationSecurityGroups));
         }
+
         public Builder destinationPortRange(@Nullable Output<String> destinationPortRange) {
-            this.destinationPortRange = destinationPortRange;
+            $.destinationPortRange = destinationPortRange;
             return this;
         }
-        public Builder destinationPortRange(@Nullable String destinationPortRange) {
-            this.destinationPortRange = Codegen.ofNullable(destinationPortRange);
-            return this;
+
+        public Builder destinationPortRange(String destinationPortRange) {
+            return destinationPortRange(Output.of(destinationPortRange));
         }
+
         public Builder destinationPortRanges(@Nullable Output<List<String>> destinationPortRanges) {
-            this.destinationPortRanges = destinationPortRanges;
+            $.destinationPortRanges = destinationPortRanges;
             return this;
         }
-        public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
-            this.destinationPortRanges = Codegen.ofNullable(destinationPortRanges);
-            return this;
+
+        public Builder destinationPortRanges(List<String> destinationPortRanges) {
+            return destinationPortRanges(Output.of(destinationPortRanges));
         }
+
         public Builder destinationPortRanges(String... destinationPortRanges) {
             return destinationPortRanges(List.of(destinationPortRanges));
         }
+
         public Builder direction(Output<Either<String,SecurityRuleDirection>> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(Either<String,SecurityRuleDirection> direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder protocol(Output<Either<String,SecurityRuleProtocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,SecurityRuleProtocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder sourceAddressPrefix(@Nullable Output<String> sourceAddressPrefix) {
-            this.sourceAddressPrefix = sourceAddressPrefix;
+            $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
-        public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
-            this.sourceAddressPrefix = Codegen.ofNullable(sourceAddressPrefix);
-            return this;
+
+        public Builder sourceAddressPrefix(String sourceAddressPrefix) {
+            return sourceAddressPrefix(Output.of(sourceAddressPrefix));
         }
+
         public Builder sourceAddressPrefixes(@Nullable Output<List<String>> sourceAddressPrefixes) {
-            this.sourceAddressPrefixes = sourceAddressPrefixes;
+            $.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
-        public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
-            this.sourceAddressPrefixes = Codegen.ofNullable(sourceAddressPrefixes);
-            return this;
+
+        public Builder sourceAddressPrefixes(List<String> sourceAddressPrefixes) {
+            return sourceAddressPrefixes(Output.of(sourceAddressPrefixes));
         }
+
         public Builder sourceAddressPrefixes(String... sourceAddressPrefixes) {
             return sourceAddressPrefixes(List.of(sourceAddressPrefixes));
         }
+
         public Builder sourceApplicationSecurityGroups(@Nullable Output<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups) {
-            this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
+            $.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
-        public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> sourceApplicationSecurityGroups) {
-            this.sourceApplicationSecurityGroups = Codegen.ofNullable(sourceApplicationSecurityGroups);
-            return this;
+
+        public Builder sourceApplicationSecurityGroups(List<ApplicationSecurityGroupArgs> sourceApplicationSecurityGroups) {
+            return sourceApplicationSecurityGroups(Output.of(sourceApplicationSecurityGroups));
         }
+
         public Builder sourceApplicationSecurityGroups(ApplicationSecurityGroupArgs... sourceApplicationSecurityGroups) {
             return sourceApplicationSecurityGroups(List.of(sourceApplicationSecurityGroups));
         }
+
         public Builder sourcePortRange(@Nullable Output<String> sourcePortRange) {
-            this.sourcePortRange = sourcePortRange;
+            $.sourcePortRange = sourcePortRange;
             return this;
         }
-        public Builder sourcePortRange(@Nullable String sourcePortRange) {
-            this.sourcePortRange = Codegen.ofNullable(sourcePortRange);
-            return this;
+
+        public Builder sourcePortRange(String sourcePortRange) {
+            return sourcePortRange(Output.of(sourcePortRange));
         }
+
         public Builder sourcePortRanges(@Nullable Output<List<String>> sourcePortRanges) {
-            this.sourcePortRanges = sourcePortRanges;
+            $.sourcePortRanges = sourcePortRanges;
             return this;
         }
-        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = Codegen.ofNullable(sourcePortRanges);
-            return this;
+
+        public Builder sourcePortRanges(List<String> sourcePortRanges) {
+            return sourcePortRanges(Output.of(sourcePortRanges));
         }
+
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SecurityRuleArgs build() {
-            return new SecurityRuleArgs(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, id, name, priority, protocol, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public SecurityRuleArgs build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

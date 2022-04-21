@@ -21,7 +21,7 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -32,7 +32,7 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="dataFactoryLocation", required=true)
-      private final String dataFactoryLocation;
+    private String dataFactoryLocation;
 
     public String dataFactoryLocation() {
         return this.dataFactoryLocation;
@@ -43,7 +43,7 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="dataFactoryName", required=true)
-      private final String dataFactoryName;
+    private String dataFactoryName;
 
     public String dataFactoryName() {
         return this.dataFactoryName;
@@ -54,7 +54,7 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -65,82 +65,73 @@ public final class LinkedIntegrationRuntimeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
     }
 
-    public LinkedIntegrationRuntimeResponse(
-        String createTime,
-        String dataFactoryLocation,
-        String dataFactoryName,
-        String name,
-        String subscriptionId) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.dataFactoryLocation = Objects.requireNonNull(dataFactoryLocation, "expected parameter 'dataFactoryLocation' to be non-null");
-        this.dataFactoryName = Objects.requireNonNull(dataFactoryName, "expected parameter 'dataFactoryName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private LinkedIntegrationRuntimeResponse() {}
 
-    private LinkedIntegrationRuntimeResponse() {
-        this.createTime = null;
-        this.dataFactoryLocation = null;
-        this.dataFactoryName = null;
-        this.name = null;
-        this.subscriptionId = null;
+    private LinkedIntegrationRuntimeResponse(LinkedIntegrationRuntimeResponse $) {
+        this.createTime = $.createTime;
+        this.dataFactoryLocation = $.dataFactoryLocation;
+        this.dataFactoryName = $.dataFactoryName;
+        this.name = $.name;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedIntegrationRuntimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String dataFactoryLocation;
-        private String dataFactoryName;
-        private String name;
-        private String subscriptionId;
+        private LinkedIntegrationRuntimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedIntegrationRuntimeResponse();
         }
 
         public Builder(LinkedIntegrationRuntimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.dataFactoryLocation = defaults.dataFactoryLocation;
-    	      this.dataFactoryName = defaults.dataFactoryName;
-    	      this.name = defaults.name;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new LinkedIntegrationRuntimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder dataFactoryLocation(String dataFactoryLocation) {
-            this.dataFactoryLocation = Objects.requireNonNull(dataFactoryLocation);
+            $.dataFactoryLocation = dataFactoryLocation;
             return this;
         }
+
         public Builder dataFactoryName(String dataFactoryName) {
-            this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
+            $.dataFactoryName = dataFactoryName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public LinkedIntegrationRuntimeResponse build() {
-            return new LinkedIntegrationRuntimeResponse(createTime, dataFactoryLocation, dataFactoryName, name, subscriptionId);
+        }
+
+        public LinkedIntegrationRuntimeResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.dataFactoryLocation = Objects.requireNonNull($.dataFactoryLocation, "expected parameter 'dataFactoryLocation' to be non-null");
+            $.dataFactoryName = Objects.requireNonNull($.dataFactoryName, "expected parameter 'dataFactoryName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

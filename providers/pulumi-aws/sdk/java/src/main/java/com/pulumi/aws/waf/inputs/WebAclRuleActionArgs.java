@@ -5,7 +5,6 @@ package com.pulumi.aws.waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WebAclRuleActionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public WebAclRuleActionArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private WebAclRuleActionArgs() {}
 
-    private WebAclRuleActionArgs() {
-        this.type = Codegen.empty();
+    private WebAclRuleActionArgs(WebAclRuleActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private WebAclRuleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleActionArgs();
         }
 
         public Builder(WebAclRuleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new WebAclRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public WebAclRuleActionArgs build() {
-            return new WebAclRuleActionArgs(type);
+            return type(Output.of(type));
+        }
+
+        public WebAclRuleActionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

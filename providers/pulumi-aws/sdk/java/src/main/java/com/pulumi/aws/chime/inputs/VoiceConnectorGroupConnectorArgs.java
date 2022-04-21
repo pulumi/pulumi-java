@@ -5,7 +5,6 @@ package com.pulumi.aws.chime.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class VoiceConnectorGroupConnectorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -31,63 +30,60 @@ public final class VoiceConnectorGroupConnectorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="voiceConnectorId", required=true)
-      private final Output<String> voiceConnectorId;
+    private Output<String> voiceConnectorId;
 
     public Output<String> voiceConnectorId() {
         return this.voiceConnectorId;
     }
 
-    public VoiceConnectorGroupConnectorArgs(
-        Output<Integer> priority,
-        Output<String> voiceConnectorId) {
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
-    }
+    private VoiceConnectorGroupConnectorArgs() {}
 
-    private VoiceConnectorGroupConnectorArgs() {
-        this.priority = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorGroupConnectorArgs(VoiceConnectorGroupConnectorArgs $) {
+        this.priority = $.priority;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorGroupConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> priority;
-        private Output<String> voiceConnectorId;
+        private VoiceConnectorGroupConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorGroupConnectorArgs();
         }
 
         public Builder(VoiceConnectorGroupConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.priority = defaults.priority;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorGroupConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {
-            this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
+
         public Builder voiceConnectorId(String voiceConnectorId) {
-            this.voiceConnectorId = Output.of(Objects.requireNonNull(voiceConnectorId));
-            return this;
-        }        public VoiceConnectorGroupConnectorArgs build() {
-            return new VoiceConnectorGroupConnectorArgs(priority, voiceConnectorId);
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorGroupConnectorArgs build() {
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.voiceConnectorId = Objects.requireNonNull($.voiceConnectorId, "expected parameter 'voiceConnectorId' to be non-null");
+            return $;
         }
     }
+
 }

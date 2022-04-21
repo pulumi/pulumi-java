@@ -51,6 +51,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -67,10 +68,10 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cases")
-      private final @Nullable Output<List<SwitchCaseArgs>> cases;
+    private @Nullable Output<List<SwitchCaseArgs>> cases;
 
-    public Output<List<SwitchCaseArgs>> cases() {
-        return this.cases == null ? Codegen.empty() : this.cases;
+    public Optional<Output<List<SwitchCaseArgs>>> cases() {
+        return Optional.ofNullable(this.cases);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultActivities")
-      private final @Nullable Output<List<Object>> defaultActivities;
+    private @Nullable Output<List<Object>> defaultActivities;
 
-    public Output<List<Object>> defaultActivities() {
-        return this.defaultActivities == null ? Codegen.empty() : this.defaultActivities;
+    public Optional<Output<List<Object>>> defaultActivities() {
+        return Optional.ofNullable(this.defaultActivities);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -122,7 +123,7 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="on", required=true)
-      private final Output<ExpressionArgs> on;
+    private Output<ExpressionArgs> on;
 
     public Output<ExpressionArgs> on() {
         return this.on;
@@ -134,7 +135,7 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -145,153 +146,137 @@ public final class SwitchActivityArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public SwitchActivityArgs(
-        @Nullable Output<List<SwitchCaseArgs>> cases,
-        @Nullable Output<List<Object>> defaultActivities,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        Output<String> name,
-        Output<ExpressionArgs> on,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.cases = cases;
-        this.defaultActivities = defaultActivities;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.on = Objects.requireNonNull(on, "expected parameter 'on' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private SwitchActivityArgs() {}
 
-    private SwitchActivityArgs() {
-        this.cases = Codegen.empty();
-        this.defaultActivities = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.on = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private SwitchActivityArgs(SwitchActivityArgs $) {
+        this.cases = $.cases;
+        this.defaultActivities = $.defaultActivities;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.name = $.name;
+        this.on = $.on;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SwitchActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SwitchCaseArgs>> cases;
-        private @Nullable Output<List<Object>> defaultActivities;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private Output<String> name;
-        private Output<ExpressionArgs> on;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private SwitchActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SwitchActivityArgs();
         }
 
         public Builder(SwitchActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cases = defaults.cases;
-    	      this.defaultActivities = defaults.defaultActivities;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.on = defaults.on;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new SwitchActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cases(@Nullable Output<List<SwitchCaseArgs>> cases) {
-            this.cases = cases;
+            $.cases = cases;
             return this;
         }
-        public Builder cases(@Nullable List<SwitchCaseArgs> cases) {
-            this.cases = Codegen.ofNullable(cases);
-            return this;
+
+        public Builder cases(List<SwitchCaseArgs> cases) {
+            return cases(Output.of(cases));
         }
+
         public Builder cases(SwitchCaseArgs... cases) {
             return cases(List.of(cases));
         }
+
         public Builder defaultActivities(@Nullable Output<List<Object>> defaultActivities) {
-            this.defaultActivities = defaultActivities;
+            $.defaultActivities = defaultActivities;
             return this;
         }
-        public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
-            this.defaultActivities = Codegen.ofNullable(defaultActivities);
-            return this;
+
+        public Builder defaultActivities(List<Object> defaultActivities) {
+            return defaultActivities(Output.of(defaultActivities));
         }
+
         public Builder defaultActivities(Object... defaultActivities) {
             return defaultActivities(List.of(defaultActivities));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder on(Output<ExpressionArgs> on) {
-            this.on = Objects.requireNonNull(on);
+            $.on = on;
             return this;
         }
+
         public Builder on(ExpressionArgs on) {
-            this.on = Output.of(Objects.requireNonNull(on));
-            return this;
+            return on(Output.of(on));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public SwitchActivityArgs build() {
-            return new SwitchActivityArgs(cases, defaultActivities, dependsOn, description, name, on, type, userProperties);
+        }
+
+        public SwitchActivityArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.on = Objects.requireNonNull($.on, "expected parameter 'on' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

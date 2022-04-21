@@ -20,7 +20,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
      * 
      */
     @Import(name="autoHealingTriggers", required=true)
-      private final InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers;
+    private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers;
 
     public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers() {
         return this.autoHealingTriggers;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
      * 
      */
     @Import(name="healthCheck", required=true)
-      private final String healthCheck;
+    private String healthCheck;
 
     public String healthCheck() {
         return this.healthCheck;
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
      * 
      */
     @Import(name="initialDelaySec", required=true)
-      private final Integer initialDelaySec;
+    private Integer initialDelaySec;
 
     public Integer initialDelaySec() {
         return this.initialDelaySec;
@@ -53,89 +53,80 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
      * 
      */
     @Import(name="maxUnavailable", required=true)
-      private final FixedOrPercentResponse maxUnavailable;
+    private FixedOrPercentResponse maxUnavailable;
 
     public FixedOrPercentResponse maxUnavailable() {
         return this.maxUnavailable;
     }
 
     @Import(name="updateInstances", required=true)
-      private final String updateInstances;
+    private String updateInstances;
 
     public String updateInstances() {
         return this.updateInstances;
     }
 
-    public InstanceGroupManagerAutoHealingPolicyResponse(
-        InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
-        String healthCheck,
-        Integer initialDelaySec,
-        FixedOrPercentResponse maxUnavailable,
-        String updateInstances) {
-        this.autoHealingTriggers = Objects.requireNonNull(autoHealingTriggers, "expected parameter 'autoHealingTriggers' to be non-null");
-        this.healthCheck = Objects.requireNonNull(healthCheck, "expected parameter 'healthCheck' to be non-null");
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
-        this.updateInstances = Objects.requireNonNull(updateInstances, "expected parameter 'updateInstances' to be non-null");
-    }
+    private InstanceGroupManagerAutoHealingPolicyResponse() {}
 
-    private InstanceGroupManagerAutoHealingPolicyResponse() {
-        this.autoHealingTriggers = null;
-        this.healthCheck = null;
-        this.initialDelaySec = null;
-        this.maxUnavailable = null;
-        this.updateInstances = null;
+    private InstanceGroupManagerAutoHealingPolicyResponse(InstanceGroupManagerAutoHealingPolicyResponse $) {
+        this.autoHealingTriggers = $.autoHealingTriggers;
+        this.healthCheck = $.healthCheck;
+        this.initialDelaySec = $.initialDelaySec;
+        this.maxUnavailable = $.maxUnavailable;
+        this.updateInstances = $.updateInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAutoHealingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers;
-        private String healthCheck;
-        private Integer initialDelaySec;
-        private FixedOrPercentResponse maxUnavailable;
-        private String updateInstances;
+        private InstanceGroupManagerAutoHealingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAutoHealingPolicyResponse();
         }
 
         public Builder(InstanceGroupManagerAutoHealingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoHealingTriggers = defaults.autoHealingTriggers;
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.initialDelaySec = defaults.initialDelaySec;
-    	      this.maxUnavailable = defaults.maxUnavailable;
-    	      this.updateInstances = defaults.updateInstances;
+            $ = new InstanceGroupManagerAutoHealingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers) {
-            this.autoHealingTriggers = Objects.requireNonNull(autoHealingTriggers);
+            $.autoHealingTriggers = autoHealingTriggers;
             return this;
         }
+
         public Builder healthCheck(String healthCheck) {
-            this.healthCheck = Objects.requireNonNull(healthCheck);
+            $.healthCheck = healthCheck;
             return this;
         }
+
         public Builder initialDelaySec(Integer initialDelaySec) {
-            this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
+            $.initialDelaySec = initialDelaySec;
             return this;
         }
+
         public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
-            this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
+
         public Builder updateInstances(String updateInstances) {
-            this.updateInstances = Objects.requireNonNull(updateInstances);
+            $.updateInstances = updateInstances;
             return this;
-        }        public InstanceGroupManagerAutoHealingPolicyResponse build() {
-            return new InstanceGroupManagerAutoHealingPolicyResponse(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);
+        }
+
+        public InstanceGroupManagerAutoHealingPolicyResponse build() {
+            $.autoHealingTriggers = Objects.requireNonNull($.autoHealingTriggers, "expected parameter 'autoHealingTriggers' to be non-null");
+            $.healthCheck = Objects.requireNonNull($.healthCheck, "expected parameter 'healthCheck' to be non-null");
+            $.initialDelaySec = Objects.requireNonNull($.initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
+            $.maxUnavailable = Objects.requireNonNull($.maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
+            $.updateInstances = Objects.requireNonNull($.updateInstances, "expected parameter 'updateInstances' to be non-null");
+            return $;
         }
     }
+
 }

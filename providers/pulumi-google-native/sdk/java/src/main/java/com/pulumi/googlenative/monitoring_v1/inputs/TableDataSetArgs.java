@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.TableDisplayOptionsArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TableDataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minAlignmentPeriod")
-      private final @Nullable Output<String> minAlignmentPeriod;
+    private @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> minAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
+    public Optional<Output<String>> minAlignmentPeriod() {
+        return Optional.ofNullable(this.minAlignmentPeriod);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TableDataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableDisplayOptions")
-      private final @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
+    private @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
 
-    public Output<TableDisplayOptionsArgs> tableDisplayOptions() {
-        return this.tableDisplayOptions == null ? Codegen.empty() : this.tableDisplayOptions;
+    public Optional<Output<TableDisplayOptionsArgs>> tableDisplayOptions() {
+        return Optional.ofNullable(this.tableDisplayOptions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TableDataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableTemplate")
-      private final @Nullable Output<String> tableTemplate;
+    private @Nullable Output<String> tableTemplate;
 
-    public Output<String> tableTemplate() {
-        return this.tableTemplate == null ? Codegen.empty() : this.tableTemplate;
+    public Optional<Output<String>> tableTemplate() {
+        return Optional.ofNullable(this.tableTemplate);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class TableDataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeSeriesQuery", required=true)
-      private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
+    private Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
     public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
-    public TableDataSetArgs(
-        @Nullable Output<String> minAlignmentPeriod,
-        @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions,
-        @Nullable Output<String> tableTemplate,
-        Output<TimeSeriesQueryArgs> timeSeriesQuery) {
-        this.minAlignmentPeriod = minAlignmentPeriod;
-        this.tableDisplayOptions = tableDisplayOptions;
-        this.tableTemplate = tableTemplate;
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
-    }
+    private TableDataSetArgs() {}
 
-    private TableDataSetArgs() {
-        this.minAlignmentPeriod = Codegen.empty();
-        this.tableDisplayOptions = Codegen.empty();
-        this.tableTemplate = Codegen.empty();
-        this.timeSeriesQuery = Codegen.empty();
+    private TableDataSetArgs(TableDataSetArgs $) {
+        this.minAlignmentPeriod = $.minAlignmentPeriod;
+        this.tableDisplayOptions = $.tableDisplayOptions;
+        this.tableTemplate = $.tableTemplate;
+        this.timeSeriesQuery = $.timeSeriesQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minAlignmentPeriod;
-        private @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
-        private @Nullable Output<String> tableTemplate;
-        private Output<TimeSeriesQueryArgs> timeSeriesQuery;
+        private TableDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableDataSetArgs();
         }
 
         public Builder(TableDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minAlignmentPeriod = defaults.minAlignmentPeriod;
-    	      this.tableDisplayOptions = defaults.tableDisplayOptions;
-    	      this.tableTemplate = defaults.tableTemplate;
-    	      this.timeSeriesQuery = defaults.timeSeriesQuery;
+            $ = new TableDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
-            this.minAlignmentPeriod = minAlignmentPeriod;
+            $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
-        public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Codegen.ofNullable(minAlignmentPeriod);
-            return this;
+
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
+            return minAlignmentPeriod(Output.of(minAlignmentPeriod));
         }
+
         public Builder tableDisplayOptions(@Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions) {
-            this.tableDisplayOptions = tableDisplayOptions;
+            $.tableDisplayOptions = tableDisplayOptions;
             return this;
         }
-        public Builder tableDisplayOptions(@Nullable TableDisplayOptionsArgs tableDisplayOptions) {
-            this.tableDisplayOptions = Codegen.ofNullable(tableDisplayOptions);
-            return this;
+
+        public Builder tableDisplayOptions(TableDisplayOptionsArgs tableDisplayOptions) {
+            return tableDisplayOptions(Output.of(tableDisplayOptions));
         }
+
         public Builder tableTemplate(@Nullable Output<String> tableTemplate) {
-            this.tableTemplate = tableTemplate;
+            $.tableTemplate = tableTemplate;
             return this;
         }
-        public Builder tableTemplate(@Nullable String tableTemplate) {
-            this.tableTemplate = Codegen.ofNullable(tableTemplate);
-            return this;
+
+        public Builder tableTemplate(String tableTemplate) {
+            return tableTemplate(Output.of(tableTemplate));
         }
+
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {
-            this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+            $.timeSeriesQuery = timeSeriesQuery;
             return this;
         }
+
         public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
-            this.timeSeriesQuery = Output.of(Objects.requireNonNull(timeSeriesQuery));
-            return this;
-        }        public TableDataSetArgs build() {
-            return new TableDataSetArgs(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
+            return timeSeriesQuery(Output.of(timeSeriesQuery));
+        }
+
+        public TableDataSetArgs build() {
+            $.timeSeriesQuery = Objects.requireNonNull($.timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetManagedInstanceKeyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class GetManagedInstanceKeyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -39,64 +39,59 @@ public final class GetManagedInstanceKeyArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedInstanceKeyArgs(
-        String keyName,
-        String managedInstanceName,
-        String resourceGroupName) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedInstanceKeyArgs() {}
 
-    private GetManagedInstanceKeyArgs() {
-        this.keyName = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
+    private GetManagedInstanceKeyArgs(GetManagedInstanceKeyArgs $) {
+        this.keyName = $.keyName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedInstanceKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String managedInstanceName;
-        private String resourceGroupName;
+        private GetManagedInstanceKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedInstanceKeyArgs();
         }
 
         public Builder(GetManagedInstanceKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedInstanceKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedInstanceKeyArgs build() {
-            return new GetManagedInstanceKeyArgs(keyName, managedInstanceName, resourceGroupName);
+        }
+
+        public GetManagedInstanceKeyArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

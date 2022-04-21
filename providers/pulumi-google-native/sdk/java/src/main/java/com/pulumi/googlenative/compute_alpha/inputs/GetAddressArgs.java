@@ -15,78 +15,72 @@ public final class GetAddressArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAddressArgs Empty = new GetAddressArgs();
 
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetAddressArgs(
-        String address,
-        @Nullable String project,
-        String region) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetAddressArgs() {}
 
-    private GetAddressArgs() {
-        this.address = null;
-        this.project = null;
-        this.region = null;
+    private GetAddressArgs(GetAddressArgs $) {
+        this.address = $.address;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private @Nullable String project;
-        private String region;
+        private GetAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAddressArgs();
         }
 
         public Builder(GetAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetAddressArgs build() {
-            return new GetAddressArgs(address, project, region);
+        }
+
+        public GetAddressArgs build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

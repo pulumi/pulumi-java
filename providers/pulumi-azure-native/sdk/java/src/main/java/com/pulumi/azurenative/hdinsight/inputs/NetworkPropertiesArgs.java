@@ -8,9 +8,9 @@ import com.pulumi.azurenative.hdinsight.enums.ResourceProviderConnection;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="privateLink")
-      private final @Nullable Output<Either<String,PrivateLink>> privateLink;
+    private @Nullable Output<Either<String,PrivateLink>> privateLink;
 
-    public Output<Either<String,PrivateLink>> privateLink() {
-        return this.privateLink == null ? Codegen.empty() : this.privateLink;
+    public Optional<Output<Either<String,PrivateLink>>> privateLink() {
+        return Optional.ofNullable(this.privateLink);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class NetworkPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceProviderConnection")
-      private final @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
+    private @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
-    public Output<Either<String,ResourceProviderConnection>> resourceProviderConnection() {
-        return this.resourceProviderConnection == null ? Codegen.empty() : this.resourceProviderConnection;
+    public Optional<Output<Either<String,ResourceProviderConnection>>> resourceProviderConnection() {
+        return Optional.ofNullable(this.resourceProviderConnection);
     }
 
-    public NetworkPropertiesArgs(
-        @Nullable Output<Either<String,PrivateLink>> privateLink,
-        @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
-        this.privateLink = privateLink;
-        this.resourceProviderConnection = resourceProviderConnection;
-    }
+    private NetworkPropertiesArgs() {}
 
-    private NetworkPropertiesArgs() {
-        this.privateLink = Codegen.empty();
-        this.resourceProviderConnection = Codegen.empty();
+    private NetworkPropertiesArgs(NetworkPropertiesArgs $) {
+        this.privateLink = $.privateLink;
+        this.resourceProviderConnection = $.resourceProviderConnection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PrivateLink>> privateLink;
-        private @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
+        private NetworkPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPropertiesArgs();
         }
 
         public Builder(NetworkPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateLink = defaults.privateLink;
-    	      this.resourceProviderConnection = defaults.resourceProviderConnection;
+            $ = new NetworkPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateLink(@Nullable Output<Either<String,PrivateLink>> privateLink) {
-            this.privateLink = privateLink;
+            $.privateLink = privateLink;
             return this;
         }
-        public Builder privateLink(@Nullable Either<String,PrivateLink> privateLink) {
-            this.privateLink = Codegen.ofNullable(privateLink);
-            return this;
+
+        public Builder privateLink(Either<String,PrivateLink> privateLink) {
+            return privateLink(Output.of(privateLink));
         }
+
         public Builder resourceProviderConnection(@Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
-            this.resourceProviderConnection = resourceProviderConnection;
+            $.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
-        public Builder resourceProviderConnection(@Nullable Either<String,ResourceProviderConnection> resourceProviderConnection) {
-            this.resourceProviderConnection = Codegen.ofNullable(resourceProviderConnection);
-            return this;
-        }        public NetworkPropertiesArgs build() {
-            return new NetworkPropertiesArgs(privateLink, resourceProviderConnection);
+
+        public Builder resourceProviderConnection(Either<String,ResourceProviderConnection> resourceProviderConnection) {
+            return resourceProviderConnection(Output.of(resourceProviderConnection));
+        }
+
+        public NetworkPropertiesArgs build() {
+            return $;
         }
     }
+
 }

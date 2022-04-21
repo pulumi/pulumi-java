@@ -22,7 +22,7 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="certificateMode", required=true)
-      private final String certificateMode;
+    private String certificateMode;
 
     public String certificateMode() {
         return this.certificateMode;
@@ -33,7 +33,7 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="forceOverride", required=true)
-      private final Boolean forceOverride;
+    private Boolean forceOverride;
 
     public Boolean forceOverride() {
         return this.forceOverride;
@@ -44,64 +44,59 @@ public final class DomainMappingSpecResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routeName", required=true)
-      private final String routeName;
+    private String routeName;
 
     public String routeName() {
         return this.routeName;
     }
 
-    public DomainMappingSpecResponse(
-        String certificateMode,
-        Boolean forceOverride,
-        String routeName) {
-        this.certificateMode = Objects.requireNonNull(certificateMode, "expected parameter 'certificateMode' to be non-null");
-        this.forceOverride = Objects.requireNonNull(forceOverride, "expected parameter 'forceOverride' to be non-null");
-        this.routeName = Objects.requireNonNull(routeName, "expected parameter 'routeName' to be non-null");
-    }
+    private DomainMappingSpecResponse() {}
 
-    private DomainMappingSpecResponse() {
-        this.certificateMode = null;
-        this.forceOverride = null;
-        this.routeName = null;
+    private DomainMappingSpecResponse(DomainMappingSpecResponse $) {
+        this.certificateMode = $.certificateMode;
+        this.forceOverride = $.forceOverride;
+        this.routeName = $.routeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateMode;
-        private Boolean forceOverride;
-        private String routeName;
+        private DomainMappingSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingSpecResponse();
         }
 
         public Builder(DomainMappingSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateMode = defaults.certificateMode;
-    	      this.forceOverride = defaults.forceOverride;
-    	      this.routeName = defaults.routeName;
+            $ = new DomainMappingSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateMode(String certificateMode) {
-            this.certificateMode = Objects.requireNonNull(certificateMode);
+            $.certificateMode = certificateMode;
             return this;
         }
+
         public Builder forceOverride(Boolean forceOverride) {
-            this.forceOverride = Objects.requireNonNull(forceOverride);
+            $.forceOverride = forceOverride;
             return this;
         }
+
         public Builder routeName(String routeName) {
-            this.routeName = Objects.requireNonNull(routeName);
+            $.routeName = routeName;
             return this;
-        }        public DomainMappingSpecResponse build() {
-            return new DomainMappingSpecResponse(certificateMode, forceOverride, routeName);
+        }
+
+        public DomainMappingSpecResponse build() {
+            $.certificateMode = Objects.requireNonNull($.certificateMode, "expected parameter 'certificateMode' to be non-null");
+            $.forceOverride = Objects.requireNonNull($.forceOverride, "expected parameter 'forceOverride' to be non-null");
+            $.routeName = Objects.requireNonNull($.routeName, "expected parameter 'routeName' to be non-null");
+            return $;
         }
     }
+
 }

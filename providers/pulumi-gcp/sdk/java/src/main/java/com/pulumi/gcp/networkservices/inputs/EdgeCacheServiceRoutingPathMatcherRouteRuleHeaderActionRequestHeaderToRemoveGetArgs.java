@@ -5,7 +5,6 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
     }
 
-    public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs(Output<String> headerName) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-    }
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs() {}
 
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs() {
-        this.headerName = Codegen.empty();
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs $) {
+        this.headerName = $.headerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> headerName;
+        private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs();
         }
 
         public Builder(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
-        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs build() {
-            return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs(headerName);
+            return headerName(Output.of(headerName));
+        }
+
+        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

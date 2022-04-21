@@ -27,10 +27,10 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
      * 
      */
     @Import(name="adMarkers")
-      private final @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
+    private @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
 
     public Optional<PackagingConfigurationHlsManifestAdMarkers> adMarkers() {
-        return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
+        return Optional.ofNullable(this.adMarkers);
     }
 
     /**
@@ -38,17 +38,17 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
      * 
      */
     @Import(name="includeIframeOnlyStream")
-      private final @Nullable Boolean includeIframeOnlyStream;
+    private @Nullable Boolean includeIframeOnlyStream;
 
     public Optional<Boolean> includeIframeOnlyStream() {
-        return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
+        return Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
     @Import(name="manifestName")
-      private final @Nullable String manifestName;
+    private @Nullable String manifestName;
 
     public Optional<String> manifestName() {
-        return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
+        return Optional.ofNullable(this.manifestName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
      * 
      */
     @Import(name="programDateTimeIntervalSeconds")
-      private final @Nullable Integer programDateTimeIntervalSeconds;
+    private @Nullable Integer programDateTimeIntervalSeconds;
 
     public Optional<Integer> programDateTimeIntervalSeconds() {
-        return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
+        return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
 
     /**
@@ -67,98 +67,81 @@ public final class PackagingConfigurationHlsManifest extends com.pulumi.resource
      * 
      */
     @Import(name="repeatExtXKey")
-      private final @Nullable Boolean repeatExtXKey;
+    private @Nullable Boolean repeatExtXKey;
 
     public Optional<Boolean> repeatExtXKey() {
-        return this.repeatExtXKey == null ? Optional.empty() : Optional.ofNullable(this.repeatExtXKey);
+        return Optional.ofNullable(this.repeatExtXKey);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable PackagingConfigurationStreamSelection streamSelection;
+    private @Nullable PackagingConfigurationStreamSelection streamSelection;
 
     public Optional<PackagingConfigurationStreamSelection> streamSelection() {
-        return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public PackagingConfigurationHlsManifest(
-        @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable String manifestName,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable Boolean repeatExtXKey,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
-        this.adMarkers = adMarkers;
-        this.includeIframeOnlyStream = includeIframeOnlyStream;
-        this.manifestName = manifestName;
-        this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
-        this.repeatExtXKey = repeatExtXKey;
-        this.streamSelection = streamSelection;
-    }
+    private PackagingConfigurationHlsManifest() {}
 
-    private PackagingConfigurationHlsManifest() {
-        this.adMarkers = null;
-        this.includeIframeOnlyStream = null;
-        this.manifestName = null;
-        this.programDateTimeIntervalSeconds = null;
-        this.repeatExtXKey = null;
-        this.streamSelection = null;
+    private PackagingConfigurationHlsManifest(PackagingConfigurationHlsManifest $) {
+        this.adMarkers = $.adMarkers;
+        this.includeIframeOnlyStream = $.includeIframeOnlyStream;
+        this.manifestName = $.manifestName;
+        this.programDateTimeIntervalSeconds = $.programDateTimeIntervalSeconds;
+        this.repeatExtXKey = $.repeatExtXKey;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationHlsManifest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
-        private @Nullable Boolean includeIframeOnlyStream;
-        private @Nullable String manifestName;
-        private @Nullable Integer programDateTimeIntervalSeconds;
-        private @Nullable Boolean repeatExtXKey;
-        private @Nullable PackagingConfigurationStreamSelection streamSelection;
+        private PackagingConfigurationHlsManifest $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationHlsManifest();
         }
 
         public Builder(PackagingConfigurationHlsManifest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adMarkers = defaults.adMarkers;
-    	      this.includeIframeOnlyStream = defaults.includeIframeOnlyStream;
-    	      this.manifestName = defaults.manifestName;
-    	      this.programDateTimeIntervalSeconds = defaults.programDateTimeIntervalSeconds;
-    	      this.repeatExtXKey = defaults.repeatExtXKey;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new PackagingConfigurationHlsManifest(Objects.requireNonNull(defaults));
         }
 
         public Builder adMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
-            this.adMarkers = adMarkers;
+            $.adMarkers = adMarkers;
             return this;
         }
+
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
-            this.includeIframeOnlyStream = includeIframeOnlyStream;
+            $.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
+
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
+
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
-            this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
+            $.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
+
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
-            this.repeatExtXKey = repeatExtXKey;
+            $.repeatExtXKey = repeatExtXKey;
             return this;
         }
+
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
-        }        public PackagingConfigurationHlsManifest build() {
-            return new PackagingConfigurationHlsManifest(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
+        }
+
+        public PackagingConfigurationHlsManifest build() {
+            return $;
         }
     }
+
 }

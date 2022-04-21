@@ -13,45 +13,45 @@ public final class SinkConfigurationResponse extends com.pulumi.resources.Invoke
     public static final SinkConfigurationResponse Empty = new SinkConfigurationResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public SinkConfigurationResponse(String kind) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private SinkConfigurationResponse() {}
 
-    private SinkConfigurationResponse() {
-        this.kind = null;
+    private SinkConfigurationResponse(SinkConfigurationResponse $) {
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SinkConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
+        private SinkConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SinkConfigurationResponse();
         }
 
         public Builder(SinkConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
+            $ = new SinkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public SinkConfigurationResponse build() {
-            return new SinkConfigurationResponse(kind);
+        }
+
+        public SinkConfigurationResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

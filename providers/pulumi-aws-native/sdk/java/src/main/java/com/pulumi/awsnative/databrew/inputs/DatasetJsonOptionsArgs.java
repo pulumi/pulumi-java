@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DatasetJsonOptionsArgs extends com.pulumi.resources.ResourceA
     public static final DatasetJsonOptionsArgs Empty = new DatasetJsonOptionsArgs();
 
     @Import(name="multiLine")
-      private final @Nullable Output<Boolean> multiLine;
+    private @Nullable Output<Boolean> multiLine;
 
-    public Output<Boolean> multiLine() {
-        return this.multiLine == null ? Codegen.empty() : this.multiLine;
+    public Optional<Output<Boolean>> multiLine() {
+        return Optional.ofNullable(this.multiLine);
     }
 
-    public DatasetJsonOptionsArgs(@Nullable Output<Boolean> multiLine) {
-        this.multiLine = multiLine;
-    }
+    private DatasetJsonOptionsArgs() {}
 
-    private DatasetJsonOptionsArgs() {
-        this.multiLine = Codegen.empty();
+    private DatasetJsonOptionsArgs(DatasetJsonOptionsArgs $) {
+        this.multiLine = $.multiLine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetJsonOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> multiLine;
+        private DatasetJsonOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetJsonOptionsArgs();
         }
 
         public Builder(DatasetJsonOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multiLine = defaults.multiLine;
+            $ = new DatasetJsonOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder multiLine(@Nullable Output<Boolean> multiLine) {
-            this.multiLine = multiLine;
+            $.multiLine = multiLine;
             return this;
         }
-        public Builder multiLine(@Nullable Boolean multiLine) {
-            this.multiLine = Codegen.ofNullable(multiLine);
-            return this;
-        }        public DatasetJsonOptionsArgs build() {
-            return new DatasetJsonOptionsArgs(multiLine);
+
+        public Builder multiLine(Boolean multiLine) {
+            return multiLine(Output.of(multiLine));
+        }
+
+        public DatasetJsonOptionsArgs build() {
+            return $;
         }
     }
+
 }

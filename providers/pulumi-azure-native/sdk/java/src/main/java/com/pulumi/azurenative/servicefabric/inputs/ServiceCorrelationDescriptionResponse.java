@@ -21,7 +21,7 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="scheme", required=true)
-      private final String scheme;
+    private String scheme;
 
     public String scheme() {
         return this.scheme;
@@ -32,55 +32,52 @@ public final class ServiceCorrelationDescriptionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public ServiceCorrelationDescriptionResponse(
-        String scheme,
-        String serviceName) {
-        this.scheme = Objects.requireNonNull(scheme, "expected parameter 'scheme' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ServiceCorrelationDescriptionResponse() {}
 
-    private ServiceCorrelationDescriptionResponse() {
-        this.scheme = null;
-        this.serviceName = null;
+    private ServiceCorrelationDescriptionResponse(ServiceCorrelationDescriptionResponse $) {
+        this.scheme = $.scheme;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCorrelationDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheme;
-        private String serviceName;
+        private ServiceCorrelationDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCorrelationDescriptionResponse();
         }
 
         public Builder(ServiceCorrelationDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheme = defaults.scheme;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ServiceCorrelationDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scheme(String scheme) {
-            this.scheme = Objects.requireNonNull(scheme);
+            $.scheme = scheme;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public ServiceCorrelationDescriptionResponse build() {
-            return new ServiceCorrelationDescriptionResponse(scheme, serviceName);
+        }
+
+        public ServiceCorrelationDescriptionResponse build() {
+            $.scheme = Objects.requireNonNull($.scheme, "expected parameter 'scheme' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

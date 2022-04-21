@@ -23,10 +23,10 @@ public final class AzureFirewallSkuResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AzureFirewallSkuResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public AzureFirewallSkuResponse(
-        @Nullable String name,
-        @Nullable String tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private AzureFirewallSkuResponse() {}
 
-    private AzureFirewallSkuResponse() {
-        this.name = null;
-        this.tier = null;
+    private AzureFirewallSkuResponse(AzureFirewallSkuResponse $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String tier;
+        private AzureFirewallSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallSkuResponse();
         }
 
         public Builder(AzureFirewallSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new AzureFirewallSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public AzureFirewallSkuResponse build() {
-            return new AzureFirewallSkuResponse(name, tier);
+        }
+
+        public AzureFirewallSkuResponse build() {
+            return $;
         }
     }
+
 }

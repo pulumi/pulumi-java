@@ -8,10 +8,10 @@ import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatef
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rulesSourceList")
-      private final @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList;
+    private @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList;
 
-    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList() {
-        return this.rulesSourceList == null ? Codegen.empty() : this.rulesSourceList;
+    public Optional<Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs>> rulesSourceList() {
+        return Optional.ofNullable(this.rulesSourceList);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rulesString")
-      private final @Nullable Output<String> rulesString;
+    private @Nullable Output<String> rulesString;
 
-    public Output<String> rulesString() {
-        return this.rulesString == null ? Codegen.empty() : this.rulesString;
+    public Optional<Output<String>> rulesString() {
+        return Optional.ofNullable(this.rulesString);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="statefulRules")
-      private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules;
+    private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules() {
-        return this.statefulRules == null ? Codegen.empty() : this.statefulRules;
+    public Optional<Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>>> statefulRules() {
+        return Optional.ofNullable(this.statefulRules);
     }
 
     /**
@@ -57,92 +57,82 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="statelessRulesAndCustomActions")
-      private final @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
+    private @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions() {
-        return this.statelessRulesAndCustomActions == null ? Codegen.empty() : this.statelessRulesAndCustomActions;
+    public Optional<Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs>> statelessRulesAndCustomActions() {
+        return Optional.ofNullable(this.statelessRulesAndCustomActions);
     }
 
-    public RuleGroupRuleGroupRulesSourceArgs(
-        @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList,
-        @Nullable Output<String> rulesString,
-        @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules,
-        @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
-        this.rulesSourceList = rulesSourceList;
-        this.rulesString = rulesString;
-        this.statefulRules = statefulRules;
-        this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
-    }
+    private RuleGroupRuleGroupRulesSourceArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceArgs() {
-        this.rulesSourceList = Codegen.empty();
-        this.rulesString = Codegen.empty();
-        this.statefulRules = Codegen.empty();
-        this.statelessRulesAndCustomActions = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceArgs(RuleGroupRuleGroupRulesSourceArgs $) {
+        this.rulesSourceList = $.rulesSourceList;
+        this.rulesString = $.rulesString;
+        this.statefulRules = $.statefulRules;
+        this.statelessRulesAndCustomActions = $.statelessRulesAndCustomActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList;
-        private @Nullable Output<String> rulesString;
-        private @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules;
-        private @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
+        private RuleGroupRuleGroupRulesSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rulesSourceList = defaults.rulesSourceList;
-    	      this.rulesString = defaults.rulesString;
-    	      this.statefulRules = defaults.statefulRules;
-    	      this.statelessRulesAndCustomActions = defaults.statelessRulesAndCustomActions;
+            $ = new RuleGroupRuleGroupRulesSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rulesSourceList(@Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList) {
-            this.rulesSourceList = rulesSourceList;
+            $.rulesSourceList = rulesSourceList;
             return this;
         }
-        public Builder rulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceListArgs rulesSourceList) {
-            this.rulesSourceList = Codegen.ofNullable(rulesSourceList);
-            return this;
+
+        public Builder rulesSourceList(RuleGroupRuleGroupRulesSourceRulesSourceListArgs rulesSourceList) {
+            return rulesSourceList(Output.of(rulesSourceList));
         }
+
         public Builder rulesString(@Nullable Output<String> rulesString) {
-            this.rulesString = rulesString;
+            $.rulesString = rulesString;
             return this;
         }
-        public Builder rulesString(@Nullable String rulesString) {
-            this.rulesString = Codegen.ofNullable(rulesString);
-            return this;
+
+        public Builder rulesString(String rulesString) {
+            return rulesString(Output.of(rulesString));
         }
+
         public Builder statefulRules(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules) {
-            this.statefulRules = statefulRules;
+            $.statefulRules = statefulRules;
             return this;
         }
-        public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs> statefulRules) {
-            this.statefulRules = Codegen.ofNullable(statefulRules);
-            return this;
+
+        public Builder statefulRules(List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs> statefulRules) {
+            return statefulRules(Output.of(statefulRules));
         }
+
         public Builder statefulRules(RuleGroupRuleGroupRulesSourceStatefulRuleArgs... statefulRules) {
             return statefulRules(List.of(statefulRules));
         }
+
         public Builder statelessRulesAndCustomActions(@Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions) {
-            this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
+            $.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }
-        public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
-            this.statelessRulesAndCustomActions = Codegen.ofNullable(statelessRulesAndCustomActions);
-            return this;
-        }        public RuleGroupRuleGroupRulesSourceArgs build() {
-            return new RuleGroupRuleGroupRulesSourceArgs(rulesSourceList, rulesString, statefulRules, statelessRulesAndCustomActions);
+
+        public Builder statelessRulesAndCustomActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs statelessRulesAndCustomActions) {
+            return statelessRulesAndCustomActions(Output.of(statelessRulesAndCustomActions));
+        }
+
+        public RuleGroupRuleGroupRulesSourceArgs build() {
+            return $;
         }
     }
+
 }

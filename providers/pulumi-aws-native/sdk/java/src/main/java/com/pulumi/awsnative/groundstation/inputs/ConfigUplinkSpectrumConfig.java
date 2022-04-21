@@ -16,62 +16,57 @@ public final class ConfigUplinkSpectrumConfig extends com.pulumi.resources.Invok
     public static final ConfigUplinkSpectrumConfig Empty = new ConfigUplinkSpectrumConfig();
 
     @Import(name="centerFrequency")
-      private final @Nullable ConfigFrequency centerFrequency;
+    private @Nullable ConfigFrequency centerFrequency;
 
     public Optional<ConfigFrequency> centerFrequency() {
-        return this.centerFrequency == null ? Optional.empty() : Optional.ofNullable(this.centerFrequency);
+        return Optional.ofNullable(this.centerFrequency);
     }
 
     @Import(name="polarization")
-      private final @Nullable ConfigPolarization polarization;
+    private @Nullable ConfigPolarization polarization;
 
     public Optional<ConfigPolarization> polarization() {
-        return this.polarization == null ? Optional.empty() : Optional.ofNullable(this.polarization);
+        return Optional.ofNullable(this.polarization);
     }
 
-    public ConfigUplinkSpectrumConfig(
-        @Nullable ConfigFrequency centerFrequency,
-        @Nullable ConfigPolarization polarization) {
-        this.centerFrequency = centerFrequency;
-        this.polarization = polarization;
-    }
+    private ConfigUplinkSpectrumConfig() {}
 
-    private ConfigUplinkSpectrumConfig() {
-        this.centerFrequency = null;
-        this.polarization = null;
+    private ConfigUplinkSpectrumConfig(ConfigUplinkSpectrumConfig $) {
+        this.centerFrequency = $.centerFrequency;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigUplinkSpectrumConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigFrequency centerFrequency;
-        private @Nullable ConfigPolarization polarization;
+        private ConfigUplinkSpectrumConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigUplinkSpectrumConfig();
         }
 
         public Builder(ConfigUplinkSpectrumConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.centerFrequency = defaults.centerFrequency;
-    	      this.polarization = defaults.polarization;
+            $ = new ConfigUplinkSpectrumConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder centerFrequency(@Nullable ConfigFrequency centerFrequency) {
-            this.centerFrequency = centerFrequency;
+            $.centerFrequency = centerFrequency;
             return this;
         }
+
         public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = polarization;
+            $.polarization = polarization;
             return this;
-        }        public ConfigUplinkSpectrumConfig build() {
-            return new ConfigUplinkSpectrumConfig(centerFrequency, polarization);
+        }
+
+        public ConfigUplinkSpectrumConfig build() {
+            return $;
         }
     }
+
 }

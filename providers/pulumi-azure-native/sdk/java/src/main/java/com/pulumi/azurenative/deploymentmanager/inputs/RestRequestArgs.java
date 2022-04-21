@@ -9,7 +9,6 @@ import com.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthentica
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +26,7 @@ public final class RestRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication", required=true)
-      private final Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
+    private Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
 
     public Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication() {
         return this.authentication;
@@ -38,7 +37,7 @@ public final class RestRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="method", required=true)
-      private final Output<RestRequestMethod> method;
+    private Output<RestRequestMethod> method;
 
     public Output<RestRequestMethod> method() {
         return this.method;
@@ -49,76 +48,71 @@ public final class RestRequestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public RestRequestArgs(
-        Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication,
-        Output<RestRequestMethod> method,
-        Output<String> uri) {
-        this.authentication = Objects.requireNonNull(authentication, "expected parameter 'authentication' to be non-null");
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private RestRequestArgs() {}
 
-    private RestRequestArgs() {
-        this.authentication = Codegen.empty();
-        this.method = Codegen.empty();
-        this.uri = Codegen.empty();
+    private RestRequestArgs(RestRequestArgs $) {
+        this.authentication = $.authentication;
+        this.method = $.method;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
-        private Output<RestRequestMethod> method;
-        private Output<String> uri;
+        private RestRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestRequestArgs();
         }
 
         public Builder(RestRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.method = defaults.method;
-    	      this.uri = defaults.uri;
+            $ = new RestRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication) {
-            this.authentication = Objects.requireNonNull(authentication);
+            $.authentication = authentication;
             return this;
         }
+
         public Builder authentication(Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs> authentication) {
-            this.authentication = Output.of(Objects.requireNonNull(authentication));
-            return this;
+            return authentication(Output.of(authentication));
         }
+
         public Builder method(Output<RestRequestMethod> method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder method(RestRequestMethod method) {
-            this.method = Output.of(Objects.requireNonNull(method));
-            return this;
+            return method(Output.of(method));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public RestRequestArgs build() {
-            return new RestRequestArgs(authentication, method, uri);
+            return uri(Output.of(uri));
+        }
+
+        public RestRequestArgs build() {
+            $.authentication = Objects.requireNonNull($.authentication, "expected parameter 'authentication' to be non-null");
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

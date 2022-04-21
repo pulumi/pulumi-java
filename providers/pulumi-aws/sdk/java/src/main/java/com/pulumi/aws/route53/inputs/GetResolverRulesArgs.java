@@ -19,10 +19,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable String ownerId;
+    private @Nullable String ownerId;
 
     public Optional<String> ownerId() {
-        return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resolverEndpointId")
-      private final @Nullable String resolverEndpointId;
+    private @Nullable String resolverEndpointId;
 
     public Optional<String> resolverEndpointId() {
-        return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
+        return Optional.ofNullable(this.resolverEndpointId);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ruleType")
-      private final @Nullable String ruleType;
+    private @Nullable String ruleType;
 
     public Optional<String> ruleType() {
-        return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
+        return Optional.ofNullable(this.ruleType);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class GetResolverRulesArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="shareStatus")
-      private final @Nullable String shareStatus;
+    private @Nullable String shareStatus;
 
     public Optional<String> shareStatus() {
-        return this.shareStatus == null ? Optional.empty() : Optional.ofNullable(this.shareStatus);
+        return Optional.ofNullable(this.shareStatus);
     }
 
-    public GetResolverRulesArgs(
-        @Nullable String ownerId,
-        @Nullable String resolverEndpointId,
-        @Nullable String ruleType,
-        @Nullable String shareStatus) {
-        this.ownerId = ownerId;
-        this.resolverEndpointId = resolverEndpointId;
-        this.ruleType = ruleType;
-        this.shareStatus = shareStatus;
-    }
+    private GetResolverRulesArgs() {}
 
-    private GetResolverRulesArgs() {
-        this.ownerId = null;
-        this.resolverEndpointId = null;
-        this.ruleType = null;
-        this.shareStatus = null;
+    private GetResolverRulesArgs(GetResolverRulesArgs $) {
+        this.ownerId = $.ownerId;
+        this.resolverEndpointId = $.resolverEndpointId;
+        this.ruleType = $.ruleType;
+        this.shareStatus = $.shareStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ownerId;
-        private @Nullable String resolverEndpointId;
-        private @Nullable String ruleType;
-        private @Nullable String shareStatus;
+        private GetResolverRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverRulesArgs();
         }
 
         public Builder(GetResolverRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ownerId = defaults.ownerId;
-    	      this.resolverEndpointId = defaults.resolverEndpointId;
-    	      this.ruleType = defaults.ruleType;
-    	      this.shareStatus = defaults.shareStatus;
+            $ = new GetResolverRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
+
         public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
-            this.resolverEndpointId = resolverEndpointId;
+            $.resolverEndpointId = resolverEndpointId;
             return this;
         }
+
         public Builder ruleType(@Nullable String ruleType) {
-            this.ruleType = ruleType;
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder shareStatus(@Nullable String shareStatus) {
-            this.shareStatus = shareStatus;
+            $.shareStatus = shareStatus;
             return this;
-        }        public GetResolverRulesArgs build() {
-            return new GetResolverRulesArgs(ownerId, resolverEndpointId, ruleType, shareStatus);
+        }
+
+        public GetResolverRulesArgs build() {
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -29,7 +29,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -40,64 +40,59 @@ public final class QueryParameterTypeStructTypesItemResponse extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final QueryParameterTypeResponse type;
+    private QueryParameterTypeResponse type;
 
     public QueryParameterTypeResponse type() {
         return this.type;
     }
 
-    public QueryParameterTypeStructTypesItemResponse(
-        String description,
-        String name,
-        QueryParameterTypeResponse type) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private QueryParameterTypeStructTypesItemResponse() {}
 
-    private QueryParameterTypeStructTypesItemResponse() {
-        this.description = null;
-        this.name = null;
-        this.type = null;
+    private QueryParameterTypeStructTypesItemResponse(QueryParameterTypeStructTypesItemResponse $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryParameterTypeStructTypesItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String name;
-        private QueryParameterTypeResponse type;
+        private QueryParameterTypeStructTypesItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryParameterTypeStructTypesItemResponse();
         }
 
         public Builder(QueryParameterTypeStructTypesItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new QueryParameterTypeStructTypesItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(QueryParameterTypeResponse type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public QueryParameterTypeStructTypesItemResponse build() {
-            return new QueryParameterTypeStructTypesItemResponse(description, name, type);
+        }
+
+        public QueryParameterTypeStructTypesItemResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

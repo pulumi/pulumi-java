@@ -23,45 +23,44 @@ public final class ApplicationManagementPolicyResponse extends com.pulumi.resour
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public ApplicationManagementPolicyResponse(@Nullable String mode) {
-        this.mode = mode;
-    }
+    private ApplicationManagementPolicyResponse() {}
 
-    private ApplicationManagementPolicyResponse() {
-        this.mode = null;
+    private ApplicationManagementPolicyResponse(ApplicationManagementPolicyResponse $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationManagementPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mode;
+        private ApplicationManagementPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationManagementPolicyResponse();
         }
 
         public Builder(ApplicationManagementPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new ApplicationManagementPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public ApplicationManagementPolicyResponse build() {
-            return new ApplicationManagementPolicyResponse(mode);
+        }
+
+        public ApplicationManagementPolicyResponse build() {
+            return $;
         }
     }
+
 }

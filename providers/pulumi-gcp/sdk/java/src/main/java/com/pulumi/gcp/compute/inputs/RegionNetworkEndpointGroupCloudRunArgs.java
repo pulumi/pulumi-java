@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends com.pulumi.res
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends com.pulumi.res
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -52,76 +52,68 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends com.pulumi.res
      * 
      */
     @Import(name="urlMask")
-      private final @Nullable Output<String> urlMask;
+    private @Nullable Output<String> urlMask;
 
-    public Output<String> urlMask() {
-        return this.urlMask == null ? Codegen.empty() : this.urlMask;
+    public Optional<Output<String>> urlMask() {
+        return Optional.ofNullable(this.urlMask);
     }
 
-    public RegionNetworkEndpointGroupCloudRunArgs(
-        @Nullable Output<String> service,
-        @Nullable Output<String> tag,
-        @Nullable Output<String> urlMask) {
-        this.service = service;
-        this.tag = tag;
-        this.urlMask = urlMask;
-    }
+    private RegionNetworkEndpointGroupCloudRunArgs() {}
 
-    private RegionNetworkEndpointGroupCloudRunArgs() {
-        this.service = Codegen.empty();
-        this.tag = Codegen.empty();
-        this.urlMask = Codegen.empty();
+    private RegionNetworkEndpointGroupCloudRunArgs(RegionNetworkEndpointGroupCloudRunArgs $) {
+        this.service = $.service;
+        this.tag = $.tag;
+        this.urlMask = $.urlMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionNetworkEndpointGroupCloudRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> service;
-        private @Nullable Output<String> tag;
-        private @Nullable Output<String> urlMask;
+        private RegionNetworkEndpointGroupCloudRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionNetworkEndpointGroupCloudRunArgs();
         }
 
         public Builder(RegionNetworkEndpointGroupCloudRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.service = defaults.service;
-    	      this.tag = defaults.tag;
-    	      this.urlMask = defaults.urlMask;
+            $ = new RegionNetworkEndpointGroupCloudRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
         }
+
         public Builder urlMask(@Nullable Output<String> urlMask) {
-            this.urlMask = urlMask;
+            $.urlMask = urlMask;
             return this;
         }
-        public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Codegen.ofNullable(urlMask);
-            return this;
-        }        public RegionNetworkEndpointGroupCloudRunArgs build() {
-            return new RegionNetworkEndpointGroupCloudRunArgs(service, tag, urlMask);
+
+        public Builder urlMask(String urlMask) {
+            return urlMask(Output.of(urlMask));
+        }
+
+        public RegionNetworkEndpointGroupCloudRunArgs build() {
+            return $;
         }
     }
+
 }

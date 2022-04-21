@@ -6,7 +6,6 @@ package com.pulumi.aws.s3control.inputs;
 import com.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<String>> actions;
+    private Output<List<String>> actions;
 
     public Output<List<String>> actions() {
         return this.actions;
@@ -32,66 +31,64 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @Import(name="contentTransformation", required=true)
-      private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation;
+    private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation;
 
     public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation() {
         return this.contentTransformation;
     }
 
-    public ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs(
-        Output<List<String>> actions,
-        Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.contentTransformation = Objects.requireNonNull(contentTransformation, "expected parameter 'contentTransformation' to be non-null");
-    }
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs() {}
 
-    private ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs() {
-        this.actions = Codegen.empty();
-        this.contentTransformation = Codegen.empty();
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs(ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs $) {
+        this.actions = $.actions;
+        this.contentTransformation = $.contentTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> actions;
-        private Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation;
+        private ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs();
         }
 
         public Builder(ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.contentTransformation = defaults.contentTransformation;
+            $ = new ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<String>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<String> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder contentTransformation(Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation) {
-            this.contentTransformation = Objects.requireNonNull(contentTransformation);
+            $.contentTransformation = contentTransformation;
             return this;
         }
+
         public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs contentTransformation) {
-            this.contentTransformation = Output.of(Objects.requireNonNull(contentTransformation));
-            return this;
-        }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs build() {
-            return new ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs(actions, contentTransformation);
+            return contentTransformation(Output.of(contentTransformation));
+        }
+
+        public ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.contentTransformation = Objects.requireNonNull($.contentTransformation, "expected parameter 'contentTransformation' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class OSDiskImageEncryptionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="diskEncryptionSetId")
-      private final @Nullable String diskEncryptionSetId;
+    private @Nullable String diskEncryptionSetId;
 
     public Optional<String> diskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
+        return Optional.ofNullable(this.diskEncryptionSetId);
     }
 
-    public OSDiskImageEncryptionResponse(@Nullable String diskEncryptionSetId) {
-        this.diskEncryptionSetId = diskEncryptionSetId;
-    }
+    private OSDiskImageEncryptionResponse() {}
 
-    private OSDiskImageEncryptionResponse() {
-        this.diskEncryptionSetId = null;
+    private OSDiskImageEncryptionResponse(OSDiskImageEncryptionResponse $) {
+        this.diskEncryptionSetId = $.diskEncryptionSetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSDiskImageEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskEncryptionSetId;
+        private OSDiskImageEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSDiskImageEncryptionResponse();
         }
 
         public Builder(OSDiskImageEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
+            $ = new OSDiskImageEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = diskEncryptionSetId;
+            $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
-        }        public OSDiskImageEncryptionResponse build() {
-            return new OSDiskImageEncryptionResponse(diskEncryptionSetId);
+        }
+
+        public OSDiskImageEncryptionResponse build() {
+            return $;
         }
     }
+
 }

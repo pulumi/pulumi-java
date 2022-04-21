@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class InsightFiltersResourceAwsEc2InstanceTypeArgs extends com.pulu
      * 
      */
     @Import(name="comparison", required=true)
-      private final Output<String> comparison;
+    private Output<String> comparison;
 
     public Output<String> comparison() {
         return this.comparison;
@@ -30,63 +29,60 @@ public final class InsightFiltersResourceAwsEc2InstanceTypeArgs extends com.pulu
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public InsightFiltersResourceAwsEc2InstanceTypeArgs(
-        Output<String> comparison,
-        Output<String> value) {
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private InsightFiltersResourceAwsEc2InstanceTypeArgs() {}
 
-    private InsightFiltersResourceAwsEc2InstanceTypeArgs() {
-        this.comparison = Codegen.empty();
-        this.value = Codegen.empty();
+    private InsightFiltersResourceAwsEc2InstanceTypeArgs(InsightFiltersResourceAwsEc2InstanceTypeArgs $) {
+        this.comparison = $.comparison;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersResourceAwsEc2InstanceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> comparison;
-        private Output<String> value;
+        private InsightFiltersResourceAwsEc2InstanceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersResourceAwsEc2InstanceTypeArgs();
         }
 
         public Builder(InsightFiltersResourceAwsEc2InstanceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparison = defaults.comparison;
-    	      this.value = defaults.value;
+            $ = new InsightFiltersResourceAwsEc2InstanceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparison(Output<String> comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder comparison(String comparison) {
-            this.comparison = Output.of(Objects.requireNonNull(comparison));
-            return this;
+            return comparison(Output.of(comparison));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public InsightFiltersResourceAwsEc2InstanceTypeArgs build() {
-            return new InsightFiltersResourceAwsEc2InstanceTypeArgs(comparison, value);
+            return value(Output.of(value));
+        }
+
+        public InsightFiltersResourceAwsEc2InstanceTypeArgs build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

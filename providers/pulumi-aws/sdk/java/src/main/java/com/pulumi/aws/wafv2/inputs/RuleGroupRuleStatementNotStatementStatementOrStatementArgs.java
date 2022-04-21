@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementArgs ex
      * 
      */
     @Import(name="statements", required=true)
-      private final Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs>> statements;
+    private Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs>> statements;
 
     public Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs>> statements() {
         return this.statements;
     }
 
-    public RuleGroupRuleStatementNotStatementStatementOrStatementArgs(Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs>> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private RuleGroupRuleStatementNotStatementStatementOrStatementArgs() {}
 
-    private RuleGroupRuleStatementNotStatementStatementOrStatementArgs() {
-        this.statements = Codegen.empty();
+    private RuleGroupRuleStatementNotStatementStatementOrStatementArgs(RuleGroupRuleStatementNotStatementStatementOrStatementArgs $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementNotStatementStatementOrStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs>> statements;
+        private RuleGroupRuleStatementNotStatementStatementOrStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementNotStatementStatementOrStatementArgs();
         }
 
         public Builder(RuleGroupRuleStatementNotStatementStatementOrStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new RuleGroupRuleStatementNotStatementStatementOrStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(Output<List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs>> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs> statements) {
-            this.statements = Output.of(Objects.requireNonNull(statements));
-            return this;
+            return statements(Output.of(statements));
         }
+
         public Builder statements(RuleGroupRuleStatementNotStatementStatementOrStatementStatementArgs... statements) {
             return statements(List.of(statements));
-        }        public RuleGroupRuleStatementNotStatementStatementOrStatementArgs build() {
-            return new RuleGroupRuleStatementNotStatementStatementOrStatementArgs(statements);
+        }
+
+        public RuleGroupRuleStatementNotStatementStatementOrStatementArgs build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,9 +8,9 @@ import com.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -34,10 +34,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptedPassword")
-      private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
+    private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
-    public Output<AsymmetricEncryptedSecretArgs> encryptedPassword() {
-        return this.encryptedPassword == null ? Codegen.empty() : this.encryptedPassword;
+    public Optional<Output<AsymmetricEncryptedSecretArgs>> encryptedPassword() {
+        return Optional.ofNullable(this.encryptedPassword);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,102 +67,91 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userType", required=true)
-      private final Output<Either<String,UserType>> userType;
+    private Output<Either<String,UserType>> userType;
 
     public Output<Either<String,UserType>> userType() {
         return this.userType;
     }
 
-    public UserArgs(
-        Output<String> deviceName,
-        @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<Either<String,UserType>> userType) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.encryptedPassword = encryptedPassword;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.userType = Objects.requireNonNull(userType, "expected parameter 'userType' to be non-null");
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.deviceName = Codegen.empty();
-        this.encryptedPassword = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.userType = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.deviceName = $.deviceName;
+        this.encryptedPassword = $.encryptedPassword;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.userType = $.userType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,UserType>> userType;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.encryptedPassword = defaults.encryptedPassword;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.userType = defaults.userType;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder encryptedPassword(@Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword) {
-            this.encryptedPassword = encryptedPassword;
+            $.encryptedPassword = encryptedPassword;
             return this;
         }
-        public Builder encryptedPassword(@Nullable AsymmetricEncryptedSecretArgs encryptedPassword) {
-            this.encryptedPassword = Codegen.ofNullable(encryptedPassword);
-            return this;
+
+        public Builder encryptedPassword(AsymmetricEncryptedSecretArgs encryptedPassword) {
+            return encryptedPassword(Output.of(encryptedPassword));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder userType(Output<Either<String,UserType>> userType) {
-            this.userType = Objects.requireNonNull(userType);
+            $.userType = userType;
             return this;
         }
+
         public Builder userType(Either<String,UserType> userType) {
-            this.userType = Output.of(Objects.requireNonNull(userType));
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(deviceName, encryptedPassword, name, resourceGroupName, userType);
+            return userType(Output.of(userType));
+        }
+
+        public UserArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userType = Objects.requireNonNull($.userType, "expected parameter 'userType' to be non-null");
+            return $;
         }
     }
+
 }

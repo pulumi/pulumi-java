@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class TableDisplayOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="shownColumns")
-      private final @Nullable Output<List<String>> shownColumns;
+    private @Nullable Output<List<String>> shownColumns;
 
-    public Output<List<String>> shownColumns() {
-        return this.shownColumns == null ? Codegen.empty() : this.shownColumns;
+    public Optional<Output<List<String>>> shownColumns() {
+        return Optional.ofNullable(this.shownColumns);
     }
 
-    public TableDisplayOptionsArgs(@Nullable Output<List<String>> shownColumns) {
-        this.shownColumns = shownColumns;
-    }
+    private TableDisplayOptionsArgs() {}
 
-    private TableDisplayOptionsArgs() {
-        this.shownColumns = Codegen.empty();
+    private TableDisplayOptionsArgs(TableDisplayOptionsArgs $) {
+        this.shownColumns = $.shownColumns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableDisplayOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> shownColumns;
+        private TableDisplayOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableDisplayOptionsArgs();
         }
 
         public Builder(TableDisplayOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shownColumns = defaults.shownColumns;
+            $ = new TableDisplayOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder shownColumns(@Nullable Output<List<String>> shownColumns) {
-            this.shownColumns = shownColumns;
+            $.shownColumns = shownColumns;
             return this;
         }
-        public Builder shownColumns(@Nullable List<String> shownColumns) {
-            this.shownColumns = Codegen.ofNullable(shownColumns);
-            return this;
+
+        public Builder shownColumns(List<String> shownColumns) {
+            return shownColumns(Output.of(shownColumns));
         }
+
         public Builder shownColumns(String... shownColumns) {
             return shownColumns(List.of(shownColumns));
-        }        public TableDisplayOptionsArgs build() {
-            return new TableDisplayOptionsArgs(shownColumns);
+        }
+
+        public TableDisplayOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,45 +25,44 @@ public final class HostedZoneConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable String comment;
+    private @Nullable String comment;
 
     public Optional<String> comment() {
-        return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
+        return Optional.ofNullable(this.comment);
     }
 
-    public HostedZoneConfig(@Nullable String comment) {
-        this.comment = comment;
-    }
+    private HostedZoneConfig() {}
 
-    private HostedZoneConfig() {
-        this.comment = null;
+    private HostedZoneConfig(HostedZoneConfig $) {
+        this.comment = $.comment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedZoneConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String comment;
+        private HostedZoneConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedZoneConfig();
         }
 
         public Builder(HostedZoneConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
+            $ = new HostedZoneConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
-        }        public HostedZoneConfig build() {
-            return new HostedZoneConfig(comment);
+        }
+
+        public HostedZoneConfig build() {
+            return $;
         }
     }
+
 }

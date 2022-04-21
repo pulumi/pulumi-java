@@ -6,10 +6,10 @@ package com.pulumi.aws.gamelift.inputs;
 import com.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationServerProcessGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FleetRuntimeConfigurationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="gameSessionActivationTimeoutSeconds")
-      private final @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
+    private @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
 
-    public Output<Integer> gameSessionActivationTimeoutSeconds() {
-        return this.gameSessionActivationTimeoutSeconds == null ? Codegen.empty() : this.gameSessionActivationTimeoutSeconds;
+    public Optional<Output<Integer>> gameSessionActivationTimeoutSeconds() {
+        return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FleetRuntimeConfigurationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maxConcurrentGameSessionActivations")
-      private final @Nullable Output<Integer> maxConcurrentGameSessionActivations;
+    private @Nullable Output<Integer> maxConcurrentGameSessionActivations;
 
-    public Output<Integer> maxConcurrentGameSessionActivations() {
-        return this.maxConcurrentGameSessionActivations == null ? Codegen.empty() : this.maxConcurrentGameSessionActivations;
+    public Optional<Output<Integer>> maxConcurrentGameSessionActivations() {
+        return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class FleetRuntimeConfigurationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serverProcesses")
-      private final @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
+    private @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
 
-    public Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses() {
-        return this.serverProcesses == null ? Codegen.empty() : this.serverProcesses;
+    public Optional<Output<List<FleetRuntimeConfigurationServerProcessGetArgs>>> serverProcesses() {
+        return Optional.ofNullable(this.serverProcesses);
     }
 
-    public FleetRuntimeConfigurationGetArgs(
-        @Nullable Output<Integer> gameSessionActivationTimeoutSeconds,
-        @Nullable Output<Integer> maxConcurrentGameSessionActivations,
-        @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses) {
-        this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
-        this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
-        this.serverProcesses = serverProcesses;
-    }
+    private FleetRuntimeConfigurationGetArgs() {}
 
-    private FleetRuntimeConfigurationGetArgs() {
-        this.gameSessionActivationTimeoutSeconds = Codegen.empty();
-        this.maxConcurrentGameSessionActivations = Codegen.empty();
-        this.serverProcesses = Codegen.empty();
+    private FleetRuntimeConfigurationGetArgs(FleetRuntimeConfigurationGetArgs $) {
+        this.gameSessionActivationTimeoutSeconds = $.gameSessionActivationTimeoutSeconds;
+        this.maxConcurrentGameSessionActivations = $.maxConcurrentGameSessionActivations;
+        this.serverProcesses = $.serverProcesses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetRuntimeConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
-        private @Nullable Output<Integer> maxConcurrentGameSessionActivations;
-        private @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
+        private FleetRuntimeConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetRuntimeConfigurationGetArgs();
         }
 
         public Builder(FleetRuntimeConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gameSessionActivationTimeoutSeconds = defaults.gameSessionActivationTimeoutSeconds;
-    	      this.maxConcurrentGameSessionActivations = defaults.maxConcurrentGameSessionActivations;
-    	      this.serverProcesses = defaults.serverProcesses;
+            $ = new FleetRuntimeConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gameSessionActivationTimeoutSeconds(@Nullable Output<Integer> gameSessionActivationTimeoutSeconds) {
-            this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
+            $.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
-        public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
-            this.gameSessionActivationTimeoutSeconds = Codegen.ofNullable(gameSessionActivationTimeoutSeconds);
-            return this;
+
+        public Builder gameSessionActivationTimeoutSeconds(Integer gameSessionActivationTimeoutSeconds) {
+            return gameSessionActivationTimeoutSeconds(Output.of(gameSessionActivationTimeoutSeconds));
         }
+
         public Builder maxConcurrentGameSessionActivations(@Nullable Output<Integer> maxConcurrentGameSessionActivations) {
-            this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
+            $.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
-        public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
-            this.maxConcurrentGameSessionActivations = Codegen.ofNullable(maxConcurrentGameSessionActivations);
-            return this;
+
+        public Builder maxConcurrentGameSessionActivations(Integer maxConcurrentGameSessionActivations) {
+            return maxConcurrentGameSessionActivations(Output.of(maxConcurrentGameSessionActivations));
         }
+
         public Builder serverProcesses(@Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses) {
-            this.serverProcesses = serverProcesses;
+            $.serverProcesses = serverProcesses;
             return this;
         }
-        public Builder serverProcesses(@Nullable List<FleetRuntimeConfigurationServerProcessGetArgs> serverProcesses) {
-            this.serverProcesses = Codegen.ofNullable(serverProcesses);
-            return this;
+
+        public Builder serverProcesses(List<FleetRuntimeConfigurationServerProcessGetArgs> serverProcesses) {
+            return serverProcesses(Output.of(serverProcesses));
         }
+
         public Builder serverProcesses(FleetRuntimeConfigurationServerProcessGetArgs... serverProcesses) {
             return serverProcesses(List.of(serverProcesses));
-        }        public FleetRuntimeConfigurationGetArgs build() {
-            return new FleetRuntimeConfigurationGetArgs(gameSessionActivationTimeoutSeconds, maxConcurrentGameSessionActivations, serverProcesses);
+        }
+
+        public FleetRuntimeConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

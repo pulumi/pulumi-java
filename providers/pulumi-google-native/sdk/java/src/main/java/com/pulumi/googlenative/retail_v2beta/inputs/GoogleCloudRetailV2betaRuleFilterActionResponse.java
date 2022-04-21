@@ -21,45 +21,45 @@ public final class GoogleCloudRetailV2betaRuleFilterActionResponse extends com.p
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
-    public GoogleCloudRetailV2betaRuleFilterActionResponse(String filter) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private GoogleCloudRetailV2betaRuleFilterActionResponse() {}
 
-    private GoogleCloudRetailV2betaRuleFilterActionResponse() {
-        this.filter = null;
+    private GoogleCloudRetailV2betaRuleFilterActionResponse(GoogleCloudRetailV2betaRuleFilterActionResponse $) {
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleFilterActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
+        private GoogleCloudRetailV2betaRuleFilterActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleFilterActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleFilterActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
+            $ = new GoogleCloudRetailV2betaRuleFilterActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
-        }        public GoogleCloudRetailV2betaRuleFilterActionResponse build() {
-            return new GoogleCloudRetailV2betaRuleFilterActionResponse(filter);
+        }
+
+        public GoogleCloudRetailV2betaRuleFilterActionResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

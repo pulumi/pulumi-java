@@ -7,10 +7,10 @@ import com.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargetsArgs;
 import com.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class StackSetStackInstancesArgs extends com.pulumi.resources.Resou
     public static final StackSetStackInstancesArgs Empty = new StackSetStackInstancesArgs();
 
     @Import(name="deploymentTargets", required=true)
-      private final Output<StackSetDeploymentTargetsArgs> deploymentTargets;
+    private Output<StackSetDeploymentTargetsArgs> deploymentTargets;
 
     public Output<StackSetDeploymentTargetsArgs> deploymentTargets() {
         return this.deploymentTargets;
@@ -34,10 +34,10 @@ public final class StackSetStackInstancesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="parameterOverrides")
-      private final @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
+    private @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
 
-    public Output<List<StackSetParameterArgs>> parameterOverrides() {
-        return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
+    public Optional<Output<List<StackSetParameterArgs>>> parameterOverrides() {
+        return Optional.ofNullable(this.parameterOverrides);
     }
 
     /**
@@ -45,82 +45,78 @@ public final class StackSetStackInstancesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="regions", required=true)
-      private final Output<List<String>> regions;
+    private Output<List<String>> regions;
 
     public Output<List<String>> regions() {
         return this.regions;
     }
 
-    public StackSetStackInstancesArgs(
-        Output<StackSetDeploymentTargetsArgs> deploymentTargets,
-        @Nullable Output<List<StackSetParameterArgs>> parameterOverrides,
-        Output<List<String>> regions) {
-        this.deploymentTargets = Objects.requireNonNull(deploymentTargets, "expected parameter 'deploymentTargets' to be non-null");
-        this.parameterOverrides = parameterOverrides;
-        this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
-    }
+    private StackSetStackInstancesArgs() {}
 
-    private StackSetStackInstancesArgs() {
-        this.deploymentTargets = Codegen.empty();
-        this.parameterOverrides = Codegen.empty();
-        this.regions = Codegen.empty();
+    private StackSetStackInstancesArgs(StackSetStackInstancesArgs $) {
+        this.deploymentTargets = $.deploymentTargets;
+        this.parameterOverrides = $.parameterOverrides;
+        this.regions = $.regions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetStackInstancesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<StackSetDeploymentTargetsArgs> deploymentTargets;
-        private @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
-        private Output<List<String>> regions;
+        private StackSetStackInstancesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetStackInstancesArgs();
         }
 
         public Builder(StackSetStackInstancesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentTargets = defaults.deploymentTargets;
-    	      this.parameterOverrides = defaults.parameterOverrides;
-    	      this.regions = defaults.regions;
+            $ = new StackSetStackInstancesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentTargets(Output<StackSetDeploymentTargetsArgs> deploymentTargets) {
-            this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
+            $.deploymentTargets = deploymentTargets;
             return this;
         }
+
         public Builder deploymentTargets(StackSetDeploymentTargetsArgs deploymentTargets) {
-            this.deploymentTargets = Output.of(Objects.requireNonNull(deploymentTargets));
-            return this;
+            return deploymentTargets(Output.of(deploymentTargets));
         }
+
         public Builder parameterOverrides(@Nullable Output<List<StackSetParameterArgs>> parameterOverrides) {
-            this.parameterOverrides = parameterOverrides;
+            $.parameterOverrides = parameterOverrides;
             return this;
         }
-        public Builder parameterOverrides(@Nullable List<StackSetParameterArgs> parameterOverrides) {
-            this.parameterOverrides = Codegen.ofNullable(parameterOverrides);
-            return this;
+
+        public Builder parameterOverrides(List<StackSetParameterArgs> parameterOverrides) {
+            return parameterOverrides(Output.of(parameterOverrides));
         }
+
         public Builder parameterOverrides(StackSetParameterArgs... parameterOverrides) {
             return parameterOverrides(List.of(parameterOverrides));
         }
+
         public Builder regions(Output<List<String>> regions) {
-            this.regions = Objects.requireNonNull(regions);
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(List<String> regions) {
-            this.regions = Output.of(Objects.requireNonNull(regions));
-            return this;
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
-        }        public StackSetStackInstancesArgs build() {
-            return new StackSetStackInstancesArgs(deploymentTargets, parameterOverrides, regions);
+        }
+
+        public StackSetStackInstancesArgs build() {
+            $.deploymentTargets = Objects.requireNonNull($.deploymentTargets, "expected parameter 'deploymentTargets' to be non-null");
+            $.regions = Objects.requireNonNull($.regions, "expected parameter 'regions' to be non-null");
+            return $;
         }
     }
+
 }

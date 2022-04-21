@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoCreateSubnetworks")
-      private final @Nullable Output<Boolean> autoCreateSubnetworks;
+    private @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Output<Boolean> autoCreateSubnetworks() {
-        return this.autoCreateSubnetworks == null ? Codegen.empty() : this.autoCreateSubnetworks;
+    public Optional<Output<Boolean>> autoCreateSubnetworks() {
+        return Optional.ofNullable(this.autoCreateSubnetworks);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteDefaultRoutesOnCreate")
-      private final @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
+    private @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
 
-    public Output<Boolean> deleteDefaultRoutesOnCreate() {
-        return this.deleteDefaultRoutesOnCreate == null ? Codegen.empty() : this.deleteDefaultRoutesOnCreate;
+    public Optional<Output<Boolean>> deleteDefaultRoutesOnCreate() {
+        return Optional.ofNullable(this.deleteDefaultRoutesOnCreate);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mtu")
-      private final @Nullable Output<Integer> mtu;
+    private @Nullable Output<Integer> mtu;
 
-    public Output<Integer> mtu() {
-        return this.mtu == null ? Codegen.empty() : this.mtu;
+    public Optional<Output<Integer>> mtu() {
+        return Optional.ofNullable(this.mtu);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -107,128 +107,108 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingMode")
-      private final @Nullable Output<String> routingMode;
+    private @Nullable Output<String> routingMode;
 
-    public Output<String> routingMode() {
-        return this.routingMode == null ? Codegen.empty() : this.routingMode;
+    public Optional<Output<String>> routingMode() {
+        return Optional.ofNullable(this.routingMode);
     }
 
-    public NetworkArgs(
-        @Nullable Output<Boolean> autoCreateSubnetworks,
-        @Nullable Output<Boolean> deleteDefaultRoutesOnCreate,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> mtu,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> routingMode) {
-        this.autoCreateSubnetworks = autoCreateSubnetworks;
-        this.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
-        this.description = description;
-        this.mtu = mtu;
-        this.name = name;
-        this.project = project;
-        this.routingMode = routingMode;
-    }
+    private NetworkArgs() {}
 
-    private NetworkArgs() {
-        this.autoCreateSubnetworks = Codegen.empty();
-        this.deleteDefaultRoutesOnCreate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.mtu = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.routingMode = Codegen.empty();
+    private NetworkArgs(NetworkArgs $) {
+        this.autoCreateSubnetworks = $.autoCreateSubnetworks;
+        this.deleteDefaultRoutesOnCreate = $.deleteDefaultRoutesOnCreate;
+        this.description = $.description;
+        this.mtu = $.mtu;
+        this.name = $.name;
+        this.project = $.project;
+        this.routingMode = $.routingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoCreateSubnetworks;
-        private @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> mtu;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> routingMode;
+        private NetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkArgs();
         }
 
         public Builder(NetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoCreateSubnetworks = defaults.autoCreateSubnetworks;
-    	      this.deleteDefaultRoutesOnCreate = defaults.deleteDefaultRoutesOnCreate;
-    	      this.description = defaults.description;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.routingMode = defaults.routingMode;
+            $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoCreateSubnetworks(@Nullable Output<Boolean> autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = autoCreateSubnetworks;
+            $.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
-        public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = Codegen.ofNullable(autoCreateSubnetworks);
-            return this;
+
+        public Builder autoCreateSubnetworks(Boolean autoCreateSubnetworks) {
+            return autoCreateSubnetworks(Output.of(autoCreateSubnetworks));
         }
+
         public Builder deleteDefaultRoutesOnCreate(@Nullable Output<Boolean> deleteDefaultRoutesOnCreate) {
-            this.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
+            $.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
             return this;
         }
-        public Builder deleteDefaultRoutesOnCreate(@Nullable Boolean deleteDefaultRoutesOnCreate) {
-            this.deleteDefaultRoutesOnCreate = Codegen.ofNullable(deleteDefaultRoutesOnCreate);
-            return this;
+
+        public Builder deleteDefaultRoutesOnCreate(Boolean deleteDefaultRoutesOnCreate) {
+            return deleteDefaultRoutesOnCreate(Output.of(deleteDefaultRoutesOnCreate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder mtu(@Nullable Output<Integer> mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
-        public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Codegen.ofNullable(mtu);
-            return this;
+
+        public Builder mtu(Integer mtu) {
+            return mtu(Output.of(mtu));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder routingMode(@Nullable Output<String> routingMode) {
-            this.routingMode = routingMode;
+            $.routingMode = routingMode;
             return this;
         }
-        public Builder routingMode(@Nullable String routingMode) {
-            this.routingMode = Codegen.ofNullable(routingMode);
-            return this;
-        }        public NetworkArgs build() {
-            return new NetworkArgs(autoCreateSubnetworks, deleteDefaultRoutesOnCreate, description, mtu, name, project, routingMode);
+
+        public Builder routingMode(String routingMode) {
+            return routingMode(Output.of(routingMode));
+        }
+
+        public NetworkArgs build() {
+            return $;
         }
     }
+
 }

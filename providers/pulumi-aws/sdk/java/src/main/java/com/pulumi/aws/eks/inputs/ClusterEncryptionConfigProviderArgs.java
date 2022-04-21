@@ -5,7 +5,6 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterEncryptionConfigProviderArgs extends com.pulumi.resour
      * 
      */
     @Import(name="keyArn", required=true)
-      private final Output<String> keyArn;
+    private Output<String> keyArn;
 
     public Output<String> keyArn() {
         return this.keyArn;
     }
 
-    public ClusterEncryptionConfigProviderArgs(Output<String> keyArn) {
-        this.keyArn = Objects.requireNonNull(keyArn, "expected parameter 'keyArn' to be non-null");
-    }
+    private ClusterEncryptionConfigProviderArgs() {}
 
-    private ClusterEncryptionConfigProviderArgs() {
-        this.keyArn = Codegen.empty();
+    private ClusterEncryptionConfigProviderArgs(ClusterEncryptionConfigProviderArgs $) {
+        this.keyArn = $.keyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionConfigProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyArn;
+        private ClusterEncryptionConfigProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionConfigProviderArgs();
         }
 
         public Builder(ClusterEncryptionConfigProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyArn = defaults.keyArn;
+            $ = new ClusterEncryptionConfigProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyArn(Output<String> keyArn) {
-            this.keyArn = Objects.requireNonNull(keyArn);
+            $.keyArn = keyArn;
             return this;
         }
+
         public Builder keyArn(String keyArn) {
-            this.keyArn = Output.of(Objects.requireNonNull(keyArn));
-            return this;
-        }        public ClusterEncryptionConfigProviderArgs build() {
-            return new ClusterEncryptionConfigProviderArgs(keyArn);
+            return keyArn(Output.of(keyArn));
+        }
+
+        public ClusterEncryptionConfigProviderArgs build() {
+            $.keyArn = Objects.requireNonNull($.keyArn, "expected parameter 'keyArn' to be non-null");
+            return $;
         }
     }
+
 }

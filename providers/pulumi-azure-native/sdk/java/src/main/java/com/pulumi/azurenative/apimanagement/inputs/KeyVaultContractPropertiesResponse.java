@@ -24,10 +24,10 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="identityClientId")
-      private final @Nullable String identityClientId;
+    private @Nullable String identityClientId;
 
     public Optional<String> identityClientId() {
-        return this.identityClientId == null ? Optional.empty() : Optional.ofNullable(this.identityClientId);
+        return Optional.ofNullable(this.identityClientId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastStatus")
-      private final @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
+    private @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
 
     public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> lastStatus() {
-        return this.lastStatus == null ? Optional.empty() : Optional.ofNullable(this.lastStatus);
+        return Optional.ofNullable(this.lastStatus);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="secretIdentifier")
-      private final @Nullable String secretIdentifier;
+    private @Nullable String secretIdentifier;
 
     public Optional<String> secretIdentifier() {
-        return this.secretIdentifier == null ? Optional.empty() : Optional.ofNullable(this.secretIdentifier);
+        return Optional.ofNullable(this.secretIdentifier);
     }
 
-    public KeyVaultContractPropertiesResponse(
-        @Nullable String identityClientId,
-        @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus,
-        @Nullable String secretIdentifier) {
-        this.identityClientId = identityClientId;
-        this.lastStatus = lastStatus;
-        this.secretIdentifier = secretIdentifier;
-    }
+    private KeyVaultContractPropertiesResponse() {}
 
-    private KeyVaultContractPropertiesResponse() {
-        this.identityClientId = null;
-        this.lastStatus = null;
-        this.secretIdentifier = null;
+    private KeyVaultContractPropertiesResponse(KeyVaultContractPropertiesResponse $) {
+        this.identityClientId = $.identityClientId;
+        this.lastStatus = $.lastStatus;
+        this.secretIdentifier = $.secretIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultContractPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String identityClientId;
-        private @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
-        private @Nullable String secretIdentifier;
+        private KeyVaultContractPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultContractPropertiesResponse();
         }
 
         public Builder(KeyVaultContractPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityClientId = defaults.identityClientId;
-    	      this.lastStatus = defaults.lastStatus;
-    	      this.secretIdentifier = defaults.secretIdentifier;
+            $ = new KeyVaultContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = identityClientId;
+            $.identityClientId = identityClientId;
             return this;
         }
+
         public Builder lastStatus(@Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus) {
-            this.lastStatus = lastStatus;
+            $.lastStatus = lastStatus;
             return this;
         }
+
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = secretIdentifier;
+            $.secretIdentifier = secretIdentifier;
             return this;
-        }        public KeyVaultContractPropertiesResponse build() {
-            return new KeyVaultContractPropertiesResponse(identityClientId, lastStatus, secretIdentifier);
+        }
+
+        public KeyVaultContractPropertiesResponse build() {
+            return $;
         }
     }
+
 }

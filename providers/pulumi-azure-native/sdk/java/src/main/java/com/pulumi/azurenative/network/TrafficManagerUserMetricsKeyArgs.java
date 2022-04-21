@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.network;
 
-import java.util.Objects;
+
 
 
 public final class TrafficManagerUserMetricsKeyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final TrafficManagerUserMetricsKeyArgs Empty = new TrafficManagerUserMetricsKeyArgs();
 
-    public TrafficManagerUserMetricsKeyArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(TrafficManagerUserMetricsKeyArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private TrafficManagerUserMetricsKeyArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(TrafficManagerUserMetricsKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new TrafficManagerUserMetricsKeyArgs();
         }
         public TrafficManagerUserMetricsKeyArgs build() {
-            return new TrafficManagerUserMetricsKeyArgs();
+            return $;
         }
     }
+
 }

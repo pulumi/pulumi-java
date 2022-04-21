@@ -17,7 +17,7 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListVideoContentTokenArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="videoName", required=true)
-      private final String videoName;
+    private String videoName;
 
     public String videoName() {
         return this.videoName;
     }
 
-    public ListVideoContentTokenArgs(
-        String accountName,
-        String resourceGroupName,
-        String videoName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.videoName = Objects.requireNonNull(videoName, "expected parameter 'videoName' to be non-null");
-    }
+    private ListVideoContentTokenArgs() {}
 
-    private ListVideoContentTokenArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.videoName = null;
+    private ListVideoContentTokenArgs(ListVideoContentTokenArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.videoName = $.videoName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListVideoContentTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String videoName;
+        private ListVideoContentTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListVideoContentTokenArgs();
         }
 
         public Builder(ListVideoContentTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.videoName = defaults.videoName;
+            $ = new ListVideoContentTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder videoName(String videoName) {
-            this.videoName = Objects.requireNonNull(videoName);
+            $.videoName = videoName;
             return this;
-        }        public ListVideoContentTokenArgs build() {
-            return new ListVideoContentTokenArgs(accountName, resourceGroupName, videoName);
+        }
+
+        public ListVideoContentTokenArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.videoName = Objects.requireNonNull($.videoName, "expected parameter 'videoName' to be non-null");
+            return $;
         }
     }
+
 }

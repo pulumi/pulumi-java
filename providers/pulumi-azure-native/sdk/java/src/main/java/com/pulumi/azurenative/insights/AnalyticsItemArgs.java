@@ -9,10 +9,10 @@ import com.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentAnalyt
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overrideItem")
-      private final @Nullable Output<Boolean> overrideItem;
+    private @Nullable Output<Boolean> overrideItem;
 
-    public Output<Boolean> overrideItem() {
-        return this.overrideItem == null ? Codegen.empty() : this.overrideItem;
+    public Optional<Output<Boolean>> overrideItem() {
+        return Optional.ofNullable(this.overrideItem);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
+    private @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
-    public Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -102,10 +102,10 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<Either<String,ItemScope>> scope;
+    private @Nullable Output<Either<String,ItemScope>> scope;
 
-    public Output<Either<String,ItemScope>> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<Either<String,ItemScope>>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopePath", required=true)
-      private final Output<String> scopePath;
+    private Output<String> scopePath;
 
     public Output<String> scopePath() {
         return this.scopePath;
@@ -124,167 +124,141 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ItemType>> type;
+    private @Nullable Output<Either<String,ItemType>> type;
 
-    public Output<Either<String,ItemType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ItemType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AnalyticsItemArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> overrideItem,
-        @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<Either<String,ItemScope>> scope,
-        Output<String> scopePath,
-        @Nullable Output<Either<String,ItemType>> type) {
-        this.content = content;
-        this.id = id;
-        this.name = name;
-        this.overrideItem = overrideItem;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.scope = scope;
-        this.scopePath = Objects.requireNonNull(scopePath, "expected parameter 'scopePath' to be non-null");
-        this.type = type;
-    }
+    private AnalyticsItemArgs() {}
 
-    private AnalyticsItemArgs() {
-        this.content = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.overrideItem = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.scopePath = Codegen.empty();
-        this.type = Codegen.empty();
+    private AnalyticsItemArgs(AnalyticsItemArgs $) {
+        this.content = $.content;
+        this.id = $.id;
+        this.name = $.name;
+        this.overrideItem = $.overrideItem;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.scope = $.scope;
+        this.scopePath = $.scopePath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> overrideItem;
-        private @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<Either<String,ItemScope>> scope;
-        private Output<String> scopePath;
-        private @Nullable Output<Either<String,ItemType>> type;
+        private AnalyticsItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsItemArgs();
         }
 
         public Builder(AnalyticsItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.overrideItem = defaults.overrideItem;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.scope = defaults.scope;
-    	      this.scopePath = defaults.scopePath;
-    	      this.type = defaults.type;
+            $ = new AnalyticsItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder overrideItem(@Nullable Output<Boolean> overrideItem) {
-            this.overrideItem = overrideItem;
+            $.overrideItem = overrideItem;
             return this;
         }
-        public Builder overrideItem(@Nullable Boolean overrideItem) {
-            this.overrideItem = Codegen.ofNullable(overrideItem);
-            return this;
+
+        public Builder overrideItem(Boolean overrideItem) {
+            return overrideItem(Output.of(overrideItem));
         }
+
         public Builder properties(@Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder scope(@Nullable Output<Either<String,ItemScope>> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable Either<String,ItemScope> scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(Either<String,ItemScope> scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder scopePath(Output<String> scopePath) {
-            this.scopePath = Objects.requireNonNull(scopePath);
+            $.scopePath = scopePath;
             return this;
         }
+
         public Builder scopePath(String scopePath) {
-            this.scopePath = Output.of(Objects.requireNonNull(scopePath));
-            return this;
+            return scopePath(Output.of(scopePath));
         }
+
         public Builder type(@Nullable Output<Either<String,ItemType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ItemType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AnalyticsItemArgs build() {
-            return new AnalyticsItemArgs(content, id, name, overrideItem, properties, resourceGroupName, resourceName, scope, scopePath, type);
+
+        public Builder type(Either<String,ItemType> type) {
+            return type(Output.of(type));
+        }
+
+        public AnalyticsItemArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.scopePath = Objects.requireNonNull($.scopePath, "expected parameter 'scopePath' to be non-null");
+            return $;
         }
     }
+
 }

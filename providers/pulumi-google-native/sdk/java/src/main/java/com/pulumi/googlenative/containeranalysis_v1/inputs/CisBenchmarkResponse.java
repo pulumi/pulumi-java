@@ -18,62 +18,59 @@ public final class CisBenchmarkResponse extends com.pulumi.resources.InvokeArgs 
     public static final CisBenchmarkResponse Empty = new CisBenchmarkResponse();
 
     @Import(name="profileLevel", required=true)
-      private final Integer profileLevel;
+    private Integer profileLevel;
 
     public Integer profileLevel() {
         return this.profileLevel;
     }
 
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
     }
 
-    public CisBenchmarkResponse(
-        Integer profileLevel,
-        String severity) {
-        this.profileLevel = Objects.requireNonNull(profileLevel, "expected parameter 'profileLevel' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-    }
+    private CisBenchmarkResponse() {}
 
-    private CisBenchmarkResponse() {
-        this.profileLevel = null;
-        this.severity = null;
+    private CisBenchmarkResponse(CisBenchmarkResponse $) {
+        this.profileLevel = $.profileLevel;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CisBenchmarkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer profileLevel;
-        private String severity;
+        private CisBenchmarkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CisBenchmarkResponse();
         }
 
         public Builder(CisBenchmarkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileLevel = defaults.profileLevel;
-    	      this.severity = defaults.severity;
+            $ = new CisBenchmarkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder profileLevel(Integer profileLevel) {
-            this.profileLevel = Objects.requireNonNull(profileLevel);
+            $.profileLevel = profileLevel;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
-        }        public CisBenchmarkResponse build() {
-            return new CisBenchmarkResponse(profileLevel, severity);
+        }
+
+        public CisBenchmarkResponse build() {
+            $.profileLevel = Objects.requireNonNull($.profileLevel, "expected parameter 'profileLevel' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

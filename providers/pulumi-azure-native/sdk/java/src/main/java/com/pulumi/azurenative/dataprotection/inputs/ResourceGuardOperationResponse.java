@@ -21,7 +21,7 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="requestResourceType", required=true)
-      private final String requestResourceType;
+    private String requestResourceType;
 
     public String requestResourceType() {
         return this.requestResourceType;
@@ -32,55 +32,52 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vaultCriticalOperation", required=true)
-      private final String vaultCriticalOperation;
+    private String vaultCriticalOperation;
 
     public String vaultCriticalOperation() {
         return this.vaultCriticalOperation;
     }
 
-    public ResourceGuardOperationResponse(
-        String requestResourceType,
-        String vaultCriticalOperation) {
-        this.requestResourceType = Objects.requireNonNull(requestResourceType, "expected parameter 'requestResourceType' to be non-null");
-        this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation, "expected parameter 'vaultCriticalOperation' to be non-null");
-    }
+    private ResourceGuardOperationResponse() {}
 
-    private ResourceGuardOperationResponse() {
-        this.requestResourceType = null;
-        this.vaultCriticalOperation = null;
+    private ResourceGuardOperationResponse(ResourceGuardOperationResponse $) {
+        this.requestResourceType = $.requestResourceType;
+        this.vaultCriticalOperation = $.vaultCriticalOperation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGuardOperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String requestResourceType;
-        private String vaultCriticalOperation;
+        private ResourceGuardOperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGuardOperationResponse();
         }
 
         public Builder(ResourceGuardOperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestResourceType = defaults.requestResourceType;
-    	      this.vaultCriticalOperation = defaults.vaultCriticalOperation;
+            $ = new ResourceGuardOperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requestResourceType(String requestResourceType) {
-            this.requestResourceType = Objects.requireNonNull(requestResourceType);
+            $.requestResourceType = requestResourceType;
             return this;
         }
+
         public Builder vaultCriticalOperation(String vaultCriticalOperation) {
-            this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
+            $.vaultCriticalOperation = vaultCriticalOperation;
             return this;
-        }        public ResourceGuardOperationResponse build() {
-            return new ResourceGuardOperationResponse(requestResourceType, vaultCriticalOperation);
+        }
+
+        public ResourceGuardOperationResponse build() {
+            $.requestResourceType = Objects.requireNonNull($.requestResourceType, "expected parameter 'requestResourceType' to be non-null");
+            $.vaultCriticalOperation = Objects.requireNonNull($.vaultCriticalOperation, "expected parameter 'vaultCriticalOperation' to be non-null");
+            return $;
         }
     }
+
 }

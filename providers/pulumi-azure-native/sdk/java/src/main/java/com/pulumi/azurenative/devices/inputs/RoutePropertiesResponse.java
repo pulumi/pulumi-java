@@ -25,10 +25,10 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="condition")
-      private final @Nullable String condition;
+    private @Nullable String condition;
 
     public Optional<String> condition() {
-        return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="endpointNames", required=true)
-      private final List<String> endpointNames;
+    private List<String> endpointNames;
 
     public List<String> endpointNames() {
         return this.endpointNames;
@@ -47,7 +47,7 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -58,7 +58,7 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -69,85 +69,76 @@ public final class RoutePropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
-    public RoutePropertiesResponse(
-        @Nullable String condition,
-        List<String> endpointNames,
-        Boolean isEnabled,
-        String name,
-        String source) {
-        this.condition = condition;
-        this.endpointNames = Objects.requireNonNull(endpointNames, "expected parameter 'endpointNames' to be non-null");
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private RoutePropertiesResponse() {}
 
-    private RoutePropertiesResponse() {
-        this.condition = null;
-        this.endpointNames = List.of();
-        this.isEnabled = null;
-        this.name = null;
-        this.source = null;
+    private RoutePropertiesResponse(RoutePropertiesResponse $) {
+        this.condition = $.condition;
+        this.endpointNames = $.endpointNames;
+        this.isEnabled = $.isEnabled;
+        this.name = $.name;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String condition;
-        private List<String> endpointNames;
-        private Boolean isEnabled;
-        private String name;
-        private String source;
+        private RoutePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutePropertiesResponse();
         }
 
         public Builder(RoutePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.endpointNames = defaults.endpointNames;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.name = defaults.name;
-    	      this.source = defaults.source;
+            $ = new RoutePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
+
         public Builder endpointNames(List<String> endpointNames) {
-            this.endpointNames = Objects.requireNonNull(endpointNames);
+            $.endpointNames = endpointNames;
             return this;
         }
+
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public RoutePropertiesResponse build() {
-            return new RoutePropertiesResponse(condition, endpointNames, isEnabled, name, source);
+        }
+
+        public RoutePropertiesResponse build() {
+            $.endpointNames = Objects.requireNonNull($.endpointNames, "expected parameter 'endpointNames' to be non-null");
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

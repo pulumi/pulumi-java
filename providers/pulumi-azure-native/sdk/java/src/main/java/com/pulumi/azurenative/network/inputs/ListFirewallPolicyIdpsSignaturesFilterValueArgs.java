@@ -19,10 +19,10 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="filterName")
-      private final @Nullable String filterName;
+    private @Nullable String filterName;
 
     public Optional<String> filterName() {
-        return this.filterName == null ? Optional.empty() : Optional.ofNullable(this.filterName);
+        return Optional.ofNullable(this.filterName);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="firewallPolicyName", required=true)
-      private final String firewallPolicyName;
+    private String firewallPolicyName;
 
     public String firewallPolicyName() {
         return this.firewallPolicyName;
@@ -41,64 +41,58 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListFirewallPolicyIdpsSignaturesFilterValueArgs(
-        @Nullable String filterName,
-        String firewallPolicyName,
-        String resourceGroupName) {
-        this.filterName = filterName;
-        this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListFirewallPolicyIdpsSignaturesFilterValueArgs() {}
 
-    private ListFirewallPolicyIdpsSignaturesFilterValueArgs() {
-        this.filterName = null;
-        this.firewallPolicyName = null;
-        this.resourceGroupName = null;
+    private ListFirewallPolicyIdpsSignaturesFilterValueArgs(ListFirewallPolicyIdpsSignaturesFilterValueArgs $) {
+        this.filterName = $.filterName;
+        this.firewallPolicyName = $.firewallPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListFirewallPolicyIdpsSignaturesFilterValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filterName;
-        private String firewallPolicyName;
-        private String resourceGroupName;
+        private ListFirewallPolicyIdpsSignaturesFilterValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListFirewallPolicyIdpsSignaturesFilterValueArgs();
         }
 
         public Builder(ListFirewallPolicyIdpsSignaturesFilterValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterName = defaults.filterName;
-    	      this.firewallPolicyName = defaults.firewallPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListFirewallPolicyIdpsSignaturesFilterValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterName(@Nullable String filterName) {
-            this.filterName = filterName;
+            $.filterName = filterName;
             return this;
         }
+
         public Builder firewallPolicyName(String firewallPolicyName) {
-            this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
+            $.firewallPolicyName = firewallPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListFirewallPolicyIdpsSignaturesFilterValueArgs build() {
-            return new ListFirewallPolicyIdpsSignaturesFilterValueArgs(filterName, firewallPolicyName, resourceGroupName);
+        }
+
+        public ListFirewallPolicyIdpsSignaturesFilterValueArgs build() {
+            $.firewallPolicyName = Objects.requireNonNull($.firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

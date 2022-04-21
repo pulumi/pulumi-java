@@ -21,7 +21,7 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backup", required=true)
-      private final String backup;
+    private String backup;
 
     public String backup() {
         return this.backup;
@@ -32,7 +32,7 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final String details;
+    private String details;
 
     public String details() {
         return this.details;
@@ -43,7 +43,7 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -54,7 +54,7 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -65,7 +65,7 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -76,91 +76,80 @@ public final class RestoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RestoreResponse(
-        String backup,
-        String details,
-        String endTime,
-        String startTime,
-        String state,
-        String type) {
-        this.backup = Objects.requireNonNull(backup, "expected parameter 'backup' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RestoreResponse() {}
 
-    private RestoreResponse() {
-        this.backup = null;
-        this.details = null;
-        this.endTime = null;
-        this.startTime = null;
-        this.state = null;
-        this.type = null;
+    private RestoreResponse(RestoreResponse $) {
+        this.backup = $.backup;
+        this.details = $.details;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
+        this.state = $.state;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backup;
-        private String details;
-        private String endTime;
-        private String startTime;
-        private String state;
-        private String type;
+        private RestoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestoreResponse();
         }
 
         public Builder(RestoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backup = defaults.backup;
-    	      this.details = defaults.details;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
+            $ = new RestoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backup(String backup) {
-            this.backup = Objects.requireNonNull(backup);
+            $.backup = backup;
             return this;
         }
+
         public Builder details(String details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RestoreResponse build() {
-            return new RestoreResponse(backup, details, endTime, startTime, state, type);
+        }
+
+        public RestoreResponse build() {
+            $.backup = Objects.requireNonNull($.backup, "expected parameter 'backup' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cloudfrontDistributionArn")
-      private final @Nullable Output<String> cloudfrontDistributionArn;
+    private @Nullable Output<String> cloudfrontDistributionArn;
 
-    public Output<String> cloudfrontDistributionArn() {
-        return this.cloudfrontDistributionArn == null ? Codegen.empty() : this.cloudfrontDistributionArn;
+    public Optional<Output<String>> cloudfrontDistributionArn() {
+        return Optional.ofNullable(this.cloudfrontDistributionArn);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="s3Bucket")
-      private final @Nullable Output<String> s3Bucket;
+    private @Nullable Output<String> s3Bucket;
 
-    public Output<String> s3Bucket() {
-        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
+    public Optional<Output<String>> s3Bucket() {
+        return Optional.ofNullable(this.s3Bucket);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userPoolId")
-      private final @Nullable Output<String> userPoolId;
+    private @Nullable Output<String> userPoolId;
 
-    public Output<String> userPoolId() {
-        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
+    public Optional<Output<String>> userPoolId() {
+        return Optional.ofNullable(this.userPoolId);
     }
 
     /**
@@ -86,128 +86,108 @@ public final class UserPoolDomainState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public UserPoolDomainState(
-        @Nullable Output<String> awsAccountId,
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> cloudfrontDistributionArn,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> s3Bucket,
-        @Nullable Output<String> userPoolId,
-        @Nullable Output<String> version) {
-        this.awsAccountId = awsAccountId;
-        this.certificateArn = certificateArn;
-        this.cloudfrontDistributionArn = cloudfrontDistributionArn;
-        this.domain = domain;
-        this.s3Bucket = s3Bucket;
-        this.userPoolId = userPoolId;
-        this.version = version;
-    }
+    private UserPoolDomainState() {}
 
-    private UserPoolDomainState() {
-        this.awsAccountId = Codegen.empty();
-        this.certificateArn = Codegen.empty();
-        this.cloudfrontDistributionArn = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.s3Bucket = Codegen.empty();
-        this.userPoolId = Codegen.empty();
-        this.version = Codegen.empty();
+    private UserPoolDomainState(UserPoolDomainState $) {
+        this.awsAccountId = $.awsAccountId;
+        this.certificateArn = $.certificateArn;
+        this.cloudfrontDistributionArn = $.cloudfrontDistributionArn;
+        this.domain = $.domain;
+        this.s3Bucket = $.s3Bucket;
+        this.userPoolId = $.userPoolId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolDomainState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsAccountId;
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> cloudfrontDistributionArn;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> s3Bucket;
-        private @Nullable Output<String> userPoolId;
-        private @Nullable Output<String> version;
+        private UserPoolDomainState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolDomainState();
         }
 
         public Builder(UserPoolDomainState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.cloudfrontDistributionArn = defaults.cloudfrontDistributionArn;
-    	      this.domain = defaults.domain;
-    	      this.s3Bucket = defaults.s3Bucket;
-    	      this.userPoolId = defaults.userPoolId;
-    	      this.version = defaults.version;
+            $ = new UserPoolDomainState(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder cloudfrontDistributionArn(@Nullable Output<String> cloudfrontDistributionArn) {
-            this.cloudfrontDistributionArn = cloudfrontDistributionArn;
+            $.cloudfrontDistributionArn = cloudfrontDistributionArn;
             return this;
         }
-        public Builder cloudfrontDistributionArn(@Nullable String cloudfrontDistributionArn) {
-            this.cloudfrontDistributionArn = Codegen.ofNullable(cloudfrontDistributionArn);
-            return this;
+
+        public Builder cloudfrontDistributionArn(String cloudfrontDistributionArn) {
+            return cloudfrontDistributionArn(Output.of(cloudfrontDistributionArn));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
-            this.s3Bucket = s3Bucket;
+            $.s3Bucket = s3Bucket;
             return this;
         }
-        public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Codegen.ofNullable(s3Bucket);
-            return this;
+
+        public Builder s3Bucket(String s3Bucket) {
+            return s3Bucket(Output.of(s3Bucket));
         }
+
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
-            this.userPoolId = userPoolId;
+            $.userPoolId = userPoolId;
             return this;
         }
-        public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Codegen.ofNullable(userPoolId);
-            return this;
+
+        public Builder userPoolId(String userPoolId) {
+            return userPoolId(Output.of(userPoolId));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public UserPoolDomainState build() {
-            return new UserPoolDomainState(awsAccountId, certificateArn, cloudfrontDistributionArn, domain, s3Bucket, userPoolId, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public UserPoolDomainState build() {
+            return $;
         }
     }
+
 }

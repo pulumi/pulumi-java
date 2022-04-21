@@ -5,9 +5,9 @@ package com.pulumi.googlenative.contactcenterinsights_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,17 +16,17 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     public static final AnalysisArgs Empty = new AnalysisArgs();
 
     @Import(name="conversationId", required=true)
-      private final Output<String> conversationId;
+    private Output<String> conversationId;
 
     public Output<String> conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,96 +34,86 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AnalysisArgs(
-        Output<String> conversationId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.conversationId = Objects.requireNonNull(conversationId, "expected parameter 'conversationId' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.project = project;
-    }
+    private AnalysisArgs() {}
 
-    private AnalysisArgs() {
-        this.conversationId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private AnalysisArgs(AnalysisArgs $) {
+        this.conversationId = $.conversationId;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> conversationId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private AnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisArgs();
         }
 
         public Builder(AnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationId = defaults.conversationId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new AnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationId(Output<String> conversationId) {
-            this.conversationId = Objects.requireNonNull(conversationId);
+            $.conversationId = conversationId;
             return this;
         }
+
         public Builder conversationId(String conversationId) {
-            this.conversationId = Output.of(Objects.requireNonNull(conversationId));
-            return this;
+            return conversationId(Output.of(conversationId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AnalysisArgs build() {
-            return new AnalysisArgs(conversationId, location, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public AnalysisArgs build() {
+            $.conversationId = Objects.requireNonNull($.conversationId, "expected parameter 'conversationId' to be non-null");
+            return $;
         }
     }
+
 }

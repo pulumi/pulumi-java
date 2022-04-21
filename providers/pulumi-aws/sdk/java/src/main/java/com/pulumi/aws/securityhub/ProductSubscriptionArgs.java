@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ProductSubscriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="productArn", required=true)
-      private final Output<String> productArn;
+    private Output<String> productArn;
 
     public Output<String> productArn() {
         return this.productArn;
     }
 
-    public ProductSubscriptionArgs(Output<String> productArn) {
-        this.productArn = Objects.requireNonNull(productArn, "expected parameter 'productArn' to be non-null");
-    }
+    private ProductSubscriptionArgs() {}
 
-    private ProductSubscriptionArgs() {
-        this.productArn = Codegen.empty();
+    private ProductSubscriptionArgs(ProductSubscriptionArgs $) {
+        this.productArn = $.productArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> productArn;
+        private ProductSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductSubscriptionArgs();
         }
 
         public Builder(ProductSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.productArn = defaults.productArn;
+            $ = new ProductSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder productArn(Output<String> productArn) {
-            this.productArn = Objects.requireNonNull(productArn);
+            $.productArn = productArn;
             return this;
         }
+
         public Builder productArn(String productArn) {
-            this.productArn = Output.of(Objects.requireNonNull(productArn));
-            return this;
-        }        public ProductSubscriptionArgs build() {
-            return new ProductSubscriptionArgs(productArn);
+            return productArn(Output.of(productArn));
+        }
+
+        public ProductSubscriptionArgs build() {
+            $.productArn = Objects.requireNonNull($.productArn, "expected parameter 'productArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class DiskLocation extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DiskLocation extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regionName")
-      private final @Nullable String regionName;
+    private @Nullable String regionName;
 
     public Optional<String> regionName() {
-        return this.regionName == null ? Optional.empty() : Optional.ofNullable(this.regionName);
+        return Optional.ofNullable(this.regionName);
     }
 
-    public DiskLocation(
-        @Nullable String availabilityZone,
-        @Nullable String regionName) {
-        this.availabilityZone = availabilityZone;
-        this.regionName = regionName;
-    }
+    private DiskLocation() {}
 
-    private DiskLocation() {
-        this.availabilityZone = null;
-        this.regionName = null;
+    private DiskLocation(DiskLocation $) {
+        this.availabilityZone = $.availabilityZone;
+        this.regionName = $.regionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String availabilityZone;
-        private @Nullable String regionName;
+        private DiskLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskLocation();
         }
 
         public Builder(DiskLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.regionName = defaults.regionName;
+            $ = new DiskLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder regionName(@Nullable String regionName) {
-            this.regionName = regionName;
+            $.regionName = regionName;
             return this;
-        }        public DiskLocation build() {
-            return new DiskLocation(availabilityZone, regionName);
+        }
+
+        public DiskLocation build() {
+            return $;
         }
     }
+
 }

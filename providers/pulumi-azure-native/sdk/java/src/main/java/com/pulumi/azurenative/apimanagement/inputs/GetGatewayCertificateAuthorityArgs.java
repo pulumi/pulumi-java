@@ -17,7 +17,7 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateId", required=true)
-      private final String certificateId;
+    private String certificateId;
 
     public String certificateId() {
         return this.certificateId;
@@ -28,7 +28,7 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final String gatewayId;
+    private String gatewayId;
 
     public String gatewayId() {
         return this.gatewayId;
@@ -39,7 +39,7 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetGatewayCertificateAuthorityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetGatewayCertificateAuthorityArgs(
-        String certificateId,
-        String gatewayId,
-        String resourceGroupName,
-        String serviceName) {
-        this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetGatewayCertificateAuthorityArgs() {}
 
-    private GetGatewayCertificateAuthorityArgs() {
-        this.certificateId = null;
-        this.gatewayId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetGatewayCertificateAuthorityArgs(GetGatewayCertificateAuthorityArgs $) {
+        this.certificateId = $.certificateId;
+        this.gatewayId = $.gatewayId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGatewayCertificateAuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateId;
-        private String gatewayId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetGatewayCertificateAuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGatewayCertificateAuthorityArgs();
         }
 
         public Builder(GetGatewayCertificateAuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetGatewayCertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(String certificateId) {
-            this.certificateId = Objects.requireNonNull(certificateId);
+            $.certificateId = certificateId;
             return this;
         }
+
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetGatewayCertificateAuthorityArgs build() {
-            return new GetGatewayCertificateAuthorityArgs(certificateId, gatewayId, resourceGroupName, serviceName);
+        }
+
+        public GetGatewayCertificateAuthorityArgs build() {
+            $.certificateId = Objects.requireNonNull($.certificateId, "expected parameter 'certificateId' to be non-null");
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.codeguruprofiler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class AgentPermissionsPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="principals", required=true)
-      private final Output<List<String>> principals;
+    private Output<List<String>> principals;
 
     public Output<List<String>> principals() {
         return this.principals;
     }
 
-    public AgentPermissionsPropertiesArgs(Output<List<String>> principals) {
-        this.principals = Objects.requireNonNull(principals, "expected parameter 'principals' to be non-null");
-    }
+    private AgentPermissionsPropertiesArgs() {}
 
-    private AgentPermissionsPropertiesArgs() {
-        this.principals = Codegen.empty();
+    private AgentPermissionsPropertiesArgs(AgentPermissionsPropertiesArgs $) {
+        this.principals = $.principals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPermissionsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> principals;
+        private AgentPermissionsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPermissionsPropertiesArgs();
         }
 
         public Builder(AgentPermissionsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principals = defaults.principals;
+            $ = new AgentPermissionsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principals(Output<List<String>> principals) {
-            this.principals = Objects.requireNonNull(principals);
+            $.principals = principals;
             return this;
         }
+
         public Builder principals(List<String> principals) {
-            this.principals = Output.of(Objects.requireNonNull(principals));
-            return this;
+            return principals(Output.of(principals));
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
-        }        public AgentPermissionsPropertiesArgs build() {
-            return new AgentPermissionsPropertiesArgs(principals);
+        }
+
+        public AgentPermissionsPropertiesArgs build() {
+            $.principals = Objects.requireNonNull($.principals, "expected parameter 'principals' to be non-null");
+            return $;
         }
     }
+
 }

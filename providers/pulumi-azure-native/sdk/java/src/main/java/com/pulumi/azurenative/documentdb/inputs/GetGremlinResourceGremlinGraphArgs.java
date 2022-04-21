@@ -17,7 +17,7 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="graphName", required=true)
-      private final String graphName;
+    private String graphName;
 
     public String graphName() {
         return this.graphName;
@@ -50,73 +50,66 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGremlinResourceGremlinGraphArgs(
-        String accountName,
-        String databaseName,
-        String graphName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.graphName = Objects.requireNonNull(graphName, "expected parameter 'graphName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGremlinResourceGremlinGraphArgs() {}
 
-    private GetGremlinResourceGremlinGraphArgs() {
-        this.accountName = null;
-        this.databaseName = null;
-        this.graphName = null;
-        this.resourceGroupName = null;
+    private GetGremlinResourceGremlinGraphArgs(GetGremlinResourceGremlinGraphArgs $) {
+        this.accountName = $.accountName;
+        this.databaseName = $.databaseName;
+        this.graphName = $.graphName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGremlinResourceGremlinGraphArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String databaseName;
-        private String graphName;
-        private String resourceGroupName;
+        private GetGremlinResourceGremlinGraphArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGremlinResourceGremlinGraphArgs();
         }
 
         public Builder(GetGremlinResourceGremlinGraphArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.graphName = defaults.graphName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGremlinResourceGremlinGraphArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder graphName(String graphName) {
-            this.graphName = Objects.requireNonNull(graphName);
+            $.graphName = graphName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGremlinResourceGremlinGraphArgs build() {
-            return new GetGremlinResourceGremlinGraphArgs(accountName, databaseName, graphName, resourceGroupName);
+        }
+
+        public GetGremlinResourceGremlinGraphArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.graphName = Objects.requireNonNull($.graphName, "expected parameter 'graphName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

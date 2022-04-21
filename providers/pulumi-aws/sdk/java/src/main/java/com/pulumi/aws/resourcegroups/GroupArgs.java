@@ -6,10 +6,10 @@ package com.pulumi.aws.resourcegroups;
 import com.pulumi.aws.resourcegroups.inputs.GroupResourceQueryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceQuery", required=true)
-      private final Output<GroupResourceQueryArgs> resourceQuery;
+    private Output<GroupResourceQueryArgs> resourceQuery;
 
     public Output<GroupResourceQueryArgs> resourceQuery() {
         return this.resourceQuery;
@@ -55,89 +55,79 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<GroupResourceQueryArgs> resourceQuery,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.name = name;
-        this.resourceQuery = Objects.requireNonNull(resourceQuery, "expected parameter 'resourceQuery' to be non-null");
-        this.tags = tags;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceQuery = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.resourceQuery = $.resourceQuery;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<GroupResourceQueryArgs> resourceQuery;
-        private @Nullable Output<Map<String,String>> tags;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.resourceQuery = defaults.resourceQuery;
-    	      this.tags = defaults.tags;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceQuery(Output<GroupResourceQueryArgs> resourceQuery) {
-            this.resourceQuery = Objects.requireNonNull(resourceQuery);
+            $.resourceQuery = resourceQuery;
             return this;
         }
+
         public Builder resourceQuery(GroupResourceQueryArgs resourceQuery) {
-            this.resourceQuery = Output.of(Objects.requireNonNull(resourceQuery));
-            return this;
+            return resourceQuery(Output.of(resourceQuery));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(description, name, resourceQuery, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public GroupArgs build() {
+            $.resourceQuery = Objects.requireNonNull($.resourceQuery, "expected parameter 'resourceQuery' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowNoResourceGroupMatch")
-      private final @Nullable Output<Boolean> allowNoResourceGroupMatch;
+    private @Nullable Output<Boolean> allowNoResourceGroupMatch;
 
-    public Output<Boolean> allowNoResourceGroupMatch() {
-        return this.allowNoResourceGroupMatch == null ? Codegen.empty() : this.allowNoResourceGroupMatch;
+    public Optional<Output<Boolean>> allowNoResourceGroupMatch() {
+        return Optional.ofNullable(this.allowNoResourceGroupMatch);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OsPolicyAssignmentOsPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
@@ -67,105 +67,95 @@ public final class OsPolicyAssignmentOsPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroups", required=true)
-      private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups;
+    private Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups;
 
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups() {
         return this.resourceGroups;
     }
 
-    public OsPolicyAssignmentOsPolicyArgs(
-        @Nullable Output<Boolean> allowNoResourceGroupMatch,
-        @Nullable Output<String> description,
-        Output<String> id,
-        Output<String> mode,
-        Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups) {
-        this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
-        this.description = description;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.resourceGroups = Objects.requireNonNull(resourceGroups, "expected parameter 'resourceGroups' to be non-null");
-    }
+    private OsPolicyAssignmentOsPolicyArgs() {}
 
-    private OsPolicyAssignmentOsPolicyArgs() {
-        this.allowNoResourceGroupMatch = Codegen.empty();
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.resourceGroups = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyArgs(OsPolicyAssignmentOsPolicyArgs $) {
+        this.allowNoResourceGroupMatch = $.allowNoResourceGroupMatch;
+        this.description = $.description;
+        this.id = $.id;
+        this.mode = $.mode;
+        this.resourceGroups = $.resourceGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowNoResourceGroupMatch;
-        private @Nullable Output<String> description;
-        private Output<String> id;
-        private Output<String> mode;
-        private Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups;
+        private OsPolicyAssignmentOsPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNoResourceGroupMatch = defaults.allowNoResourceGroupMatch;
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.mode = defaults.mode;
-    	      this.resourceGroups = defaults.resourceGroups;
+            $ = new OsPolicyAssignmentOsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNoResourceGroupMatch(@Nullable Output<Boolean> allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
+            $.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
-        public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = Codegen.ofNullable(allowNoResourceGroupMatch);
-            return this;
+
+        public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
+            return allowNoResourceGroupMatch(Output.of(allowNoResourceGroupMatch));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder resourceGroups(Output<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups) {
-            this.resourceGroups = Objects.requireNonNull(resourceGroups);
+            $.resourceGroups = resourceGroups;
             return this;
         }
+
         public Builder resourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroupArgs> resourceGroups) {
-            this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
-            return this;
+            return resourceGroups(Output.of(resourceGroups));
         }
+
         public Builder resourceGroups(OsPolicyAssignmentOsPolicyResourceGroupArgs... resourceGroups) {
             return resourceGroups(List.of(resourceGroups));
-        }        public OsPolicyAssignmentOsPolicyArgs build() {
-            return new OsPolicyAssignmentOsPolicyArgs(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
+        }
+
+        public OsPolicyAssignmentOsPolicyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.resourceGroups = Objects.requireNonNull($.resourceGroups, "expected parameter 'resourceGroups' to be non-null");
+            return $;
         }
     }
+
 }

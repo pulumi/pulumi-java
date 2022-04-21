@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DatastoreIODetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DatastoreIODetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatastoreIODetailsArgs(
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> project) {
-        this.namespace = namespace;
-        this.project = project;
-    }
+    private DatastoreIODetailsArgs() {}
 
-    private DatastoreIODetailsArgs() {
-        this.namespace = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatastoreIODetailsArgs(DatastoreIODetailsArgs $) {
+        this.namespace = $.namespace;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreIODetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> project;
+        private DatastoreIODetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreIODetailsArgs();
         }
 
         public Builder(DatastoreIODetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
-    	      this.project = defaults.project;
+            $ = new DatastoreIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatastoreIODetailsArgs build() {
-            return new DatastoreIODetailsArgs(namespace, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatastoreIODetailsArgs build() {
+            return $;
         }
     }
+
 }

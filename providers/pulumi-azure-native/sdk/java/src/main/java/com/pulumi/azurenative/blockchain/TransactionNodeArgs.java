@@ -6,10 +6,10 @@ package com.pulumi.azurenative.blockchain;
 import com.pulumi.azurenative.blockchain.inputs.FirewallRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="blockchainMemberName", required=true)
-      private final Output<String> blockchainMemberName;
+    private Output<String> blockchainMemberName;
 
     public Output<String> blockchainMemberName() {
         return this.blockchainMemberName;
@@ -33,10 +33,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="firewallRules")
-      private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
+    private @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
-    public Output<List<FirewallRuleArgs>> firewallRules() {
-        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
+    public Optional<Output<List<FirewallRuleArgs>>> firewallRules() {
+        return Optional.ofNullable(this.firewallRules);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,118 +77,104 @@ public final class TransactionNodeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="transactionNodeName")
-      private final @Nullable Output<String> transactionNodeName;
+    private @Nullable Output<String> transactionNodeName;
 
-    public Output<String> transactionNodeName() {
-        return this.transactionNodeName == null ? Codegen.empty() : this.transactionNodeName;
+    public Optional<Output<String>> transactionNodeName() {
+        return Optional.ofNullable(this.transactionNodeName);
     }
 
-    public TransactionNodeArgs(
-        Output<String> blockchainMemberName,
-        @Nullable Output<List<FirewallRuleArgs>> firewallRules,
-        @Nullable Output<String> location,
-        @Nullable Output<String> password,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> transactionNodeName) {
-        this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
-        this.firewallRules = firewallRules;
-        this.location = location;
-        this.password = password;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.transactionNodeName = transactionNodeName;
-    }
+    private TransactionNodeArgs() {}
 
-    private TransactionNodeArgs() {
-        this.blockchainMemberName = Codegen.empty();
-        this.firewallRules = Codegen.empty();
-        this.location = Codegen.empty();
-        this.password = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.transactionNodeName = Codegen.empty();
+    private TransactionNodeArgs(TransactionNodeArgs $) {
+        this.blockchainMemberName = $.blockchainMemberName;
+        this.firewallRules = $.firewallRules;
+        this.location = $.location;
+        this.password = $.password;
+        this.resourceGroupName = $.resourceGroupName;
+        this.transactionNodeName = $.transactionNodeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransactionNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> blockchainMemberName;
-        private @Nullable Output<List<FirewallRuleArgs>> firewallRules;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> password;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> transactionNodeName;
+        private TransactionNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransactionNodeArgs();
         }
 
         public Builder(TransactionNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockchainMemberName = defaults.blockchainMemberName;
-    	      this.firewallRules = defaults.firewallRules;
-    	      this.location = defaults.location;
-    	      this.password = defaults.password;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.transactionNodeName = defaults.transactionNodeName;
+            $ = new TransactionNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockchainMemberName(Output<String> blockchainMemberName) {
-            this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
+            $.blockchainMemberName = blockchainMemberName;
             return this;
         }
+
         public Builder blockchainMemberName(String blockchainMemberName) {
-            this.blockchainMemberName = Output.of(Objects.requireNonNull(blockchainMemberName));
-            return this;
+            return blockchainMemberName(Output.of(blockchainMemberName));
         }
+
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
-            this.firewallRules = firewallRules;
+            $.firewallRules = firewallRules;
             return this;
         }
-        public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
-            this.firewallRules = Codegen.ofNullable(firewallRules);
-            return this;
+
+        public Builder firewallRules(List<FirewallRuleArgs> firewallRules) {
+            return firewallRules(Output.of(firewallRules));
         }
+
         public Builder firewallRules(FirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder transactionNodeName(@Nullable Output<String> transactionNodeName) {
-            this.transactionNodeName = transactionNodeName;
+            $.transactionNodeName = transactionNodeName;
             return this;
         }
-        public Builder transactionNodeName(@Nullable String transactionNodeName) {
-            this.transactionNodeName = Codegen.ofNullable(transactionNodeName);
-            return this;
-        }        public TransactionNodeArgs build() {
-            return new TransactionNodeArgs(blockchainMemberName, firewallRules, location, password, resourceGroupName, transactionNodeName);
+
+        public Builder transactionNodeName(String transactionNodeName) {
+            return transactionNodeName(Output.of(transactionNodeName));
+        }
+
+        public TransactionNodeArgs build() {
+            $.blockchainMemberName = Objects.requireNonNull($.blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

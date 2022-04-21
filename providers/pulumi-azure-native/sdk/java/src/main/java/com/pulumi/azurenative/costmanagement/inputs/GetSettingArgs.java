@@ -17,45 +17,45 @@ public final class GetSettingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="settingName", required=true)
-      private final String settingName;
+    private String settingName;
 
     public String settingName() {
         return this.settingName;
     }
 
-    public GetSettingArgs(String settingName) {
-        this.settingName = Objects.requireNonNull(settingName, "expected parameter 'settingName' to be non-null");
-    }
+    private GetSettingArgs() {}
 
-    private GetSettingArgs() {
-        this.settingName = null;
+    private GetSettingArgs(GetSettingArgs $) {
+        this.settingName = $.settingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String settingName;
+        private GetSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSettingArgs();
         }
 
         public Builder(GetSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.settingName = defaults.settingName;
+            $ = new GetSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder settingName(String settingName) {
-            this.settingName = Objects.requireNonNull(settingName);
+            $.settingName = settingName;
             return this;
-        }        public GetSettingArgs build() {
-            return new GetSettingArgs(settingName);
+        }
+
+        public GetSettingArgs build() {
+            $.settingName = Objects.requireNonNull($.settingName, "expected parameter 'settingName' to be non-null");
+            return $;
         }
     }
+
 }

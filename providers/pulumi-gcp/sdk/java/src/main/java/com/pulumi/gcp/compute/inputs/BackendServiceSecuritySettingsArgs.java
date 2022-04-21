@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +21,7 @@ public final class BackendServiceSecuritySettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="clientTlsPolicy", required=true)
-      private final Output<String> clientTlsPolicy;
+    private Output<String> clientTlsPolicy;
 
     public Output<String> clientTlsPolicy() {
         return this.clientTlsPolicy;
@@ -35,66 +34,64 @@ public final class BackendServiceSecuritySettingsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="subjectAltNames", required=true)
-      private final Output<List<String>> subjectAltNames;
+    private Output<List<String>> subjectAltNames;
 
     public Output<List<String>> subjectAltNames() {
         return this.subjectAltNames;
     }
 
-    public BackendServiceSecuritySettingsArgs(
-        Output<String> clientTlsPolicy,
-        Output<List<String>> subjectAltNames) {
-        this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
-        this.subjectAltNames = Objects.requireNonNull(subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
-    }
+    private BackendServiceSecuritySettingsArgs() {}
 
-    private BackendServiceSecuritySettingsArgs() {
-        this.clientTlsPolicy = Codegen.empty();
-        this.subjectAltNames = Codegen.empty();
+    private BackendServiceSecuritySettingsArgs(BackendServiceSecuritySettingsArgs $) {
+        this.clientTlsPolicy = $.clientTlsPolicy;
+        this.subjectAltNames = $.subjectAltNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceSecuritySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientTlsPolicy;
-        private Output<List<String>> subjectAltNames;
+        private BackendServiceSecuritySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceSecuritySettingsArgs();
         }
 
         public Builder(BackendServiceSecuritySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTlsPolicy = defaults.clientTlsPolicy;
-    	      this.subjectAltNames = defaults.subjectAltNames;
+            $ = new BackendServiceSecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTlsPolicy(Output<String> clientTlsPolicy) {
-            this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
+            $.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
+
         public Builder clientTlsPolicy(String clientTlsPolicy) {
-            this.clientTlsPolicy = Output.of(Objects.requireNonNull(clientTlsPolicy));
-            return this;
+            return clientTlsPolicy(Output.of(clientTlsPolicy));
         }
+
         public Builder subjectAltNames(Output<List<String>> subjectAltNames) {
-            this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
+            $.subjectAltNames = subjectAltNames;
             return this;
         }
+
         public Builder subjectAltNames(List<String> subjectAltNames) {
-            this.subjectAltNames = Output.of(Objects.requireNonNull(subjectAltNames));
-            return this;
+            return subjectAltNames(Output.of(subjectAltNames));
         }
+
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
-        }        public BackendServiceSecuritySettingsArgs build() {
-            return new BackendServiceSecuritySettingsArgs(clientTlsPolicy, subjectAltNames);
+        }
+
+        public BackendServiceSecuritySettingsArgs build() {
+            $.clientTlsPolicy = Objects.requireNonNull($.clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
+            $.subjectAltNames = Objects.requireNonNull($.subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.glacier.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class VaultNotificationGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="events", required=true)
-      private final Output<List<String>> events;
+    private Output<List<String>> events;
 
     public Output<List<String>> events() {
         return this.events;
@@ -31,66 +30,64 @@ public final class VaultNotificationGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="snsTopic", required=true)
-      private final Output<String> snsTopic;
+    private Output<String> snsTopic;
 
     public Output<String> snsTopic() {
         return this.snsTopic;
     }
 
-    public VaultNotificationGetArgs(
-        Output<List<String>> events,
-        Output<String> snsTopic) {
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.snsTopic = Objects.requireNonNull(snsTopic, "expected parameter 'snsTopic' to be non-null");
-    }
+    private VaultNotificationGetArgs() {}
 
-    private VaultNotificationGetArgs() {
-        this.events = Codegen.empty();
-        this.snsTopic = Codegen.empty();
+    private VaultNotificationGetArgs(VaultNotificationGetArgs $) {
+        this.events = $.events;
+        this.snsTopic = $.snsTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultNotificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> events;
-        private Output<String> snsTopic;
+        private VaultNotificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultNotificationGetArgs();
         }
 
         public Builder(VaultNotificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
-    	      this.snsTopic = defaults.snsTopic;
+            $ = new VaultNotificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder events(Output<List<String>> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(List<String> events) {
-            this.events = Output.of(Objects.requireNonNull(events));
-            return this;
+            return events(Output.of(events));
         }
+
         public Builder events(String... events) {
             return events(List.of(events));
         }
+
         public Builder snsTopic(Output<String> snsTopic) {
-            this.snsTopic = Objects.requireNonNull(snsTopic);
+            $.snsTopic = snsTopic;
             return this;
         }
+
         public Builder snsTopic(String snsTopic) {
-            this.snsTopic = Output.of(Objects.requireNonNull(snsTopic));
-            return this;
-        }        public VaultNotificationGetArgs build() {
-            return new VaultNotificationGetArgs(events, snsTopic);
+            return snsTopic(Output.of(snsTopic));
+        }
+
+        public VaultNotificationGetArgs build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.snsTopic = Objects.requireNonNull($.snsTopic, "expected parameter 'snsTopic' to be non-null");
+            return $;
         }
     }
+
 }

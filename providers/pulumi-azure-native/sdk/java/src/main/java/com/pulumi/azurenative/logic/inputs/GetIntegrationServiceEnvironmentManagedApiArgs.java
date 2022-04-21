@@ -17,7 +17,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
      * 
      */
     @Import(name="apiName", required=true)
-      private final String apiName;
+    private String apiName;
 
     public String apiName() {
         return this.apiName;
@@ -28,7 +28,7 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
      * 
      */
     @Import(name="integrationServiceEnvironmentName", required=true)
-      private final String integrationServiceEnvironmentName;
+    private String integrationServiceEnvironmentName;
 
     public String integrationServiceEnvironmentName() {
         return this.integrationServiceEnvironmentName;
@@ -39,64 +39,59 @@ public final class GetIntegrationServiceEnvironmentManagedApiArgs extends com.pu
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final String resourceGroup;
+    private String resourceGroup;
 
     public String resourceGroup() {
         return this.resourceGroup;
     }
 
-    public GetIntegrationServiceEnvironmentManagedApiArgs(
-        String apiName,
-        String integrationServiceEnvironmentName,
-        String resourceGroup) {
-        this.apiName = Objects.requireNonNull(apiName, "expected parameter 'apiName' to be non-null");
-        this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName, "expected parameter 'integrationServiceEnvironmentName' to be non-null");
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-    }
+    private GetIntegrationServiceEnvironmentManagedApiArgs() {}
 
-    private GetIntegrationServiceEnvironmentManagedApiArgs() {
-        this.apiName = null;
-        this.integrationServiceEnvironmentName = null;
-        this.resourceGroup = null;
+    private GetIntegrationServiceEnvironmentManagedApiArgs(GetIntegrationServiceEnvironmentManagedApiArgs $) {
+        this.apiName = $.apiName;
+        this.integrationServiceEnvironmentName = $.integrationServiceEnvironmentName;
+        this.resourceGroup = $.resourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationServiceEnvironmentManagedApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiName;
-        private String integrationServiceEnvironmentName;
-        private String resourceGroup;
+        private GetIntegrationServiceEnvironmentManagedApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationServiceEnvironmentManagedApiArgs();
         }
 
         public Builder(GetIntegrationServiceEnvironmentManagedApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiName = defaults.apiName;
-    	      this.integrationServiceEnvironmentName = defaults.integrationServiceEnvironmentName;
-    	      this.resourceGroup = defaults.resourceGroup;
+            $ = new GetIntegrationServiceEnvironmentManagedApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiName(String apiName) {
-            this.apiName = Objects.requireNonNull(apiName);
+            $.apiName = apiName;
             return this;
         }
+
         public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
-            this.integrationServiceEnvironmentName = Objects.requireNonNull(integrationServiceEnvironmentName);
+            $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
-        }        public GetIntegrationServiceEnvironmentManagedApiArgs build() {
-            return new GetIntegrationServiceEnvironmentManagedApiArgs(apiName, integrationServiceEnvironmentName, resourceGroup);
+        }
+
+        public GetIntegrationServiceEnvironmentManagedApiArgs build() {
+            $.apiName = Objects.requireNonNull($.apiName, "expected parameter 'apiName' to be non-null");
+            $.integrationServiceEnvironmentName = Objects.requireNonNull($.integrationServiceEnvironmentName, "expected parameter 'integrationServiceEnvironmentName' to be non-null");
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

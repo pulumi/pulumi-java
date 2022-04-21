@@ -7,7 +7,6 @@ import com.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentTyp
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentConfigurationDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +23,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
      * 
      */
     @Import(name="subComponentConfigurationDetails", required=true)
-      private final Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
+    private Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
     public Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
@@ -35,63 +34,60 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends com.pulu
      * 
      */
     @Import(name="subComponentType", required=true)
-      private final Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
+    private Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
     public Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType() {
         return this.subComponentType;
     }
 
-    public ApplicationSubComponentTypeConfigurationArgs(
-        Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails,
-        Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
-        this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails, "expected parameter 'subComponentConfigurationDetails' to be non-null");
-        this.subComponentType = Objects.requireNonNull(subComponentType, "expected parameter 'subComponentType' to be non-null");
-    }
+    private ApplicationSubComponentTypeConfigurationArgs() {}
 
-    private ApplicationSubComponentTypeConfigurationArgs() {
-        this.subComponentConfigurationDetails = Codegen.empty();
-        this.subComponentType = Codegen.empty();
+    private ApplicationSubComponentTypeConfigurationArgs(ApplicationSubComponentTypeConfigurationArgs $) {
+        this.subComponentConfigurationDetails = $.subComponentConfigurationDetails;
+        this.subComponentType = $.subComponentType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationSubComponentTypeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
-        private Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
+        private ApplicationSubComponentTypeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationSubComponentTypeConfigurationArgs();
         }
 
         public Builder(ApplicationSubComponentTypeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subComponentConfigurationDetails = defaults.subComponentConfigurationDetails;
-    	      this.subComponentType = defaults.subComponentType;
+            $ = new ApplicationSubComponentTypeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subComponentConfigurationDetails(Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails) {
-            this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
+            $.subComponentConfigurationDetails = subComponentConfigurationDetails;
             return this;
         }
+
         public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetailsArgs subComponentConfigurationDetails) {
-            this.subComponentConfigurationDetails = Output.of(Objects.requireNonNull(subComponentConfigurationDetails));
-            return this;
+            return subComponentConfigurationDetails(Output.of(subComponentConfigurationDetails));
         }
+
         public Builder subComponentType(Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
-            this.subComponentType = Objects.requireNonNull(subComponentType);
+            $.subComponentType = subComponentType;
             return this;
         }
+
         public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
-            this.subComponentType = Output.of(Objects.requireNonNull(subComponentType));
-            return this;
-        }        public ApplicationSubComponentTypeConfigurationArgs build() {
-            return new ApplicationSubComponentTypeConfigurationArgs(subComponentConfigurationDetails, subComponentType);
+            return subComponentType(Output.of(subComponentType));
+        }
+
+        public ApplicationSubComponentTypeConfigurationArgs build() {
+            $.subComponentConfigurationDetails = Objects.requireNonNull($.subComponentConfigurationDetails, "expected parameter 'subComponentConfigurationDetails' to be non-null");
+            $.subComponentType = Objects.requireNonNull($.subComponentType, "expected parameter 'subComponentType' to be non-null");
+            return $;
         }
     }
+
 }

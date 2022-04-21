@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.TlsCertificateContextCertificateSource;
 import com.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificatePaths")
-      private final @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
+    private @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
 
-    public Output<TlsCertificatePathsArgs> certificatePaths() {
-        return this.certificatePaths == null ? Codegen.empty() : this.certificatePaths;
+    public Optional<Output<TlsCertificatePathsArgs>> certificatePaths() {
+        return Optional.ofNullable(this.certificatePaths);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateSource")
-      private final @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
+    private @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
 
-    public Output<TlsCertificateContextCertificateSource> certificateSource() {
-        return this.certificateSource == null ? Codegen.empty() : this.certificateSource;
+    public Optional<Output<TlsCertificateContextCertificateSource>> certificateSource() {
+        return Optional.ofNullable(this.certificateSource);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class TlsCertificateContextArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sdsConfig")
-      private final @Nullable Output<SdsConfigArgs> sdsConfig;
+    private @Nullable Output<SdsConfigArgs> sdsConfig;
 
-    public Output<SdsConfigArgs> sdsConfig() {
-        return this.sdsConfig == null ? Codegen.empty() : this.sdsConfig;
+    public Optional<Output<SdsConfigArgs>> sdsConfig() {
+        return Optional.ofNullable(this.sdsConfig);
     }
 
-    public TlsCertificateContextArgs(
-        @Nullable Output<TlsCertificatePathsArgs> certificatePaths,
-        @Nullable Output<TlsCertificateContextCertificateSource> certificateSource,
-        @Nullable Output<SdsConfigArgs> sdsConfig) {
-        this.certificatePaths = certificatePaths;
-        this.certificateSource = certificateSource;
-        this.sdsConfig = sdsConfig;
-    }
+    private TlsCertificateContextArgs() {}
 
-    private TlsCertificateContextArgs() {
-        this.certificatePaths = Codegen.empty();
-        this.certificateSource = Codegen.empty();
-        this.sdsConfig = Codegen.empty();
+    private TlsCertificateContextArgs(TlsCertificateContextArgs $) {
+        this.certificatePaths = $.certificatePaths;
+        this.certificateSource = $.certificateSource;
+        this.sdsConfig = $.sdsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsCertificateContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
-        private @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
-        private @Nullable Output<SdsConfigArgs> sdsConfig;
+        private TlsCertificateContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsCertificateContextArgs();
         }
 
         public Builder(TlsCertificateContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePaths = defaults.certificatePaths;
-    	      this.certificateSource = defaults.certificateSource;
-    	      this.sdsConfig = defaults.sdsConfig;
+            $ = new TlsCertificateContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePaths(@Nullable Output<TlsCertificatePathsArgs> certificatePaths) {
-            this.certificatePaths = certificatePaths;
+            $.certificatePaths = certificatePaths;
             return this;
         }
-        public Builder certificatePaths(@Nullable TlsCertificatePathsArgs certificatePaths) {
-            this.certificatePaths = Codegen.ofNullable(certificatePaths);
-            return this;
+
+        public Builder certificatePaths(TlsCertificatePathsArgs certificatePaths) {
+            return certificatePaths(Output.of(certificatePaths));
         }
+
         public Builder certificateSource(@Nullable Output<TlsCertificateContextCertificateSource> certificateSource) {
-            this.certificateSource = certificateSource;
+            $.certificateSource = certificateSource;
             return this;
         }
-        public Builder certificateSource(@Nullable TlsCertificateContextCertificateSource certificateSource) {
-            this.certificateSource = Codegen.ofNullable(certificateSource);
-            return this;
+
+        public Builder certificateSource(TlsCertificateContextCertificateSource certificateSource) {
+            return certificateSource(Output.of(certificateSource));
         }
+
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
-            this.sdsConfig = sdsConfig;
+            $.sdsConfig = sdsConfig;
             return this;
         }
-        public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
-            this.sdsConfig = Codegen.ofNullable(sdsConfig);
-            return this;
-        }        public TlsCertificateContextArgs build() {
-            return new TlsCertificateContextArgs(certificatePaths, certificateSource, sdsConfig);
+
+        public Builder sdsConfig(SdsConfigArgs sdsConfig) {
+            return sdsConfig(Output.of(sdsConfig));
+        }
+
+        public TlsCertificateContextArgs build() {
+            return $;
         }
     }
+
 }

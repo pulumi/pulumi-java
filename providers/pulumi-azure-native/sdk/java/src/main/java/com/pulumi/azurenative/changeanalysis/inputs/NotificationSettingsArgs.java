@@ -8,9 +8,9 @@ import com.pulumi.azurenative.changeanalysis.inputs.AzureMonitorWorkspacePropert
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="activationState")
-      private final @Nullable Output<Either<String,NotificationsState>> activationState;
+    private @Nullable Output<Either<String,NotificationsState>> activationState;
 
-    public Output<Either<String,NotificationsState>> activationState() {
-        return this.activationState == null ? Codegen.empty() : this.activationState;
+    public Optional<Output<Either<String,NotificationsState>>> activationState() {
+        return Optional.ofNullable(this.activationState);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="azureMonitorWorkspaceProperties")
-      private final @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
+    private @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
 
-    public Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties() {
-        return this.azureMonitorWorkspaceProperties == null ? Codegen.empty() : this.azureMonitorWorkspaceProperties;
+    public Optional<Output<AzureMonitorWorkspacePropertiesArgs>> azureMonitorWorkspaceProperties() {
+        return Optional.ofNullable(this.azureMonitorWorkspaceProperties);
     }
 
-    public NotificationSettingsArgs(
-        @Nullable Output<Either<String,NotificationsState>> activationState,
-        @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
-        this.activationState = activationState;
-        this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
-    }
+    private NotificationSettingsArgs() {}
 
-    private NotificationSettingsArgs() {
-        this.activationState = Codegen.empty();
-        this.azureMonitorWorkspaceProperties = Codegen.empty();
+    private NotificationSettingsArgs(NotificationSettingsArgs $) {
+        this.activationState = $.activationState;
+        this.azureMonitorWorkspaceProperties = $.azureMonitorWorkspaceProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NotificationsState>> activationState;
-        private @Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties;
+        private NotificationSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationSettingsArgs();
         }
 
         public Builder(NotificationSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationState = defaults.activationState;
-    	      this.azureMonitorWorkspaceProperties = defaults.azureMonitorWorkspaceProperties;
+            $ = new NotificationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activationState(@Nullable Output<Either<String,NotificationsState>> activationState) {
-            this.activationState = activationState;
+            $.activationState = activationState;
             return this;
         }
-        public Builder activationState(@Nullable Either<String,NotificationsState> activationState) {
-            this.activationState = Codegen.ofNullable(activationState);
-            return this;
+
+        public Builder activationState(Either<String,NotificationsState> activationState) {
+            return activationState(Output.of(activationState));
         }
+
         public Builder azureMonitorWorkspaceProperties(@Nullable Output<AzureMonitorWorkspacePropertiesArgs> azureMonitorWorkspaceProperties) {
-            this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
+            $.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }
-        public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesArgs azureMonitorWorkspaceProperties) {
-            this.azureMonitorWorkspaceProperties = Codegen.ofNullable(azureMonitorWorkspaceProperties);
-            return this;
-        }        public NotificationSettingsArgs build() {
-            return new NotificationSettingsArgs(activationState, azureMonitorWorkspaceProperties);
+
+        public Builder azureMonitorWorkspaceProperties(AzureMonitorWorkspacePropertiesArgs azureMonitorWorkspaceProperties) {
+            return azureMonitorWorkspaceProperties(Output.of(azureMonitorWorkspaceProperties));
+        }
+
+        public NotificationSettingsArgs build() {
+            return $;
         }
     }
+
 }

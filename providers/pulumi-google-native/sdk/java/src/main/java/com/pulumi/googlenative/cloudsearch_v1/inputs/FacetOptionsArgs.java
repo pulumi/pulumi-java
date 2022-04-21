@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numFacetBuckets")
-      private final @Nullable Output<Integer> numFacetBuckets;
+    private @Nullable Output<Integer> numFacetBuckets;
 
-    public Output<Integer> numFacetBuckets() {
-        return this.numFacetBuckets == null ? Codegen.empty() : this.numFacetBuckets;
+    public Optional<Output<Integer>> numFacetBuckets() {
+        return Optional.ofNullable(this.numFacetBuckets);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectType")
-      private final @Nullable Output<String> objectType;
+    private @Nullable Output<String> objectType;
 
-    public Output<String> objectType() {
-        return this.objectType == null ? Codegen.empty() : this.objectType;
+    public Optional<Output<String>> objectType() {
+        return Optional.ofNullable(this.objectType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatorName")
-      private final @Nullable Output<String> operatorName;
+    private @Nullable Output<String> operatorName;
 
-    public Output<String> operatorName() {
-        return this.operatorName == null ? Codegen.empty() : this.operatorName;
+    public Optional<Output<String>> operatorName() {
+        return Optional.ofNullable(this.operatorName);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class FacetOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceName")
-      private final @Nullable Output<String> sourceName;
+    private @Nullable Output<String> sourceName;
 
-    public Output<String> sourceName() {
-        return this.sourceName == null ? Codegen.empty() : this.sourceName;
+    public Optional<Output<String>> sourceName() {
+        return Optional.ofNullable(this.sourceName);
     }
 
-    public FacetOptionsArgs(
-        @Nullable Output<Integer> numFacetBuckets,
-        @Nullable Output<String> objectType,
-        @Nullable Output<String> operatorName,
-        @Nullable Output<String> sourceName) {
-        this.numFacetBuckets = numFacetBuckets;
-        this.objectType = objectType;
-        this.operatorName = operatorName;
-        this.sourceName = sourceName;
-    }
+    private FacetOptionsArgs() {}
 
-    private FacetOptionsArgs() {
-        this.numFacetBuckets = Codegen.empty();
-        this.objectType = Codegen.empty();
-        this.operatorName = Codegen.empty();
-        this.sourceName = Codegen.empty();
+    private FacetOptionsArgs(FacetOptionsArgs $) {
+        this.numFacetBuckets = $.numFacetBuckets;
+        this.objectType = $.objectType;
+        this.operatorName = $.operatorName;
+        this.sourceName = $.sourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FacetOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numFacetBuckets;
-        private @Nullable Output<String> objectType;
-        private @Nullable Output<String> operatorName;
-        private @Nullable Output<String> sourceName;
+        private FacetOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FacetOptionsArgs();
         }
 
         public Builder(FacetOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numFacetBuckets = defaults.numFacetBuckets;
-    	      this.objectType = defaults.objectType;
-    	      this.operatorName = defaults.operatorName;
-    	      this.sourceName = defaults.sourceName;
+            $ = new FacetOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numFacetBuckets(@Nullable Output<Integer> numFacetBuckets) {
-            this.numFacetBuckets = numFacetBuckets;
+            $.numFacetBuckets = numFacetBuckets;
             return this;
         }
-        public Builder numFacetBuckets(@Nullable Integer numFacetBuckets) {
-            this.numFacetBuckets = Codegen.ofNullable(numFacetBuckets);
-            return this;
+
+        public Builder numFacetBuckets(Integer numFacetBuckets) {
+            return numFacetBuckets(Output.of(numFacetBuckets));
         }
+
         public Builder objectType(@Nullable Output<String> objectType) {
-            this.objectType = objectType;
+            $.objectType = objectType;
             return this;
         }
-        public Builder objectType(@Nullable String objectType) {
-            this.objectType = Codegen.ofNullable(objectType);
-            return this;
+
+        public Builder objectType(String objectType) {
+            return objectType(Output.of(objectType));
         }
+
         public Builder operatorName(@Nullable Output<String> operatorName) {
-            this.operatorName = operatorName;
+            $.operatorName = operatorName;
             return this;
         }
-        public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Codegen.ofNullable(operatorName);
-            return this;
+
+        public Builder operatorName(String operatorName) {
+            return operatorName(Output.of(operatorName));
         }
+
         public Builder sourceName(@Nullable Output<String> sourceName) {
-            this.sourceName = sourceName;
+            $.sourceName = sourceName;
             return this;
         }
-        public Builder sourceName(@Nullable String sourceName) {
-            this.sourceName = Codegen.ofNullable(sourceName);
-            return this;
-        }        public FacetOptionsArgs build() {
-            return new FacetOptionsArgs(numFacetBuckets, objectType, operatorName, sourceName);
+
+        public Builder sourceName(String sourceName) {
+            return sourceName(Output.of(sourceName));
+        }
+
+        public FacetOptionsArgs build() {
+            return $;
         }
     }
+
 }

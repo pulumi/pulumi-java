@@ -17,7 +17,7 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -28,55 +28,52 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends com.pul
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
-    public GetPipelineDefinitionParameterObjectAttribute(
-        String key,
-        String stringValue) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private GetPipelineDefinitionParameterObjectAttribute() {}
 
-    private GetPipelineDefinitionParameterObjectAttribute() {
-        this.key = null;
-        this.stringValue = null;
+    private GetPipelineDefinitionParameterObjectAttribute(GetPipelineDefinitionParameterObjectAttribute $) {
+        this.key = $.key;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineDefinitionParameterObjectAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String stringValue;
+        private GetPipelineDefinitionParameterObjectAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineDefinitionParameterObjectAttribute();
         }
 
         public Builder(GetPipelineDefinitionParameterObjectAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.stringValue = defaults.stringValue;
+            $ = new GetPipelineDefinitionParameterObjectAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
-        }        public GetPipelineDefinitionParameterObjectAttribute build() {
-            return new GetPipelineDefinitionParameterObjectAttribute(key, stringValue);
+        }
+
+        public GetPipelineDefinitionParameterObjectAttribute build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

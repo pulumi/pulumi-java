@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends com.pulumi
      * 
      */
     @Import(name="digits", required=true)
-      private final String digits;
+    private String digits;
 
     public String digits() {
         return this.digits;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse extends com.pulumi
      * 
      */
     @Import(name="finishDigit", required=true)
-      private final String finishDigit;
+    private String finishDigit;
 
     public String finishDigit() {
         return this.finishDigit;
     }
 
-    public GoogleCloudDialogflowCxV3DtmfInputResponse(
-        String digits,
-        String finishDigit) {
-        this.digits = Objects.requireNonNull(digits, "expected parameter 'digits' to be non-null");
-        this.finishDigit = Objects.requireNonNull(finishDigit, "expected parameter 'finishDigit' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3DtmfInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3DtmfInputResponse() {
-        this.digits = null;
-        this.finishDigit = null;
+    private GoogleCloudDialogflowCxV3DtmfInputResponse(GoogleCloudDialogflowCxV3DtmfInputResponse $) {
+        this.digits = $.digits;
+        this.finishDigit = $.finishDigit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3DtmfInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String digits;
-        private String finishDigit;
+        private GoogleCloudDialogflowCxV3DtmfInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3DtmfInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3DtmfInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digits = defaults.digits;
-    	      this.finishDigit = defaults.finishDigit;
+            $ = new GoogleCloudDialogflowCxV3DtmfInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder digits(String digits) {
-            this.digits = Objects.requireNonNull(digits);
+            $.digits = digits;
             return this;
         }
+
         public Builder finishDigit(String finishDigit) {
-            this.finishDigit = Objects.requireNonNull(finishDigit);
+            $.finishDigit = finishDigit;
             return this;
-        }        public GoogleCloudDialogflowCxV3DtmfInputResponse build() {
-            return new GoogleCloudDialogflowCxV3DtmfInputResponse(digits, finishDigit);
+        }
+
+        public GoogleCloudDialogflowCxV3DtmfInputResponse build() {
+            $.digits = Objects.requireNonNull($.digits, "expected parameter 'digits' to be non-null");
+            $.finishDigit = Objects.requireNonNull($.finishDigit, "expected parameter 'finishDigit' to be non-null");
+            return $;
         }
     }
+
 }

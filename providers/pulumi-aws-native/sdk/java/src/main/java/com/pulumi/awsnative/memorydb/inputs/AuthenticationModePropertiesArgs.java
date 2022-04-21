@@ -6,10 +6,10 @@ package com.pulumi.awsnative.memorydb.inputs;
 import com.pulumi.awsnative.memorydb.enums.UserAuthenticationModePropertiesType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="passwords")
-      private final @Nullable Output<List<String>> passwords;
+    private @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> passwords() {
-        return this.passwords == null ? Codegen.empty() : this.passwords;
+    public Optional<Output<List<String>>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class AuthenticationModePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<UserAuthenticationModePropertiesType> type;
+    private @Nullable Output<UserAuthenticationModePropertiesType> type;
 
-    public Output<UserAuthenticationModePropertiesType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<UserAuthenticationModePropertiesType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AuthenticationModePropertiesArgs(
-        @Nullable Output<List<String>> passwords,
-        @Nullable Output<UserAuthenticationModePropertiesType> type) {
-        this.passwords = passwords;
-        this.type = type;
-    }
+    private AuthenticationModePropertiesArgs() {}
 
-    private AuthenticationModePropertiesArgs() {
-        this.passwords = Codegen.empty();
-        this.type = Codegen.empty();
+    private AuthenticationModePropertiesArgs(AuthenticationModePropertiesArgs $) {
+        this.passwords = $.passwords;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationModePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> passwords;
-        private @Nullable Output<UserAuthenticationModePropertiesType> type;
+        private AuthenticationModePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationModePropertiesArgs();
         }
 
         public Builder(AuthenticationModePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.passwords = defaults.passwords;
-    	      this.type = defaults.type;
+            $ = new AuthenticationModePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder passwords(@Nullable Output<List<String>> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
-        public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Codegen.ofNullable(passwords);
-            return this;
+
+        public Builder passwords(List<String> passwords) {
+            return passwords(Output.of(passwords));
         }
+
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
+
         public Builder type(@Nullable Output<UserAuthenticationModePropertiesType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable UserAuthenticationModePropertiesType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AuthenticationModePropertiesArgs build() {
-            return new AuthenticationModePropertiesArgs(passwords, type);
+
+        public Builder type(UserAuthenticationModePropertiesType type) {
+            return type(Output.of(type));
+        }
+
+        public AuthenticationModePropertiesArgs build() {
+            return $;
         }
     }
+
 }

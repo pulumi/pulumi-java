@@ -5,9 +5,9 @@ package com.pulumi.aws.appconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -31,7 +31,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="configurationProfileId", required=true)
-      private final Output<String> configurationProfileId;
+    private Output<String> configurationProfileId;
 
     public Output<String> configurationProfileId() {
         return this.configurationProfileId;
@@ -42,7 +42,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -53,7 +53,7 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -64,102 +64,92 @@ public final class HostedConfigurationVersionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public HostedConfigurationVersionArgs(
-        Output<String> applicationId,
-        Output<String> configurationProfileId,
-        Output<String> content,
-        Output<String> contentType,
-        @Nullable Output<String> description) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.configurationProfileId = Objects.requireNonNull(configurationProfileId, "expected parameter 'configurationProfileId' to be non-null");
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.description = description;
-    }
+    private HostedConfigurationVersionArgs() {}
 
-    private HostedConfigurationVersionArgs() {
-        this.applicationId = Codegen.empty();
-        this.configurationProfileId = Codegen.empty();
-        this.content = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.description = Codegen.empty();
+    private HostedConfigurationVersionArgs(HostedConfigurationVersionArgs $) {
+        this.applicationId = $.applicationId;
+        this.configurationProfileId = $.configurationProfileId;
+        this.content = $.content;
+        this.contentType = $.contentType;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedConfigurationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private Output<String> configurationProfileId;
-        private Output<String> content;
-        private Output<String> contentType;
-        private @Nullable Output<String> description;
+        private HostedConfigurationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedConfigurationVersionArgs();
         }
 
         public Builder(HostedConfigurationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.configurationProfileId = defaults.configurationProfileId;
-    	      this.content = defaults.content;
-    	      this.contentType = defaults.contentType;
-    	      this.description = defaults.description;
+            $ = new HostedConfigurationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder configurationProfileId(Output<String> configurationProfileId) {
-            this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
+            $.configurationProfileId = configurationProfileId;
             return this;
         }
+
         public Builder configurationProfileId(String configurationProfileId) {
-            this.configurationProfileId = Output.of(Objects.requireNonNull(configurationProfileId));
-            return this;
+            return configurationProfileId(Output.of(configurationProfileId));
         }
+
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public HostedConfigurationVersionArgs build() {
-            return new HostedConfigurationVersionArgs(applicationId, configurationProfileId, content, contentType, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public HostedConfigurationVersionArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.configurationProfileId = Objects.requireNonNull($.configurationProfileId, "expected parameter 'configurationProfileId' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            return $;
         }
     }
+
 }

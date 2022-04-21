@@ -27,10 +27,10 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="credentials")
-      private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
+    private @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -50,10 +50,10 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="trustedCertificates")
-      private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
+    private @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
 
     public Optional<MediaGraphPemCertificateListResponse> trustedCertificates() {
-        return this.trustedCertificates == null ? Optional.empty() : Optional.ofNullable(this.trustedCertificates);
+        return Optional.ofNullable(this.trustedCertificates);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
@@ -72,82 +72,70 @@ public final class MediaGraphTlsEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validationOptions")
-      private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
+    private @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
     public Optional<MediaGraphTlsValidationOptionsResponse> validationOptions() {
-        return this.validationOptions == null ? Optional.empty() : Optional.ofNullable(this.validationOptions);
+        return Optional.ofNullable(this.validationOptions);
     }
 
-    public MediaGraphTlsEndpointResponse(
-        @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        String odataType,
-        @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
-        String url,
-        @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
-        this.credentials = credentials;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.trustedCertificates = trustedCertificates;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.validationOptions = validationOptions;
-    }
+    private MediaGraphTlsEndpointResponse() {}
 
-    private MediaGraphTlsEndpointResponse() {
-        this.credentials = null;
-        this.odataType = null;
-        this.trustedCertificates = null;
-        this.url = null;
-        this.validationOptions = null;
+    private MediaGraphTlsEndpointResponse(MediaGraphTlsEndpointResponse $) {
+        this.credentials = $.credentials;
+        this.odataType = $.odataType;
+        this.trustedCertificates = $.trustedCertificates;
+        this.url = $.url;
+        this.validationOptions = $.validationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphTlsEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
-        private String odataType;
-        private @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
-        private String url;
-        private @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
+        private MediaGraphTlsEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphTlsEndpointResponse();
         }
 
         public Builder(MediaGraphTlsEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.odataType = defaults.odataType;
-    	      this.trustedCertificates = defaults.trustedCertificates;
-    	      this.url = defaults.url;
-    	      this.validationOptions = defaults.validationOptions;
+            $ = new MediaGraphTlsEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListResponse trustedCertificates) {
-            this.trustedCertificates = trustedCertificates;
+            $.trustedCertificates = trustedCertificates;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
-            this.validationOptions = validationOptions;
+            $.validationOptions = validationOptions;
             return this;
-        }        public MediaGraphTlsEndpointResponse build() {
-            return new MediaGraphTlsEndpointResponse(credentials, odataType, trustedCertificates, url, validationOptions);
+        }
+
+        public MediaGraphTlsEndpointResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

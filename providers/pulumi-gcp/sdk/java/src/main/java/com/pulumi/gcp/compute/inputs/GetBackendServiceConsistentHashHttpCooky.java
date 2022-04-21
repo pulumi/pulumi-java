@@ -19,81 +19,77 @@ public final class GetBackendServiceConsistentHashHttpCooky extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
     @Import(name="ttls", required=true)
-      private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
+    private List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
 
     public List<GetBackendServiceConsistentHashHttpCookyTtl> ttls() {
         return this.ttls;
     }
 
-    public GetBackendServiceConsistentHashHttpCooky(
-        String name,
-        String path,
-        List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.ttls = Objects.requireNonNull(ttls, "expected parameter 'ttls' to be non-null");
-    }
+    private GetBackendServiceConsistentHashHttpCooky() {}
 
-    private GetBackendServiceConsistentHashHttpCooky() {
-        this.name = null;
-        this.path = null;
-        this.ttls = List.of();
+    private GetBackendServiceConsistentHashHttpCooky(GetBackendServiceConsistentHashHttpCooky $) {
+        this.name = $.name;
+        this.path = $.path;
+        this.ttls = $.ttls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceConsistentHashHttpCooky defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String path;
-        private List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
+        private GetBackendServiceConsistentHashHttpCooky $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceConsistentHashHttpCooky();
         }
 
         public Builder(GetBackendServiceConsistentHashHttpCooky defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.ttls = defaults.ttls;
+            $ = new GetBackendServiceConsistentHashHttpCooky(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder ttls(List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
-            this.ttls = Objects.requireNonNull(ttls);
+            $.ttls = ttls;
             return this;
         }
+
         public Builder ttls(GetBackendServiceConsistentHashHttpCookyTtl... ttls) {
             return ttls(List.of(ttls));
-        }        public GetBackendServiceConsistentHashHttpCooky build() {
-            return new GetBackendServiceConsistentHashHttpCooky(name, path, ttls);
+        }
+
+        public GetBackendServiceConsistentHashHttpCooky build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.ttls = Objects.requireNonNull($.ttls, "expected parameter 'ttls' to be non-null");
+            return $;
         }
     }
+
 }

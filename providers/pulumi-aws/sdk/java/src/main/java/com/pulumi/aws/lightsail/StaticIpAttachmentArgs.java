@@ -5,7 +5,6 @@ package com.pulumi.aws.lightsail;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class StaticIpAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceName", required=true)
-      private final Output<String> instanceName;
+    private Output<String> instanceName;
 
     public Output<String> instanceName() {
         return this.instanceName;
@@ -30,63 +29,60 @@ public final class StaticIpAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="staticIpName", required=true)
-      private final Output<String> staticIpName;
+    private Output<String> staticIpName;
 
     public Output<String> staticIpName() {
         return this.staticIpName;
     }
 
-    public StaticIpAttachmentArgs(
-        Output<String> instanceName,
-        Output<String> staticIpName) {
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.staticIpName = Objects.requireNonNull(staticIpName, "expected parameter 'staticIpName' to be non-null");
-    }
+    private StaticIpAttachmentArgs() {}
 
-    private StaticIpAttachmentArgs() {
-        this.instanceName = Codegen.empty();
-        this.staticIpName = Codegen.empty();
+    private StaticIpAttachmentArgs(StaticIpAttachmentArgs $) {
+        this.instanceName = $.instanceName;
+        this.staticIpName = $.staticIpName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticIpAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceName;
-        private Output<String> staticIpName;
+        private StaticIpAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticIpAttachmentArgs();
         }
 
         public Builder(StaticIpAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
-    	      this.staticIpName = defaults.staticIpName;
+            $ = new StaticIpAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(Output<String> instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder instanceName(String instanceName) {
-            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
-            return this;
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder staticIpName(Output<String> staticIpName) {
-            this.staticIpName = Objects.requireNonNull(staticIpName);
+            $.staticIpName = staticIpName;
             return this;
         }
+
         public Builder staticIpName(String staticIpName) {
-            this.staticIpName = Output.of(Objects.requireNonNull(staticIpName));
-            return this;
-        }        public StaticIpAttachmentArgs build() {
-            return new StaticIpAttachmentArgs(instanceName, staticIpName);
+            return staticIpName(Output.of(staticIpName));
+        }
+
+        public StaticIpAttachmentArgs build() {
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            $.staticIpName = Objects.requireNonNull($.staticIpName, "expected parameter 'staticIpName' to be non-null");
+            return $;
         }
     }
+
 }

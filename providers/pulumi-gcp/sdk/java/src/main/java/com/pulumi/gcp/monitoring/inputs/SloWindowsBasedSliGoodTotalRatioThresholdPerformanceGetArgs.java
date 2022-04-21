@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs e
      * 
      */
     @Import(name="distributionCut")
-      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut;
+    private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut() {
-        return this.distributionCut == null ? Codegen.empty() : this.distributionCut;
+    public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs>> distributionCut() {
+        return Optional.ofNullable(this.distributionCut);
     }
 
     /**
@@ -42,63 +42,58 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs e
      * 
      */
     @Import(name="goodTotalRatio")
-      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio;
+    private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio() {
-        return this.goodTotalRatio == null ? Codegen.empty() : this.goodTotalRatio;
+    public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs>> goodTotalRatio() {
+        return Optional.ofNullable(this.goodTotalRatio);
     }
 
-    public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs(
-        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut,
-        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio) {
-        this.distributionCut = distributionCut;
-        this.goodTotalRatio = goodTotalRatio;
-    }
+    private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs() {}
 
-    private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs() {
-        this.distributionCut = Codegen.empty();
-        this.goodTotalRatio = Codegen.empty();
+    private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs $) {
+        this.distributionCut = $.distributionCut;
+        this.goodTotalRatio = $.goodTotalRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut;
-        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio;
+        private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs();
         }
 
         public Builder(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionCut = defaults.distributionCut;
-    	      this.goodTotalRatio = defaults.goodTotalRatio;
+            $ = new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionCut(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs> distributionCut) {
-            this.distributionCut = distributionCut;
+            $.distributionCut = distributionCut;
             return this;
         }
-        public Builder distributionCut(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs distributionCut) {
-            this.distributionCut = Codegen.ofNullable(distributionCut);
-            return this;
+
+        public Builder distributionCut(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutGetArgs distributionCut) {
+            return distributionCut(Output.of(distributionCut));
         }
+
         public Builder goodTotalRatio(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs> goodTotalRatio) {
-            this.goodTotalRatio = goodTotalRatio;
+            $.goodTotalRatio = goodTotalRatio;
             return this;
         }
-        public Builder goodTotalRatio(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs goodTotalRatio) {
-            this.goodTotalRatio = Codegen.ofNullable(goodTotalRatio);
-            return this;
-        }        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs build() {
-            return new SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs(distributionCut, goodTotalRatio);
+
+        public Builder goodTotalRatio(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioGetArgs goodTotalRatio) {
+            return goodTotalRatio(Output.of(goodTotalRatio));
+        }
+
+        public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs build() {
+            return $;
         }
     }
+
 }

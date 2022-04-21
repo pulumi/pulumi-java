@@ -9,9 +9,9 @@ import com.pulumi.azurenative.web.enums.HostNameType;
 import com.pulumi.azurenative.web.enums.SslState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azureResourceName")
-      private final @Nullable Output<String> azureResourceName;
+    private @Nullable Output<String> azureResourceName;
 
-    public Output<String> azureResourceName() {
-        return this.azureResourceName == null ? Codegen.empty() : this.azureResourceName;
+    public Optional<Output<String>> azureResourceName() {
+        return Optional.ofNullable(this.azureResourceName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azureResourceType")
-      private final @Nullable Output<AzureResourceType> azureResourceType;
+    private @Nullable Output<AzureResourceType> azureResourceType;
 
-    public Output<AzureResourceType> azureResourceType() {
-        return this.azureResourceType == null ? Codegen.empty() : this.azureResourceType;
+    public Optional<Output<AzureResourceType>> azureResourceType() {
+        return Optional.ofNullable(this.azureResourceType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="customHostNameDnsRecordType")
-      private final @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
+    private @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
-    public Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType() {
-        return this.customHostNameDnsRecordType == null ? Codegen.empty() : this.customHostNameDnsRecordType;
+    public Optional<Output<CustomHostNameDnsRecordType>> customHostNameDnsRecordType() {
+        return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="domainId")
-      private final @Nullable Output<String> domainId;
+    private @Nullable Output<String> domainId;
 
-    public Output<String> domainId() {
-        return this.domainId == null ? Codegen.empty() : this.domainId;
+    public Optional<Output<String>> domainId() {
+        return Optional.ofNullable(this.domainId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostName")
-      private final @Nullable Output<String> hostName;
+    private @Nullable Output<String> hostName;
 
-    public Output<String> hostName() {
-        return this.hostName == null ? Codegen.empty() : this.hostName;
+    public Optional<Output<String>> hostName() {
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostNameType")
-      private final @Nullable Output<HostNameType> hostNameType;
+    private @Nullable Output<HostNameType> hostNameType;
 
-    public Output<HostNameType> hostNameType() {
-        return this.hostNameType == null ? Codegen.empty() : this.hostNameType;
+    public Optional<Output<HostNameType>> hostNameType() {
+        return Optional.ofNullable(this.hostNameType);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -112,7 +112,7 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -123,10 +123,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="siteName")
-      private final @Nullable Output<String> siteName;
+    private @Nullable Output<String> siteName;
 
-    public Output<String> siteName() {
-        return this.siteName == null ? Codegen.empty() : this.siteName;
+    public Optional<Output<String>> siteName() {
+        return Optional.ofNullable(this.siteName);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sslState")
-      private final @Nullable Output<SslState> sslState;
+    private @Nullable Output<SslState> sslState;
 
-    public Output<SslState> sslState() {
-        return this.sslState == null ? Codegen.empty() : this.sslState;
+    public Optional<Output<SslState>> sslState() {
+        return Optional.ofNullable(this.sslState);
     }
 
     /**
@@ -145,193 +145,160 @@ public final class WebAppHostNameBindingArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public WebAppHostNameBindingArgs(
-        @Nullable Output<String> azureResourceName,
-        @Nullable Output<AzureResourceType> azureResourceType,
-        @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType,
-        @Nullable Output<String> domainId,
-        @Nullable Output<String> hostName,
-        @Nullable Output<HostNameType> hostNameType,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> siteName,
-        @Nullable Output<SslState> sslState,
-        @Nullable Output<String> thumbprint) {
-        this.azureResourceName = azureResourceName;
-        this.azureResourceType = azureResourceType;
-        this.customHostNameDnsRecordType = customHostNameDnsRecordType;
-        this.domainId = domainId;
-        this.hostName = hostName;
-        this.hostNameType = hostNameType;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = siteName;
-        this.sslState = sslState;
-        this.thumbprint = thumbprint;
-    }
+    private WebAppHostNameBindingArgs() {}
 
-    private WebAppHostNameBindingArgs() {
-        this.azureResourceName = Codegen.empty();
-        this.azureResourceType = Codegen.empty();
-        this.customHostNameDnsRecordType = Codegen.empty();
-        this.domainId = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.hostNameType = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.siteName = Codegen.empty();
-        this.sslState = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private WebAppHostNameBindingArgs(WebAppHostNameBindingArgs $) {
+        this.azureResourceName = $.azureResourceName;
+        this.azureResourceType = $.azureResourceType;
+        this.customHostNameDnsRecordType = $.customHostNameDnsRecordType;
+        this.domainId = $.domainId;
+        this.hostName = $.hostName;
+        this.hostNameType = $.hostNameType;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
+        this.sslState = $.sslState;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppHostNameBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> azureResourceName;
-        private @Nullable Output<AzureResourceType> azureResourceType;
-        private @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
-        private @Nullable Output<String> domainId;
-        private @Nullable Output<String> hostName;
-        private @Nullable Output<HostNameType> hostNameType;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> siteName;
-        private @Nullable Output<SslState> sslState;
-        private @Nullable Output<String> thumbprint;
+        private WebAppHostNameBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppHostNameBindingArgs();
         }
 
         public Builder(WebAppHostNameBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureResourceName = defaults.azureResourceName;
-    	      this.azureResourceType = defaults.azureResourceType;
-    	      this.customHostNameDnsRecordType = defaults.customHostNameDnsRecordType;
-    	      this.domainId = defaults.domainId;
-    	      this.hostName = defaults.hostName;
-    	      this.hostNameType = defaults.hostNameType;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
-    	      this.sslState = defaults.sslState;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new WebAppHostNameBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureResourceName(@Nullable Output<String> azureResourceName) {
-            this.azureResourceName = azureResourceName;
+            $.azureResourceName = azureResourceName;
             return this;
         }
-        public Builder azureResourceName(@Nullable String azureResourceName) {
-            this.azureResourceName = Codegen.ofNullable(azureResourceName);
-            return this;
+
+        public Builder azureResourceName(String azureResourceName) {
+            return azureResourceName(Output.of(azureResourceName));
         }
+
         public Builder azureResourceType(@Nullable Output<AzureResourceType> azureResourceType) {
-            this.azureResourceType = azureResourceType;
+            $.azureResourceType = azureResourceType;
             return this;
         }
-        public Builder azureResourceType(@Nullable AzureResourceType azureResourceType) {
-            this.azureResourceType = Codegen.ofNullable(azureResourceType);
-            return this;
+
+        public Builder azureResourceType(AzureResourceType azureResourceType) {
+            return azureResourceType(Output.of(azureResourceType));
         }
+
         public Builder customHostNameDnsRecordType(@Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType) {
-            this.customHostNameDnsRecordType = customHostNameDnsRecordType;
+            $.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
-        public Builder customHostNameDnsRecordType(@Nullable CustomHostNameDnsRecordType customHostNameDnsRecordType) {
-            this.customHostNameDnsRecordType = Codegen.ofNullable(customHostNameDnsRecordType);
-            return this;
+
+        public Builder customHostNameDnsRecordType(CustomHostNameDnsRecordType customHostNameDnsRecordType) {
+            return customHostNameDnsRecordType(Output.of(customHostNameDnsRecordType));
         }
+
         public Builder domainId(@Nullable Output<String> domainId) {
-            this.domainId = domainId;
+            $.domainId = domainId;
             return this;
         }
-        public Builder domainId(@Nullable String domainId) {
-            this.domainId = Codegen.ofNullable(domainId);
-            return this;
+
+        public Builder domainId(String domainId) {
+            return domainId(Output.of(domainId));
         }
+
         public Builder hostName(@Nullable Output<String> hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
-        public Builder hostName(@Nullable String hostName) {
-            this.hostName = Codegen.ofNullable(hostName);
-            return this;
+
+        public Builder hostName(String hostName) {
+            return hostName(Output.of(hostName));
         }
+
         public Builder hostNameType(@Nullable Output<HostNameType> hostNameType) {
-            this.hostNameType = hostNameType;
+            $.hostNameType = hostNameType;
             return this;
         }
-        public Builder hostNameType(@Nullable HostNameType hostNameType) {
-            this.hostNameType = Codegen.ofNullable(hostNameType);
-            return this;
+
+        public Builder hostNameType(HostNameType hostNameType) {
+            return hostNameType(Output.of(hostNameType));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder siteName(@Nullable Output<String> siteName) {
-            this.siteName = siteName;
+            $.siteName = siteName;
             return this;
         }
-        public Builder siteName(@Nullable String siteName) {
-            this.siteName = Codegen.ofNullable(siteName);
-            return this;
+
+        public Builder siteName(String siteName) {
+            return siteName(Output.of(siteName));
         }
+
         public Builder sslState(@Nullable Output<SslState> sslState) {
-            this.sslState = sslState;
+            $.sslState = sslState;
             return this;
         }
-        public Builder sslState(@Nullable SslState sslState) {
-            this.sslState = Codegen.ofNullable(sslState);
-            return this;
+
+        public Builder sslState(SslState sslState) {
+            return sslState(Output.of(sslState));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public WebAppHostNameBindingArgs build() {
-            return new WebAppHostNameBindingArgs(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostName, hostNameType, kind, name, resourceGroupName, siteName, sslState, thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public WebAppHostNameBindingArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

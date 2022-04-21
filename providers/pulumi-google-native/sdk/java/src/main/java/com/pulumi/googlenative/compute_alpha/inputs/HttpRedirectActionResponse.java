@@ -22,7 +22,7 @@ public final class HttpRedirectActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hostRedirect", required=true)
-      private final String hostRedirect;
+    private String hostRedirect;
 
     public String hostRedirect() {
         return this.hostRedirect;
@@ -33,7 +33,7 @@ public final class HttpRedirectActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="httpsRedirect", required=true)
-      private final Boolean httpsRedirect;
+    private Boolean httpsRedirect;
 
     public Boolean httpsRedirect() {
         return this.httpsRedirect;
@@ -44,7 +44,7 @@ public final class HttpRedirectActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pathRedirect", required=true)
-      private final String pathRedirect;
+    private String pathRedirect;
 
     public String pathRedirect() {
         return this.pathRedirect;
@@ -55,7 +55,7 @@ public final class HttpRedirectActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="prefixRedirect", required=true)
-      private final String prefixRedirect;
+    private String prefixRedirect;
 
     public String prefixRedirect() {
         return this.prefixRedirect;
@@ -66,7 +66,7 @@ public final class HttpRedirectActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="redirectResponseCode", required=true)
-      private final String redirectResponseCode;
+    private String redirectResponseCode;
 
     public String redirectResponseCode() {
         return this.redirectResponseCode;
@@ -77,91 +77,80 @@ public final class HttpRedirectActionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="stripQuery", required=true)
-      private final Boolean stripQuery;
+    private Boolean stripQuery;
 
     public Boolean stripQuery() {
         return this.stripQuery;
     }
 
-    public HttpRedirectActionResponse(
-        String hostRedirect,
-        Boolean httpsRedirect,
-        String pathRedirect,
-        String prefixRedirect,
-        String redirectResponseCode,
-        Boolean stripQuery) {
-        this.hostRedirect = Objects.requireNonNull(hostRedirect, "expected parameter 'hostRedirect' to be non-null");
-        this.httpsRedirect = Objects.requireNonNull(httpsRedirect, "expected parameter 'httpsRedirect' to be non-null");
-        this.pathRedirect = Objects.requireNonNull(pathRedirect, "expected parameter 'pathRedirect' to be non-null");
-        this.prefixRedirect = Objects.requireNonNull(prefixRedirect, "expected parameter 'prefixRedirect' to be non-null");
-        this.redirectResponseCode = Objects.requireNonNull(redirectResponseCode, "expected parameter 'redirectResponseCode' to be non-null");
-        this.stripQuery = Objects.requireNonNull(stripQuery, "expected parameter 'stripQuery' to be non-null");
-    }
+    private HttpRedirectActionResponse() {}
 
-    private HttpRedirectActionResponse() {
-        this.hostRedirect = null;
-        this.httpsRedirect = null;
-        this.pathRedirect = null;
-        this.prefixRedirect = null;
-        this.redirectResponseCode = null;
-        this.stripQuery = null;
+    private HttpRedirectActionResponse(HttpRedirectActionResponse $) {
+        this.hostRedirect = $.hostRedirect;
+        this.httpsRedirect = $.httpsRedirect;
+        this.pathRedirect = $.pathRedirect;
+        this.prefixRedirect = $.prefixRedirect;
+        this.redirectResponseCode = $.redirectResponseCode;
+        this.stripQuery = $.stripQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRedirectActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostRedirect;
-        private Boolean httpsRedirect;
-        private String pathRedirect;
-        private String prefixRedirect;
-        private String redirectResponseCode;
-        private Boolean stripQuery;
+        private HttpRedirectActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRedirectActionResponse();
         }
 
         public Builder(HttpRedirectActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostRedirect = defaults.hostRedirect;
-    	      this.httpsRedirect = defaults.httpsRedirect;
-    	      this.pathRedirect = defaults.pathRedirect;
-    	      this.prefixRedirect = defaults.prefixRedirect;
-    	      this.redirectResponseCode = defaults.redirectResponseCode;
-    	      this.stripQuery = defaults.stripQuery;
+            $ = new HttpRedirectActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostRedirect(String hostRedirect) {
-            this.hostRedirect = Objects.requireNonNull(hostRedirect);
+            $.hostRedirect = hostRedirect;
             return this;
         }
+
         public Builder httpsRedirect(Boolean httpsRedirect) {
-            this.httpsRedirect = Objects.requireNonNull(httpsRedirect);
+            $.httpsRedirect = httpsRedirect;
             return this;
         }
+
         public Builder pathRedirect(String pathRedirect) {
-            this.pathRedirect = Objects.requireNonNull(pathRedirect);
+            $.pathRedirect = pathRedirect;
             return this;
         }
+
         public Builder prefixRedirect(String prefixRedirect) {
-            this.prefixRedirect = Objects.requireNonNull(prefixRedirect);
+            $.prefixRedirect = prefixRedirect;
             return this;
         }
+
         public Builder redirectResponseCode(String redirectResponseCode) {
-            this.redirectResponseCode = Objects.requireNonNull(redirectResponseCode);
+            $.redirectResponseCode = redirectResponseCode;
             return this;
         }
+
         public Builder stripQuery(Boolean stripQuery) {
-            this.stripQuery = Objects.requireNonNull(stripQuery);
+            $.stripQuery = stripQuery;
             return this;
-        }        public HttpRedirectActionResponse build() {
-            return new HttpRedirectActionResponse(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);
+        }
+
+        public HttpRedirectActionResponse build() {
+            $.hostRedirect = Objects.requireNonNull($.hostRedirect, "expected parameter 'hostRedirect' to be non-null");
+            $.httpsRedirect = Objects.requireNonNull($.httpsRedirect, "expected parameter 'httpsRedirect' to be non-null");
+            $.pathRedirect = Objects.requireNonNull($.pathRedirect, "expected parameter 'pathRedirect' to be non-null");
+            $.prefixRedirect = Objects.requireNonNull($.prefixRedirect, "expected parameter 'prefixRedirect' to be non-null");
+            $.redirectResponseCode = Objects.requireNonNull($.redirectResponseCode, "expected parameter 'redirectResponseCode' to be non-null");
+            $.stripQuery = Objects.requireNonNull($.stripQuery, "expected parameter 'stripQuery' to be non-null");
+            return $;
         }
     }
+
 }

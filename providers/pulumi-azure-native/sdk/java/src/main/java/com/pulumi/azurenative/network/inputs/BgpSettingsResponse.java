@@ -27,10 +27,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="asn")
-      private final @Nullable Double asn;
+    private @Nullable Double asn;
 
     public Optional<Double> asn() {
-        return this.asn == null ? Optional.empty() : Optional.ofNullable(this.asn);
+        return Optional.ofNullable(this.asn);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bgpPeeringAddress")
-      private final @Nullable String bgpPeeringAddress;
+    private @Nullable String bgpPeeringAddress;
 
     public Optional<String> bgpPeeringAddress() {
-        return this.bgpPeeringAddress == null ? Optional.empty() : Optional.ofNullable(this.bgpPeeringAddress);
+        return Optional.ofNullable(this.bgpPeeringAddress);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bgpPeeringAddresses")
-      private final @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
+    private @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
 
-    public List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses() {
-        return this.bgpPeeringAddresses == null ? List.of() : this.bgpPeeringAddresses;
+    public Optional<List<IPConfigurationBgpPeeringAddressResponse>> bgpPeeringAddresses() {
+        return Optional.ofNullable(this.bgpPeeringAddresses);
     }
 
     /**
@@ -60,76 +60,66 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="peerWeight")
-      private final @Nullable Integer peerWeight;
+    private @Nullable Integer peerWeight;
 
     public Optional<Integer> peerWeight() {
-        return this.peerWeight == null ? Optional.empty() : Optional.ofNullable(this.peerWeight);
+        return Optional.ofNullable(this.peerWeight);
     }
 
-    public BgpSettingsResponse(
-        @Nullable Double asn,
-        @Nullable String bgpPeeringAddress,
-        @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
-        @Nullable Integer peerWeight) {
-        this.asn = asn;
-        this.bgpPeeringAddress = bgpPeeringAddress;
-        this.bgpPeeringAddresses = bgpPeeringAddresses;
-        this.peerWeight = peerWeight;
-    }
+    private BgpSettingsResponse() {}
 
-    private BgpSettingsResponse() {
-        this.asn = null;
-        this.bgpPeeringAddress = null;
-        this.bgpPeeringAddresses = List.of();
-        this.peerWeight = null;
+    private BgpSettingsResponse(BgpSettingsResponse $) {
+        this.asn = $.asn;
+        this.bgpPeeringAddress = $.bgpPeeringAddress;
+        this.bgpPeeringAddresses = $.bgpPeeringAddresses;
+        this.peerWeight = $.peerWeight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BgpSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double asn;
-        private @Nullable String bgpPeeringAddress;
-        private @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
-        private @Nullable Integer peerWeight;
+        private BgpSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BgpSettingsResponse();
         }
 
         public Builder(BgpSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asn = defaults.asn;
-    	      this.bgpPeeringAddress = defaults.bgpPeeringAddress;
-    	      this.bgpPeeringAddresses = defaults.bgpPeeringAddresses;
-    	      this.peerWeight = defaults.peerWeight;
+            $ = new BgpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asn(@Nullable Double asn) {
-            this.asn = asn;
+            $.asn = asn;
             return this;
         }
+
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
-            this.bgpPeeringAddress = bgpPeeringAddress;
+            $.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
+
         public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses) {
-            this.bgpPeeringAddresses = bgpPeeringAddresses;
+            $.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
+
         public Builder bgpPeeringAddresses(IPConfigurationBgpPeeringAddressResponse... bgpPeeringAddresses) {
             return bgpPeeringAddresses(List.of(bgpPeeringAddresses));
         }
+
         public Builder peerWeight(@Nullable Integer peerWeight) {
-            this.peerWeight = peerWeight;
+            $.peerWeight = peerWeight;
             return this;
-        }        public BgpSettingsResponse build() {
-            return new BgpSettingsResponse(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
+        }
+
+        public BgpSettingsResponse build() {
+            return $;
         }
     }
+
 }

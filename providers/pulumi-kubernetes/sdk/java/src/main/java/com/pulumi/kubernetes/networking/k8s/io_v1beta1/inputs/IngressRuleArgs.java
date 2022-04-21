@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.HTTPIngressRuleValueArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,70 +30,65 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     @Import(name="http")
-      private final @Nullable Output<HTTPIngressRuleValueArgs> http;
+    private @Nullable Output<HTTPIngressRuleValueArgs> http;
 
-    public Output<HTTPIngressRuleValueArgs> http() {
-        return this.http == null ? Codegen.empty() : this.http;
+    public Optional<Output<HTTPIngressRuleValueArgs>> http() {
+        return Optional.ofNullable(this.http);
     }
 
-    public IngressRuleArgs(
-        @Nullable Output<String> host,
-        @Nullable Output<HTTPIngressRuleValueArgs> http) {
-        this.host = host;
-        this.http = http;
-    }
+    private IngressRuleArgs() {}
 
-    private IngressRuleArgs() {
-        this.host = Codegen.empty();
-        this.http = Codegen.empty();
+    private IngressRuleArgs(IngressRuleArgs $) {
+        this.host = $.host;
+        this.http = $.http;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private @Nullable Output<HTTPIngressRuleValueArgs> http;
+        private IngressRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressRuleArgs();
         }
 
         public Builder(IngressRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.http = defaults.http;
+            $ = new IngressRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder http(@Nullable Output<HTTPIngressRuleValueArgs> http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
-        public Builder http(@Nullable HTTPIngressRuleValueArgs http) {
-            this.http = Codegen.ofNullable(http);
-            return this;
-        }        public IngressRuleArgs build() {
-            return new IngressRuleArgs(host, http);
+
+        public Builder http(HTTPIngressRuleValueArgs http) {
+            return http(Output.of(http));
+        }
+
+        public IngressRuleArgs build() {
+            return $;
         }
     }
+
 }

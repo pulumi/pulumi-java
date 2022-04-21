@@ -21,7 +21,7 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="abortedByUser", required=true)
-      private final Boolean abortedByUser;
+    private Boolean abortedByUser;
 
     public Boolean abortedByUser() {
         return this.abortedByUser;
@@ -32,7 +32,7 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="hasErrorLogs", required=true)
-      private final Boolean hasErrorLogs;
+    private Boolean hasErrorLogs;
 
     public Boolean hasErrorLogs() {
         return this.hasErrorLogs;
@@ -43,64 +43,59 @@ public final class InconclusiveDetailResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="infrastructureFailure", required=true)
-      private final Boolean infrastructureFailure;
+    private Boolean infrastructureFailure;
 
     public Boolean infrastructureFailure() {
         return this.infrastructureFailure;
     }
 
-    public InconclusiveDetailResponse(
-        Boolean abortedByUser,
-        Boolean hasErrorLogs,
-        Boolean infrastructureFailure) {
-        this.abortedByUser = Objects.requireNonNull(abortedByUser, "expected parameter 'abortedByUser' to be non-null");
-        this.hasErrorLogs = Objects.requireNonNull(hasErrorLogs, "expected parameter 'hasErrorLogs' to be non-null");
-        this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure, "expected parameter 'infrastructureFailure' to be non-null");
-    }
+    private InconclusiveDetailResponse() {}
 
-    private InconclusiveDetailResponse() {
-        this.abortedByUser = null;
-        this.hasErrorLogs = null;
-        this.infrastructureFailure = null;
+    private InconclusiveDetailResponse(InconclusiveDetailResponse $) {
+        this.abortedByUser = $.abortedByUser;
+        this.hasErrorLogs = $.hasErrorLogs;
+        this.infrastructureFailure = $.infrastructureFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InconclusiveDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean abortedByUser;
-        private Boolean hasErrorLogs;
-        private Boolean infrastructureFailure;
+        private InconclusiveDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InconclusiveDetailResponse();
         }
 
         public Builder(InconclusiveDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortedByUser = defaults.abortedByUser;
-    	      this.hasErrorLogs = defaults.hasErrorLogs;
-    	      this.infrastructureFailure = defaults.infrastructureFailure;
+            $ = new InconclusiveDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder abortedByUser(Boolean abortedByUser) {
-            this.abortedByUser = Objects.requireNonNull(abortedByUser);
+            $.abortedByUser = abortedByUser;
             return this;
         }
+
         public Builder hasErrorLogs(Boolean hasErrorLogs) {
-            this.hasErrorLogs = Objects.requireNonNull(hasErrorLogs);
+            $.hasErrorLogs = hasErrorLogs;
             return this;
         }
+
         public Builder infrastructureFailure(Boolean infrastructureFailure) {
-            this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
+            $.infrastructureFailure = infrastructureFailure;
             return this;
-        }        public InconclusiveDetailResponse build() {
-            return new InconclusiveDetailResponse(abortedByUser, hasErrorLogs, infrastructureFailure);
+        }
+
+        public InconclusiveDetailResponse build() {
+            $.abortedByUser = Objects.requireNonNull($.abortedByUser, "expected parameter 'abortedByUser' to be non-null");
+            $.hasErrorLogs = Objects.requireNonNull($.hasErrorLogs, "expected parameter 'hasErrorLogs' to be non-null");
+            $.infrastructureFailure = Objects.requireNonNull($.infrastructureFailure, "expected parameter 'infrastructureFailure' to be non-null");
+            return $;
         }
     }
+
 }

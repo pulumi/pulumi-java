@@ -8,9 +8,9 @@ import com.pulumi.awsnative.apprunner.inputs.ServiceCodeRepositoryArgs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceImageRepositoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
     public static final ServiceSourceConfigurationArgs Empty = new ServiceSourceConfigurationArgs();
 
     @Import(name="authenticationConfiguration")
-      private final @Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
+    private @Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
-    public Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
+    public Optional<Output<ServiceAuthenticationConfigurationArgs>> authenticationConfiguration() {
+        return Optional.ofNullable(this.authenticationConfiguration);
     }
 
     /**
@@ -34,103 +34,92 @@ public final class ServiceSourceConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="autoDeploymentsEnabled")
-      private final @Nullable Output<Boolean> autoDeploymentsEnabled;
+    private @Nullable Output<Boolean> autoDeploymentsEnabled;
 
-    public Output<Boolean> autoDeploymentsEnabled() {
-        return this.autoDeploymentsEnabled == null ? Codegen.empty() : this.autoDeploymentsEnabled;
+    public Optional<Output<Boolean>> autoDeploymentsEnabled() {
+        return Optional.ofNullable(this.autoDeploymentsEnabled);
     }
 
     @Import(name="codeRepository")
-      private final @Nullable Output<ServiceCodeRepositoryArgs> codeRepository;
+    private @Nullable Output<ServiceCodeRepositoryArgs> codeRepository;
 
-    public Output<ServiceCodeRepositoryArgs> codeRepository() {
-        return this.codeRepository == null ? Codegen.empty() : this.codeRepository;
+    public Optional<Output<ServiceCodeRepositoryArgs>> codeRepository() {
+        return Optional.ofNullable(this.codeRepository);
     }
 
     @Import(name="imageRepository")
-      private final @Nullable Output<ServiceImageRepositoryArgs> imageRepository;
+    private @Nullable Output<ServiceImageRepositoryArgs> imageRepository;
 
-    public Output<ServiceImageRepositoryArgs> imageRepository() {
-        return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
+    public Optional<Output<ServiceImageRepositoryArgs>> imageRepository() {
+        return Optional.ofNullable(this.imageRepository);
     }
 
-    public ServiceSourceConfigurationArgs(
-        @Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration,
-        @Nullable Output<Boolean> autoDeploymentsEnabled,
-        @Nullable Output<ServiceCodeRepositoryArgs> codeRepository,
-        @Nullable Output<ServiceImageRepositoryArgs> imageRepository) {
-        this.authenticationConfiguration = authenticationConfiguration;
-        this.autoDeploymentsEnabled = autoDeploymentsEnabled;
-        this.codeRepository = codeRepository;
-        this.imageRepository = imageRepository;
-    }
+    private ServiceSourceConfigurationArgs() {}
 
-    private ServiceSourceConfigurationArgs() {
-        this.authenticationConfiguration = Codegen.empty();
-        this.autoDeploymentsEnabled = Codegen.empty();
-        this.codeRepository = Codegen.empty();
-        this.imageRepository = Codegen.empty();
+    private ServiceSourceConfigurationArgs(ServiceSourceConfigurationArgs $) {
+        this.authenticationConfiguration = $.authenticationConfiguration;
+        this.autoDeploymentsEnabled = $.autoDeploymentsEnabled;
+        this.codeRepository = $.codeRepository;
+        this.imageRepository = $.imageRepository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSourceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
-        private @Nullable Output<Boolean> autoDeploymentsEnabled;
-        private @Nullable Output<ServiceCodeRepositoryArgs> codeRepository;
-        private @Nullable Output<ServiceImageRepositoryArgs> imageRepository;
+        private ServiceSourceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSourceConfigurationArgs();
         }
 
         public Builder(ServiceSourceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationConfiguration = defaults.authenticationConfiguration;
-    	      this.autoDeploymentsEnabled = defaults.autoDeploymentsEnabled;
-    	      this.codeRepository = defaults.codeRepository;
-    	      this.imageRepository = defaults.imageRepository;
+            $ = new ServiceSourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationConfiguration(@Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration) {
-            this.authenticationConfiguration = authenticationConfiguration;
+            $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Codegen.ofNullable(authenticationConfiguration);
-            return this;
+
+        public Builder authenticationConfiguration(ServiceAuthenticationConfigurationArgs authenticationConfiguration) {
+            return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
+
         public Builder autoDeploymentsEnabled(@Nullable Output<Boolean> autoDeploymentsEnabled) {
-            this.autoDeploymentsEnabled = autoDeploymentsEnabled;
+            $.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
-        public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
-            this.autoDeploymentsEnabled = Codegen.ofNullable(autoDeploymentsEnabled);
-            return this;
+
+        public Builder autoDeploymentsEnabled(Boolean autoDeploymentsEnabled) {
+            return autoDeploymentsEnabled(Output.of(autoDeploymentsEnabled));
         }
+
         public Builder codeRepository(@Nullable Output<ServiceCodeRepositoryArgs> codeRepository) {
-            this.codeRepository = codeRepository;
+            $.codeRepository = codeRepository;
             return this;
         }
-        public Builder codeRepository(@Nullable ServiceCodeRepositoryArgs codeRepository) {
-            this.codeRepository = Codegen.ofNullable(codeRepository);
-            return this;
+
+        public Builder codeRepository(ServiceCodeRepositoryArgs codeRepository) {
+            return codeRepository(Output.of(codeRepository));
         }
+
         public Builder imageRepository(@Nullable Output<ServiceImageRepositoryArgs> imageRepository) {
-            this.imageRepository = imageRepository;
+            $.imageRepository = imageRepository;
             return this;
         }
-        public Builder imageRepository(@Nullable ServiceImageRepositoryArgs imageRepository) {
-            this.imageRepository = Codegen.ofNullable(imageRepository);
-            return this;
-        }        public ServiceSourceConfigurationArgs build() {
-            return new ServiceSourceConfigurationArgs(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
+
+        public Builder imageRepository(ServiceImageRepositoryArgs imageRepository) {
+            return imageRepository(Output.of(imageRepository));
+        }
+
+        public ServiceSourceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

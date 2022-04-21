@@ -5,9 +5,9 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentVersion")
-      private final @Nullable Output<String> contentVersion;
+    private @Nullable Output<String> contentVersion;
 
-    public Output<String> contentVersion() {
-        return this.contentVersion == null ? Codegen.empty() : this.contentVersion;
+    public Optional<Output<String>> contentVersion() {
+        return Optional.ofNullable(this.contentVersion);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryString")
-      private final @Nullable Output<String> queryString;
+    private @Nullable Output<String> queryString;
 
-    public Output<String> queryString() {
-        return this.queryString == null ? Codegen.empty() : this.queryString;
+    public Optional<Output<String>> queryString() {
+        return Optional.ofNullable(this.queryString);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relativePath")
-      private final @Nullable Output<String> relativePath;
+    private @Nullable Output<String> relativePath;
 
-    public Output<String> relativePath() {
-        return this.relativePath == null ? Codegen.empty() : this.relativePath;
+    public Optional<Output<String>> relativePath() {
+        return Optional.ofNullable(this.relativePath);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class TemplateLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public TemplateLinkArgs(
-        @Nullable Output<String> contentVersion,
-        @Nullable Output<String> id,
-        @Nullable Output<String> queryString,
-        @Nullable Output<String> relativePath,
-        @Nullable Output<String> uri) {
-        this.contentVersion = contentVersion;
-        this.id = id;
-        this.queryString = queryString;
-        this.relativePath = relativePath;
-        this.uri = uri;
-    }
+    private TemplateLinkArgs() {}
 
-    private TemplateLinkArgs() {
-        this.contentVersion = Codegen.empty();
-        this.id = Codegen.empty();
-        this.queryString = Codegen.empty();
-        this.relativePath = Codegen.empty();
-        this.uri = Codegen.empty();
+    private TemplateLinkArgs(TemplateLinkArgs $) {
+        this.contentVersion = $.contentVersion;
+        this.id = $.id;
+        this.queryString = $.queryString;
+        this.relativePath = $.relativePath;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentVersion;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> queryString;
-        private @Nullable Output<String> relativePath;
-        private @Nullable Output<String> uri;
+        private TemplateLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateLinkArgs();
         }
 
         public Builder(TemplateLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentVersion = defaults.contentVersion;
-    	      this.id = defaults.id;
-    	      this.queryString = defaults.queryString;
-    	      this.relativePath = defaults.relativePath;
-    	      this.uri = defaults.uri;
+            $ = new TemplateLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentVersion(@Nullable Output<String> contentVersion) {
-            this.contentVersion = contentVersion;
+            $.contentVersion = contentVersion;
             return this;
         }
-        public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = Codegen.ofNullable(contentVersion);
-            return this;
+
+        public Builder contentVersion(String contentVersion) {
+            return contentVersion(Output.of(contentVersion));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder queryString(@Nullable Output<String> queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
-        public Builder queryString(@Nullable String queryString) {
-            this.queryString = Codegen.ofNullable(queryString);
-            return this;
+
+        public Builder queryString(String queryString) {
+            return queryString(Output.of(queryString));
         }
+
         public Builder relativePath(@Nullable Output<String> relativePath) {
-            this.relativePath = relativePath;
+            $.relativePath = relativePath;
             return this;
         }
-        public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Codegen.ofNullable(relativePath);
-            return this;
+
+        public Builder relativePath(String relativePath) {
+            return relativePath(Output.of(relativePath));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public TemplateLinkArgs build() {
-            return new TemplateLinkArgs(contentVersion, id, queryString, relativePath, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public TemplateLinkArgs build() {
+            return $;
         }
     }
+
 }

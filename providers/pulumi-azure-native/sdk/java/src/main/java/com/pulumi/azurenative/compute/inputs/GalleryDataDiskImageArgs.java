@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.enums.HostCaching;
 import com.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GalleryDataDiskImageArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable Output<HostCaching> hostCaching;
+    private @Nullable Output<HostCaching> hostCaching;
 
-    public Output<HostCaching> hostCaching() {
-        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
+    public Optional<Output<HostCaching>> hostCaching() {
+        return Optional.ofNullable(this.hostCaching);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GalleryDataDiskImageArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="lun", required=true)
-      private final Output<Integer> lun;
+    private Output<Integer> lun;
 
     public Output<Integer> lun() {
         return this.lun;
@@ -48,76 +48,69 @@ public final class GalleryDataDiskImageArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
+    private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<GalleryArtifactVersionSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public GalleryDataDiskImageArgs(
-        @Nullable Output<HostCaching> hostCaching,
-        Output<Integer> lun,
-        @Nullable Output<GalleryArtifactVersionSourceArgs> source) {
-        this.hostCaching = hostCaching;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.source = source;
-    }
+    private GalleryDataDiskImageArgs() {}
 
-    private GalleryDataDiskImageArgs() {
-        this.hostCaching = Codegen.empty();
-        this.lun = Codegen.empty();
-        this.source = Codegen.empty();
+    private GalleryDataDiskImageArgs(GalleryDataDiskImageArgs $) {
+        this.hostCaching = $.hostCaching;
+        this.lun = $.lun;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryDataDiskImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HostCaching> hostCaching;
-        private Output<Integer> lun;
-        private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
+        private GalleryDataDiskImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryDataDiskImageArgs();
         }
 
         public Builder(GalleryDataDiskImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostCaching = defaults.hostCaching;
-    	      this.lun = defaults.lun;
-    	      this.source = defaults.source;
+            $ = new GalleryDataDiskImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostCaching(@Nullable Output<HostCaching> hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
         }
-        public Builder hostCaching(@Nullable HostCaching hostCaching) {
-            this.hostCaching = Codegen.ofNullable(hostCaching);
-            return this;
+
+        public Builder hostCaching(HostCaching hostCaching) {
+            return hostCaching(Output.of(hostCaching));
         }
+
         public Builder lun(Output<Integer> lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Output.of(Objects.requireNonNull(lun));
-            return this;
+            return lun(Output.of(lun));
         }
+
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public GalleryDataDiskImageArgs build() {
-            return new GalleryDataDiskImageArgs(hostCaching, lun, source);
+
+        public Builder source(GalleryArtifactVersionSourceArgs source) {
+            return source(Output.of(source));
+        }
+
+        public GalleryDataDiskImageArgs build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

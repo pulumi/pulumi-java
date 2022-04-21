@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLevels")
-      private final @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels;
+    private @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels;
 
-    public Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels() {
-        return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
+    public Optional<Output<List<AccessLevelsAccessLevelGetArgs>>> accessLevels() {
+        return Optional.ofNullable(this.accessLevels);
     }
 
     /**
@@ -35,66 +35,62 @@ public final class AccessLevelsState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
-    public AccessLevelsState(
-        @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels,
-        @Nullable Output<String> parent) {
-        this.accessLevels = accessLevels;
-        this.parent = parent;
-    }
+    private AccessLevelsState() {}
 
-    private AccessLevelsState() {
-        this.accessLevels = Codegen.empty();
-        this.parent = Codegen.empty();
+    private AccessLevelsState(AccessLevelsState $) {
+        this.accessLevels = $.accessLevels;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels;
-        private @Nullable Output<String> parent;
+        private AccessLevelsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelsState();
         }
 
         public Builder(AccessLevelsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevels = defaults.accessLevels;
-    	      this.parent = defaults.parent;
+            $ = new AccessLevelsState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevels(@Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels) {
-            this.accessLevels = accessLevels;
+            $.accessLevels = accessLevels;
             return this;
         }
-        public Builder accessLevels(@Nullable List<AccessLevelsAccessLevelGetArgs> accessLevels) {
-            this.accessLevels = Codegen.ofNullable(accessLevels);
-            return this;
+
+        public Builder accessLevels(List<AccessLevelsAccessLevelGetArgs> accessLevels) {
+            return accessLevels(Output.of(accessLevels));
         }
+
         public Builder accessLevels(AccessLevelsAccessLevelGetArgs... accessLevels) {
             return accessLevels(List.of(accessLevels));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
-        }        public AccessLevelsState build() {
-            return new AccessLevelsState(accessLevels, parent);
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
+        }
+
+        public AccessLevelsState build() {
+            return $;
         }
     }
+
 }

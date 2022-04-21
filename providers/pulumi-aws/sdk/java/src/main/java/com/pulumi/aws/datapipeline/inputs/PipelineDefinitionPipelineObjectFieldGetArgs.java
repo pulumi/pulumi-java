@@ -5,9 +5,9 @@ package com.pulumi.aws.datapipeline.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -31,10 +31,10 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
      * 
      */
     @Import(name="refValue")
-      private final @Nullable Output<String> refValue;
+    private @Nullable Output<String> refValue;
 
-    public Output<String> refValue() {
-        return this.refValue == null ? Codegen.empty() : this.refValue;
+    public Optional<Output<String>> refValue() {
+        return Optional.ofNullable(this.refValue);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends com.pulu
      * 
      */
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
-    public PipelineDefinitionPipelineObjectFieldGetArgs(
-        Output<String> key,
-        @Nullable Output<String> refValue,
-        @Nullable Output<String> stringValue) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.refValue = refValue;
-        this.stringValue = stringValue;
-    }
+    private PipelineDefinitionPipelineObjectFieldGetArgs() {}
 
-    private PipelineDefinitionPipelineObjectFieldGetArgs() {
-        this.key = Codegen.empty();
-        this.refValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
+    private PipelineDefinitionPipelineObjectFieldGetArgs(PipelineDefinitionPipelineObjectFieldGetArgs $) {
+        this.key = $.key;
+        this.refValue = $.refValue;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDefinitionPipelineObjectFieldGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<String> refValue;
-        private @Nullable Output<String> stringValue;
+        private PipelineDefinitionPipelineObjectFieldGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDefinitionPipelineObjectFieldGetArgs();
         }
 
         public Builder(PipelineDefinitionPipelineObjectFieldGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.refValue = defaults.refValue;
-    	      this.stringValue = defaults.stringValue;
+            $ = new PipelineDefinitionPipelineObjectFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder refValue(@Nullable Output<String> refValue) {
-            this.refValue = refValue;
+            $.refValue = refValue;
             return this;
         }
-        public Builder refValue(@Nullable String refValue) {
-            this.refValue = Codegen.ofNullable(refValue);
-            return this;
+
+        public Builder refValue(String refValue) {
+            return refValue(Output.of(refValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
-        }        public PipelineDefinitionPipelineObjectFieldGetArgs build() {
-            return new PipelineDefinitionPipelineObjectFieldGetArgs(key, refValue, stringValue);
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
+        }
+
+        public PipelineDefinitionPipelineObjectFieldGetArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

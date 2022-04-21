@@ -5,7 +5,6 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends com.pulumi
      * 
      */
     @Import(name="lambdaArn", required=true)
-      private final Output<String> lambdaArn;
+    private Output<String> lambdaArn;
 
     public Output<String> lambdaArn() {
         return this.lambdaArn;
@@ -30,63 +29,60 @@ public final class UserPoolLambdaConfigCustomSmsSenderGetArgs extends com.pulumi
      * 
      */
     @Import(name="lambdaVersion", required=true)
-      private final Output<String> lambdaVersion;
+    private Output<String> lambdaVersion;
 
     public Output<String> lambdaVersion() {
         return this.lambdaVersion;
     }
 
-    public UserPoolLambdaConfigCustomSmsSenderGetArgs(
-        Output<String> lambdaArn,
-        Output<String> lambdaVersion) {
-        this.lambdaArn = Objects.requireNonNull(lambdaArn, "expected parameter 'lambdaArn' to be non-null");
-        this.lambdaVersion = Objects.requireNonNull(lambdaVersion, "expected parameter 'lambdaVersion' to be non-null");
-    }
+    private UserPoolLambdaConfigCustomSmsSenderGetArgs() {}
 
-    private UserPoolLambdaConfigCustomSmsSenderGetArgs() {
-        this.lambdaArn = Codegen.empty();
-        this.lambdaVersion = Codegen.empty();
+    private UserPoolLambdaConfigCustomSmsSenderGetArgs(UserPoolLambdaConfigCustomSmsSenderGetArgs $) {
+        this.lambdaArn = $.lambdaArn;
+        this.lambdaVersion = $.lambdaVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolLambdaConfigCustomSmsSenderGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> lambdaArn;
-        private Output<String> lambdaVersion;
+        private UserPoolLambdaConfigCustomSmsSenderGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolLambdaConfigCustomSmsSenderGetArgs();
         }
 
         public Builder(UserPoolLambdaConfigCustomSmsSenderGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lambdaArn = defaults.lambdaArn;
-    	      this.lambdaVersion = defaults.lambdaVersion;
+            $ = new UserPoolLambdaConfigCustomSmsSenderGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lambdaArn(Output<String> lambdaArn) {
-            this.lambdaArn = Objects.requireNonNull(lambdaArn);
+            $.lambdaArn = lambdaArn;
             return this;
         }
+
         public Builder lambdaArn(String lambdaArn) {
-            this.lambdaArn = Output.of(Objects.requireNonNull(lambdaArn));
-            return this;
+            return lambdaArn(Output.of(lambdaArn));
         }
+
         public Builder lambdaVersion(Output<String> lambdaVersion) {
-            this.lambdaVersion = Objects.requireNonNull(lambdaVersion);
+            $.lambdaVersion = lambdaVersion;
             return this;
         }
+
         public Builder lambdaVersion(String lambdaVersion) {
-            this.lambdaVersion = Output.of(Objects.requireNonNull(lambdaVersion));
-            return this;
-        }        public UserPoolLambdaConfigCustomSmsSenderGetArgs build() {
-            return new UserPoolLambdaConfigCustomSmsSenderGetArgs(lambdaArn, lambdaVersion);
+            return lambdaVersion(Output.of(lambdaVersion));
+        }
+
+        public UserPoolLambdaConfigCustomSmsSenderGetArgs build() {
+            $.lambdaArn = Objects.requireNonNull($.lambdaArn, "expected parameter 'lambdaArn' to be non-null");
+            $.lambdaVersion = Objects.requireNonNull($.lambdaVersion, "expected parameter 'lambdaVersion' to be non-null");
+            return $;
         }
     }
+
 }

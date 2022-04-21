@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pem")
-      private final @Nullable Output<String> pem;
+    private @Nullable Output<String> pem;
 
-    public Output<String> pem() {
-        return this.pem == null ? Codegen.empty() : this.pem;
+    public Optional<Output<String>> pem() {
+        return Optional.ofNullable(this.pem);
     }
 
-    public CertificateArgs(@Nullable Output<String> pem) {
-        this.pem = pem;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.pem = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.pem = $.pem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pem;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pem = defaults.pem;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pem(@Nullable Output<String> pem) {
-            this.pem = pem;
+            $.pem = pem;
             return this;
         }
-        public Builder pem(@Nullable String pem) {
-            this.pem = Codegen.ofNullable(pem);
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(pem);
+
+        public Builder pem(String pem) {
+            return pem(Output.of(pem));
+        }
+
+        public CertificateArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.toolresults_v1beta3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.BasicPerfSampleSeriesArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,130 +21,119 @@ public final class PerfSampleSeriesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="basicPerfSampleSeries")
-      private final @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
+    private @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
-    public Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries() {
-        return this.basicPerfSampleSeries == null ? Codegen.empty() : this.basicPerfSampleSeries;
+    public Optional<Output<BasicPerfSampleSeriesArgs>> basicPerfSampleSeries() {
+        return Optional.ofNullable(this.basicPerfSampleSeries);
     }
 
     @Import(name="executionId", required=true)
-      private final Output<String> executionId;
+    private Output<String> executionId;
 
     public Output<String> executionId() {
         return this.executionId;
     }
 
     @Import(name="historyId", required=true)
-      private final Output<String> historyId;
+    private Output<String> historyId;
 
     public Output<String> historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="stepId", required=true)
-      private final Output<String> stepId;
+    private Output<String> stepId;
 
     public Output<String> stepId() {
         return this.stepId;
     }
 
-    public PerfSampleSeriesArgs(
-        @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries,
-        Output<String> executionId,
-        Output<String> historyId,
-        @Nullable Output<String> project,
-        Output<String> stepId) {
-        this.basicPerfSampleSeries = basicPerfSampleSeries;
-        this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.project = project;
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private PerfSampleSeriesArgs() {}
 
-    private PerfSampleSeriesArgs() {
-        this.basicPerfSampleSeries = Codegen.empty();
-        this.executionId = Codegen.empty();
-        this.historyId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.stepId = Codegen.empty();
+    private PerfSampleSeriesArgs(PerfSampleSeriesArgs $) {
+        this.basicPerfSampleSeries = $.basicPerfSampleSeries;
+        this.executionId = $.executionId;
+        this.historyId = $.historyId;
+        this.project = $.project;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerfSampleSeriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
-        private Output<String> executionId;
-        private Output<String> historyId;
-        private @Nullable Output<String> project;
-        private Output<String> stepId;
+        private PerfSampleSeriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerfSampleSeriesArgs();
         }
 
         public Builder(PerfSampleSeriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicPerfSampleSeries = defaults.basicPerfSampleSeries;
-    	      this.executionId = defaults.executionId;
-    	      this.historyId = defaults.historyId;
-    	      this.project = defaults.project;
-    	      this.stepId = defaults.stepId;
+            $ = new PerfSampleSeriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicPerfSampleSeries(@Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries) {
-            this.basicPerfSampleSeries = basicPerfSampleSeries;
+            $.basicPerfSampleSeries = basicPerfSampleSeries;
             return this;
         }
-        public Builder basicPerfSampleSeries(@Nullable BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
-            this.basicPerfSampleSeries = Codegen.ofNullable(basicPerfSampleSeries);
-            return this;
+
+        public Builder basicPerfSampleSeries(BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
+            return basicPerfSampleSeries(Output.of(basicPerfSampleSeries));
         }
+
         public Builder executionId(Output<String> executionId) {
-            this.executionId = Objects.requireNonNull(executionId);
+            $.executionId = executionId;
             return this;
         }
+
         public Builder executionId(String executionId) {
-            this.executionId = Output.of(Objects.requireNonNull(executionId));
-            return this;
+            return executionId(Output.of(executionId));
         }
+
         public Builder historyId(Output<String> historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder historyId(String historyId) {
-            this.historyId = Output.of(Objects.requireNonNull(historyId));
-            return this;
+            return historyId(Output.of(historyId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder stepId(Output<String> stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Output.of(Objects.requireNonNull(stepId));
-            return this;
-        }        public PerfSampleSeriesArgs build() {
-            return new PerfSampleSeriesArgs(basicPerfSampleSeries, executionId, historyId, project, stepId);
+            return stepId(Output.of(stepId));
+        }
+
+        public PerfSampleSeriesArgs build() {
+            $.executionId = Objects.requireNonNull($.executionId, "expected parameter 'executionId' to be non-null");
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

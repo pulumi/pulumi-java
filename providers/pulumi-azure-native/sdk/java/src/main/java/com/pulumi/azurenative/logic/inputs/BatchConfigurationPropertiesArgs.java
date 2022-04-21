@@ -6,10 +6,10 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.BatchReleaseCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="batchGroupName", required=true)
-      private final Output<String> batchGroupName;
+    private Output<String> batchGroupName;
 
     public Output<String> batchGroupName() {
         return this.batchGroupName;
@@ -37,10 +37,10 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="changedTime")
-      private final @Nullable Output<String> changedTime;
+    private @Nullable Output<String> changedTime;
 
-    public Output<String> changedTime() {
-        return this.changedTime == null ? Codegen.empty() : this.changedTime;
+    public Optional<Output<String>> changedTime() {
+        return Optional.ofNullable(this.changedTime);
     }
 
     /**
@@ -48,17 +48,17 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -66,102 +66,90 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="releaseCriteria", required=true)
-      private final Output<BatchReleaseCriteriaArgs> releaseCriteria;
+    private Output<BatchReleaseCriteriaArgs> releaseCriteria;
 
     public Output<BatchReleaseCriteriaArgs> releaseCriteria() {
         return this.releaseCriteria;
     }
 
-    public BatchConfigurationPropertiesArgs(
-        Output<String> batchGroupName,
-        @Nullable Output<String> changedTime,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<Object> metadata,
-        Output<BatchReleaseCriteriaArgs> releaseCriteria) {
-        this.batchGroupName = Objects.requireNonNull(batchGroupName, "expected parameter 'batchGroupName' to be non-null");
-        this.changedTime = changedTime;
-        this.createdTime = createdTime;
-        this.metadata = metadata;
-        this.releaseCriteria = Objects.requireNonNull(releaseCriteria, "expected parameter 'releaseCriteria' to be non-null");
-    }
+    private BatchConfigurationPropertiesArgs() {}
 
-    private BatchConfigurationPropertiesArgs() {
-        this.batchGroupName = Codegen.empty();
-        this.changedTime = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.releaseCriteria = Codegen.empty();
+    private BatchConfigurationPropertiesArgs(BatchConfigurationPropertiesArgs $) {
+        this.batchGroupName = $.batchGroupName;
+        this.changedTime = $.changedTime;
+        this.createdTime = $.createdTime;
+        this.metadata = $.metadata;
+        this.releaseCriteria = $.releaseCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> batchGroupName;
-        private @Nullable Output<String> changedTime;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<Object> metadata;
-        private Output<BatchReleaseCriteriaArgs> releaseCriteria;
+        private BatchConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchConfigurationPropertiesArgs();
         }
 
         public Builder(BatchConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchGroupName = defaults.batchGroupName;
-    	      this.changedTime = defaults.changedTime;
-    	      this.createdTime = defaults.createdTime;
-    	      this.metadata = defaults.metadata;
-    	      this.releaseCriteria = defaults.releaseCriteria;
+            $ = new BatchConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchGroupName(Output<String> batchGroupName) {
-            this.batchGroupName = Objects.requireNonNull(batchGroupName);
+            $.batchGroupName = batchGroupName;
             return this;
         }
+
         public Builder batchGroupName(String batchGroupName) {
-            this.batchGroupName = Output.of(Objects.requireNonNull(batchGroupName));
-            return this;
+            return batchGroupName(Output.of(batchGroupName));
         }
+
         public Builder changedTime(@Nullable Output<String> changedTime) {
-            this.changedTime = changedTime;
+            $.changedTime = changedTime;
             return this;
         }
-        public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Codegen.ofNullable(changedTime);
-            return this;
+
+        public Builder changedTime(String changedTime) {
+            return changedTime(Output.of(changedTime));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder releaseCriteria(Output<BatchReleaseCriteriaArgs> releaseCriteria) {
-            this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
+            $.releaseCriteria = releaseCriteria;
             return this;
         }
+
         public Builder releaseCriteria(BatchReleaseCriteriaArgs releaseCriteria) {
-            this.releaseCriteria = Output.of(Objects.requireNonNull(releaseCriteria));
-            return this;
-        }        public BatchConfigurationPropertiesArgs build() {
-            return new BatchConfigurationPropertiesArgs(batchGroupName, changedTime, createdTime, metadata, releaseCriteria);
+            return releaseCriteria(Output.of(releaseCriteria));
+        }
+
+        public BatchConfigurationPropertiesArgs build() {
+            $.batchGroupName = Objects.requireNonNull($.batchGroupName, "expected parameter 'batchGroupName' to be non-null");
+            $.releaseCriteria = Objects.requireNonNull($.releaseCriteria, "expected parameter 'releaseCriteria' to be non-null");
+            return $;
         }
     }
+
 }

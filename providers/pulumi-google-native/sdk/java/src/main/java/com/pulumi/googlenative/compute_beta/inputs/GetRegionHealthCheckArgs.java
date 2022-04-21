@@ -15,78 +15,72 @@ public final class GetRegionHealthCheckArgs extends com.pulumi.resources.InvokeA
     public static final GetRegionHealthCheckArgs Empty = new GetRegionHealthCheckArgs();
 
     @Import(name="healthCheck", required=true)
-      private final String healthCheck;
+    private String healthCheck;
 
     public String healthCheck() {
         return this.healthCheck;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionHealthCheckArgs(
-        String healthCheck,
-        @Nullable String project,
-        String region) {
-        this.healthCheck = Objects.requireNonNull(healthCheck, "expected parameter 'healthCheck' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionHealthCheckArgs() {}
 
-    private GetRegionHealthCheckArgs() {
-        this.healthCheck = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionHealthCheckArgs(GetRegionHealthCheckArgs $) {
+        this.healthCheck = $.healthCheck;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String healthCheck;
-        private @Nullable String project;
-        private String region;
+        private GetRegionHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionHealthCheckArgs();
         }
 
         public Builder(GetRegionHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheck(String healthCheck) {
-            this.healthCheck = Objects.requireNonNull(healthCheck);
+            $.healthCheck = healthCheck;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionHealthCheckArgs build() {
-            return new GetRegionHealthCheckArgs(healthCheck, project, region);
+        }
+
+        public GetRegionHealthCheckArgs build() {
+            $.healthCheck = Objects.requireNonNull($.healthCheck, "expected parameter 'healthCheck' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

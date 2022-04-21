@@ -5,7 +5,6 @@ package com.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod;
 import com.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="calendarPeriod")
-      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod;
+    private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod() {
-        return this.calendarPeriod == null ? Codegen.empty() : this.calendarPeriod;
+    public Optional<Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod>> calendarPeriod() {
+        return Optional.ofNullable(this.calendarPeriod);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="creditTypes")
-      private final @Nullable Output<List<String>> creditTypes;
+    private @Nullable Output<List<String>> creditTypes;
 
-    public Output<List<String>> creditTypes() {
-        return this.creditTypes == null ? Codegen.empty() : this.creditTypes;
+    public Optional<Output<List<String>>> creditTypes() {
+        return Optional.ofNullable(this.creditTypes);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="creditTypesTreatment")
-      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment;
+    private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment() {
-        return this.creditTypesTreatment == null ? Codegen.empty() : this.creditTypesTreatment;
+    public Optional<Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment>> creditTypesTreatment() {
+        return Optional.ofNullable(this.creditTypesTreatment);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="customPeriod")
-      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod;
+    private @Nullable Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod() {
-        return this.customPeriod == null ? Codegen.empty() : this.customPeriod;
+    public Optional<Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs>> customPeriod() {
+        return Optional.ofNullable(this.customPeriod);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="projects")
-      private final @Nullable Output<List<String>> projects;
+    private @Nullable Output<List<String>> projects;
 
-    public Output<List<String>> projects() {
-        return this.projects == null ? Codegen.empty() : this.projects;
+    public Optional<Output<List<String>>> projects() {
+        return Optional.ofNullable(this.projects);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="services")
-      private final @Nullable Output<List<String>> services;
+    private @Nullable Output<List<String>> services;
 
-    public Output<List<String>> services() {
-        return this.services == null ? Codegen.empty() : this.services;
+    public Optional<Output<List<String>>> services() {
+        return Optional.ofNullable(this.services);
     }
 
     /**
@@ -106,153 +106,134 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterArgs extends com.pulumi
      * 
      */
     @Import(name="subaccounts")
-      private final @Nullable Output<List<String>> subaccounts;
+    private @Nullable Output<List<String>> subaccounts;
 
-    public Output<List<String>> subaccounts() {
-        return this.subaccounts == null ? Codegen.empty() : this.subaccounts;
+    public Optional<Output<List<String>>> subaccounts() {
+        return Optional.ofNullable(this.subaccounts);
     }
 
-    public GoogleCloudBillingBudgetsV1beta1FilterArgs(
-        @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod,
-        @Nullable Output<List<String>> creditTypes,
-        @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment,
-        @Nullable Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> projects,
-        @Nullable Output<List<String>> services,
-        @Nullable Output<List<String>> subaccounts) {
-        this.calendarPeriod = calendarPeriod;
-        this.creditTypes = creditTypes;
-        this.creditTypesTreatment = creditTypesTreatment;
-        this.customPeriod = customPeriod;
-        this.labels = labels;
-        this.projects = projects;
-        this.services = services;
-        this.subaccounts = subaccounts;
-    }
+    private GoogleCloudBillingBudgetsV1beta1FilterArgs() {}
 
-    private GoogleCloudBillingBudgetsV1beta1FilterArgs() {
-        this.calendarPeriod = Codegen.empty();
-        this.creditTypes = Codegen.empty();
-        this.creditTypesTreatment = Codegen.empty();
-        this.customPeriod = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.projects = Codegen.empty();
-        this.services = Codegen.empty();
-        this.subaccounts = Codegen.empty();
+    private GoogleCloudBillingBudgetsV1beta1FilterArgs(GoogleCloudBillingBudgetsV1beta1FilterArgs $) {
+        this.calendarPeriod = $.calendarPeriod;
+        this.creditTypes = $.creditTypes;
+        this.creditTypesTreatment = $.creditTypesTreatment;
+        this.customPeriod = $.customPeriod;
+        this.labels = $.labels;
+        this.projects = $.projects;
+        this.services = $.services;
+        this.subaccounts = $.subaccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1beta1FilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod;
-        private @Nullable Output<List<String>> creditTypes;
-        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment;
-        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> projects;
-        private @Nullable Output<List<String>> services;
-        private @Nullable Output<List<String>> subaccounts;
+        private GoogleCloudBillingBudgetsV1beta1FilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1beta1FilterArgs();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1beta1FilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.calendarPeriod = defaults.calendarPeriod;
-    	      this.creditTypes = defaults.creditTypes;
-    	      this.creditTypesTreatment = defaults.creditTypesTreatment;
-    	      this.customPeriod = defaults.customPeriod;
-    	      this.labels = defaults.labels;
-    	      this.projects = defaults.projects;
-    	      this.services = defaults.services;
-    	      this.subaccounts = defaults.subaccounts;
+            $ = new GoogleCloudBillingBudgetsV1beta1FilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder calendarPeriod(@Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod> calendarPeriod) {
-            this.calendarPeriod = calendarPeriod;
+            $.calendarPeriod = calendarPeriod;
             return this;
         }
-        public Builder calendarPeriod(@Nullable GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod calendarPeriod) {
-            this.calendarPeriod = Codegen.ofNullable(calendarPeriod);
-            return this;
+
+        public Builder calendarPeriod(GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriod calendarPeriod) {
+            return calendarPeriod(Output.of(calendarPeriod));
         }
+
         public Builder creditTypes(@Nullable Output<List<String>> creditTypes) {
-            this.creditTypes = creditTypes;
+            $.creditTypes = creditTypes;
             return this;
         }
-        public Builder creditTypes(@Nullable List<String> creditTypes) {
-            this.creditTypes = Codegen.ofNullable(creditTypes);
-            return this;
+
+        public Builder creditTypes(List<String> creditTypes) {
+            return creditTypes(Output.of(creditTypes));
         }
+
         public Builder creditTypes(String... creditTypes) {
             return creditTypes(List.of(creditTypes));
         }
+
         public Builder creditTypesTreatment(@Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment> creditTypesTreatment) {
-            this.creditTypesTreatment = creditTypesTreatment;
+            $.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
-        public Builder creditTypesTreatment(@Nullable GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment creditTypesTreatment) {
-            this.creditTypesTreatment = Codegen.ofNullable(creditTypesTreatment);
-            return this;
+
+        public Builder creditTypesTreatment(GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatment creditTypesTreatment) {
+            return creditTypesTreatment(Output.of(creditTypesTreatment));
         }
+
         public Builder customPeriod(@Nullable Output<GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs> customPeriod) {
-            this.customPeriod = customPeriod;
+            $.customPeriod = customPeriod;
             return this;
         }
-        public Builder customPeriod(@Nullable GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs customPeriod) {
-            this.customPeriod = Codegen.ofNullable(customPeriod);
-            return this;
+
+        public Builder customPeriod(GoogleCloudBillingBudgetsV1beta1CustomPeriodArgs customPeriod) {
+            return customPeriod(Output.of(customPeriod));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder projects(@Nullable Output<List<String>> projects) {
-            this.projects = projects;
+            $.projects = projects;
             return this;
         }
-        public Builder projects(@Nullable List<String> projects) {
-            this.projects = Codegen.ofNullable(projects);
-            return this;
+
+        public Builder projects(List<String> projects) {
+            return projects(Output.of(projects));
         }
+
         public Builder projects(String... projects) {
             return projects(List.of(projects));
         }
+
         public Builder services(@Nullable Output<List<String>> services) {
-            this.services = services;
+            $.services = services;
             return this;
         }
-        public Builder services(@Nullable List<String> services) {
-            this.services = Codegen.ofNullable(services);
-            return this;
+
+        public Builder services(List<String> services) {
+            return services(Output.of(services));
         }
+
         public Builder services(String... services) {
             return services(List.of(services));
         }
+
         public Builder subaccounts(@Nullable Output<List<String>> subaccounts) {
-            this.subaccounts = subaccounts;
+            $.subaccounts = subaccounts;
             return this;
         }
-        public Builder subaccounts(@Nullable List<String> subaccounts) {
-            this.subaccounts = Codegen.ofNullable(subaccounts);
-            return this;
+
+        public Builder subaccounts(List<String> subaccounts) {
+            return subaccounts(Output.of(subaccounts));
         }
+
         public Builder subaccounts(String... subaccounts) {
             return subaccounts(List.of(subaccounts));
-        }        public GoogleCloudBillingBudgetsV1beta1FilterArgs build() {
-            return new GoogleCloudBillingBudgetsV1beta1FilterArgs(calendarPeriod, creditTypes, creditTypesTreatment, customPeriod, labels, projects, services, subaccounts);
+        }
+
+        public GoogleCloudBillingBudgetsV1beta1FilterArgs build() {
+            return $;
         }
     }
+
 }

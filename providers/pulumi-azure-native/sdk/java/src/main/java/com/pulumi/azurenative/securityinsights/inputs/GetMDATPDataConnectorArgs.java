@@ -17,7 +17,7 @@ public final class GetMDATPDataConnectorArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataConnectorId", required=true)
-      private final String dataConnectorId;
+    private String dataConnectorId;
 
     public String dataConnectorId() {
         return this.dataConnectorId;
@@ -28,7 +28,7 @@ public final class GetMDATPDataConnectorArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetMDATPDataConnectorArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetMDATPDataConnectorArgs(
-        String dataConnectorId,
-        String resourceGroupName,
-        String workspaceName) {
-        this.dataConnectorId = Objects.requireNonNull(dataConnectorId, "expected parameter 'dataConnectorId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetMDATPDataConnectorArgs() {}
 
-    private GetMDATPDataConnectorArgs() {
-        this.dataConnectorId = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetMDATPDataConnectorArgs(GetMDATPDataConnectorArgs $) {
+        this.dataConnectorId = $.dataConnectorId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMDATPDataConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataConnectorId;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetMDATPDataConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMDATPDataConnectorArgs();
         }
 
         public Builder(GetMDATPDataConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataConnectorId = defaults.dataConnectorId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetMDATPDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataConnectorId(String dataConnectorId) {
-            this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
+            $.dataConnectorId = dataConnectorId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetMDATPDataConnectorArgs build() {
-            return new GetMDATPDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
+        }
+
+        public GetMDATPDataConnectorArgs build() {
+            $.dataConnectorId = Objects.requireNonNull($.dataConnectorId, "expected parameter 'dataConnectorId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

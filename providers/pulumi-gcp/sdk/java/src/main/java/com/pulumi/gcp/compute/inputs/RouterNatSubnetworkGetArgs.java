@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,10 +35,10 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="secondaryIpRangeNames")
-      private final @Nullable Output<List<String>> secondaryIpRangeNames;
+    private @Nullable Output<List<String>> secondaryIpRangeNames;
 
-    public Output<List<String>> secondaryIpRangeNames() {
-        return this.secondaryIpRangeNames == null ? Codegen.empty() : this.secondaryIpRangeNames;
+    public Optional<Output<List<String>>> secondaryIpRangeNames() {
+        return Optional.ofNullable(this.secondaryIpRangeNames);
     }
 
     /**
@@ -49,82 +49,78 @@ public final class RouterNatSubnetworkGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sourceIpRangesToNats", required=true)
-      private final Output<List<String>> sourceIpRangesToNats;
+    private Output<List<String>> sourceIpRangesToNats;
 
     public Output<List<String>> sourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }
 
-    public RouterNatSubnetworkGetArgs(
-        Output<String> name,
-        @Nullable Output<List<String>> secondaryIpRangeNames,
-        Output<List<String>> sourceIpRangesToNats) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secondaryIpRangeNames = secondaryIpRangeNames;
-        this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats, "expected parameter 'sourceIpRangesToNats' to be non-null");
-    }
+    private RouterNatSubnetworkGetArgs() {}
 
-    private RouterNatSubnetworkGetArgs() {
-        this.name = Codegen.empty();
-        this.secondaryIpRangeNames = Codegen.empty();
-        this.sourceIpRangesToNats = Codegen.empty();
+    private RouterNatSubnetworkGetArgs(RouterNatSubnetworkGetArgs $) {
+        this.name = $.name;
+        this.secondaryIpRangeNames = $.secondaryIpRangeNames;
+        this.sourceIpRangesToNats = $.sourceIpRangesToNats;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatSubnetworkGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<List<String>> secondaryIpRangeNames;
-        private Output<List<String>> sourceIpRangesToNats;
+        private RouterNatSubnetworkGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatSubnetworkGetArgs();
         }
 
         public Builder(RouterNatSubnetworkGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secondaryIpRangeNames = defaults.secondaryIpRangeNames;
-    	      this.sourceIpRangesToNats = defaults.sourceIpRangesToNats;
+            $ = new RouterNatSubnetworkGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder secondaryIpRangeNames(@Nullable Output<List<String>> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = secondaryIpRangeNames;
+            $.secondaryIpRangeNames = secondaryIpRangeNames;
             return this;
         }
-        public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = Codegen.ofNullable(secondaryIpRangeNames);
-            return this;
+
+        public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
+            return secondaryIpRangeNames(Output.of(secondaryIpRangeNames));
         }
+
         public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {
             return secondaryIpRangeNames(List.of(secondaryIpRangeNames));
         }
+
         public Builder sourceIpRangesToNats(Output<List<String>> sourceIpRangesToNats) {
-            this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
+            $.sourceIpRangesToNats = sourceIpRangesToNats;
             return this;
         }
+
         public Builder sourceIpRangesToNats(List<String> sourceIpRangesToNats) {
-            this.sourceIpRangesToNats = Output.of(Objects.requireNonNull(sourceIpRangesToNats));
-            return this;
+            return sourceIpRangesToNats(Output.of(sourceIpRangesToNats));
         }
+
         public Builder sourceIpRangesToNats(String... sourceIpRangesToNats) {
             return sourceIpRangesToNats(List.of(sourceIpRangesToNats));
-        }        public RouterNatSubnetworkGetArgs build() {
-            return new RouterNatSubnetworkGetArgs(name, secondaryIpRangeNames, sourceIpRangesToNats);
+        }
+
+        public RouterNatSubnetworkGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sourceIpRangesToNats = Objects.requireNonNull($.sourceIpRangesToNats, "expected parameter 'sourceIpRangesToNats' to be non-null");
+            return $;
         }
     }
+
 }

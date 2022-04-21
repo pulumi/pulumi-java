@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class StreamStreamModeDetailsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="streamMode", required=true)
-      private final Output<String> streamMode;
+    private Output<String> streamMode;
 
     public Output<String> streamMode() {
         return this.streamMode;
     }
 
-    public StreamStreamModeDetailsArgs(Output<String> streamMode) {
-        this.streamMode = Objects.requireNonNull(streamMode, "expected parameter 'streamMode' to be non-null");
-    }
+    private StreamStreamModeDetailsArgs() {}
 
-    private StreamStreamModeDetailsArgs() {
-        this.streamMode = Codegen.empty();
+    private StreamStreamModeDetailsArgs(StreamStreamModeDetailsArgs $) {
+        this.streamMode = $.streamMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamStreamModeDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> streamMode;
+        private StreamStreamModeDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamStreamModeDetailsArgs();
         }
 
         public Builder(StreamStreamModeDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamMode = defaults.streamMode;
+            $ = new StreamStreamModeDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder streamMode(Output<String> streamMode) {
-            this.streamMode = Objects.requireNonNull(streamMode);
+            $.streamMode = streamMode;
             return this;
         }
+
         public Builder streamMode(String streamMode) {
-            this.streamMode = Output.of(Objects.requireNonNull(streamMode));
-            return this;
-        }        public StreamStreamModeDetailsArgs build() {
-            return new StreamStreamModeDetailsArgs(streamMode);
+            return streamMode(Output.of(streamMode));
+        }
+
+        public StreamStreamModeDetailsArgs build() {
+            $.streamMode = Objects.requireNonNull($.streamMode, "expected parameter 'streamMode' to be non-null");
+            return $;
         }
     }
+
 }

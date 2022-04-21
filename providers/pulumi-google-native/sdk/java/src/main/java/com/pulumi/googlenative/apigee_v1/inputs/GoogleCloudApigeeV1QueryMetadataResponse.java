@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
      * 
      */
     @Import(name="dimensions", required=true)
-      private final List<String> dimensions;
+    private List<String> dimensions;
 
     public List<String> dimensions() {
         return this.dimensions;
@@ -29,7 +29,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
      * 
      */
     @Import(name="endTimestamp", required=true)
-      private final String endTimestamp;
+    private String endTimestamp;
 
     public String endTimestamp() {
         return this.endTimestamp;
@@ -40,7 +40,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<String> metrics;
+    private List<String> metrics;
 
     public List<String> metrics() {
         return this.metrics;
@@ -51,7 +51,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
      * 
      */
     @Import(name="outputFormat", required=true)
-      private final String outputFormat;
+    private String outputFormat;
 
     public String outputFormat() {
         return this.outputFormat;
@@ -62,7 +62,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
      * 
      */
     @Import(name="startTimestamp", required=true)
-      private final String startTimestamp;
+    private String startTimestamp;
 
     public String startTimestamp() {
         return this.startTimestamp;
@@ -73,97 +73,88 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends com.pulumi.r
      * 
      */
     @Import(name="timeUnit", required=true)
-      private final String timeUnit;
+    private String timeUnit;
 
     public String timeUnit() {
         return this.timeUnit;
     }
 
-    public GoogleCloudApigeeV1QueryMetadataResponse(
-        List<String> dimensions,
-        String endTimestamp,
-        List<String> metrics,
-        String outputFormat,
-        String startTimestamp,
-        String timeUnit) {
-        this.dimensions = Objects.requireNonNull(dimensions, "expected parameter 'dimensions' to be non-null");
-        this.endTimestamp = Objects.requireNonNull(endTimestamp, "expected parameter 'endTimestamp' to be non-null");
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.outputFormat = Objects.requireNonNull(outputFormat, "expected parameter 'outputFormat' to be non-null");
-        this.startTimestamp = Objects.requireNonNull(startTimestamp, "expected parameter 'startTimestamp' to be non-null");
-        this.timeUnit = Objects.requireNonNull(timeUnit, "expected parameter 'timeUnit' to be non-null");
-    }
+    private GoogleCloudApigeeV1QueryMetadataResponse() {}
 
-    private GoogleCloudApigeeV1QueryMetadataResponse() {
-        this.dimensions = List.of();
-        this.endTimestamp = null;
-        this.metrics = List.of();
-        this.outputFormat = null;
-        this.startTimestamp = null;
-        this.timeUnit = null;
+    private GoogleCloudApigeeV1QueryMetadataResponse(GoogleCloudApigeeV1QueryMetadataResponse $) {
+        this.dimensions = $.dimensions;
+        this.endTimestamp = $.endTimestamp;
+        this.metrics = $.metrics;
+        this.outputFormat = $.outputFormat;
+        this.startTimestamp = $.startTimestamp;
+        this.timeUnit = $.timeUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1QueryMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> dimensions;
-        private String endTimestamp;
-        private List<String> metrics;
-        private String outputFormat;
-        private String startTimestamp;
-        private String timeUnit;
+        private GoogleCloudApigeeV1QueryMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1QueryMetadataResponse();
         }
 
         public Builder(GoogleCloudApigeeV1QueryMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.endTimestamp = defaults.endTimestamp;
-    	      this.metrics = defaults.metrics;
-    	      this.outputFormat = defaults.outputFormat;
-    	      this.startTimestamp = defaults.startTimestamp;
-    	      this.timeUnit = defaults.timeUnit;
+            $ = new GoogleCloudApigeeV1QueryMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(List<String> dimensions) {
-            this.dimensions = Objects.requireNonNull(dimensions);
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder dimensions(String... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder endTimestamp(String endTimestamp) {
-            this.endTimestamp = Objects.requireNonNull(endTimestamp);
+            $.endTimestamp = endTimestamp;
             return this;
         }
+
         public Builder metrics(List<String> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder outputFormat(String outputFormat) {
-            this.outputFormat = Objects.requireNonNull(outputFormat);
+            $.outputFormat = outputFormat;
             return this;
         }
+
         public Builder startTimestamp(String startTimestamp) {
-            this.startTimestamp = Objects.requireNonNull(startTimestamp);
+            $.startTimestamp = startTimestamp;
             return this;
         }
+
         public Builder timeUnit(String timeUnit) {
-            this.timeUnit = Objects.requireNonNull(timeUnit);
+            $.timeUnit = timeUnit;
             return this;
-        }        public GoogleCloudApigeeV1QueryMetadataResponse build() {
-            return new GoogleCloudApigeeV1QueryMetadataResponse(dimensions, endTimestamp, metrics, outputFormat, startTimestamp, timeUnit);
+        }
+
+        public GoogleCloudApigeeV1QueryMetadataResponse build() {
+            $.dimensions = Objects.requireNonNull($.dimensions, "expected parameter 'dimensions' to be non-null");
+            $.endTimestamp = Objects.requireNonNull($.endTimestamp, "expected parameter 'endTimestamp' to be non-null");
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.outputFormat = Objects.requireNonNull($.outputFormat, "expected parameter 'outputFormat' to be non-null");
+            $.startTimestamp = Objects.requireNonNull($.startTimestamp, "expected parameter 'startTimestamp' to be non-null");
+            $.timeUnit = Objects.requireNonNull($.timeUnit, "expected parameter 'timeUnit' to be non-null");
+            return $;
         }
     }
+
 }

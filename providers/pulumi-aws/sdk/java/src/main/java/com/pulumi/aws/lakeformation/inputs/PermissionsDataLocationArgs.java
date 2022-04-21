@@ -5,9 +5,9 @@ package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class PermissionsDataLocationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -31,63 +31,59 @@ public final class PermissionsDataLocationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
-    public PermissionsDataLocationArgs(
-        Output<String> arn,
-        @Nullable Output<String> catalogId) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.catalogId = catalogId;
-    }
+    private PermissionsDataLocationArgs() {}
 
-    private PermissionsDataLocationArgs() {
-        this.arn = Codegen.empty();
-        this.catalogId = Codegen.empty();
+    private PermissionsDataLocationArgs(PermissionsDataLocationArgs $) {
+        this.arn = $.arn;
+        this.catalogId = $.catalogId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionsDataLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private @Nullable Output<String> catalogId;
+        private PermissionsDataLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionsDataLocationArgs();
         }
 
         public Builder(PermissionsDataLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.catalogId = defaults.catalogId;
+            $ = new PermissionsDataLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
-        }        public PermissionsDataLocationArgs build() {
-            return new PermissionsDataLocationArgs(arn, catalogId);
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
+        }
+
+        public PermissionsDataLocationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

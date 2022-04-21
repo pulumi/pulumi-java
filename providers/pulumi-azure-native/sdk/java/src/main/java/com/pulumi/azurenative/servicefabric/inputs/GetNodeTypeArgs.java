@@ -17,7 +17,7 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeTypeName", required=true)
-      private final String nodeTypeName;
+    private String nodeTypeName;
 
     public String nodeTypeName() {
         return this.nodeTypeName;
@@ -39,64 +39,59 @@ public final class GetNodeTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNodeTypeArgs(
-        String clusterName,
-        String nodeTypeName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.nodeTypeName = Objects.requireNonNull(nodeTypeName, "expected parameter 'nodeTypeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNodeTypeArgs() {}
 
-    private GetNodeTypeArgs() {
-        this.clusterName = null;
-        this.nodeTypeName = null;
-        this.resourceGroupName = null;
+    private GetNodeTypeArgs(GetNodeTypeArgs $) {
+        this.clusterName = $.clusterName;
+        this.nodeTypeName = $.nodeTypeName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String nodeTypeName;
-        private String resourceGroupName;
+        private GetNodeTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeTypeArgs();
         }
 
         public Builder(GetNodeTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.nodeTypeName = defaults.nodeTypeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNodeTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder nodeTypeName(String nodeTypeName) {
-            this.nodeTypeName = Objects.requireNonNull(nodeTypeName);
+            $.nodeTypeName = nodeTypeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNodeTypeArgs build() {
-            return new GetNodeTypeArgs(clusterName, nodeTypeName, resourceGroupName);
+        }
+
+        public GetNodeTypeArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.nodeTypeName = Objects.requireNonNull($.nodeTypeName, "expected parameter 'nodeTypeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

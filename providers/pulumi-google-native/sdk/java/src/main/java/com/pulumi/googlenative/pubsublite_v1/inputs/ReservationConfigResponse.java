@@ -21,45 +21,45 @@ public final class ReservationConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="throughputReservation", required=true)
-      private final String throughputReservation;
+    private String throughputReservation;
 
     public String throughputReservation() {
         return this.throughputReservation;
     }
 
-    public ReservationConfigResponse(String throughputReservation) {
-        this.throughputReservation = Objects.requireNonNull(throughputReservation, "expected parameter 'throughputReservation' to be non-null");
-    }
+    private ReservationConfigResponse() {}
 
-    private ReservationConfigResponse() {
-        this.throughputReservation = null;
+    private ReservationConfigResponse(ReservationConfigResponse $) {
+        this.throughputReservation = $.throughputReservation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String throughputReservation;
+        private ReservationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationConfigResponse();
         }
 
         public Builder(ReservationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.throughputReservation = defaults.throughputReservation;
+            $ = new ReservationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder throughputReservation(String throughputReservation) {
-            this.throughputReservation = Objects.requireNonNull(throughputReservation);
+            $.throughputReservation = throughputReservation;
             return this;
-        }        public ReservationConfigResponse build() {
-            return new ReservationConfigResponse(throughputReservation);
+        }
+
+        public ReservationConfigResponse build() {
+            $.throughputReservation = Objects.requireNonNull($.throughputReservation, "expected parameter 'throughputReservation' to be non-null");
+            return $;
         }
     }
+
 }

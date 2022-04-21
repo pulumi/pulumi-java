@@ -19,45 +19,44 @@ public final class GetDataLakeSettingsArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable String catalogId;
+    private @Nullable String catalogId;
 
     public Optional<String> catalogId() {
-        return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
+        return Optional.ofNullable(this.catalogId);
     }
 
-    public GetDataLakeSettingsArgs(@Nullable String catalogId) {
-        this.catalogId = catalogId;
-    }
+    private GetDataLakeSettingsArgs() {}
 
-    private GetDataLakeSettingsArgs() {
-        this.catalogId = null;
+    private GetDataLakeSettingsArgs(GetDataLakeSettingsArgs $) {
+        this.catalogId = $.catalogId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataLakeSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogId;
+        private GetDataLakeSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataLakeSettingsArgs();
         }
 
         public Builder(GetDataLakeSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
+            $ = new GetDataLakeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
-        }        public GetDataLakeSettingsArgs build() {
-            return new GetDataLakeSettingsArgs(catalogId);
+        }
+
+        public GetDataLakeSettingsArgs build() {
+            return $;
         }
     }
+
 }

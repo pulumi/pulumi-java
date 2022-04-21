@@ -24,10 +24,10 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Object count;
+    private @Nullable Object count;
 
     public Optional<Object> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Integer intervalInSeconds;
+    private @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
-    public RetryPolicyResponse(
-        @Nullable Object count,
-        @Nullable Integer intervalInSeconds) {
-        this.count = count;
-        this.intervalInSeconds = intervalInSeconds;
-    }
+    private RetryPolicyResponse() {}
 
-    private RetryPolicyResponse() {
-        this.count = null;
-        this.intervalInSeconds = null;
+    private RetryPolicyResponse(RetryPolicyResponse $) {
+        this.count = $.count;
+        this.intervalInSeconds = $.intervalInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object count;
-        private @Nullable Integer intervalInSeconds;
+        private RetryPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryPolicyResponse();
         }
 
         public Builder(RetryPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
+            $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Object count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
-        }        public RetryPolicyResponse build() {
-            return new RetryPolicyResponse(count, intervalInSeconds);
+        }
+
+        public RetryPolicyResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,83 @@ public final class ServiceAuthArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceAuthArgs Empty = new ServiceAuthArgs();
 
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     @Import(name="serverAddress", required=true)
-      private final Output<String> serverAddress;
+    private Output<String> serverAddress;
 
     public Output<String> serverAddress() {
         return this.serverAddress;
     }
 
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ServiceAuthArgs(
-        @Nullable Output<String> password,
-        Output<String> serverAddress,
-        @Nullable Output<String> username) {
-        this.password = password;
-        this.serverAddress = Objects.requireNonNull(serverAddress, "expected parameter 'serverAddress' to be non-null");
-        this.username = username;
-    }
+    private ServiceAuthArgs() {}
 
-    private ServiceAuthArgs() {
-        this.password = Codegen.empty();
-        this.serverAddress = Codegen.empty();
-        this.username = Codegen.empty();
+    private ServiceAuthArgs(ServiceAuthArgs $) {
+        this.password = $.password;
+        this.serverAddress = $.serverAddress;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAuthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private Output<String> serverAddress;
-        private @Nullable Output<String> username;
+        private ServiceAuthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAuthArgs();
         }
 
         public Builder(ServiceAuthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.serverAddress = defaults.serverAddress;
-    	      this.username = defaults.username;
+            $ = new ServiceAuthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder serverAddress(Output<String> serverAddress) {
-            this.serverAddress = Objects.requireNonNull(serverAddress);
+            $.serverAddress = serverAddress;
             return this;
         }
+
         public Builder serverAddress(String serverAddress) {
-            this.serverAddress = Output.of(Objects.requireNonNull(serverAddress));
-            return this;
+            return serverAddress(Output.of(serverAddress));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ServiceAuthArgs build() {
-            return new ServiceAuthArgs(password, serverAddress, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ServiceAuthArgs build() {
+            $.serverAddress = Objects.requireNonNull($.serverAddress, "expected parameter 'serverAddress' to be non-null");
+            return $;
         }
     }
+
 }

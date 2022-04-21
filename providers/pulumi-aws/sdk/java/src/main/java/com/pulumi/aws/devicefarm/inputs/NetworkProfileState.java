@@ -5,11 +5,11 @@ package com.pulumi.aws.devicefarm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="downlinkBandwidthBits")
-      private final @Nullable Output<Integer> downlinkBandwidthBits;
+    private @Nullable Output<Integer> downlinkBandwidthBits;
 
-    public Output<Integer> downlinkBandwidthBits() {
-        return this.downlinkBandwidthBits == null ? Codegen.empty() : this.downlinkBandwidthBits;
+    public Optional<Output<Integer>> downlinkBandwidthBits() {
+        return Optional.ofNullable(this.downlinkBandwidthBits);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="downlinkDelayMs")
-      private final @Nullable Output<Integer> downlinkDelayMs;
+    private @Nullable Output<Integer> downlinkDelayMs;
 
-    public Output<Integer> downlinkDelayMs() {
-        return this.downlinkDelayMs == null ? Codegen.empty() : this.downlinkDelayMs;
+    public Optional<Output<Integer>> downlinkDelayMs() {
+        return Optional.ofNullable(this.downlinkDelayMs);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="downlinkJitterMs")
-      private final @Nullable Output<Integer> downlinkJitterMs;
+    private @Nullable Output<Integer> downlinkJitterMs;
 
-    public Output<Integer> downlinkJitterMs() {
-        return this.downlinkJitterMs == null ? Codegen.empty() : this.downlinkJitterMs;
+    public Optional<Output<Integer>> downlinkJitterMs() {
+        return Optional.ofNullable(this.downlinkJitterMs);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="downlinkLossPercent")
-      private final @Nullable Output<Integer> downlinkLossPercent;
+    private @Nullable Output<Integer> downlinkLossPercent;
 
-    public Output<Integer> downlinkLossPercent() {
-        return this.downlinkLossPercent == null ? Codegen.empty() : this.downlinkLossPercent;
+    public Optional<Output<Integer>> downlinkLossPercent() {
+        return Optional.ofNullable(this.downlinkLossPercent);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="projectArn")
-      private final @Nullable Output<String> projectArn;
+    private @Nullable Output<String> projectArn;
 
-    public Output<String> projectArn() {
-        return this.projectArn == null ? Codegen.empty() : this.projectArn;
+    public Optional<Output<String>> projectArn() {
+        return Optional.ofNullable(this.projectArn);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uplinkBandwidthBits")
-      private final @Nullable Output<Integer> uplinkBandwidthBits;
+    private @Nullable Output<Integer> uplinkBandwidthBits;
 
-    public Output<Integer> uplinkBandwidthBits() {
-        return this.uplinkBandwidthBits == null ? Codegen.empty() : this.uplinkBandwidthBits;
+    public Optional<Output<Integer>> uplinkBandwidthBits() {
+        return Optional.ofNullable(this.uplinkBandwidthBits);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uplinkDelayMs")
-      private final @Nullable Output<Integer> uplinkDelayMs;
+    private @Nullable Output<Integer> uplinkDelayMs;
 
-    public Output<Integer> uplinkDelayMs() {
-        return this.uplinkDelayMs == null ? Codegen.empty() : this.uplinkDelayMs;
+    public Optional<Output<Integer>> uplinkDelayMs() {
+        return Optional.ofNullable(this.uplinkDelayMs);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uplinkJitterMs")
-      private final @Nullable Output<Integer> uplinkJitterMs;
+    private @Nullable Output<Integer> uplinkJitterMs;
 
-    public Output<Integer> uplinkJitterMs() {
-        return this.uplinkJitterMs == null ? Codegen.empty() : this.uplinkJitterMs;
+    public Optional<Output<Integer>> uplinkJitterMs() {
+        return Optional.ofNullable(this.uplinkJitterMs);
     }
 
     /**
@@ -176,232 +176,188 @@ public final class NetworkProfileState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uplinkLossPercent")
-      private final @Nullable Output<Integer> uplinkLossPercent;
+    private @Nullable Output<Integer> uplinkLossPercent;
 
-    public Output<Integer> uplinkLossPercent() {
-        return this.uplinkLossPercent == null ? Codegen.empty() : this.uplinkLossPercent;
+    public Optional<Output<Integer>> uplinkLossPercent() {
+        return Optional.ofNullable(this.uplinkLossPercent);
     }
 
-    public NetworkProfileState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> downlinkBandwidthBits,
-        @Nullable Output<Integer> downlinkDelayMs,
-        @Nullable Output<Integer> downlinkJitterMs,
-        @Nullable Output<Integer> downlinkLossPercent,
-        @Nullable Output<String> name,
-        @Nullable Output<String> projectArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> type,
-        @Nullable Output<Integer> uplinkBandwidthBits,
-        @Nullable Output<Integer> uplinkDelayMs,
-        @Nullable Output<Integer> uplinkJitterMs,
-        @Nullable Output<Integer> uplinkLossPercent) {
-        this.arn = arn;
-        this.description = description;
-        this.downlinkBandwidthBits = downlinkBandwidthBits;
-        this.downlinkDelayMs = downlinkDelayMs;
-        this.downlinkJitterMs = downlinkJitterMs;
-        this.downlinkLossPercent = downlinkLossPercent;
-        this.name = name;
-        this.projectArn = projectArn;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.type = type;
-        this.uplinkBandwidthBits = uplinkBandwidthBits;
-        this.uplinkDelayMs = uplinkDelayMs;
-        this.uplinkJitterMs = uplinkJitterMs;
-        this.uplinkLossPercent = uplinkLossPercent;
-    }
+    private NetworkProfileState() {}
 
-    private NetworkProfileState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.downlinkBandwidthBits = Codegen.empty();
-        this.downlinkDelayMs = Codegen.empty();
-        this.downlinkJitterMs = Codegen.empty();
-        this.downlinkLossPercent = Codegen.empty();
-        this.name = Codegen.empty();
-        this.projectArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uplinkBandwidthBits = Codegen.empty();
-        this.uplinkDelayMs = Codegen.empty();
-        this.uplinkJitterMs = Codegen.empty();
-        this.uplinkLossPercent = Codegen.empty();
+    private NetworkProfileState(NetworkProfileState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.downlinkBandwidthBits = $.downlinkBandwidthBits;
+        this.downlinkDelayMs = $.downlinkDelayMs;
+        this.downlinkJitterMs = $.downlinkJitterMs;
+        this.downlinkLossPercent = $.downlinkLossPercent;
+        this.name = $.name;
+        this.projectArn = $.projectArn;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.type = $.type;
+        this.uplinkBandwidthBits = $.uplinkBandwidthBits;
+        this.uplinkDelayMs = $.uplinkDelayMs;
+        this.uplinkJitterMs = $.uplinkJitterMs;
+        this.uplinkLossPercent = $.uplinkLossPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> downlinkBandwidthBits;
-        private @Nullable Output<Integer> downlinkDelayMs;
-        private @Nullable Output<Integer> downlinkJitterMs;
-        private @Nullable Output<Integer> downlinkLossPercent;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> projectArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> type;
-        private @Nullable Output<Integer> uplinkBandwidthBits;
-        private @Nullable Output<Integer> uplinkDelayMs;
-        private @Nullable Output<Integer> uplinkJitterMs;
-        private @Nullable Output<Integer> uplinkLossPercent;
+        private NetworkProfileState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileState();
         }
 
         public Builder(NetworkProfileState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.downlinkBandwidthBits = defaults.downlinkBandwidthBits;
-    	      this.downlinkDelayMs = defaults.downlinkDelayMs;
-    	      this.downlinkJitterMs = defaults.downlinkJitterMs;
-    	      this.downlinkLossPercent = defaults.downlinkLossPercent;
-    	      this.name = defaults.name;
-    	      this.projectArn = defaults.projectArn;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.type = defaults.type;
-    	      this.uplinkBandwidthBits = defaults.uplinkBandwidthBits;
-    	      this.uplinkDelayMs = defaults.uplinkDelayMs;
-    	      this.uplinkJitterMs = defaults.uplinkJitterMs;
-    	      this.uplinkLossPercent = defaults.uplinkLossPercent;
+            $ = new NetworkProfileState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder downlinkBandwidthBits(@Nullable Output<Integer> downlinkBandwidthBits) {
-            this.downlinkBandwidthBits = downlinkBandwidthBits;
+            $.downlinkBandwidthBits = downlinkBandwidthBits;
             return this;
         }
-        public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
-            this.downlinkBandwidthBits = Codegen.ofNullable(downlinkBandwidthBits);
-            return this;
+
+        public Builder downlinkBandwidthBits(Integer downlinkBandwidthBits) {
+            return downlinkBandwidthBits(Output.of(downlinkBandwidthBits));
         }
+
         public Builder downlinkDelayMs(@Nullable Output<Integer> downlinkDelayMs) {
-            this.downlinkDelayMs = downlinkDelayMs;
+            $.downlinkDelayMs = downlinkDelayMs;
             return this;
         }
-        public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
-            this.downlinkDelayMs = Codegen.ofNullable(downlinkDelayMs);
-            return this;
+
+        public Builder downlinkDelayMs(Integer downlinkDelayMs) {
+            return downlinkDelayMs(Output.of(downlinkDelayMs));
         }
+
         public Builder downlinkJitterMs(@Nullable Output<Integer> downlinkJitterMs) {
-            this.downlinkJitterMs = downlinkJitterMs;
+            $.downlinkJitterMs = downlinkJitterMs;
             return this;
         }
-        public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
-            this.downlinkJitterMs = Codegen.ofNullable(downlinkJitterMs);
-            return this;
+
+        public Builder downlinkJitterMs(Integer downlinkJitterMs) {
+            return downlinkJitterMs(Output.of(downlinkJitterMs));
         }
+
         public Builder downlinkLossPercent(@Nullable Output<Integer> downlinkLossPercent) {
-            this.downlinkLossPercent = downlinkLossPercent;
+            $.downlinkLossPercent = downlinkLossPercent;
             return this;
         }
-        public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
-            this.downlinkLossPercent = Codegen.ofNullable(downlinkLossPercent);
-            return this;
+
+        public Builder downlinkLossPercent(Integer downlinkLossPercent) {
+            return downlinkLossPercent(Output.of(downlinkLossPercent));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder projectArn(@Nullable Output<String> projectArn) {
-            this.projectArn = projectArn;
+            $.projectArn = projectArn;
             return this;
         }
-        public Builder projectArn(@Nullable String projectArn) {
-            this.projectArn = Codegen.ofNullable(projectArn);
-            return this;
+
+        public Builder projectArn(String projectArn) {
+            return projectArn(Output.of(projectArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder uplinkBandwidthBits(@Nullable Output<Integer> uplinkBandwidthBits) {
-            this.uplinkBandwidthBits = uplinkBandwidthBits;
+            $.uplinkBandwidthBits = uplinkBandwidthBits;
             return this;
         }
-        public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
-            this.uplinkBandwidthBits = Codegen.ofNullable(uplinkBandwidthBits);
-            return this;
+
+        public Builder uplinkBandwidthBits(Integer uplinkBandwidthBits) {
+            return uplinkBandwidthBits(Output.of(uplinkBandwidthBits));
         }
+
         public Builder uplinkDelayMs(@Nullable Output<Integer> uplinkDelayMs) {
-            this.uplinkDelayMs = uplinkDelayMs;
+            $.uplinkDelayMs = uplinkDelayMs;
             return this;
         }
-        public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
-            this.uplinkDelayMs = Codegen.ofNullable(uplinkDelayMs);
-            return this;
+
+        public Builder uplinkDelayMs(Integer uplinkDelayMs) {
+            return uplinkDelayMs(Output.of(uplinkDelayMs));
         }
+
         public Builder uplinkJitterMs(@Nullable Output<Integer> uplinkJitterMs) {
-            this.uplinkJitterMs = uplinkJitterMs;
+            $.uplinkJitterMs = uplinkJitterMs;
             return this;
         }
-        public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
-            this.uplinkJitterMs = Codegen.ofNullable(uplinkJitterMs);
-            return this;
+
+        public Builder uplinkJitterMs(Integer uplinkJitterMs) {
+            return uplinkJitterMs(Output.of(uplinkJitterMs));
         }
+
         public Builder uplinkLossPercent(@Nullable Output<Integer> uplinkLossPercent) {
-            this.uplinkLossPercent = uplinkLossPercent;
+            $.uplinkLossPercent = uplinkLossPercent;
             return this;
         }
-        public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
-            this.uplinkLossPercent = Codegen.ofNullable(uplinkLossPercent);
-            return this;
-        }        public NetworkProfileState build() {
-            return new NetworkProfileState(arn, description, downlinkBandwidthBits, downlinkDelayMs, downlinkJitterMs, downlinkLossPercent, name, projectArn, tags, tagsAll, type, uplinkBandwidthBits, uplinkDelayMs, uplinkJitterMs, uplinkLossPercent);
+
+        public Builder uplinkLossPercent(Integer uplinkLossPercent) {
+            return uplinkLossPercent(Output.of(uplinkLossPercent));
+        }
+
+        public NetworkProfileState build() {
+            return $;
         }
     }
+
 }

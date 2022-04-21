@@ -25,7 +25,7 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="createdDate", required=true)
-      private final String createdDate;
+    private String createdDate;
 
     public String createdDate() {
         return this.createdDate;
@@ -36,58 +36,55 @@ public final class PrivateEndpointPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
-      private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
+    private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    public List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
+    public Optional<List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
+        return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
 
-    public PrivateEndpointPropertiesResponse(
-        String createdDate,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
-        this.createdDate = Objects.requireNonNull(createdDate, "expected parameter 'createdDate' to be non-null");
-        this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-    }
+    private PrivateEndpointPropertiesResponse() {}
 
-    private PrivateEndpointPropertiesResponse() {
-        this.createdDate = null;
-        this.manualPrivateLinkServiceConnections = List.of();
+    private PrivateEndpointPropertiesResponse(PrivateEndpointPropertiesResponse $) {
+        this.createdDate = $.createdDate;
+        this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdDate;
-        private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
+        private PrivateEndpointPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointPropertiesResponse();
         }
 
         public Builder(PrivateEndpointPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdDate = defaults.createdDate;
-    	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
+            $ = new PrivateEndpointPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdDate(String createdDate) {
-            this.createdDate = Objects.requireNonNull(createdDate);
+            $.createdDate = createdDate;
             return this;
         }
+
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
+            $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
+
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
-        }        public PrivateEndpointPropertiesResponse build() {
-            return new PrivateEndpointPropertiesResponse(createdDate, manualPrivateLinkServiceConnections);
+        }
+
+        public PrivateEndpointPropertiesResponse build() {
+            $.createdDate = Objects.requireNonNull($.createdDate, "expected parameter 'createdDate' to be non-null");
+            return $;
         }
     }
+
 }

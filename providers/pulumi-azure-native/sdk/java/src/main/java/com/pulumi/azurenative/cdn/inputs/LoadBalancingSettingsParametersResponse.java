@@ -23,10 +23,10 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="additionalLatencyInMilliseconds")
-      private final @Nullable Integer additionalLatencyInMilliseconds;
+    private @Nullable Integer additionalLatencyInMilliseconds;
 
     public Optional<Integer> additionalLatencyInMilliseconds() {
-        return this.additionalLatencyInMilliseconds == null ? Optional.empty() : Optional.ofNullable(this.additionalLatencyInMilliseconds);
+        return Optional.ofNullable(this.additionalLatencyInMilliseconds);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="sampleSize")
-      private final @Nullable Integer sampleSize;
+    private @Nullable Integer sampleSize;
 
     public Optional<Integer> sampleSize() {
-        return this.sampleSize == null ? Optional.empty() : Optional.ofNullable(this.sampleSize);
+        return Optional.ofNullable(this.sampleSize);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class LoadBalancingSettingsParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="successfulSamplesRequired")
-      private final @Nullable Integer successfulSamplesRequired;
+    private @Nullable Integer successfulSamplesRequired;
 
     public Optional<Integer> successfulSamplesRequired() {
-        return this.successfulSamplesRequired == null ? Optional.empty() : Optional.ofNullable(this.successfulSamplesRequired);
+        return Optional.ofNullable(this.successfulSamplesRequired);
     }
 
-    public LoadBalancingSettingsParametersResponse(
-        @Nullable Integer additionalLatencyInMilliseconds,
-        @Nullable Integer sampleSize,
-        @Nullable Integer successfulSamplesRequired) {
-        this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
-        this.sampleSize = sampleSize;
-        this.successfulSamplesRequired = successfulSamplesRequired;
-    }
+    private LoadBalancingSettingsParametersResponse() {}
 
-    private LoadBalancingSettingsParametersResponse() {
-        this.additionalLatencyInMilliseconds = null;
-        this.sampleSize = null;
-        this.successfulSamplesRequired = null;
+    private LoadBalancingSettingsParametersResponse(LoadBalancingSettingsParametersResponse $) {
+        this.additionalLatencyInMilliseconds = $.additionalLatencyInMilliseconds;
+        this.sampleSize = $.sampleSize;
+        this.successfulSamplesRequired = $.successfulSamplesRequired;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingSettingsParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer additionalLatencyInMilliseconds;
-        private @Nullable Integer sampleSize;
-        private @Nullable Integer successfulSamplesRequired;
+        private LoadBalancingSettingsParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingSettingsParametersResponse();
         }
 
         public Builder(LoadBalancingSettingsParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalLatencyInMilliseconds = defaults.additionalLatencyInMilliseconds;
-    	      this.sampleSize = defaults.sampleSize;
-    	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
+            $ = new LoadBalancingSettingsParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
-            this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
+            $.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
+
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = sampleSize;
+            $.sampleSize = sampleSize;
             return this;
         }
+
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
-            this.successfulSamplesRequired = successfulSamplesRequired;
+            $.successfulSamplesRequired = successfulSamplesRequired;
             return this;
-        }        public LoadBalancingSettingsParametersResponse build() {
-            return new LoadBalancingSettingsParametersResponse(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);
+        }
+
+        public LoadBalancingSettingsParametersResponse build() {
+            return $;
         }
     }
+
 }

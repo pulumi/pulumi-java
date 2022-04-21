@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigCloudrunConfigGetArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigConfigConnectorConfigGetArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigDnsCacheConfigGetArgs;
@@ -17,6 +16,7 @@ import com.pulumi.gcp.container.inputs.ClusterAddonsConfigIstioConfigGetArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigKalmConfigGetArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigNetworkPolicyConfigGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cloudrunConfig")
-      private final @Nullable Output<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig;
+    private @Nullable Output<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig;
 
-    public Output<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig() {
-        return this.cloudrunConfig == null ? Codegen.empty() : this.cloudrunConfig;
+    public Optional<Output<ClusterAddonsConfigCloudrunConfigGetArgs>> cloudrunConfig() {
+        return Optional.ofNullable(this.cloudrunConfig);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="configConnectorConfig")
-      private final @Nullable Output<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig;
+    private @Nullable Output<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig;
 
-    public Output<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig() {
-        return this.configConnectorConfig == null ? Codegen.empty() : this.configConnectorConfig;
+    public Optional<Output<ClusterAddonsConfigConfigConnectorConfigGetArgs>> configConnectorConfig() {
+        return Optional.ofNullable(this.configConnectorConfig);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dnsCacheConfig")
-      private final @Nullable Output<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig;
+    private @Nullable Output<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig;
 
-    public Output<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig() {
-        return this.dnsCacheConfig == null ? Codegen.empty() : this.dnsCacheConfig;
+    public Optional<Output<ClusterAddonsConfigDnsCacheConfigGetArgs>> dnsCacheConfig() {
+        return Optional.ofNullable(this.dnsCacheConfig);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gcePersistentDiskCsiDriverConfig")
-      private final @Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig;
+    private @Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig;
 
-    public Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig() {
-        return this.gcePersistentDiskCsiDriverConfig == null ? Codegen.empty() : this.gcePersistentDiskCsiDriverConfig;
+    public Optional<Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs>> gcePersistentDiskCsiDriverConfig() {
+        return Optional.ofNullable(this.gcePersistentDiskCsiDriverConfig);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gcpFilestoreCsiDriverConfig")
-      private final @Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig;
+    private @Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig;
 
-    public Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig() {
-        return this.gcpFilestoreCsiDriverConfig == null ? Codegen.empty() : this.gcpFilestoreCsiDriverConfig;
+    public Optional<Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs>> gcpFilestoreCsiDriverConfig() {
+        return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="horizontalPodAutoscaling")
-      private final @Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling;
+    private @Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling;
 
-    public Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling() {
-        return this.horizontalPodAutoscaling == null ? Codegen.empty() : this.horizontalPodAutoscaling;
+    public Optional<Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs>> horizontalPodAutoscaling() {
+        return Optional.ofNullable(this.horizontalPodAutoscaling);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="httpLoadBalancing")
-      private final @Nullable Output<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing;
+    private @Nullable Output<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing;
 
-    public Output<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing() {
-        return this.httpLoadBalancing == null ? Codegen.empty() : this.httpLoadBalancing;
+    public Optional<Output<ClusterAddonsConfigHttpLoadBalancingGetArgs>> httpLoadBalancing() {
+        return Optional.ofNullable(this.httpLoadBalancing);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="istioConfig")
-      private final @Nullable Output<ClusterAddonsConfigIstioConfigGetArgs> istioConfig;
+    private @Nullable Output<ClusterAddonsConfigIstioConfigGetArgs> istioConfig;
 
-    public Output<ClusterAddonsConfigIstioConfigGetArgs> istioConfig() {
-        return this.istioConfig == null ? Codegen.empty() : this.istioConfig;
+    public Optional<Output<ClusterAddonsConfigIstioConfigGetArgs>> istioConfig() {
+        return Optional.ofNullable(this.istioConfig);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kalmConfig")
-      private final @Nullable Output<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig;
+    private @Nullable Output<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig;
 
-    public Output<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig() {
-        return this.kalmConfig == null ? Codegen.empty() : this.kalmConfig;
+    public Optional<Output<ClusterAddonsConfigKalmConfigGetArgs>> kalmConfig() {
+        return Optional.ofNullable(this.kalmConfig);
     }
 
     /**
@@ -147,167 +147,138 @@ public final class ClusterAddonsConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="networkPolicyConfig")
-      private final @Nullable Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig;
+    private @Nullable Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig;
 
-    public Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig() {
-        return this.networkPolicyConfig == null ? Codegen.empty() : this.networkPolicyConfig;
+    public Optional<Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs>> networkPolicyConfig() {
+        return Optional.ofNullable(this.networkPolicyConfig);
     }
 
-    public ClusterAddonsConfigGetArgs(
-        @Nullable Output<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig,
-        @Nullable Output<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig,
-        @Nullable Output<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig,
-        @Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig,
-        @Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig,
-        @Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling,
-        @Nullable Output<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing,
-        @Nullable Output<ClusterAddonsConfigIstioConfigGetArgs> istioConfig,
-        @Nullable Output<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig,
-        @Nullable Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig) {
-        this.cloudrunConfig = cloudrunConfig;
-        this.configConnectorConfig = configConnectorConfig;
-        this.dnsCacheConfig = dnsCacheConfig;
-        this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
-        this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
-        this.horizontalPodAutoscaling = horizontalPodAutoscaling;
-        this.httpLoadBalancing = httpLoadBalancing;
-        this.istioConfig = istioConfig;
-        this.kalmConfig = kalmConfig;
-        this.networkPolicyConfig = networkPolicyConfig;
-    }
+    private ClusterAddonsConfigGetArgs() {}
 
-    private ClusterAddonsConfigGetArgs() {
-        this.cloudrunConfig = Codegen.empty();
-        this.configConnectorConfig = Codegen.empty();
-        this.dnsCacheConfig = Codegen.empty();
-        this.gcePersistentDiskCsiDriverConfig = Codegen.empty();
-        this.gcpFilestoreCsiDriverConfig = Codegen.empty();
-        this.horizontalPodAutoscaling = Codegen.empty();
-        this.httpLoadBalancing = Codegen.empty();
-        this.istioConfig = Codegen.empty();
-        this.kalmConfig = Codegen.empty();
-        this.networkPolicyConfig = Codegen.empty();
+    private ClusterAddonsConfigGetArgs(ClusterAddonsConfigGetArgs $) {
+        this.cloudrunConfig = $.cloudrunConfig;
+        this.configConnectorConfig = $.configConnectorConfig;
+        this.dnsCacheConfig = $.dnsCacheConfig;
+        this.gcePersistentDiskCsiDriverConfig = $.gcePersistentDiskCsiDriverConfig;
+        this.gcpFilestoreCsiDriverConfig = $.gcpFilestoreCsiDriverConfig;
+        this.horizontalPodAutoscaling = $.horizontalPodAutoscaling;
+        this.httpLoadBalancing = $.httpLoadBalancing;
+        this.istioConfig = $.istioConfig;
+        this.kalmConfig = $.kalmConfig;
+        this.networkPolicyConfig = $.networkPolicyConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAddonsConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig;
-        private @Nullable Output<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig;
-        private @Nullable Output<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig;
-        private @Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig;
-        private @Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig;
-        private @Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling;
-        private @Nullable Output<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing;
-        private @Nullable Output<ClusterAddonsConfigIstioConfigGetArgs> istioConfig;
-        private @Nullable Output<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig;
-        private @Nullable Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig;
+        private ClusterAddonsConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAddonsConfigGetArgs();
         }
 
         public Builder(ClusterAddonsConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudrunConfig = defaults.cloudrunConfig;
-    	      this.configConnectorConfig = defaults.configConnectorConfig;
-    	      this.dnsCacheConfig = defaults.dnsCacheConfig;
-    	      this.gcePersistentDiskCsiDriverConfig = defaults.gcePersistentDiskCsiDriverConfig;
-    	      this.gcpFilestoreCsiDriverConfig = defaults.gcpFilestoreCsiDriverConfig;
-    	      this.horizontalPodAutoscaling = defaults.horizontalPodAutoscaling;
-    	      this.httpLoadBalancing = defaults.httpLoadBalancing;
-    	      this.istioConfig = defaults.istioConfig;
-    	      this.kalmConfig = defaults.kalmConfig;
-    	      this.networkPolicyConfig = defaults.networkPolicyConfig;
+            $ = new ClusterAddonsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudrunConfig(@Nullable Output<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig) {
-            this.cloudrunConfig = cloudrunConfig;
+            $.cloudrunConfig = cloudrunConfig;
             return this;
         }
-        public Builder cloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfigGetArgs cloudrunConfig) {
-            this.cloudrunConfig = Codegen.ofNullable(cloudrunConfig);
-            return this;
+
+        public Builder cloudrunConfig(ClusterAddonsConfigCloudrunConfigGetArgs cloudrunConfig) {
+            return cloudrunConfig(Output.of(cloudrunConfig));
         }
+
         public Builder configConnectorConfig(@Nullable Output<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig) {
-            this.configConnectorConfig = configConnectorConfig;
+            $.configConnectorConfig = configConnectorConfig;
             return this;
         }
-        public Builder configConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfigGetArgs configConnectorConfig) {
-            this.configConnectorConfig = Codegen.ofNullable(configConnectorConfig);
-            return this;
+
+        public Builder configConnectorConfig(ClusterAddonsConfigConfigConnectorConfigGetArgs configConnectorConfig) {
+            return configConnectorConfig(Output.of(configConnectorConfig));
         }
+
         public Builder dnsCacheConfig(@Nullable Output<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig) {
-            this.dnsCacheConfig = dnsCacheConfig;
+            $.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
-        public Builder dnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfigGetArgs dnsCacheConfig) {
-            this.dnsCacheConfig = Codegen.ofNullable(dnsCacheConfig);
-            return this;
+
+        public Builder dnsCacheConfig(ClusterAddonsConfigDnsCacheConfigGetArgs dnsCacheConfig) {
+            return dnsCacheConfig(Output.of(dnsCacheConfig));
         }
+
         public Builder gcePersistentDiskCsiDriverConfig(@Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig) {
-            this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
+            $.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
-        public Builder gcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs gcePersistentDiskCsiDriverConfig) {
-            this.gcePersistentDiskCsiDriverConfig = Codegen.ofNullable(gcePersistentDiskCsiDriverConfig);
-            return this;
+
+        public Builder gcePersistentDiskCsiDriverConfig(ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs gcePersistentDiskCsiDriverConfig) {
+            return gcePersistentDiskCsiDriverConfig(Output.of(gcePersistentDiskCsiDriverConfig));
         }
+
         public Builder gcpFilestoreCsiDriverConfig(@Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig) {
-            this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
+            $.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
-        public Builder gcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs gcpFilestoreCsiDriverConfig) {
-            this.gcpFilestoreCsiDriverConfig = Codegen.ofNullable(gcpFilestoreCsiDriverConfig);
-            return this;
+
+        public Builder gcpFilestoreCsiDriverConfig(ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs gcpFilestoreCsiDriverConfig) {
+            return gcpFilestoreCsiDriverConfig(Output.of(gcpFilestoreCsiDriverConfig));
         }
+
         public Builder horizontalPodAutoscaling(@Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling) {
-            this.horizontalPodAutoscaling = horizontalPodAutoscaling;
+            $.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
-        public Builder horizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscalingGetArgs horizontalPodAutoscaling) {
-            this.horizontalPodAutoscaling = Codegen.ofNullable(horizontalPodAutoscaling);
-            return this;
+
+        public Builder horizontalPodAutoscaling(ClusterAddonsConfigHorizontalPodAutoscalingGetArgs horizontalPodAutoscaling) {
+            return horizontalPodAutoscaling(Output.of(horizontalPodAutoscaling));
         }
+
         public Builder httpLoadBalancing(@Nullable Output<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing) {
-            this.httpLoadBalancing = httpLoadBalancing;
+            $.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
-        public Builder httpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancingGetArgs httpLoadBalancing) {
-            this.httpLoadBalancing = Codegen.ofNullable(httpLoadBalancing);
-            return this;
+
+        public Builder httpLoadBalancing(ClusterAddonsConfigHttpLoadBalancingGetArgs httpLoadBalancing) {
+            return httpLoadBalancing(Output.of(httpLoadBalancing));
         }
+
         public Builder istioConfig(@Nullable Output<ClusterAddonsConfigIstioConfigGetArgs> istioConfig) {
-            this.istioConfig = istioConfig;
+            $.istioConfig = istioConfig;
             return this;
         }
-        public Builder istioConfig(@Nullable ClusterAddonsConfigIstioConfigGetArgs istioConfig) {
-            this.istioConfig = Codegen.ofNullable(istioConfig);
-            return this;
+
+        public Builder istioConfig(ClusterAddonsConfigIstioConfigGetArgs istioConfig) {
+            return istioConfig(Output.of(istioConfig));
         }
+
         public Builder kalmConfig(@Nullable Output<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig) {
-            this.kalmConfig = kalmConfig;
+            $.kalmConfig = kalmConfig;
             return this;
         }
-        public Builder kalmConfig(@Nullable ClusterAddonsConfigKalmConfigGetArgs kalmConfig) {
-            this.kalmConfig = Codegen.ofNullable(kalmConfig);
-            return this;
+
+        public Builder kalmConfig(ClusterAddonsConfigKalmConfigGetArgs kalmConfig) {
+            return kalmConfig(Output.of(kalmConfig));
         }
+
         public Builder networkPolicyConfig(@Nullable Output<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig) {
-            this.networkPolicyConfig = networkPolicyConfig;
+            $.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
-        public Builder networkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfigGetArgs networkPolicyConfig) {
-            this.networkPolicyConfig = Codegen.ofNullable(networkPolicyConfig);
-            return this;
-        }        public ClusterAddonsConfigGetArgs build() {
-            return new ClusterAddonsConfigGetArgs(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
+
+        public Builder networkPolicyConfig(ClusterAddonsConfigNetworkPolicyConfigGetArgs networkPolicyConfig) {
+            return networkPolicyConfig(Output.of(networkPolicyConfig));
+        }
+
+        public ClusterAddonsConfigGetArgs build() {
+            return $;
         }
     }
+
 }

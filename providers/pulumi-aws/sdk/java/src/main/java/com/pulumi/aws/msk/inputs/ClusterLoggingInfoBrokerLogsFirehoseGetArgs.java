@@ -5,10 +5,10 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends com.pulum
      * 
      */
     @Import(name="deliveryStream")
-      private final @Nullable Output<String> deliveryStream;
+    private @Nullable Output<String> deliveryStream;
 
-    public Output<String> deliveryStream() {
-        return this.deliveryStream == null ? Codegen.empty() : this.deliveryStream;
+    public Optional<Output<String>> deliveryStream() {
+        return Optional.ofNullable(this.deliveryStream);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends com.pulum
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ClusterLoggingInfoBrokerLogsFirehoseGetArgs(
-        @Nullable Output<String> deliveryStream,
-        Output<Boolean> enabled) {
-        this.deliveryStream = deliveryStream;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ClusterLoggingInfoBrokerLogsFirehoseGetArgs() {}
 
-    private ClusterLoggingInfoBrokerLogsFirehoseGetArgs() {
-        this.deliveryStream = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private ClusterLoggingInfoBrokerLogsFirehoseGetArgs(ClusterLoggingInfoBrokerLogsFirehoseGetArgs $) {
+        this.deliveryStream = $.deliveryStream;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLoggingInfoBrokerLogsFirehoseGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deliveryStream;
-        private Output<Boolean> enabled;
+        private ClusterLoggingInfoBrokerLogsFirehoseGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLoggingInfoBrokerLogsFirehoseGetArgs();
         }
 
         public Builder(ClusterLoggingInfoBrokerLogsFirehoseGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryStream = defaults.deliveryStream;
-    	      this.enabled = defaults.enabled;
+            $ = new ClusterLoggingInfoBrokerLogsFirehoseGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryStream(@Nullable Output<String> deliveryStream) {
-            this.deliveryStream = deliveryStream;
+            $.deliveryStream = deliveryStream;
             return this;
         }
-        public Builder deliveryStream(@Nullable String deliveryStream) {
-            this.deliveryStream = Codegen.ofNullable(deliveryStream);
-            return this;
+
+        public Builder deliveryStream(String deliveryStream) {
+            return deliveryStream(Output.of(deliveryStream));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ClusterLoggingInfoBrokerLogsFirehoseGetArgs build() {
-            return new ClusterLoggingInfoBrokerLogsFirehoseGetArgs(deliveryStream, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ClusterLoggingInfoBrokerLogsFirehoseGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

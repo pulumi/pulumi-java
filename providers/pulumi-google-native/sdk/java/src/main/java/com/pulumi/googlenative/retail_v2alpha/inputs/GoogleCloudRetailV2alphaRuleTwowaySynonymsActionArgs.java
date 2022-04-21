@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
      * 
      */
     @Import(name="synonyms")
-      private final @Nullable Output<List<String>> synonyms;
+    private @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> synonyms() {
-        return this.synonyms == null ? Codegen.empty() : this.synonyms;
+    public Optional<Output<List<String>>> synonyms() {
+        return Optional.ofNullable(this.synonyms);
     }
 
-    public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(@Nullable Output<List<String>> synonyms) {
-        this.synonyms = synonyms;
-    }
+    private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs() {
-        this.synonyms = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs $) {
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> synonyms;
+        private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
+            $ = new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
-            this.synonyms = synonyms;
+            $.synonyms = synonyms;
             return this;
         }
-        public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Codegen.ofNullable(synonyms);
-            return this;
+
+        public Builder synonyms(List<String> synonyms) {
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs(synonyms);
+        }
+
+        public GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs build() {
+            return $;
         }
     }
+
 }

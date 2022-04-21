@@ -25,10 +25,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationAddresses")
-      private final @Nullable List<String> destinationAddresses;
+    private @Nullable List<String> destinationAddresses;
 
-    public List<String> destinationAddresses() {
-        return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
+    public Optional<List<String>> destinationAddresses() {
+        return Optional.ofNullable(this.destinationAddresses);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationFqdns")
-      private final @Nullable List<String> destinationFqdns;
+    private @Nullable List<String> destinationFqdns;
 
-    public List<String> destinationFqdns() {
-        return this.destinationFqdns == null ? List.of() : this.destinationFqdns;
+    public Optional<List<String>> destinationFqdns() {
+        return Optional.ofNullable(this.destinationFqdns);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationIpGroups")
-      private final @Nullable List<String> destinationIpGroups;
+    private @Nullable List<String> destinationIpGroups;
 
-    public List<String> destinationIpGroups() {
-        return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
+    public Optional<List<String>> destinationIpGroups() {
+        return Optional.ofNullable(this.destinationIpGroups);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationPorts")
-      private final @Nullable List<String> destinationPorts;
+    private @Nullable List<String> destinationPorts;
 
-    public List<String> destinationPorts() {
-        return this.destinationPorts == null ? List.of() : this.destinationPorts;
+    public Optional<List<String>> destinationPorts() {
+        return Optional.ofNullable(this.destinationPorts);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipProtocols")
-      private final @Nullable List<String> ipProtocols;
+    private @Nullable List<String> ipProtocols;
 
-    public List<String> ipProtocols() {
-        return this.ipProtocols == null ? List.of() : this.ipProtocols;
+    public Optional<List<String>> ipProtocols() {
+        return Optional.ofNullable(this.ipProtocols);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleType", required=true)
-      private final String ruleType;
+    private String ruleType;
 
     public String ruleType() {
         return this.ruleType;
@@ -114,10 +114,10 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceAddresses")
-      private final @Nullable List<String> sourceAddresses;
+    private @Nullable List<String> sourceAddresses;
 
-    public List<String> sourceAddresses() {
-        return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
+    public Optional<List<String>> sourceAddresses() {
+        return Optional.ofNullable(this.sourceAddresses);
     }
 
     /**
@@ -125,148 +125,127 @@ public final class NetworkRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceIpGroups")
-      private final @Nullable List<String> sourceIpGroups;
+    private @Nullable List<String> sourceIpGroups;
 
-    public List<String> sourceIpGroups() {
-        return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
+    public Optional<List<String>> sourceIpGroups() {
+        return Optional.ofNullable(this.sourceIpGroups);
     }
 
-    public NetworkRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationFqdns,
-        @Nullable List<String> destinationIpGroups,
-        @Nullable List<String> destinationPorts,
-        @Nullable List<String> ipProtocols,
-        @Nullable String name,
-        String ruleType,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups) {
-        this.description = description;
-        this.destinationAddresses = destinationAddresses;
-        this.destinationFqdns = destinationFqdns;
-        this.destinationIpGroups = destinationIpGroups;
-        this.destinationPorts = destinationPorts;
-        this.ipProtocols = ipProtocols;
-        this.name = name;
-        this.ruleType = Codegen.stringProp("ruleType").arg(ruleType).require();
-        this.sourceAddresses = sourceAddresses;
-        this.sourceIpGroups = sourceIpGroups;
-    }
+    private NetworkRuleResponse() {}
 
-    private NetworkRuleResponse() {
-        this.description = null;
-        this.destinationAddresses = List.of();
-        this.destinationFqdns = List.of();
-        this.destinationIpGroups = List.of();
-        this.destinationPorts = List.of();
-        this.ipProtocols = List.of();
-        this.name = null;
-        this.ruleType = null;
-        this.sourceAddresses = List.of();
-        this.sourceIpGroups = List.of();
+    private NetworkRuleResponse(NetworkRuleResponse $) {
+        this.description = $.description;
+        this.destinationAddresses = $.destinationAddresses;
+        this.destinationFqdns = $.destinationFqdns;
+        this.destinationIpGroups = $.destinationIpGroups;
+        this.destinationPorts = $.destinationPorts;
+        this.ipProtocols = $.ipProtocols;
+        this.name = $.name;
+        this.ruleType = $.ruleType;
+        this.sourceAddresses = $.sourceAddresses;
+        this.sourceIpGroups = $.sourceIpGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable List<String> destinationAddresses;
-        private @Nullable List<String> destinationFqdns;
-        private @Nullable List<String> destinationIpGroups;
-        private @Nullable List<String> destinationPorts;
-        private @Nullable List<String> ipProtocols;
-        private @Nullable String name;
-        private String ruleType;
-        private @Nullable List<String> sourceAddresses;
-        private @Nullable List<String> sourceIpGroups;
+        private NetworkRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleResponse();
         }
 
         public Builder(NetworkRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationAddresses = defaults.destinationAddresses;
-    	      this.destinationFqdns = defaults.destinationFqdns;
-    	      this.destinationIpGroups = defaults.destinationIpGroups;
-    	      this.destinationPorts = defaults.destinationPorts;
-    	      this.ipProtocols = defaults.ipProtocols;
-    	      this.name = defaults.name;
-    	      this.ruleType = defaults.ruleType;
-    	      this.sourceAddresses = defaults.sourceAddresses;
-    	      this.sourceIpGroups = defaults.sourceIpGroups;
+            $ = new NetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = destinationAddresses;
+            $.destinationAddresses = destinationAddresses;
             return this;
         }
+
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
+
         public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
-            this.destinationFqdns = destinationFqdns;
+            $.destinationFqdns = destinationFqdns;
             return this;
         }
+
         public Builder destinationFqdns(String... destinationFqdns) {
             return destinationFqdns(List.of(destinationFqdns));
         }
+
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
-            this.destinationIpGroups = destinationIpGroups;
+            $.destinationIpGroups = destinationIpGroups;
             return this;
         }
+
         public Builder destinationIpGroups(String... destinationIpGroups) {
             return destinationIpGroups(List.of(destinationIpGroups));
         }
+
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = destinationPorts;
+            $.destinationPorts = destinationPorts;
             return this;
         }
+
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
+
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
-            this.ipProtocols = ipProtocols;
+            $.ipProtocols = ipProtocols;
             return this;
         }
+
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
         }
+
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = sourceAddresses;
+            $.sourceAddresses = sourceAddresses;
             return this;
         }
+
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
+
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = sourceIpGroups;
+            $.sourceIpGroups = sourceIpGroups;
             return this;
         }
+
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
-        }        public NetworkRuleResponse build() {
-            return new NetworkRuleResponse(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, ipProtocols, name, ruleType, sourceAddresses, sourceIpGroups);
+        }
+
+        public NetworkRuleResponse build() {
+            $.ruleType = Codegen.stringProp("ruleType").arg($.ruleType).require();
+            return $;
         }
     }
+
 }

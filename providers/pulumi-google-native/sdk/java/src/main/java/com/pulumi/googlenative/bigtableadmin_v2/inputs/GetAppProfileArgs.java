@@ -15,78 +15,72 @@ public final class GetAppProfileArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAppProfileArgs Empty = new GetAppProfileArgs();
 
     @Import(name="appProfileId", required=true)
-      private final String appProfileId;
+    private String appProfileId;
 
     public String appProfileId() {
         return this.appProfileId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAppProfileArgs(
-        String appProfileId,
-        String instanceId,
-        @Nullable String project) {
-        this.appProfileId = Objects.requireNonNull(appProfileId, "expected parameter 'appProfileId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-    }
+    private GetAppProfileArgs() {}
 
-    private GetAppProfileArgs() {
-        this.appProfileId = null;
-        this.instanceId = null;
-        this.project = null;
+    private GetAppProfileArgs(GetAppProfileArgs $) {
+        this.appProfileId = $.appProfileId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appProfileId;
-        private String instanceId;
-        private @Nullable String project;
+        private GetAppProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppProfileArgs();
         }
 
         public Builder(GetAppProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appProfileId = defaults.appProfileId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new GetAppProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appProfileId(String appProfileId) {
-            this.appProfileId = Objects.requireNonNull(appProfileId);
+            $.appProfileId = appProfileId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAppProfileArgs build() {
-            return new GetAppProfileArgs(appProfileId, instanceId, project);
+        }
+
+        public GetAppProfileArgs build() {
+            $.appProfileId = Objects.requireNonNull($.appProfileId, "expected parameter 'appProfileId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

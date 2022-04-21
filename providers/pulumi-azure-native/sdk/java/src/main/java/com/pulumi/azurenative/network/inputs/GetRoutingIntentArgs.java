@@ -17,7 +17,7 @@ public final class GetRoutingIntentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRoutingIntentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="routingIntentName", required=true)
-      private final String routingIntentName;
+    private String routingIntentName;
 
     public String routingIntentName() {
         return this.routingIntentName;
@@ -39,64 +39,59 @@ public final class GetRoutingIntentArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final String virtualHubName;
+    private String virtualHubName;
 
     public String virtualHubName() {
         return this.virtualHubName;
     }
 
-    public GetRoutingIntentArgs(
-        String resourceGroupName,
-        String routingIntentName,
-        String virtualHubName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routingIntentName = Objects.requireNonNull(routingIntentName, "expected parameter 'routingIntentName' to be non-null");
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private GetRoutingIntentArgs() {}
 
-    private GetRoutingIntentArgs() {
-        this.resourceGroupName = null;
-        this.routingIntentName = null;
-        this.virtualHubName = null;
+    private GetRoutingIntentArgs(GetRoutingIntentArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.routingIntentName = $.routingIntentName;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRoutingIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String routingIntentName;
-        private String virtualHubName;
+        private GetRoutingIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRoutingIntentArgs();
         }
 
         public Builder(GetRoutingIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routingIntentName = defaults.routingIntentName;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new GetRoutingIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routingIntentName(String routingIntentName) {
-            this.routingIntentName = Objects.requireNonNull(routingIntentName);
+            $.routingIntentName = routingIntentName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
-        }        public GetRoutingIntentArgs build() {
-            return new GetRoutingIntentArgs(resourceGroupName, routingIntentName, virtualHubName);
+        }
+
+        public GetRoutingIntentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routingIntentName = Objects.requireNonNull($.routingIntentName, "expected parameter 'routingIntentName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

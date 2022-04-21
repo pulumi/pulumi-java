@@ -10,11 +10,11 @@ import com.pulumi.azurenative.authorization.inputs.AccessReviewScopeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="decisions")
-      private final @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
+    private @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
 
-    public Output<List<Either<String,AccessReviewResult>>> decisions() {
-        return this.decisions == null ? Codegen.empty() : this.decisions;
+    public Optional<Output<List<Either<String,AccessReviewResult>>>> decisions() {
+        return Optional.ofNullable(this.decisions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="historyDefinitionId")
-      private final @Nullable Output<String> historyDefinitionId;
+    private @Nullable Output<String> historyDefinitionId;
 
-    public Output<String> historyDefinitionId() {
-        return this.historyDefinitionId == null ? Codegen.empty() : this.historyDefinitionId;
+    public Optional<Output<String>> historyDefinitionId() {
+        return Optional.ofNullable(this.historyDefinitionId);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
+    private @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
 
-    public Output<List<AccessReviewHistoryInstanceArgs>> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<List<AccessReviewHistoryInstanceArgs>>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="numberOfOccurrences")
-      private final @Nullable Output<Integer> numberOfOccurrences;
+    private @Nullable Output<Integer> numberOfOccurrences;
 
-    public Output<Integer> numberOfOccurrences() {
-        return this.numberOfOccurrences == null ? Codegen.empty() : this.numberOfOccurrences;
+    public Optional<Output<Integer>> numberOfOccurrences() {
+        return Optional.ofNullable(this.numberOfOccurrences);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<AccessReviewScopeArgs>> scopes;
+    private @Nullable Output<List<AccessReviewScopeArgs>> scopes;
 
-    public Output<List<AccessReviewScopeArgs>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<AccessReviewScopeArgs>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -126,176 +126,150 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
+    private @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
-    public Output<Either<String,AccessReviewRecurrenceRangeType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,AccessReviewRecurrenceRangeType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AccessReviewHistoryDefinitionByIdArgs(
-        @Nullable Output<List<Either<String,AccessReviewResult>>> decisions,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> historyDefinitionId,
-        @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances,
-        @Nullable Output<Integer> interval,
-        @Nullable Output<Integer> numberOfOccurrences,
-        @Nullable Output<List<AccessReviewScopeArgs>> scopes,
-        @Nullable Output<String> startDate,
-        @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
-        this.decisions = decisions;
-        this.displayName = displayName;
-        this.endDate = endDate;
-        this.historyDefinitionId = historyDefinitionId;
-        this.instances = instances;
-        this.interval = interval;
-        this.numberOfOccurrences = numberOfOccurrences;
-        this.scopes = scopes;
-        this.startDate = startDate;
-        this.type = type;
-    }
+    private AccessReviewHistoryDefinitionByIdArgs() {}
 
-    private AccessReviewHistoryDefinitionByIdArgs() {
-        this.decisions = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.historyDefinitionId = Codegen.empty();
-        this.instances = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.numberOfOccurrences = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.type = Codegen.empty();
+    private AccessReviewHistoryDefinitionByIdArgs(AccessReviewHistoryDefinitionByIdArgs $) {
+        this.decisions = $.decisions;
+        this.displayName = $.displayName;
+        this.endDate = $.endDate;
+        this.historyDefinitionId = $.historyDefinitionId;
+        this.instances = $.instances;
+        this.interval = $.interval;
+        this.numberOfOccurrences = $.numberOfOccurrences;
+        this.scopes = $.scopes;
+        this.startDate = $.startDate;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewHistoryDefinitionByIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> historyDefinitionId;
-        private @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
-        private @Nullable Output<Integer> interval;
-        private @Nullable Output<Integer> numberOfOccurrences;
-        private @Nullable Output<List<AccessReviewScopeArgs>> scopes;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
+        private AccessReviewHistoryDefinitionByIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewHistoryDefinitionByIdArgs();
         }
 
         public Builder(AccessReviewHistoryDefinitionByIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.decisions = defaults.decisions;
-    	      this.displayName = defaults.displayName;
-    	      this.endDate = defaults.endDate;
-    	      this.historyDefinitionId = defaults.historyDefinitionId;
-    	      this.instances = defaults.instances;
-    	      this.interval = defaults.interval;
-    	      this.numberOfOccurrences = defaults.numberOfOccurrences;
-    	      this.scopes = defaults.scopes;
-    	      this.startDate = defaults.startDate;
-    	      this.type = defaults.type;
+            $ = new AccessReviewHistoryDefinitionByIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder decisions(@Nullable Output<List<Either<String,AccessReviewResult>>> decisions) {
-            this.decisions = decisions;
+            $.decisions = decisions;
             return this;
         }
-        public Builder decisions(@Nullable List<Either<String,AccessReviewResult>> decisions) {
-            this.decisions = Codegen.ofNullable(decisions);
-            return this;
+
+        public Builder decisions(List<Either<String,AccessReviewResult>> decisions) {
+            return decisions(Output.of(decisions));
         }
+
         public Builder decisions(Either<String,AccessReviewResult>... decisions) {
             return decisions(List.of(decisions));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder historyDefinitionId(@Nullable Output<String> historyDefinitionId) {
-            this.historyDefinitionId = historyDefinitionId;
+            $.historyDefinitionId = historyDefinitionId;
             return this;
         }
-        public Builder historyDefinitionId(@Nullable String historyDefinitionId) {
-            this.historyDefinitionId = Codegen.ofNullable(historyDefinitionId);
-            return this;
+
+        public Builder historyDefinitionId(String historyDefinitionId) {
+            return historyDefinitionId(Output.of(historyDefinitionId));
         }
+
         public Builder instances(@Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable List<AccessReviewHistoryInstanceArgs> instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
+
+        public Builder instances(List<AccessReviewHistoryInstanceArgs> instances) {
+            return instances(Output.of(instances));
         }
+
         public Builder instances(AccessReviewHistoryInstanceArgs... instances) {
             return instances(List.of(instances));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
-            this.numberOfOccurrences = numberOfOccurrences;
+            $.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
-        public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
-            this.numberOfOccurrences = Codegen.ofNullable(numberOfOccurrences);
-            return this;
+
+        public Builder numberOfOccurrences(Integer numberOfOccurrences) {
+            return numberOfOccurrences(Output.of(numberOfOccurrences));
         }
+
         public Builder scopes(@Nullable Output<List<AccessReviewScopeArgs>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<AccessReviewScopeArgs> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<AccessReviewScopeArgs> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(AccessReviewScopeArgs... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
         public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AccessReviewHistoryDefinitionByIdArgs build() {
-            return new AccessReviewHistoryDefinitionByIdArgs(decisions, displayName, endDate, historyDefinitionId, instances, interval, numberOfOccurrences, scopes, startDate, type);
+
+        public Builder type(Either<String,AccessReviewRecurrenceRangeType> type) {
+            return type(Output.of(type));
+        }
+
+        public AccessReviewHistoryDefinitionByIdArgs build() {
+            return $;
         }
     }
+
 }

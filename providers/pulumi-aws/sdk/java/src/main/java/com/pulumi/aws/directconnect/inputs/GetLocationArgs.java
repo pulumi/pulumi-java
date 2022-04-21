@@ -17,45 +17,45 @@ public final class GetLocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationCode", required=true)
-      private final String locationCode;
+    private String locationCode;
 
     public String locationCode() {
         return this.locationCode;
     }
 
-    public GetLocationArgs(String locationCode) {
-        this.locationCode = Objects.requireNonNull(locationCode, "expected parameter 'locationCode' to be non-null");
-    }
+    private GetLocationArgs() {}
 
-    private GetLocationArgs() {
-        this.locationCode = null;
+    private GetLocationArgs(GetLocationArgs $) {
+        this.locationCode = $.locationCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String locationCode;
+        private GetLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocationArgs();
         }
 
         public Builder(GetLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationCode = defaults.locationCode;
+            $ = new GetLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationCode(String locationCode) {
-            this.locationCode = Objects.requireNonNull(locationCode);
+            $.locationCode = locationCode;
             return this;
-        }        public GetLocationArgs build() {
-            return new GetLocationArgs(locationCode);
+        }
+
+        public GetLocationArgs build() {
+            $.locationCode = Objects.requireNonNull($.locationCode, "expected parameter 'locationCode' to be non-null");
+            return $;
         }
     }
+
 }

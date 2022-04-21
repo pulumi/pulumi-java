@@ -22,7 +22,7 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="acsKubeConfig", required=true)
-      private final String acsKubeConfig;
+    private String acsKubeConfig;
 
     public String acsKubeConfig() {
         return this.acsKubeConfig;
@@ -33,7 +33,7 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="imagePullSecretName", required=true)
-      private final String imagePullSecretName;
+    private String imagePullSecretName;
 
     public String imagePullSecretName() {
         return this.imagePullSecretName;
@@ -44,64 +44,59 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="servicePrincipalConfiguration", required=true)
-      private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
+    private ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
     public ServicePrincipalPropertiesResponse servicePrincipalConfiguration() {
         return this.servicePrincipalConfiguration;
     }
 
-    public ContainerServiceCredentialsResponse(
-        String acsKubeConfig,
-        String imagePullSecretName,
-        ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
-        this.acsKubeConfig = Objects.requireNonNull(acsKubeConfig, "expected parameter 'acsKubeConfig' to be non-null");
-        this.imagePullSecretName = Objects.requireNonNull(imagePullSecretName, "expected parameter 'imagePullSecretName' to be non-null");
-        this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration, "expected parameter 'servicePrincipalConfiguration' to be non-null");
-    }
+    private ContainerServiceCredentialsResponse() {}
 
-    private ContainerServiceCredentialsResponse() {
-        this.acsKubeConfig = null;
-        this.imagePullSecretName = null;
-        this.servicePrincipalConfiguration = null;
+    private ContainerServiceCredentialsResponse(ContainerServiceCredentialsResponse $) {
+        this.acsKubeConfig = $.acsKubeConfig;
+        this.imagePullSecretName = $.imagePullSecretName;
+        this.servicePrincipalConfiguration = $.servicePrincipalConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acsKubeConfig;
-        private String imagePullSecretName;
-        private ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
+        private ContainerServiceCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceCredentialsResponse();
         }
 
         public Builder(ContainerServiceCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acsKubeConfig = defaults.acsKubeConfig;
-    	      this.imagePullSecretName = defaults.imagePullSecretName;
-    	      this.servicePrincipalConfiguration = defaults.servicePrincipalConfiguration;
+            $ = new ContainerServiceCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acsKubeConfig(String acsKubeConfig) {
-            this.acsKubeConfig = Objects.requireNonNull(acsKubeConfig);
+            $.acsKubeConfig = acsKubeConfig;
             return this;
         }
+
         public Builder imagePullSecretName(String imagePullSecretName) {
-            this.imagePullSecretName = Objects.requireNonNull(imagePullSecretName);
+            $.imagePullSecretName = imagePullSecretName;
             return this;
         }
+
         public Builder servicePrincipalConfiguration(ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
-            this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
+            $.servicePrincipalConfiguration = servicePrincipalConfiguration;
             return this;
-        }        public ContainerServiceCredentialsResponse build() {
-            return new ContainerServiceCredentialsResponse(acsKubeConfig, imagePullSecretName, servicePrincipalConfiguration);
+        }
+
+        public ContainerServiceCredentialsResponse build() {
+            $.acsKubeConfig = Objects.requireNonNull($.acsKubeConfig, "expected parameter 'acsKubeConfig' to be non-null");
+            $.imagePullSecretName = Objects.requireNonNull($.imagePullSecretName, "expected parameter 'imagePullSecretName' to be non-null");
+            $.servicePrincipalConfiguration = Objects.requireNonNull($.servicePrincipalConfiguration, "expected parameter 'servicePrincipalConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

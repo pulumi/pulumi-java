@@ -7,10 +7,10 @@ import com.pulumi.azurenative.operationalinsights.enums.ClusterSkuNameEnum;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Double> capacity;
+    private @Nullable Output<Double> capacity;
 
-    public Output<Double> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Double>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,ClusterSkuNameEnum>> name;
+    private @Nullable Output<Either<String,ClusterSkuNameEnum>> name;
 
-    public Output<Either<String,ClusterSkuNameEnum>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,ClusterSkuNameEnum>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ClusterSkuArgs(
-        @Nullable Output<Double> capacity,
-        @Nullable Output<Either<String,ClusterSkuNameEnum>> name) {
-        this.capacity = capacity;
-        this.name = name;
-    }
+    private ClusterSkuArgs() {}
 
-    private ClusterSkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
+    private ClusterSkuArgs(ClusterSkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> capacity;
-        private @Nullable Output<Either<String,ClusterSkuNameEnum>> name;
+        private ClusterSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSkuArgs();
         }
 
         public Builder(ClusterSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new ClusterSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Double> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Double capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(@Nullable Output<Either<String,ClusterSkuNameEnum>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,ClusterSkuNameEnum> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ClusterSkuArgs build() {
-            return new ClusterSkuArgs(capacity, name);
+
+        public Builder name(Either<String,ClusterSkuNameEnum> name) {
+            return name(Output.of(name));
+        }
+
+        public ClusterSkuArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SourceDiskEncryptionKeyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
+    private @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
+    public Optional<Output<CustomerEncryptionKeyArgs>> diskEncryptionKey() {
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SourceDiskEncryptionKeyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sourceDisk")
-      private final @Nullable Output<String> sourceDisk;
+    private @Nullable Output<String> sourceDisk;
 
-    public Output<String> sourceDisk() {
-        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
+    public Optional<Output<String>> sourceDisk() {
+        return Optional.ofNullable(this.sourceDisk);
     }
 
-    public SourceDiskEncryptionKeyArgs(
-        @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Output<String> sourceDisk) {
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.sourceDisk = sourceDisk;
-    }
+    private SourceDiskEncryptionKeyArgs() {}
 
-    private SourceDiskEncryptionKeyArgs() {
-        this.diskEncryptionKey = Codegen.empty();
-        this.sourceDisk = Codegen.empty();
+    private SourceDiskEncryptionKeyArgs(SourceDiskEncryptionKeyArgs $) {
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.sourceDisk = $.sourceDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceDiskEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Output<String> sourceDisk;
+        private SourceDiskEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceDiskEncryptionKeyArgs();
         }
 
         public Builder(SourceDiskEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.sourceDisk = defaults.sourceDisk;
+            $ = new SourceDiskEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-        public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
-            return this;
+
+        public Builder diskEncryptionKey(CustomerEncryptionKeyArgs diskEncryptionKey) {
+            return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
+
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
-            this.sourceDisk = sourceDisk;
+            $.sourceDisk = sourceDisk;
             return this;
         }
-        public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Codegen.ofNullable(sourceDisk);
-            return this;
-        }        public SourceDiskEncryptionKeyArgs build() {
-            return new SourceDiskEncryptionKeyArgs(diskEncryptionKey, sourceDisk);
+
+        public Builder sourceDisk(String sourceDisk) {
+            return sourceDisk(Output.of(sourceDisk));
+        }
+
+        public SourceDiskEncryptionKeyArgs build() {
+            return $;
         }
     }
+
 }

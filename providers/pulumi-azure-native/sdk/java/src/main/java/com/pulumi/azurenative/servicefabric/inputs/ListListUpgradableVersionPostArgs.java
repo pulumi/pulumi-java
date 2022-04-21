@@ -17,7 +17,7 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListListUpgradableVersionPostArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetVersion", required=true)
-      private final String targetVersion;
+    private String targetVersion;
 
     public String targetVersion() {
         return this.targetVersion;
     }
 
-    public ListListUpgradableVersionPostArgs(
-        String clusterName,
-        String resourceGroupName,
-        String targetVersion) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.targetVersion = Objects.requireNonNull(targetVersion, "expected parameter 'targetVersion' to be non-null");
-    }
+    private ListListUpgradableVersionPostArgs() {}
 
-    private ListListUpgradableVersionPostArgs() {
-        this.clusterName = null;
-        this.resourceGroupName = null;
-        this.targetVersion = null;
+    private ListListUpgradableVersionPostArgs(ListListUpgradableVersionPostArgs $) {
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.targetVersion = $.targetVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListListUpgradableVersionPostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String resourceGroupName;
-        private String targetVersion;
+        private ListListUpgradableVersionPostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListListUpgradableVersionPostArgs();
         }
 
         public Builder(ListListUpgradableVersionPostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.targetVersion = defaults.targetVersion;
+            $ = new ListListUpgradableVersionPostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder targetVersion(String targetVersion) {
-            this.targetVersion = Objects.requireNonNull(targetVersion);
+            $.targetVersion = targetVersion;
             return this;
-        }        public ListListUpgradableVersionPostArgs build() {
-            return new ListListUpgradableVersionPostArgs(clusterName, resourceGroupName, targetVersion);
+        }
+
+        public ListListUpgradableVersionPostArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.targetVersion = Objects.requireNonNull($.targetVersion, "expected parameter 'targetVersion' to be non-null");
+            return $;
         }
     }
+
 }

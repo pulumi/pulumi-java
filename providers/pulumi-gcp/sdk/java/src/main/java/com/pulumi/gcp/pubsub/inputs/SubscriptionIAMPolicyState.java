@@ -5,9 +5,9 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SubscriptionIAMPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SubscriptionIAMPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SubscriptionIAMPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class SubscriptionIAMPolicyState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subscription")
-      private final @Nullable Output<String> subscription;
+    private @Nullable Output<String> subscription;
 
-    public Output<String> subscription() {
-        return this.subscription == null ? Codegen.empty() : this.subscription;
+    public Optional<Output<String>> subscription() {
+        return Optional.ofNullable(this.subscription);
     }
 
-    public SubscriptionIAMPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> subscription) {
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-        this.subscription = subscription;
-    }
+    private SubscriptionIAMPolicyState() {}
 
-    private SubscriptionIAMPolicyState() {
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.subscription = Codegen.empty();
+    private SubscriptionIAMPolicyState(SubscriptionIAMPolicyState $) {
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.subscription = $.subscription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionIAMPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> subscription;
+        private SubscriptionIAMPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionIAMPolicyState();
         }
 
         public Builder(SubscriptionIAMPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.subscription = defaults.subscription;
+            $ = new SubscriptionIAMPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder subscription(@Nullable Output<String> subscription) {
-            this.subscription = subscription;
+            $.subscription = subscription;
             return this;
         }
-        public Builder subscription(@Nullable String subscription) {
-            this.subscription = Codegen.ofNullable(subscription);
-            return this;
-        }        public SubscriptionIAMPolicyState build() {
-            return new SubscriptionIAMPolicyState(etag, policyData, project, subscription);
+
+        public Builder subscription(String subscription) {
+            return subscription(Output.of(subscription));
+        }
+
+        public SubscriptionIAMPolicyState build() {
+            return $;
         }
     }
+
 }

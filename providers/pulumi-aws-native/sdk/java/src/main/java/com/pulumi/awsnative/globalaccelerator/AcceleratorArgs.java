@@ -7,11 +7,11 @@ import com.pulumi.awsnative.globalaccelerator.enums.AcceleratorIpAddressType;
 import com.pulumi.awsnative.globalaccelerator.inputs.AcceleratorTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddressType")
-      private final @Nullable Output<AcceleratorIpAddressType> ipAddressType;
+    private @Nullable Output<AcceleratorIpAddressType> ipAddressType;
 
-    public Output<AcceleratorIpAddressType> ipAddressType() {
-        return this.ipAddressType == null ? Codegen.empty() : this.ipAddressType;
+    public Optional<Output<AcceleratorIpAddressType>> ipAddressType() {
+        return Optional.ofNullable(this.ipAddressType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -57,115 +57,103 @@ public final class AcceleratorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<AcceleratorTagArgs>> tags;
+    private @Nullable Output<List<AcceleratorTagArgs>> tags;
 
-    public Output<List<AcceleratorTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AcceleratorTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AcceleratorArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<AcceleratorIpAddressType> ipAddressType,
-        @Nullable Output<List<String>> ipAddresses,
-        @Nullable Output<String> name,
-        @Nullable Output<List<AcceleratorTagArgs>> tags) {
-        this.enabled = enabled;
-        this.ipAddressType = ipAddressType;
-        this.ipAddresses = ipAddresses;
-        this.name = name;
-        this.tags = tags;
-    }
+    private AcceleratorArgs() {}
 
-    private AcceleratorArgs() {
-        this.enabled = Codegen.empty();
-        this.ipAddressType = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AcceleratorArgs(AcceleratorArgs $) {
+        this.enabled = $.enabled;
+        this.ipAddressType = $.ipAddressType;
+        this.ipAddresses = $.ipAddresses;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<AcceleratorIpAddressType> ipAddressType;
-        private @Nullable Output<List<String>> ipAddresses;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<AcceleratorTagArgs>> tags;
+        private AcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorArgs();
         }
 
         public Builder(AcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.ipAddressType = defaults.ipAddressType;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new AcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder ipAddressType(@Nullable Output<AcceleratorIpAddressType> ipAddressType) {
-            this.ipAddressType = ipAddressType;
+            $.ipAddressType = ipAddressType;
             return this;
         }
-        public Builder ipAddressType(@Nullable AcceleratorIpAddressType ipAddressType) {
-            this.ipAddressType = Codegen.ofNullable(ipAddressType);
-            return this;
+
+        public Builder ipAddressType(AcceleratorIpAddressType ipAddressType) {
+            return ipAddressType(Output.of(ipAddressType));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<AcceleratorTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AcceleratorTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AcceleratorTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AcceleratorTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AcceleratorArgs build() {
-            return new AcceleratorArgs(enabled, ipAddressType, ipAddresses, name, tags);
+        }
+
+        public AcceleratorArgs build() {
+            return $;
         }
     }
+
 }

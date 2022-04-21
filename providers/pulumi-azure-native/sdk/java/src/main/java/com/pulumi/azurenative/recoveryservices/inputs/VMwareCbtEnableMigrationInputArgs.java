@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="dataMoverRunAsAccountId", required=true)
-      private final Output<String> dataMoverRunAsAccountId;
+    private Output<String> dataMoverRunAsAccountId;
 
     public Output<String> dataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
@@ -39,7 +40,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="disksToInclude", required=true)
-      private final Output<List<VMwareCbtDiskInputArgs>> disksToInclude;
+    private Output<List<VMwareCbtDiskInputArgs>> disksToInclude;
 
     public Output<List<VMwareCbtDiskInputArgs>> disksToInclude() {
         return this.disksToInclude;
@@ -51,7 +52,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -62,10 +63,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<Either<String,LicenseType>> licenseType;
+    private @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Output<Either<String,LicenseType>> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<Either<String,LicenseType>>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -73,7 +74,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="snapshotRunAsAccountId", required=true)
-      private final Output<String> snapshotRunAsAccountId;
+    private Output<String> snapshotRunAsAccountId;
 
     public Output<String> snapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
@@ -84,10 +85,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetAvailabilitySetId")
-      private final @Nullable Output<String> targetAvailabilitySetId;
+    private @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> targetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
+    public Optional<Output<String>> targetAvailabilitySetId() {
+        return Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetBootDiagnosticsStorageAccountId")
-      private final @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
+    private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
 
-    public Output<String> targetBootDiagnosticsStorageAccountId() {
-        return this.targetBootDiagnosticsStorageAccountId == null ? Codegen.empty() : this.targetBootDiagnosticsStorageAccountId;
+    public Optional<Output<String>> targetBootDiagnosticsStorageAccountId() {
+        return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
 
     /**
@@ -106,7 +107,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetNetworkId", required=true)
-      private final Output<String> targetNetworkId;
+    private Output<String> targetNetworkId;
 
     public Output<String> targetNetworkId() {
         return this.targetNetworkId;
@@ -117,7 +118,7 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetResourceGroupId", required=true)
-      private final Output<String> targetResourceGroupId;
+    private Output<String> targetResourceGroupId;
 
     public Output<String> targetResourceGroupId() {
         return this.targetResourceGroupId;
@@ -128,10 +129,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetSubnetName")
-      private final @Nullable Output<String> targetSubnetName;
+    private @Nullable Output<String> targetSubnetName;
 
-    public Output<String> targetSubnetName() {
-        return this.targetSubnetName == null ? Codegen.empty() : this.targetSubnetName;
+    public Optional<Output<String>> targetSubnetName() {
+        return Optional.ofNullable(this.targetSubnetName);
     }
 
     /**
@@ -139,10 +140,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetVmName")
-      private final @Nullable Output<String> targetVmName;
+    private @Nullable Output<String> targetVmName;
 
-    public Output<String> targetVmName() {
-        return this.targetVmName == null ? Codegen.empty() : this.targetVmName;
+    public Optional<Output<String>> targetVmName() {
+        return Optional.ofNullable(this.targetVmName);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetVmSize")
-      private final @Nullable Output<String> targetVmSize;
+    private @Nullable Output<String> targetVmSize;
 
-    public Output<String> targetVmSize() {
-        return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
+    public Optional<Output<String>> targetVmSize() {
+        return Optional.ofNullable(this.targetVmSize);
     }
 
     /**
@@ -161,209 +162,179 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
      * 
      */
     @Import(name="vmwareMachineId", required=true)
-      private final Output<String> vmwareMachineId;
+    private Output<String> vmwareMachineId;
 
     public Output<String> vmwareMachineId() {
         return this.vmwareMachineId;
     }
 
-    public VMwareCbtEnableMigrationInputArgs(
-        Output<String> dataMoverRunAsAccountId,
-        Output<List<VMwareCbtDiskInputArgs>> disksToInclude,
-        Output<String> instanceType,
-        @Nullable Output<Either<String,LicenseType>> licenseType,
-        Output<String> snapshotRunAsAccountId,
-        @Nullable Output<String> targetAvailabilitySetId,
-        @Nullable Output<String> targetBootDiagnosticsStorageAccountId,
-        Output<String> targetNetworkId,
-        Output<String> targetResourceGroupId,
-        @Nullable Output<String> targetSubnetName,
-        @Nullable Output<String> targetVmName,
-        @Nullable Output<String> targetVmSize,
-        Output<String> vmwareMachineId) {
-        this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
-        this.disksToInclude = Objects.requireNonNull(disksToInclude, "expected parameter 'disksToInclude' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).require();
-        this.licenseType = licenseType;
-        this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId, "expected parameter 'snapshotRunAsAccountId' to be non-null");
-        this.targetAvailabilitySetId = targetAvailabilitySetId;
-        this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
-        this.targetNetworkId = Objects.requireNonNull(targetNetworkId, "expected parameter 'targetNetworkId' to be non-null");
-        this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId, "expected parameter 'targetResourceGroupId' to be non-null");
-        this.targetSubnetName = targetSubnetName;
-        this.targetVmName = targetVmName;
-        this.targetVmSize = targetVmSize;
-        this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId, "expected parameter 'vmwareMachineId' to be non-null");
-    }
+    private VMwareCbtEnableMigrationInputArgs() {}
 
-    private VMwareCbtEnableMigrationInputArgs() {
-        this.dataMoverRunAsAccountId = Codegen.empty();
-        this.disksToInclude = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.snapshotRunAsAccountId = Codegen.empty();
-        this.targetAvailabilitySetId = Codegen.empty();
-        this.targetBootDiagnosticsStorageAccountId = Codegen.empty();
-        this.targetNetworkId = Codegen.empty();
-        this.targetResourceGroupId = Codegen.empty();
-        this.targetSubnetName = Codegen.empty();
-        this.targetVmName = Codegen.empty();
-        this.targetVmSize = Codegen.empty();
-        this.vmwareMachineId = Codegen.empty();
+    private VMwareCbtEnableMigrationInputArgs(VMwareCbtEnableMigrationInputArgs $) {
+        this.dataMoverRunAsAccountId = $.dataMoverRunAsAccountId;
+        this.disksToInclude = $.disksToInclude;
+        this.instanceType = $.instanceType;
+        this.licenseType = $.licenseType;
+        this.snapshotRunAsAccountId = $.snapshotRunAsAccountId;
+        this.targetAvailabilitySetId = $.targetAvailabilitySetId;
+        this.targetBootDiagnosticsStorageAccountId = $.targetBootDiagnosticsStorageAccountId;
+        this.targetNetworkId = $.targetNetworkId;
+        this.targetResourceGroupId = $.targetResourceGroupId;
+        this.targetSubnetName = $.targetSubnetName;
+        this.targetVmName = $.targetVmName;
+        this.targetVmSize = $.targetVmSize;
+        this.vmwareMachineId = $.vmwareMachineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtEnableMigrationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataMoverRunAsAccountId;
-        private Output<List<VMwareCbtDiskInputArgs>> disksToInclude;
-        private Output<String> instanceType;
-        private @Nullable Output<Either<String,LicenseType>> licenseType;
-        private Output<String> snapshotRunAsAccountId;
-        private @Nullable Output<String> targetAvailabilitySetId;
-        private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
-        private Output<String> targetNetworkId;
-        private Output<String> targetResourceGroupId;
-        private @Nullable Output<String> targetSubnetName;
-        private @Nullable Output<String> targetVmName;
-        private @Nullable Output<String> targetVmSize;
-        private Output<String> vmwareMachineId;
+        private VMwareCbtEnableMigrationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtEnableMigrationInputArgs();
         }
 
         public Builder(VMwareCbtEnableMigrationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataMoverRunAsAccountId = defaults.dataMoverRunAsAccountId;
-    	      this.disksToInclude = defaults.disksToInclude;
-    	      this.instanceType = defaults.instanceType;
-    	      this.licenseType = defaults.licenseType;
-    	      this.snapshotRunAsAccountId = defaults.snapshotRunAsAccountId;
-    	      this.targetAvailabilitySetId = defaults.targetAvailabilitySetId;
-    	      this.targetBootDiagnosticsStorageAccountId = defaults.targetBootDiagnosticsStorageAccountId;
-    	      this.targetNetworkId = defaults.targetNetworkId;
-    	      this.targetResourceGroupId = defaults.targetResourceGroupId;
-    	      this.targetSubnetName = defaults.targetSubnetName;
-    	      this.targetVmName = defaults.targetVmName;
-    	      this.targetVmSize = defaults.targetVmSize;
-    	      this.vmwareMachineId = defaults.vmwareMachineId;
+            $ = new VMwareCbtEnableMigrationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataMoverRunAsAccountId(Output<String> dataMoverRunAsAccountId) {
-            this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
+            $.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
             return this;
         }
+
         public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
-            this.dataMoverRunAsAccountId = Output.of(Objects.requireNonNull(dataMoverRunAsAccountId));
-            return this;
+            return dataMoverRunAsAccountId(Output.of(dataMoverRunAsAccountId));
         }
+
         public Builder disksToInclude(Output<List<VMwareCbtDiskInputArgs>> disksToInclude) {
-            this.disksToInclude = Objects.requireNonNull(disksToInclude);
+            $.disksToInclude = disksToInclude;
             return this;
         }
+
         public Builder disksToInclude(List<VMwareCbtDiskInputArgs> disksToInclude) {
-            this.disksToInclude = Output.of(Objects.requireNonNull(disksToInclude));
-            return this;
+            return disksToInclude(Output.of(disksToInclude));
         }
+
         public Builder disksToInclude(VMwareCbtDiskInputArgs... disksToInclude) {
             return disksToInclude(List.of(disksToInclude));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(Either<String,LicenseType> licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder snapshotRunAsAccountId(Output<String> snapshotRunAsAccountId) {
-            this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
+            $.snapshotRunAsAccountId = snapshotRunAsAccountId;
             return this;
         }
+
         public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
-            this.snapshotRunAsAccountId = Output.of(Objects.requireNonNull(snapshotRunAsAccountId));
-            return this;
+            return snapshotRunAsAccountId(Output.of(snapshotRunAsAccountId));
         }
+
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = targetAvailabilitySetId;
+            $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Codegen.ofNullable(targetAvailabilitySetId);
-            return this;
+
+        public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
+            return targetAvailabilitySetId(Output.of(targetAvailabilitySetId));
         }
+
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable Output<String> targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
+            $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
-        public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = Codegen.ofNullable(targetBootDiagnosticsStorageAccountId);
-            return this;
+
+        public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
+            return targetBootDiagnosticsStorageAccountId(Output.of(targetBootDiagnosticsStorageAccountId));
         }
+
         public Builder targetNetworkId(Output<String> targetNetworkId) {
-            this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
+            $.targetNetworkId = targetNetworkId;
             return this;
         }
+
         public Builder targetNetworkId(String targetNetworkId) {
-            this.targetNetworkId = Output.of(Objects.requireNonNull(targetNetworkId));
-            return this;
+            return targetNetworkId(Output.of(targetNetworkId));
         }
+
         public Builder targetResourceGroupId(Output<String> targetResourceGroupId) {
-            this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
+            $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
+
         public Builder targetResourceGroupId(String targetResourceGroupId) {
-            this.targetResourceGroupId = Output.of(Objects.requireNonNull(targetResourceGroupId));
-            return this;
+            return targetResourceGroupId(Output.of(targetResourceGroupId));
         }
+
         public Builder targetSubnetName(@Nullable Output<String> targetSubnetName) {
-            this.targetSubnetName = targetSubnetName;
+            $.targetSubnetName = targetSubnetName;
             return this;
         }
-        public Builder targetSubnetName(@Nullable String targetSubnetName) {
-            this.targetSubnetName = Codegen.ofNullable(targetSubnetName);
-            return this;
+
+        public Builder targetSubnetName(String targetSubnetName) {
+            return targetSubnetName(Output.of(targetSubnetName));
         }
+
         public Builder targetVmName(@Nullable Output<String> targetVmName) {
-            this.targetVmName = targetVmName;
+            $.targetVmName = targetVmName;
             return this;
         }
-        public Builder targetVmName(@Nullable String targetVmName) {
-            this.targetVmName = Codegen.ofNullable(targetVmName);
-            return this;
+
+        public Builder targetVmName(String targetVmName) {
+            return targetVmName(Output.of(targetVmName));
         }
+
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
-            this.targetVmSize = targetVmSize;
+            $.targetVmSize = targetVmSize;
             return this;
         }
-        public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Codegen.ofNullable(targetVmSize);
-            return this;
+
+        public Builder targetVmSize(String targetVmSize) {
+            return targetVmSize(Output.of(targetVmSize));
         }
+
         public Builder vmwareMachineId(Output<String> vmwareMachineId) {
-            this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
+            $.vmwareMachineId = vmwareMachineId;
             return this;
         }
+
         public Builder vmwareMachineId(String vmwareMachineId) {
-            this.vmwareMachineId = Output.of(Objects.requireNonNull(vmwareMachineId));
-            return this;
-        }        public VMwareCbtEnableMigrationInputArgs build() {
-            return new VMwareCbtEnableMigrationInputArgs(dataMoverRunAsAccountId, disksToInclude, instanceType, licenseType, snapshotRunAsAccountId, targetAvailabilitySetId, targetBootDiagnosticsStorageAccountId, targetNetworkId, targetResourceGroupId, targetSubnetName, targetVmName, targetVmSize, vmwareMachineId);
+            return vmwareMachineId(Output.of(vmwareMachineId));
+        }
+
+        public VMwareCbtEnableMigrationInputArgs build() {
+            $.dataMoverRunAsAccountId = Objects.requireNonNull($.dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
+            $.disksToInclude = Objects.requireNonNull($.disksToInclude, "expected parameter 'disksToInclude' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).require();
+            $.snapshotRunAsAccountId = Objects.requireNonNull($.snapshotRunAsAccountId, "expected parameter 'snapshotRunAsAccountId' to be non-null");
+            $.targetNetworkId = Objects.requireNonNull($.targetNetworkId, "expected parameter 'targetNetworkId' to be non-null");
+            $.targetResourceGroupId = Objects.requireNonNull($.targetResourceGroupId, "expected parameter 'targetResourceGroupId' to be non-null");
+            $.vmwareMachineId = Objects.requireNonNull($.vmwareMachineId, "expected parameter 'vmwareMachineId' to be non-null");
+            return $;
         }
     }
+
 }

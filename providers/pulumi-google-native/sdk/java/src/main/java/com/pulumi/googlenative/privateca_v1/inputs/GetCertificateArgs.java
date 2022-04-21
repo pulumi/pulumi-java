@@ -15,94 +15,86 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCertificateArgs Empty = new GetCertificateArgs();
 
     @Import(name="caPoolId", required=true)
-      private final String caPoolId;
+    private String caPoolId;
 
     public String caPoolId() {
         return this.caPoolId;
     }
 
     @Import(name="certificateId", required=true)
-      private final String certificateId;
+    private String certificateId;
 
     public String certificateId() {
         return this.certificateId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetCertificateArgs(
-        String caPoolId,
-        String certificateId,
-        String location,
-        @Nullable String project) {
-        this.caPoolId = Objects.requireNonNull(caPoolId, "expected parameter 'caPoolId' to be non-null");
-        this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetCertificateArgs() {}
 
-    private GetCertificateArgs() {
-        this.caPoolId = null;
-        this.certificateId = null;
-        this.location = null;
-        this.project = null;
+    private GetCertificateArgs(GetCertificateArgs $) {
+        this.caPoolId = $.caPoolId;
+        this.certificateId = $.certificateId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caPoolId;
-        private String certificateId;
-        private String location;
-        private @Nullable String project;
+        private GetCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateArgs();
         }
 
         public Builder(GetCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caPoolId = defaults.caPoolId;
-    	      this.certificateId = defaults.certificateId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caPoolId(String caPoolId) {
-            this.caPoolId = Objects.requireNonNull(caPoolId);
+            $.caPoolId = caPoolId;
             return this;
         }
+
         public Builder certificateId(String certificateId) {
-            this.certificateId = Objects.requireNonNull(certificateId);
+            $.certificateId = certificateId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetCertificateArgs build() {
-            return new GetCertificateArgs(caPoolId, certificateId, location, project);
+        }
+
+        public GetCertificateArgs build() {
+            $.caPoolId = Objects.requireNonNull($.caPoolId, "expected parameter 'caPoolId' to be non-null");
+            $.certificateId = Objects.requireNonNull($.certificateId, "expected parameter 'certificateId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

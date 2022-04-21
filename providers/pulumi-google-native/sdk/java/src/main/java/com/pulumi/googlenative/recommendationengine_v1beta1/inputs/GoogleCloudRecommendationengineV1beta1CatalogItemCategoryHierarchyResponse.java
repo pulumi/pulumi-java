@@ -22,48 +22,49 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
      * 
      */
     @Import(name="categories", required=true)
-      private final List<String> categories;
+    private List<String> categories;
 
     public List<String> categories() {
         return this.categories;
     }
 
-    public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(List<String> categories) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse() {}
 
-    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse() {
-        this.categories = List.of();
+    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse $) {
+        this.categories = $.categories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> categories;
+        private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
+            $ = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(List<String> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
-        }        public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse build() {
-            return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(categories);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            return $;
         }
     }
+
 }

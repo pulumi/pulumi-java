@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,99 @@ public final class ServiceTaskSpecRestartPolicyArgs extends com.pulumi.resources
     public static final ServiceTaskSpecRestartPolicyArgs Empty = new ServiceTaskSpecRestartPolicyArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="delay")
-      private final @Nullable Output<String> delay;
+    private @Nullable Output<String> delay;
 
-    public Output<String> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<String>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
     @Import(name="maxAttempts")
-      private final @Nullable Output<Integer> maxAttempts;
+    private @Nullable Output<Integer> maxAttempts;
 
-    public Output<Integer> maxAttempts() {
-        return this.maxAttempts == null ? Codegen.empty() : this.maxAttempts;
+    public Optional<Output<Integer>> maxAttempts() {
+        return Optional.ofNullable(this.maxAttempts);
     }
 
     @Import(name="window")
-      private final @Nullable Output<String> window;
+    private @Nullable Output<String> window;
 
-    public Output<String> window() {
-        return this.window == null ? Codegen.empty() : this.window;
+    public Optional<Output<String>> window() {
+        return Optional.ofNullable(this.window);
     }
 
-    public ServiceTaskSpecRestartPolicyArgs(
-        @Nullable Output<String> condition,
-        @Nullable Output<String> delay,
-        @Nullable Output<Integer> maxAttempts,
-        @Nullable Output<String> window) {
-        this.condition = condition;
-        this.delay = delay;
-        this.maxAttempts = maxAttempts;
-        this.window = window;
-    }
+    private ServiceTaskSpecRestartPolicyArgs() {}
 
-    private ServiceTaskSpecRestartPolicyArgs() {
-        this.condition = Codegen.empty();
-        this.delay = Codegen.empty();
-        this.maxAttempts = Codegen.empty();
-        this.window = Codegen.empty();
+    private ServiceTaskSpecRestartPolicyArgs(ServiceTaskSpecRestartPolicyArgs $) {
+        this.condition = $.condition;
+        this.delay = $.delay;
+        this.maxAttempts = $.maxAttempts;
+        this.window = $.window;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecRestartPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condition;
-        private @Nullable Output<String> delay;
-        private @Nullable Output<Integer> maxAttempts;
-        private @Nullable Output<String> window;
+        private ServiceTaskSpecRestartPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecRestartPolicyArgs();
         }
 
         public Builder(ServiceTaskSpecRestartPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.delay = defaults.delay;
-    	      this.maxAttempts = defaults.maxAttempts;
-    	      this.window = defaults.window;
+            $ = new ServiceTaskSpecRestartPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder delay(@Nullable Output<String> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable String delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
+
+        public Builder delay(String delay) {
+            return delay(Output.of(delay));
         }
+
         public Builder maxAttempts(@Nullable Output<Integer> maxAttempts) {
-            this.maxAttempts = maxAttempts;
+            $.maxAttempts = maxAttempts;
             return this;
         }
-        public Builder maxAttempts(@Nullable Integer maxAttempts) {
-            this.maxAttempts = Codegen.ofNullable(maxAttempts);
-            return this;
+
+        public Builder maxAttempts(Integer maxAttempts) {
+            return maxAttempts(Output.of(maxAttempts));
         }
+
         public Builder window(@Nullable Output<String> window) {
-            this.window = window;
+            $.window = window;
             return this;
         }
-        public Builder window(@Nullable String window) {
-            this.window = Codegen.ofNullable(window);
-            return this;
-        }        public ServiceTaskSpecRestartPolicyArgs build() {
-            return new ServiceTaskSpecRestartPolicyArgs(condition, delay, maxAttempts, window);
+
+        public Builder window(String window) {
+            return window(Output.of(window));
+        }
+
+        public ServiceTaskSpecRestartPolicyArgs build() {
+            return $;
         }
     }
+
 }

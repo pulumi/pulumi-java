@@ -20,7 +20,7 @@ public final class GetPermissionsTable extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
@@ -31,7 +31,7 @@ public final class GetPermissionsTable extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -42,7 +42,7 @@ public final class GetPermissionsTable extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -53,73 +53,65 @@ public final class GetPermissionsTable extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="wildcard")
-      private final @Nullable Boolean wildcard;
+    private @Nullable Boolean wildcard;
 
     public Optional<Boolean> wildcard() {
-        return this.wildcard == null ? Optional.empty() : Optional.ofNullable(this.wildcard);
+        return Optional.ofNullable(this.wildcard);
     }
 
-    public GetPermissionsTable(
-        String catalogId,
-        String databaseName,
-        String name,
-        @Nullable Boolean wildcard) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.wildcard = wildcard;
-    }
+    private GetPermissionsTable() {}
 
-    private GetPermissionsTable() {
-        this.catalogId = null;
-        this.databaseName = null;
-        this.name = null;
-        this.wildcard = null;
+    private GetPermissionsTable(GetPermissionsTable $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.name = $.name;
+        this.wildcard = $.wildcard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPermissionsTable defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogId;
-        private String databaseName;
-        private String name;
-        private @Nullable Boolean wildcard;
+        private GetPermissionsTable $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPermissionsTable();
         }
 
         public Builder(GetPermissionsTable defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.name = defaults.name;
-    	      this.wildcard = defaults.wildcard;
+            $ = new GetPermissionsTable(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder wildcard(@Nullable Boolean wildcard) {
-            this.wildcard = wildcard;
+            $.wildcard = wildcard;
             return this;
-        }        public GetPermissionsTable build() {
-            return new GetPermissionsTable(catalogId, databaseName, name, wildcard);
+        }
+
+        public GetPermissionsTable build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

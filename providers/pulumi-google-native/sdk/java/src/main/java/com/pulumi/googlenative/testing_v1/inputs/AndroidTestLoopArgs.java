@@ -5,13 +5,13 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appApk")
-      private final @Nullable Output<FileReferenceArgs> appApk;
+    private @Nullable Output<FileReferenceArgs> appApk;
 
-    public Output<FileReferenceArgs> appApk() {
-        return this.appApk == null ? Codegen.empty() : this.appApk;
+    public Optional<Output<FileReferenceArgs>> appApk() {
+        return Optional.ofNullable(this.appApk);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appBundle")
-      private final @Nullable Output<AppBundleArgs> appBundle;
+    private @Nullable Output<AppBundleArgs> appBundle;
 
-    public Output<AppBundleArgs> appBundle() {
-        return this.appBundle == null ? Codegen.empty() : this.appBundle;
+    public Optional<Output<AppBundleArgs>> appBundle() {
+        return Optional.ofNullable(this.appBundle);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appPackageId")
-      private final @Nullable Output<String> appPackageId;
+    private @Nullable Output<String> appPackageId;
 
-    public Output<String> appPackageId() {
-        return this.appPackageId == null ? Codegen.empty() : this.appPackageId;
+    public Optional<Output<String>> appPackageId() {
+        return Optional.ofNullable(this.appPackageId);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scenarioLabels")
-      private final @Nullable Output<List<String>> scenarioLabels;
+    private @Nullable Output<List<String>> scenarioLabels;
 
-    public Output<List<String>> scenarioLabels() {
-        return this.scenarioLabels == null ? Codegen.empty() : this.scenarioLabels;
+    public Optional<Output<List<String>>> scenarioLabels() {
+        return Optional.ofNullable(this.scenarioLabels);
     }
 
     /**
@@ -72,108 +72,96 @@ public final class AndroidTestLoopArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scenarios")
-      private final @Nullable Output<List<Integer>> scenarios;
+    private @Nullable Output<List<Integer>> scenarios;
 
-    public Output<List<Integer>> scenarios() {
-        return this.scenarios == null ? Codegen.empty() : this.scenarios;
+    public Optional<Output<List<Integer>>> scenarios() {
+        return Optional.ofNullable(this.scenarios);
     }
 
-    public AndroidTestLoopArgs(
-        @Nullable Output<FileReferenceArgs> appApk,
-        @Nullable Output<AppBundleArgs> appBundle,
-        @Nullable Output<String> appPackageId,
-        @Nullable Output<List<String>> scenarioLabels,
-        @Nullable Output<List<Integer>> scenarios) {
-        this.appApk = appApk;
-        this.appBundle = appBundle;
-        this.appPackageId = appPackageId;
-        this.scenarioLabels = scenarioLabels;
-        this.scenarios = scenarios;
-    }
+    private AndroidTestLoopArgs() {}
 
-    private AndroidTestLoopArgs() {
-        this.appApk = Codegen.empty();
-        this.appBundle = Codegen.empty();
-        this.appPackageId = Codegen.empty();
-        this.scenarioLabels = Codegen.empty();
-        this.scenarios = Codegen.empty();
+    private AndroidTestLoopArgs(AndroidTestLoopArgs $) {
+        this.appApk = $.appApk;
+        this.appBundle = $.appBundle;
+        this.appPackageId = $.appPackageId;
+        this.scenarioLabels = $.scenarioLabels;
+        this.scenarios = $.scenarios;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidTestLoopArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FileReferenceArgs> appApk;
-        private @Nullable Output<AppBundleArgs> appBundle;
-        private @Nullable Output<String> appPackageId;
-        private @Nullable Output<List<String>> scenarioLabels;
-        private @Nullable Output<List<Integer>> scenarios;
+        private AndroidTestLoopArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidTestLoopArgs();
         }
 
         public Builder(AndroidTestLoopArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appApk = defaults.appApk;
-    	      this.appBundle = defaults.appBundle;
-    	      this.appPackageId = defaults.appPackageId;
-    	      this.scenarioLabels = defaults.scenarioLabels;
-    	      this.scenarios = defaults.scenarios;
+            $ = new AndroidTestLoopArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appApk(@Nullable Output<FileReferenceArgs> appApk) {
-            this.appApk = appApk;
+            $.appApk = appApk;
             return this;
         }
-        public Builder appApk(@Nullable FileReferenceArgs appApk) {
-            this.appApk = Codegen.ofNullable(appApk);
-            return this;
+
+        public Builder appApk(FileReferenceArgs appApk) {
+            return appApk(Output.of(appApk));
         }
+
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
-            this.appBundle = appBundle;
+            $.appBundle = appBundle;
             return this;
         }
-        public Builder appBundle(@Nullable AppBundleArgs appBundle) {
-            this.appBundle = Codegen.ofNullable(appBundle);
-            return this;
+
+        public Builder appBundle(AppBundleArgs appBundle) {
+            return appBundle(Output.of(appBundle));
         }
+
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
-            this.appPackageId = appPackageId;
+            $.appPackageId = appPackageId;
             return this;
         }
-        public Builder appPackageId(@Nullable String appPackageId) {
-            this.appPackageId = Codegen.ofNullable(appPackageId);
-            return this;
+
+        public Builder appPackageId(String appPackageId) {
+            return appPackageId(Output.of(appPackageId));
         }
+
         public Builder scenarioLabels(@Nullable Output<List<String>> scenarioLabels) {
-            this.scenarioLabels = scenarioLabels;
+            $.scenarioLabels = scenarioLabels;
             return this;
         }
-        public Builder scenarioLabels(@Nullable List<String> scenarioLabels) {
-            this.scenarioLabels = Codegen.ofNullable(scenarioLabels);
-            return this;
+
+        public Builder scenarioLabels(List<String> scenarioLabels) {
+            return scenarioLabels(Output.of(scenarioLabels));
         }
+
         public Builder scenarioLabels(String... scenarioLabels) {
             return scenarioLabels(List.of(scenarioLabels));
         }
+
         public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
-            this.scenarios = scenarios;
+            $.scenarios = scenarios;
             return this;
         }
-        public Builder scenarios(@Nullable List<Integer> scenarios) {
-            this.scenarios = Codegen.ofNullable(scenarios);
-            return this;
+
+        public Builder scenarios(List<Integer> scenarios) {
+            return scenarios(Output.of(scenarios));
         }
+
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
-        }        public AndroidTestLoopArgs build() {
-            return new AndroidTestLoopArgs(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
+        }
+
+        public AndroidTestLoopArgs build() {
+            return $;
         }
     }
+
 }

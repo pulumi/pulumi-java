@@ -10,6 +10,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
+    private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
+    public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public ResourceIdentityArgs(
-        @Nullable Output<String> type,
-        @Nullable Output<Map<String,Object>> userAssignedIdentities) {
-        this.type = Codegen.stringProp("type").output().arg(type).def("None").getNullable();
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private ResourceIdentityArgs() {}
 
-    private ResourceIdentityArgs() {
-        this.type = Codegen.empty();
-        this.userAssignedIdentities = Codegen.empty();
+    private ResourceIdentityArgs(ResourceIdentityArgs $) {
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> type;
-        private @Nullable Output<Map<String,Object>> userAssignedIdentities;
+        private ResourceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdentityArgs();
         }
 
         public Builder(ResourceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
-            return this;
-        }        public ResourceIdentityArgs build() {
-            return new ResourceIdentityArgs(type, userAssignedIdentities);
+
+        public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
+        public ResourceIdentityArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).def("None").getNullable();
+            return $;
         }
     }
+
 }

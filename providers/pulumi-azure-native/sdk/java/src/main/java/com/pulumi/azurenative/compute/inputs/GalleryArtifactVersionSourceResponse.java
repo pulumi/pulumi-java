@@ -23,10 +23,10 @@ public final class GalleryArtifactVersionSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class GalleryArtifactVersionSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public GalleryArtifactVersionSourceResponse(
-        @Nullable String id,
-        @Nullable String uri) {
-        this.id = id;
-        this.uri = uri;
-    }
+    private GalleryArtifactVersionSourceResponse() {}
 
-    private GalleryArtifactVersionSourceResponse() {
-        this.id = null;
-        this.uri = null;
+    private GalleryArtifactVersionSourceResponse(GalleryArtifactVersionSourceResponse $) {
+        this.id = $.id;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryArtifactVersionSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String uri;
+        private GalleryArtifactVersionSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryArtifactVersionSourceResponse();
         }
 
         public Builder(GalleryArtifactVersionSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.uri = defaults.uri;
+            $ = new GalleryArtifactVersionSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public GalleryArtifactVersionSourceResponse build() {
-            return new GalleryArtifactVersionSourceResponse(id, uri);
+        }
+
+        public GalleryArtifactVersionSourceResponse build() {
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionOriginShieldArgs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionS3OriginConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,213 +22,190 @@ public final class DistributionOriginArgs extends com.pulumi.resources.ResourceA
     public static final DistributionOriginArgs Empty = new DistributionOriginArgs();
 
     @Import(name="connectionAttempts")
-      private final @Nullable Output<Integer> connectionAttempts;
+    private @Nullable Output<Integer> connectionAttempts;
 
-    public Output<Integer> connectionAttempts() {
-        return this.connectionAttempts == null ? Codegen.empty() : this.connectionAttempts;
+    public Optional<Output<Integer>> connectionAttempts() {
+        return Optional.ofNullable(this.connectionAttempts);
     }
 
     @Import(name="connectionTimeout")
-      private final @Nullable Output<Integer> connectionTimeout;
+    private @Nullable Output<Integer> connectionTimeout;
 
-    public Output<Integer> connectionTimeout() {
-        return this.connectionTimeout == null ? Codegen.empty() : this.connectionTimeout;
+    public Optional<Output<Integer>> connectionTimeout() {
+        return Optional.ofNullable(this.connectionTimeout);
     }
 
     @Import(name="customOriginConfig")
-      private final @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig;
+    private @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig;
 
-    public Output<DistributionCustomOriginConfigArgs> customOriginConfig() {
-        return this.customOriginConfig == null ? Codegen.empty() : this.customOriginConfig;
+    public Optional<Output<DistributionCustomOriginConfigArgs>> customOriginConfig() {
+        return Optional.ofNullable(this.customOriginConfig);
     }
 
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
     }
 
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
     @Import(name="originCustomHeaders")
-      private final @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders;
+    private @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders;
 
-    public Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders() {
-        return this.originCustomHeaders == null ? Codegen.empty() : this.originCustomHeaders;
+    public Optional<Output<List<DistributionOriginCustomHeaderArgs>>> originCustomHeaders() {
+        return Optional.ofNullable(this.originCustomHeaders);
     }
 
     @Import(name="originPath")
-      private final @Nullable Output<String> originPath;
+    private @Nullable Output<String> originPath;
 
-    public Output<String> originPath() {
-        return this.originPath == null ? Codegen.empty() : this.originPath;
+    public Optional<Output<String>> originPath() {
+        return Optional.ofNullable(this.originPath);
     }
 
     @Import(name="originShield")
-      private final @Nullable Output<DistributionOriginShieldArgs> originShield;
+    private @Nullable Output<DistributionOriginShieldArgs> originShield;
 
-    public Output<DistributionOriginShieldArgs> originShield() {
-        return this.originShield == null ? Codegen.empty() : this.originShield;
+    public Optional<Output<DistributionOriginShieldArgs>> originShield() {
+        return Optional.ofNullable(this.originShield);
     }
 
     @Import(name="s3OriginConfig")
-      private final @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig;
+    private @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig;
 
-    public Output<DistributionS3OriginConfigArgs> s3OriginConfig() {
-        return this.s3OriginConfig == null ? Codegen.empty() : this.s3OriginConfig;
+    public Optional<Output<DistributionS3OriginConfigArgs>> s3OriginConfig() {
+        return Optional.ofNullable(this.s3OriginConfig);
     }
 
-    public DistributionOriginArgs(
-        @Nullable Output<Integer> connectionAttempts,
-        @Nullable Output<Integer> connectionTimeout,
-        @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig,
-        Output<String> domainName,
-        Output<String> id,
-        @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders,
-        @Nullable Output<String> originPath,
-        @Nullable Output<DistributionOriginShieldArgs> originShield,
-        @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig) {
-        this.connectionAttempts = connectionAttempts;
-        this.connectionTimeout = connectionTimeout;
-        this.customOriginConfig = customOriginConfig;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.originCustomHeaders = originCustomHeaders;
-        this.originPath = originPath;
-        this.originShield = originShield;
-        this.s3OriginConfig = s3OriginConfig;
-    }
+    private DistributionOriginArgs() {}
 
-    private DistributionOriginArgs() {
-        this.connectionAttempts = Codegen.empty();
-        this.connectionTimeout = Codegen.empty();
-        this.customOriginConfig = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.originCustomHeaders = Codegen.empty();
-        this.originPath = Codegen.empty();
-        this.originShield = Codegen.empty();
-        this.s3OriginConfig = Codegen.empty();
+    private DistributionOriginArgs(DistributionOriginArgs $) {
+        this.connectionAttempts = $.connectionAttempts;
+        this.connectionTimeout = $.connectionTimeout;
+        this.customOriginConfig = $.customOriginConfig;
+        this.domainName = $.domainName;
+        this.id = $.id;
+        this.originCustomHeaders = $.originCustomHeaders;
+        this.originPath = $.originPath;
+        this.originShield = $.originShield;
+        this.s3OriginConfig = $.s3OriginConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> connectionAttempts;
-        private @Nullable Output<Integer> connectionTimeout;
-        private @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig;
-        private Output<String> domainName;
-        private Output<String> id;
-        private @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders;
-        private @Nullable Output<String> originPath;
-        private @Nullable Output<DistributionOriginShieldArgs> originShield;
-        private @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig;
+        private DistributionOriginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginArgs();
         }
 
         public Builder(DistributionOriginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionAttempts = defaults.connectionAttempts;
-    	      this.connectionTimeout = defaults.connectionTimeout;
-    	      this.customOriginConfig = defaults.customOriginConfig;
-    	      this.domainName = defaults.domainName;
-    	      this.id = defaults.id;
-    	      this.originCustomHeaders = defaults.originCustomHeaders;
-    	      this.originPath = defaults.originPath;
-    	      this.originShield = defaults.originShield;
-    	      this.s3OriginConfig = defaults.s3OriginConfig;
+            $ = new DistributionOriginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionAttempts(@Nullable Output<Integer> connectionAttempts) {
-            this.connectionAttempts = connectionAttempts;
+            $.connectionAttempts = connectionAttempts;
             return this;
         }
-        public Builder connectionAttempts(@Nullable Integer connectionAttempts) {
-            this.connectionAttempts = Codegen.ofNullable(connectionAttempts);
-            return this;
+
+        public Builder connectionAttempts(Integer connectionAttempts) {
+            return connectionAttempts(Output.of(connectionAttempts));
         }
+
         public Builder connectionTimeout(@Nullable Output<Integer> connectionTimeout) {
-            this.connectionTimeout = connectionTimeout;
+            $.connectionTimeout = connectionTimeout;
             return this;
         }
-        public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
-            this.connectionTimeout = Codegen.ofNullable(connectionTimeout);
-            return this;
+
+        public Builder connectionTimeout(Integer connectionTimeout) {
+            return connectionTimeout(Output.of(connectionTimeout));
         }
+
         public Builder customOriginConfig(@Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig) {
-            this.customOriginConfig = customOriginConfig;
+            $.customOriginConfig = customOriginConfig;
             return this;
         }
-        public Builder customOriginConfig(@Nullable DistributionCustomOriginConfigArgs customOriginConfig) {
-            this.customOriginConfig = Codegen.ofNullable(customOriginConfig);
-            return this;
+
+        public Builder customOriginConfig(DistributionCustomOriginConfigArgs customOriginConfig) {
+            return customOriginConfig(Output.of(customOriginConfig));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder originCustomHeaders(@Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders) {
-            this.originCustomHeaders = originCustomHeaders;
+            $.originCustomHeaders = originCustomHeaders;
             return this;
         }
-        public Builder originCustomHeaders(@Nullable List<DistributionOriginCustomHeaderArgs> originCustomHeaders) {
-            this.originCustomHeaders = Codegen.ofNullable(originCustomHeaders);
-            return this;
+
+        public Builder originCustomHeaders(List<DistributionOriginCustomHeaderArgs> originCustomHeaders) {
+            return originCustomHeaders(Output.of(originCustomHeaders));
         }
+
         public Builder originCustomHeaders(DistributionOriginCustomHeaderArgs... originCustomHeaders) {
             return originCustomHeaders(List.of(originCustomHeaders));
         }
+
         public Builder originPath(@Nullable Output<String> originPath) {
-            this.originPath = originPath;
+            $.originPath = originPath;
             return this;
         }
-        public Builder originPath(@Nullable String originPath) {
-            this.originPath = Codegen.ofNullable(originPath);
-            return this;
+
+        public Builder originPath(String originPath) {
+            return originPath(Output.of(originPath));
         }
+
         public Builder originShield(@Nullable Output<DistributionOriginShieldArgs> originShield) {
-            this.originShield = originShield;
+            $.originShield = originShield;
             return this;
         }
-        public Builder originShield(@Nullable DistributionOriginShieldArgs originShield) {
-            this.originShield = Codegen.ofNullable(originShield);
-            return this;
+
+        public Builder originShield(DistributionOriginShieldArgs originShield) {
+            return originShield(Output.of(originShield));
         }
+
         public Builder s3OriginConfig(@Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig) {
-            this.s3OriginConfig = s3OriginConfig;
+            $.s3OriginConfig = s3OriginConfig;
             return this;
         }
-        public Builder s3OriginConfig(@Nullable DistributionS3OriginConfigArgs s3OriginConfig) {
-            this.s3OriginConfig = Codegen.ofNullable(s3OriginConfig);
-            return this;
-        }        public DistributionOriginArgs build() {
-            return new DistributionOriginArgs(connectionAttempts, connectionTimeout, customOriginConfig, domainName, id, originCustomHeaders, originPath, originShield, s3OriginConfig);
+
+        public Builder s3OriginConfig(DistributionS3OriginConfigArgs s3OriginConfig) {
+            return s3OriginConfig(Output.of(s3OriginConfig));
+        }
+
+        public DistributionOriginArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

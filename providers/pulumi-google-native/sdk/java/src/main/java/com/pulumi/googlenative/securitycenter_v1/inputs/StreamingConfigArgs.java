@@ -5,9 +5,9 @@ package com.pulumi.googlenative.securitycenter_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StreamingConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
-    public StreamingConfigArgs(@Nullable Output<String> filter) {
-        this.filter = filter;
-    }
+    private StreamingConfigArgs() {}
 
-    private StreamingConfigArgs() {
-        this.filter = Codegen.empty();
+    private StreamingConfigArgs(StreamingConfigArgs $) {
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
+        private StreamingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingConfigArgs();
         }
 
         public Builder(StreamingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
+            $ = new StreamingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
-        }        public StreamingConfigArgs build() {
-            return new StreamingConfigArgs(filter);
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        public StreamingConfigArgs build() {
+            return $;
         }
     }
+
 }

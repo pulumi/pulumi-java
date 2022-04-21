@@ -35,10 +35,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="additionalLinkedServiceNames")
-      private final @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames;
+    private @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames;
 
-    public List<LinkedServiceReferenceResponse> additionalLinkedServiceNames() {
-        return this.additionalLinkedServiceNames == null ? List.of() : this.additionalLinkedServiceNames;
+    public Optional<List<LinkedServiceReferenceResponse>> additionalLinkedServiceNames() {
+        return Optional.ofNullable(this.additionalLinkedServiceNames);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterNamePrefix")
-      private final @Nullable Object clusterNamePrefix;
+    private @Nullable Object clusterNamePrefix;
 
     public Optional<Object> clusterNamePrefix() {
-        return this.clusterNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.clusterNamePrefix);
+        return Optional.ofNullable(this.clusterNamePrefix);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterPassword")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword() {
-        return this.clusterPassword == null ? null : this.clusterPassword;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clusterPassword() {
+        return Optional.ofNullable(this.clusterPassword);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterResourceGroup", required=true)
-      private final Object clusterResourceGroup;
+    private Object clusterResourceGroup;
 
     public Object clusterResourceGroup() {
         return this.clusterResourceGroup;
@@ -90,7 +90,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterSize", required=true)
-      private final Object clusterSize;
+    private Object clusterSize;
 
     public Object clusterSize() {
         return this.clusterSize;
@@ -101,10 +101,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterSshPassword")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword() {
-        return this.clusterSshPassword == null ? null : this.clusterSshPassword;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clusterSshPassword() {
+        return Optional.ofNullable(this.clusterSshPassword);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterSshUserName")
-      private final @Nullable Object clusterSshUserName;
+    private @Nullable Object clusterSshUserName;
 
     public Optional<Object> clusterSshUserName() {
-        return this.clusterSshUserName == null ? Optional.empty() : Optional.ofNullable(this.clusterSshUserName);
+        return Optional.ofNullable(this.clusterSshUserName);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterType")
-      private final @Nullable Object clusterType;
+    private @Nullable Object clusterType;
 
     public Optional<Object> clusterType() {
-        return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
+        return Optional.ofNullable(this.clusterType);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="clusterUserName")
-      private final @Nullable Object clusterUserName;
+    private @Nullable Object clusterUserName;
 
     public Optional<Object> clusterUserName() {
-        return this.clusterUserName == null ? Optional.empty() : Optional.ofNullable(this.clusterUserName);
+        return Optional.ofNullable(this.clusterUserName);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="coreConfiguration")
-      private final @Nullable Object coreConfiguration;
+    private @Nullable Object coreConfiguration;
 
     public Optional<Object> coreConfiguration() {
-        return this.coreConfiguration == null ? Optional.empty() : Optional.ofNullable(this.coreConfiguration);
+        return Optional.ofNullable(this.coreConfiguration);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="dataNodeSize")
-      private final @Nullable Object dataNodeSize;
+    private @Nullable Object dataNodeSize;
 
     public Optional<Object> dataNodeSize() {
-        return this.dataNodeSize == null ? Optional.empty() : Optional.ofNullable(this.dataNodeSize);
+        return Optional.ofNullable(this.dataNodeSize);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="hBaseConfiguration")
-      private final @Nullable Object hBaseConfiguration;
+    private @Nullable Object hBaseConfiguration;
 
     public Optional<Object> hBaseConfiguration() {
-        return this.hBaseConfiguration == null ? Optional.empty() : Optional.ofNullable(this.hBaseConfiguration);
+        return Optional.ofNullable(this.hBaseConfiguration);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="hcatalogLinkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> hcatalogLinkedServiceName() {
-        return this.hcatalogLinkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.hcatalogLinkedServiceName);
+        return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="hdfsConfiguration")
-      private final @Nullable Object hdfsConfiguration;
+    private @Nullable Object hdfsConfiguration;
 
     public Optional<Object> hdfsConfiguration() {
-        return this.hdfsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.hdfsConfiguration);
+        return Optional.ofNullable(this.hdfsConfiguration);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="headNodeSize")
-      private final @Nullable Object headNodeSize;
+    private @Nullable Object headNodeSize;
 
     public Optional<Object> headNodeSize() {
-        return this.headNodeSize == null ? Optional.empty() : Optional.ofNullable(this.headNodeSize);
+        return Optional.ofNullable(this.headNodeSize);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="hiveConfiguration")
-      private final @Nullable Object hiveConfiguration;
+    private @Nullable Object hiveConfiguration;
 
     public Optional<Object> hiveConfiguration() {
-        return this.hiveConfiguration == null ? Optional.empty() : Optional.ofNullable(this.hiveConfiguration);
+        return Optional.ofNullable(this.hiveConfiguration);
     }
 
     /**
@@ -266,7 +266,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="hostSubscriptionId", required=true)
-      private final Object hostSubscriptionId;
+    private Object hostSubscriptionId;
 
     public Object hostSubscriptionId() {
         return this.hostSubscriptionId;
@@ -277,7 +277,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -288,10 +288,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="mapReduceConfiguration")
-      private final @Nullable Object mapReduceConfiguration;
+    private @Nullable Object mapReduceConfiguration;
 
     public Optional<Object> mapReduceConfiguration() {
-        return this.mapReduceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.mapReduceConfiguration);
+        return Optional.ofNullable(this.mapReduceConfiguration);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="oozieConfiguration")
-      private final @Nullable Object oozieConfiguration;
+    private @Nullable Object oozieConfiguration;
 
     public Optional<Object> oozieConfiguration() {
-        return this.oozieConfiguration == null ? Optional.empty() : Optional.ofNullable(this.oozieConfiguration);
+        return Optional.ofNullable(this.oozieConfiguration);
     }
 
     /**
@@ -310,10 +310,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -321,10 +321,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="scriptActions")
-      private final @Nullable List<ScriptActionResponse> scriptActions;
+    private @Nullable List<ScriptActionResponse> scriptActions;
 
-    public List<ScriptActionResponse> scriptActions() {
-        return this.scriptActions == null ? List.of() : this.scriptActions;
+    public Optional<List<ScriptActionResponse>> scriptActions() {
+        return Optional.ofNullable(this.scriptActions);
     }
 
     /**
@@ -332,10 +332,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -343,10 +343,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -354,10 +354,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="sparkVersion")
-      private final @Nullable Object sparkVersion;
+    private @Nullable Object sparkVersion;
 
     public Optional<Object> sparkVersion() {
-        return this.sparkVersion == null ? Optional.empty() : Optional.ofNullable(this.sparkVersion);
+        return Optional.ofNullable(this.sparkVersion);
     }
 
     /**
@@ -365,10 +365,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="stormConfiguration")
-      private final @Nullable Object stormConfiguration;
+    private @Nullable Object stormConfiguration;
 
     public Optional<Object> stormConfiguration() {
-        return this.stormConfiguration == null ? Optional.empty() : Optional.ofNullable(this.stormConfiguration);
+        return Optional.ofNullable(this.stormConfiguration);
     }
 
     /**
@@ -376,10 +376,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="subnetName")
-      private final @Nullable Object subnetName;
+    private @Nullable Object subnetName;
 
     public Optional<Object> subnetName() {
-        return this.subnetName == null ? Optional.empty() : Optional.ofNullable(this.subnetName);
+        return Optional.ofNullable(this.subnetName);
     }
 
     /**
@@ -387,7 +387,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="tenant", required=true)
-      private final Object tenant;
+    private Object tenant;
 
     public Object tenant() {
         return this.tenant;
@@ -398,7 +398,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="timeToLive", required=true)
-      private final Object timeToLive;
+    private Object timeToLive;
 
     public Object timeToLive() {
         return this.timeToLive;
@@ -410,7 +410,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -421,7 +421,7 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="version", required=true)
-      private final Object version;
+    private Object version;
 
     public Object version() {
         return this.version;
@@ -432,10 +432,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="virtualNetworkId")
-      private final @Nullable Object virtualNetworkId;
+    private @Nullable Object virtualNetworkId;
 
     public Optional<Object> virtualNetworkId() {
-        return this.virtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkId);
+        return Optional.ofNullable(this.virtualNetworkId);
     }
 
     /**
@@ -443,10 +443,10 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="yarnConfiguration")
-      private final @Nullable Object yarnConfiguration;
+    private @Nullable Object yarnConfiguration;
 
     public Optional<Object> yarnConfiguration() {
-        return this.yarnConfiguration == null ? Optional.empty() : Optional.ofNullable(this.yarnConfiguration);
+        return Optional.ofNullable(this.yarnConfiguration);
     }
 
     /**
@@ -454,397 +454,292 @@ public final class HDInsightOnDemandLinkedServiceResponse extends com.pulumi.res
      * 
      */
     @Import(name="zookeeperNodeSize")
-      private final @Nullable Object zookeeperNodeSize;
+    private @Nullable Object zookeeperNodeSize;
 
     public Optional<Object> zookeeperNodeSize() {
-        return this.zookeeperNodeSize == null ? Optional.empty() : Optional.ofNullable(this.zookeeperNodeSize);
+        return Optional.ofNullable(this.zookeeperNodeSize);
     }
 
-    public HDInsightOnDemandLinkedServiceResponse(
-        @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames,
-        @Nullable List<Object> annotations,
-        @Nullable Object clusterNamePrefix,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword,
-        Object clusterResourceGroup,
-        Object clusterSize,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword,
-        @Nullable Object clusterSshUserName,
-        @Nullable Object clusterType,
-        @Nullable Object clusterUserName,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object coreConfiguration,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Object dataNodeSize,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object hBaseConfiguration,
-        @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
-        @Nullable Object hdfsConfiguration,
-        @Nullable Object headNodeSize,
-        @Nullable Object hiveConfiguration,
-        Object hostSubscriptionId,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object mapReduceConfiguration,
-        @Nullable Object oozieConfiguration,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable List<ScriptActionResponse> scriptActions,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object sparkVersion,
-        @Nullable Object stormConfiguration,
-        @Nullable Object subnetName,
-        Object tenant,
-        Object timeToLive,
-        String type,
-        Object version,
-        @Nullable Object virtualNetworkId,
-        @Nullable Object yarnConfiguration,
-        @Nullable Object zookeeperNodeSize) {
-        this.additionalLinkedServiceNames = additionalLinkedServiceNames;
-        this.annotations = annotations;
-        this.clusterNamePrefix = clusterNamePrefix;
-        this.clusterPassword = clusterPassword;
-        this.clusterResourceGroup = Objects.requireNonNull(clusterResourceGroup, "expected parameter 'clusterResourceGroup' to be non-null");
-        this.clusterSize = Objects.requireNonNull(clusterSize, "expected parameter 'clusterSize' to be non-null");
-        this.clusterSshPassword = clusterSshPassword;
-        this.clusterSshUserName = clusterSshUserName;
-        this.clusterType = clusterType;
-        this.clusterUserName = clusterUserName;
-        this.connectVia = connectVia;
-        this.coreConfiguration = coreConfiguration;
-        this.credential = credential;
-        this.dataNodeSize = dataNodeSize;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.hBaseConfiguration = hBaseConfiguration;
-        this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
-        this.hdfsConfiguration = hdfsConfiguration;
-        this.headNodeSize = headNodeSize;
-        this.hiveConfiguration = hiveConfiguration;
-        this.hostSubscriptionId = Objects.requireNonNull(hostSubscriptionId, "expected parameter 'hostSubscriptionId' to be non-null");
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.mapReduceConfiguration = mapReduceConfiguration;
-        this.oozieConfiguration = oozieConfiguration;
-        this.parameters = parameters;
-        this.scriptActions = scriptActions;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.sparkVersion = sparkVersion;
-        this.stormConfiguration = stormConfiguration;
-        this.subnetName = subnetName;
-        this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-        this.timeToLive = Objects.requireNonNull(timeToLive, "expected parameter 'timeToLive' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.virtualNetworkId = virtualNetworkId;
-        this.yarnConfiguration = yarnConfiguration;
-        this.zookeeperNodeSize = zookeeperNodeSize;
-    }
+    private HDInsightOnDemandLinkedServiceResponse() {}
 
-    private HDInsightOnDemandLinkedServiceResponse() {
-        this.additionalLinkedServiceNames = List.of();
-        this.annotations = List.of();
-        this.clusterNamePrefix = null;
-        this.clusterPassword = null;
-        this.clusterResourceGroup = null;
-        this.clusterSize = null;
-        this.clusterSshPassword = null;
-        this.clusterSshUserName = null;
-        this.clusterType = null;
-        this.clusterUserName = null;
-        this.connectVia = null;
-        this.coreConfiguration = null;
-        this.credential = null;
-        this.dataNodeSize = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.hBaseConfiguration = null;
-        this.hcatalogLinkedServiceName = null;
-        this.hdfsConfiguration = null;
-        this.headNodeSize = null;
-        this.hiveConfiguration = null;
-        this.hostSubscriptionId = null;
-        this.linkedServiceName = null;
-        this.mapReduceConfiguration = null;
-        this.oozieConfiguration = null;
-        this.parameters = Map.of();
-        this.scriptActions = List.of();
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.sparkVersion = null;
-        this.stormConfiguration = null;
-        this.subnetName = null;
-        this.tenant = null;
-        this.timeToLive = null;
-        this.type = null;
-        this.version = null;
-        this.virtualNetworkId = null;
-        this.yarnConfiguration = null;
-        this.zookeeperNodeSize = null;
+    private HDInsightOnDemandLinkedServiceResponse(HDInsightOnDemandLinkedServiceResponse $) {
+        this.additionalLinkedServiceNames = $.additionalLinkedServiceNames;
+        this.annotations = $.annotations;
+        this.clusterNamePrefix = $.clusterNamePrefix;
+        this.clusterPassword = $.clusterPassword;
+        this.clusterResourceGroup = $.clusterResourceGroup;
+        this.clusterSize = $.clusterSize;
+        this.clusterSshPassword = $.clusterSshPassword;
+        this.clusterSshUserName = $.clusterSshUserName;
+        this.clusterType = $.clusterType;
+        this.clusterUserName = $.clusterUserName;
+        this.connectVia = $.connectVia;
+        this.coreConfiguration = $.coreConfiguration;
+        this.credential = $.credential;
+        this.dataNodeSize = $.dataNodeSize;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.hBaseConfiguration = $.hBaseConfiguration;
+        this.hcatalogLinkedServiceName = $.hcatalogLinkedServiceName;
+        this.hdfsConfiguration = $.hdfsConfiguration;
+        this.headNodeSize = $.headNodeSize;
+        this.hiveConfiguration = $.hiveConfiguration;
+        this.hostSubscriptionId = $.hostSubscriptionId;
+        this.linkedServiceName = $.linkedServiceName;
+        this.mapReduceConfiguration = $.mapReduceConfiguration;
+        this.oozieConfiguration = $.oozieConfiguration;
+        this.parameters = $.parameters;
+        this.scriptActions = $.scriptActions;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.sparkVersion = $.sparkVersion;
+        this.stormConfiguration = $.stormConfiguration;
+        this.subnetName = $.subnetName;
+        this.tenant = $.tenant;
+        this.timeToLive = $.timeToLive;
+        this.type = $.type;
+        this.version = $.version;
+        this.virtualNetworkId = $.virtualNetworkId;
+        this.yarnConfiguration = $.yarnConfiguration;
+        this.zookeeperNodeSize = $.zookeeperNodeSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightOnDemandLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object clusterNamePrefix;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword;
-        private Object clusterResourceGroup;
-        private Object clusterSize;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword;
-        private @Nullable Object clusterSshUserName;
-        private @Nullable Object clusterType;
-        private @Nullable Object clusterUserName;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object coreConfiguration;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable Object dataNodeSize;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object hBaseConfiguration;
-        private @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
-        private @Nullable Object hdfsConfiguration;
-        private @Nullable Object headNodeSize;
-        private @Nullable Object hiveConfiguration;
-        private Object hostSubscriptionId;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Object mapReduceConfiguration;
-        private @Nullable Object oozieConfiguration;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable List<ScriptActionResponse> scriptActions;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private @Nullable Object sparkVersion;
-        private @Nullable Object stormConfiguration;
-        private @Nullable Object subnetName;
-        private Object tenant;
-        private Object timeToLive;
-        private String type;
-        private Object version;
-        private @Nullable Object virtualNetworkId;
-        private @Nullable Object yarnConfiguration;
-        private @Nullable Object zookeeperNodeSize;
+        private HDInsightOnDemandLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightOnDemandLinkedServiceResponse();
         }
 
         public Builder(HDInsightOnDemandLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalLinkedServiceNames = defaults.additionalLinkedServiceNames;
-    	      this.annotations = defaults.annotations;
-    	      this.clusterNamePrefix = defaults.clusterNamePrefix;
-    	      this.clusterPassword = defaults.clusterPassword;
-    	      this.clusterResourceGroup = defaults.clusterResourceGroup;
-    	      this.clusterSize = defaults.clusterSize;
-    	      this.clusterSshPassword = defaults.clusterSshPassword;
-    	      this.clusterSshUserName = defaults.clusterSshUserName;
-    	      this.clusterType = defaults.clusterType;
-    	      this.clusterUserName = defaults.clusterUserName;
-    	      this.connectVia = defaults.connectVia;
-    	      this.coreConfiguration = defaults.coreConfiguration;
-    	      this.credential = defaults.credential;
-    	      this.dataNodeSize = defaults.dataNodeSize;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.hBaseConfiguration = defaults.hBaseConfiguration;
-    	      this.hcatalogLinkedServiceName = defaults.hcatalogLinkedServiceName;
-    	      this.hdfsConfiguration = defaults.hdfsConfiguration;
-    	      this.headNodeSize = defaults.headNodeSize;
-    	      this.hiveConfiguration = defaults.hiveConfiguration;
-    	      this.hostSubscriptionId = defaults.hostSubscriptionId;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.mapReduceConfiguration = defaults.mapReduceConfiguration;
-    	      this.oozieConfiguration = defaults.oozieConfiguration;
-    	      this.parameters = defaults.parameters;
-    	      this.scriptActions = defaults.scriptActions;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.sparkVersion = defaults.sparkVersion;
-    	      this.stormConfiguration = defaults.stormConfiguration;
-    	      this.subnetName = defaults.subnetName;
-    	      this.tenant = defaults.tenant;
-    	      this.timeToLive = defaults.timeToLive;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
-    	      this.virtualNetworkId = defaults.virtualNetworkId;
-    	      this.yarnConfiguration = defaults.yarnConfiguration;
-    	      this.zookeeperNodeSize = defaults.zookeeperNodeSize;
+            $ = new HDInsightOnDemandLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalLinkedServiceNames(@Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames) {
-            this.additionalLinkedServiceNames = additionalLinkedServiceNames;
+            $.additionalLinkedServiceNames = additionalLinkedServiceNames;
             return this;
         }
+
         public Builder additionalLinkedServiceNames(LinkedServiceReferenceResponse... additionalLinkedServiceNames) {
             return additionalLinkedServiceNames(List.of(additionalLinkedServiceNames));
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clusterNamePrefix(@Nullable Object clusterNamePrefix) {
-            this.clusterNamePrefix = clusterNamePrefix;
+            $.clusterNamePrefix = clusterNamePrefix;
             return this;
         }
+
         public Builder clusterPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword) {
-            this.clusterPassword = clusterPassword;
+            $.clusterPassword = clusterPassword;
             return this;
         }
+
         public Builder clusterResourceGroup(Object clusterResourceGroup) {
-            this.clusterResourceGroup = Objects.requireNonNull(clusterResourceGroup);
+            $.clusterResourceGroup = clusterResourceGroup;
             return this;
         }
+
         public Builder clusterSize(Object clusterSize) {
-            this.clusterSize = Objects.requireNonNull(clusterSize);
+            $.clusterSize = clusterSize;
             return this;
         }
+
         public Builder clusterSshPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword) {
-            this.clusterSshPassword = clusterSshPassword;
+            $.clusterSshPassword = clusterSshPassword;
             return this;
         }
+
         public Builder clusterSshUserName(@Nullable Object clusterSshUserName) {
-            this.clusterSshUserName = clusterSshUserName;
+            $.clusterSshUserName = clusterSshUserName;
             return this;
         }
+
         public Builder clusterType(@Nullable Object clusterType) {
-            this.clusterType = clusterType;
+            $.clusterType = clusterType;
             return this;
         }
+
         public Builder clusterUserName(@Nullable Object clusterUserName) {
-            this.clusterUserName = clusterUserName;
+            $.clusterUserName = clusterUserName;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder coreConfiguration(@Nullable Object coreConfiguration) {
-            this.coreConfiguration = coreConfiguration;
+            $.coreConfiguration = coreConfiguration;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder dataNodeSize(@Nullable Object dataNodeSize) {
-            this.dataNodeSize = dataNodeSize;
+            $.dataNodeSize = dataNodeSize;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder hBaseConfiguration(@Nullable Object hBaseConfiguration) {
-            this.hBaseConfiguration = hBaseConfiguration;
+            $.hBaseConfiguration = hBaseConfiguration;
             return this;
         }
+
         public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName) {
-            this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
+            $.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
+
         public Builder hdfsConfiguration(@Nullable Object hdfsConfiguration) {
-            this.hdfsConfiguration = hdfsConfiguration;
+            $.hdfsConfiguration = hdfsConfiguration;
             return this;
         }
+
         public Builder headNodeSize(@Nullable Object headNodeSize) {
-            this.headNodeSize = headNodeSize;
+            $.headNodeSize = headNodeSize;
             return this;
         }
+
         public Builder hiveConfiguration(@Nullable Object hiveConfiguration) {
-            this.hiveConfiguration = hiveConfiguration;
+            $.hiveConfiguration = hiveConfiguration;
             return this;
         }
+
         public Builder hostSubscriptionId(Object hostSubscriptionId) {
-            this.hostSubscriptionId = Objects.requireNonNull(hostSubscriptionId);
+            $.hostSubscriptionId = hostSubscriptionId;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder mapReduceConfiguration(@Nullable Object mapReduceConfiguration) {
-            this.mapReduceConfiguration = mapReduceConfiguration;
+            $.mapReduceConfiguration = mapReduceConfiguration;
             return this;
         }
+
         public Builder oozieConfiguration(@Nullable Object oozieConfiguration) {
-            this.oozieConfiguration = oozieConfiguration;
+            $.oozieConfiguration = oozieConfiguration;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder scriptActions(@Nullable List<ScriptActionResponse> scriptActions) {
-            this.scriptActions = scriptActions;
+            $.scriptActions = scriptActions;
             return this;
         }
+
         public Builder scriptActions(ScriptActionResponse... scriptActions) {
             return scriptActions(List.of(scriptActions));
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder sparkVersion(@Nullable Object sparkVersion) {
-            this.sparkVersion = sparkVersion;
+            $.sparkVersion = sparkVersion;
             return this;
         }
+
         public Builder stormConfiguration(@Nullable Object stormConfiguration) {
-            this.stormConfiguration = stormConfiguration;
+            $.stormConfiguration = stormConfiguration;
             return this;
         }
+
         public Builder subnetName(@Nullable Object subnetName) {
-            this.subnetName = subnetName;
+            $.subnetName = subnetName;
             return this;
         }
+
         public Builder tenant(Object tenant) {
-            this.tenant = Objects.requireNonNull(tenant);
+            $.tenant = tenant;
             return this;
         }
+
         public Builder timeToLive(Object timeToLive) {
-            this.timeToLive = Objects.requireNonNull(timeToLive);
+            $.timeToLive = timeToLive;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(Object version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder virtualNetworkId(@Nullable Object virtualNetworkId) {
-            this.virtualNetworkId = virtualNetworkId;
+            $.virtualNetworkId = virtualNetworkId;
             return this;
         }
+
         public Builder yarnConfiguration(@Nullable Object yarnConfiguration) {
-            this.yarnConfiguration = yarnConfiguration;
+            $.yarnConfiguration = yarnConfiguration;
             return this;
         }
+
         public Builder zookeeperNodeSize(@Nullable Object zookeeperNodeSize) {
-            this.zookeeperNodeSize = zookeeperNodeSize;
+            $.zookeeperNodeSize = zookeeperNodeSize;
             return this;
-        }        public HDInsightOnDemandLinkedServiceResponse build() {
-            return new HDInsightOnDemandLinkedServiceResponse(additionalLinkedServiceNames, annotations, clusterNamePrefix, clusterPassword, clusterResourceGroup, clusterSize, clusterSshPassword, clusterSshUserName, clusterType, clusterUserName, connectVia, coreConfiguration, credential, dataNodeSize, description, encryptedCredential, hBaseConfiguration, hcatalogLinkedServiceName, hdfsConfiguration, headNodeSize, hiveConfiguration, hostSubscriptionId, linkedServiceName, mapReduceConfiguration, oozieConfiguration, parameters, scriptActions, servicePrincipalId, servicePrincipalKey, sparkVersion, stormConfiguration, subnetName, tenant, timeToLive, type, version, virtualNetworkId, yarnConfiguration, zookeeperNodeSize);
+        }
+
+        public HDInsightOnDemandLinkedServiceResponse build() {
+            $.clusterResourceGroup = Objects.requireNonNull($.clusterResourceGroup, "expected parameter 'clusterResourceGroup' to be non-null");
+            $.clusterSize = Objects.requireNonNull($.clusterSize, "expected parameter 'clusterSize' to be non-null");
+            $.hostSubscriptionId = Objects.requireNonNull($.hostSubscriptionId, "expected parameter 'hostSubscriptionId' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.tenant = Objects.requireNonNull($.tenant, "expected parameter 'tenant' to be non-null");
+            $.timeToLive = Objects.requireNonNull($.timeToLive, "expected parameter 'timeToLive' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

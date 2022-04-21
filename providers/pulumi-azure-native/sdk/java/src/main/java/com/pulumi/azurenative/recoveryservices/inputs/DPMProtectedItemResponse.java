@@ -26,10 +26,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backupEngineName")
-      private final @Nullable String backupEngineName;
+    private @Nullable String backupEngineName;
 
     public Optional<String> backupEngineName() {
-        return this.backupEngineName == null ? Optional.empty() : Optional.ofNullable(this.backupEngineName);
+        return Optional.ofNullable(this.backupEngineName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="backupSetName")
-      private final @Nullable String backupSetName;
+    private @Nullable String backupSetName;
 
     public Optional<String> backupSetName() {
-        return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
+        return Optional.ofNullable(this.backupSetName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="createMode")
-      private final @Nullable String createMode;
+    private @Nullable String createMode;
 
     public Optional<String> createMode() {
-        return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deferredDeleteTimeInUTC")
-      private final @Nullable String deferredDeleteTimeInUTC;
+    private @Nullable String deferredDeleteTimeInUTC;
 
     public Optional<String> deferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
+        return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deferredDeleteTimeRemaining")
-      private final @Nullable String deferredDeleteTimeRemaining;
+    private @Nullable String deferredDeleteTimeRemaining;
 
     public Optional<String> deferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
+        return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable DPMProtectedItemExtendedInfoResponse extendedInfo;
+    private @Nullable DPMProtectedItemExtendedInfoResponse extendedInfo;
 
     public Optional<DPMProtectedItemExtendedInfoResponse> extendedInfo() {
-        return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
-      private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
+    private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
     public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
+        return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isRehydrate")
-      private final @Nullable Boolean isRehydrate;
+    private @Nullable Boolean isRehydrate;
 
     public Optional<Boolean> isRehydrate() {
-        return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
+        return Optional.ofNullable(this.isRehydrate);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isScheduledForDeferredDelete")
-      private final @Nullable Boolean isScheduledForDeferredDelete;
+    private @Nullable Boolean isScheduledForDeferredDelete;
 
     public Optional<Boolean> isScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
+        return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="lastRecoveryPoint")
-      private final @Nullable String lastRecoveryPoint;
+    private @Nullable String lastRecoveryPoint;
 
     public Optional<String> lastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
+        return Optional.ofNullable(this.lastRecoveryPoint);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -181,7 +181,7 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="protectedItemType", required=true)
-      private final String protectedItemType;
+    private String protectedItemType;
 
     public String protectedItemType() {
         return this.protectedItemType;
@@ -192,10 +192,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable String protectionState;
+    private @Nullable String protectionState;
 
     public Optional<String> protectionState() {
-        return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -214,199 +214,147 @@ public final class DPMProtectedItemResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="workloadType")
-      private final @Nullable String workloadType;
+    private @Nullable String workloadType;
 
     public Optional<String> workloadType() {
-        return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
+        return Optional.ofNullable(this.workloadType);
     }
 
-    public DPMProtectedItemResponse(
-        @Nullable String backupEngineName,
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable DPMProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String policyId,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
-        this.backupEngineName = backupEngineName;
-        this.backupManagementType = backupManagementType;
-        this.backupSetName = backupSetName;
-        this.containerName = containerName;
-        this.createMode = createMode;
-        this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
-        this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
-        this.isRehydrate = isRehydrate;
-        this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
-        this.lastRecoveryPoint = lastRecoveryPoint;
-        this.policyId = policyId;
-        this.protectedItemType = Codegen.stringProp("protectedItemType").arg(protectedItemType).require();
-        this.protectionState = protectionState;
-        this.sourceResourceId = sourceResourceId;
-        this.workloadType = workloadType;
-    }
+    private DPMProtectedItemResponse() {}
 
-    private DPMProtectedItemResponse() {
-        this.backupEngineName = null;
-        this.backupManagementType = null;
-        this.backupSetName = null;
-        this.containerName = null;
-        this.createMode = null;
-        this.deferredDeleteTimeInUTC = null;
-        this.deferredDeleteTimeRemaining = null;
-        this.extendedInfo = null;
-        this.friendlyName = null;
-        this.isDeferredDeleteScheduleUpcoming = null;
-        this.isRehydrate = null;
-        this.isScheduledForDeferredDelete = null;
-        this.lastRecoveryPoint = null;
-        this.policyId = null;
-        this.protectedItemType = null;
-        this.protectionState = null;
-        this.sourceResourceId = null;
-        this.workloadType = null;
+    private DPMProtectedItemResponse(DPMProtectedItemResponse $) {
+        this.backupEngineName = $.backupEngineName;
+        this.backupManagementType = $.backupManagementType;
+        this.backupSetName = $.backupSetName;
+        this.containerName = $.containerName;
+        this.createMode = $.createMode;
+        this.deferredDeleteTimeInUTC = $.deferredDeleteTimeInUTC;
+        this.deferredDeleteTimeRemaining = $.deferredDeleteTimeRemaining;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.isDeferredDeleteScheduleUpcoming = $.isDeferredDeleteScheduleUpcoming;
+        this.isRehydrate = $.isRehydrate;
+        this.isScheduledForDeferredDelete = $.isScheduledForDeferredDelete;
+        this.lastRecoveryPoint = $.lastRecoveryPoint;
+        this.policyId = $.policyId;
+        this.protectedItemType = $.protectedItemType;
+        this.protectionState = $.protectionState;
+        this.sourceResourceId = $.sourceResourceId;
+        this.workloadType = $.workloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DPMProtectedItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupEngineName;
-        private @Nullable String backupManagementType;
-        private @Nullable String backupSetName;
-        private @Nullable String containerName;
-        private @Nullable String createMode;
-        private @Nullable String deferredDeleteTimeInUTC;
-        private @Nullable String deferredDeleteTimeRemaining;
-        private @Nullable DPMProtectedItemExtendedInfoResponse extendedInfo;
-        private @Nullable String friendlyName;
-        private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
-        private @Nullable Boolean isRehydrate;
-        private @Nullable Boolean isScheduledForDeferredDelete;
-        private @Nullable String lastRecoveryPoint;
-        private @Nullable String policyId;
-        private String protectedItemType;
-        private @Nullable String protectionState;
-        private @Nullable String sourceResourceId;
-        private @Nullable String workloadType;
+        private DPMProtectedItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DPMProtectedItemResponse();
         }
 
         public Builder(DPMProtectedItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupEngineName = defaults.backupEngineName;
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.backupSetName = defaults.backupSetName;
-    	      this.containerName = defaults.containerName;
-    	      this.createMode = defaults.createMode;
-    	      this.deferredDeleteTimeInUTC = defaults.deferredDeleteTimeInUTC;
-    	      this.deferredDeleteTimeRemaining = defaults.deferredDeleteTimeRemaining;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.isDeferredDeleteScheduleUpcoming = defaults.isDeferredDeleteScheduleUpcoming;
-    	      this.isRehydrate = defaults.isRehydrate;
-    	      this.isScheduledForDeferredDelete = defaults.isScheduledForDeferredDelete;
-    	      this.lastRecoveryPoint = defaults.lastRecoveryPoint;
-    	      this.policyId = defaults.policyId;
-    	      this.protectedItemType = defaults.protectedItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.workloadType = defaults.workloadType;
+            $ = new DPMProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupEngineName(@Nullable String backupEngineName) {
-            this.backupEngineName = backupEngineName;
+            $.backupEngineName = backupEngineName;
             return this;
         }
+
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = backupSetName;
+            $.backupSetName = backupSetName;
             return this;
         }
+
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder createMode(@Nullable String createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
+
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
+            $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
+
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
+            $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
+
         public Builder extendedInfo(@Nullable DPMProtectedItemExtendedInfoResponse extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
+            $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
+
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = isRehydrate;
+            $.isRehydrate = isRehydrate;
             return this;
         }
+
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
+            $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
+
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = lastRecoveryPoint;
+            $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder protectedItemType(String protectedItemType) {
-            this.protectedItemType = Objects.requireNonNull(protectedItemType);
+            $.protectedItemType = protectedItemType;
             return this;
         }
+
         public Builder protectionState(@Nullable String protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
+
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
+
         public Builder workloadType(@Nullable String workloadType) {
-            this.workloadType = workloadType;
+            $.workloadType = workloadType;
             return this;
-        }        public DPMProtectedItemResponse build() {
-            return new DPMProtectedItemResponse(backupEngineName, backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, lastRecoveryPoint, policyId, protectedItemType, protectionState, sourceResourceId, workloadType);
+        }
+
+        public DPMProtectedItemResponse build() {
+            $.protectedItemType = Codegen.stringProp("protectedItemType").arg($.protectedItemType).require();
+            return $;
         }
     }
+
 }

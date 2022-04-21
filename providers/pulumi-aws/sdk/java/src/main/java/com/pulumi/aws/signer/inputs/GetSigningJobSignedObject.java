@@ -14,48 +14,49 @@ public final class GetSigningJobSignedObject extends com.pulumi.resources.Invoke
     public static final GetSigningJobSignedObject Empty = new GetSigningJobSignedObject();
 
     @Import(name="s3s", required=true)
-      private final List<GetSigningJobSignedObjectS3> s3s;
+    private List<GetSigningJobSignedObjectS3> s3s;
 
     public List<GetSigningJobSignedObjectS3> s3s() {
         return this.s3s;
     }
 
-    public GetSigningJobSignedObject(List<GetSigningJobSignedObjectS3> s3s) {
-        this.s3s = Objects.requireNonNull(s3s, "expected parameter 's3s' to be non-null");
-    }
+    private GetSigningJobSignedObject() {}
 
-    private GetSigningJobSignedObject() {
-        this.s3s = List.of();
+    private GetSigningJobSignedObject(GetSigningJobSignedObject $) {
+        this.s3s = $.s3s;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningJobSignedObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetSigningJobSignedObjectS3> s3s;
+        private GetSigningJobSignedObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningJobSignedObject();
         }
 
         public Builder(GetSigningJobSignedObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3s = defaults.s3s;
+            $ = new GetSigningJobSignedObject(Objects.requireNonNull(defaults));
         }
 
         public Builder s3s(List<GetSigningJobSignedObjectS3> s3s) {
-            this.s3s = Objects.requireNonNull(s3s);
+            $.s3s = s3s;
             return this;
         }
+
         public Builder s3s(GetSigningJobSignedObjectS3... s3s) {
             return s3s(List.of(s3s));
-        }        public GetSigningJobSignedObject build() {
-            return new GetSigningJobSignedObject(s3s);
+        }
+
+        public GetSigningJobSignedObject build() {
+            $.s3s = Objects.requireNonNull($.s3s, "expected parameter 's3s' to be non-null");
+            return $;
         }
     }
+
 }

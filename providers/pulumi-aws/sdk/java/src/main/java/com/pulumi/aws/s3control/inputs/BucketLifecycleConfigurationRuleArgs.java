@@ -8,9 +8,9 @@ import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleExpiratio
 import com.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="abortIncompleteMultipartUpload")
-      private final @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
+    private @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
-    public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload() {
-        return this.abortIncompleteMultipartUpload == null ? Codegen.empty() : this.abortIncompleteMultipartUpload;
+    public Optional<Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs>> abortIncompleteMultipartUpload() {
+        return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="expiration")
-      private final @Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration;
+    private @Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration;
 
-    public Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration() {
-        return this.expiration == null ? Codegen.empty() : this.expiration;
+    public Optional<Output<BucketLifecycleConfigurationRuleExpirationArgs>> expiration() {
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter;
+    private @Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter;
 
-    public Output<BucketLifecycleConfigurationRuleFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<BucketLifecycleConfigurationRuleFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -67,102 +67,89 @@ public final class BucketLifecycleConfigurationRuleArgs extends com.pulumi.resou
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public BucketLifecycleConfigurationRuleArgs(
-        @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload,
-        @Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration,
-        @Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter,
-        Output<String> id,
-        @Nullable Output<String> status) {
-        this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
-        this.expiration = expiration;
-        this.filter = filter;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.status = status;
-    }
+    private BucketLifecycleConfigurationRuleArgs() {}
 
-    private BucketLifecycleConfigurationRuleArgs() {
-        this.abortIncompleteMultipartUpload = Codegen.empty();
-        this.expiration = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.id = Codegen.empty();
-        this.status = Codegen.empty();
+    private BucketLifecycleConfigurationRuleArgs(BucketLifecycleConfigurationRuleArgs $) {
+        this.abortIncompleteMultipartUpload = $.abortIncompleteMultipartUpload;
+        this.expiration = $.expiration;
+        this.filter = $.filter;
+        this.id = $.id;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleConfigurationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
-        private @Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration;
-        private @Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter;
-        private Output<String> id;
-        private @Nullable Output<String> status;
+        private BucketLifecycleConfigurationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleConfigurationRuleArgs();
         }
 
         public Builder(BucketLifecycleConfigurationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortIncompleteMultipartUpload = defaults.abortIncompleteMultipartUpload;
-    	      this.expiration = defaults.expiration;
-    	      this.filter = defaults.filter;
-    	      this.id = defaults.id;
-    	      this.status = defaults.status;
+            $ = new BucketLifecycleConfigurationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abortIncompleteMultipartUpload(@Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
+            $.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
-        public Builder abortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
-            this.abortIncompleteMultipartUpload = Codegen.ofNullable(abortIncompleteMultipartUpload);
-            return this;
+
+        public Builder abortIncompleteMultipartUpload(BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
+            return abortIncompleteMultipartUpload(Output.of(abortIncompleteMultipartUpload));
         }
+
         public Builder expiration(@Nullable Output<BucketLifecycleConfigurationRuleExpirationArgs> expiration) {
-            this.expiration = expiration;
+            $.expiration = expiration;
             return this;
         }
-        public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpirationArgs expiration) {
-            this.expiration = Codegen.ofNullable(expiration);
-            return this;
+
+        public Builder expiration(BucketLifecycleConfigurationRuleExpirationArgs expiration) {
+            return expiration(Output.of(expiration));
         }
+
         public Builder filter(@Nullable Output<BucketLifecycleConfigurationRuleFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(BucketLifecycleConfigurationRuleFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public BucketLifecycleConfigurationRuleArgs build() {
-            return new BucketLifecycleConfigurationRuleArgs(abortIncompleteMultipartUpload, expiration, filter, id, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public BucketLifecycleConfigurationRuleArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

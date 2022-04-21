@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
      * 
      */
     @Import(name="maxValue", required=true)
-      private final GooglePrivacyDlpV2ValueResponse maxValue;
+    private GooglePrivacyDlpV2ValueResponse maxValue;
 
     public GooglePrivacyDlpV2ValueResponse maxValue() {
         return this.maxValue;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
      * 
      */
     @Import(name="minValue", required=true)
-      private final GooglePrivacyDlpV2ValueResponse minValue;
+    private GooglePrivacyDlpV2ValueResponse minValue;
 
     public GooglePrivacyDlpV2ValueResponse minValue() {
         return this.minValue;
@@ -44,67 +44,63 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends com.pu
      * 
      */
     @Import(name="quantileValues", required=true)
-      private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
+    private List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> quantileValues() {
         return this.quantileValues;
     }
 
-    public GooglePrivacyDlpV2NumericalStatsResultResponse(
-        GooglePrivacyDlpV2ValueResponse maxValue,
-        GooglePrivacyDlpV2ValueResponse minValue,
-        List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
-        this.maxValue = Objects.requireNonNull(maxValue, "expected parameter 'maxValue' to be non-null");
-        this.minValue = Objects.requireNonNull(minValue, "expected parameter 'minValue' to be non-null");
-        this.quantileValues = Objects.requireNonNull(quantileValues, "expected parameter 'quantileValues' to be non-null");
-    }
+    private GooglePrivacyDlpV2NumericalStatsResultResponse() {}
 
-    private GooglePrivacyDlpV2NumericalStatsResultResponse() {
-        this.maxValue = null;
-        this.minValue = null;
-        this.quantileValues = List.of();
+    private GooglePrivacyDlpV2NumericalStatsResultResponse(GooglePrivacyDlpV2NumericalStatsResultResponse $) {
+        this.maxValue = $.maxValue;
+        this.minValue = $.minValue;
+        this.quantileValues = $.quantileValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2NumericalStatsResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ValueResponse maxValue;
-        private GooglePrivacyDlpV2ValueResponse minValue;
-        private List<GooglePrivacyDlpV2ValueResponse> quantileValues;
+        private GooglePrivacyDlpV2NumericalStatsResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2NumericalStatsResultResponse();
         }
 
         public Builder(GooglePrivacyDlpV2NumericalStatsResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxValue = defaults.maxValue;
-    	      this.minValue = defaults.minValue;
-    	      this.quantileValues = defaults.quantileValues;
+            $ = new GooglePrivacyDlpV2NumericalStatsResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxValue(GooglePrivacyDlpV2ValueResponse maxValue) {
-            this.maxValue = Objects.requireNonNull(maxValue);
+            $.maxValue = maxValue;
             return this;
         }
+
         public Builder minValue(GooglePrivacyDlpV2ValueResponse minValue) {
-            this.minValue = Objects.requireNonNull(minValue);
+            $.minValue = minValue;
             return this;
         }
+
         public Builder quantileValues(List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
-            this.quantileValues = Objects.requireNonNull(quantileValues);
+            $.quantileValues = quantileValues;
             return this;
         }
+
         public Builder quantileValues(GooglePrivacyDlpV2ValueResponse... quantileValues) {
             return quantileValues(List.of(quantileValues));
-        }        public GooglePrivacyDlpV2NumericalStatsResultResponse build() {
-            return new GooglePrivacyDlpV2NumericalStatsResultResponse(maxValue, minValue, quantileValues);
+        }
+
+        public GooglePrivacyDlpV2NumericalStatsResultResponse build() {
+            $.maxValue = Objects.requireNonNull($.maxValue, "expected parameter 'maxValue' to be non-null");
+            $.minValue = Objects.requireNonNull($.minValue, "expected parameter 'minValue' to be non-null");
+            $.quantileValues = Objects.requireNonNull($.quantileValues, "expected parameter 'quantileValues' to be non-null");
+            return $;
         }
     }
+
 }

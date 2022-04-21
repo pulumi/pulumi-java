@@ -21,78 +21,71 @@ public final class BucketTransition extends com.pulumi.resources.InvokeArgs {
     public static final BucketTransition Empty = new BucketTransition();
 
     @Import(name="storageClass", required=true)
-      private final BucketTransitionStorageClass storageClass;
+    private BucketTransitionStorageClass storageClass;
 
     public BucketTransitionStorageClass storageClass() {
         return this.storageClass;
     }
 
     @Import(name="transitionDate")
-      private final @Nullable String transitionDate;
+    private @Nullable String transitionDate;
 
     public Optional<String> transitionDate() {
-        return this.transitionDate == null ? Optional.empty() : Optional.ofNullable(this.transitionDate);
+        return Optional.ofNullable(this.transitionDate);
     }
 
     @Import(name="transitionInDays")
-      private final @Nullable Integer transitionInDays;
+    private @Nullable Integer transitionInDays;
 
     public Optional<Integer> transitionInDays() {
-        return this.transitionInDays == null ? Optional.empty() : Optional.ofNullable(this.transitionInDays);
+        return Optional.ofNullable(this.transitionInDays);
     }
 
-    public BucketTransition(
-        BucketTransitionStorageClass storageClass,
-        @Nullable String transitionDate,
-        @Nullable Integer transitionInDays) {
-        this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
-        this.transitionDate = transitionDate;
-        this.transitionInDays = transitionInDays;
-    }
+    private BucketTransition() {}
 
-    private BucketTransition() {
-        this.storageClass = null;
-        this.transitionDate = null;
-        this.transitionInDays = null;
+    private BucketTransition(BucketTransition $) {
+        this.storageClass = $.storageClass;
+        this.transitionDate = $.transitionDate;
+        this.transitionInDays = $.transitionInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketTransition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketTransitionStorageClass storageClass;
-        private @Nullable String transitionDate;
-        private @Nullable Integer transitionInDays;
+        private BucketTransition $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketTransition();
         }
 
         public Builder(BucketTransition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageClass = defaults.storageClass;
-    	      this.transitionDate = defaults.transitionDate;
-    	      this.transitionInDays = defaults.transitionInDays;
+            $ = new BucketTransition(Objects.requireNonNull(defaults));
         }
 
         public Builder storageClass(BucketTransitionStorageClass storageClass) {
-            this.storageClass = Objects.requireNonNull(storageClass);
+            $.storageClass = storageClass;
             return this;
         }
+
         public Builder transitionDate(@Nullable String transitionDate) {
-            this.transitionDate = transitionDate;
+            $.transitionDate = transitionDate;
             return this;
         }
+
         public Builder transitionInDays(@Nullable Integer transitionInDays) {
-            this.transitionInDays = transitionInDays;
+            $.transitionInDays = transitionInDays;
             return this;
-        }        public BucketTransition build() {
-            return new BucketTransition(storageClass, transitionDate, transitionInDays);
+        }
+
+        public BucketTransition build() {
+            $.storageClass = Objects.requireNonNull($.storageClass, "expected parameter 'storageClass' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class ComputeProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="roles")
-      private final @Nullable List<RoleResponse> roles;
+    private @Nullable List<RoleResponse> roles;
 
-    public List<RoleResponse> roles() {
-        return this.roles == null ? List.of() : this.roles;
+    public Optional<List<RoleResponse>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public ComputeProfileResponse(@Nullable List<RoleResponse> roles) {
-        this.roles = roles;
-    }
+    private ComputeProfileResponse() {}
 
-    private ComputeProfileResponse() {
-        this.roles = List.of();
+    private ComputeProfileResponse(ComputeProfileResponse $) {
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<RoleResponse> roles;
+        private ComputeProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeProfileResponse();
         }
 
         public Builder(ComputeProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roles = defaults.roles;
+            $ = new ComputeProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder roles(@Nullable List<RoleResponse> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(RoleResponse... roles) {
             return roles(List.of(roles));
-        }        public ComputeProfileResponse build() {
-            return new ComputeProfileResponse(roles);
+        }
+
+        public ComputeProfileResponse build() {
+            return $;
         }
     }
+
 }

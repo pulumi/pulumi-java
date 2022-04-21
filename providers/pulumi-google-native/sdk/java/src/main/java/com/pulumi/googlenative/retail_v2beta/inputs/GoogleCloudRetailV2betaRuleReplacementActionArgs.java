@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
      * 
      */
     @Import(name="queryTerms")
-      private final @Nullable Output<List<String>> queryTerms;
+    private @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> queryTerms() {
-        return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
+    public Optional<Output<List<String>>> queryTerms() {
+        return Optional.ofNullable(this.queryTerms);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
      * 
      */
     @Import(name="replacementTerm")
-      private final @Nullable Output<String> replacementTerm;
+    private @Nullable Output<String> replacementTerm;
 
-    public Output<String> replacementTerm() {
-        return this.replacementTerm == null ? Codegen.empty() : this.replacementTerm;
+    public Optional<Output<String>> replacementTerm() {
+        return Optional.ofNullable(this.replacementTerm);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionArgs extends com.
      * 
      */
     @Import(name="term")
-      private final @Nullable Output<String> term;
+    private @Nullable Output<String> term;
 
-    public Output<String> term() {
-        return this.term == null ? Codegen.empty() : this.term;
+    public Optional<Output<String>> term() {
+        return Optional.ofNullable(this.term);
     }
 
-    public GoogleCloudRetailV2betaRuleReplacementActionArgs(
-        @Nullable Output<List<String>> queryTerms,
-        @Nullable Output<String> replacementTerm,
-        @Nullable Output<String> term) {
-        this.queryTerms = queryTerms;
-        this.replacementTerm = replacementTerm;
-        this.term = term;
-    }
+    private GoogleCloudRetailV2betaRuleReplacementActionArgs() {}
 
-    private GoogleCloudRetailV2betaRuleReplacementActionArgs() {
-        this.queryTerms = Codegen.empty();
-        this.replacementTerm = Codegen.empty();
-        this.term = Codegen.empty();
+    private GoogleCloudRetailV2betaRuleReplacementActionArgs(GoogleCloudRetailV2betaRuleReplacementActionArgs $) {
+        this.queryTerms = $.queryTerms;
+        this.replacementTerm = $.replacementTerm;
+        this.term = $.term;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleReplacementActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> queryTerms;
-        private @Nullable Output<String> replacementTerm;
-        private @Nullable Output<String> term;
+        private GoogleCloudRetailV2betaRuleReplacementActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleReplacementActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleReplacementActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryTerms = defaults.queryTerms;
-    	      this.replacementTerm = defaults.replacementTerm;
-    	      this.term = defaults.term;
+            $ = new GoogleCloudRetailV2betaRuleReplacementActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
-            this.queryTerms = queryTerms;
+            $.queryTerms = queryTerms;
             return this;
         }
-        public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Codegen.ofNullable(queryTerms);
-            return this;
+
+        public Builder queryTerms(List<String> queryTerms) {
+            return queryTerms(Output.of(queryTerms));
         }
+
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
+
         public Builder replacementTerm(@Nullable Output<String> replacementTerm) {
-            this.replacementTerm = replacementTerm;
+            $.replacementTerm = replacementTerm;
             return this;
         }
-        public Builder replacementTerm(@Nullable String replacementTerm) {
-            this.replacementTerm = Codegen.ofNullable(replacementTerm);
-            return this;
+
+        public Builder replacementTerm(String replacementTerm) {
+            return replacementTerm(Output.of(replacementTerm));
         }
+
         public Builder term(@Nullable Output<String> term) {
-            this.term = term;
+            $.term = term;
             return this;
         }
-        public Builder term(@Nullable String term) {
-            this.term = Codegen.ofNullable(term);
-            return this;
-        }        public GoogleCloudRetailV2betaRuleReplacementActionArgs build() {
-            return new GoogleCloudRetailV2betaRuleReplacementActionArgs(queryTerms, replacementTerm, term);
+
+        public Builder term(String term) {
+            return term(Output.of(term));
+        }
+
+        public GoogleCloudRetailV2betaRuleReplacementActionArgs build() {
+            return $;
         }
     }
+
 }

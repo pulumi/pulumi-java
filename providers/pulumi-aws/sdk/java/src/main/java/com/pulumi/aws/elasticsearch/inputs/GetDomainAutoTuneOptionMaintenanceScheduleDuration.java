@@ -18,7 +18,7 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends co
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
@@ -29,55 +29,52 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends co
      * 
      */
     @Import(name="value", required=true)
-      private final Integer value;
+    private Integer value;
 
     public Integer value() {
         return this.value;
     }
 
-    public GetDomainAutoTuneOptionMaintenanceScheduleDuration(
-        String unit,
-        Integer value) {
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetDomainAutoTuneOptionMaintenanceScheduleDuration() {}
 
-    private GetDomainAutoTuneOptionMaintenanceScheduleDuration() {
-        this.unit = null;
-        this.value = null;
+    private GetDomainAutoTuneOptionMaintenanceScheduleDuration(GetDomainAutoTuneOptionMaintenanceScheduleDuration $) {
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainAutoTuneOptionMaintenanceScheduleDuration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String unit;
-        private Integer value;
+        private GetDomainAutoTuneOptionMaintenanceScheduleDuration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainAutoTuneOptionMaintenanceScheduleDuration();
         }
 
         public Builder(GetDomainAutoTuneOptionMaintenanceScheduleDuration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new GetDomainAutoTuneOptionMaintenanceScheduleDuration(Objects.requireNonNull(defaults));
         }
 
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder value(Integer value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetDomainAutoTuneOptionMaintenanceScheduleDuration build() {
-            return new GetDomainAutoTuneOptionMaintenanceScheduleDuration(unit, value);
+        }
+
+        public GetDomainAutoTuneOptionMaintenanceScheduleDuration build() {
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assetId")
-      private final @Nullable String assetId;
+    private @Nullable String assetId;
 
     public Optional<String> assetId() {
-        return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
+        return Optional.ofNullable(this.assetId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputId")
-      private final @Nullable String inputId;
+    private @Nullable String inputId;
 
     public Optional<String> inputId() {
-        return this.inputId == null ? Optional.empty() : Optional.ofNullable(this.inputId);
+        return Optional.ofNullable(this.inputId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputId")
-      private final @Nullable String outputId;
+    private @Nullable String outputId;
 
     public Optional<String> outputId() {
-        return this.outputId == null ? Optional.empty() : Optional.ofNullable(this.outputId);
+        return Optional.ofNullable(this.outputId);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,WebServiceParameterResponse> parameters;
+    private @Nullable Map<String,WebServiceParameterResponse> parameters;
 
-    public Map<String,WebServiceParameterResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,WebServiceParameterResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public GraphNodeResponse(
-        @Nullable String assetId,
-        @Nullable String inputId,
-        @Nullable String outputId,
-        @Nullable Map<String,WebServiceParameterResponse> parameters) {
-        this.assetId = assetId;
-        this.inputId = inputId;
-        this.outputId = outputId;
-        this.parameters = parameters;
-    }
+    private GraphNodeResponse() {}
 
-    private GraphNodeResponse() {
-        this.assetId = null;
-        this.inputId = null;
-        this.outputId = null;
-        this.parameters = Map.of();
+    private GraphNodeResponse(GraphNodeResponse $) {
+        this.assetId = $.assetId;
+        this.inputId = $.inputId;
+        this.outputId = $.outputId;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphNodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assetId;
-        private @Nullable String inputId;
-        private @Nullable String outputId;
-        private @Nullable Map<String,WebServiceParameterResponse> parameters;
+        private GraphNodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphNodeResponse();
         }
 
         public Builder(GraphNodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
-    	      this.inputId = defaults.inputId;
-    	      this.outputId = defaults.outputId;
-    	      this.parameters = defaults.parameters;
+            $ = new GraphNodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = assetId;
+            $.assetId = assetId;
             return this;
         }
+
         public Builder inputId(@Nullable String inputId) {
-            this.inputId = inputId;
+            $.inputId = inputId;
             return this;
         }
+
         public Builder outputId(@Nullable String outputId) {
-            this.outputId = outputId;
+            $.outputId = outputId;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public GraphNodeResponse build() {
-            return new GraphNodeResponse(assetId, inputId, outputId, parameters);
+        }
+
+        public GraphNodeResponse build() {
+            return $;
         }
     }
+
 }

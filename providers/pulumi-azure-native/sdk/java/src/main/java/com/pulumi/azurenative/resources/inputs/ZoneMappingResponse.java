@@ -20,65 +20,61 @@ public final class ZoneMappingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public ZoneMappingResponse(
-        @Nullable String location,
-        @Nullable List<String> zones) {
-        this.location = location;
-        this.zones = zones;
-    }
+    private ZoneMappingResponse() {}
 
-    private ZoneMappingResponse() {
-        this.location = null;
-        this.zones = List.of();
+    private ZoneMappingResponse(ZoneMappingResponse $) {
+        this.location = $.location;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZoneMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable List<String> zones;
+        private ZoneMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZoneMappingResponse();
         }
 
         public Builder(ZoneMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.zones = defaults.zones;
+            $ = new ZoneMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public ZoneMappingResponse build() {
-            return new ZoneMappingResponse(location, zones);
+        }
+
+        public ZoneMappingResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerInstanceId", required=true)
-      private final String containerInstanceId;
+    private String containerInstanceId;
 
     public String containerInstanceId() {
         return this.containerInstanceId;
@@ -35,7 +35,7 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -46,10 +46,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="error")
-      private final @Nullable ErrorResponseResponse error;
+    private @Nullable ErrorResponseResponse error;
 
     public Optional<ErrorResponseResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
@@ -68,7 +68,7 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -79,91 +79,79 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final String storageAccountId;
+    private String storageAccountId;
 
     public String storageAccountId() {
         return this.storageAccountId;
     }
 
-    public ScriptStatusResponse(
-        String containerInstanceId,
-        String endTime,
-        @Nullable ErrorResponseResponse error,
-        String expirationTime,
-        String startTime,
-        String storageAccountId) {
-        this.containerInstanceId = Objects.requireNonNull(containerInstanceId, "expected parameter 'containerInstanceId' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.error = error;
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private ScriptStatusResponse() {}
 
-    private ScriptStatusResponse() {
-        this.containerInstanceId = null;
-        this.endTime = null;
-        this.error = null;
-        this.expirationTime = null;
-        this.startTime = null;
-        this.storageAccountId = null;
+    private ScriptStatusResponse(ScriptStatusResponse $) {
+        this.containerInstanceId = $.containerInstanceId;
+        this.endTime = $.endTime;
+        this.error = $.error;
+        this.expirationTime = $.expirationTime;
+        this.startTime = $.startTime;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerInstanceId;
-        private String endTime;
-        private @Nullable ErrorResponseResponse error;
-        private String expirationTime;
-        private String startTime;
-        private String storageAccountId;
+        private ScriptStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptStatusResponse();
         }
 
         public Builder(ScriptStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerInstanceId = defaults.containerInstanceId;
-    	      this.endTime = defaults.endTime;
-    	      this.error = defaults.error;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.startTime = defaults.startTime;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new ScriptStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerInstanceId(String containerInstanceId) {
-            this.containerInstanceId = Objects.requireNonNull(containerInstanceId);
+            $.containerInstanceId = containerInstanceId;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder error(@Nullable ErrorResponseResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
-        }        public ScriptStatusResponse build() {
-            return new ScriptStatusResponse(containerInstanceId, endTime, error, expirationTime, startTime, storageAccountId);
+        }
+
+        public ScriptStatusResponse build() {
+            $.containerInstanceId = Objects.requireNonNull($.containerInstanceId, "expected parameter 'containerInstanceId' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

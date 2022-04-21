@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceAdvancedMachineFeaturesArgs;
 import com.pulumi.gcp.compute.inputs.InstanceAttachedDiskArgs;
 import com.pulumi.gcp.compute.inputs.InstanceBootDiskArgs;
@@ -23,6 +22,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedMachineFeatures")
-      private final @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+    private @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Codegen.empty() : this.advancedMachineFeatures;
+    public Optional<Output<InstanceAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
+        return Optional.ofNullable(this.advancedMachineFeatures);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowStoppingForUpdate")
-      private final @Nullable Output<Boolean> allowStoppingForUpdate;
+    private @Nullable Output<Boolean> allowStoppingForUpdate;
 
-    public Output<Boolean> allowStoppingForUpdate() {
-        return this.allowStoppingForUpdate == null ? Codegen.empty() : this.allowStoppingForUpdate;
+    public Optional<Output<Boolean>> allowStoppingForUpdate() {
+        return Optional.ofNullable(this.allowStoppingForUpdate);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachedDisks")
-      private final @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
+    private @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
 
-    public Output<List<InstanceAttachedDiskArgs>> attachedDisks() {
-        return this.attachedDisks == null ? Codegen.empty() : this.attachedDisks;
+    public Optional<Output<List<InstanceAttachedDiskArgs>>> attachedDisks() {
+        return Optional.ofNullable(this.attachedDisks);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootDisk", required=true)
-      private final Output<InstanceBootDiskArgs> bootDisk;
+    private Output<InstanceBootDiskArgs> bootDisk;
 
     public Output<InstanceBootDiskArgs> bootDisk() {
         return this.bootDisk;
@@ -83,10 +83,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="canIpForward")
-      private final @Nullable Output<Boolean> canIpForward;
+    private @Nullable Output<Boolean> canIpForward;
 
-    public Output<Boolean> canIpForward() {
-        return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
+    public Optional<Output<Boolean>> canIpForward() {
+        return Optional.ofNullable(this.canIpForward);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="confidentialInstanceConfig")
-      private final @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+    private @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Codegen.empty() : this.confidentialInstanceConfig;
+    public Optional<Output<InstanceConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
+        return Optional.ofNullable(this.confidentialInstanceConfig);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desiredStatus")
-      private final @Nullable Output<String> desiredStatus;
+    private @Nullable Output<String> desiredStatus;
 
-    public Output<String> desiredStatus() {
-        return this.desiredStatus == null ? Codegen.empty() : this.desiredStatus;
+    public Optional<Output<String>> desiredStatus() {
+        return Optional.ofNullable(this.desiredStatus);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDisplay")
-      private final @Nullable Output<Boolean> enableDisplay;
+    private @Nullable Output<Boolean> enableDisplay;
 
-    public Output<Boolean> enableDisplay() {
-        return this.enableDisplay == null ? Codegen.empty() : this.enableDisplay;
+    public Optional<Output<Boolean>> enableDisplay() {
+        return Optional.ofNullable(this.enableDisplay);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guestAccelerators")
-      private final @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
+    private @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
 
-    public Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators() {
-        return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
+    public Optional<Output<List<InstanceGuestAcceleratorArgs>>> guestAccelerators() {
+        return Optional.ofNullable(this.guestAccelerators);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -188,7 +188,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType", required=true)
-      private final Output<String> machineType;
+    private Output<String> machineType;
 
     public Output<String> machineType() {
         return this.machineType;
@@ -201,10 +201,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataStartupScript")
-      private final @Nullable Output<String> metadataStartupScript;
+    private @Nullable Output<String> metadataStartupScript;
 
-    public Output<String> metadataStartupScript() {
-        return this.metadataStartupScript == null ? Codegen.empty() : this.metadataStartupScript;
+    public Optional<Output<String>> metadataStartupScript() {
+        return Optional.ofNullable(this.metadataStartupScript);
     }
 
     /**
@@ -234,10 +234,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -246,10 +246,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -258,7 +258,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaces", required=true)
-      private final Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
+    private Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces() {
         return this.networkInterfaces;
@@ -273,10 +273,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkPerformanceConfig")
-      private final @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
+    private @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig() {
-        return this.networkPerformanceConfig == null ? Codegen.empty() : this.networkPerformanceConfig;
+    public Optional<Output<InstanceNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
+        return Optional.ofNullable(this.networkPerformanceConfig);
     }
 
     /**
@@ -285,10 +285,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -297,10 +297,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationAffinity")
-      private final @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
+    private @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
-    public Output<InstanceReservationAffinityArgs> reservationAffinity() {
-        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
+    public Optional<Output<InstanceReservationAffinityArgs>> reservationAffinity() {
+        return Optional.ofNullable(this.reservationAffinity);
     }
 
     /**
@@ -308,10 +308,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourcePolicies")
-      private final @Nullable Output<String> resourcePolicies;
+    private @Nullable Output<String> resourcePolicies;
 
-    public Output<String> resourcePolicies() {
-        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
+    public Optional<Output<String>> resourcePolicies() {
+        return Optional.ofNullable(this.resourcePolicies);
     }
 
     /**
@@ -320,10 +320,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<InstanceSchedulingArgs> scheduling;
+    private @Nullable Output<InstanceSchedulingArgs> scheduling;
 
-    public Output<InstanceSchedulingArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<InstanceSchedulingArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
     /**
@@ -332,10 +332,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scratchDisks")
-      private final @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
+    private @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
 
-    public Output<List<InstanceScratchDiskArgs>> scratchDisks() {
-        return this.scratchDisks == null ? Codegen.empty() : this.scratchDisks;
+    public Optional<Output<List<InstanceScratchDiskArgs>>> scratchDisks() {
+        return Optional.ofNullable(this.scratchDisks);
     }
 
     /**
@@ -345,10 +345,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
+    private @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
 
-    public Output<InstanceServiceAccountArgs> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<InstanceServiceAccountArgs>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -358,10 +358,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<InstanceShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -369,10 +369,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -380,429 +380,351 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceArgs(
-        @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures,
-        @Nullable Output<Boolean> allowStoppingForUpdate,
-        @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks,
-        Output<InstanceBootDiskArgs> bootDisk,
-        @Nullable Output<Boolean> canIpForward,
-        @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> description,
-        @Nullable Output<String> desiredStatus,
-        @Nullable Output<Boolean> enableDisplay,
-        @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators,
-        @Nullable Output<String> hostname,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> metadataStartupScript,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<String> name,
-        Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity,
-        @Nullable Output<String> resourcePolicies,
-        @Nullable Output<InstanceSchedulingArgs> scheduling,
-        @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks,
-        @Nullable Output<InstanceServiceAccountArgs> serviceAccount,
-        @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> zone) {
-        this.advancedMachineFeatures = advancedMachineFeatures;
-        this.allowStoppingForUpdate = allowStoppingForUpdate;
-        this.attachedDisks = attachedDisks;
-        this.bootDisk = Objects.requireNonNull(bootDisk, "expected parameter 'bootDisk' to be non-null");
-        this.canIpForward = canIpForward;
-        this.confidentialInstanceConfig = confidentialInstanceConfig;
-        this.deletionProtection = deletionProtection;
-        this.description = description;
-        this.desiredStatus = desiredStatus;
-        this.enableDisplay = enableDisplay;
-        this.guestAccelerators = guestAccelerators;
-        this.hostname = hostname;
-        this.labels = labels;
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.metadata = metadata;
-        this.metadataStartupScript = metadataStartupScript;
-        this.minCpuPlatform = minCpuPlatform;
-        this.name = name;
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
-        this.networkPerformanceConfig = networkPerformanceConfig;
-        this.project = project;
-        this.reservationAffinity = reservationAffinity;
-        this.resourcePolicies = resourcePolicies;
-        this.scheduling = scheduling;
-        this.scratchDisks = scratchDisks;
-        this.serviceAccount = serviceAccount;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.tags = tags;
-        this.zone = zone;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.advancedMachineFeatures = Codegen.empty();
-        this.allowStoppingForUpdate = Codegen.empty();
-        this.attachedDisks = Codegen.empty();
-        this.bootDisk = Codegen.empty();
-        this.canIpForward = Codegen.empty();
-        this.confidentialInstanceConfig = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.description = Codegen.empty();
-        this.desiredStatus = Codegen.empty();
-        this.enableDisplay = Codegen.empty();
-        this.guestAccelerators = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.metadataStartupScript = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkInterfaces = Codegen.empty();
-        this.networkPerformanceConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reservationAffinity = Codegen.empty();
-        this.resourcePolicies = Codegen.empty();
-        this.scheduling = Codegen.empty();
-        this.scratchDisks = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.advancedMachineFeatures = $.advancedMachineFeatures;
+        this.allowStoppingForUpdate = $.allowStoppingForUpdate;
+        this.attachedDisks = $.attachedDisks;
+        this.bootDisk = $.bootDisk;
+        this.canIpForward = $.canIpForward;
+        this.confidentialInstanceConfig = $.confidentialInstanceConfig;
+        this.deletionProtection = $.deletionProtection;
+        this.description = $.description;
+        this.desiredStatus = $.desiredStatus;
+        this.enableDisplay = $.enableDisplay;
+        this.guestAccelerators = $.guestAccelerators;
+        this.hostname = $.hostname;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.metadataStartupScript = $.metadataStartupScript;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.name = $.name;
+        this.networkInterfaces = $.networkInterfaces;
+        this.networkPerformanceConfig = $.networkPerformanceConfig;
+        this.project = $.project;
+        this.reservationAffinity = $.reservationAffinity;
+        this.resourcePolicies = $.resourcePolicies;
+        this.scheduling = $.scheduling;
+        this.scratchDisks = $.scratchDisks;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.tags = $.tags;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
-        private @Nullable Output<Boolean> allowStoppingForUpdate;
-        private @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
-        private Output<InstanceBootDiskArgs> bootDisk;
-        private @Nullable Output<Boolean> canIpForward;
-        private @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> desiredStatus;
-        private @Nullable Output<Boolean> enableDisplay;
-        private @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> metadataStartupScript;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<String> name;
-        private Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
-        private @Nullable Output<String> resourcePolicies;
-        private @Nullable Output<InstanceSchedulingArgs> scheduling;
-        private @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
-        private @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
-        private @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> zone;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedMachineFeatures = defaults.advancedMachineFeatures;
-    	      this.allowStoppingForUpdate = defaults.allowStoppingForUpdate;
-    	      this.attachedDisks = defaults.attachedDisks;
-    	      this.bootDisk = defaults.bootDisk;
-    	      this.canIpForward = defaults.canIpForward;
-    	      this.confidentialInstanceConfig = defaults.confidentialInstanceConfig;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.description = defaults.description;
-    	      this.desiredStatus = defaults.desiredStatus;
-    	      this.enableDisplay = defaults.enableDisplay;
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.hostname = defaults.hostname;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.metadataStartupScript = defaults.metadataStartupScript;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.name = defaults.name;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.networkPerformanceConfig = defaults.networkPerformanceConfig;
-    	      this.project = defaults.project;
-    	      this.reservationAffinity = defaults.reservationAffinity;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.scheduling = defaults.scheduling;
-    	      this.scratchDisks = defaults.scratchDisks;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.tags = defaults.tags;
-    	      this.zone = defaults.zone;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedMachineFeatures(@Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
-            this.advancedMachineFeatures = advancedMachineFeatures;
+            $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
-        public Builder advancedMachineFeatures(@Nullable InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Codegen.ofNullable(advancedMachineFeatures);
-            return this;
+
+        public Builder advancedMachineFeatures(InstanceAdvancedMachineFeaturesArgs advancedMachineFeatures) {
+            return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
+
         public Builder allowStoppingForUpdate(@Nullable Output<Boolean> allowStoppingForUpdate) {
-            this.allowStoppingForUpdate = allowStoppingForUpdate;
+            $.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
-        public Builder allowStoppingForUpdate(@Nullable Boolean allowStoppingForUpdate) {
-            this.allowStoppingForUpdate = Codegen.ofNullable(allowStoppingForUpdate);
-            return this;
+
+        public Builder allowStoppingForUpdate(Boolean allowStoppingForUpdate) {
+            return allowStoppingForUpdate(Output.of(allowStoppingForUpdate));
         }
+
         public Builder attachedDisks(@Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks) {
-            this.attachedDisks = attachedDisks;
+            $.attachedDisks = attachedDisks;
             return this;
         }
-        public Builder attachedDisks(@Nullable List<InstanceAttachedDiskArgs> attachedDisks) {
-            this.attachedDisks = Codegen.ofNullable(attachedDisks);
-            return this;
+
+        public Builder attachedDisks(List<InstanceAttachedDiskArgs> attachedDisks) {
+            return attachedDisks(Output.of(attachedDisks));
         }
+
         public Builder attachedDisks(InstanceAttachedDiskArgs... attachedDisks) {
             return attachedDisks(List.of(attachedDisks));
         }
+
         public Builder bootDisk(Output<InstanceBootDiskArgs> bootDisk) {
-            this.bootDisk = Objects.requireNonNull(bootDisk);
+            $.bootDisk = bootDisk;
             return this;
         }
+
         public Builder bootDisk(InstanceBootDiskArgs bootDisk) {
-            this.bootDisk = Output.of(Objects.requireNonNull(bootDisk));
-            return this;
+            return bootDisk(Output.of(bootDisk));
         }
+
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
-            this.canIpForward = canIpForward;
+            $.canIpForward = canIpForward;
             return this;
         }
-        public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Codegen.ofNullable(canIpForward);
-            return this;
+
+        public Builder canIpForward(Boolean canIpForward) {
+            return canIpForward(Output.of(canIpForward));
         }
+
         public Builder confidentialInstanceConfig(@Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = confidentialInstanceConfig;
+            $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
-        public Builder confidentialInstanceConfig(@Nullable InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Codegen.ofNullable(confidentialInstanceConfig);
-            return this;
+
+        public Builder confidentialInstanceConfig(InstanceConfidentialInstanceConfigArgs confidentialInstanceConfig) {
+            return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder desiredStatus(@Nullable Output<String> desiredStatus) {
-            this.desiredStatus = desiredStatus;
+            $.desiredStatus = desiredStatus;
             return this;
         }
-        public Builder desiredStatus(@Nullable String desiredStatus) {
-            this.desiredStatus = Codegen.ofNullable(desiredStatus);
-            return this;
+
+        public Builder desiredStatus(String desiredStatus) {
+            return desiredStatus(Output.of(desiredStatus));
         }
+
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
-            this.enableDisplay = enableDisplay;
+            $.enableDisplay = enableDisplay;
             return this;
         }
-        public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Codegen.ofNullable(enableDisplay);
-            return this;
+
+        public Builder enableDisplay(Boolean enableDisplay) {
+            return enableDisplay(Output.of(enableDisplay));
         }
+
         public Builder guestAccelerators(@Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators) {
-            this.guestAccelerators = guestAccelerators;
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
-        public Builder guestAccelerators(@Nullable List<InstanceGuestAcceleratorArgs> guestAccelerators) {
-            this.guestAccelerators = Codegen.ofNullable(guestAccelerators);
-            return this;
+
+        public Builder guestAccelerators(List<InstanceGuestAcceleratorArgs> guestAccelerators) {
+            return guestAccelerators(Output.of(guestAccelerators));
         }
+
         public Builder guestAccelerators(InstanceGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder machineType(Output<String> machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Output.of(Objects.requireNonNull(machineType));
-            return this;
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
-            this.metadataStartupScript = metadataStartupScript;
+            $.metadataStartupScript = metadataStartupScript;
             return this;
         }
-        public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
-            this.metadataStartupScript = Codegen.ofNullable(metadataStartupScript);
-            return this;
+
+        public Builder metadataStartupScript(String metadataStartupScript) {
+            return metadataStartupScript(Output.of(metadataStartupScript));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkInterfaces(Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces) {
-            this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(List<InstanceNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.of(Objects.requireNonNull(networkInterfaces));
-            return this;
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(InstanceNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder networkPerformanceConfig(@Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig) {
-            this.networkPerformanceConfig = networkPerformanceConfig;
+            $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
-        public Builder networkPerformanceConfig(@Nullable InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
-            this.networkPerformanceConfig = Codegen.ofNullable(networkPerformanceConfig);
-            return this;
+
+        public Builder networkPerformanceConfig(InstanceNetworkPerformanceConfigArgs networkPerformanceConfig) {
+            return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityArgs> reservationAffinity) {
-            this.reservationAffinity = reservationAffinity;
+            $.reservationAffinity = reservationAffinity;
             return this;
         }
-        public Builder reservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
-            return this;
+
+        public Builder reservationAffinity(InstanceReservationAffinityArgs reservationAffinity) {
+            return reservationAffinity(Output.of(reservationAffinity));
         }
+
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
-            this.resourcePolicies = resourcePolicies;
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
-        public Builder resourcePolicies(@Nullable String resourcePolicies) {
-            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
-            return this;
+
+        public Builder resourcePolicies(String resourcePolicies) {
+            return resourcePolicies(Output.of(resourcePolicies));
         }
+
         public Builder scheduling(@Nullable Output<InstanceSchedulingArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable InstanceSchedulingArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
+
+        public Builder scheduling(InstanceSchedulingArgs scheduling) {
+            return scheduling(Output.of(scheduling));
         }
+
         public Builder scratchDisks(@Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks) {
-            this.scratchDisks = scratchDisks;
+            $.scratchDisks = scratchDisks;
             return this;
         }
-        public Builder scratchDisks(@Nullable List<InstanceScratchDiskArgs> scratchDisks) {
-            this.scratchDisks = Codegen.ofNullable(scratchDisks);
-            return this;
+
+        public Builder scratchDisks(List<InstanceScratchDiskArgs> scratchDisks) {
+            return scratchDisks(Output.of(scratchDisks));
         }
+
         public Builder scratchDisks(InstanceScratchDiskArgs... scratchDisks) {
             return scratchDisks(List.of(scratchDisks));
         }
+
         public Builder serviceAccount(@Nullable Output<InstanceServiceAccountArgs> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable InstanceServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(InstanceServiceAccountArgs serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(advancedMachineFeatures, allowStoppingForUpdate, attachedDisks, bootDisk, canIpForward, confidentialInstanceConfig, deletionProtection, description, desiredStatus, enableDisplay, guestAccelerators, hostname, labels, machineType, metadata, metadataStartupScript, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, project, reservationAffinity, resourcePolicies, scheduling, scratchDisks, serviceAccount, shieldedInstanceConfig, tags, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceArgs build() {
+            $.bootDisk = Objects.requireNonNull($.bootDisk, "expected parameter 'bootDisk' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.networkInterfaces = Objects.requireNonNull($.networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,45 +19,44 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public PrivateEndpointResponse(@Nullable String id) {
-        this.id = id;
-    }
+    private PrivateEndpointResponse() {}
 
-    private PrivateEndpointResponse() {
-        this.id = null;
+    private PrivateEndpointResponse(PrivateEndpointResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
+        private PrivateEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointResponse();
         }
 
         public Builder(PrivateEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public PrivateEndpointResponse build() {
-            return new PrivateEndpointResponse(id);
+        }
+
+        public PrivateEndpointResponse build() {
+            return $;
         }
     }
+
 }

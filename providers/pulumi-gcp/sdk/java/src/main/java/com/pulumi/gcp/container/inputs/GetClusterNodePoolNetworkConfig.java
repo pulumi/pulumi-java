@@ -14,78 +14,73 @@ public final class GetClusterNodePoolNetworkConfig extends com.pulumi.resources.
     public static final GetClusterNodePoolNetworkConfig Empty = new GetClusterNodePoolNetworkConfig();
 
     @Import(name="createPodRange", required=true)
-      private final Boolean createPodRange;
+    private Boolean createPodRange;
 
     public Boolean createPodRange() {
         return this.createPodRange;
     }
 
     @Import(name="podIpv4CidrBlock", required=true)
-      private final String podIpv4CidrBlock;
+    private String podIpv4CidrBlock;
 
     public String podIpv4CidrBlock() {
         return this.podIpv4CidrBlock;
     }
 
     @Import(name="podRange", required=true)
-      private final String podRange;
+    private String podRange;
 
     public String podRange() {
         return this.podRange;
     }
 
-    public GetClusterNodePoolNetworkConfig(
-        Boolean createPodRange,
-        String podIpv4CidrBlock,
-        String podRange) {
-        this.createPodRange = Objects.requireNonNull(createPodRange, "expected parameter 'createPodRange' to be non-null");
-        this.podIpv4CidrBlock = Objects.requireNonNull(podIpv4CidrBlock, "expected parameter 'podIpv4CidrBlock' to be non-null");
-        this.podRange = Objects.requireNonNull(podRange, "expected parameter 'podRange' to be non-null");
-    }
+    private GetClusterNodePoolNetworkConfig() {}
 
-    private GetClusterNodePoolNetworkConfig() {
-        this.createPodRange = null;
-        this.podIpv4CidrBlock = null;
-        this.podRange = null;
+    private GetClusterNodePoolNetworkConfig(GetClusterNodePoolNetworkConfig $) {
+        this.createPodRange = $.createPodRange;
+        this.podIpv4CidrBlock = $.podIpv4CidrBlock;
+        this.podRange = $.podRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNetworkConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean createPodRange;
-        private String podIpv4CidrBlock;
-        private String podRange;
+        private GetClusterNodePoolNetworkConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNetworkConfig();
         }
 
         public Builder(GetClusterNodePoolNetworkConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createPodRange = defaults.createPodRange;
-    	      this.podIpv4CidrBlock = defaults.podIpv4CidrBlock;
-    	      this.podRange = defaults.podRange;
+            $ = new GetClusterNodePoolNetworkConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder createPodRange(Boolean createPodRange) {
-            this.createPodRange = Objects.requireNonNull(createPodRange);
+            $.createPodRange = createPodRange;
             return this;
         }
+
         public Builder podIpv4CidrBlock(String podIpv4CidrBlock) {
-            this.podIpv4CidrBlock = Objects.requireNonNull(podIpv4CidrBlock);
+            $.podIpv4CidrBlock = podIpv4CidrBlock;
             return this;
         }
+
         public Builder podRange(String podRange) {
-            this.podRange = Objects.requireNonNull(podRange);
+            $.podRange = podRange;
             return this;
-        }        public GetClusterNodePoolNetworkConfig build() {
-            return new GetClusterNodePoolNetworkConfig(createPodRange, podIpv4CidrBlock, podRange);
+        }
+
+        public GetClusterNodePoolNetworkConfig build() {
+            $.createPodRange = Objects.requireNonNull($.createPodRange, "expected parameter 'createPodRange' to be non-null");
+            $.podIpv4CidrBlock = Objects.requireNonNull($.podIpv4CidrBlock, "expected parameter 'podIpv4CidrBlock' to be non-null");
+            $.podRange = Objects.requireNonNull($.podRange, "expected parameter 'podRange' to be non-null");
+            return $;
         }
     }
+
 }

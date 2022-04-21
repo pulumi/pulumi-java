@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,83 @@ public final class HmacKeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final HmacKeyArgs Empty = new HmacKeyArgs();
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceAccountEmail", required=true)
-      private final Output<String> serviceAccountEmail;
+    private Output<String> serviceAccountEmail;
 
     public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     @Import(name="userProject")
-      private final @Nullable Output<String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output<String> userProject() {
-        return this.userProject == null ? Codegen.empty() : this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
-    public HmacKeyArgs(
-        @Nullable Output<String> project,
-        Output<String> serviceAccountEmail,
-        @Nullable Output<String> userProject) {
-        this.project = project;
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-        this.userProject = userProject;
-    }
+    private HmacKeyArgs() {}
 
-    private HmacKeyArgs() {
-        this.project = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
-        this.userProject = Codegen.empty();
+    private HmacKeyArgs(HmacKeyArgs $) {
+        this.project = $.project;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HmacKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> project;
-        private Output<String> serviceAccountEmail;
-        private @Nullable Output<String> userProject;
+        private HmacKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HmacKeyArgs();
         }
 
         public Builder(HmacKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.userProject = defaults.userProject;
+            $ = new HmacKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
-            return this;
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder userProject(@Nullable Output<String> userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
         }
-        public Builder userProject(@Nullable String userProject) {
-            this.userProject = Codegen.ofNullable(userProject);
-            return this;
-        }        public HmacKeyArgs build() {
-            return new HmacKeyArgs(project, serviceAccountEmail, userProject);
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
+        }
+
+        public HmacKeyArgs build() {
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            return $;
         }
     }
+
 }

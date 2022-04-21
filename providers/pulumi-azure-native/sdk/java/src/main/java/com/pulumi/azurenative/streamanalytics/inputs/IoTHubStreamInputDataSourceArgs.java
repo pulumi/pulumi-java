@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="consumerGroupName")
-      private final @Nullable Output<String> consumerGroupName;
+    private @Nullable Output<String> consumerGroupName;
 
-    public Output<String> consumerGroupName() {
-        return this.consumerGroupName == null ? Codegen.empty() : this.consumerGroupName;
+    public Optional<Output<String>> consumerGroupName() {
+        return Optional.ofNullable(this.consumerGroupName);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="iotHubNamespace")
-      private final @Nullable Output<String> iotHubNamespace;
+    private @Nullable Output<String> iotHubNamespace;
 
-    public Output<String> iotHubNamespace() {
-        return this.iotHubNamespace == null ? Codegen.empty() : this.iotHubNamespace;
+    public Optional<Output<String>> iotHubNamespace() {
+        return Optional.ofNullable(this.iotHubNamespace);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sharedAccessPolicyKey")
-      private final @Nullable Output<String> sharedAccessPolicyKey;
+    private @Nullable Output<String> sharedAccessPolicyKey;
 
-    public Output<String> sharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
+    public Optional<Output<String>> sharedAccessPolicyKey() {
+        return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sharedAccessPolicyName")
-      private final @Nullable Output<String> sharedAccessPolicyName;
+    private @Nullable Output<String> sharedAccessPolicyName;
 
-    public Output<String> sharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
+    public Optional<Output<String>> sharedAccessPolicyName() {
+        return Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
     /**
@@ -80,115 +81,99 @@ public final class IoTHubStreamInputDataSourceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public IoTHubStreamInputDataSourceArgs(
-        @Nullable Output<String> consumerGroupName,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> iotHubNamespace,
-        @Nullable Output<String> sharedAccessPolicyKey,
-        @Nullable Output<String> sharedAccessPolicyName,
-        Output<String> type) {
-        this.consumerGroupName = consumerGroupName;
-        this.endpoint = endpoint;
-        this.iotHubNamespace = iotHubNamespace;
-        this.sharedAccessPolicyKey = sharedAccessPolicyKey;
-        this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private IoTHubStreamInputDataSourceArgs() {}
 
-    private IoTHubStreamInputDataSourceArgs() {
-        this.consumerGroupName = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.iotHubNamespace = Codegen.empty();
-        this.sharedAccessPolicyKey = Codegen.empty();
-        this.sharedAccessPolicyName = Codegen.empty();
-        this.type = Codegen.empty();
+    private IoTHubStreamInputDataSourceArgs(IoTHubStreamInputDataSourceArgs $) {
+        this.consumerGroupName = $.consumerGroupName;
+        this.endpoint = $.endpoint;
+        this.iotHubNamespace = $.iotHubNamespace;
+        this.sharedAccessPolicyKey = $.sharedAccessPolicyKey;
+        this.sharedAccessPolicyName = $.sharedAccessPolicyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IoTHubStreamInputDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consumerGroupName;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> iotHubNamespace;
-        private @Nullable Output<String> sharedAccessPolicyKey;
-        private @Nullable Output<String> sharedAccessPolicyName;
-        private Output<String> type;
+        private IoTHubStreamInputDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IoTHubStreamInputDataSourceArgs();
         }
 
         public Builder(IoTHubStreamInputDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerGroupName = defaults.consumerGroupName;
-    	      this.endpoint = defaults.endpoint;
-    	      this.iotHubNamespace = defaults.iotHubNamespace;
-    	      this.sharedAccessPolicyKey = defaults.sharedAccessPolicyKey;
-    	      this.sharedAccessPolicyName = defaults.sharedAccessPolicyName;
-    	      this.type = defaults.type;
+            $ = new IoTHubStreamInputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerGroupName(@Nullable Output<String> consumerGroupName) {
-            this.consumerGroupName = consumerGroupName;
+            $.consumerGroupName = consumerGroupName;
             return this;
         }
-        public Builder consumerGroupName(@Nullable String consumerGroupName) {
-            this.consumerGroupName = Codegen.ofNullable(consumerGroupName);
-            return this;
+
+        public Builder consumerGroupName(String consumerGroupName) {
+            return consumerGroupName(Output.of(consumerGroupName));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder iotHubNamespace(@Nullable Output<String> iotHubNamespace) {
-            this.iotHubNamespace = iotHubNamespace;
+            $.iotHubNamespace = iotHubNamespace;
             return this;
         }
-        public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
-            this.iotHubNamespace = Codegen.ofNullable(iotHubNamespace);
-            return this;
+
+        public Builder iotHubNamespace(String iotHubNamespace) {
+            return iotHubNamespace(Output.of(iotHubNamespace));
         }
+
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = sharedAccessPolicyKey;
+            $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
-        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Codegen.ofNullable(sharedAccessPolicyKey);
-            return this;
+
+        public Builder sharedAccessPolicyKey(String sharedAccessPolicyKey) {
+            return sharedAccessPolicyKey(Output.of(sharedAccessPolicyKey));
         }
+
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = sharedAccessPolicyName;
+            $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
-        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Codegen.ofNullable(sharedAccessPolicyName);
-            return this;
+
+        public Builder sharedAccessPolicyName(String sharedAccessPolicyName) {
+            return sharedAccessPolicyName(Output.of(sharedAccessPolicyName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public IoTHubStreamInputDataSourceArgs build() {
-            return new IoTHubStreamInputDataSourceArgs(consumerGroupName, endpoint, iotHubNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
+            return type(Output.of(type));
+        }
+
+        public IoTHubStreamInputDataSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

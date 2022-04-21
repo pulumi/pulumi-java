@@ -5,12 +5,12 @@ package com.pulumi.awsnative.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="durationSeconds")
-      private final @Nullable Output<Integer> durationSeconds;
+    private @Nullable Output<Integer> durationSeconds;
 
-    public Output<Integer> durationSeconds() {
-        return this.durationSeconds == null ? Codegen.empty() : this.durationSeconds;
+    public Optional<Output<Integer>> durationSeconds() {
+        return Optional.ofNullable(this.durationSeconds);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="externalId")
-      private final @Nullable Output<String> externalId;
+    private @Nullable Output<String> externalId;
 
-    public Output<String> externalId() {
-        return this.externalId == null ? Codegen.empty() : this.externalId;
+    public Optional<Output<String>> externalId() {
+        return Optional.ofNullable(this.externalId);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyArns")
-      private final @Nullable Output<List<String>> policyArns;
+    private @Nullable Output<List<String>> policyArns;
 
-    public Output<List<String>> policyArns() {
-        return this.policyArns == null ? Codegen.empty() : this.policyArns;
+    public Optional<Output<List<String>>> policyArns() {
+        return Optional.ofNullable(this.policyArns);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sessionName")
-      private final @Nullable Output<String> sessionName;
+    private @Nullable Output<String> sessionName;
 
-    public Output<String> sessionName() {
-        return this.sessionName == null ? Codegen.empty() : this.sessionName;
+    public Optional<Output<String>> sessionName() {
+        return Optional.ofNullable(this.sessionName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -104,147 +104,126 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="transitiveTagKeys")
-      private final @Nullable Output<List<String>> transitiveTagKeys;
+    private @Nullable Output<List<String>> transitiveTagKeys;
 
-    public Output<List<String>> transitiveTagKeys() {
-        return this.transitiveTagKeys == null ? Codegen.empty() : this.transitiveTagKeys;
+    public Optional<Output<List<String>>> transitiveTagKeys() {
+        return Optional.ofNullable(this.transitiveTagKeys);
     }
 
-    public ProviderAssumeRoleArgs(
-        @Nullable Output<Integer> durationSeconds,
-        @Nullable Output<String> externalId,
-        @Nullable Output<String> policy,
-        @Nullable Output<List<String>> policyArns,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> sessionName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> transitiveTagKeys) {
-        this.durationSeconds = durationSeconds;
-        this.externalId = externalId;
-        this.policy = policy;
-        this.policyArns = policyArns;
-        this.roleArn = roleArn;
-        this.sessionName = sessionName;
-        this.tags = tags;
-        this.transitiveTagKeys = transitiveTagKeys;
-    }
+    private ProviderAssumeRoleArgs() {}
 
-    private ProviderAssumeRoleArgs() {
-        this.durationSeconds = Codegen.empty();
-        this.externalId = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.policyArns = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.sessionName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transitiveTagKeys = Codegen.empty();
+    private ProviderAssumeRoleArgs(ProviderAssumeRoleArgs $) {
+        this.durationSeconds = $.durationSeconds;
+        this.externalId = $.externalId;
+        this.policy = $.policy;
+        this.policyArns = $.policyArns;
+        this.roleArn = $.roleArn;
+        this.sessionName = $.sessionName;
+        this.tags = $.tags;
+        this.transitiveTagKeys = $.transitiveTagKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderAssumeRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> durationSeconds;
-        private @Nullable Output<String> externalId;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<List<String>> policyArns;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> sessionName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> transitiveTagKeys;
+        private ProviderAssumeRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderAssumeRoleArgs();
         }
 
         public Builder(ProviderAssumeRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationSeconds = defaults.durationSeconds;
-    	      this.externalId = defaults.externalId;
-    	      this.policy = defaults.policy;
-    	      this.policyArns = defaults.policyArns;
-    	      this.roleArn = defaults.roleArn;
-    	      this.sessionName = defaults.sessionName;
-    	      this.tags = defaults.tags;
-    	      this.transitiveTagKeys = defaults.transitiveTagKeys;
+            $ = new ProviderAssumeRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
-            this.durationSeconds = durationSeconds;
+            $.durationSeconds = durationSeconds;
             return this;
         }
-        public Builder durationSeconds(@Nullable Integer durationSeconds) {
-            this.durationSeconds = Codegen.ofNullable(durationSeconds);
-            return this;
+
+        public Builder durationSeconds(Integer durationSeconds) {
+            return durationSeconds(Output.of(durationSeconds));
         }
+
         public Builder externalId(@Nullable Output<String> externalId) {
-            this.externalId = externalId;
+            $.externalId = externalId;
             return this;
         }
-        public Builder externalId(@Nullable String externalId) {
-            this.externalId = Codegen.ofNullable(externalId);
-            return this;
+
+        public Builder externalId(String externalId) {
+            return externalId(Output.of(externalId));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder policyArns(@Nullable Output<List<String>> policyArns) {
-            this.policyArns = policyArns;
+            $.policyArns = policyArns;
             return this;
         }
-        public Builder policyArns(@Nullable List<String> policyArns) {
-            this.policyArns = Codegen.ofNullable(policyArns);
-            return this;
+
+        public Builder policyArns(List<String> policyArns) {
+            return policyArns(Output.of(policyArns));
         }
+
         public Builder policyArns(String... policyArns) {
             return policyArns(List.of(policyArns));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder sessionName(@Nullable Output<String> sessionName) {
-            this.sessionName = sessionName;
+            $.sessionName = sessionName;
             return this;
         }
-        public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Codegen.ofNullable(sessionName);
-            return this;
+
+        public Builder sessionName(String sessionName) {
+            return sessionName(Output.of(sessionName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
-            this.transitiveTagKeys = transitiveTagKeys;
+            $.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-        public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
-            this.transitiveTagKeys = Codegen.ofNullable(transitiveTagKeys);
-            return this;
+
+        public Builder transitiveTagKeys(List<String> transitiveTagKeys) {
+            return transitiveTagKeys(Output.of(transitiveTagKeys));
         }
+
         public Builder transitiveTagKeys(String... transitiveTagKeys) {
             return transitiveTagKeys(List.of(transitiveTagKeys));
-        }        public ProviderAssumeRoleArgs build() {
-            return new ProviderAssumeRoleArgs(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
+        }
+
+        public ProviderAssumeRoleArgs build() {
+            return $;
         }
     }
+
 }

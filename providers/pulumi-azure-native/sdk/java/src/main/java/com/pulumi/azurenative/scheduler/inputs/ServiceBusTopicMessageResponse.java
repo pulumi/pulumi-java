@@ -22,10 +22,10 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="authentication")
-      private final @Nullable ServiceBusAuthenticationResponse authentication;
+    private @Nullable ServiceBusAuthenticationResponse authentication;
 
     public Optional<ServiceBusAuthenticationResponse> authentication() {
-        return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="brokeredMessageProperties")
-      private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
+    private @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
 
     public Optional<ServiceBusBrokeredMessagePropertiesResponse> brokeredMessageProperties() {
-        return this.brokeredMessageProperties == null ? Optional.empty() : Optional.ofNullable(this.brokeredMessageProperties);
+        return Optional.ofNullable(this.brokeredMessageProperties);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="customMessageProperties")
-      private final @Nullable Map<String,String> customMessageProperties;
+    private @Nullable Map<String,String> customMessageProperties;
 
-    public Map<String,String> customMessageProperties() {
-        return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
+    public Optional<Map<String,String>> customMessageProperties() {
+        return Optional.ofNullable(this.customMessageProperties);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="topicPath")
-      private final @Nullable String topicPath;
+    private @Nullable String topicPath;
 
     public Optional<String> topicPath() {
-        return this.topicPath == null ? Optional.empty() : Optional.ofNullable(this.topicPath);
+        return Optional.ofNullable(this.topicPath);
     }
 
     /**
@@ -88,100 +88,80 @@ public final class ServiceBusTopicMessageResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="transportType")
-      private final @Nullable String transportType;
+    private @Nullable String transportType;
 
     public Optional<String> transportType() {
-        return this.transportType == null ? Optional.empty() : Optional.ofNullable(this.transportType);
+        return Optional.ofNullable(this.transportType);
     }
 
-    public ServiceBusTopicMessageResponse(
-        @Nullable ServiceBusAuthenticationResponse authentication,
-        @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
-        @Nullable Map<String,String> customMessageProperties,
-        @Nullable String message,
-        @Nullable String namespace,
-        @Nullable String topicPath,
-        @Nullable String transportType) {
-        this.authentication = authentication;
-        this.brokeredMessageProperties = brokeredMessageProperties;
-        this.customMessageProperties = customMessageProperties;
-        this.message = message;
-        this.namespace = namespace;
-        this.topicPath = topicPath;
-        this.transportType = transportType;
-    }
+    private ServiceBusTopicMessageResponse() {}
 
-    private ServiceBusTopicMessageResponse() {
-        this.authentication = null;
-        this.brokeredMessageProperties = null;
-        this.customMessageProperties = Map.of();
-        this.message = null;
-        this.namespace = null;
-        this.topicPath = null;
-        this.transportType = null;
+    private ServiceBusTopicMessageResponse(ServiceBusTopicMessageResponse $) {
+        this.authentication = $.authentication;
+        this.brokeredMessageProperties = $.brokeredMessageProperties;
+        this.customMessageProperties = $.customMessageProperties;
+        this.message = $.message;
+        this.namespace = $.namespace;
+        this.topicPath = $.topicPath;
+        this.transportType = $.transportType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusTopicMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceBusAuthenticationResponse authentication;
-        private @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
-        private @Nullable Map<String,String> customMessageProperties;
-        private @Nullable String message;
-        private @Nullable String namespace;
-        private @Nullable String topicPath;
-        private @Nullable String transportType;
+        private ServiceBusTopicMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusTopicMessageResponse();
         }
 
         public Builder(ServiceBusTopicMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.brokeredMessageProperties = defaults.brokeredMessageProperties;
-    	      this.customMessageProperties = defaults.customMessageProperties;
-    	      this.message = defaults.message;
-    	      this.namespace = defaults.namespace;
-    	      this.topicPath = defaults.topicPath;
-    	      this.transportType = defaults.transportType;
+            $ = new ServiceBusTopicMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable ServiceBusAuthenticationResponse authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
+
         public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties) {
-            this.brokeredMessageProperties = brokeredMessageProperties;
+            $.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
+
         public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
-            this.customMessageProperties = customMessageProperties;
+            $.customMessageProperties = customMessageProperties;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
+
         public Builder topicPath(@Nullable String topicPath) {
-            this.topicPath = topicPath;
+            $.topicPath = topicPath;
             return this;
         }
+
         public Builder transportType(@Nullable String transportType) {
-            this.transportType = transportType;
+            $.transportType = transportType;
             return this;
-        }        public ServiceBusTopicMessageResponse build() {
-            return new ServiceBusTopicMessageResponse(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, topicPath, transportType);
+        }
+
+        public ServiceBusTopicMessageResponse build() {
+            return $;
         }
     }
+
 }

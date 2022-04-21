@@ -6,10 +6,10 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.ResourceServerScopeGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scopeIdentifiers")
-      private final @Nullable Output<List<String>> scopeIdentifiers;
+    private @Nullable Output<List<String>> scopeIdentifiers;
 
-    public Output<List<String>> scopeIdentifiers() {
-        return this.scopeIdentifiers == null ? Codegen.empty() : this.scopeIdentifiers;
+    public Optional<Output<List<String>>> scopeIdentifiers() {
+        return Optional.ofNullable(this.scopeIdentifiers);
     }
 
     /**
@@ -55,115 +55,103 @@ public final class ResourceServerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
+    private @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
 
-    public Output<List<ResourceServerScopeGetArgs>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<ResourceServerScopeGetArgs>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
     @Import(name="userPoolId")
-      private final @Nullable Output<String> userPoolId;
+    private @Nullable Output<String> userPoolId;
 
-    public Output<String> userPoolId() {
-        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
+    public Optional<Output<String>> userPoolId() {
+        return Optional.ofNullable(this.userPoolId);
     }
 
-    public ResourceServerState(
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> scopeIdentifiers,
-        @Nullable Output<List<ResourceServerScopeGetArgs>> scopes,
-        @Nullable Output<String> userPoolId) {
-        this.identifier = identifier;
-        this.name = name;
-        this.scopeIdentifiers = scopeIdentifiers;
-        this.scopes = scopes;
-        this.userPoolId = userPoolId;
-    }
+    private ResourceServerState() {}
 
-    private ResourceServerState() {
-        this.identifier = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scopeIdentifiers = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private ResourceServerState(ResourceServerState $) {
+        this.identifier = $.identifier;
+        this.name = $.name;
+        this.scopeIdentifiers = $.scopeIdentifiers;
+        this.scopes = $.scopes;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceServerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> scopeIdentifiers;
-        private @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
-        private @Nullable Output<String> userPoolId;
+        private ResourceServerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceServerState();
         }
 
         public Builder(ResourceServerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifier = defaults.identifier;
-    	      this.name = defaults.name;
-    	      this.scopeIdentifiers = defaults.scopeIdentifiers;
-    	      this.scopes = defaults.scopes;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new ResourceServerState(Objects.requireNonNull(defaults));
         }
 
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scopeIdentifiers(@Nullable Output<List<String>> scopeIdentifiers) {
-            this.scopeIdentifiers = scopeIdentifiers;
+            $.scopeIdentifiers = scopeIdentifiers;
             return this;
         }
-        public Builder scopeIdentifiers(@Nullable List<String> scopeIdentifiers) {
-            this.scopeIdentifiers = Codegen.ofNullable(scopeIdentifiers);
-            return this;
+
+        public Builder scopeIdentifiers(List<String> scopeIdentifiers) {
+            return scopeIdentifiers(Output.of(scopeIdentifiers));
         }
+
         public Builder scopeIdentifiers(String... scopeIdentifiers) {
             return scopeIdentifiers(List.of(scopeIdentifiers));
         }
+
         public Builder scopes(@Nullable Output<List<ResourceServerScopeGetArgs>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<ResourceServerScopeGetArgs> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<ResourceServerScopeGetArgs> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(ResourceServerScopeGetArgs... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
-            this.userPoolId = userPoolId;
+            $.userPoolId = userPoolId;
             return this;
         }
-        public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Codegen.ofNullable(userPoolId);
-            return this;
-        }        public ResourceServerState build() {
-            return new ResourceServerState(identifier, name, scopeIdentifiers, scopes, userPoolId);
+
+        public Builder userPoolId(String userPoolId) {
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public ResourceServerState build() {
+            return $;
         }
     }
+
 }

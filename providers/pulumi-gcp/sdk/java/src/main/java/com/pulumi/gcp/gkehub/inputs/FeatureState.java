@@ -5,7 +5,6 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.FeatureResourceStateGetArgs;
 import com.pulumi.gcp.gkehub.inputs.FeatureSpecGetArgs;
 import com.pulumi.gcp.gkehub.inputs.FeatureStateGetArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteTime")
-      private final @Nullable Output<String> deleteTime;
+    private @Nullable Output<String> deleteTime;
 
-    public Output<String> deleteTime() {
-        return this.deleteTime == null ? Codegen.empty() : this.deleteTime;
+    public Optional<Output<String>> deleteTime() {
+        return Optional.ofNullable(this.deleteTime);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceStates")
-      private final @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
+    private @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
 
-    public Output<List<FeatureResourceStateGetArgs>> resourceStates() {
-        return this.resourceStates == null ? Codegen.empty() : this.resourceStates;
+    public Optional<Output<List<FeatureResourceStateGetArgs>>> resourceStates() {
+        return Optional.ofNullable(this.resourceStates);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<FeatureSpecGetArgs> spec;
+    private @Nullable Output<FeatureSpecGetArgs> spec;
 
-    public Output<FeatureSpecGetArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<FeatureSpecGetArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="states")
-      private final @Nullable Output<List<FeatureStateGetArgs>> states;
+    private @Nullable Output<List<FeatureStateGetArgs>> states;
 
-    public Output<List<FeatureStateGetArgs>> states() {
-        return this.states == null ? Codegen.empty() : this.states;
+    public Optional<Output<List<FeatureStateGetArgs>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
     /**
@@ -124,173 +124,146 @@ public final class FeatureState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public FeatureState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> deleteTime,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates,
-        @Nullable Output<FeatureSpecGetArgs> spec,
-        @Nullable Output<List<FeatureStateGetArgs>> states,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.deleteTime = deleteTime;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.resourceStates = resourceStates;
-        this.spec = spec;
-        this.states = states;
-        this.updateTime = updateTime;
-    }
+    private FeatureState() {}
 
-    private FeatureState() {
-        this.createTime = Codegen.empty();
-        this.deleteTime = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.resourceStates = Codegen.empty();
-        this.spec = Codegen.empty();
-        this.states = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private FeatureState(FeatureState $) {
+        this.createTime = $.createTime;
+        this.deleteTime = $.deleteTime;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.resourceStates = $.resourceStates;
+        this.spec = $.spec;
+        this.states = $.states;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> deleteTime;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
-        private @Nullable Output<FeatureSpecGetArgs> spec;
-        private @Nullable Output<List<FeatureStateGetArgs>> states;
-        private @Nullable Output<String> updateTime;
+        private FeatureState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureState();
         }
 
         public Builder(FeatureState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.deleteTime = defaults.deleteTime;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.resourceStates = defaults.resourceStates;
-    	      this.spec = defaults.spec;
-    	      this.states = defaults.states;
-    	      this.updateTime = defaults.updateTime;
+            $ = new FeatureState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder deleteTime(@Nullable Output<String> deleteTime) {
-            this.deleteTime = deleteTime;
+            $.deleteTime = deleteTime;
             return this;
         }
-        public Builder deleteTime(@Nullable String deleteTime) {
-            this.deleteTime = Codegen.ofNullable(deleteTime);
-            return this;
+
+        public Builder deleteTime(String deleteTime) {
+            return deleteTime(Output.of(deleteTime));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder resourceStates(@Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates) {
-            this.resourceStates = resourceStates;
+            $.resourceStates = resourceStates;
             return this;
         }
-        public Builder resourceStates(@Nullable List<FeatureResourceStateGetArgs> resourceStates) {
-            this.resourceStates = Codegen.ofNullable(resourceStates);
-            return this;
+
+        public Builder resourceStates(List<FeatureResourceStateGetArgs> resourceStates) {
+            return resourceStates(Output.of(resourceStates));
         }
+
         public Builder resourceStates(FeatureResourceStateGetArgs... resourceStates) {
             return resourceStates(List.of(resourceStates));
         }
+
         public Builder spec(@Nullable Output<FeatureSpecGetArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable FeatureSpecGetArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
+
+        public Builder spec(FeatureSpecGetArgs spec) {
+            return spec(Output.of(spec));
         }
+
         public Builder states(@Nullable Output<List<FeatureStateGetArgs>> states) {
-            this.states = states;
+            $.states = states;
             return this;
         }
-        public Builder states(@Nullable List<FeatureStateGetArgs> states) {
-            this.states = Codegen.ofNullable(states);
-            return this;
+
+        public Builder states(List<FeatureStateGetArgs> states) {
+            return states(Output.of(states));
         }
+
         public Builder states(FeatureStateGetArgs... states) {
             return states(List.of(states));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public FeatureState build() {
-            return new FeatureState(createTime, deleteTime, labels, location, name, project, resourceStates, spec, states, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public FeatureState build() {
+            return $;
         }
     }
+
 }

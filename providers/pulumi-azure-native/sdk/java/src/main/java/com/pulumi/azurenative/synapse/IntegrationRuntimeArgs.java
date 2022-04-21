@@ -8,9 +8,9 @@ import com.pulumi.azurenative.synapse.inputs.SelfHostedIntegrationRuntimeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="integrationRuntimeName")
-      private final @Nullable Output<String> integrationRuntimeName;
+    private @Nullable Output<String> integrationRuntimeName;
 
-    public Output<String> integrationRuntimeName() {
-        return this.integrationRuntimeName == null ? Codegen.empty() : this.integrationRuntimeName;
+    public Optional<Output<String>> integrationRuntimeName() {
+        return Optional.ofNullable(this.integrationRuntimeName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
+    private Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
     public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties() {
         return this.properties;
@@ -45,7 +45,7 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,89 +56,81 @@ public final class IntegrationRuntimeArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public IntegrationRuntimeArgs(
-        @Nullable Output<String> integrationRuntimeName,
-        Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.integrationRuntimeName = integrationRuntimeName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private IntegrationRuntimeArgs() {}
 
-    private IntegrationRuntimeArgs() {
-        this.integrationRuntimeName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private IntegrationRuntimeArgs(IntegrationRuntimeArgs $) {
+        this.integrationRuntimeName = $.integrationRuntimeName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> integrationRuntimeName;
-        private Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private IntegrationRuntimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeArgs();
         }
 
         public Builder(IntegrationRuntimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationRuntimeName = defaults.integrationRuntimeName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new IntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationRuntimeName(@Nullable Output<String> integrationRuntimeName) {
-            this.integrationRuntimeName = integrationRuntimeName;
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
-        public Builder integrationRuntimeName(@Nullable String integrationRuntimeName) {
-            this.integrationRuntimeName = Codegen.ofNullable(integrationRuntimeName);
-            return this;
+
+        public Builder integrationRuntimeName(String integrationRuntimeName) {
+            return integrationRuntimeName(Output.of(integrationRuntimeName));
         }
+
         public Builder properties(Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs> properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public IntegrationRuntimeArgs build() {
-            return new IntegrationRuntimeArgs(integrationRuntimeName, properties, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public IntegrationRuntimeArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

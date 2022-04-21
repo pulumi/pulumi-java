@@ -16,65 +16,61 @@ public final class NotificationEndpointResponse extends com.pulumi.resources.Inv
     public static final NotificationEndpointResponse Empty = new NotificationEndpointResponse();
 
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     @Import(name="notificationDestination")
-      private final @Nullable String notificationDestination;
+    private @Nullable String notificationDestination;
 
     public Optional<String> notificationDestination() {
-        return this.notificationDestination == null ? Optional.empty() : Optional.ofNullable(this.notificationDestination);
+        return Optional.ofNullable(this.notificationDestination);
     }
 
-    public NotificationEndpointResponse(
-        @Nullable List<String> locations,
-        @Nullable String notificationDestination) {
-        this.locations = locations;
-        this.notificationDestination = notificationDestination;
-    }
+    private NotificationEndpointResponse() {}
 
-    private NotificationEndpointResponse() {
-        this.locations = List.of();
-        this.notificationDestination = null;
+    private NotificationEndpointResponse(NotificationEndpointResponse $) {
+        this.locations = $.locations;
+        this.notificationDestination = $.notificationDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> locations;
-        private @Nullable String notificationDestination;
+        private NotificationEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationEndpointResponse();
         }
 
         public Builder(NotificationEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.notificationDestination = defaults.notificationDestination;
+            $ = new NotificationEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder notificationDestination(@Nullable String notificationDestination) {
-            this.notificationDestination = notificationDestination;
+            $.notificationDestination = notificationDestination;
             return this;
-        }        public NotificationEndpointResponse build() {
-            return new NotificationEndpointResponse(locations, notificationDestination);
+        }
+
+        public NotificationEndpointResponse build() {
+            return $;
         }
     }
+
 }

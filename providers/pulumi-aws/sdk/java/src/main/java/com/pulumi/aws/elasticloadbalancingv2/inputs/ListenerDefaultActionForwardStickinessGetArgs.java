@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ListenerDefaultActionForwardStickinessGetArgs extends com.pul
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<Integer> duration;
+    private Output<Integer> duration;
 
     public Output<Integer> duration() {
         return this.duration;
@@ -32,63 +32,59 @@ public final class ListenerDefaultActionForwardStickinessGetArgs extends com.pul
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ListenerDefaultActionForwardStickinessGetArgs(
-        Output<Integer> duration,
-        @Nullable Output<Boolean> enabled) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.enabled = enabled;
-    }
+    private ListenerDefaultActionForwardStickinessGetArgs() {}
 
-    private ListenerDefaultActionForwardStickinessGetArgs() {
-        this.duration = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private ListenerDefaultActionForwardStickinessGetArgs(ListenerDefaultActionForwardStickinessGetArgs $) {
+        this.duration = $.duration;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerDefaultActionForwardStickinessGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> duration;
-        private @Nullable Output<Boolean> enabled;
+        private ListenerDefaultActionForwardStickinessGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerDefaultActionForwardStickinessGetArgs();
         }
 
         public Builder(ListenerDefaultActionForwardStickinessGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.enabled = defaults.enabled;
+            $ = new ListenerDefaultActionForwardStickinessGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<Integer> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(Integer duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public ListenerDefaultActionForwardStickinessGetArgs build() {
-            return new ListenerDefaultActionForwardStickinessGetArgs(duration, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public ListenerDefaultActionForwardStickinessGetArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            return $;
         }
     }
+
 }

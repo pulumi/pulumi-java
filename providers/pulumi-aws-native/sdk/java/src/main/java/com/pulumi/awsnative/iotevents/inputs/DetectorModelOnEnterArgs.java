@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DetectorModelOnEnterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="events")
-      private final @Nullable Output<List<DetectorModelEventArgs>> events;
+    private @Nullable Output<List<DetectorModelEventArgs>> events;
 
-    public Output<List<DetectorModelEventArgs>> events() {
-        return this.events == null ? Codegen.empty() : this.events;
+    public Optional<Output<List<DetectorModelEventArgs>>> events() {
+        return Optional.ofNullable(this.events);
     }
 
-    public DetectorModelOnEnterArgs(@Nullable Output<List<DetectorModelEventArgs>> events) {
-        this.events = events;
-    }
+    private DetectorModelOnEnterArgs() {}
 
-    private DetectorModelOnEnterArgs() {
-        this.events = Codegen.empty();
+    private DetectorModelOnEnterArgs(DetectorModelOnEnterArgs $) {
+        this.events = $.events;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelOnEnterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DetectorModelEventArgs>> events;
+        private DetectorModelOnEnterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelOnEnterArgs();
         }
 
         public Builder(DetectorModelOnEnterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
+            $ = new DetectorModelOnEnterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder events(@Nullable Output<List<DetectorModelEventArgs>> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
-        public Builder events(@Nullable List<DetectorModelEventArgs> events) {
-            this.events = Codegen.ofNullable(events);
-            return this;
+
+        public Builder events(List<DetectorModelEventArgs> events) {
+            return events(Output.of(events));
         }
+
         public Builder events(DetectorModelEventArgs... events) {
             return events(List.of(events));
-        }        public DetectorModelOnEnterArgs build() {
-            return new DetectorModelOnEnterArgs(events);
+        }
+
+        public DetectorModelOnEnterArgs build() {
+            return $;
         }
     }
+
 }

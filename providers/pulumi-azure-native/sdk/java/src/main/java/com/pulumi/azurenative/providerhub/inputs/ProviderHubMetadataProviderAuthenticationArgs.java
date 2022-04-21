@@ -5,7 +5,6 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends com.pul
     public static final ProviderHubMetadataProviderAuthenticationArgs Empty = new ProviderHubMetadataProviderAuthenticationArgs();
 
     @Import(name="allowedAudiences", required=true)
-      private final Output<List<String>> allowedAudiences;
+    private Output<List<String>> allowedAudiences;
 
     public Output<List<String>> allowedAudiences() {
         return this.allowedAudiences;
     }
 
-    public ProviderHubMetadataProviderAuthenticationArgs(Output<List<String>> allowedAudiences) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
-    }
+    private ProviderHubMetadataProviderAuthenticationArgs() {}
 
-    private ProviderHubMetadataProviderAuthenticationArgs() {
-        this.allowedAudiences = Codegen.empty();
+    private ProviderHubMetadataProviderAuthenticationArgs(ProviderHubMetadataProviderAuthenticationArgs $) {
+        this.allowedAudiences = $.allowedAudiences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderHubMetadataProviderAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedAudiences;
+        private ProviderHubMetadataProviderAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderHubMetadataProviderAuthenticationArgs();
         }
 
         public Builder(ProviderHubMetadataProviderAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAudiences = defaults.allowedAudiences;
+            $ = new ProviderHubMetadataProviderAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAudiences(Output<List<String>> allowedAudiences) {
-            this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+            $.allowedAudiences = allowedAudiences;
             return this;
         }
+
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Output.of(Objects.requireNonNull(allowedAudiences));
-            return this;
+            return allowedAudiences(Output.of(allowedAudiences));
         }
+
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
-        }        public ProviderHubMetadataProviderAuthenticationArgs build() {
-            return new ProviderHubMetadataProviderAuthenticationArgs(allowedAudiences);
+        }
+
+        public ProviderHubMetadataProviderAuthenticationArgs build() {
+            $.allowedAudiences = Objects.requireNonNull($.allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
+            return $;
         }
     }
+
 }

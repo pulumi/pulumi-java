@@ -20,10 +20,10 @@ public final class CassandraTableGetPropertiesResponseOptions extends com.pulumi
      * 
      */
     @Import(name="autoscaleSettings")
-      private final @Nullable AutoscaleSettingsResponse autoscaleSettings;
+    private @Nullable AutoscaleSettingsResponse autoscaleSettings;
 
     public Optional<AutoscaleSettingsResponse> autoscaleSettings() {
-        return this.autoscaleSettings == null ? Optional.empty() : Optional.ofNullable(this.autoscaleSettings);
+        return Optional.ofNullable(this.autoscaleSettings);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class CassandraTableGetPropertiesResponseOptions extends com.pulumi
      * 
      */
     @Import(name="throughput")
-      private final @Nullable Integer throughput;
+    private @Nullable Integer throughput;
 
     public Optional<Integer> throughput() {
-        return this.throughput == null ? Optional.empty() : Optional.ofNullable(this.throughput);
+        return Optional.ofNullable(this.throughput);
     }
 
-    public CassandraTableGetPropertiesResponseOptions(
-        @Nullable AutoscaleSettingsResponse autoscaleSettings,
-        @Nullable Integer throughput) {
-        this.autoscaleSettings = autoscaleSettings;
-        this.throughput = throughput;
-    }
+    private CassandraTableGetPropertiesResponseOptions() {}
 
-    private CassandraTableGetPropertiesResponseOptions() {
-        this.autoscaleSettings = null;
-        this.throughput = null;
+    private CassandraTableGetPropertiesResponseOptions(CassandraTableGetPropertiesResponseOptions $) {
+        this.autoscaleSettings = $.autoscaleSettings;
+        this.throughput = $.throughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraTableGetPropertiesResponseOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoscaleSettingsResponse autoscaleSettings;
-        private @Nullable Integer throughput;
+        private CassandraTableGetPropertiesResponseOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraTableGetPropertiesResponseOptions();
         }
 
         public Builder(CassandraTableGetPropertiesResponseOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleSettings = defaults.autoscaleSettings;
-    	      this.throughput = defaults.throughput;
+            $ = new CassandraTableGetPropertiesResponseOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleSettings(@Nullable AutoscaleSettingsResponse autoscaleSettings) {
-            this.autoscaleSettings = autoscaleSettings;
+            $.autoscaleSettings = autoscaleSettings;
             return this;
         }
+
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = throughput;
+            $.throughput = throughput;
             return this;
-        }        public CassandraTableGetPropertiesResponseOptions build() {
-            return new CassandraTableGetPropertiesResponseOptions(autoscaleSettings, throughput);
+        }
+
+        public CassandraTableGetPropertiesResponseOptions build() {
+            return $;
         }
     }
+
 }

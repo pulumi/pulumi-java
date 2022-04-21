@@ -21,45 +21,45 @@ public final class CertificateProviderInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="pluginInstance", required=true)
-      private final String pluginInstance;
+    private String pluginInstance;
 
     public String pluginInstance() {
         return this.pluginInstance;
     }
 
-    public CertificateProviderInstanceResponse(String pluginInstance) {
-        this.pluginInstance = Objects.requireNonNull(pluginInstance, "expected parameter 'pluginInstance' to be non-null");
-    }
+    private CertificateProviderInstanceResponse() {}
 
-    private CertificateProviderInstanceResponse() {
-        this.pluginInstance = null;
+    private CertificateProviderInstanceResponse(CertificateProviderInstanceResponse $) {
+        this.pluginInstance = $.pluginInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateProviderInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pluginInstance;
+        private CertificateProviderInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateProviderInstanceResponse();
         }
 
         public Builder(CertificateProviderInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pluginInstance = defaults.pluginInstance;
+            $ = new CertificateProviderInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pluginInstance(String pluginInstance) {
-            this.pluginInstance = Objects.requireNonNull(pluginInstance);
+            $.pluginInstance = pluginInstance;
             return this;
-        }        public CertificateProviderInstanceResponse build() {
-            return new CertificateProviderInstanceResponse(pluginInstance);
+        }
+
+        public CertificateProviderInstanceResponse build() {
+            $.pluginInstance = Objects.requireNonNull($.pluginInstance, "expected parameter 'pluginInstance' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.serviceAccount.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -107,141 +107,118 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uniqueId")
-      private final @Nullable Output<String> uniqueId;
+    private @Nullable Output<String> uniqueId;
 
-    public Output<String> uniqueId() {
-        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
+    public Optional<Output<String>> uniqueId() {
+        return Optional.ofNullable(this.uniqueId);
     }
 
-    public AccountState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> email,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> uniqueId) {
-        this.accountId = accountId;
-        this.description = description;
-        this.disabled = disabled;
-        this.displayName = displayName;
-        this.email = email;
-        this.name = name;
-        this.project = project;
-        this.uniqueId = uniqueId;
-    }
+    private AccountState() {}
 
-    private AccountState() {
-        this.accountId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.email = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.uniqueId = Codegen.empty();
+    private AccountState(AccountState $) {
+        this.accountId = $.accountId;
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.displayName = $.displayName;
+        this.email = $.email;
+        this.name = $.name;
+        this.project = $.project;
+        this.uniqueId = $.uniqueId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> uniqueId;
+        private AccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountState();
         }
 
         public Builder(AccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.displayName = defaults.displayName;
-    	      this.email = defaults.email;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.uniqueId = defaults.uniqueId;
+            $ = new AccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
-            this.uniqueId = uniqueId;
+            $.uniqueId = uniqueId;
             return this;
         }
-        public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Codegen.ofNullable(uniqueId);
-            return this;
-        }        public AccountState build() {
-            return new AccountState(accountId, description, disabled, displayName, email, name, project, uniqueId);
+
+        public Builder uniqueId(String uniqueId) {
+            return uniqueId(Output.of(uniqueId));
+        }
+
+        public AccountState build() {
+            return $;
         }
     }
+
 }

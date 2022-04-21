@@ -5,10 +5,10 @@ package com.pulumi.aws.chime.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends com.pulumi.resour
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -32,10 +32,10 @@ public final class VoiceConnectorOrganizationRouteArgs extends com.pulumi.resour
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends com.pulumi.resour
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -54,7 +54,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends com.pulumi.resour
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
@@ -65,102 +65,92 @@ public final class VoiceConnectorOrganizationRouteArgs extends com.pulumi.resour
      * 
      */
     @Import(name="weight", required=true)
-      private final Output<Integer> weight;
+    private Output<Integer> weight;
 
     public Output<Integer> weight() {
         return this.weight;
     }
 
-    public VoiceConnectorOrganizationRouteArgs(
-        Output<String> host,
-        @Nullable Output<Integer> port,
-        Output<Integer> priority,
-        Output<String> protocol,
-        Output<Integer> weight) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = port;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private VoiceConnectorOrganizationRouteArgs() {}
 
-    private VoiceConnectorOrganizationRouteArgs() {
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.weight = Codegen.empty();
+    private VoiceConnectorOrganizationRouteArgs(VoiceConnectorOrganizationRouteArgs $) {
+        this.host = $.host;
+        this.port = $.port;
+        this.priority = $.priority;
+        this.protocol = $.protocol;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorOrganizationRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> host;
-        private @Nullable Output<Integer> port;
-        private Output<Integer> priority;
-        private Output<String> protocol;
-        private Output<Integer> weight;
+        private VoiceConnectorOrganizationRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorOrganizationRouteArgs();
         }
 
         public Builder(VoiceConnectorOrganizationRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
-    	      this.priority = defaults.priority;
-    	      this.protocol = defaults.protocol;
-    	      this.weight = defaults.weight;
+            $ = new VoiceConnectorOrganizationRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder weight(Output<Integer> weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Output.of(Objects.requireNonNull(weight));
-            return this;
-        }        public VoiceConnectorOrganizationRouteArgs build() {
-            return new VoiceConnectorOrganizationRouteArgs(host, port, priority, protocol, weight);
+            return weight(Output.of(weight));
+        }
+
+        public VoiceConnectorOrganizationRouteArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

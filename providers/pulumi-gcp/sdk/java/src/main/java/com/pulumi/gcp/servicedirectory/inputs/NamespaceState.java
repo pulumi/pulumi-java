@@ -5,10 +5,10 @@ package com.pulumi.gcp.servicedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class NamespaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NamespaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NamespaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class NamespaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceId")
-      private final @Nullable Output<String> namespaceId;
+    private @Nullable Output<String> namespaceId;
 
-    public Output<String> namespaceId() {
-        return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
+    public Optional<Output<String>> namespaceId() {
+        return Optional.ofNullable(this.namespaceId);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class NamespaceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public NamespaceState(
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespaceId,
-        @Nullable Output<String> project) {
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.namespaceId = namespaceId;
-        this.project = project;
-    }
+    private NamespaceState() {}
 
-    private NamespaceState() {
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceId = Codegen.empty();
-        this.project = Codegen.empty();
+    private NamespaceState(NamespaceState $) {
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.namespaceId = $.namespaceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespaceId;
-        private @Nullable Output<String> project;
+        private NamespaceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceState();
         }
 
         public Builder(NamespaceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.project = defaults.project;
+            $ = new NamespaceState(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
-            this.namespaceId = namespaceId;
+            $.namespaceId = namespaceId;
             return this;
         }
-        public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Codegen.ofNullable(namespaceId);
-            return this;
+
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public NamespaceState build() {
-            return new NamespaceState(labels, location, name, namespaceId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public NamespaceState build() {
+            return $;
         }
     }
+
 }

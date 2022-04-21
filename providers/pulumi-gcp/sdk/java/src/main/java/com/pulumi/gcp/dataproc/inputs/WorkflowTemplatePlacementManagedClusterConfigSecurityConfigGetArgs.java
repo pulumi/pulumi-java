@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
      * 
      */
     @Import(name="kerberosConfig")
-      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
+    private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
 
-    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig() {
-        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
+    public Optional<Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs>> kerberosConfig() {
+        return Optional.ofNullable(this.kerberosConfig);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
-        this.kerberosConfig = kerberosConfig;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs() {
-        this.kerberosConfig = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs $) {
+        this.kerberosConfig = $.kerberosConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
+        private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kerberosConfig = defaults.kerberosConfig;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kerberosConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig) {
-            this.kerberosConfig = kerberosConfig;
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
-        public Builder kerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs kerberosConfig) {
-            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(kerberosConfig);
+
+        public Builder kerberosConfig(WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs kerberosConfig) {
+            return kerberosConfig(Output.of(kerberosConfig));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs build() {
+            return $;
         }
     }
+
 }

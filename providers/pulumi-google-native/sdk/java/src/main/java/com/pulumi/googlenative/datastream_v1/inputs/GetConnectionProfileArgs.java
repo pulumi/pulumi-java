@@ -15,78 +15,72 @@ public final class GetConnectionProfileArgs extends com.pulumi.resources.InvokeA
     public static final GetConnectionProfileArgs Empty = new GetConnectionProfileArgs();
 
     @Import(name="connectionProfileId", required=true)
-      private final String connectionProfileId;
+    private String connectionProfileId;
 
     public String connectionProfileId() {
         return this.connectionProfileId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetConnectionProfileArgs(
-        String connectionProfileId,
-        String location,
-        @Nullable String project) {
-        this.connectionProfileId = Objects.requireNonNull(connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetConnectionProfileArgs() {}
 
-    private GetConnectionProfileArgs() {
-        this.connectionProfileId = null;
-        this.location = null;
-        this.project = null;
+    private GetConnectionProfileArgs(GetConnectionProfileArgs $) {
+        this.connectionProfileId = $.connectionProfileId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionProfileId;
-        private String location;
-        private @Nullable String project;
+        private GetConnectionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectionProfileArgs();
         }
 
         public Builder(GetConnectionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionProfileId = defaults.connectionProfileId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionProfileId(String connectionProfileId) {
-            this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
+            $.connectionProfileId = connectionProfileId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetConnectionProfileArgs build() {
-            return new GetConnectionProfileArgs(connectionProfileId, location, project);
+        }
+
+        public GetConnectionProfileArgs build() {
+            $.connectionProfileId = Objects.requireNonNull($.connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

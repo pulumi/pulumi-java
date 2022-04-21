@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceAuthGetArgs;
 import com.pulumi.docker.inputs.ServiceConvergeConfigGetArgs;
 import com.pulumi.docker.inputs.ServiceEndpointSpecGetArgs;
@@ -17,6 +16,7 @@ import com.pulumi.docker.inputs.ServiceUpdateConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<ServiceAuthGetArgs> auth;
+    private @Nullable Output<ServiceAuthGetArgs> auth;
 
-    public Output<ServiceAuthGetArgs> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<ServiceAuthGetArgs>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="convergeConfig")
-      private final @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
+    private @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
 
-    public Output<ServiceConvergeConfigGetArgs> convergeConfig() {
-        return this.convergeConfig == null ? Codegen.empty() : this.convergeConfig;
+    public Optional<Output<ServiceConvergeConfigGetArgs>> convergeConfig() {
+        return Optional.ofNullable(this.convergeConfig);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointSpec")
-      private final @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
+    private @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
 
-    public Output<ServiceEndpointSpecGetArgs> endpointSpec() {
-        return this.endpointSpec == null ? Codegen.empty() : this.endpointSpec;
+    public Optional<Output<ServiceEndpointSpecGetArgs>> endpointSpec() {
+        return Optional.ofNullable(this.endpointSpec);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<ServiceLabelGetArgs>> labels;
+    private @Nullable Output<List<ServiceLabelGetArgs>> labels;
 
-    public Output<List<ServiceLabelGetArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<ServiceLabelGetArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<ServiceModeGetArgs> mode;
+    private @Nullable Output<ServiceModeGetArgs> mode;
 
-    public Output<ServiceModeGetArgs> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<ServiceModeGetArgs>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rollbackConfig")
-      private final @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
+    private @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
 
-    public Output<ServiceRollbackConfigGetArgs> rollbackConfig() {
-        return this.rollbackConfig == null ? Codegen.empty() : this.rollbackConfig;
+    public Optional<Output<ServiceRollbackConfigGetArgs>> rollbackConfig() {
+        return Optional.ofNullable(this.rollbackConfig);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskSpec")
-      private final @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
+    private @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
 
-    public Output<ServiceTaskSpecGetArgs> taskSpec() {
-        return this.taskSpec == null ? Codegen.empty() : this.taskSpec;
+    public Optional<Output<ServiceTaskSpecGetArgs>> taskSpec() {
+        return Optional.ofNullable(this.taskSpec);
     }
 
     /**
@@ -117,157 +117,132 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateConfig")
-      private final @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
+    private @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
 
-    public Output<ServiceUpdateConfigGetArgs> updateConfig() {
-        return this.updateConfig == null ? Codegen.empty() : this.updateConfig;
+    public Optional<Output<ServiceUpdateConfigGetArgs>> updateConfig() {
+        return Optional.ofNullable(this.updateConfig);
     }
 
-    public ServiceState(
-        @Nullable Output<ServiceAuthGetArgs> auth,
-        @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig,
-        @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec,
-        @Nullable Output<List<ServiceLabelGetArgs>> labels,
-        @Nullable Output<ServiceModeGetArgs> mode,
-        @Nullable Output<String> name,
-        @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig,
-        @Nullable Output<ServiceTaskSpecGetArgs> taskSpec,
-        @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig) {
-        this.auth = auth;
-        this.convergeConfig = convergeConfig;
-        this.endpointSpec = endpointSpec;
-        this.labels = labels;
-        this.mode = mode;
-        this.name = name;
-        this.rollbackConfig = rollbackConfig;
-        this.taskSpec = taskSpec;
-        this.updateConfig = updateConfig;
-    }
+    private ServiceState() {}
 
-    private ServiceState() {
-        this.auth = Codegen.empty();
-        this.convergeConfig = Codegen.empty();
-        this.endpointSpec = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rollbackConfig = Codegen.empty();
-        this.taskSpec = Codegen.empty();
-        this.updateConfig = Codegen.empty();
+    private ServiceState(ServiceState $) {
+        this.auth = $.auth;
+        this.convergeConfig = $.convergeConfig;
+        this.endpointSpec = $.endpointSpec;
+        this.labels = $.labels;
+        this.mode = $.mode;
+        this.name = $.name;
+        this.rollbackConfig = $.rollbackConfig;
+        this.taskSpec = $.taskSpec;
+        this.updateConfig = $.updateConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceAuthGetArgs> auth;
-        private @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
-        private @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
-        private @Nullable Output<List<ServiceLabelGetArgs>> labels;
-        private @Nullable Output<ServiceModeGetArgs> mode;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
-        private @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
-        private @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
+        private ServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceState();
         }
 
         public Builder(ServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.convergeConfig = defaults.convergeConfig;
-    	      this.endpointSpec = defaults.endpointSpec;
-    	      this.labels = defaults.labels;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
-    	      this.rollbackConfig = defaults.rollbackConfig;
-    	      this.taskSpec = defaults.taskSpec;
-    	      this.updateConfig = defaults.updateConfig;
+            $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<ServiceAuthGetArgs> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable ServiceAuthGetArgs auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(ServiceAuthGetArgs auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig) {
-            this.convergeConfig = convergeConfig;
+            $.convergeConfig = convergeConfig;
             return this;
         }
-        public Builder convergeConfig(@Nullable ServiceConvergeConfigGetArgs convergeConfig) {
-            this.convergeConfig = Codegen.ofNullable(convergeConfig);
-            return this;
+
+        public Builder convergeConfig(ServiceConvergeConfigGetArgs convergeConfig) {
+            return convergeConfig(Output.of(convergeConfig));
         }
+
         public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec) {
-            this.endpointSpec = endpointSpec;
+            $.endpointSpec = endpointSpec;
             return this;
         }
-        public Builder endpointSpec(@Nullable ServiceEndpointSpecGetArgs endpointSpec) {
-            this.endpointSpec = Codegen.ofNullable(endpointSpec);
-            return this;
+
+        public Builder endpointSpec(ServiceEndpointSpecGetArgs endpointSpec) {
+            return endpointSpec(Output.of(endpointSpec));
         }
+
         public Builder labels(@Nullable Output<List<ServiceLabelGetArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<ServiceLabelGetArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<ServiceLabelGetArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(ServiceLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder mode(@Nullable Output<ServiceModeGetArgs> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable ServiceModeGetArgs mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(ServiceModeGetArgs mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig) {
-            this.rollbackConfig = rollbackConfig;
+            $.rollbackConfig = rollbackConfig;
             return this;
         }
-        public Builder rollbackConfig(@Nullable ServiceRollbackConfigGetArgs rollbackConfig) {
-            this.rollbackConfig = Codegen.ofNullable(rollbackConfig);
-            return this;
+
+        public Builder rollbackConfig(ServiceRollbackConfigGetArgs rollbackConfig) {
+            return rollbackConfig(Output.of(rollbackConfig));
         }
+
         public Builder taskSpec(@Nullable Output<ServiceTaskSpecGetArgs> taskSpec) {
-            this.taskSpec = taskSpec;
+            $.taskSpec = taskSpec;
             return this;
         }
-        public Builder taskSpec(@Nullable ServiceTaskSpecGetArgs taskSpec) {
-            this.taskSpec = Codegen.ofNullable(taskSpec);
-            return this;
+
+        public Builder taskSpec(ServiceTaskSpecGetArgs taskSpec) {
+            return taskSpec(Output.of(taskSpec));
         }
+
         public Builder updateConfig(@Nullable Output<ServiceUpdateConfigGetArgs> updateConfig) {
-            this.updateConfig = updateConfig;
+            $.updateConfig = updateConfig;
             return this;
         }
-        public Builder updateConfig(@Nullable ServiceUpdateConfigGetArgs updateConfig) {
-            this.updateConfig = Codegen.ofNullable(updateConfig);
-            return this;
-        }        public ServiceState build() {
-            return new ServiceState(auth, convergeConfig, endpointSpec, labels, mode, name, rollbackConfig, taskSpec, updateConfig);
+
+        public Builder updateConfig(ServiceUpdateConfigGetArgs updateConfig) {
+            return updateConfig(Output.of(updateConfig));
+        }
+
+        public ServiceState build() {
+            return $;
         }
     }
+
 }

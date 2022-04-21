@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2EntityIdResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="field", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse field;
+    private GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 
-    public GooglePrivacyDlpV2EntityIdResponse(GooglePrivacyDlpV2FieldIdResponse field) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-    }
+    private GooglePrivacyDlpV2EntityIdResponse() {}
 
-    private GooglePrivacyDlpV2EntityIdResponse() {
-        this.field = null;
+    private GooglePrivacyDlpV2EntityIdResponse(GooglePrivacyDlpV2EntityIdResponse $) {
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2EntityIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2FieldIdResponse field;
+        private GooglePrivacyDlpV2EntityIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2EntityIdResponse();
         }
 
         public Builder(GooglePrivacyDlpV2EntityIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
+            $ = new GooglePrivacyDlpV2EntityIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
-        }        public GooglePrivacyDlpV2EntityIdResponse build() {
-            return new GooglePrivacyDlpV2EntityIdResponse(field);
+        }
+
+        public GooglePrivacyDlpV2EntityIdResponse build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            return $;
         }
     }
+
 }

@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="attributes", required=true)
-      private final Map<String,String> attributes;
+    private Map<String,String> attributes;
 
     public Map<String,String> attributes() {
         return this.attributes;
@@ -42,7 +42,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="audience", required=true)
-      private final GoogleCloudRetailV2betaAudienceResponse audience;
+    private GoogleCloudRetailV2betaAudienceResponse audience;
 
     public GoogleCloudRetailV2betaAudienceResponse audience() {
         return this.audience;
@@ -53,7 +53,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="availability", required=true)
-      private final String availability;
+    private String availability;
 
     public String availability() {
         return this.availability;
@@ -64,7 +64,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="availableQuantity", required=true)
-      private final Integer availableQuantity;
+    private Integer availableQuantity;
 
     public Integer availableQuantity() {
         return this.availableQuantity;
@@ -75,7 +75,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="availableTime", required=true)
-      private final String availableTime;
+    private String availableTime;
 
     public String availableTime() {
         return this.availableTime;
@@ -86,7 +86,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="brands", required=true)
-      private final List<String> brands;
+    private List<String> brands;
 
     public List<String> brands() {
         return this.brands;
@@ -97,7 +97,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="categories", required=true)
-      private final List<String> categories;
+    private List<String> categories;
 
     public List<String> categories() {
         return this.categories;
@@ -108,7 +108,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="collectionMemberIds", required=true)
-      private final List<String> collectionMemberIds;
+    private List<String> collectionMemberIds;
 
     public List<String> collectionMemberIds() {
         return this.collectionMemberIds;
@@ -119,7 +119,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="colorInfo", required=true)
-      private final GoogleCloudRetailV2betaColorInfoResponse colorInfo;
+    private GoogleCloudRetailV2betaColorInfoResponse colorInfo;
 
     public GoogleCloudRetailV2betaColorInfoResponse colorInfo() {
         return this.colorInfo;
@@ -130,7 +130,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<String> conditions;
+    private List<String> conditions;
 
     public List<String> conditions() {
         return this.conditions;
@@ -141,7 +141,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -152,7 +152,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="expireTime", required=true)
-      private final String expireTime;
+    private String expireTime;
 
     public String expireTime() {
         return this.expireTime;
@@ -163,7 +163,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="fulfillmentInfo", required=true)
-      private final List<GoogleCloudRetailV2betaFulfillmentInfoResponse> fulfillmentInfo;
+    private List<GoogleCloudRetailV2betaFulfillmentInfoResponse> fulfillmentInfo;
 
     public List<GoogleCloudRetailV2betaFulfillmentInfoResponse> fulfillmentInfo() {
         return this.fulfillmentInfo;
@@ -174,7 +174,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="gtin", required=true)
-      private final String gtin;
+    private String gtin;
 
     public String gtin() {
         return this.gtin;
@@ -185,7 +185,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="images", required=true)
-      private final List<GoogleCloudRetailV2betaImageResponse> images;
+    private List<GoogleCloudRetailV2betaImageResponse> images;
 
     public List<GoogleCloudRetailV2betaImageResponse> images() {
         return this.images;
@@ -196,7 +196,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
@@ -207,7 +207,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="materials", required=true)
-      private final List<String> materials;
+    private List<String> materials;
 
     public List<String> materials() {
         return this.materials;
@@ -218,7 +218,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -229,7 +229,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="patterns", required=true)
-      private final List<String> patterns;
+    private List<String> patterns;
 
     public List<String> patterns() {
         return this.patterns;
@@ -240,7 +240,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="priceInfo", required=true)
-      private final GoogleCloudRetailV2betaPriceInfoResponse priceInfo;
+    private GoogleCloudRetailV2betaPriceInfoResponse priceInfo;
 
     public GoogleCloudRetailV2betaPriceInfoResponse priceInfo() {
         return this.priceInfo;
@@ -251,7 +251,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="primaryProductId", required=true)
-      private final String primaryProductId;
+    private String primaryProductId;
 
     public String primaryProductId() {
         return this.primaryProductId;
@@ -262,7 +262,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="promotions", required=true)
-      private final List<GoogleCloudRetailV2betaPromotionResponse> promotions;
+    private List<GoogleCloudRetailV2betaPromotionResponse> promotions;
 
     public List<GoogleCloudRetailV2betaPromotionResponse> promotions() {
         return this.promotions;
@@ -273,7 +273,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="publishTime", required=true)
-      private final String publishTime;
+    private String publishTime;
 
     public String publishTime() {
         return this.publishTime;
@@ -284,7 +284,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="rating", required=true)
-      private final GoogleCloudRetailV2betaRatingResponse rating;
+    private GoogleCloudRetailV2betaRatingResponse rating;
 
     public GoogleCloudRetailV2betaRatingResponse rating() {
         return this.rating;
@@ -295,7 +295,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="retrievableFields", required=true)
-      private final String retrievableFields;
+    private String retrievableFields;
 
     public String retrievableFields() {
         return this.retrievableFields;
@@ -306,7 +306,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="sizes", required=true)
-      private final List<String> sizes;
+    private List<String> sizes;
 
     public List<String> sizes() {
         return this.sizes;
@@ -317,7 +317,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
@@ -328,7 +328,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
@@ -339,7 +339,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="ttl", required=true)
-      private final String ttl;
+    private String ttl;
 
     public String ttl() {
         return this.ttl;
@@ -350,7 +350,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -361,7 +361,7 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -372,361 +372,310 @@ public final class GoogleCloudRetailV2betaProductResponse extends com.pulumi.res
      * 
      */
     @Import(name="variants", required=true)
-      private final List<GoogleCloudRetailV2betaProductResponse> variants;
+    private List<GoogleCloudRetailV2betaProductResponse> variants;
 
     public List<GoogleCloudRetailV2betaProductResponse> variants() {
         return this.variants;
     }
 
-    public GoogleCloudRetailV2betaProductResponse(
-        Map<String,String> attributes,
-        GoogleCloudRetailV2betaAudienceResponse audience,
-        String availability,
-        Integer availableQuantity,
-        String availableTime,
-        List<String> brands,
-        List<String> categories,
-        List<String> collectionMemberIds,
-        GoogleCloudRetailV2betaColorInfoResponse colorInfo,
-        List<String> conditions,
-        String description,
-        String expireTime,
-        List<GoogleCloudRetailV2betaFulfillmentInfoResponse> fulfillmentInfo,
-        String gtin,
-        List<GoogleCloudRetailV2betaImageResponse> images,
-        String languageCode,
-        List<String> materials,
-        String name,
-        List<String> patterns,
-        GoogleCloudRetailV2betaPriceInfoResponse priceInfo,
-        String primaryProductId,
-        List<GoogleCloudRetailV2betaPromotionResponse> promotions,
-        String publishTime,
-        GoogleCloudRetailV2betaRatingResponse rating,
-        String retrievableFields,
-        List<String> sizes,
-        List<String> tags,
-        String title,
-        String ttl,
-        String type,
-        String uri,
-        List<GoogleCloudRetailV2betaProductResponse> variants) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.availability = Objects.requireNonNull(availability, "expected parameter 'availability' to be non-null");
-        this.availableQuantity = Objects.requireNonNull(availableQuantity, "expected parameter 'availableQuantity' to be non-null");
-        this.availableTime = Objects.requireNonNull(availableTime, "expected parameter 'availableTime' to be non-null");
-        this.brands = Objects.requireNonNull(brands, "expected parameter 'brands' to be non-null");
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.collectionMemberIds = Objects.requireNonNull(collectionMemberIds, "expected parameter 'collectionMemberIds' to be non-null");
-        this.colorInfo = Objects.requireNonNull(colorInfo, "expected parameter 'colorInfo' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.expireTime = Objects.requireNonNull(expireTime, "expected parameter 'expireTime' to be non-null");
-        this.fulfillmentInfo = Objects.requireNonNull(fulfillmentInfo, "expected parameter 'fulfillmentInfo' to be non-null");
-        this.gtin = Objects.requireNonNull(gtin, "expected parameter 'gtin' to be non-null");
-        this.images = Objects.requireNonNull(images, "expected parameter 'images' to be non-null");
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-        this.materials = Objects.requireNonNull(materials, "expected parameter 'materials' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.patterns = Objects.requireNonNull(patterns, "expected parameter 'patterns' to be non-null");
-        this.priceInfo = Objects.requireNonNull(priceInfo, "expected parameter 'priceInfo' to be non-null");
-        this.primaryProductId = Objects.requireNonNull(primaryProductId, "expected parameter 'primaryProductId' to be non-null");
-        this.promotions = Objects.requireNonNull(promotions, "expected parameter 'promotions' to be non-null");
-        this.publishTime = Objects.requireNonNull(publishTime, "expected parameter 'publishTime' to be non-null");
-        this.rating = Objects.requireNonNull(rating, "expected parameter 'rating' to be non-null");
-        this.retrievableFields = Objects.requireNonNull(retrievableFields, "expected parameter 'retrievableFields' to be non-null");
-        this.sizes = Objects.requireNonNull(sizes, "expected parameter 'sizes' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.variants = Objects.requireNonNull(variants, "expected parameter 'variants' to be non-null");
-    }
+    private GoogleCloudRetailV2betaProductResponse() {}
 
-    private GoogleCloudRetailV2betaProductResponse() {
-        this.attributes = Map.of();
-        this.audience = null;
-        this.availability = null;
-        this.availableQuantity = null;
-        this.availableTime = null;
-        this.brands = List.of();
-        this.categories = List.of();
-        this.collectionMemberIds = List.of();
-        this.colorInfo = null;
-        this.conditions = List.of();
-        this.description = null;
-        this.expireTime = null;
-        this.fulfillmentInfo = List.of();
-        this.gtin = null;
-        this.images = List.of();
-        this.languageCode = null;
-        this.materials = List.of();
-        this.name = null;
-        this.patterns = List.of();
-        this.priceInfo = null;
-        this.primaryProductId = null;
-        this.promotions = List.of();
-        this.publishTime = null;
-        this.rating = null;
-        this.retrievableFields = null;
-        this.sizes = List.of();
-        this.tags = List.of();
-        this.title = null;
-        this.ttl = null;
-        this.type = null;
-        this.uri = null;
-        this.variants = List.of();
+    private GoogleCloudRetailV2betaProductResponse(GoogleCloudRetailV2betaProductResponse $) {
+        this.attributes = $.attributes;
+        this.audience = $.audience;
+        this.availability = $.availability;
+        this.availableQuantity = $.availableQuantity;
+        this.availableTime = $.availableTime;
+        this.brands = $.brands;
+        this.categories = $.categories;
+        this.collectionMemberIds = $.collectionMemberIds;
+        this.colorInfo = $.colorInfo;
+        this.conditions = $.conditions;
+        this.description = $.description;
+        this.expireTime = $.expireTime;
+        this.fulfillmentInfo = $.fulfillmentInfo;
+        this.gtin = $.gtin;
+        this.images = $.images;
+        this.languageCode = $.languageCode;
+        this.materials = $.materials;
+        this.name = $.name;
+        this.patterns = $.patterns;
+        this.priceInfo = $.priceInfo;
+        this.primaryProductId = $.primaryProductId;
+        this.promotions = $.promotions;
+        this.publishTime = $.publishTime;
+        this.rating = $.rating;
+        this.retrievableFields = $.retrievableFields;
+        this.sizes = $.sizes;
+        this.tags = $.tags;
+        this.title = $.title;
+        this.ttl = $.ttl;
+        this.type = $.type;
+        this.uri = $.uri;
+        this.variants = $.variants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaProductResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> attributes;
-        private GoogleCloudRetailV2betaAudienceResponse audience;
-        private String availability;
-        private Integer availableQuantity;
-        private String availableTime;
-        private List<String> brands;
-        private List<String> categories;
-        private List<String> collectionMemberIds;
-        private GoogleCloudRetailV2betaColorInfoResponse colorInfo;
-        private List<String> conditions;
-        private String description;
-        private String expireTime;
-        private List<GoogleCloudRetailV2betaFulfillmentInfoResponse> fulfillmentInfo;
-        private String gtin;
-        private List<GoogleCloudRetailV2betaImageResponse> images;
-        private String languageCode;
-        private List<String> materials;
-        private String name;
-        private List<String> patterns;
-        private GoogleCloudRetailV2betaPriceInfoResponse priceInfo;
-        private String primaryProductId;
-        private List<GoogleCloudRetailV2betaPromotionResponse> promotions;
-        private String publishTime;
-        private GoogleCloudRetailV2betaRatingResponse rating;
-        private String retrievableFields;
-        private List<String> sizes;
-        private List<String> tags;
-        private String title;
-        private String ttl;
-        private String type;
-        private String uri;
-        private List<GoogleCloudRetailV2betaProductResponse> variants;
+        private GoogleCloudRetailV2betaProductResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaProductResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaProductResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.audience = defaults.audience;
-    	      this.availability = defaults.availability;
-    	      this.availableQuantity = defaults.availableQuantity;
-    	      this.availableTime = defaults.availableTime;
-    	      this.brands = defaults.brands;
-    	      this.categories = defaults.categories;
-    	      this.collectionMemberIds = defaults.collectionMemberIds;
-    	      this.colorInfo = defaults.colorInfo;
-    	      this.conditions = defaults.conditions;
-    	      this.description = defaults.description;
-    	      this.expireTime = defaults.expireTime;
-    	      this.fulfillmentInfo = defaults.fulfillmentInfo;
-    	      this.gtin = defaults.gtin;
-    	      this.images = defaults.images;
-    	      this.languageCode = defaults.languageCode;
-    	      this.materials = defaults.materials;
-    	      this.name = defaults.name;
-    	      this.patterns = defaults.patterns;
-    	      this.priceInfo = defaults.priceInfo;
-    	      this.primaryProductId = defaults.primaryProductId;
-    	      this.promotions = defaults.promotions;
-    	      this.publishTime = defaults.publishTime;
-    	      this.rating = defaults.rating;
-    	      this.retrievableFields = defaults.retrievableFields;
-    	      this.sizes = defaults.sizes;
-    	      this.tags = defaults.tags;
-    	      this.title = defaults.title;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
-    	      this.variants = defaults.variants;
+            $ = new GoogleCloudRetailV2betaProductResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Map<String,String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder audience(GoogleCloudRetailV2betaAudienceResponse audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder availability(String availability) {
-            this.availability = Objects.requireNonNull(availability);
+            $.availability = availability;
             return this;
         }
+
         public Builder availableQuantity(Integer availableQuantity) {
-            this.availableQuantity = Objects.requireNonNull(availableQuantity);
+            $.availableQuantity = availableQuantity;
             return this;
         }
+
         public Builder availableTime(String availableTime) {
-            this.availableTime = Objects.requireNonNull(availableTime);
+            $.availableTime = availableTime;
             return this;
         }
+
         public Builder brands(List<String> brands) {
-            this.brands = Objects.requireNonNull(brands);
+            $.brands = brands;
             return this;
         }
+
         public Builder brands(String... brands) {
             return brands(List.of(brands));
         }
+
         public Builder categories(List<String> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder collectionMemberIds(List<String> collectionMemberIds) {
-            this.collectionMemberIds = Objects.requireNonNull(collectionMemberIds);
+            $.collectionMemberIds = collectionMemberIds;
             return this;
         }
+
         public Builder collectionMemberIds(String... collectionMemberIds) {
             return collectionMemberIds(List.of(collectionMemberIds));
         }
+
         public Builder colorInfo(GoogleCloudRetailV2betaColorInfoResponse colorInfo) {
-            this.colorInfo = Objects.requireNonNull(colorInfo);
+            $.colorInfo = colorInfo;
             return this;
         }
+
         public Builder conditions(List<String> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(String... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder expireTime(String expireTime) {
-            this.expireTime = Objects.requireNonNull(expireTime);
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder fulfillmentInfo(List<GoogleCloudRetailV2betaFulfillmentInfoResponse> fulfillmentInfo) {
-            this.fulfillmentInfo = Objects.requireNonNull(fulfillmentInfo);
+            $.fulfillmentInfo = fulfillmentInfo;
             return this;
         }
+
         public Builder fulfillmentInfo(GoogleCloudRetailV2betaFulfillmentInfoResponse... fulfillmentInfo) {
             return fulfillmentInfo(List.of(fulfillmentInfo));
         }
+
         public Builder gtin(String gtin) {
-            this.gtin = Objects.requireNonNull(gtin);
+            $.gtin = gtin;
             return this;
         }
+
         public Builder images(List<GoogleCloudRetailV2betaImageResponse> images) {
-            this.images = Objects.requireNonNull(images);
+            $.images = images;
             return this;
         }
+
         public Builder images(GoogleCloudRetailV2betaImageResponse... images) {
             return images(List.of(images));
         }
+
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder materials(List<String> materials) {
-            this.materials = Objects.requireNonNull(materials);
+            $.materials = materials;
             return this;
         }
+
         public Builder materials(String... materials) {
             return materials(List.of(materials));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder patterns(List<String> patterns) {
-            this.patterns = Objects.requireNonNull(patterns);
+            $.patterns = patterns;
             return this;
         }
+
         public Builder patterns(String... patterns) {
             return patterns(List.of(patterns));
         }
+
         public Builder priceInfo(GoogleCloudRetailV2betaPriceInfoResponse priceInfo) {
-            this.priceInfo = Objects.requireNonNull(priceInfo);
+            $.priceInfo = priceInfo;
             return this;
         }
+
         public Builder primaryProductId(String primaryProductId) {
-            this.primaryProductId = Objects.requireNonNull(primaryProductId);
+            $.primaryProductId = primaryProductId;
             return this;
         }
+
         public Builder promotions(List<GoogleCloudRetailV2betaPromotionResponse> promotions) {
-            this.promotions = Objects.requireNonNull(promotions);
+            $.promotions = promotions;
             return this;
         }
+
         public Builder promotions(GoogleCloudRetailV2betaPromotionResponse... promotions) {
             return promotions(List.of(promotions));
         }
+
         public Builder publishTime(String publishTime) {
-            this.publishTime = Objects.requireNonNull(publishTime);
+            $.publishTime = publishTime;
             return this;
         }
+
         public Builder rating(GoogleCloudRetailV2betaRatingResponse rating) {
-            this.rating = Objects.requireNonNull(rating);
+            $.rating = rating;
             return this;
         }
+
         public Builder retrievableFields(String retrievableFields) {
-            this.retrievableFields = Objects.requireNonNull(retrievableFields);
+            $.retrievableFields = retrievableFields;
             return this;
         }
+
         public Builder sizes(List<String> sizes) {
-            this.sizes = Objects.requireNonNull(sizes);
+            $.sizes = sizes;
             return this;
         }
+
         public Builder sizes(String... sizes) {
             return sizes(List.of(sizes));
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder ttl(String ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder variants(List<GoogleCloudRetailV2betaProductResponse> variants) {
-            this.variants = Objects.requireNonNull(variants);
+            $.variants = variants;
             return this;
         }
+
         public Builder variants(GoogleCloudRetailV2betaProductResponse... variants) {
             return variants(List.of(variants));
-        }        public GoogleCloudRetailV2betaProductResponse build() {
-            return new GoogleCloudRetailV2betaProductResponse(attributes, audience, availability, availableQuantity, availableTime, brands, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, images, languageCode, materials, name, patterns, priceInfo, primaryProductId, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri, variants);
+        }
+
+        public GoogleCloudRetailV2betaProductResponse build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            $.availability = Objects.requireNonNull($.availability, "expected parameter 'availability' to be non-null");
+            $.availableQuantity = Objects.requireNonNull($.availableQuantity, "expected parameter 'availableQuantity' to be non-null");
+            $.availableTime = Objects.requireNonNull($.availableTime, "expected parameter 'availableTime' to be non-null");
+            $.brands = Objects.requireNonNull($.brands, "expected parameter 'brands' to be non-null");
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.collectionMemberIds = Objects.requireNonNull($.collectionMemberIds, "expected parameter 'collectionMemberIds' to be non-null");
+            $.colorInfo = Objects.requireNonNull($.colorInfo, "expected parameter 'colorInfo' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.expireTime = Objects.requireNonNull($.expireTime, "expected parameter 'expireTime' to be non-null");
+            $.fulfillmentInfo = Objects.requireNonNull($.fulfillmentInfo, "expected parameter 'fulfillmentInfo' to be non-null");
+            $.gtin = Objects.requireNonNull($.gtin, "expected parameter 'gtin' to be non-null");
+            $.images = Objects.requireNonNull($.images, "expected parameter 'images' to be non-null");
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            $.materials = Objects.requireNonNull($.materials, "expected parameter 'materials' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.patterns = Objects.requireNonNull($.patterns, "expected parameter 'patterns' to be non-null");
+            $.priceInfo = Objects.requireNonNull($.priceInfo, "expected parameter 'priceInfo' to be non-null");
+            $.primaryProductId = Objects.requireNonNull($.primaryProductId, "expected parameter 'primaryProductId' to be non-null");
+            $.promotions = Objects.requireNonNull($.promotions, "expected parameter 'promotions' to be non-null");
+            $.publishTime = Objects.requireNonNull($.publishTime, "expected parameter 'publishTime' to be non-null");
+            $.rating = Objects.requireNonNull($.rating, "expected parameter 'rating' to be non-null");
+            $.retrievableFields = Objects.requireNonNull($.retrievableFields, "expected parameter 'retrievableFields' to be non-null");
+            $.sizes = Objects.requireNonNull($.sizes, "expected parameter 'sizes' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.variants = Objects.requireNonNull($.variants, "expected parameter 'variants' to be non-null");
+            return $;
         }
     }
+
 }

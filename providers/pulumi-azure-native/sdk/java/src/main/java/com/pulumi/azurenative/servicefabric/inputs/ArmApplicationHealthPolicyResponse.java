@@ -28,10 +28,10 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="considerWarningAsError")
-      private final @Nullable Boolean considerWarningAsError;
+    private @Nullable Boolean considerWarningAsError;
 
     public Optional<Boolean> considerWarningAsError() {
-        return this.considerWarningAsError == null ? Optional.empty() : Optional.ofNullable(this.considerWarningAsError);
+        return Optional.ofNullable(this.considerWarningAsError);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="defaultServiceTypeHealthPolicy")
-      private final @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
+    private @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
     public Optional<ArmServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
-        return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
+        return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maxPercentUnhealthyDeployedApplications")
-      private final @Nullable Integer maxPercentUnhealthyDeployedApplications;
+    private @Nullable Integer maxPercentUnhealthyDeployedApplications;
 
     public Optional<Integer> maxPercentUnhealthyDeployedApplications() {
-        return this.maxPercentUnhealthyDeployedApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
+        return Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
     }
 
     /**
@@ -64,73 +64,64 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceTypeHealthPolicyMap")
-      private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
+    private @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
-    public Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap() {
-        return this.serviceTypeHealthPolicyMap == null ? Map.of() : this.serviceTypeHealthPolicyMap;
+    public Optional<Map<String,ArmServiceTypeHealthPolicyResponse>> serviceTypeHealthPolicyMap() {
+        return Optional.ofNullable(this.serviceTypeHealthPolicyMap);
     }
 
-    public ArmApplicationHealthPolicyResponse(
-        @Nullable Boolean considerWarningAsError,
-        @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @Nullable Integer maxPercentUnhealthyDeployedApplications,
-        @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
-        this.considerWarningAsError = Codegen.booleanProp("considerWarningAsError").arg(considerWarningAsError).def(false).getNullable();
-        this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
-        this.maxPercentUnhealthyDeployedApplications = Codegen.integerProp("maxPercentUnhealthyDeployedApplications").arg(maxPercentUnhealthyDeployedApplications).def(0).getNullable();
-        this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
-    }
+    private ArmApplicationHealthPolicyResponse() {}
 
-    private ArmApplicationHealthPolicyResponse() {
-        this.considerWarningAsError = null;
-        this.defaultServiceTypeHealthPolicy = null;
-        this.maxPercentUnhealthyDeployedApplications = null;
-        this.serviceTypeHealthPolicyMap = Map.of();
+    private ArmApplicationHealthPolicyResponse(ArmApplicationHealthPolicyResponse $) {
+        this.considerWarningAsError = $.considerWarningAsError;
+        this.defaultServiceTypeHealthPolicy = $.defaultServiceTypeHealthPolicy;
+        this.maxPercentUnhealthyDeployedApplications = $.maxPercentUnhealthyDeployedApplications;
+        this.serviceTypeHealthPolicyMap = $.serviceTypeHealthPolicyMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArmApplicationHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean considerWarningAsError;
-        private @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
-        private @Nullable Integer maxPercentUnhealthyDeployedApplications;
-        private @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
+        private ArmApplicationHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArmApplicationHealthPolicyResponse();
         }
 
         public Builder(ArmApplicationHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.considerWarningAsError = defaults.considerWarningAsError;
-    	      this.defaultServiceTypeHealthPolicy = defaults.defaultServiceTypeHealthPolicy;
-    	      this.maxPercentUnhealthyDeployedApplications = defaults.maxPercentUnhealthyDeployedApplications;
-    	      this.serviceTypeHealthPolicyMap = defaults.serviceTypeHealthPolicyMap;
+            $ = new ArmApplicationHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
-            this.considerWarningAsError = considerWarningAsError;
+            $.considerWarningAsError = considerWarningAsError;
             return this;
         }
+
         public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
+            $.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
+
         public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
-            this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
+            $.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
             return this;
         }
+
         public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
-            this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
+            $.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
-        }        public ArmApplicationHealthPolicyResponse build() {
-            return new ArmApplicationHealthPolicyResponse(considerWarningAsError, defaultServiceTypeHealthPolicy, maxPercentUnhealthyDeployedApplications, serviceTypeHealthPolicyMap);
+        }
+
+        public ArmApplicationHealthPolicyResponse build() {
+            $.considerWarningAsError = Codegen.booleanProp("considerWarningAsError").arg($.considerWarningAsError).def(false).getNullable();
+            $.maxPercentUnhealthyDeployedApplications = Codegen.integerProp("maxPercentUnhealthyDeployedApplications").arg($.maxPercentUnhealthyDeployedApplications).def(0).getNullable();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.signer;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SigningProfilePermissionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -31,7 +31,7 @@ public final class SigningProfilePermissionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
@@ -42,7 +42,7 @@ public final class SigningProfilePermissionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -53,10 +53,10 @@ public final class SigningProfilePermissionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="profileVersion")
-      private final @Nullable Output<String> profileVersion;
+    private @Nullable Output<String> profileVersion;
 
-    public Output<String> profileVersion() {
-        return this.profileVersion == null ? Codegen.empty() : this.profileVersion;
+    public Optional<Output<String>> profileVersion() {
+        return Optional.ofNullable(this.profileVersion);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SigningProfilePermissionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="statementId")
-      private final @Nullable Output<String> statementId;
+    private @Nullable Output<String> statementId;
 
-    public Output<String> statementId() {
-        return this.statementId == null ? Codegen.empty() : this.statementId;
+    public Optional<Output<String>> statementId() {
+        return Optional.ofNullable(this.statementId);
     }
 
     /**
@@ -75,115 +75,101 @@ public final class SigningProfilePermissionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="statementIdPrefix")
-      private final @Nullable Output<String> statementIdPrefix;
+    private @Nullable Output<String> statementIdPrefix;
 
-    public Output<String> statementIdPrefix() {
-        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
+    public Optional<Output<String>> statementIdPrefix() {
+        return Optional.ofNullable(this.statementIdPrefix);
     }
 
-    public SigningProfilePermissionArgs(
-        Output<String> action,
-        Output<String> principal,
-        Output<String> profileName,
-        @Nullable Output<String> profileVersion,
-        @Nullable Output<String> statementId,
-        @Nullable Output<String> statementIdPrefix) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.profileVersion = profileVersion;
-        this.statementId = statementId;
-        this.statementIdPrefix = statementIdPrefix;
-    }
+    private SigningProfilePermissionArgs() {}
 
-    private SigningProfilePermissionArgs() {
-        this.action = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.profileVersion = Codegen.empty();
-        this.statementId = Codegen.empty();
-        this.statementIdPrefix = Codegen.empty();
+    private SigningProfilePermissionArgs(SigningProfilePermissionArgs $) {
+        this.action = $.action;
+        this.principal = $.principal;
+        this.profileName = $.profileName;
+        this.profileVersion = $.profileVersion;
+        this.statementId = $.statementId;
+        this.statementIdPrefix = $.statementIdPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningProfilePermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<String> principal;
-        private Output<String> profileName;
-        private @Nullable Output<String> profileVersion;
-        private @Nullable Output<String> statementId;
-        private @Nullable Output<String> statementIdPrefix;
+        private SigningProfilePermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningProfilePermissionArgs();
         }
 
         public Builder(SigningProfilePermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.principal = defaults.principal;
-    	      this.profileName = defaults.profileName;
-    	      this.profileVersion = defaults.profileVersion;
-    	      this.statementId = defaults.statementId;
-    	      this.statementIdPrefix = defaults.statementIdPrefix;
+            $ = new SigningProfilePermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
+            return principal(Output.of(principal));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder profileVersion(@Nullable Output<String> profileVersion) {
-            this.profileVersion = profileVersion;
+            $.profileVersion = profileVersion;
             return this;
         }
-        public Builder profileVersion(@Nullable String profileVersion) {
-            this.profileVersion = Codegen.ofNullable(profileVersion);
-            return this;
+
+        public Builder profileVersion(String profileVersion) {
+            return profileVersion(Output.of(profileVersion));
         }
+
         public Builder statementId(@Nullable Output<String> statementId) {
-            this.statementId = statementId;
+            $.statementId = statementId;
             return this;
         }
-        public Builder statementId(@Nullable String statementId) {
-            this.statementId = Codegen.ofNullable(statementId);
-            return this;
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
         }
+
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
-            this.statementIdPrefix = statementIdPrefix;
+            $.statementIdPrefix = statementIdPrefix;
             return this;
         }
-        public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
-            return this;
-        }        public SigningProfilePermissionArgs build() {
-            return new SigningProfilePermissionArgs(action, principal, profileName, profileVersion, statementId, statementIdPrefix);
+
+        public Builder statementIdPrefix(String statementIdPrefix) {
+            return statementIdPrefix(Output.of(statementIdPrefix));
+        }
+
+        public SigningProfilePermissionArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            return $;
         }
     }
+
 }

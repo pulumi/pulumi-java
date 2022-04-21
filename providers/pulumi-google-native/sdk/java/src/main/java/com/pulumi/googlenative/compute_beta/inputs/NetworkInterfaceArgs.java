@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.NetworkInterfaceNicType;
 import com.pulumi.googlenative.compute_beta.enums.NetworkInterfaceStackType;
 import com.pulumi.googlenative.compute_beta.inputs.AccessConfigArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accessConfigs")
-      private final @Nullable Output<List<AccessConfigArgs>> accessConfigs;
+    private @Nullable Output<List<AccessConfigArgs>> accessConfigs;
 
-    public Output<List<AccessConfigArgs>> accessConfigs() {
-        return this.accessConfigs == null ? Codegen.empty() : this.accessConfigs;
+    public Optional<Output<List<AccessConfigArgs>>> accessConfigs() {
+        return Optional.ofNullable(this.accessConfigs);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="aliasIpRanges")
-      private final @Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges;
+    private @Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges;
 
-    public Output<List<AliasIpRangeArgs>> aliasIpRanges() {
-        return this.aliasIpRanges == null ? Codegen.empty() : this.aliasIpRanges;
+    public Optional<Output<List<AliasIpRangeArgs>>> aliasIpRanges() {
+        return Optional.ofNullable(this.aliasIpRanges);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6AccessConfigs")
-      private final @Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs;
+    private @Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs;
 
-    public Output<List<AccessConfigArgs>> ipv6AccessConfigs() {
-        return this.ipv6AccessConfigs == null ? Codegen.empty() : this.ipv6AccessConfigs;
+    public Optional<Output<List<AccessConfigArgs>>> ipv6AccessConfigs() {
+        return Optional.ofNullable(this.ipv6AccessConfigs);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6Address")
-      private final @Nullable Output<String> ipv6Address;
+    private @Nullable Output<String> ipv6Address;
 
-    public Output<String> ipv6Address() {
-        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
+    public Optional<Output<String>> ipv6Address() {
+        return Optional.ofNullable(this.ipv6Address);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkIP")
-      private final @Nullable Output<String> networkIP;
+    private @Nullable Output<String> networkIP;
 
-    public Output<String> networkIP() {
-        return this.networkIP == null ? Codegen.empty() : this.networkIP;
+    public Optional<Output<String>> networkIP() {
+        return Optional.ofNullable(this.networkIP);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nicType")
-      private final @Nullable Output<NetworkInterfaceNicType> nicType;
+    private @Nullable Output<NetworkInterfaceNicType> nicType;
 
-    public Output<NetworkInterfaceNicType> nicType() {
-        return this.nicType == null ? Codegen.empty() : this.nicType;
+    public Optional<Output<NetworkInterfaceNicType>> nicType() {
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="queueCount")
-      private final @Nullable Output<Integer> queueCount;
+    private @Nullable Output<Integer> queueCount;
 
-    public Output<Integer> queueCount() {
-        return this.queueCount == null ? Codegen.empty() : this.queueCount;
+    public Optional<Output<Integer>> queueCount() {
+        return Optional.ofNullable(this.queueCount);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="stackType")
-      private final @Nullable Output<NetworkInterfaceStackType> stackType;
+    private @Nullable Output<NetworkInterfaceStackType> stackType;
 
-    public Output<NetworkInterfaceStackType> stackType() {
-        return this.stackType == null ? Codegen.empty() : this.stackType;
+    public Optional<Output<NetworkInterfaceStackType>> stackType() {
+        return Optional.ofNullable(this.stackType);
     }
 
     /**
@@ -129,176 +129,150 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
-    public NetworkInterfaceArgs(
-        @Nullable Output<List<AccessConfigArgs>> accessConfigs,
-        @Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges,
-        @Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs,
-        @Nullable Output<String> ipv6Address,
-        @Nullable Output<String> network,
-        @Nullable Output<String> networkIP,
-        @Nullable Output<NetworkInterfaceNicType> nicType,
-        @Nullable Output<Integer> queueCount,
-        @Nullable Output<NetworkInterfaceStackType> stackType,
-        @Nullable Output<String> subnetwork) {
-        this.accessConfigs = accessConfigs;
-        this.aliasIpRanges = aliasIpRanges;
-        this.ipv6AccessConfigs = ipv6AccessConfigs;
-        this.ipv6Address = ipv6Address;
-        this.network = network;
-        this.networkIP = networkIP;
-        this.nicType = nicType;
-        this.queueCount = queueCount;
-        this.stackType = stackType;
-        this.subnetwork = subnetwork;
-    }
+    private NetworkInterfaceArgs() {}
 
-    private NetworkInterfaceArgs() {
-        this.accessConfigs = Codegen.empty();
-        this.aliasIpRanges = Codegen.empty();
-        this.ipv6AccessConfigs = Codegen.empty();
-        this.ipv6Address = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkIP = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.queueCount = Codegen.empty();
-        this.stackType = Codegen.empty();
-        this.subnetwork = Codegen.empty();
+    private NetworkInterfaceArgs(NetworkInterfaceArgs $) {
+        this.accessConfigs = $.accessConfigs;
+        this.aliasIpRanges = $.aliasIpRanges;
+        this.ipv6AccessConfigs = $.ipv6AccessConfigs;
+        this.ipv6Address = $.ipv6Address;
+        this.network = $.network;
+        this.networkIP = $.networkIP;
+        this.nicType = $.nicType;
+        this.queueCount = $.queueCount;
+        this.stackType = $.stackType;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AccessConfigArgs>> accessConfigs;
-        private @Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges;
-        private @Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs;
-        private @Nullable Output<String> ipv6Address;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> networkIP;
-        private @Nullable Output<NetworkInterfaceNicType> nicType;
-        private @Nullable Output<Integer> queueCount;
-        private @Nullable Output<NetworkInterfaceStackType> stackType;
-        private @Nullable Output<String> subnetwork;
+        private NetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceArgs();
         }
 
         public Builder(NetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfigs = defaults.accessConfigs;
-    	      this.aliasIpRanges = defaults.aliasIpRanges;
-    	      this.ipv6AccessConfigs = defaults.ipv6AccessConfigs;
-    	      this.ipv6Address = defaults.ipv6Address;
-    	      this.network = defaults.network;
-    	      this.networkIP = defaults.networkIP;
-    	      this.nicType = defaults.nicType;
-    	      this.queueCount = defaults.queueCount;
-    	      this.stackType = defaults.stackType;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfigs(@Nullable Output<List<AccessConfigArgs>> accessConfigs) {
-            this.accessConfigs = accessConfigs;
+            $.accessConfigs = accessConfigs;
             return this;
         }
-        public Builder accessConfigs(@Nullable List<AccessConfigArgs> accessConfigs) {
-            this.accessConfigs = Codegen.ofNullable(accessConfigs);
-            return this;
+
+        public Builder accessConfigs(List<AccessConfigArgs> accessConfigs) {
+            return accessConfigs(Output.of(accessConfigs));
         }
+
         public Builder accessConfigs(AccessConfigArgs... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
+
         public Builder aliasIpRanges(@Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges) {
-            this.aliasIpRanges = aliasIpRanges;
+            $.aliasIpRanges = aliasIpRanges;
             return this;
         }
-        public Builder aliasIpRanges(@Nullable List<AliasIpRangeArgs> aliasIpRanges) {
-            this.aliasIpRanges = Codegen.ofNullable(aliasIpRanges);
-            return this;
+
+        public Builder aliasIpRanges(List<AliasIpRangeArgs> aliasIpRanges) {
+            return aliasIpRanges(Output.of(aliasIpRanges));
         }
+
         public Builder aliasIpRanges(AliasIpRangeArgs... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
+
         public Builder ipv6AccessConfigs(@Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = ipv6AccessConfigs;
+            $.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
-        public Builder ipv6AccessConfigs(@Nullable List<AccessConfigArgs> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = Codegen.ofNullable(ipv6AccessConfigs);
-            return this;
+
+        public Builder ipv6AccessConfigs(List<AccessConfigArgs> ipv6AccessConfigs) {
+            return ipv6AccessConfigs(Output.of(ipv6AccessConfigs));
         }
+
         public Builder ipv6AccessConfigs(AccessConfigArgs... ipv6AccessConfigs) {
             return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
         }
+
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
-            this.ipv6Address = ipv6Address;
+            $.ipv6Address = ipv6Address;
             return this;
         }
-        public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Codegen.ofNullable(ipv6Address);
-            return this;
+
+        public Builder ipv6Address(String ipv6Address) {
+            return ipv6Address(Output.of(ipv6Address));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkIP(@Nullable Output<String> networkIP) {
-            this.networkIP = networkIP;
+            $.networkIP = networkIP;
             return this;
         }
-        public Builder networkIP(@Nullable String networkIP) {
-            this.networkIP = Codegen.ofNullable(networkIP);
-            return this;
+
+        public Builder networkIP(String networkIP) {
+            return networkIP(Output.of(networkIP));
         }
+
         public Builder nicType(@Nullable Output<NetworkInterfaceNicType> nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
-        public Builder nicType(@Nullable NetworkInterfaceNicType nicType) {
-            this.nicType = Codegen.ofNullable(nicType);
-            return this;
+
+        public Builder nicType(NetworkInterfaceNicType nicType) {
+            return nicType(Output.of(nicType));
         }
+
         public Builder queueCount(@Nullable Output<Integer> queueCount) {
-            this.queueCount = queueCount;
+            $.queueCount = queueCount;
             return this;
         }
-        public Builder queueCount(@Nullable Integer queueCount) {
-            this.queueCount = Codegen.ofNullable(queueCount);
-            return this;
+
+        public Builder queueCount(Integer queueCount) {
+            return queueCount(Output.of(queueCount));
         }
+
         public Builder stackType(@Nullable Output<NetworkInterfaceStackType> stackType) {
-            this.stackType = stackType;
+            $.stackType = stackType;
             return this;
         }
-        public Builder stackType(@Nullable NetworkInterfaceStackType stackType) {
-            this.stackType = Codegen.ofNullable(stackType);
-            return this;
+
+        public Builder stackType(NetworkInterfaceStackType stackType) {
+            return stackType(Output.of(stackType));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
-        }        public NetworkInterfaceArgs build() {
-            return new NetworkInterfaceArgs(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6Address, network, networkIP, nicType, queueCount, stackType, subnetwork);
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public NetworkInterfaceArgs build() {
+            return $;
         }
     }
+
 }

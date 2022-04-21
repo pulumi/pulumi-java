@@ -17,145 +17,133 @@ public final class GetDatabaseInstanceSettingBackupConfiguration extends com.pul
     public static final GetDatabaseInstanceSettingBackupConfiguration Empty = new GetDatabaseInstanceSettingBackupConfiguration();
 
     @Import(name="backupRetentionSettings", required=true)
-      private final List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
+    private List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
 
     public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings() {
         return this.backupRetentionSettings;
     }
 
     @Import(name="binaryLogEnabled", required=true)
-      private final Boolean binaryLogEnabled;
+    private Boolean binaryLogEnabled;
 
     public Boolean binaryLogEnabled() {
         return this.binaryLogEnabled;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="pointInTimeRecoveryEnabled", required=true)
-      private final Boolean pointInTimeRecoveryEnabled;
+    private Boolean pointInTimeRecoveryEnabled;
 
     public Boolean pointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
     @Import(name="transactionLogRetentionDays", required=true)
-      private final Integer transactionLogRetentionDays;
+    private Integer transactionLogRetentionDays;
 
     public Integer transactionLogRetentionDays() {
         return this.transactionLogRetentionDays;
     }
 
-    public GetDatabaseInstanceSettingBackupConfiguration(
-        List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings,
-        Boolean binaryLogEnabled,
-        Boolean enabled,
-        String location,
-        Boolean pointInTimeRecoveryEnabled,
-        String startTime,
-        Integer transactionLogRetentionDays) {
-        this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings, "expected parameter 'backupRetentionSettings' to be non-null");
-        this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled, "expected parameter 'binaryLogEnabled' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled, "expected parameter 'pointInTimeRecoveryEnabled' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays, "expected parameter 'transactionLogRetentionDays' to be non-null");
-    }
+    private GetDatabaseInstanceSettingBackupConfiguration() {}
 
-    private GetDatabaseInstanceSettingBackupConfiguration() {
-        this.backupRetentionSettings = List.of();
-        this.binaryLogEnabled = null;
-        this.enabled = null;
-        this.location = null;
-        this.pointInTimeRecoveryEnabled = null;
-        this.startTime = null;
-        this.transactionLogRetentionDays = null;
+    private GetDatabaseInstanceSettingBackupConfiguration(GetDatabaseInstanceSettingBackupConfiguration $) {
+        this.backupRetentionSettings = $.backupRetentionSettings;
+        this.binaryLogEnabled = $.binaryLogEnabled;
+        this.enabled = $.enabled;
+        this.location = $.location;
+        this.pointInTimeRecoveryEnabled = $.pointInTimeRecoveryEnabled;
+        this.startTime = $.startTime;
+        this.transactionLogRetentionDays = $.transactionLogRetentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingBackupConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
-        private Boolean binaryLogEnabled;
-        private Boolean enabled;
-        private String location;
-        private Boolean pointInTimeRecoveryEnabled;
-        private String startTime;
-        private Integer transactionLogRetentionDays;
+        private GetDatabaseInstanceSettingBackupConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingBackupConfiguration();
         }
 
         public Builder(GetDatabaseInstanceSettingBackupConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupRetentionSettings = defaults.backupRetentionSettings;
-    	      this.binaryLogEnabled = defaults.binaryLogEnabled;
-    	      this.enabled = defaults.enabled;
-    	      this.location = defaults.location;
-    	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
-    	      this.startTime = defaults.startTime;
-    	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
+            $ = new GetDatabaseInstanceSettingBackupConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder backupRetentionSettings(List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings) {
-            this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
+            $.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
+
         public Builder backupRetentionSettings(GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting... backupRetentionSettings) {
             return backupRetentionSettings(List.of(backupRetentionSettings));
         }
+
         public Builder binaryLogEnabled(Boolean binaryLogEnabled) {
-            this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
+            $.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder pointInTimeRecoveryEnabled(Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
+            $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder transactionLogRetentionDays(Integer transactionLogRetentionDays) {
-            this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
+            $.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
-        }        public GetDatabaseInstanceSettingBackupConfiguration build() {
-            return new GetDatabaseInstanceSettingBackupConfiguration(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
+        }
+
+        public GetDatabaseInstanceSettingBackupConfiguration build() {
+            $.backupRetentionSettings = Objects.requireNonNull($.backupRetentionSettings, "expected parameter 'backupRetentionSettings' to be non-null");
+            $.binaryLogEnabled = Objects.requireNonNull($.binaryLogEnabled, "expected parameter 'binaryLogEnabled' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.pointInTimeRecoveryEnabled = Objects.requireNonNull($.pointInTimeRecoveryEnabled, "expected parameter 'pointInTimeRecoveryEnabled' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.transactionLogRetentionDays = Objects.requireNonNull($.transactionLogRetentionDays, "expected parameter 'transactionLogRetentionDays' to be non-null");
+            return $;
         }
     }
+
 }

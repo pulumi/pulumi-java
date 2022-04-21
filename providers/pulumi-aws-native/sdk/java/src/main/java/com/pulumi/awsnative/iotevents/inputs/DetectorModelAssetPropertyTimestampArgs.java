@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DetectorModelAssetPropertyTimestampArgs extends com.pulumi.re
      * 
      */
     @Import(name="offsetInNanos")
-      private final @Nullable Output<String> offsetInNanos;
+    private @Nullable Output<String> offsetInNanos;
 
-    public Output<String> offsetInNanos() {
-        return this.offsetInNanos == null ? Codegen.empty() : this.offsetInNanos;
+    public Optional<Output<String>> offsetInNanos() {
+        return Optional.ofNullable(this.offsetInNanos);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class DetectorModelAssetPropertyTimestampArgs extends com.pulumi.re
      * 
      */
     @Import(name="timeInSeconds", required=true)
-      private final Output<String> timeInSeconds;
+    private Output<String> timeInSeconds;
 
     public Output<String> timeInSeconds() {
         return this.timeInSeconds;
     }
 
-    public DetectorModelAssetPropertyTimestampArgs(
-        @Nullable Output<String> offsetInNanos,
-        Output<String> timeInSeconds) {
-        this.offsetInNanos = offsetInNanos;
-        this.timeInSeconds = Objects.requireNonNull(timeInSeconds, "expected parameter 'timeInSeconds' to be non-null");
-    }
+    private DetectorModelAssetPropertyTimestampArgs() {}
 
-    private DetectorModelAssetPropertyTimestampArgs() {
-        this.offsetInNanos = Codegen.empty();
-        this.timeInSeconds = Codegen.empty();
+    private DetectorModelAssetPropertyTimestampArgs(DetectorModelAssetPropertyTimestampArgs $) {
+        this.offsetInNanos = $.offsetInNanos;
+        this.timeInSeconds = $.timeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelAssetPropertyTimestampArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> offsetInNanos;
-        private Output<String> timeInSeconds;
+        private DetectorModelAssetPropertyTimestampArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelAssetPropertyTimestampArgs();
         }
 
         public Builder(DetectorModelAssetPropertyTimestampArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offsetInNanos = defaults.offsetInNanos;
-    	      this.timeInSeconds = defaults.timeInSeconds;
+            $ = new DetectorModelAssetPropertyTimestampArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offsetInNanos(@Nullable Output<String> offsetInNanos) {
-            this.offsetInNanos = offsetInNanos;
+            $.offsetInNanos = offsetInNanos;
             return this;
         }
-        public Builder offsetInNanos(@Nullable String offsetInNanos) {
-            this.offsetInNanos = Codegen.ofNullable(offsetInNanos);
-            return this;
+
+        public Builder offsetInNanos(String offsetInNanos) {
+            return offsetInNanos(Output.of(offsetInNanos));
         }
+
         public Builder timeInSeconds(Output<String> timeInSeconds) {
-            this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
+            $.timeInSeconds = timeInSeconds;
             return this;
         }
+
         public Builder timeInSeconds(String timeInSeconds) {
-            this.timeInSeconds = Output.of(Objects.requireNonNull(timeInSeconds));
-            return this;
-        }        public DetectorModelAssetPropertyTimestampArgs build() {
-            return new DetectorModelAssetPropertyTimestampArgs(offsetInNanos, timeInSeconds);
+            return timeInSeconds(Output.of(timeInSeconds));
+        }
+
+        public DetectorModelAssetPropertyTimestampArgs build() {
+            $.timeInSeconds = Objects.requireNonNull($.timeInSeconds, "expected parameter 'timeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

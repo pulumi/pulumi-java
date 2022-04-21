@@ -17,45 +17,45 @@ public final class GetFunctionEventTriggerFailurePolicy extends com.pulumi.resou
      * 
      */
     @Import(name="retry", required=true)
-      private final Boolean retry;
+    private Boolean retry;
 
     public Boolean retry() {
         return this.retry;
     }
 
-    public GetFunctionEventTriggerFailurePolicy(Boolean retry) {
-        this.retry = Objects.requireNonNull(retry, "expected parameter 'retry' to be non-null");
-    }
+    private GetFunctionEventTriggerFailurePolicy() {}
 
-    private GetFunctionEventTriggerFailurePolicy() {
-        this.retry = null;
+    private GetFunctionEventTriggerFailurePolicy(GetFunctionEventTriggerFailurePolicy $) {
+        this.retry = $.retry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionEventTriggerFailurePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean retry;
+        private GetFunctionEventTriggerFailurePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionEventTriggerFailurePolicy();
         }
 
         public Builder(GetFunctionEventTriggerFailurePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retry = defaults.retry;
+            $ = new GetFunctionEventTriggerFailurePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder retry(Boolean retry) {
-            this.retry = Objects.requireNonNull(retry);
+            $.retry = retry;
             return this;
-        }        public GetFunctionEventTriggerFailurePolicy build() {
-            return new GetFunctionEventTriggerFailurePolicy(retry);
+        }
+
+        public GetFunctionEventTriggerFailurePolicy build() {
+            $.retry = Objects.requireNonNull($.retry, "expected parameter 'retry' to be non-null");
+            return $;
         }
     }
+
 }

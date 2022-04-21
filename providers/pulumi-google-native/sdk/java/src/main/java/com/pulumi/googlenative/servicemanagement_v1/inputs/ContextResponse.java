@@ -22,48 +22,49 @@ public final class ContextResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final List<ContextRuleResponse> rules;
+    private List<ContextRuleResponse> rules;
 
     public List<ContextRuleResponse> rules() {
         return this.rules;
     }
 
-    public ContextResponse(List<ContextRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private ContextResponse() {}
 
-    private ContextResponse() {
-        this.rules = List.of();
+    private ContextResponse(ContextResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ContextRuleResponse> rules;
+        private ContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContextResponse();
         }
 
         public Builder(ContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<ContextRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ContextRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public ContextResponse build() {
-            return new ContextResponse(rules);
+        }
+
+        public ContextResponse build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

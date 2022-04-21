@@ -23,238 +23,203 @@ public final class DeliveryStreamElasticsearchDestinationConfiguration extends c
     public static final DeliveryStreamElasticsearchDestinationConfiguration Empty = new DeliveryStreamElasticsearchDestinationConfiguration();
 
     @Import(name="bufferingHints")
-      private final @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints;
+    private @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints;
 
     public Optional<DeliveryStreamElasticsearchBufferingHints> bufferingHints() {
-        return this.bufferingHints == null ? Optional.empty() : Optional.ofNullable(this.bufferingHints);
+        return Optional.ofNullable(this.bufferingHints);
     }
 
     @Import(name="cloudWatchLoggingOptions")
-      private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
+    private @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> cloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
+        return Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
     @Import(name="clusterEndpoint")
-      private final @Nullable String clusterEndpoint;
+    private @Nullable String clusterEndpoint;
 
     public Optional<String> clusterEndpoint() {
-        return this.clusterEndpoint == null ? Optional.empty() : Optional.ofNullable(this.clusterEndpoint);
+        return Optional.ofNullable(this.clusterEndpoint);
     }
 
     @Import(name="domainARN")
-      private final @Nullable String domainARN;
+    private @Nullable String domainARN;
 
     public Optional<String> domainARN() {
-        return this.domainARN == null ? Optional.empty() : Optional.ofNullable(this.domainARN);
+        return Optional.ofNullable(this.domainARN);
     }
 
     @Import(name="indexName", required=true)
-      private final String indexName;
+    private String indexName;
 
     public String indexName() {
         return this.indexName;
     }
 
     @Import(name="indexRotationPeriod")
-      private final @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod;
+    private @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod;
 
     public Optional<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod() {
-        return this.indexRotationPeriod == null ? Optional.empty() : Optional.ofNullable(this.indexRotationPeriod);
+        return Optional.ofNullable(this.indexRotationPeriod);
     }
 
     @Import(name="processingConfiguration")
-      private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
+    private @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
 
     public Optional<DeliveryStreamProcessingConfiguration> processingConfiguration() {
-        return this.processingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.processingConfiguration);
+        return Optional.ofNullable(this.processingConfiguration);
     }
 
     @Import(name="retryOptions")
-      private final @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions;
+    private @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions;
 
     public Optional<DeliveryStreamElasticsearchRetryOptions> retryOptions() {
-        return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
+        return Optional.ofNullable(this.retryOptions);
     }
 
     @Import(name="roleARN", required=true)
-      private final String roleARN;
+    private String roleARN;
 
     public String roleARN() {
         return this.roleARN;
     }
 
     @Import(name="s3BackupMode")
-      private final @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode;
+    private @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode;
 
     public Optional<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode() {
-        return this.s3BackupMode == null ? Optional.empty() : Optional.ofNullable(this.s3BackupMode);
+        return Optional.ofNullable(this.s3BackupMode);
     }
 
     @Import(name="s3Configuration", required=true)
-      private final DeliveryStreamS3DestinationConfiguration s3Configuration;
+    private DeliveryStreamS3DestinationConfiguration s3Configuration;
 
     public DeliveryStreamS3DestinationConfiguration s3Configuration() {
         return this.s3Configuration;
     }
 
     @Import(name="typeName")
-      private final @Nullable String typeName;
+    private @Nullable String typeName;
 
     public Optional<String> typeName() {
-        return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
+        return Optional.ofNullable(this.typeName);
     }
 
     @Import(name="vpcConfiguration")
-      private final @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
+    private @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
 
     public Optional<DeliveryStreamVpcConfiguration> vpcConfiguration() {
-        return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
+        return Optional.ofNullable(this.vpcConfiguration);
     }
 
-    public DeliveryStreamElasticsearchDestinationConfiguration(
-        @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable String clusterEndpoint,
-        @Nullable String domainARN,
-        String indexName,
-        @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions,
-        String roleARN,
-        @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration,
-        @Nullable String typeName,
-        @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
-        this.bufferingHints = bufferingHints;
-        this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
-        this.clusterEndpoint = clusterEndpoint;
-        this.domainARN = domainARN;
-        this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
-        this.indexRotationPeriod = indexRotationPeriod;
-        this.processingConfiguration = processingConfiguration;
-        this.retryOptions = retryOptions;
-        this.roleARN = Objects.requireNonNull(roleARN, "expected parameter 'roleARN' to be non-null");
-        this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration, "expected parameter 's3Configuration' to be non-null");
-        this.typeName = typeName;
-        this.vpcConfiguration = vpcConfiguration;
-    }
+    private DeliveryStreamElasticsearchDestinationConfiguration() {}
 
-    private DeliveryStreamElasticsearchDestinationConfiguration() {
-        this.bufferingHints = null;
-        this.cloudWatchLoggingOptions = null;
-        this.clusterEndpoint = null;
-        this.domainARN = null;
-        this.indexName = null;
-        this.indexRotationPeriod = null;
-        this.processingConfiguration = null;
-        this.retryOptions = null;
-        this.roleARN = null;
-        this.s3BackupMode = null;
-        this.s3Configuration = null;
-        this.typeName = null;
-        this.vpcConfiguration = null;
+    private DeliveryStreamElasticsearchDestinationConfiguration(DeliveryStreamElasticsearchDestinationConfiguration $) {
+        this.bufferingHints = $.bufferingHints;
+        this.cloudWatchLoggingOptions = $.cloudWatchLoggingOptions;
+        this.clusterEndpoint = $.clusterEndpoint;
+        this.domainARN = $.domainARN;
+        this.indexName = $.indexName;
+        this.indexRotationPeriod = $.indexRotationPeriod;
+        this.processingConfiguration = $.processingConfiguration;
+        this.retryOptions = $.retryOptions;
+        this.roleARN = $.roleARN;
+        this.s3BackupMode = $.s3BackupMode;
+        this.s3Configuration = $.s3Configuration;
+        this.typeName = $.typeName;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamElasticsearchDestinationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints;
-        private @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
-        private @Nullable String clusterEndpoint;
-        private @Nullable String domainARN;
-        private String indexName;
-        private @Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod;
-        private @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
-        private @Nullable DeliveryStreamElasticsearchRetryOptions retryOptions;
-        private String roleARN;
-        private @Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode;
-        private DeliveryStreamS3DestinationConfiguration s3Configuration;
-        private @Nullable String typeName;
-        private @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
+        private DeliveryStreamElasticsearchDestinationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamElasticsearchDestinationConfiguration();
         }
 
         public Builder(DeliveryStreamElasticsearchDestinationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bufferingHints = defaults.bufferingHints;
-    	      this.cloudWatchLoggingOptions = defaults.cloudWatchLoggingOptions;
-    	      this.clusterEndpoint = defaults.clusterEndpoint;
-    	      this.domainARN = defaults.domainARN;
-    	      this.indexName = defaults.indexName;
-    	      this.indexRotationPeriod = defaults.indexRotationPeriod;
-    	      this.processingConfiguration = defaults.processingConfiguration;
-    	      this.retryOptions = defaults.retryOptions;
-    	      this.roleARN = defaults.roleARN;
-    	      this.s3BackupMode = defaults.s3BackupMode;
-    	      this.s3Configuration = defaults.s3Configuration;
-    	      this.typeName = defaults.typeName;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new DeliveryStreamElasticsearchDestinationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder bufferingHints(@Nullable DeliveryStreamElasticsearchBufferingHints bufferingHints) {
-            this.bufferingHints = bufferingHints;
+            $.bufferingHints = bufferingHints;
             return this;
         }
+
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
+            $.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
+
         public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
-            this.clusterEndpoint = clusterEndpoint;
+            $.clusterEndpoint = clusterEndpoint;
             return this;
         }
+
         public Builder domainARN(@Nullable String domainARN) {
-            this.domainARN = domainARN;
+            $.domainARN = domainARN;
             return this;
         }
+
         public Builder indexName(String indexName) {
-            this.indexName = Objects.requireNonNull(indexName);
+            $.indexName = indexName;
             return this;
         }
+
         public Builder indexRotationPeriod(@Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
-            this.indexRotationPeriod = indexRotationPeriod;
+            $.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
+
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
-            this.processingConfiguration = processingConfiguration;
+            $.processingConfiguration = processingConfiguration;
             return this;
         }
+
         public Builder retryOptions(@Nullable DeliveryStreamElasticsearchRetryOptions retryOptions) {
-            this.retryOptions = retryOptions;
+            $.retryOptions = retryOptions;
             return this;
         }
+
         public Builder roleARN(String roleARN) {
-            this.roleARN = Objects.requireNonNull(roleARN);
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder s3BackupMode(@Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode) {
-            this.s3BackupMode = s3BackupMode;
+            $.s3BackupMode = s3BackupMode;
             return this;
         }
+
         public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
-            this.s3Configuration = Objects.requireNonNull(s3Configuration);
+            $.s3Configuration = s3Configuration;
             return this;
         }
+
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
+
         public Builder vpcConfiguration(@Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
-            this.vpcConfiguration = vpcConfiguration;
+            $.vpcConfiguration = vpcConfiguration;
             return this;
-        }        public DeliveryStreamElasticsearchDestinationConfiguration build() {
-            return new DeliveryStreamElasticsearchDestinationConfiguration(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);
+        }
+
+        public DeliveryStreamElasticsearchDestinationConfiguration build() {
+            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
+            $.roleARN = Objects.requireNonNull($.roleARN, "expected parameter 'roleARN' to be non-null");
+            $.s3Configuration = Objects.requireNonNull($.s3Configuration, "expected parameter 's3Configuration' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebaserules_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,17 +20,17 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -38,76 +38,68 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rulesetName")
-      private final @Nullable Output<String> rulesetName;
+    private @Nullable Output<String> rulesetName;
 
-    public Output<String> rulesetName() {
-        return this.rulesetName == null ? Codegen.empty() : this.rulesetName;
+    public Optional<Output<String>> rulesetName() {
+        return Optional.ofNullable(this.rulesetName);
     }
 
-    public ReleaseArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> rulesetName) {
-        this.name = name;
-        this.project = project;
-        this.rulesetName = rulesetName;
-    }
+    private ReleaseArgs() {}
 
-    private ReleaseArgs() {
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rulesetName = Codegen.empty();
+    private ReleaseArgs(ReleaseArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.rulesetName = $.rulesetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReleaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> rulesetName;
+        private ReleaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReleaseArgs();
         }
 
         public Builder(ReleaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rulesetName = defaults.rulesetName;
+            $ = new ReleaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rulesetName(@Nullable Output<String> rulesetName) {
-            this.rulesetName = rulesetName;
+            $.rulesetName = rulesetName;
             return this;
         }
-        public Builder rulesetName(@Nullable String rulesetName) {
-            this.rulesetName = Codegen.ofNullable(rulesetName);
-            return this;
-        }        public ReleaseArgs build() {
-            return new ReleaseArgs(name, project, rulesetName);
+
+        public Builder rulesetName(String rulesetName) {
+            return rulesetName(Output.of(rulesetName));
+        }
+
+        public ReleaseArgs build() {
+            return $;
         }
     }
+
 }

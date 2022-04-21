@@ -5,9 +5,9 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="city", required=true)
-      private final Output<String> city;
+    private Output<String> city;
 
     public Output<String> city() {
         return this.city;
@@ -35,7 +35,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="countryOrRegion", required=true)
-      private final Output<String> countryOrRegion;
+    private Output<String> countryOrRegion;
 
     public Output<String> countryOrRegion() {
         return this.countryOrRegion;
@@ -46,7 +46,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -57,7 +57,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phone", required=true)
-      private final Output<String> phone;
+    private Output<String> phone;
 
     public Output<String> phone() {
         return this.phone;
@@ -68,7 +68,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postalCode", required=true)
-      private final Output<String> postalCode;
+    private Output<String> postalCode;
 
     public Output<String> postalCode() {
         return this.postalCode;
@@ -79,7 +79,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recipientName", required=true)
-      private final Output<String> recipientName;
+    private Output<String> recipientName;
 
     public Output<String> recipientName() {
         return this.recipientName;
@@ -90,10 +90,10 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stateOrProvince")
-      private final @Nullable Output<String> stateOrProvince;
+    private @Nullable Output<String> stateOrProvince;
 
-    public Output<String> stateOrProvince() {
-        return this.stateOrProvince == null ? Codegen.empty() : this.stateOrProvince;
+    public Optional<Output<String>> stateOrProvince() {
+        return Optional.ofNullable(this.stateOrProvince);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streetAddress1", required=true)
-      private final Output<String> streetAddress1;
+    private Output<String> streetAddress1;
 
     public Output<String> streetAddress1() {
         return this.streetAddress1;
@@ -112,154 +112,135 @@ public final class ReturnAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streetAddress2")
-      private final @Nullable Output<String> streetAddress2;
+    private @Nullable Output<String> streetAddress2;
 
-    public Output<String> streetAddress2() {
-        return this.streetAddress2 == null ? Codegen.empty() : this.streetAddress2;
+    public Optional<Output<String>> streetAddress2() {
+        return Optional.ofNullable(this.streetAddress2);
     }
 
-    public ReturnAddressArgs(
-        Output<String> city,
-        Output<String> countryOrRegion,
-        Output<String> email,
-        Output<String> phone,
-        Output<String> postalCode,
-        Output<String> recipientName,
-        @Nullable Output<String> stateOrProvince,
-        Output<String> streetAddress1,
-        @Nullable Output<String> streetAddress2) {
-        this.city = Objects.requireNonNull(city, "expected parameter 'city' to be non-null");
-        this.countryOrRegion = Objects.requireNonNull(countryOrRegion, "expected parameter 'countryOrRegion' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-        this.postalCode = Objects.requireNonNull(postalCode, "expected parameter 'postalCode' to be non-null");
-        this.recipientName = Objects.requireNonNull(recipientName, "expected parameter 'recipientName' to be non-null");
-        this.stateOrProvince = stateOrProvince;
-        this.streetAddress1 = Objects.requireNonNull(streetAddress1, "expected parameter 'streetAddress1' to be non-null");
-        this.streetAddress2 = streetAddress2;
-    }
+    private ReturnAddressArgs() {}
 
-    private ReturnAddressArgs() {
-        this.city = Codegen.empty();
-        this.countryOrRegion = Codegen.empty();
-        this.email = Codegen.empty();
-        this.phone = Codegen.empty();
-        this.postalCode = Codegen.empty();
-        this.recipientName = Codegen.empty();
-        this.stateOrProvince = Codegen.empty();
-        this.streetAddress1 = Codegen.empty();
-        this.streetAddress2 = Codegen.empty();
+    private ReturnAddressArgs(ReturnAddressArgs $) {
+        this.city = $.city;
+        this.countryOrRegion = $.countryOrRegion;
+        this.email = $.email;
+        this.phone = $.phone;
+        this.postalCode = $.postalCode;
+        this.recipientName = $.recipientName;
+        this.stateOrProvince = $.stateOrProvince;
+        this.streetAddress1 = $.streetAddress1;
+        this.streetAddress2 = $.streetAddress2;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReturnAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> city;
-        private Output<String> countryOrRegion;
-        private Output<String> email;
-        private Output<String> phone;
-        private Output<String> postalCode;
-        private Output<String> recipientName;
-        private @Nullable Output<String> stateOrProvince;
-        private Output<String> streetAddress1;
-        private @Nullable Output<String> streetAddress2;
+        private ReturnAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReturnAddressArgs();
         }
 
         public Builder(ReturnAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.city = defaults.city;
-    	      this.countryOrRegion = defaults.countryOrRegion;
-    	      this.email = defaults.email;
-    	      this.phone = defaults.phone;
-    	      this.postalCode = defaults.postalCode;
-    	      this.recipientName = defaults.recipientName;
-    	      this.stateOrProvince = defaults.stateOrProvince;
-    	      this.streetAddress1 = defaults.streetAddress1;
-    	      this.streetAddress2 = defaults.streetAddress2;
+            $ = new ReturnAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder city(Output<String> city) {
-            this.city = Objects.requireNonNull(city);
+            $.city = city;
             return this;
         }
+
         public Builder city(String city) {
-            this.city = Output.of(Objects.requireNonNull(city));
-            return this;
+            return city(Output.of(city));
         }
+
         public Builder countryOrRegion(Output<String> countryOrRegion) {
-            this.countryOrRegion = Objects.requireNonNull(countryOrRegion);
+            $.countryOrRegion = countryOrRegion;
             return this;
         }
+
         public Builder countryOrRegion(String countryOrRegion) {
-            this.countryOrRegion = Output.of(Objects.requireNonNull(countryOrRegion));
-            return this;
+            return countryOrRegion(Output.of(countryOrRegion));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder phone(Output<String> phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Output.of(Objects.requireNonNull(phone));
-            return this;
+            return phone(Output.of(phone));
         }
+
         public Builder postalCode(Output<String> postalCode) {
-            this.postalCode = Objects.requireNonNull(postalCode);
+            $.postalCode = postalCode;
             return this;
         }
+
         public Builder postalCode(String postalCode) {
-            this.postalCode = Output.of(Objects.requireNonNull(postalCode));
-            return this;
+            return postalCode(Output.of(postalCode));
         }
+
         public Builder recipientName(Output<String> recipientName) {
-            this.recipientName = Objects.requireNonNull(recipientName);
+            $.recipientName = recipientName;
             return this;
         }
+
         public Builder recipientName(String recipientName) {
-            this.recipientName = Output.of(Objects.requireNonNull(recipientName));
-            return this;
+            return recipientName(Output.of(recipientName));
         }
+
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
-            this.stateOrProvince = stateOrProvince;
+            $.stateOrProvince = stateOrProvince;
             return this;
         }
-        public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = Codegen.ofNullable(stateOrProvince);
-            return this;
+
+        public Builder stateOrProvince(String stateOrProvince) {
+            return stateOrProvince(Output.of(stateOrProvince));
         }
+
         public Builder streetAddress1(Output<String> streetAddress1) {
-            this.streetAddress1 = Objects.requireNonNull(streetAddress1);
+            $.streetAddress1 = streetAddress1;
             return this;
         }
+
         public Builder streetAddress1(String streetAddress1) {
-            this.streetAddress1 = Output.of(Objects.requireNonNull(streetAddress1));
-            return this;
+            return streetAddress1(Output.of(streetAddress1));
         }
+
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
-            this.streetAddress2 = streetAddress2;
+            $.streetAddress2 = streetAddress2;
             return this;
         }
-        public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = Codegen.ofNullable(streetAddress2);
-            return this;
-        }        public ReturnAddressArgs build() {
-            return new ReturnAddressArgs(city, countryOrRegion, email, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
+
+        public Builder streetAddress2(String streetAddress2) {
+            return streetAddress2(Output.of(streetAddress2));
+        }
+
+        public ReturnAddressArgs build() {
+            $.city = Objects.requireNonNull($.city, "expected parameter 'city' to be non-null");
+            $.countryOrRegion = Objects.requireNonNull($.countryOrRegion, "expected parameter 'countryOrRegion' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            $.postalCode = Objects.requireNonNull($.postalCode, "expected parameter 'postalCode' to be non-null");
+            $.recipientName = Objects.requireNonNull($.recipientName, "expected parameter 'recipientName' to be non-null");
+            $.streetAddress1 = Objects.requireNonNull($.streetAddress1, "expected parameter 'streetAddress1' to be non-null");
+            return $;
         }
     }
+
 }

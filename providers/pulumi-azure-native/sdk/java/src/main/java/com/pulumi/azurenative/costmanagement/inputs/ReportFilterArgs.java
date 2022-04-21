@@ -6,9 +6,9 @@ package com.pulumi.azurenative.costmanagement.inputs;
 import com.pulumi.azurenative.costmanagement.inputs.ReportComparisonExpressionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReportFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="and")
-      private final @Nullable Output<List<ReportFilterArgs>> and;
+    private @Nullable Output<List<ReportFilterArgs>> and;
 
-    public Output<List<ReportFilterArgs>> and() {
-        return this.and == null ? Codegen.empty() : this.and;
+    public Optional<Output<List<ReportFilterArgs>>> and() {
+        return Optional.ofNullable(this.and);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ReportFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimension")
-      private final @Nullable Output<ReportComparisonExpressionArgs> dimension;
+    private @Nullable Output<ReportComparisonExpressionArgs> dimension;
 
-    public Output<ReportComparisonExpressionArgs> dimension() {
-        return this.dimension == null ? Codegen.empty() : this.dimension;
+    public Optional<Output<ReportComparisonExpressionArgs>> dimension() {
+        return Optional.ofNullable(this.dimension);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ReportFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="not")
-      private final @Nullable Output<ReportFilterArgs> not;
+    private @Nullable Output<ReportFilterArgs> not;
 
-    public Output<ReportFilterArgs> not() {
-        return this.not == null ? Codegen.empty() : this.not;
+    public Optional<Output<ReportFilterArgs>> not() {
+        return Optional.ofNullable(this.not);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ReportFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="or")
-      private final @Nullable Output<List<ReportFilterArgs>> or;
+    private @Nullable Output<List<ReportFilterArgs>> or;
 
-    public Output<List<ReportFilterArgs>> or() {
-        return this.or == null ? Codegen.empty() : this.or;
+    public Optional<Output<List<ReportFilterArgs>>> or() {
+        return Optional.ofNullable(this.or);
     }
 
     /**
@@ -69,108 +69,96 @@ public final class ReportFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<ReportComparisonExpressionArgs> tag;
+    private @Nullable Output<ReportComparisonExpressionArgs> tag;
 
-    public Output<ReportComparisonExpressionArgs> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<ReportComparisonExpressionArgs>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public ReportFilterArgs(
-        @Nullable Output<List<ReportFilterArgs>> and,
-        @Nullable Output<ReportComparisonExpressionArgs> dimension,
-        @Nullable Output<ReportFilterArgs> not,
-        @Nullable Output<List<ReportFilterArgs>> or,
-        @Nullable Output<ReportComparisonExpressionArgs> tag) {
-        this.and = and;
-        this.dimension = dimension;
-        this.not = not;
-        this.or = or;
-        this.tag = tag;
-    }
+    private ReportFilterArgs() {}
 
-    private ReportFilterArgs() {
-        this.and = Codegen.empty();
-        this.dimension = Codegen.empty();
-        this.not = Codegen.empty();
-        this.or = Codegen.empty();
-        this.tag = Codegen.empty();
+    private ReportFilterArgs(ReportFilterArgs $) {
+        this.and = $.and;
+        this.dimension = $.dimension;
+        this.not = $.not;
+        this.or = $.or;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ReportFilterArgs>> and;
-        private @Nullable Output<ReportComparisonExpressionArgs> dimension;
-        private @Nullable Output<ReportFilterArgs> not;
-        private @Nullable Output<List<ReportFilterArgs>> or;
-        private @Nullable Output<ReportComparisonExpressionArgs> tag;
+        private ReportFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportFilterArgs();
         }
 
         public Builder(ReportFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.dimension = defaults.dimension;
-    	      this.not = defaults.not;
-    	      this.or = defaults.or;
-    	      this.tag = defaults.tag;
+            $ = new ReportFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable Output<List<ReportFilterArgs>> and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
-        public Builder and(@Nullable List<ReportFilterArgs> and) {
-            this.and = Codegen.ofNullable(and);
-            return this;
+
+        public Builder and(List<ReportFilterArgs> and) {
+            return and(Output.of(and));
         }
+
         public Builder and(ReportFilterArgs... and) {
             return and(List.of(and));
         }
+
         public Builder dimension(@Nullable Output<ReportComparisonExpressionArgs> dimension) {
-            this.dimension = dimension;
+            $.dimension = dimension;
             return this;
         }
-        public Builder dimension(@Nullable ReportComparisonExpressionArgs dimension) {
-            this.dimension = Codegen.ofNullable(dimension);
-            return this;
+
+        public Builder dimension(ReportComparisonExpressionArgs dimension) {
+            return dimension(Output.of(dimension));
         }
+
         public Builder not(@Nullable Output<ReportFilterArgs> not) {
-            this.not = not;
+            $.not = not;
             return this;
         }
-        public Builder not(@Nullable ReportFilterArgs not) {
-            this.not = Codegen.ofNullable(not);
-            return this;
+
+        public Builder not(ReportFilterArgs not) {
+            return not(Output.of(not));
         }
+
         public Builder or(@Nullable Output<List<ReportFilterArgs>> or) {
-            this.or = or;
+            $.or = or;
             return this;
         }
-        public Builder or(@Nullable List<ReportFilterArgs> or) {
-            this.or = Codegen.ofNullable(or);
-            return this;
+
+        public Builder or(List<ReportFilterArgs> or) {
+            return or(Output.of(or));
         }
+
         public Builder or(ReportFilterArgs... or) {
             return or(List.of(or));
         }
+
         public Builder tag(@Nullable Output<ReportComparisonExpressionArgs> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable ReportComparisonExpressionArgs tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public ReportFilterArgs build() {
-            return new ReportFilterArgs(and, dimension, not, or, tag);
+
+        public Builder tag(ReportComparisonExpressionArgs tag) {
+            return tag(Output.of(tag));
+        }
+
+        public ReportFilterArgs build() {
+            return $;
         }
     }
+
 }

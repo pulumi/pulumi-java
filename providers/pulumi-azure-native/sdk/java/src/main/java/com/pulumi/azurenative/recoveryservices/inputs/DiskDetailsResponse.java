@@ -24,10 +24,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxSizeMB")
-      private final @Nullable Double maxSizeMB;
+    private @Nullable Double maxSizeMB;
 
     public Optional<Double> maxSizeMB() {
-        return this.maxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.maxSizeMB);
+        return Optional.ofNullable(this.maxSizeMB);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vhdId")
-      private final @Nullable String vhdId;
+    private @Nullable String vhdId;
 
     public Optional<String> vhdId() {
-        return this.vhdId == null ? Optional.empty() : Optional.ofNullable(this.vhdId);
+        return Optional.ofNullable(this.vhdId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vhdName")
-      private final @Nullable String vhdName;
+    private @Nullable String vhdName;
 
     public Optional<String> vhdName() {
-        return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
+        return Optional.ofNullable(this.vhdName);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vhdType")
-      private final @Nullable String vhdType;
+    private @Nullable String vhdType;
 
     public Optional<String> vhdType() {
-        return this.vhdType == null ? Optional.empty() : Optional.ofNullable(this.vhdType);
+        return Optional.ofNullable(this.vhdType);
     }
 
-    public DiskDetailsResponse(
-        @Nullable Double maxSizeMB,
-        @Nullable String vhdId,
-        @Nullable String vhdName,
-        @Nullable String vhdType) {
-        this.maxSizeMB = maxSizeMB;
-        this.vhdId = vhdId;
-        this.vhdName = vhdName;
-        this.vhdType = vhdType;
-    }
+    private DiskDetailsResponse() {}
 
-    private DiskDetailsResponse() {
-        this.maxSizeMB = null;
-        this.vhdId = null;
-        this.vhdName = null;
-        this.vhdType = null;
+    private DiskDetailsResponse(DiskDetailsResponse $) {
+        this.maxSizeMB = $.maxSizeMB;
+        this.vhdId = $.vhdId;
+        this.vhdName = $.vhdName;
+        this.vhdType = $.vhdType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double maxSizeMB;
-        private @Nullable String vhdId;
-        private @Nullable String vhdName;
-        private @Nullable String vhdType;
+        private DiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskDetailsResponse();
         }
 
         public Builder(DiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSizeMB = defaults.maxSizeMB;
-    	      this.vhdId = defaults.vhdId;
-    	      this.vhdName = defaults.vhdName;
-    	      this.vhdType = defaults.vhdType;
+            $ = new DiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSizeMB(@Nullable Double maxSizeMB) {
-            this.maxSizeMB = maxSizeMB;
+            $.maxSizeMB = maxSizeMB;
             return this;
         }
+
         public Builder vhdId(@Nullable String vhdId) {
-            this.vhdId = vhdId;
+            $.vhdId = vhdId;
             return this;
         }
+
         public Builder vhdName(@Nullable String vhdName) {
-            this.vhdName = vhdName;
+            $.vhdName = vhdName;
             return this;
         }
+
         public Builder vhdType(@Nullable String vhdType) {
-            this.vhdType = vhdType;
+            $.vhdType = vhdType;
             return this;
-        }        public DiskDetailsResponse build() {
-            return new DiskDetailsResponse(maxSizeMB, vhdId, vhdName, vhdType);
+        }
+
+        public DiskDetailsResponse build() {
+            return $;
         }
     }
+
 }

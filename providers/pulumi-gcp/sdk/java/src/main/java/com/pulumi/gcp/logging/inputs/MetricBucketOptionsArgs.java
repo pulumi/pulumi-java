@@ -5,11 +5,11 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsExplicitBucketsArgs;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsExponentialBucketsArgs;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsLinearBucketsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="explicitBuckets")
-      private final @Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets;
+    private @Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets;
 
-    public Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets() {
-        return this.explicitBuckets == null ? Codegen.empty() : this.explicitBuckets;
+    public Optional<Output<MetricBucketOptionsExplicitBucketsArgs>> explicitBuckets() {
+        return Optional.ofNullable(this.explicitBuckets);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="exponentialBuckets")
-      private final @Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets;
+    private @Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets;
 
-    public Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets() {
-        return this.exponentialBuckets == null ? Codegen.empty() : this.exponentialBuckets;
+    public Optional<Output<MetricBucketOptionsExponentialBucketsArgs>> exponentialBuckets() {
+        return Optional.ofNullable(this.exponentialBuckets);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class MetricBucketOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="linearBuckets")
-      private final @Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets;
+    private @Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets;
 
-    public Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets() {
-        return this.linearBuckets == null ? Codegen.empty() : this.linearBuckets;
+    public Optional<Output<MetricBucketOptionsLinearBucketsArgs>> linearBuckets() {
+        return Optional.ofNullable(this.linearBuckets);
     }
 
-    public MetricBucketOptionsArgs(
-        @Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets,
-        @Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets,
-        @Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets) {
-        this.explicitBuckets = explicitBuckets;
-        this.exponentialBuckets = exponentialBuckets;
-        this.linearBuckets = linearBuckets;
-    }
+    private MetricBucketOptionsArgs() {}
 
-    private MetricBucketOptionsArgs() {
-        this.explicitBuckets = Codegen.empty();
-        this.exponentialBuckets = Codegen.empty();
-        this.linearBuckets = Codegen.empty();
+    private MetricBucketOptionsArgs(MetricBucketOptionsArgs $) {
+        this.explicitBuckets = $.explicitBuckets;
+        this.exponentialBuckets = $.exponentialBuckets;
+        this.linearBuckets = $.linearBuckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricBucketOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets;
-        private @Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets;
-        private @Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets;
+        private MetricBucketOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricBucketOptionsArgs();
         }
 
         public Builder(MetricBucketOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.explicitBuckets = defaults.explicitBuckets;
-    	      this.exponentialBuckets = defaults.exponentialBuckets;
-    	      this.linearBuckets = defaults.linearBuckets;
+            $ = new MetricBucketOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder explicitBuckets(@Nullable Output<MetricBucketOptionsExplicitBucketsArgs> explicitBuckets) {
-            this.explicitBuckets = explicitBuckets;
+            $.explicitBuckets = explicitBuckets;
             return this;
         }
-        public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBucketsArgs explicitBuckets) {
-            this.explicitBuckets = Codegen.ofNullable(explicitBuckets);
-            return this;
+
+        public Builder explicitBuckets(MetricBucketOptionsExplicitBucketsArgs explicitBuckets) {
+            return explicitBuckets(Output.of(explicitBuckets));
         }
+
         public Builder exponentialBuckets(@Nullable Output<MetricBucketOptionsExponentialBucketsArgs> exponentialBuckets) {
-            this.exponentialBuckets = exponentialBuckets;
+            $.exponentialBuckets = exponentialBuckets;
             return this;
         }
-        public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBucketsArgs exponentialBuckets) {
-            this.exponentialBuckets = Codegen.ofNullable(exponentialBuckets);
-            return this;
+
+        public Builder exponentialBuckets(MetricBucketOptionsExponentialBucketsArgs exponentialBuckets) {
+            return exponentialBuckets(Output.of(exponentialBuckets));
         }
+
         public Builder linearBuckets(@Nullable Output<MetricBucketOptionsLinearBucketsArgs> linearBuckets) {
-            this.linearBuckets = linearBuckets;
+            $.linearBuckets = linearBuckets;
             return this;
         }
-        public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBucketsArgs linearBuckets) {
-            this.linearBuckets = Codegen.ofNullable(linearBuckets);
-            return this;
-        }        public MetricBucketOptionsArgs build() {
-            return new MetricBucketOptionsArgs(explicitBuckets, exponentialBuckets, linearBuckets);
+
+        public Builder linearBuckets(MetricBucketOptionsLinearBucketsArgs linearBuckets) {
+            return linearBuckets(Output.of(linearBuckets));
+        }
+
+        public MetricBucketOptionsArgs build() {
+            return $;
         }
     }
+
 }

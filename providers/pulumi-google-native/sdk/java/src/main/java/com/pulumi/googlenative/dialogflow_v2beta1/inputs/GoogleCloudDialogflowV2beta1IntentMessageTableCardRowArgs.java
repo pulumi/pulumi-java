@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
      * 
      */
     @Import(name="cells")
-      private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
+    private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells() {
-        return this.cells == null ? Codegen.empty() : this.cells;
+    public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>>> cells() {
+        return Optional.ofNullable(this.cells);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
      * 
      */
     @Import(name="dividerAfter")
-      private final @Nullable Output<Boolean> dividerAfter;
+    private @Nullable Output<Boolean> dividerAfter;
 
-    public Output<Boolean> dividerAfter() {
-        return this.dividerAfter == null ? Codegen.empty() : this.dividerAfter;
+    public Optional<Output<Boolean>> dividerAfter() {
+        return Optional.ofNullable(this.dividerAfter);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs(
-        @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells,
-        @Nullable Output<Boolean> dividerAfter) {
-        this.cells = cells;
-        this.dividerAfter = dividerAfter;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs() {
-        this.cells = Codegen.empty();
-        this.dividerAfter = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs $) {
+        this.cells = $.cells;
+        this.dividerAfter = $.dividerAfter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells;
-        private @Nullable Output<Boolean> dividerAfter;
+        private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cells = defaults.cells;
-    	      this.dividerAfter = defaults.dividerAfter;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cells(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells) {
-            this.cells = cells;
+            $.cells = cells;
             return this;
         }
-        public Builder cells(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs> cells) {
-            this.cells = Codegen.ofNullable(cells);
-            return this;
+
+        public Builder cells(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs> cells) {
+            return cells(Output.of(cells));
         }
+
         public Builder cells(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs... cells) {
             return cells(List.of(cells));
         }
+
         public Builder dividerAfter(@Nullable Output<Boolean> dividerAfter) {
-            this.dividerAfter = dividerAfter;
+            $.dividerAfter = dividerAfter;
             return this;
         }
-        public Builder dividerAfter(@Nullable Boolean dividerAfter) {
-            this.dividerAfter = Codegen.ofNullable(dividerAfter);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs(cells, dividerAfter);
+
+        public Builder dividerAfter(Boolean dividerAfter) {
+            return dividerAfter(Output.of(dividerAfter));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs build() {
+            return $;
         }
     }
+
 }

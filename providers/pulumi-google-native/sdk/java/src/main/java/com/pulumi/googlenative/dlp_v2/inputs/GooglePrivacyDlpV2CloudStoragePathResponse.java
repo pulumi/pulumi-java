@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse extends com.pulumi
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public GooglePrivacyDlpV2CloudStoragePathResponse(String path) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private GooglePrivacyDlpV2CloudStoragePathResponse() {}
 
-    private GooglePrivacyDlpV2CloudStoragePathResponse() {
-        this.path = null;
+    private GooglePrivacyDlpV2CloudStoragePathResponse(GooglePrivacyDlpV2CloudStoragePathResponse $) {
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CloudStoragePathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
+        private GooglePrivacyDlpV2CloudStoragePathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CloudStoragePathResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CloudStoragePathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
+            $ = new GooglePrivacyDlpV2CloudStoragePathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public GooglePrivacyDlpV2CloudStoragePathResponse build() {
-            return new GooglePrivacyDlpV2CloudStoragePathResponse(path);
+        }
+
+        public GooglePrivacyDlpV2CloudStoragePathResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

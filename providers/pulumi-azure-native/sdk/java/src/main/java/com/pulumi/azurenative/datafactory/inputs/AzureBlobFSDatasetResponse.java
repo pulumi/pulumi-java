@@ -36,10 +36,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="compression")
-      private final @Nullable DatasetCompressionResponse compression;
+    private @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> compression() {
-        return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Object fileName;
+    private @Nullable Object fileName;
 
     public Optional<Object> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="format")
-      private final @Nullable Object format;
+    private @Nullable Object format;
 
-    public Object format() {
-        return this.format == null ? null : this.format;
+    public Optional<Object> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -124,10 +124,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -158,148 +158,116 @@ public final class AzureBlobFSDatasetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureBlobFSDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable Object fileName,
-        @Nullable DatasetResponseFolder folder,
-        @Nullable Object folderPath,
-        @Nullable Object format,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
-        this.annotations = annotations;
-        this.compression = compression;
-        this.description = description;
-        this.fileName = fileName;
-        this.folder = folder;
-        this.folderPath = folderPath;
-        this.format = format;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureBlobFSDatasetResponse() {}
 
-    private AzureBlobFSDatasetResponse() {
-        this.annotations = List.of();
-        this.compression = null;
-        this.description = null;
-        this.fileName = null;
-        this.folder = null;
-        this.folderPath = null;
-        this.format = null;
-        this.linkedServiceName = null;
-        this.parameters = Map.of();
-        this.schema = null;
-        this.structure = null;
-        this.type = null;
+    private AzureBlobFSDatasetResponse(AzureBlobFSDatasetResponse $) {
+        this.annotations = $.annotations;
+        this.compression = $.compression;
+        this.description = $.description;
+        this.fileName = $.fileName;
+        this.folder = $.folder;
+        this.folderPath = $.folderPath;
+        this.format = $.format;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobFSDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable DatasetCompressionResponse compression;
-        private @Nullable String description;
-        private @Nullable Object fileName;
-        private @Nullable DatasetResponseFolder folder;
-        private @Nullable Object folderPath;
-        private @Nullable Object format;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private String type;
+        private AzureBlobFSDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobFSDatasetResponse();
         }
 
         public Builder(AzureBlobFSDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.compression = defaults.compression;
-    	      this.description = defaults.description;
-    	      this.fileName = defaults.fileName;
-    	      this.folder = defaults.folder;
-    	      this.folderPath = defaults.folderPath;
-    	      this.format = defaults.format;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
+            $ = new AzureBlobFSDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder format(@Nullable Object format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureBlobFSDatasetResponse build() {
-            return new AzureBlobFSDatasetResponse(annotations, compression, description, fileName, folder, folderPath, format, linkedServiceName, parameters, schema, structure, type);
+        }
+
+        public AzureBlobFSDatasetResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

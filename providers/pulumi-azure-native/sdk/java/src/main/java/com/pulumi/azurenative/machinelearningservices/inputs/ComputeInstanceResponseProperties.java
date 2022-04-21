@@ -34,10 +34,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="applicationSharingPolicy")
-      private final @Nullable String applicationSharingPolicy;
+    private @Nullable String applicationSharingPolicy;
 
     public Optional<String> applicationSharingPolicy() {
-        return this.applicationSharingPolicy == null ? Optional.empty() : Optional.ofNullable(this.applicationSharingPolicy);
+        return Optional.ofNullable(this.applicationSharingPolicy);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="applications", required=true)
-      private final List<ComputeInstanceApplicationResponse> applications;
+    private List<ComputeInstanceApplicationResponse> applications;
 
     public List<ComputeInstanceApplicationResponse> applications() {
         return this.applications;
@@ -56,10 +56,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="computeInstanceAuthorizationType")
-      private final @Nullable String computeInstanceAuthorizationType;
+    private @Nullable String computeInstanceAuthorizationType;
 
     public Optional<String> computeInstanceAuthorizationType() {
-        return this.computeInstanceAuthorizationType == null ? Optional.empty() : Optional.ofNullable(this.computeInstanceAuthorizationType);
+        return Optional.ofNullable(this.computeInstanceAuthorizationType);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="connectivityEndpoints", required=true)
-      private final ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
+    private ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
 
     public ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints() {
         return this.connectivityEndpoints;
@@ -78,7 +78,7 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="createdBy", required=true)
-      private final ComputeInstanceCreatedByResponse createdBy;
+    private ComputeInstanceCreatedByResponse createdBy;
 
     public ComputeInstanceCreatedByResponse createdBy() {
         return this.createdBy;
@@ -89,7 +89,7 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="errors", required=true)
-      private final List<MachineLearningServiceErrorResponse> errors;
+    private List<MachineLearningServiceErrorResponse> errors;
 
     public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
@@ -100,7 +100,7 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="lastOperation", required=true)
-      private final ComputeInstanceLastOperationResponse lastOperation;
+    private ComputeInstanceLastOperationResponse lastOperation;
 
     public ComputeInstanceLastOperationResponse lastOperation() {
         return this.lastOperation;
@@ -111,10 +111,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="personalComputeInstanceSettings")
-      private final @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
+    private @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
 
     public Optional<PersonalComputeInstanceSettingsResponse> personalComputeInstanceSettings() {
-        return this.personalComputeInstanceSettings == null ? Optional.empty() : Optional.ofNullable(this.personalComputeInstanceSettings);
+        return Optional.ofNullable(this.personalComputeInstanceSettings);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="setupScripts")
-      private final @Nullable SetupScriptsResponse setupScripts;
+    private @Nullable SetupScriptsResponse setupScripts;
 
     public Optional<SetupScriptsResponse> setupScripts() {
-        return this.setupScripts == null ? Optional.empty() : Optional.ofNullable(this.setupScripts);
+        return Optional.ofNullable(this.setupScripts);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="sshSettings")
-      private final @Nullable ComputeInstanceSshSettingsResponse sshSettings;
+    private @Nullable ComputeInstanceSshSettingsResponse sshSettings;
 
     public Optional<ComputeInstanceSshSettingsResponse> sshSettings() {
-        return this.sshSettings == null ? Optional.empty() : Optional.ofNullable(this.sshSettings);
+        return Optional.ofNullable(this.sshSettings);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -155,10 +155,10 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="subnet")
-      private final @Nullable ResourceIdResponse subnet;
+    private @Nullable ResourceIdResponse subnet;
 
     public Optional<ResourceIdResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -166,160 +166,132 @@ public final class ComputeInstanceResponseProperties extends com.pulumi.resource
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public ComputeInstanceResponseProperties(
-        @Nullable String applicationSharingPolicy,
-        List<ComputeInstanceApplicationResponse> applications,
-        @Nullable String computeInstanceAuthorizationType,
-        ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints,
-        ComputeInstanceCreatedByResponse createdBy,
-        List<MachineLearningServiceErrorResponse> errors,
-        ComputeInstanceLastOperationResponse lastOperation,
-        @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings,
-        @Nullable SetupScriptsResponse setupScripts,
-        @Nullable ComputeInstanceSshSettingsResponse sshSettings,
-        String state,
-        @Nullable ResourceIdResponse subnet,
-        @Nullable String vmSize) {
-        this.applicationSharingPolicy = Codegen.stringProp("applicationSharingPolicy").arg(applicationSharingPolicy).def("Shared").getNullable();
-        this.applications = Objects.requireNonNull(applications, "expected parameter 'applications' to be non-null");
-        this.computeInstanceAuthorizationType = Codegen.stringProp("computeInstanceAuthorizationType").arg(computeInstanceAuthorizationType).def("personal").getNullable();
-        this.connectivityEndpoints = Objects.requireNonNull(connectivityEndpoints, "expected parameter 'connectivityEndpoints' to be non-null");
-        this.createdBy = Objects.requireNonNull(createdBy, "expected parameter 'createdBy' to be non-null");
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.lastOperation = Objects.requireNonNull(lastOperation, "expected parameter 'lastOperation' to be non-null");
-        this.personalComputeInstanceSettings = personalComputeInstanceSettings;
-        this.setupScripts = setupScripts;
-        this.sshSettings = sshSettings;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.subnet = subnet;
-        this.vmSize = vmSize;
-    }
+    private ComputeInstanceResponseProperties() {}
 
-    private ComputeInstanceResponseProperties() {
-        this.applicationSharingPolicy = null;
-        this.applications = List.of();
-        this.computeInstanceAuthorizationType = null;
-        this.connectivityEndpoints = null;
-        this.createdBy = null;
-        this.errors = List.of();
-        this.lastOperation = null;
-        this.personalComputeInstanceSettings = null;
-        this.setupScripts = null;
-        this.sshSettings = null;
-        this.state = null;
-        this.subnet = null;
-        this.vmSize = null;
+    private ComputeInstanceResponseProperties(ComputeInstanceResponseProperties $) {
+        this.applicationSharingPolicy = $.applicationSharingPolicy;
+        this.applications = $.applications;
+        this.computeInstanceAuthorizationType = $.computeInstanceAuthorizationType;
+        this.connectivityEndpoints = $.connectivityEndpoints;
+        this.createdBy = $.createdBy;
+        this.errors = $.errors;
+        this.lastOperation = $.lastOperation;
+        this.personalComputeInstanceSettings = $.personalComputeInstanceSettings;
+        this.setupScripts = $.setupScripts;
+        this.sshSettings = $.sshSettings;
+        this.state = $.state;
+        this.subnet = $.subnet;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationSharingPolicy;
-        private List<ComputeInstanceApplicationResponse> applications;
-        private @Nullable String computeInstanceAuthorizationType;
-        private ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints;
-        private ComputeInstanceCreatedByResponse createdBy;
-        private List<MachineLearningServiceErrorResponse> errors;
-        private ComputeInstanceLastOperationResponse lastOperation;
-        private @Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings;
-        private @Nullable SetupScriptsResponse setupScripts;
-        private @Nullable ComputeInstanceSshSettingsResponse sshSettings;
-        private String state;
-        private @Nullable ResourceIdResponse subnet;
-        private @Nullable String vmSize;
+        private ComputeInstanceResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceResponseProperties();
         }
 
         public Builder(ComputeInstanceResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationSharingPolicy = defaults.applicationSharingPolicy;
-    	      this.applications = defaults.applications;
-    	      this.computeInstanceAuthorizationType = defaults.computeInstanceAuthorizationType;
-    	      this.connectivityEndpoints = defaults.connectivityEndpoints;
-    	      this.createdBy = defaults.createdBy;
-    	      this.errors = defaults.errors;
-    	      this.lastOperation = defaults.lastOperation;
-    	      this.personalComputeInstanceSettings = defaults.personalComputeInstanceSettings;
-    	      this.setupScripts = defaults.setupScripts;
-    	      this.sshSettings = defaults.sshSettings;
-    	      this.state = defaults.state;
-    	      this.subnet = defaults.subnet;
-    	      this.vmSize = defaults.vmSize;
+            $ = new ComputeInstanceResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationSharingPolicy(@Nullable String applicationSharingPolicy) {
-            this.applicationSharingPolicy = applicationSharingPolicy;
+            $.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
+
         public Builder applications(List<ComputeInstanceApplicationResponse> applications) {
-            this.applications = Objects.requireNonNull(applications);
+            $.applications = applications;
             return this;
         }
+
         public Builder applications(ComputeInstanceApplicationResponse... applications) {
             return applications(List.of(applications));
         }
+
         public Builder computeInstanceAuthorizationType(@Nullable String computeInstanceAuthorizationType) {
-            this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
+            $.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
+
         public Builder connectivityEndpoints(ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints) {
-            this.connectivityEndpoints = Objects.requireNonNull(connectivityEndpoints);
+            $.connectivityEndpoints = connectivityEndpoints;
             return this;
         }
+
         public Builder createdBy(ComputeInstanceCreatedByResponse createdBy) {
-            this.createdBy = Objects.requireNonNull(createdBy);
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(MachineLearningServiceErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder lastOperation(ComputeInstanceLastOperationResponse lastOperation) {
-            this.lastOperation = Objects.requireNonNull(lastOperation);
+            $.lastOperation = lastOperation;
             return this;
         }
+
         public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings) {
-            this.personalComputeInstanceSettings = personalComputeInstanceSettings;
+            $.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
+
         public Builder setupScripts(@Nullable SetupScriptsResponse setupScripts) {
-            this.setupScripts = setupScripts;
+            $.setupScripts = setupScripts;
             return this;
         }
+
         public Builder sshSettings(@Nullable ComputeInstanceSshSettingsResponse sshSettings) {
-            this.sshSettings = sshSettings;
+            $.sshSettings = sshSettings;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder subnet(@Nullable ResourceIdResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public ComputeInstanceResponseProperties build() {
-            return new ComputeInstanceResponseProperties(applicationSharingPolicy, applications, computeInstanceAuthorizationType, connectivityEndpoints, createdBy, errors, lastOperation, personalComputeInstanceSettings, setupScripts, sshSettings, state, subnet, vmSize);
+        }
+
+        public ComputeInstanceResponseProperties build() {
+            $.applicationSharingPolicy = Codegen.stringProp("applicationSharingPolicy").arg($.applicationSharingPolicy).def("Shared").getNullable();
+            $.applications = Objects.requireNonNull($.applications, "expected parameter 'applications' to be non-null");
+            $.computeInstanceAuthorizationType = Codegen.stringProp("computeInstanceAuthorizationType").arg($.computeInstanceAuthorizationType).def("personal").getNullable();
+            $.connectivityEndpoints = Objects.requireNonNull($.connectivityEndpoints, "expected parameter 'connectivityEndpoints' to be non-null");
+            $.createdBy = Objects.requireNonNull($.createdBy, "expected parameter 'createdBy' to be non-null");
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.lastOperation = Objects.requireNonNull($.lastOperation, "expected parameter 'lastOperation' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

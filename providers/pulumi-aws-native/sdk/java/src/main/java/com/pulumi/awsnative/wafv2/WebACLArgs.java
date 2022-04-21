@@ -12,10 +12,10 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLTagArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,38 +24,38 @@ public final class WebACLArgs extends com.pulumi.resources.ResourceArgs {
     public static final WebACLArgs Empty = new WebACLArgs();
 
     @Import(name="captchaConfig")
-      private final @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig;
+    private @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig;
 
-    public Output<WebACLCaptchaConfigArgs> captchaConfig() {
-        return this.captchaConfig == null ? Codegen.empty() : this.captchaConfig;
+    public Optional<Output<WebACLCaptchaConfigArgs>> captchaConfig() {
+        return Optional.ofNullable(this.captchaConfig);
     }
 
     @Import(name="customResponseBodies")
-      private final @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies;
+    private @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies;
 
-    public Output<WebACLCustomResponseBodiesArgs> customResponseBodies() {
-        return this.customResponseBodies == null ? Codegen.empty() : this.customResponseBodies;
+    public Optional<Output<WebACLCustomResponseBodiesArgs>> customResponseBodies() {
+        return Optional.ofNullable(this.customResponseBodies);
     }
 
     @Import(name="defaultAction", required=true)
-      private final Output<WebACLDefaultActionArgs> defaultAction;
+    private Output<WebACLDefaultActionArgs> defaultAction;
 
     public Output<WebACLDefaultActionArgs> defaultAction() {
         return this.defaultAction;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,181 +63,160 @@ public final class WebACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<WebACLRuleArgs>> rules;
+    private @Nullable Output<List<WebACLRuleArgs>> rules;
 
-    public Output<List<WebACLRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<WebACLRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     @Import(name="scope", required=true)
-      private final Output<WebACLScope> scope;
+    private Output<WebACLScope> scope;
 
     public Output<WebACLScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<WebACLTagArgs>> tags;
+    private @Nullable Output<List<WebACLTagArgs>> tags;
 
-    public Output<List<WebACLTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<WebACLTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="visibilityConfig", required=true)
-      private final Output<WebACLVisibilityConfigArgs> visibilityConfig;
+    private Output<WebACLVisibilityConfigArgs> visibilityConfig;
 
     public Output<WebACLVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 
-    public WebACLArgs(
-        @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig,
-        @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies,
-        Output<WebACLDefaultActionArgs> defaultAction,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<WebACLRuleArgs>> rules,
-        Output<WebACLScope> scope,
-        @Nullable Output<List<WebACLTagArgs>> tags,
-        Output<WebACLVisibilityConfigArgs> visibilityConfig) {
-        this.captchaConfig = captchaConfig;
-        this.customResponseBodies = customResponseBodies;
-        this.defaultAction = Objects.requireNonNull(defaultAction, "expected parameter 'defaultAction' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.rules = rules;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.tags = tags;
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
-    }
+    private WebACLArgs() {}
 
-    private WebACLArgs() {
-        this.captchaConfig = Codegen.empty();
-        this.customResponseBodies = Codegen.empty();
-        this.defaultAction = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.visibilityConfig = Codegen.empty();
+    private WebACLArgs(WebACLArgs $) {
+        this.captchaConfig = $.captchaConfig;
+        this.customResponseBodies = $.customResponseBodies;
+        this.defaultAction = $.defaultAction;
+        this.description = $.description;
+        this.name = $.name;
+        this.rules = $.rules;
+        this.scope = $.scope;
+        this.tags = $.tags;
+        this.visibilityConfig = $.visibilityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig;
-        private @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies;
-        private Output<WebACLDefaultActionArgs> defaultAction;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<WebACLRuleArgs>> rules;
-        private Output<WebACLScope> scope;
-        private @Nullable Output<List<WebACLTagArgs>> tags;
-        private Output<WebACLVisibilityConfigArgs> visibilityConfig;
+        private WebACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLArgs();
         }
 
         public Builder(WebACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.captchaConfig = defaults.captchaConfig;
-    	      this.customResponseBodies = defaults.customResponseBodies;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.rules = defaults.rules;
-    	      this.scope = defaults.scope;
-    	      this.tags = defaults.tags;
-    	      this.visibilityConfig = defaults.visibilityConfig;
+            $ = new WebACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder captchaConfig(@Nullable Output<WebACLCaptchaConfigArgs> captchaConfig) {
-            this.captchaConfig = captchaConfig;
+            $.captchaConfig = captchaConfig;
             return this;
         }
-        public Builder captchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
-            this.captchaConfig = Codegen.ofNullable(captchaConfig);
-            return this;
+
+        public Builder captchaConfig(WebACLCaptchaConfigArgs captchaConfig) {
+            return captchaConfig(Output.of(captchaConfig));
         }
+
         public Builder customResponseBodies(@Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies) {
-            this.customResponseBodies = customResponseBodies;
+            $.customResponseBodies = customResponseBodies;
             return this;
         }
-        public Builder customResponseBodies(@Nullable WebACLCustomResponseBodiesArgs customResponseBodies) {
-            this.customResponseBodies = Codegen.ofNullable(customResponseBodies);
-            return this;
+
+        public Builder customResponseBodies(WebACLCustomResponseBodiesArgs customResponseBodies) {
+            return customResponseBodies(Output.of(customResponseBodies));
         }
+
         public Builder defaultAction(Output<WebACLDefaultActionArgs> defaultAction) {
-            this.defaultAction = Objects.requireNonNull(defaultAction);
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder defaultAction(WebACLDefaultActionArgs defaultAction) {
-            this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
-            return this;
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rules(@Nullable Output<List<WebACLRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<WebACLRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<WebACLRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(WebACLRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder scope(Output<WebACLScope> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(WebACLScope scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder tags(@Nullable Output<List<WebACLTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<WebACLTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<WebACLTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(WebACLTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder visibilityConfig(Output<WebACLVisibilityConfigArgs> visibilityConfig) {
-            this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+            $.visibilityConfig = visibilityConfig;
             return this;
         }
+
         public Builder visibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
-            this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
-            return this;
-        }        public WebACLArgs build() {
-            return new WebACLArgs(captchaConfig, customResponseBodies, defaultAction, description, name, rules, scope, tags, visibilityConfig);
+            return visibilityConfig(Output.of(visibilityConfig));
+        }
+
+        public WebACLArgs build() {
+            $.defaultAction = Objects.requireNonNull($.defaultAction, "expected parameter 'defaultAction' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.visibilityConfig = Objects.requireNonNull($.visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
+            return $;
         }
     }
+
 }

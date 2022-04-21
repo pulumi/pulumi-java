@@ -8,10 +8,10 @@ import com.pulumi.awsnative.lex.inputs.BotSlotTypeValueArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueSelectionSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,153 +24,138 @@ public final class BotSlotTypeArgs extends com.pulumi.resources.ResourceArgs {
     public static final BotSlotTypeArgs Empty = new BotSlotTypeArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="externalSourceSetting")
-      private final @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
+    private @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
 
-    public Output<BotExternalSourceSettingArgs> externalSourceSetting() {
-        return this.externalSourceSetting == null ? Codegen.empty() : this.externalSourceSetting;
+    public Optional<Output<BotExternalSourceSettingArgs>> externalSourceSetting() {
+        return Optional.ofNullable(this.externalSourceSetting);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="parentSlotTypeSignature")
-      private final @Nullable Output<String> parentSlotTypeSignature;
+    private @Nullable Output<String> parentSlotTypeSignature;
 
-    public Output<String> parentSlotTypeSignature() {
-        return this.parentSlotTypeSignature == null ? Codegen.empty() : this.parentSlotTypeSignature;
+    public Optional<Output<String>> parentSlotTypeSignature() {
+        return Optional.ofNullable(this.parentSlotTypeSignature);
     }
 
     @Import(name="slotTypeValues")
-      private final @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
+    private @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
 
-    public Output<List<BotSlotTypeValueArgs>> slotTypeValues() {
-        return this.slotTypeValues == null ? Codegen.empty() : this.slotTypeValues;
+    public Optional<Output<List<BotSlotTypeValueArgs>>> slotTypeValues() {
+        return Optional.ofNullable(this.slotTypeValues);
     }
 
     @Import(name="valueSelectionSetting")
-      private final @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
+    private @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
 
-    public Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting() {
-        return this.valueSelectionSetting == null ? Codegen.empty() : this.valueSelectionSetting;
+    public Optional<Output<BotSlotValueSelectionSettingArgs>> valueSelectionSetting() {
+        return Optional.ofNullable(this.valueSelectionSetting);
     }
 
-    public BotSlotTypeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting,
-        Output<String> name,
-        @Nullable Output<String> parentSlotTypeSignature,
-        @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues,
-        @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
-        this.description = description;
-        this.externalSourceSetting = externalSourceSetting;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parentSlotTypeSignature = parentSlotTypeSignature;
-        this.slotTypeValues = slotTypeValues;
-        this.valueSelectionSetting = valueSelectionSetting;
-    }
+    private BotSlotTypeArgs() {}
 
-    private BotSlotTypeArgs() {
-        this.description = Codegen.empty();
-        this.externalSourceSetting = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentSlotTypeSignature = Codegen.empty();
-        this.slotTypeValues = Codegen.empty();
-        this.valueSelectionSetting = Codegen.empty();
+    private BotSlotTypeArgs(BotSlotTypeArgs $) {
+        this.description = $.description;
+        this.externalSourceSetting = $.externalSourceSetting;
+        this.name = $.name;
+        this.parentSlotTypeSignature = $.parentSlotTypeSignature;
+        this.slotTypeValues = $.slotTypeValues;
+        this.valueSelectionSetting = $.valueSelectionSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
-        private Output<String> name;
-        private @Nullable Output<String> parentSlotTypeSignature;
-        private @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
-        private @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
+        private BotSlotTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotTypeArgs();
         }
 
         public Builder(BotSlotTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.externalSourceSetting = defaults.externalSourceSetting;
-    	      this.name = defaults.name;
-    	      this.parentSlotTypeSignature = defaults.parentSlotTypeSignature;
-    	      this.slotTypeValues = defaults.slotTypeValues;
-    	      this.valueSelectionSetting = defaults.valueSelectionSetting;
+            $ = new BotSlotTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder externalSourceSetting(@Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting) {
-            this.externalSourceSetting = externalSourceSetting;
+            $.externalSourceSetting = externalSourceSetting;
             return this;
         }
-        public Builder externalSourceSetting(@Nullable BotExternalSourceSettingArgs externalSourceSetting) {
-            this.externalSourceSetting = Codegen.ofNullable(externalSourceSetting);
-            return this;
+
+        public Builder externalSourceSetting(BotExternalSourceSettingArgs externalSourceSetting) {
+            return externalSourceSetting(Output.of(externalSourceSetting));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parentSlotTypeSignature(@Nullable Output<String> parentSlotTypeSignature) {
-            this.parentSlotTypeSignature = parentSlotTypeSignature;
+            $.parentSlotTypeSignature = parentSlotTypeSignature;
             return this;
         }
-        public Builder parentSlotTypeSignature(@Nullable String parentSlotTypeSignature) {
-            this.parentSlotTypeSignature = Codegen.ofNullable(parentSlotTypeSignature);
-            return this;
+
+        public Builder parentSlotTypeSignature(String parentSlotTypeSignature) {
+            return parentSlotTypeSignature(Output.of(parentSlotTypeSignature));
         }
+
         public Builder slotTypeValues(@Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues) {
-            this.slotTypeValues = slotTypeValues;
+            $.slotTypeValues = slotTypeValues;
             return this;
         }
-        public Builder slotTypeValues(@Nullable List<BotSlotTypeValueArgs> slotTypeValues) {
-            this.slotTypeValues = Codegen.ofNullable(slotTypeValues);
-            return this;
+
+        public Builder slotTypeValues(List<BotSlotTypeValueArgs> slotTypeValues) {
+            return slotTypeValues(Output.of(slotTypeValues));
         }
+
         public Builder slotTypeValues(BotSlotTypeValueArgs... slotTypeValues) {
             return slotTypeValues(List.of(slotTypeValues));
         }
+
         public Builder valueSelectionSetting(@Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting) {
-            this.valueSelectionSetting = valueSelectionSetting;
+            $.valueSelectionSetting = valueSelectionSetting;
             return this;
         }
-        public Builder valueSelectionSetting(@Nullable BotSlotValueSelectionSettingArgs valueSelectionSetting) {
-            this.valueSelectionSetting = Codegen.ofNullable(valueSelectionSetting);
-            return this;
-        }        public BotSlotTypeArgs build() {
-            return new BotSlotTypeArgs(description, externalSourceSetting, name, parentSlotTypeSignature, slotTypeValues, valueSelectionSetting);
+
+        public Builder valueSelectionSetting(BotSlotValueSelectionSettingArgs valueSelectionSetting) {
+            return valueSelectionSetting(Output.of(valueSelectionSetting));
+        }
+
+        public BotSlotTypeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PipelineThumbnailConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class PipelineThumbnailConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<String> storageClass;
+    private @Nullable Output<String> storageClass;
 
-    public Output<String> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<String>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
-    public PipelineThumbnailConfigArgs(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> storageClass) {
-        this.bucket = bucket;
-        this.storageClass = storageClass;
-    }
+    private PipelineThumbnailConfigArgs() {}
 
-    private PipelineThumbnailConfigArgs() {
-        this.bucket = Codegen.empty();
-        this.storageClass = Codegen.empty();
+    private PipelineThumbnailConfigArgs(PipelineThumbnailConfigArgs $) {
+        this.bucket = $.bucket;
+        this.storageClass = $.storageClass;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineThumbnailConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> storageClass;
+        private PipelineThumbnailConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineThumbnailConfigArgs();
         }
 
         public Builder(PipelineThumbnailConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.storageClass = defaults.storageClass;
+            $ = new PipelineThumbnailConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder storageClass(@Nullable Output<String> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
-        }        public PipelineThumbnailConfigArgs build() {
-            return new PipelineThumbnailConfigArgs(bucket, storageClass);
+
+        public Builder storageClass(String storageClass) {
+            return storageClass(Output.of(storageClass));
+        }
+
+        public PipelineThumbnailConfigArgs build() {
+            return $;
         }
     }
+
 }

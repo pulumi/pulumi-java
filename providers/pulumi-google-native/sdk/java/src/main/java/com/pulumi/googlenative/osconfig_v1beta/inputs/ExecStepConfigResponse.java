@@ -24,7 +24,7 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="allowedSuccessCodes", required=true)
-      private final List<Integer> allowedSuccessCodes;
+    private List<Integer> allowedSuccessCodes;
 
     public List<Integer> allowedSuccessCodes() {
         return this.allowedSuccessCodes;
@@ -35,7 +35,7 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="gcsObject", required=true)
-      private final GcsObjectResponse gcsObject;
+    private GcsObjectResponse gcsObject;
 
     public GcsObjectResponse gcsObject() {
         return this.gcsObject;
@@ -46,7 +46,7 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="interpreter", required=true)
-      private final String interpreter;
+    private String interpreter;
 
     public String interpreter() {
         return this.interpreter;
@@ -57,76 +57,70 @@ public final class ExecStepConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="localPath", required=true)
-      private final String localPath;
+    private String localPath;
 
     public String localPath() {
         return this.localPath;
     }
 
-    public ExecStepConfigResponse(
-        List<Integer> allowedSuccessCodes,
-        GcsObjectResponse gcsObject,
-        String interpreter,
-        String localPath) {
-        this.allowedSuccessCodes = Objects.requireNonNull(allowedSuccessCodes, "expected parameter 'allowedSuccessCodes' to be non-null");
-        this.gcsObject = Objects.requireNonNull(gcsObject, "expected parameter 'gcsObject' to be non-null");
-        this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
-        this.localPath = Objects.requireNonNull(localPath, "expected parameter 'localPath' to be non-null");
-    }
+    private ExecStepConfigResponse() {}
 
-    private ExecStepConfigResponse() {
-        this.allowedSuccessCodes = List.of();
-        this.gcsObject = null;
-        this.interpreter = null;
-        this.localPath = null;
+    private ExecStepConfigResponse(ExecStepConfigResponse $) {
+        this.allowedSuccessCodes = $.allowedSuccessCodes;
+        this.gcsObject = $.gcsObject;
+        this.interpreter = $.interpreter;
+        this.localPath = $.localPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecStepConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> allowedSuccessCodes;
-        private GcsObjectResponse gcsObject;
-        private String interpreter;
-        private String localPath;
+        private ExecStepConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecStepConfigResponse();
         }
 
         public Builder(ExecStepConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedSuccessCodes = defaults.allowedSuccessCodes;
-    	      this.gcsObject = defaults.gcsObject;
-    	      this.interpreter = defaults.interpreter;
-    	      this.localPath = defaults.localPath;
+            $ = new ExecStepConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedSuccessCodes(List<Integer> allowedSuccessCodes) {
-            this.allowedSuccessCodes = Objects.requireNonNull(allowedSuccessCodes);
+            $.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
+
         public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
             return allowedSuccessCodes(List.of(allowedSuccessCodes));
         }
+
         public Builder gcsObject(GcsObjectResponse gcsObject) {
-            this.gcsObject = Objects.requireNonNull(gcsObject);
+            $.gcsObject = gcsObject;
             return this;
         }
+
         public Builder interpreter(String interpreter) {
-            this.interpreter = Objects.requireNonNull(interpreter);
+            $.interpreter = interpreter;
             return this;
         }
+
         public Builder localPath(String localPath) {
-            this.localPath = Objects.requireNonNull(localPath);
+            $.localPath = localPath;
             return this;
-        }        public ExecStepConfigResponse build() {
-            return new ExecStepConfigResponse(allowedSuccessCodes, gcsObject, interpreter, localPath);
+        }
+
+        public ExecStepConfigResponse build() {
+            $.allowedSuccessCodes = Objects.requireNonNull($.allowedSuccessCodes, "expected parameter 'allowedSuccessCodes' to be non-null");
+            $.gcsObject = Objects.requireNonNull($.gcsObject, "expected parameter 'gcsObject' to be non-null");
+            $.interpreter = Objects.requireNonNull($.interpreter, "expected parameter 'interpreter' to be non-null");
+            $.localPath = Objects.requireNonNull($.localPath, "expected parameter 'localPath' to be non-null");
+            return $;
         }
     }
+
 }

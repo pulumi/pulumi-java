@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +21,10 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -31,10 +32,10 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Output<String> tenant;
+    private @Nullable Output<String> tenant;
 
-    public Output<String> tenant() {
-        return this.tenant == null ? Codegen.empty() : this.tenant;
+    public Optional<Output<String>> tenant() {
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -65,102 +66,89 @@ public final class OAuthAuthenticationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public OAuthAuthenticationArgs(
-        @Nullable Output<String> audience,
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> tenant,
-        Output<String> type) {
-        this.audience = audience;
-        this.clientId = clientId;
-        this.secret = secret;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private OAuthAuthenticationArgs() {}
 
-    private OAuthAuthenticationArgs() {
-        this.audience = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.tenant = Codegen.empty();
-        this.type = Codegen.empty();
+    private OAuthAuthenticationArgs(OAuthAuthenticationArgs $) {
+        this.audience = $.audience;
+        this.clientId = $.clientId;
+        this.secret = $.secret;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuthAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> tenant;
-        private Output<String> type;
+        private OAuthAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuthAuthenticationArgs();
         }
 
         public Builder(OAuthAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.clientId = defaults.clientId;
-    	      this.secret = defaults.secret;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new OAuthAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder tenant(@Nullable Output<String> tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
-        public Builder tenant(@Nullable String tenant) {
-            this.tenant = Codegen.ofNullable(tenant);
-            return this;
+
+        public Builder tenant(String tenant) {
+            return tenant(Output.of(tenant));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public OAuthAuthenticationArgs build() {
-            return new OAuthAuthenticationArgs(audience, clientId, secret, tenant, type);
+            return type(Output.of(type));
+        }
+
+        public OAuthAuthenticationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

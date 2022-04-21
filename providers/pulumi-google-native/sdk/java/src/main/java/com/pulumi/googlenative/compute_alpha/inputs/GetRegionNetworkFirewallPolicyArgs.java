@@ -15,78 +15,72 @@ public final class GetRegionNetworkFirewallPolicyArgs extends com.pulumi.resourc
     public static final GetRegionNetworkFirewallPolicyArgs Empty = new GetRegionNetworkFirewallPolicyArgs();
 
     @Import(name="firewallPolicy", required=true)
-      private final String firewallPolicy;
+    private String firewallPolicy;
 
     public String firewallPolicy() {
         return this.firewallPolicy;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionNetworkFirewallPolicyArgs(
-        String firewallPolicy,
-        @Nullable String project,
-        String region) {
-        this.firewallPolicy = Objects.requireNonNull(firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionNetworkFirewallPolicyArgs() {}
 
-    private GetRegionNetworkFirewallPolicyArgs() {
-        this.firewallPolicy = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionNetworkFirewallPolicyArgs(GetRegionNetworkFirewallPolicyArgs $) {
+        this.firewallPolicy = $.firewallPolicy;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionNetworkFirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallPolicy;
-        private @Nullable String project;
-        private String region;
+        private GetRegionNetworkFirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionNetworkFirewallPolicyArgs();
         }
 
         public Builder(GetRegionNetworkFirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionNetworkFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallPolicy(String firewallPolicy) {
-            this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionNetworkFirewallPolicyArgs build() {
-            return new GetRegionNetworkFirewallPolicyArgs(firewallPolicy, project, region);
+        }
+
+        public GetRegionNetworkFirewallPolicyArgs build() {
+            $.firewallPolicy = Objects.requireNonNull($.firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SpotInstanceRequestCreditSpecificationArgs extends com.pulumi
      * 
      */
     @Import(name="cpuCredits")
-      private final @Nullable Output<String> cpuCredits;
+    private @Nullable Output<String> cpuCredits;
 
-    public Output<String> cpuCredits() {
-        return this.cpuCredits == null ? Codegen.empty() : this.cpuCredits;
+    public Optional<Output<String>> cpuCredits() {
+        return Optional.ofNullable(this.cpuCredits);
     }
 
-    public SpotInstanceRequestCreditSpecificationArgs(@Nullable Output<String> cpuCredits) {
-        this.cpuCredits = cpuCredits;
-    }
+    private SpotInstanceRequestCreditSpecificationArgs() {}
 
-    private SpotInstanceRequestCreditSpecificationArgs() {
-        this.cpuCredits = Codegen.empty();
+    private SpotInstanceRequestCreditSpecificationArgs(SpotInstanceRequestCreditSpecificationArgs $) {
+        this.cpuCredits = $.cpuCredits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotInstanceRequestCreditSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpuCredits;
+        private SpotInstanceRequestCreditSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotInstanceRequestCreditSpecificationArgs();
         }
 
         public Builder(SpotInstanceRequestCreditSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCredits = defaults.cpuCredits;
+            $ = new SpotInstanceRequestCreditSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCredits(@Nullable Output<String> cpuCredits) {
-            this.cpuCredits = cpuCredits;
+            $.cpuCredits = cpuCredits;
             return this;
         }
-        public Builder cpuCredits(@Nullable String cpuCredits) {
-            this.cpuCredits = Codegen.ofNullable(cpuCredits);
-            return this;
-        }        public SpotInstanceRequestCreditSpecificationArgs build() {
-            return new SpotInstanceRequestCreditSpecificationArgs(cpuCredits);
+
+        public Builder cpuCredits(String cpuCredits) {
+            return cpuCredits(Output.of(cpuCredits));
+        }
+
+        public SpotInstanceRequestCreditSpecificationArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="azureQueue")
-      private final @Nullable QueueScaleRuleResponse azureQueue;
+    private @Nullable QueueScaleRuleResponse azureQueue;
 
     public Optional<QueueScaleRuleResponse> azureQueue() {
-        return this.azureQueue == null ? Optional.empty() : Optional.ofNullable(this.azureQueue);
+        return Optional.ofNullable(this.azureQueue);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="custom")
-      private final @Nullable CustomScaleRuleResponse custom;
+    private @Nullable CustomScaleRuleResponse custom;
 
     public Optional<CustomScaleRuleResponse> custom() {
-        return this.custom == null ? Optional.empty() : Optional.ofNullable(this.custom);
+        return Optional.ofNullable(this.custom);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="http")
-      private final @Nullable HttpScaleRuleResponse http;
+    private @Nullable HttpScaleRuleResponse http;
 
     public Optional<HttpScaleRuleResponse> http() {
-        return this.http == null ? Optional.empty() : Optional.ofNullable(this.http);
+        return Optional.ofNullable(this.http);
     }
 
     /**
@@ -59,73 +59,62 @@ public final class ScaleRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ScaleRuleResponse(
-        @Nullable QueueScaleRuleResponse azureQueue,
-        @Nullable CustomScaleRuleResponse custom,
-        @Nullable HttpScaleRuleResponse http,
-        @Nullable String name) {
-        this.azureQueue = azureQueue;
-        this.custom = custom;
-        this.http = http;
-        this.name = name;
-    }
+    private ScaleRuleResponse() {}
 
-    private ScaleRuleResponse() {
-        this.azureQueue = null;
-        this.custom = null;
-        this.http = null;
-        this.name = null;
+    private ScaleRuleResponse(ScaleRuleResponse $) {
+        this.azureQueue = $.azureQueue;
+        this.custom = $.custom;
+        this.http = $.http;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable QueueScaleRuleResponse azureQueue;
-        private @Nullable CustomScaleRuleResponse custom;
-        private @Nullable HttpScaleRuleResponse http;
-        private @Nullable String name;
+        private ScaleRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleResponse();
         }
 
         public Builder(ScaleRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureQueue = defaults.azureQueue;
-    	      this.custom = defaults.custom;
-    	      this.http = defaults.http;
-    	      this.name = defaults.name;
+            $ = new ScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureQueue(@Nullable QueueScaleRuleResponse azureQueue) {
-            this.azureQueue = azureQueue;
+            $.azureQueue = azureQueue;
             return this;
         }
+
         public Builder custom(@Nullable CustomScaleRuleResponse custom) {
-            this.custom = custom;
+            $.custom = custom;
             return this;
         }
+
         public Builder http(@Nullable HttpScaleRuleResponse http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ScaleRuleResponse build() {
-            return new ScaleRuleResponse(azureQueue, custom, http, name);
+        }
+
+        public ScaleRuleResponse build() {
+            return $;
         }
     }
+
 }

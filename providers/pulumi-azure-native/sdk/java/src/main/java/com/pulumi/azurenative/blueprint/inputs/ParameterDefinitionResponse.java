@@ -25,10 +25,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable List<Object> allowedValues;
+    private @Nullable List<Object> allowedValues;
 
-    public List<Object> allowedValues() {
-        return this.allowedValues == null ? List.of() : this.allowedValues;
+    public Optional<List<Object>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Object defaultValue;
+    private @Nullable Object defaultValue;
 
     public Optional<Object> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="strongType")
-      private final @Nullable String strongType;
+    private @Nullable String strongType;
 
     public Optional<String> strongType() {
-        return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
+        return Optional.ofNullable(this.strongType);
     }
 
     /**
@@ -80,94 +80,79 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ParameterDefinitionResponse(
-        @Nullable List<Object> allowedValues,
-        @Nullable Object defaultValue,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String strongType,
-        String type) {
-        this.allowedValues = allowedValues;
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.displayName = displayName;
-        this.strongType = strongType;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ParameterDefinitionResponse() {}
 
-    private ParameterDefinitionResponse() {
-        this.allowedValues = List.of();
-        this.defaultValue = null;
-        this.description = null;
-        this.displayName = null;
-        this.strongType = null;
-        this.type = null;
+    private ParameterDefinitionResponse(ParameterDefinitionResponse $) {
+        this.allowedValues = $.allowedValues;
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.strongType = $.strongType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> allowedValues;
-        private @Nullable Object defaultValue;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String strongType;
-        private String type;
+        private ParameterDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionResponse();
         }
 
         public Builder(ParameterDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.strongType = defaults.strongType;
-    	      this.type = defaults.type;
+            $ = new ParameterDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
+
         public Builder allowedValues(Object... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = strongType;
+            $.strongType = strongType;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ParameterDefinitionResponse build() {
-            return new ParameterDefinitionResponse(allowedValues, defaultValue, description, displayName, strongType, type);
+        }
+
+        public ParameterDefinitionResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

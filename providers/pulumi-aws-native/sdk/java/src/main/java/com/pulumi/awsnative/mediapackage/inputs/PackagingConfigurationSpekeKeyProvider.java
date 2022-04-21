@@ -18,7 +18,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends com.pulumi.res
     public static final PackagingConfigurationSpekeKeyProvider Empty = new PackagingConfigurationSpekeKeyProvider();
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
@@ -29,7 +29,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends com.pulumi.res
      * 
      */
     @Import(name="systemIds", required=true)
-      private final List<String> systemIds;
+    private List<String> systemIds;
 
     public List<String> systemIds() {
         return this.systemIds;
@@ -40,67 +40,63 @@ public final class PackagingConfigurationSpekeKeyProvider extends com.pulumi.res
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public PackagingConfigurationSpekeKeyProvider(
-        String roleArn,
-        List<String> systemIds,
-        String url) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.systemIds = Objects.requireNonNull(systemIds, "expected parameter 'systemIds' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private PackagingConfigurationSpekeKeyProvider() {}
 
-    private PackagingConfigurationSpekeKeyProvider() {
-        this.roleArn = null;
-        this.systemIds = List.of();
-        this.url = null;
+    private PackagingConfigurationSpekeKeyProvider(PackagingConfigurationSpekeKeyProvider $) {
+        this.roleArn = $.roleArn;
+        this.systemIds = $.systemIds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationSpekeKeyProvider defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleArn;
-        private List<String> systemIds;
-        private String url;
+        private PackagingConfigurationSpekeKeyProvider $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationSpekeKeyProvider();
         }
 
         public Builder(PackagingConfigurationSpekeKeyProvider defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.systemIds = defaults.systemIds;
-    	      this.url = defaults.url;
+            $ = new PackagingConfigurationSpekeKeyProvider(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder systemIds(List<String> systemIds) {
-            this.systemIds = Objects.requireNonNull(systemIds);
+            $.systemIds = systemIds;
             return this;
         }
+
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public PackagingConfigurationSpekeKeyProvider build() {
-            return new PackagingConfigurationSpekeKeyProvider(roleArn, systemIds, url);
+        }
+
+        public PackagingConfigurationSpekeKeyProvider build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.systemIds = Objects.requireNonNull($.systemIds, "expected parameter 'systemIds' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

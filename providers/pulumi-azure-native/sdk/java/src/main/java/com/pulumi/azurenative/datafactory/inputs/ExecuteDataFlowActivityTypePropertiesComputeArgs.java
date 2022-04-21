@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
      * 
      */
     @Import(name="computeType")
-      private final @Nullable Output<Object> computeType;
+    private @Nullable Output<Object> computeType;
 
-    public Output<Object> computeType() {
-        return this.computeType == null ? Codegen.empty() : this.computeType;
+    public Optional<Output<Object>> computeType() {
+        return Optional.ofNullable(this.computeType);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends com.
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Output<Object> coreCount;
+    private @Nullable Output<Object> coreCount;
 
-    public Output<Object> coreCount() {
-        return this.coreCount == null ? Codegen.empty() : this.coreCount;
+    public Optional<Output<Object>> coreCount() {
+        return Optional.ofNullable(this.coreCount);
     }
 
-    public ExecuteDataFlowActivityTypePropertiesComputeArgs(
-        @Nullable Output<Object> computeType,
-        @Nullable Output<Object> coreCount) {
-        this.computeType = computeType;
-        this.coreCount = coreCount;
-    }
+    private ExecuteDataFlowActivityTypePropertiesComputeArgs() {}
 
-    private ExecuteDataFlowActivityTypePropertiesComputeArgs() {
-        this.computeType = Codegen.empty();
-        this.coreCount = Codegen.empty();
+    private ExecuteDataFlowActivityTypePropertiesComputeArgs(ExecuteDataFlowActivityTypePropertiesComputeArgs $) {
+        this.computeType = $.computeType;
+        this.coreCount = $.coreCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecuteDataFlowActivityTypePropertiesComputeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> computeType;
-        private @Nullable Output<Object> coreCount;
+        private ExecuteDataFlowActivityTypePropertiesComputeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecuteDataFlowActivityTypePropertiesComputeArgs();
         }
 
         public Builder(ExecuteDataFlowActivityTypePropertiesComputeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.coreCount = defaults.coreCount;
+            $ = new ExecuteDataFlowActivityTypePropertiesComputeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(@Nullable Output<Object> computeType) {
-            this.computeType = computeType;
+            $.computeType = computeType;
             return this;
         }
-        public Builder computeType(@Nullable Object computeType) {
-            this.computeType = Codegen.ofNullable(computeType);
-            return this;
+
+        public Builder computeType(Object computeType) {
+            return computeType(Output.of(computeType));
         }
+
         public Builder coreCount(@Nullable Output<Object> coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
-        public Builder coreCount(@Nullable Object coreCount) {
-            this.coreCount = Codegen.ofNullable(coreCount);
-            return this;
-        }        public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {
-            return new ExecuteDataFlowActivityTypePropertiesComputeArgs(computeType, coreCount);
+
+        public Builder coreCount(Object coreCount) {
+            return coreCount(Output.of(coreCount));
+        }
+
+        public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {
+            return $;
         }
     }
+
 }

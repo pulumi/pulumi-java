@@ -21,45 +21,45 @@ public final class CustomerManagedEncryptionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public CustomerManagedEncryptionResponse(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private CustomerManagedEncryptionResponse() {}
 
-    private CustomerManagedEncryptionResponse() {
-        this.kmsKeyName = null;
+    private CustomerManagedEncryptionResponse(CustomerManagedEncryptionResponse $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerManagedEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyName;
+        private CustomerManagedEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerManagedEncryptionResponse();
         }
 
         public Builder(CustomerManagedEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new CustomerManagedEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
-        }        public CustomerManagedEncryptionResponse build() {
-            return new CustomerManagedEncryptionResponse(kmsKeyName);
+        }
+
+        public CustomerManagedEncryptionResponse build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

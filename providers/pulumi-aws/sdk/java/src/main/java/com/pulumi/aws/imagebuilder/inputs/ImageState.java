@@ -7,12 +7,12 @@ import com.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationGetArgs;
 import com.pulumi.aws.imagebuilder.inputs.ImageOutputResourceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dateCreated")
-      private final @Nullable Output<String> dateCreated;
+    private @Nullable Output<String> dateCreated;
 
-    public Output<String> dateCreated() {
-        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
+    public Optional<Output<String>> dateCreated() {
+        return Optional.ofNullable(this.dateCreated);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributionConfigurationArn")
-      private final @Nullable Output<String> distributionConfigurationArn;
+    private @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> distributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
+    public Optional<Output<String>> distributionConfigurationArn() {
+        return Optional.ofNullable(this.distributionConfigurationArn);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enhancedImageMetadataEnabled")
-      private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
+    private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> enhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
+    public Optional<Output<Boolean>> enhancedImageMetadataEnabled() {
+        return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageRecipeArn")
-      private final @Nullable Output<String> imageRecipeArn;
+    private @Nullable Output<String> imageRecipeArn;
 
-    public Output<String> imageRecipeArn() {
-        return this.imageRecipeArn == null ? Codegen.empty() : this.imageRecipeArn;
+    public Optional<Output<String>> imageRecipeArn() {
+        return Optional.ofNullable(this.imageRecipeArn);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageTestsConfiguration")
-      private final @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
+    private @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
-    public Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
+    public Optional<Output<ImageImageTestsConfigurationGetArgs>> imageTestsConfiguration() {
+        return Optional.ofNullable(this.imageTestsConfiguration);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="infrastructureConfigurationArn")
-      private final @Nullable Output<String> infrastructureConfigurationArn;
+    private @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Output<String> infrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn == null ? Codegen.empty() : this.infrastructureConfigurationArn;
+    public Optional<Output<String>> infrastructureConfigurationArn() {
+        return Optional.ofNullable(this.infrastructureConfigurationArn);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable Output<String> osVersion;
+    private @Nullable Output<String> osVersion;
 
-    public Output<String> osVersion() {
-        return this.osVersion == null ? Codegen.empty() : this.osVersion;
+    public Optional<Output<String>> osVersion() {
+        return Optional.ofNullable(this.osVersion);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputResources")
-      private final @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
+    private @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
 
-    public Output<List<ImageOutputResourceGetArgs>> outputResources() {
-        return this.outputResources == null ? Codegen.empty() : this.outputResources;
+    public Optional<Output<List<ImageOutputResourceGetArgs>>> outputResources() {
+        return Optional.ofNullable(this.outputResources);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<String> platform;
+    private @Nullable Output<String> platform;
 
-    public Output<String> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<String>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -168,222 +168,182 @@ public final class ImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ImageState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dateCreated,
-        @Nullable Output<String> distributionConfigurationArn,
-        @Nullable Output<Boolean> enhancedImageMetadataEnabled,
-        @Nullable Output<String> imageRecipeArn,
-        @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration,
-        @Nullable Output<String> infrastructureConfigurationArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> osVersion,
-        @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources,
-        @Nullable Output<String> platform,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> version) {
-        this.arn = arn;
-        this.dateCreated = dateCreated;
-        this.distributionConfigurationArn = distributionConfigurationArn;
-        this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
-        this.imageRecipeArn = imageRecipeArn;
-        this.imageTestsConfiguration = imageTestsConfiguration;
-        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
-        this.name = name;
-        this.osVersion = osVersion;
-        this.outputResources = outputResources;
-        this.platform = platform;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.version = version;
-    }
+    private ImageState() {}
 
-    private ImageState() {
-        this.arn = Codegen.empty();
-        this.dateCreated = Codegen.empty();
-        this.distributionConfigurationArn = Codegen.empty();
-        this.enhancedImageMetadataEnabled = Codegen.empty();
-        this.imageRecipeArn = Codegen.empty();
-        this.imageTestsConfiguration = Codegen.empty();
-        this.infrastructureConfigurationArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osVersion = Codegen.empty();
-        this.outputResources = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.version = Codegen.empty();
+    private ImageState(ImageState $) {
+        this.arn = $.arn;
+        this.dateCreated = $.dateCreated;
+        this.distributionConfigurationArn = $.distributionConfigurationArn;
+        this.enhancedImageMetadataEnabled = $.enhancedImageMetadataEnabled;
+        this.imageRecipeArn = $.imageRecipeArn;
+        this.imageTestsConfiguration = $.imageTestsConfiguration;
+        this.infrastructureConfigurationArn = $.infrastructureConfigurationArn;
+        this.name = $.name;
+        this.osVersion = $.osVersion;
+        this.outputResources = $.outputResources;
+        this.platform = $.platform;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dateCreated;
-        private @Nullable Output<String> distributionConfigurationArn;
-        private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
-        private @Nullable Output<String> imageRecipeArn;
-        private @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
-        private @Nullable Output<String> infrastructureConfigurationArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> osVersion;
-        private @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
-        private @Nullable Output<String> platform;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> version;
+        private ImageState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageState();
         }
 
         public Builder(ImageState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.dateCreated = defaults.dateCreated;
-    	      this.distributionConfigurationArn = defaults.distributionConfigurationArn;
-    	      this.enhancedImageMetadataEnabled = defaults.enhancedImageMetadataEnabled;
-    	      this.imageRecipeArn = defaults.imageRecipeArn;
-    	      this.imageTestsConfiguration = defaults.imageTestsConfiguration;
-    	      this.infrastructureConfigurationArn = defaults.infrastructureConfigurationArn;
-    	      this.name = defaults.name;
-    	      this.osVersion = defaults.osVersion;
-    	      this.outputResources = defaults.outputResources;
-    	      this.platform = defaults.platform;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.version = defaults.version;
+            $ = new ImageState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
-            this.dateCreated = dateCreated;
+            $.dateCreated = dateCreated;
             return this;
         }
-        public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Codegen.ofNullable(dateCreated);
-            return this;
+
+        public Builder dateCreated(String dateCreated) {
+            return dateCreated(Output.of(dateCreated));
         }
+
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
-            this.distributionConfigurationArn = distributionConfigurationArn;
+            $.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
-        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Codegen.ofNullable(distributionConfigurationArn);
-            return this;
+
+        public Builder distributionConfigurationArn(String distributionConfigurationArn) {
+            return distributionConfigurationArn(Output.of(distributionConfigurationArn));
         }
+
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
+            $.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
-        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Codegen.ofNullable(enhancedImageMetadataEnabled);
-            return this;
+
+        public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
+            return enhancedImageMetadataEnabled(Output.of(enhancedImageMetadataEnabled));
         }
+
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
-            this.imageRecipeArn = imageRecipeArn;
+            $.imageRecipeArn = imageRecipeArn;
             return this;
         }
-        public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
-            this.imageRecipeArn = Codegen.ofNullable(imageRecipeArn);
-            return this;
+
+        public Builder imageRecipeArn(String imageRecipeArn) {
+            return imageRecipeArn(Output.of(imageRecipeArn));
         }
+
         public Builder imageTestsConfiguration(@Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration) {
-            this.imageTestsConfiguration = imageTestsConfiguration;
+            $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
-        public Builder imageTestsConfiguration(@Nullable ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Codegen.ofNullable(imageTestsConfiguration);
-            return this;
+
+        public Builder imageTestsConfiguration(ImageImageTestsConfigurationGetArgs imageTestsConfiguration) {
+            return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
+
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+            $.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
-        public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Codegen.ofNullable(infrastructureConfigurationArn);
-            return this;
+
+        public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
+            return infrastructureConfigurationArn(Output.of(infrastructureConfigurationArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osVersion(@Nullable Output<String> osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
-        public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Codegen.ofNullable(osVersion);
-            return this;
+
+        public Builder osVersion(String osVersion) {
+            return osVersion(Output.of(osVersion));
         }
+
         public Builder outputResources(@Nullable Output<List<ImageOutputResourceGetArgs>> outputResources) {
-            this.outputResources = outputResources;
+            $.outputResources = outputResources;
             return this;
         }
-        public Builder outputResources(@Nullable List<ImageOutputResourceGetArgs> outputResources) {
-            this.outputResources = Codegen.ofNullable(outputResources);
-            return this;
+
+        public Builder outputResources(List<ImageOutputResourceGetArgs> outputResources) {
+            return outputResources(Output.of(outputResources));
         }
+
         public Builder outputResources(ImageOutputResourceGetArgs... outputResources) {
             return outputResources(List.of(outputResources));
         }
+
         public Builder platform(@Nullable Output<String> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable String platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(String platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ImageState build() {
-            return new ImageState(arn, dateCreated, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, name, osVersion, outputResources, platform, tags, tagsAll, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ImageState build() {
+            return $;
         }
     }
+
 }

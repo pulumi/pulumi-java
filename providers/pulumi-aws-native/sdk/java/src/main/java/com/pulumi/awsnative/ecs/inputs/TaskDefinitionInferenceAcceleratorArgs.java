@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends com.pulumi.res
     public static final TaskDefinitionInferenceAcceleratorArgs Empty = new TaskDefinitionInferenceAcceleratorArgs();
 
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     @Import(name="deviceType")
-      private final @Nullable Output<String> deviceType;
+    private @Nullable Output<String> deviceType;
 
-    public Output<String> deviceType() {
-        return this.deviceType == null ? Codegen.empty() : this.deviceType;
+    public Optional<Output<String>> deviceType() {
+        return Optional.ofNullable(this.deviceType);
     }
 
-    public TaskDefinitionInferenceAcceleratorArgs(
-        @Nullable Output<String> deviceName,
-        @Nullable Output<String> deviceType) {
-        this.deviceName = deviceName;
-        this.deviceType = deviceType;
-    }
+    private TaskDefinitionInferenceAcceleratorArgs() {}
 
-    private TaskDefinitionInferenceAcceleratorArgs() {
-        this.deviceName = Codegen.empty();
-        this.deviceType = Codegen.empty();
+    private TaskDefinitionInferenceAcceleratorArgs(TaskDefinitionInferenceAcceleratorArgs $) {
+        this.deviceName = $.deviceName;
+        this.deviceType = $.deviceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionInferenceAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<String> deviceType;
+        private TaskDefinitionInferenceAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionInferenceAcceleratorArgs();
         }
 
         public Builder(TaskDefinitionInferenceAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.deviceType = defaults.deviceType;
+            $ = new TaskDefinitionInferenceAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder deviceType(@Nullable Output<String> deviceType) {
-            this.deviceType = deviceType;
+            $.deviceType = deviceType;
             return this;
         }
-        public Builder deviceType(@Nullable String deviceType) {
-            this.deviceType = Codegen.ofNullable(deviceType);
-            return this;
-        }        public TaskDefinitionInferenceAcceleratorArgs build() {
-            return new TaskDefinitionInferenceAcceleratorArgs(deviceName, deviceType);
+
+        public Builder deviceType(String deviceType) {
+            return deviceType(Output.of(deviceType));
+        }
+
+        public TaskDefinitionInferenceAcceleratorArgs build() {
+            return $;
         }
     }
+
 }

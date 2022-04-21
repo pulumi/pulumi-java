@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DistributedNodesInfoArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="nodeName")
-      private final @Nullable Output<String> nodeName;
+    private @Nullable Output<String> nodeName;
 
-    public Output<String> nodeName() {
-        return this.nodeName == null ? Codegen.empty() : this.nodeName;
+    public Optional<Output<String>> nodeName() {
+        return Optional.ofNullable(this.nodeName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DistributedNodesInfoArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public DistributedNodesInfoArgs(
-        @Nullable Output<String> nodeName,
-        @Nullable Output<String> status) {
-        this.nodeName = nodeName;
-        this.status = status;
-    }
+    private DistributedNodesInfoArgs() {}
 
-    private DistributedNodesInfoArgs() {
-        this.nodeName = Codegen.empty();
-        this.status = Codegen.empty();
+    private DistributedNodesInfoArgs(DistributedNodesInfoArgs $) {
+        this.nodeName = $.nodeName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributedNodesInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nodeName;
-        private @Nullable Output<String> status;
+        private DistributedNodesInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributedNodesInfoArgs();
         }
 
         public Builder(DistributedNodesInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeName = defaults.nodeName;
-    	      this.status = defaults.status;
+            $ = new DistributedNodesInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeName(@Nullable Output<String> nodeName) {
-            this.nodeName = nodeName;
+            $.nodeName = nodeName;
             return this;
         }
-        public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Codegen.ofNullable(nodeName);
-            return this;
+
+        public Builder nodeName(String nodeName) {
+            return nodeName(Output.of(nodeName));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public DistributedNodesInfoArgs build() {
-            return new DistributedNodesInfoArgs(nodeName, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public DistributedNodesInfoArgs build() {
+            return $;
         }
     }
+
 }

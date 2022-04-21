@@ -5,9 +5,9 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends com.
      * 
      */
     @Import(name="maxConnections", required=true)
-      private final Output<Integer> maxConnections;
+    private Output<Integer> maxConnections;
 
     public Output<Integer> maxConnections() {
         return this.maxConnections;
@@ -31,63 +31,59 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends com.
      * 
      */
     @Import(name="maxPendingRequests")
-      private final @Nullable Output<Integer> maxPendingRequests;
+    private @Nullable Output<Integer> maxPendingRequests;
 
-    public Output<Integer> maxPendingRequests() {
-        return this.maxPendingRequests == null ? Codegen.empty() : this.maxPendingRequests;
+    public Optional<Output<Integer>> maxPendingRequests() {
+        return Optional.ofNullable(this.maxPendingRequests);
     }
 
-    public VirtualNodeSpecListenerConnectionPoolHttpGetArgs(
-        Output<Integer> maxConnections,
-        @Nullable Output<Integer> maxPendingRequests) {
-        this.maxConnections = Objects.requireNonNull(maxConnections, "expected parameter 'maxConnections' to be non-null");
-        this.maxPendingRequests = maxPendingRequests;
-    }
+    private VirtualNodeSpecListenerConnectionPoolHttpGetArgs() {}
 
-    private VirtualNodeSpecListenerConnectionPoolHttpGetArgs() {
-        this.maxConnections = Codegen.empty();
-        this.maxPendingRequests = Codegen.empty();
+    private VirtualNodeSpecListenerConnectionPoolHttpGetArgs(VirtualNodeSpecListenerConnectionPoolHttpGetArgs $) {
+        this.maxConnections = $.maxConnections;
+        this.maxPendingRequests = $.maxPendingRequests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerConnectionPoolHttpGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxConnections;
-        private @Nullable Output<Integer> maxPendingRequests;
+        private VirtualNodeSpecListenerConnectionPoolHttpGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerConnectionPoolHttpGetArgs();
         }
 
         public Builder(VirtualNodeSpecListenerConnectionPoolHttpGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxConnections = defaults.maxConnections;
-    	      this.maxPendingRequests = defaults.maxPendingRequests;
+            $ = new VirtualNodeSpecListenerConnectionPoolHttpGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxConnections(Output<Integer> maxConnections) {
-            this.maxConnections = Objects.requireNonNull(maxConnections);
+            $.maxConnections = maxConnections;
             return this;
         }
+
         public Builder maxConnections(Integer maxConnections) {
-            this.maxConnections = Output.of(Objects.requireNonNull(maxConnections));
-            return this;
+            return maxConnections(Output.of(maxConnections));
         }
+
         public Builder maxPendingRequests(@Nullable Output<Integer> maxPendingRequests) {
-            this.maxPendingRequests = maxPendingRequests;
+            $.maxPendingRequests = maxPendingRequests;
             return this;
         }
-        public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
-            this.maxPendingRequests = Codegen.ofNullable(maxPendingRequests);
-            return this;
-        }        public VirtualNodeSpecListenerConnectionPoolHttpGetArgs build() {
-            return new VirtualNodeSpecListenerConnectionPoolHttpGetArgs(maxConnections, maxPendingRequests);
+
+        public Builder maxPendingRequests(Integer maxPendingRequests) {
+            return maxPendingRequests(Output.of(maxPendingRequests));
+        }
+
+        public VirtualNodeSpecListenerConnectionPoolHttpGetArgs build() {
+            $.maxConnections = Objects.requireNonNull($.maxConnections, "expected parameter 'maxConnections' to be non-null");
+            return $;
         }
     }
+
 }

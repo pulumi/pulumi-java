@@ -17,7 +17,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
      * 
      */
     @Import(name="guestConfigurationAssignmentName", required=true)
-      private final String guestConfigurationAssignmentName;
+    private String guestConfigurationAssignmentName;
 
     public String guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
@@ -28,7 +28,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
      * 
      */
     @Import(name="machineName", required=true)
-      private final String machineName;
+    private String machineName;
 
     public String machineName() {
         return this.machineName;
@@ -39,64 +39,59 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGuestConfigurationHCRPAssignmentArgs(
-        String guestConfigurationAssignmentName,
-        String machineName,
-        String resourceGroupName) {
-        this.guestConfigurationAssignmentName = Objects.requireNonNull(guestConfigurationAssignmentName, "expected parameter 'guestConfigurationAssignmentName' to be non-null");
-        this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGuestConfigurationHCRPAssignmentArgs() {}
 
-    private GetGuestConfigurationHCRPAssignmentArgs() {
-        this.guestConfigurationAssignmentName = null;
-        this.machineName = null;
-        this.resourceGroupName = null;
+    private GetGuestConfigurationHCRPAssignmentArgs(GetGuestConfigurationHCRPAssignmentArgs $) {
+        this.guestConfigurationAssignmentName = $.guestConfigurationAssignmentName;
+        this.machineName = $.machineName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGuestConfigurationHCRPAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String guestConfigurationAssignmentName;
-        private String machineName;
-        private String resourceGroupName;
+        private GetGuestConfigurationHCRPAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGuestConfigurationHCRPAssignmentArgs();
         }
 
         public Builder(GetGuestConfigurationHCRPAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestConfigurationAssignmentName = defaults.guestConfigurationAssignmentName;
-    	      this.machineName = defaults.machineName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGuestConfigurationHCRPAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
-            this.guestConfigurationAssignmentName = Objects.requireNonNull(guestConfigurationAssignmentName);
+            $.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
+
         public Builder machineName(String machineName) {
-            this.machineName = Objects.requireNonNull(machineName);
+            $.machineName = machineName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGuestConfigurationHCRPAssignmentArgs build() {
-            return new GetGuestConfigurationHCRPAssignmentArgs(guestConfigurationAssignmentName, machineName, resourceGroupName);
+        }
+
+        public GetGuestConfigurationHCRPAssignmentArgs build() {
+            $.guestConfigurationAssignmentName = Objects.requireNonNull($.guestConfigurationAssignmentName, "expected parameter 'guestConfigurationAssignmentName' to be non-null");
+            $.machineName = Objects.requireNonNull($.machineName, "expected parameter 'machineName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

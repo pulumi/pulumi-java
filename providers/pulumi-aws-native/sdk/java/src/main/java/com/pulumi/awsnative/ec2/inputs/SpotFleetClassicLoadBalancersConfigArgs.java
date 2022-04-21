@@ -6,7 +6,6 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.inputs.SpotFleetClassicLoadBalancerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class SpotFleetClassicLoadBalancersConfigArgs extends com.pulumi.re
     public static final SpotFleetClassicLoadBalancersConfigArgs Empty = new SpotFleetClassicLoadBalancersConfigArgs();
 
     @Import(name="classicLoadBalancers", required=true)
-      private final Output<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers;
+    private Output<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers;
 
     public Output<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers() {
         return this.classicLoadBalancers;
     }
 
-    public SpotFleetClassicLoadBalancersConfigArgs(Output<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers) {
-        this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers, "expected parameter 'classicLoadBalancers' to be non-null");
-    }
+    private SpotFleetClassicLoadBalancersConfigArgs() {}
 
-    private SpotFleetClassicLoadBalancersConfigArgs() {
-        this.classicLoadBalancers = Codegen.empty();
+    private SpotFleetClassicLoadBalancersConfigArgs(SpotFleetClassicLoadBalancersConfigArgs $) {
+        this.classicLoadBalancers = $.classicLoadBalancers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetClassicLoadBalancersConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers;
+        private SpotFleetClassicLoadBalancersConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetClassicLoadBalancersConfigArgs();
         }
 
         public Builder(SpotFleetClassicLoadBalancersConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classicLoadBalancers = defaults.classicLoadBalancers;
+            $ = new SpotFleetClassicLoadBalancersConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classicLoadBalancers(Output<List<SpotFleetClassicLoadBalancerArgs>> classicLoadBalancers) {
-            this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
+            $.classicLoadBalancers = classicLoadBalancers;
             return this;
         }
+
         public Builder classicLoadBalancers(List<SpotFleetClassicLoadBalancerArgs> classicLoadBalancers) {
-            this.classicLoadBalancers = Output.of(Objects.requireNonNull(classicLoadBalancers));
-            return this;
+            return classicLoadBalancers(Output.of(classicLoadBalancers));
         }
+
         public Builder classicLoadBalancers(SpotFleetClassicLoadBalancerArgs... classicLoadBalancers) {
             return classicLoadBalancers(List.of(classicLoadBalancers));
-        }        public SpotFleetClassicLoadBalancersConfigArgs build() {
-            return new SpotFleetClassicLoadBalancersConfigArgs(classicLoadBalancers);
+        }
+
+        public SpotFleetClassicLoadBalancersConfigArgs build() {
+            $.classicLoadBalancers = Objects.requireNonNull($.classicLoadBalancers, "expected parameter 'classicLoadBalancers' to be non-null");
+            return $;
         }
     }
+
 }

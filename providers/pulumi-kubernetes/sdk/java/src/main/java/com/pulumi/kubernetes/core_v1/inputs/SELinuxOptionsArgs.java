@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SELinuxOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<String> level;
+    private @Nullable Output<String> level;
 
-    public Output<String> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<String>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SELinuxOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SELinuxOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class SELinuxOptionsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public SELinuxOptionsArgs(
-        @Nullable Output<String> level,
-        @Nullable Output<String> role,
-        @Nullable Output<String> type,
-        @Nullable Output<String> user) {
-        this.level = level;
-        this.role = role;
-        this.type = type;
-        this.user = user;
-    }
+    private SELinuxOptionsArgs() {}
 
-    private SELinuxOptionsArgs() {
-        this.level = Codegen.empty();
-        this.role = Codegen.empty();
-        this.type = Codegen.empty();
-        this.user = Codegen.empty();
+    private SELinuxOptionsArgs(SELinuxOptionsArgs $) {
+        this.level = $.level;
+        this.role = $.role;
+        this.type = $.type;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SELinuxOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> level;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> user;
+        private SELinuxOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SELinuxOptionsArgs();
         }
 
         public Builder(SELinuxOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.role = defaults.role;
-    	      this.type = defaults.type;
-    	      this.user = defaults.user;
+            $ = new SELinuxOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable Output<String> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable String level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(String level) {
+            return level(Output.of(level));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public SELinuxOptionsArgs build() {
-            return new SELinuxOptionsArgs(level, role, type, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public SELinuxOptionsArgs build() {
+            return $;
         }
     }
+
 }

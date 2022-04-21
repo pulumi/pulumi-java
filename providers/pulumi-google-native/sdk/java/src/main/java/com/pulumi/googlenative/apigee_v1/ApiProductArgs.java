@@ -5,13 +5,13 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationGroupArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationGroupArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApiProductArgs Empty = new ApiProductArgs();
 
     @Import(name="apiResources")
-      private final @Nullable Output<List<String>> apiResources;
+    private @Nullable Output<List<String>> apiResources;
 
-    public Output<List<String>> apiResources() {
-        return this.apiResources == null ? Codegen.empty() : this.apiResources;
+    public Optional<Output<List<String>>> apiResources() {
+        return Optional.ofNullable(this.apiResources);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvalType")
-      private final @Nullable Output<String> approvalType;
+    private @Nullable Output<String> approvalType;
 
-    public Output<String> approvalType() {
-        return this.approvalType == null ? Codegen.empty() : this.approvalType;
+    public Optional<Output<String>> approvalType() {
+        return Optional.ofNullable(this.approvalType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+    private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environments")
-      private final @Nullable Output<List<String>> environments;
+    private @Nullable Output<List<String>> environments;
 
-    public Output<List<String>> environments() {
-        return this.environments == null ? Codegen.empty() : this.environments;
+    public Optional<Output<List<String>>> environments() {
+        return Optional.ofNullable(this.environments);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="graphqlOperationGroup")
-      private final @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
+    private @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
 
-    public Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup() {
-        return this.graphqlOperationGroup == null ? Codegen.empty() : this.graphqlOperationGroup;
+    public Optional<Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs>> graphqlOperationGroup() {
+        return Optional.ofNullable(this.graphqlOperationGroup);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedAt")
-      private final @Nullable Output<String> lastModifiedAt;
+    private @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> lastModifiedAt() {
-        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
+    public Optional<Output<String>> lastModifiedAt() {
+        return Optional.ofNullable(this.lastModifiedAt);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -130,14 +130,14 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationGroup")
-      private final @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
+    private @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
 
-    public Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup() {
-        return this.operationGroup == null ? Codegen.empty() : this.operationGroup;
+    public Optional<Output<GoogleCloudApigeeV1OperationGroupArgs>> operationGroup() {
+        return Optional.ofNullable(this.operationGroup);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -148,10 +148,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxies")
-      private final @Nullable Output<List<String>> proxies;
+    private @Nullable Output<List<String>> proxies;
 
-    public Output<List<String>> proxies() {
-        return this.proxies == null ? Codegen.empty() : this.proxies;
+    public Optional<Output<List<String>>> proxies() {
+        return Optional.ofNullable(this.proxies);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quota")
-      private final @Nullable Output<String> quota;
+    private @Nullable Output<String> quota;
 
-    public Output<String> quota() {
-        return this.quota == null ? Codegen.empty() : this.quota;
+    public Optional<Output<String>> quota() {
+        return Optional.ofNullable(this.quota);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quotaInterval")
-      private final @Nullable Output<String> quotaInterval;
+    private @Nullable Output<String> quotaInterval;
 
-    public Output<String> quotaInterval() {
-        return this.quotaInterval == null ? Codegen.empty() : this.quotaInterval;
+    public Optional<Output<String>> quotaInterval() {
+        return Optional.ofNullable(this.quotaInterval);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quotaTimeUnit")
-      private final @Nullable Output<String> quotaTimeUnit;
+    private @Nullable Output<String> quotaTimeUnit;
 
-    public Output<String> quotaTimeUnit() {
-        return this.quotaTimeUnit == null ? Codegen.empty() : this.quotaTimeUnit;
+    public Optional<Output<String>> quotaTimeUnit() {
+        return Optional.ofNullable(this.quotaTimeUnit);
     }
 
     /**
@@ -192,273 +192,229 @@ public final class ApiProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<String>> scopes;
+    private @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<String>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
-    public ApiProductArgs(
-        @Nullable Output<List<String>> apiResources,
-        @Nullable Output<String> approvalType,
-        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<String>> environments,
-        @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup,
-        @Nullable Output<String> lastModifiedAt,
-        @Nullable Output<String> name,
-        @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup,
-        Output<String> organizationId,
-        @Nullable Output<List<String>> proxies,
-        @Nullable Output<String> quota,
-        @Nullable Output<String> quotaInterval,
-        @Nullable Output<String> quotaTimeUnit,
-        @Nullable Output<List<String>> scopes) {
-        this.apiResources = apiResources;
-        this.approvalType = approvalType;
-        this.attributes = attributes;
-        this.createdAt = createdAt;
-        this.description = description;
-        this.displayName = displayName;
-        this.environments = environments;
-        this.graphqlOperationGroup = graphqlOperationGroup;
-        this.lastModifiedAt = lastModifiedAt;
-        this.name = name;
-        this.operationGroup = operationGroup;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.proxies = proxies;
-        this.quota = quota;
-        this.quotaInterval = quotaInterval;
-        this.quotaTimeUnit = quotaTimeUnit;
-        this.scopes = scopes;
-    }
+    private ApiProductArgs() {}
 
-    private ApiProductArgs() {
-        this.apiResources = Codegen.empty();
-        this.approvalType = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.environments = Codegen.empty();
-        this.graphqlOperationGroup = Codegen.empty();
-        this.lastModifiedAt = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operationGroup = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.proxies = Codegen.empty();
-        this.quota = Codegen.empty();
-        this.quotaInterval = Codegen.empty();
-        this.quotaTimeUnit = Codegen.empty();
-        this.scopes = Codegen.empty();
+    private ApiProductArgs(ApiProductArgs $) {
+        this.apiResources = $.apiResources;
+        this.approvalType = $.approvalType;
+        this.attributes = $.attributes;
+        this.createdAt = $.createdAt;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.environments = $.environments;
+        this.graphqlOperationGroup = $.graphqlOperationGroup;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.name = $.name;
+        this.operationGroup = $.operationGroup;
+        this.organizationId = $.organizationId;
+        this.proxies = $.proxies;
+        this.quota = $.quota;
+        this.quotaInterval = $.quotaInterval;
+        this.quotaTimeUnit = $.quotaTimeUnit;
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> apiResources;
-        private @Nullable Output<String> approvalType;
-        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<String>> environments;
-        private @Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup;
-        private @Nullable Output<String> lastModifiedAt;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup;
-        private Output<String> organizationId;
-        private @Nullable Output<List<String>> proxies;
-        private @Nullable Output<String> quota;
-        private @Nullable Output<String> quotaInterval;
-        private @Nullable Output<String> quotaTimeUnit;
-        private @Nullable Output<List<String>> scopes;
+        private ApiProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiProductArgs();
         }
 
         public Builder(ApiProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiResources = defaults.apiResources;
-    	      this.approvalType = defaults.approvalType;
-    	      this.attributes = defaults.attributes;
-    	      this.createdAt = defaults.createdAt;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.environments = defaults.environments;
-    	      this.graphqlOperationGroup = defaults.graphqlOperationGroup;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.name = defaults.name;
-    	      this.operationGroup = defaults.operationGroup;
-    	      this.organizationId = defaults.organizationId;
-    	      this.proxies = defaults.proxies;
-    	      this.quota = defaults.quota;
-    	      this.quotaInterval = defaults.quotaInterval;
-    	      this.quotaTimeUnit = defaults.quotaTimeUnit;
-    	      this.scopes = defaults.scopes;
+            $ = new ApiProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiResources(@Nullable Output<List<String>> apiResources) {
-            this.apiResources = apiResources;
+            $.apiResources = apiResources;
             return this;
         }
-        public Builder apiResources(@Nullable List<String> apiResources) {
-            this.apiResources = Codegen.ofNullable(apiResources);
-            return this;
+
+        public Builder apiResources(List<String> apiResources) {
+            return apiResources(Output.of(apiResources));
         }
+
         public Builder apiResources(String... apiResources) {
             return apiResources(List.of(apiResources));
         }
+
         public Builder approvalType(@Nullable Output<String> approvalType) {
-            this.approvalType = approvalType;
+            $.approvalType = approvalType;
             return this;
         }
-        public Builder approvalType(@Nullable String approvalType) {
-            this.approvalType = Codegen.ofNullable(approvalType);
-            return this;
+
+        public Builder approvalType(String approvalType) {
+            return approvalType(Output.of(approvalType));
         }
+
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder environments(@Nullable Output<List<String>> environments) {
-            this.environments = environments;
+            $.environments = environments;
             return this;
         }
-        public Builder environments(@Nullable List<String> environments) {
-            this.environments = Codegen.ofNullable(environments);
-            return this;
+
+        public Builder environments(List<String> environments) {
+            return environments(Output.of(environments));
         }
+
         public Builder environments(String... environments) {
             return environments(List.of(environments));
         }
+
         public Builder graphqlOperationGroup(@Nullable Output<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup) {
-            this.graphqlOperationGroup = graphqlOperationGroup;
+            $.graphqlOperationGroup = graphqlOperationGroup;
             return this;
         }
-        public Builder graphqlOperationGroup(@Nullable GoogleCloudApigeeV1GraphQLOperationGroupArgs graphqlOperationGroup) {
-            this.graphqlOperationGroup = Codegen.ofNullable(graphqlOperationGroup);
-            return this;
+
+        public Builder graphqlOperationGroup(GoogleCloudApigeeV1GraphQLOperationGroupArgs graphqlOperationGroup) {
+            return graphqlOperationGroup(Output.of(graphqlOperationGroup));
         }
+
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
-            this.lastModifiedAt = lastModifiedAt;
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
-        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
-            return this;
+
+        public Builder lastModifiedAt(String lastModifiedAt) {
+            return lastModifiedAt(Output.of(lastModifiedAt));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder operationGroup(@Nullable Output<GoogleCloudApigeeV1OperationGroupArgs> operationGroup) {
-            this.operationGroup = operationGroup;
+            $.operationGroup = operationGroup;
             return this;
         }
-        public Builder operationGroup(@Nullable GoogleCloudApigeeV1OperationGroupArgs operationGroup) {
-            this.operationGroup = Codegen.ofNullable(operationGroup);
-            return this;
+
+        public Builder operationGroup(GoogleCloudApigeeV1OperationGroupArgs operationGroup) {
+            return operationGroup(Output.of(operationGroup));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder proxies(@Nullable Output<List<String>> proxies) {
-            this.proxies = proxies;
+            $.proxies = proxies;
             return this;
         }
-        public Builder proxies(@Nullable List<String> proxies) {
-            this.proxies = Codegen.ofNullable(proxies);
-            return this;
+
+        public Builder proxies(List<String> proxies) {
+            return proxies(Output.of(proxies));
         }
+
         public Builder proxies(String... proxies) {
             return proxies(List.of(proxies));
         }
+
         public Builder quota(@Nullable Output<String> quota) {
-            this.quota = quota;
+            $.quota = quota;
             return this;
         }
-        public Builder quota(@Nullable String quota) {
-            this.quota = Codegen.ofNullable(quota);
-            return this;
+
+        public Builder quota(String quota) {
+            return quota(Output.of(quota));
         }
+
         public Builder quotaInterval(@Nullable Output<String> quotaInterval) {
-            this.quotaInterval = quotaInterval;
+            $.quotaInterval = quotaInterval;
             return this;
         }
-        public Builder quotaInterval(@Nullable String quotaInterval) {
-            this.quotaInterval = Codegen.ofNullable(quotaInterval);
-            return this;
+
+        public Builder quotaInterval(String quotaInterval) {
+            return quotaInterval(Output.of(quotaInterval));
         }
+
         public Builder quotaTimeUnit(@Nullable Output<String> quotaTimeUnit) {
-            this.quotaTimeUnit = quotaTimeUnit;
+            $.quotaTimeUnit = quotaTimeUnit;
             return this;
         }
-        public Builder quotaTimeUnit(@Nullable String quotaTimeUnit) {
-            this.quotaTimeUnit = Codegen.ofNullable(quotaTimeUnit);
-            return this;
+
+        public Builder quotaTimeUnit(String quotaTimeUnit) {
+            return quotaTimeUnit(Output.of(quotaTimeUnit));
         }
+
         public Builder scopes(@Nullable Output<List<String>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<String> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public ApiProductArgs build() {
-            return new ApiProductArgs(apiResources, approvalType, attributes, createdAt, description, displayName, environments, graphqlOperationGroup, lastModifiedAt, name, operationGroup, organizationId, proxies, quota, quotaInterval, quotaTimeUnit, scopes);
+        }
+
+        public ApiProductArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

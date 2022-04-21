@@ -16,62 +16,58 @@ public final class JobDatabaseTableOutputOptions extends com.pulumi.resources.In
     public static final JobDatabaseTableOutputOptions Empty = new JobDatabaseTableOutputOptions();
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable JobS3Location tempDirectory;
+    private @Nullable JobS3Location tempDirectory;
 
     public Optional<JobS3Location> tempDirectory() {
-        return this.tempDirectory == null ? Optional.empty() : Optional.ofNullable(this.tempDirectory);
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public JobDatabaseTableOutputOptions(
-        String tableName,
-        @Nullable JobS3Location tempDirectory) {
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.tempDirectory = tempDirectory;
-    }
+    private JobDatabaseTableOutputOptions() {}
 
-    private JobDatabaseTableOutputOptions() {
-        this.tableName = null;
-        this.tempDirectory = null;
+    private JobDatabaseTableOutputOptions(JobDatabaseTableOutputOptions $) {
+        this.tableName = $.tableName;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDatabaseTableOutputOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tableName;
-        private @Nullable JobS3Location tempDirectory;
+        private JobDatabaseTableOutputOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDatabaseTableOutputOptions();
         }
 
         public Builder(JobDatabaseTableOutputOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableName = defaults.tableName;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new JobDatabaseTableOutputOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tempDirectory(@Nullable JobS3Location tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
-        }        public JobDatabaseTableOutputOptions build() {
-            return new JobDatabaseTableOutputOptions(tableName, tempDirectory);
+        }
+
+        public JobDatabaseTableOutputOptions build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="osFamily", required=true)
-      private final Output<String> osFamily;
+    private Output<String> osFamily;
 
     public Output<String> osFamily() {
         return this.osFamily;
@@ -31,63 +31,59 @@ public final class CloudServiceConfigurationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable Output<String> osVersion;
+    private @Nullable Output<String> osVersion;
 
-    public Output<String> osVersion() {
-        return this.osVersion == null ? Codegen.empty() : this.osVersion;
+    public Optional<Output<String>> osVersion() {
+        return Optional.ofNullable(this.osVersion);
     }
 
-    public CloudServiceConfigurationArgs(
-        Output<String> osFamily,
-        @Nullable Output<String> osVersion) {
-        this.osFamily = Objects.requireNonNull(osFamily, "expected parameter 'osFamily' to be non-null");
-        this.osVersion = osVersion;
-    }
+    private CloudServiceConfigurationArgs() {}
 
-    private CloudServiceConfigurationArgs() {
-        this.osFamily = Codegen.empty();
-        this.osVersion = Codegen.empty();
+    private CloudServiceConfigurationArgs(CloudServiceConfigurationArgs $) {
+        this.osFamily = $.osFamily;
+        this.osVersion = $.osVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> osFamily;
-        private @Nullable Output<String> osVersion;
+        private CloudServiceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceConfigurationArgs();
         }
 
         public Builder(CloudServiceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osFamily = defaults.osFamily;
-    	      this.osVersion = defaults.osVersion;
+            $ = new CloudServiceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder osFamily(Output<String> osFamily) {
-            this.osFamily = Objects.requireNonNull(osFamily);
+            $.osFamily = osFamily;
             return this;
         }
+
         public Builder osFamily(String osFamily) {
-            this.osFamily = Output.of(Objects.requireNonNull(osFamily));
-            return this;
+            return osFamily(Output.of(osFamily));
         }
+
         public Builder osVersion(@Nullable Output<String> osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
-        public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Codegen.ofNullable(osVersion);
-            return this;
-        }        public CloudServiceConfigurationArgs build() {
-            return new CloudServiceConfigurationArgs(osFamily, osVersion);
+
+        public Builder osVersion(String osVersion) {
+            return osVersion(Output.of(osVersion));
+        }
+
+        public CloudServiceConfigurationArgs build() {
+            $.osFamily = Objects.requireNonNull($.osFamily, "expected parameter 'osFamily' to be non-null");
+            return $;
         }
     }
+
 }

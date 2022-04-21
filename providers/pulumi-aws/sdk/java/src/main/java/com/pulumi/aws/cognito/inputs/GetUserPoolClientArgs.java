@@ -17,7 +17,7 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -28,55 +28,52 @@ public final class GetUserPoolClientArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="userPoolId", required=true)
-      private final String userPoolId;
+    private String userPoolId;
 
     public String userPoolId() {
         return this.userPoolId;
     }
 
-    public GetUserPoolClientArgs(
-        String clientId,
-        String userPoolId) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.userPoolId = Objects.requireNonNull(userPoolId, "expected parameter 'userPoolId' to be non-null");
-    }
+    private GetUserPoolClientArgs() {}
 
-    private GetUserPoolClientArgs() {
-        this.clientId = null;
-        this.userPoolId = null;
+    private GetUserPoolClientArgs(GetUserPoolClientArgs $) {
+        this.clientId = $.clientId;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserPoolClientArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private String userPoolId;
+        private GetUserPoolClientArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserPoolClientArgs();
         }
 
         public Builder(GetUserPoolClientArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new GetUserPoolClientArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder userPoolId(String userPoolId) {
-            this.userPoolId = Objects.requireNonNull(userPoolId);
+            $.userPoolId = userPoolId;
             return this;
-        }        public GetUserPoolClientArgs build() {
-            return new GetUserPoolClientArgs(clientId, userPoolId);
+        }
+
+        public GetUserPoolClientArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.userPoolId = Objects.requireNonNull($.userPoolId, "expected parameter 'userPoolId' to be non-null");
+            return $;
         }
     }
+
 }

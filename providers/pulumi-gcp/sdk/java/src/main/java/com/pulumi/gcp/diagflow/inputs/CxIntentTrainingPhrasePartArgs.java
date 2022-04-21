@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CxIntentTrainingPhrasePartArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="parameterId")
-      private final @Nullable Output<String> parameterId;
+    private @Nullable Output<String> parameterId;
 
-    public Output<String> parameterId() {
-        return this.parameterId == null ? Codegen.empty() : this.parameterId;
+    public Optional<Output<String>> parameterId() {
+        return Optional.ofNullable(this.parameterId);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class CxIntentTrainingPhrasePartArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="text", required=true)
-      private final Output<String> text;
+    private Output<String> text;
 
     public Output<String> text() {
         return this.text;
     }
 
-    public CxIntentTrainingPhrasePartArgs(
-        @Nullable Output<String> parameterId,
-        Output<String> text) {
-        this.parameterId = parameterId;
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private CxIntentTrainingPhrasePartArgs() {}
 
-    private CxIntentTrainingPhrasePartArgs() {
-        this.parameterId = Codegen.empty();
-        this.text = Codegen.empty();
+    private CxIntentTrainingPhrasePartArgs(CxIntentTrainingPhrasePartArgs $) {
+        this.parameterId = $.parameterId;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxIntentTrainingPhrasePartArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> parameterId;
-        private Output<String> text;
+        private CxIntentTrainingPhrasePartArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxIntentTrainingPhrasePartArgs();
         }
 
         public Builder(CxIntentTrainingPhrasePartArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterId = defaults.parameterId;
-    	      this.text = defaults.text;
+            $ = new CxIntentTrainingPhrasePartArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterId(@Nullable Output<String> parameterId) {
-            this.parameterId = parameterId;
+            $.parameterId = parameterId;
             return this;
         }
-        public Builder parameterId(@Nullable String parameterId) {
-            this.parameterId = Codegen.ofNullable(parameterId);
-            return this;
+
+        public Builder parameterId(String parameterId) {
+            return parameterId(Output.of(parameterId));
         }
+
         public Builder text(Output<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Output.of(Objects.requireNonNull(text));
-            return this;
-        }        public CxIntentTrainingPhrasePartArgs build() {
-            return new CxIntentTrainingPhrasePartArgs(parameterId, text);
+            return text(Output.of(text));
+        }
+
+        public CxIntentTrainingPhrasePartArgs build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

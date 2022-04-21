@@ -23,7 +23,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
+    private List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
 
     public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
@@ -34,7 +34,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
+    private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -45,67 +45,63 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
+    private PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(
-        List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases,
-        PostgreSqlConnectionInfoResponse sourceConnectionInfo,
-        PostgreSqlConnectionInfoResponse targetConnectionInfo) {
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse() {}
 
-    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse() {
-        this.selectedDatabases = List.of();
-        this.sourceConnectionInfo = null;
-        this.targetConnectionInfo = null;
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse $) {
+        this.selectedDatabases = $.selectedDatabases;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
-        private PostgreSqlConnectionInfoResponse sourceConnectionInfo;
-        private PostgreSqlConnectionInfoResponse targetConnectionInfo;
+        private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse();
         }
 
         public Builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder selectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse build() {
-            return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo);
+        }
+
+        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse build() {
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

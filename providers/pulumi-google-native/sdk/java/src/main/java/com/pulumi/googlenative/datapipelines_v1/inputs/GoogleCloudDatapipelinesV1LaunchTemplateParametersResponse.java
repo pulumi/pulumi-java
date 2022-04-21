@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @Import(name="environment", required=true)
-      private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
+    private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
 
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment() {
         return this.environment;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @Import(name="parameters", required=true)
-      private final Map<String,String> parameters;
+    private Map<String,String> parameters;
 
     public Map<String,String> parameters() {
         return this.parameters;
@@ -57,7 +57,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @Import(name="transformNameMapping", required=true)
-      private final Map<String,String> transformNameMapping;
+    private Map<String,String> transformNameMapping;
 
     public Map<String,String> transformNameMapping() {
         return this.transformNameMapping;
@@ -68,82 +68,73 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * 
      */
     @Import(name="update", required=true)
-      private final Boolean update;
+    private Boolean update;
 
     public Boolean update() {
         return this.update;
     }
 
-    public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(
-        GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
-        String jobName,
-        Map<String,String> parameters,
-        Map<String,String> transformNameMapping,
-        Boolean update) {
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.transformNameMapping = Objects.requireNonNull(transformNameMapping, "expected parameter 'transformNameMapping' to be non-null");
-        this.update = Objects.requireNonNull(update, "expected parameter 'update' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse() {}
 
-    private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse() {
-        this.environment = null;
-        this.jobName = null;
-        this.parameters = Map.of();
-        this.transformNameMapping = Map.of();
-        this.update = null;
+    private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse $) {
+        this.environment = $.environment;
+        this.jobName = $.jobName;
+        this.parameters = $.parameters;
+        this.transformNameMapping = $.transformNameMapping;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
-        private String jobName;
-        private Map<String,String> parameters;
-        private Map<String,String> transformNameMapping;
-        private Boolean update;
+        private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.jobName = defaults.jobName;
-    	      this.parameters = defaults.parameters;
-    	      this.transformNameMapping = defaults.transformNameMapping;
-    	      this.update = defaults.update;
+            $ = new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder parameters(Map<String,String> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder transformNameMapping(Map<String,String> transformNameMapping) {
-            this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
+            $.transformNameMapping = transformNameMapping;
             return this;
         }
+
         public Builder update(Boolean update) {
-            this.update = Objects.requireNonNull(update);
+            $.update = update;
             return this;
-        }        public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
-            return new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(environment, jobName, parameters, transformNameMapping, update);
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.transformNameMapping = Objects.requireNonNull($.transformNameMapping, "expected parameter 'transformNameMapping' to be non-null");
+            $.update = Objects.requireNonNull($.update, "expected parameter 'update' to be non-null");
+            return $;
         }
     }
+
 }

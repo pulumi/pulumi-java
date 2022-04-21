@@ -7,8 +7,8 @@ import com.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfig
 import com.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamKMSEncryptionConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends com.pulumi.
     public static final DeliveryStreamEncryptionConfigurationArgs Empty = new DeliveryStreamEncryptionConfigurationArgs();
 
     @Import(name="kMSEncryptionConfig")
-      private final @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
+    private @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
 
-    public Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig() {
-        return this.kMSEncryptionConfig == null ? Codegen.empty() : this.kMSEncryptionConfig;
+    public Optional<Output<DeliveryStreamKMSEncryptionConfigArgs>> kMSEncryptionConfig() {
+        return Optional.ofNullable(this.kMSEncryptionConfig);
     }
 
     @Import(name="noEncryptionConfig")
-      private final @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
+    private @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
 
-    public Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig() {
-        return this.noEncryptionConfig == null ? Codegen.empty() : this.noEncryptionConfig;
+    public Optional<Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig>> noEncryptionConfig() {
+        return Optional.ofNullable(this.noEncryptionConfig);
     }
 
-    public DeliveryStreamEncryptionConfigurationArgs(
-        @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig,
-        @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
-        this.kMSEncryptionConfig = kMSEncryptionConfig;
-        this.noEncryptionConfig = noEncryptionConfig;
-    }
+    private DeliveryStreamEncryptionConfigurationArgs() {}
 
-    private DeliveryStreamEncryptionConfigurationArgs() {
-        this.kMSEncryptionConfig = Codegen.empty();
-        this.noEncryptionConfig = Codegen.empty();
+    private DeliveryStreamEncryptionConfigurationArgs(DeliveryStreamEncryptionConfigurationArgs $) {
+        this.kMSEncryptionConfig = $.kMSEncryptionConfig;
+        this.noEncryptionConfig = $.noEncryptionConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
-        private @Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
+        private DeliveryStreamEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamEncryptionConfigurationArgs();
         }
 
         public Builder(DeliveryStreamEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kMSEncryptionConfig = defaults.kMSEncryptionConfig;
-    	      this.noEncryptionConfig = defaults.noEncryptionConfig;
+            $ = new DeliveryStreamEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kMSEncryptionConfig(@Nullable Output<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig) {
-            this.kMSEncryptionConfig = kMSEncryptionConfig;
+            $.kMSEncryptionConfig = kMSEncryptionConfig;
             return this;
         }
-        public Builder kMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfigArgs kMSEncryptionConfig) {
-            this.kMSEncryptionConfig = Codegen.ofNullable(kMSEncryptionConfig);
-            return this;
+
+        public Builder kMSEncryptionConfig(DeliveryStreamKMSEncryptionConfigArgs kMSEncryptionConfig) {
+            return kMSEncryptionConfig(Output.of(kMSEncryptionConfig));
         }
+
         public Builder noEncryptionConfig(@Nullable Output<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig) {
-            this.noEncryptionConfig = noEncryptionConfig;
+            $.noEncryptionConfig = noEncryptionConfig;
             return this;
         }
-        public Builder noEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
-            this.noEncryptionConfig = Codegen.ofNullable(noEncryptionConfig);
-            return this;
-        }        public DeliveryStreamEncryptionConfigurationArgs build() {
-            return new DeliveryStreamEncryptionConfigurationArgs(kMSEncryptionConfig, noEncryptionConfig);
+
+        public Builder noEncryptionConfig(DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
+            return noEncryptionConfig(Output.of(noEncryptionConfig));
+        }
+
+        public DeliveryStreamEncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

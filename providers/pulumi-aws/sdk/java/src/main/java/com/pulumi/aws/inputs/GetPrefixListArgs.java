@@ -21,10 +21,10 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetPrefixListFilter> filters;
+    private @Nullable List<GetPrefixListFilter> filters;
 
-    public List<GetPrefixListFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetPrefixListFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,67 +43,60 @@ public final class GetPrefixListArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefixListId")
-      private final @Nullable String prefixListId;
+    private @Nullable String prefixListId;
 
     public Optional<String> prefixListId() {
-        return this.prefixListId == null ? Optional.empty() : Optional.ofNullable(this.prefixListId);
+        return Optional.ofNullable(this.prefixListId);
     }
 
-    public GetPrefixListArgs(
-        @Nullable List<GetPrefixListFilter> filters,
-        @Nullable String name,
-        @Nullable String prefixListId) {
-        this.filters = filters;
-        this.name = name;
-        this.prefixListId = prefixListId;
-    }
+    private GetPrefixListArgs() {}
 
-    private GetPrefixListArgs() {
-        this.filters = List.of();
-        this.name = null;
-        this.prefixListId = null;
+    private GetPrefixListArgs(GetPrefixListArgs $) {
+        this.filters = $.filters;
+        this.name = $.name;
+        this.prefixListId = $.prefixListId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrefixListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetPrefixListFilter> filters;
-        private @Nullable String name;
-        private @Nullable String prefixListId;
+        private GetPrefixListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrefixListArgs();
         }
 
         public Builder(GetPrefixListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.name = defaults.name;
-    	      this.prefixListId = defaults.prefixListId;
+            $ = new GetPrefixListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetPrefixListFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetPrefixListFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder prefixListId(@Nullable String prefixListId) {
-            this.prefixListId = prefixListId;
+            $.prefixListId = prefixListId;
             return this;
-        }        public GetPrefixListArgs build() {
-            return new GetPrefixListArgs(filters, name, prefixListId);
+        }
+
+        public GetPrefixListArgs build() {
+            return $;
         }
     }
+
 }

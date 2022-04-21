@@ -7,11 +7,11 @@ import com.pulumi.azurenative.authorization.enums.ExemptionCategory;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="exemptionCategory", required=true)
-      private final Output<Either<String,ExemptionCategory>> exemptionCategory;
+    private Output<Either<String,ExemptionCategory>> exemptionCategory;
 
     public Output<Either<String,ExemptionCategory>> exemptionCategory() {
         return this.exemptionCategory;
@@ -57,10 +57,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="expiresOn")
-      private final @Nullable Output<String> expiresOn;
+    private @Nullable Output<String> expiresOn;
 
-    public Output<String> expiresOn() {
-        return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
+    public Optional<Output<String>> expiresOn() {
+        return Optional.ofNullable(this.expiresOn);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyAssignmentId", required=true)
-      private final Output<String> policyAssignmentId;
+    private Output<String> policyAssignmentId;
 
     public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
@@ -90,10 +90,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyDefinitionReferenceIds")
-      private final @Nullable Output<List<String>> policyDefinitionReferenceIds;
+    private @Nullable Output<List<String>> policyDefinitionReferenceIds;
 
-    public Output<List<String>> policyDefinitionReferenceIds() {
-        return this.policyDefinitionReferenceIds == null ? Codegen.empty() : this.policyDefinitionReferenceIds;
+    public Optional<Output<List<String>>> policyDefinitionReferenceIds() {
+        return Optional.ofNullable(this.policyDefinitionReferenceIds);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyExemptionName")
-      private final @Nullable Output<String> policyExemptionName;
+    private @Nullable Output<String> policyExemptionName;
 
-    public Output<String> policyExemptionName() {
-        return this.policyExemptionName == null ? Codegen.empty() : this.policyExemptionName;
+    public Optional<Output<String>> policyExemptionName() {
+        return Optional.ofNullable(this.policyExemptionName);
     }
 
     /**
@@ -112,157 +112,135 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public PolicyExemptionArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<Either<String,ExemptionCategory>> exemptionCategory,
-        @Nullable Output<String> expiresOn,
-        @Nullable Output<Object> metadata,
-        Output<String> policyAssignmentId,
-        @Nullable Output<List<String>> policyDefinitionReferenceIds,
-        @Nullable Output<String> policyExemptionName,
-        Output<String> scope) {
-        this.description = description;
-        this.displayName = displayName;
-        this.exemptionCategory = Objects.requireNonNull(exemptionCategory, "expected parameter 'exemptionCategory' to be non-null");
-        this.expiresOn = expiresOn;
-        this.metadata = metadata;
-        this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId, "expected parameter 'policyAssignmentId' to be non-null");
-        this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
-        this.policyExemptionName = policyExemptionName;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private PolicyExemptionArgs() {}
 
-    private PolicyExemptionArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.exemptionCategory = Codegen.empty();
-        this.expiresOn = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.policyAssignmentId = Codegen.empty();
-        this.policyDefinitionReferenceIds = Codegen.empty();
-        this.policyExemptionName = Codegen.empty();
-        this.scope = Codegen.empty();
+    private PolicyExemptionArgs(PolicyExemptionArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.exemptionCategory = $.exemptionCategory;
+        this.expiresOn = $.expiresOn;
+        this.metadata = $.metadata;
+        this.policyAssignmentId = $.policyAssignmentId;
+        this.policyDefinitionReferenceIds = $.policyDefinitionReferenceIds;
+        this.policyExemptionName = $.policyExemptionName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyExemptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<Either<String,ExemptionCategory>> exemptionCategory;
-        private @Nullable Output<String> expiresOn;
-        private @Nullable Output<Object> metadata;
-        private Output<String> policyAssignmentId;
-        private @Nullable Output<List<String>> policyDefinitionReferenceIds;
-        private @Nullable Output<String> policyExemptionName;
-        private Output<String> scope;
+        private PolicyExemptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyExemptionArgs();
         }
 
         public Builder(PolicyExemptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.exemptionCategory = defaults.exemptionCategory;
-    	      this.expiresOn = defaults.expiresOn;
-    	      this.metadata = defaults.metadata;
-    	      this.policyAssignmentId = defaults.policyAssignmentId;
-    	      this.policyDefinitionReferenceIds = defaults.policyDefinitionReferenceIds;
-    	      this.policyExemptionName = defaults.policyExemptionName;
-    	      this.scope = defaults.scope;
+            $ = new PolicyExemptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder exemptionCategory(Output<Either<String,ExemptionCategory>> exemptionCategory) {
-            this.exemptionCategory = Objects.requireNonNull(exemptionCategory);
+            $.exemptionCategory = exemptionCategory;
             return this;
         }
+
         public Builder exemptionCategory(Either<String,ExemptionCategory> exemptionCategory) {
-            this.exemptionCategory = Output.of(Objects.requireNonNull(exemptionCategory));
-            return this;
+            return exemptionCategory(Output.of(exemptionCategory));
         }
+
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
-            this.expiresOn = expiresOn;
+            $.expiresOn = expiresOn;
             return this;
         }
-        public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Codegen.ofNullable(expiresOn);
-            return this;
+
+        public Builder expiresOn(String expiresOn) {
+            return expiresOn(Output.of(expiresOn));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
-            this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
+            $.policyAssignmentId = policyAssignmentId;
             return this;
         }
+
         public Builder policyAssignmentId(String policyAssignmentId) {
-            this.policyAssignmentId = Output.of(Objects.requireNonNull(policyAssignmentId));
-            return this;
+            return policyAssignmentId(Output.of(policyAssignmentId));
         }
+
         public Builder policyDefinitionReferenceIds(@Nullable Output<List<String>> policyDefinitionReferenceIds) {
-            this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
+            $.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
             return this;
         }
-        public Builder policyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
-            this.policyDefinitionReferenceIds = Codegen.ofNullable(policyDefinitionReferenceIds);
-            return this;
+
+        public Builder policyDefinitionReferenceIds(List<String> policyDefinitionReferenceIds) {
+            return policyDefinitionReferenceIds(Output.of(policyDefinitionReferenceIds));
         }
+
         public Builder policyDefinitionReferenceIds(String... policyDefinitionReferenceIds) {
             return policyDefinitionReferenceIds(List.of(policyDefinitionReferenceIds));
         }
+
         public Builder policyExemptionName(@Nullable Output<String> policyExemptionName) {
-            this.policyExemptionName = policyExemptionName;
+            $.policyExemptionName = policyExemptionName;
             return this;
         }
-        public Builder policyExemptionName(@Nullable String policyExemptionName) {
-            this.policyExemptionName = Codegen.ofNullable(policyExemptionName);
-            return this;
+
+        public Builder policyExemptionName(String policyExemptionName) {
+            return policyExemptionName(Output.of(policyExemptionName));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public PolicyExemptionArgs build() {
-            return new PolicyExemptionArgs(description, displayName, exemptionCategory, expiresOn, metadata, policyAssignmentId, policyDefinitionReferenceIds, policyExemptionName, scope);
+            return scope(Output.of(scope));
+        }
+
+        public PolicyExemptionArgs build() {
+            $.exemptionCategory = Objects.requireNonNull($.exemptionCategory, "expected parameter 'exemptionCategory' to be non-null");
+            $.policyAssignmentId = Objects.requireNonNull($.policyAssignmentId, "expected parameter 'policyAssignmentId' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

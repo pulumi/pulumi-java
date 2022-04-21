@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.enums.TaskDefinitionAuthorizationConfigIAM;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class TaskDefinitionAuthorizationConfigArgs extends com.pulumi.reso
     public static final TaskDefinitionAuthorizationConfigArgs Empty = new TaskDefinitionAuthorizationConfigArgs();
 
     @Import(name="accessPointId")
-      private final @Nullable Output<String> accessPointId;
+    private @Nullable Output<String> accessPointId;
 
-    public Output<String> accessPointId() {
-        return this.accessPointId == null ? Codegen.empty() : this.accessPointId;
+    public Optional<Output<String>> accessPointId() {
+        return Optional.ofNullable(this.accessPointId);
     }
 
     @Import(name="iAM")
-      private final @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM;
+    private @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM;
 
-    public Output<TaskDefinitionAuthorizationConfigIAM> iAM() {
-        return this.iAM == null ? Codegen.empty() : this.iAM;
+    public Optional<Output<TaskDefinitionAuthorizationConfigIAM>> iAM() {
+        return Optional.ofNullable(this.iAM);
     }
 
-    public TaskDefinitionAuthorizationConfigArgs(
-        @Nullable Output<String> accessPointId,
-        @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM) {
-        this.accessPointId = accessPointId;
-        this.iAM = iAM;
-    }
+    private TaskDefinitionAuthorizationConfigArgs() {}
 
-    private TaskDefinitionAuthorizationConfigArgs() {
-        this.accessPointId = Codegen.empty();
-        this.iAM = Codegen.empty();
+    private TaskDefinitionAuthorizationConfigArgs(TaskDefinitionAuthorizationConfigArgs $) {
+        this.accessPointId = $.accessPointId;
+        this.iAM = $.iAM;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionAuthorizationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPointId;
-        private @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM;
+        private TaskDefinitionAuthorizationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionAuthorizationConfigArgs();
         }
 
         public Builder(TaskDefinitionAuthorizationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointId = defaults.accessPointId;
-    	      this.iAM = defaults.iAM;
+            $ = new TaskDefinitionAuthorizationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointId(@Nullable Output<String> accessPointId) {
-            this.accessPointId = accessPointId;
+            $.accessPointId = accessPointId;
             return this;
         }
-        public Builder accessPointId(@Nullable String accessPointId) {
-            this.accessPointId = Codegen.ofNullable(accessPointId);
-            return this;
+
+        public Builder accessPointId(String accessPointId) {
+            return accessPointId(Output.of(accessPointId));
         }
+
         public Builder iAM(@Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM) {
-            this.iAM = iAM;
+            $.iAM = iAM;
             return this;
         }
-        public Builder iAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
-            this.iAM = Codegen.ofNullable(iAM);
-            return this;
-        }        public TaskDefinitionAuthorizationConfigArgs build() {
-            return new TaskDefinitionAuthorizationConfigArgs(accessPointId, iAM);
+
+        public Builder iAM(TaskDefinitionAuthorizationConfigIAM iAM) {
+            return iAM(Output.of(iAM));
+        }
+
+        public TaskDefinitionAuthorizationConfigArgs build() {
+            return $;
         }
     }
+
 }

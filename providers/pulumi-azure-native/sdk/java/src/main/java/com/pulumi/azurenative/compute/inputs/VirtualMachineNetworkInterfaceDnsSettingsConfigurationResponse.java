@@ -24,48 +24,48 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
-    public VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(@Nullable List<String> dnsServers) {
-        this.dnsServers = dnsServers;
-    }
+    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse() {}
 
-    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse() {
-        this.dnsServers = List.of();
+    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse $) {
+        this.dnsServers = $.dnsServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dnsServers;
+        private VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse();
         }
 
         public Builder(VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServers = defaults.dnsServers;
+            $ = new VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
-        }        public VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse build() {
-            return new VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(dnsServers);
+        }
+
+        public VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

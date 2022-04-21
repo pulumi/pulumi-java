@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="claimType")
-      private final @Nullable Output<String> claimType;
+    private @Nullable Output<String> claimType;
 
-    public Output<String> claimType() {
-        return this.claimType == null ? Codegen.empty() : this.claimType;
+    public Optional<Output<String>> claimType() {
+        return Optional.ofNullable(this.claimType);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ContentKeyPolicyTokenClaimArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="claimValue")
-      private final @Nullable Output<String> claimValue;
+    private @Nullable Output<String> claimValue;
 
-    public Output<String> claimValue() {
-        return this.claimValue == null ? Codegen.empty() : this.claimValue;
+    public Optional<Output<String>> claimValue() {
+        return Optional.ofNullable(this.claimValue);
     }
 
-    public ContentKeyPolicyTokenClaimArgs(
-        @Nullable Output<String> claimType,
-        @Nullable Output<String> claimValue) {
-        this.claimType = claimType;
-        this.claimValue = claimValue;
-    }
+    private ContentKeyPolicyTokenClaimArgs() {}
 
-    private ContentKeyPolicyTokenClaimArgs() {
-        this.claimType = Codegen.empty();
-        this.claimValue = Codegen.empty();
+    private ContentKeyPolicyTokenClaimArgs(ContentKeyPolicyTokenClaimArgs $) {
+        this.claimType = $.claimType;
+        this.claimValue = $.claimValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyTokenClaimArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> claimType;
-        private @Nullable Output<String> claimValue;
+        private ContentKeyPolicyTokenClaimArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyTokenClaimArgs();
         }
 
         public Builder(ContentKeyPolicyTokenClaimArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimType = defaults.claimType;
-    	      this.claimValue = defaults.claimValue;
+            $ = new ContentKeyPolicyTokenClaimArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder claimType(@Nullable Output<String> claimType) {
-            this.claimType = claimType;
+            $.claimType = claimType;
             return this;
         }
-        public Builder claimType(@Nullable String claimType) {
-            this.claimType = Codegen.ofNullable(claimType);
-            return this;
+
+        public Builder claimType(String claimType) {
+            return claimType(Output.of(claimType));
         }
+
         public Builder claimValue(@Nullable Output<String> claimValue) {
-            this.claimValue = claimValue;
+            $.claimValue = claimValue;
             return this;
         }
-        public Builder claimValue(@Nullable String claimValue) {
-            this.claimValue = Codegen.ofNullable(claimValue);
-            return this;
-        }        public ContentKeyPolicyTokenClaimArgs build() {
-            return new ContentKeyPolicyTokenClaimArgs(claimType, claimValue);
+
+        public Builder claimValue(String claimValue) {
+            return claimValue(Output.of(claimValue));
+        }
+
+        public ContentKeyPolicyTokenClaimArgs build() {
+            return $;
         }
     }
+
 }

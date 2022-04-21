@@ -19,65 +19,63 @@ public final class GrafeasV1beta1IntotoDetailsResponse extends com.pulumi.resour
     public static final GrafeasV1beta1IntotoDetailsResponse Empty = new GrafeasV1beta1IntotoDetailsResponse();
 
     @Import(name="signatures", required=true)
-      private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
+    private List<GrafeasV1beta1IntotoSignatureResponse> signatures;
 
     public List<GrafeasV1beta1IntotoSignatureResponse> signatures() {
         return this.signatures;
     }
 
     @Import(name="signed", required=true)
-      private final LinkResponse signed;
+    private LinkResponse signed;
 
     public LinkResponse signed() {
         return this.signed;
     }
 
-    public GrafeasV1beta1IntotoDetailsResponse(
-        List<GrafeasV1beta1IntotoSignatureResponse> signatures,
-        LinkResponse signed) {
-        this.signatures = Objects.requireNonNull(signatures, "expected parameter 'signatures' to be non-null");
-        this.signed = Objects.requireNonNull(signed, "expected parameter 'signed' to be non-null");
-    }
+    private GrafeasV1beta1IntotoDetailsResponse() {}
 
-    private GrafeasV1beta1IntotoDetailsResponse() {
-        this.signatures = List.of();
-        this.signed = null;
+    private GrafeasV1beta1IntotoDetailsResponse(GrafeasV1beta1IntotoDetailsResponse $) {
+        this.signatures = $.signatures;
+        this.signed = $.signed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1IntotoDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GrafeasV1beta1IntotoSignatureResponse> signatures;
-        private LinkResponse signed;
+        private GrafeasV1beta1IntotoDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1IntotoDetailsResponse();
         }
 
         public Builder(GrafeasV1beta1IntotoDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signatures = defaults.signatures;
-    	      this.signed = defaults.signed;
+            $ = new GrafeasV1beta1IntotoDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder signatures(List<GrafeasV1beta1IntotoSignatureResponse> signatures) {
-            this.signatures = Objects.requireNonNull(signatures);
+            $.signatures = signatures;
             return this;
         }
+
         public Builder signatures(GrafeasV1beta1IntotoSignatureResponse... signatures) {
             return signatures(List.of(signatures));
         }
+
         public Builder signed(LinkResponse signed) {
-            this.signed = Objects.requireNonNull(signed);
+            $.signed = signed;
             return this;
-        }        public GrafeasV1beta1IntotoDetailsResponse build() {
-            return new GrafeasV1beta1IntotoDetailsResponse(signatures, signed);
+        }
+
+        public GrafeasV1beta1IntotoDetailsResponse build() {
+            $.signatures = Objects.requireNonNull($.signatures, "expected parameter 'signatures' to be non-null");
+            $.signed = Objects.requireNonNull($.signed, "expected parameter 'signed' to be non-null");
+            return $;
         }
     }
+
 }

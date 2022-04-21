@@ -23,7 +23,7 @@ public final class RecurrentScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="days", required=true)
-      private final List<String> days;
+    private List<String> days;
 
     public List<String> days() {
         return this.days;
@@ -34,7 +34,7 @@ public final class RecurrentScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="hours", required=true)
-      private final List<Integer> hours;
+    private List<Integer> hours;
 
     public List<Integer> hours() {
         return this.hours;
@@ -45,7 +45,7 @@ public final class RecurrentScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minutes", required=true)
-      private final List<Integer> minutes;
+    private List<Integer> minutes;
 
     public List<Integer> minutes() {
         return this.minutes;
@@ -56,82 +56,78 @@ public final class RecurrentScheduleResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeZone", required=true)
-      private final String timeZone;
+    private String timeZone;
 
     public String timeZone() {
         return this.timeZone;
     }
 
-    public RecurrentScheduleResponse(
-        List<String> days,
-        List<Integer> hours,
-        List<Integer> minutes,
-        String timeZone) {
-        this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private RecurrentScheduleResponse() {}
 
-    private RecurrentScheduleResponse() {
-        this.days = List.of();
-        this.hours = List.of();
-        this.minutes = List.of();
-        this.timeZone = null;
+    private RecurrentScheduleResponse(RecurrentScheduleResponse $) {
+        this.days = $.days;
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrentScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> days;
-        private List<Integer> hours;
-        private List<Integer> minutes;
-        private String timeZone;
+        private RecurrentScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrentScheduleResponse();
         }
 
         public Builder(RecurrentScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.timeZone = defaults.timeZone;
+            $ = new RecurrentScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder days(List<String> days) {
-            this.days = Objects.requireNonNull(days);
+            $.days = days;
             return this;
         }
+
         public Builder days(String... days) {
             return days(List.of(days));
         }
+
         public Builder hours(List<Integer> hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
+
         public Builder minutes(List<Integer> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
-        }        public RecurrentScheduleResponse build() {
-            return new RecurrentScheduleResponse(days, hours, minutes, timeZone);
+        }
+
+        public RecurrentScheduleResponse build() {
+            $.days = Objects.requireNonNull($.days, "expected parameter 'days' to be non-null");
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

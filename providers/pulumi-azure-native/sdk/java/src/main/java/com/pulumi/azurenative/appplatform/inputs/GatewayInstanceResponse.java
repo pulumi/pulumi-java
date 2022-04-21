@@ -21,7 +21,7 @@ public final class GatewayInstanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class GatewayInstanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GatewayInstanceResponse(
-        String name,
-        String status) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GatewayInstanceResponse() {}
 
-    private GatewayInstanceResponse() {
-        this.name = null;
-        this.status = null;
+    private GatewayInstanceResponse(GatewayInstanceResponse $) {
+        this.name = $.name;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String status;
+        private GatewayInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayInstanceResponse();
         }
 
         public Builder(GatewayInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
+            $ = new GatewayInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GatewayInstanceResponse build() {
-            return new GatewayInstanceResponse(name, status);
+        }
+
+        public GatewayInstanceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

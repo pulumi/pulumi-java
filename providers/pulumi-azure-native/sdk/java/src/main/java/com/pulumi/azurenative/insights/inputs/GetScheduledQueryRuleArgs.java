@@ -17,7 +17,7 @@ public final class GetScheduledQueryRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetScheduledQueryRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public GetScheduledQueryRuleArgs(
-        String resourceGroupName,
-        String ruleName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private GetScheduledQueryRuleArgs() {}
 
-    private GetScheduledQueryRuleArgs() {
-        this.resourceGroupName = null;
-        this.ruleName = null;
+    private GetScheduledQueryRuleArgs(GetScheduledQueryRuleArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScheduledQueryRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String ruleName;
+        private GetScheduledQueryRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScheduledQueryRuleArgs();
         }
 
         public Builder(GetScheduledQueryRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
+            $ = new GetScheduledQueryRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public GetScheduledQueryRuleArgs build() {
-            return new GetScheduledQueryRuleArgs(resourceGroupName, ruleName);
+        }
+
+        public GetScheduledQueryRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,85 @@ public final class AppCustomRule extends com.pulumi.resources.InvokeArgs {
     public static final AppCustomRule Empty = new AppCustomRule();
 
     @Import(name="condition")
-      private final @Nullable String condition;
+    private @Nullable String condition;
 
     public Optional<String> condition() {
-        return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
     }
 
-    public AppCustomRule(
-        @Nullable String condition,
-        String source,
-        @Nullable String status,
-        String target) {
-        this.condition = condition;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.status = status;
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private AppCustomRule() {}
 
-    private AppCustomRule() {
-        this.condition = null;
-        this.source = null;
-        this.status = null;
-        this.target = null;
+    private AppCustomRule(AppCustomRule $) {
+        this.condition = $.condition;
+        this.source = $.source;
+        this.status = $.status;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppCustomRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String condition;
-        private String source;
-        private @Nullable String status;
-        private String target;
+        private AppCustomRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppCustomRule();
         }
 
         public Builder(AppCustomRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.source = defaults.source;
-    	      this.status = defaults.status;
-    	      this.target = defaults.target;
+            $ = new AppCustomRule(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
-        }        public AppCustomRule build() {
-            return new AppCustomRule(condition, source, status, target);
+        }
+
+        public AppCustomRule build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

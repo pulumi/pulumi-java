@@ -9,9 +9,9 @@ import com.pulumi.azurenative.containerregistry.enums.Variant;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="architecture")
-      private final @Nullable Output<Either<String,Architecture>> architecture;
+    private @Nullable Output<Either<String,Architecture>> architecture;
 
-    public Output<Either<String,Architecture>> architecture() {
-        return this.architecture == null ? Codegen.empty() : this.architecture;
+    public Optional<Output<Either<String,Architecture>>> architecture() {
+        return Optional.ofNullable(this.architecture);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="os", required=true)
-      private final Output<Either<String,OS>> os;
+    private Output<Either<String,OS>> os;
 
     public Output<Either<String,OS>> os() {
         return this.os;
@@ -50,76 +50,69 @@ public final class PlatformPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="variant")
-      private final @Nullable Output<Either<String,Variant>> variant;
+    private @Nullable Output<Either<String,Variant>> variant;
 
-    public Output<Either<String,Variant>> variant() {
-        return this.variant == null ? Codegen.empty() : this.variant;
+    public Optional<Output<Either<String,Variant>>> variant() {
+        return Optional.ofNullable(this.variant);
     }
 
-    public PlatformPropertiesArgs(
-        @Nullable Output<Either<String,Architecture>> architecture,
-        Output<Either<String,OS>> os,
-        @Nullable Output<Either<String,Variant>> variant) {
-        this.architecture = architecture;
-        this.os = Objects.requireNonNull(os, "expected parameter 'os' to be non-null");
-        this.variant = variant;
-    }
+    private PlatformPropertiesArgs() {}
 
-    private PlatformPropertiesArgs() {
-        this.architecture = Codegen.empty();
-        this.os = Codegen.empty();
-        this.variant = Codegen.empty();
+    private PlatformPropertiesArgs(PlatformPropertiesArgs $) {
+        this.architecture = $.architecture;
+        this.os = $.os;
+        this.variant = $.variant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlatformPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Architecture>> architecture;
-        private Output<Either<String,OS>> os;
-        private @Nullable Output<Either<String,Variant>> variant;
+        private PlatformPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlatformPropertiesArgs();
         }
 
         public Builder(PlatformPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.os = defaults.os;
-    	      this.variant = defaults.variant;
+            $ = new PlatformPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable Output<Either<String,Architecture>> architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
-        public Builder architecture(@Nullable Either<String,Architecture> architecture) {
-            this.architecture = Codegen.ofNullable(architecture);
-            return this;
+
+        public Builder architecture(Either<String,Architecture> architecture) {
+            return architecture(Output.of(architecture));
         }
+
         public Builder os(Output<Either<String,OS>> os) {
-            this.os = Objects.requireNonNull(os);
+            $.os = os;
             return this;
         }
+
         public Builder os(Either<String,OS> os) {
-            this.os = Output.of(Objects.requireNonNull(os));
-            return this;
+            return os(Output.of(os));
         }
+
         public Builder variant(@Nullable Output<Either<String,Variant>> variant) {
-            this.variant = variant;
+            $.variant = variant;
             return this;
         }
-        public Builder variant(@Nullable Either<String,Variant> variant) {
-            this.variant = Codegen.ofNullable(variant);
-            return this;
-        }        public PlatformPropertiesArgs build() {
-            return new PlatformPropertiesArgs(architecture, os, variant);
+
+        public Builder variant(Either<String,Variant> variant) {
+            return variant(Output.of(variant));
+        }
+
+        public PlatformPropertiesArgs build() {
+            $.os = Objects.requireNonNull($.os, "expected parameter 'os' to be non-null");
+            return $;
         }
     }
+
 }

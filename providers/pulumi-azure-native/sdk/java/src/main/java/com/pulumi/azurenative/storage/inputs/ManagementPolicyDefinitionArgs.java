@@ -7,8 +7,8 @@ import com.pulumi.azurenative.storage.inputs.ManagementPolicyActionArgs;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicyFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ManagementPolicyDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<ManagementPolicyActionArgs> actions;
+    private Output<ManagementPolicyActionArgs> actions;
 
     public Output<ManagementPolicyActionArgs> actions() {
         return this.actions;
@@ -36,63 +36,59 @@ public final class ManagementPolicyDefinitionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<ManagementPolicyFilterArgs> filters;
+    private @Nullable Output<ManagementPolicyFilterArgs> filters;
 
-    public Output<ManagementPolicyFilterArgs> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<ManagementPolicyFilterArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public ManagementPolicyDefinitionArgs(
-        Output<ManagementPolicyActionArgs> actions,
-        @Nullable Output<ManagementPolicyFilterArgs> filters) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.filters = filters;
-    }
+    private ManagementPolicyDefinitionArgs() {}
 
-    private ManagementPolicyDefinitionArgs() {
-        this.actions = Codegen.empty();
-        this.filters = Codegen.empty();
+    private ManagementPolicyDefinitionArgs(ManagementPolicyDefinitionArgs $) {
+        this.actions = $.actions;
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ManagementPolicyActionArgs> actions;
-        private @Nullable Output<ManagementPolicyFilterArgs> filters;
+        private ManagementPolicyDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyDefinitionArgs();
         }
 
         public Builder(ManagementPolicyDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.filters = defaults.filters;
+            $ = new ManagementPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<ManagementPolicyActionArgs> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(ManagementPolicyActionArgs actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder filters(@Nullable Output<ManagementPolicyFilterArgs> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable ManagementPolicyFilterArgs filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
-        }        public ManagementPolicyDefinitionArgs build() {
-            return new ManagementPolicyDefinitionArgs(actions, filters);
+
+        public Builder filters(ManagementPolicyFilterArgs filters) {
+            return filters(Output.of(filters));
+        }
+
+        public ManagementPolicyDefinitionArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class DatasetRetentionPeriod extends com.pulumi.resources.InvokeArg
     public static final DatasetRetentionPeriod Empty = new DatasetRetentionPeriod();
 
     @Import(name="numberOfDays", required=true)
-      private final Integer numberOfDays;
+    private Integer numberOfDays;
 
     public Integer numberOfDays() {
         return this.numberOfDays;
     }
 
     @Import(name="unlimited", required=true)
-      private final Boolean unlimited;
+    private Boolean unlimited;
 
     public Boolean unlimited() {
         return this.unlimited;
     }
 
-    public DatasetRetentionPeriod(
-        Integer numberOfDays,
-        Boolean unlimited) {
-        this.numberOfDays = Objects.requireNonNull(numberOfDays, "expected parameter 'numberOfDays' to be non-null");
-        this.unlimited = Objects.requireNonNull(unlimited, "expected parameter 'unlimited' to be non-null");
-    }
+    private DatasetRetentionPeriod() {}
 
-    private DatasetRetentionPeriod() {
-        this.numberOfDays = null;
-        this.unlimited = null;
+    private DatasetRetentionPeriod(DatasetRetentionPeriod $) {
+        this.numberOfDays = $.numberOfDays;
+        this.unlimited = $.unlimited;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetRetentionPeriod defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numberOfDays;
-        private Boolean unlimited;
+        private DatasetRetentionPeriod $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetRetentionPeriod();
         }
 
         public Builder(DatasetRetentionPeriod defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numberOfDays = defaults.numberOfDays;
-    	      this.unlimited = defaults.unlimited;
+            $ = new DatasetRetentionPeriod(Objects.requireNonNull(defaults));
         }
 
         public Builder numberOfDays(Integer numberOfDays) {
-            this.numberOfDays = Objects.requireNonNull(numberOfDays);
+            $.numberOfDays = numberOfDays;
             return this;
         }
+
         public Builder unlimited(Boolean unlimited) {
-            this.unlimited = Objects.requireNonNull(unlimited);
+            $.unlimited = unlimited;
             return this;
-        }        public DatasetRetentionPeriod build() {
-            return new DatasetRetentionPeriod(numberOfDays, unlimited);
+        }
+
+        public DatasetRetentionPeriod build() {
+            $.numberOfDays = Objects.requireNonNull($.numberOfDays, "expected parameter 'numberOfDays' to be non-null");
+            $.unlimited = Objects.requireNonNull($.unlimited, "expected parameter 'unlimited' to be non-null");
+            return $;
         }
     }
+
 }

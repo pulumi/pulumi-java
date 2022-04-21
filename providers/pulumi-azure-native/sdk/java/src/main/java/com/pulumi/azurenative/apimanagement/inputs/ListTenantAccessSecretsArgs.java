@@ -17,7 +17,7 @@ public final class ListTenantAccessSecretsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accessName", required=true)
-      private final String accessName;
+    private String accessName;
 
     public String accessName() {
         return this.accessName;
@@ -28,7 +28,7 @@ public final class ListTenantAccessSecretsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListTenantAccessSecretsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public ListTenantAccessSecretsArgs(
-        String accessName,
-        String resourceGroupName,
-        String serviceName) {
-        this.accessName = Objects.requireNonNull(accessName, "expected parameter 'accessName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ListTenantAccessSecretsArgs() {}
 
-    private ListTenantAccessSecretsArgs() {
-        this.accessName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private ListTenantAccessSecretsArgs(ListTenantAccessSecretsArgs $) {
+        this.accessName = $.accessName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListTenantAccessSecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessName;
-        private String resourceGroupName;
-        private String serviceName;
+        private ListTenantAccessSecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListTenantAccessSecretsArgs();
         }
 
         public Builder(ListTenantAccessSecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessName = defaults.accessName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ListTenantAccessSecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessName(String accessName) {
-            this.accessName = Objects.requireNonNull(accessName);
+            $.accessName = accessName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public ListTenantAccessSecretsArgs build() {
-            return new ListTenantAccessSecretsArgs(accessName, resourceGroupName, serviceName);
+        }
+
+        public ListTenantAccessSecretsArgs build() {
+            $.accessName = Objects.requireNonNull($.accessName, "expected parameter 'accessName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

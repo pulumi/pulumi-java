@@ -5,10 +5,10 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DailyScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hour")
-      private final @Nullable Output<Integer> hour;
+    private @Nullable Output<Integer> hour;
 
-    public Output<Integer> hour() {
-        return this.hour == null ? Codegen.empty() : this.hour;
+    public Optional<Output<Integer>> hour() {
+        return Optional.ofNullable(this.hour);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DailyScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minute")
-      private final @Nullable Output<Integer> minute;
+    private @Nullable Output<Integer> minute;
 
-    public Output<Integer> minute() {
-        return this.minute == null ? Codegen.empty() : this.minute;
+    public Optional<Output<Integer>> minute() {
+        return Optional.ofNullable(this.minute);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DailyScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotsToKeep")
-      private final @Nullable Output<Integer> snapshotsToKeep;
+    private @Nullable Output<Integer> snapshotsToKeep;
 
-    public Output<Integer> snapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Codegen.empty() : this.snapshotsToKeep;
+    public Optional<Output<Integer>> snapshotsToKeep() {
+        return Optional.ofNullable(this.snapshotsToKeep);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class DailyScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usedBytes")
-      private final @Nullable Output<Double> usedBytes;
+    private @Nullable Output<Double> usedBytes;
 
-    public Output<Double> usedBytes() {
-        return this.usedBytes == null ? Codegen.empty() : this.usedBytes;
+    public Optional<Output<Double>> usedBytes() {
+        return Optional.ofNullable(this.usedBytes);
     }
 
-    public DailyScheduleArgs(
-        @Nullable Output<Integer> hour,
-        @Nullable Output<Integer> minute,
-        @Nullable Output<Integer> snapshotsToKeep,
-        @Nullable Output<Double> usedBytes) {
-        this.hour = hour;
-        this.minute = minute;
-        this.snapshotsToKeep = snapshotsToKeep;
-        this.usedBytes = usedBytes;
-    }
+    private DailyScheduleArgs() {}
 
-    private DailyScheduleArgs() {
-        this.hour = Codegen.empty();
-        this.minute = Codegen.empty();
-        this.snapshotsToKeep = Codegen.empty();
-        this.usedBytes = Codegen.empty();
+    private DailyScheduleArgs(DailyScheduleArgs $) {
+        this.hour = $.hour;
+        this.minute = $.minute;
+        this.snapshotsToKeep = $.snapshotsToKeep;
+        this.usedBytes = $.usedBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DailyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> hour;
-        private @Nullable Output<Integer> minute;
-        private @Nullable Output<Integer> snapshotsToKeep;
-        private @Nullable Output<Double> usedBytes;
+        private DailyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DailyScheduleArgs();
         }
 
         public Builder(DailyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hour = defaults.hour;
-    	      this.minute = defaults.minute;
-    	      this.snapshotsToKeep = defaults.snapshotsToKeep;
-    	      this.usedBytes = defaults.usedBytes;
+            $ = new DailyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hour(@Nullable Output<Integer> hour) {
-            this.hour = hour;
+            $.hour = hour;
             return this;
         }
-        public Builder hour(@Nullable Integer hour) {
-            this.hour = Codegen.ofNullable(hour);
-            return this;
+
+        public Builder hour(Integer hour) {
+            return hour(Output.of(hour));
         }
+
         public Builder minute(@Nullable Output<Integer> minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
         }
-        public Builder minute(@Nullable Integer minute) {
-            this.minute = Codegen.ofNullable(minute);
-            return this;
+
+        public Builder minute(Integer minute) {
+            return minute(Output.of(minute));
         }
+
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
-            this.snapshotsToKeep = snapshotsToKeep;
+            $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-        public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = Codegen.ofNullable(snapshotsToKeep);
-            return this;
+
+        public Builder snapshotsToKeep(Integer snapshotsToKeep) {
+            return snapshotsToKeep(Output.of(snapshotsToKeep));
         }
+
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
-            this.usedBytes = usedBytes;
+            $.usedBytes = usedBytes;
             return this;
         }
-        public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = Codegen.ofNullable(usedBytes);
-            return this;
-        }        public DailyScheduleArgs build() {
-            return new DailyScheduleArgs(hour, minute, snapshotsToKeep, usedBytes);
+
+        public Builder usedBytes(Double usedBytes) {
+            return usedBytes(Output.of(usedBytes));
+        }
+
+        public DailyScheduleArgs build() {
+            return $;
         }
     }
+
 }

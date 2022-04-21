@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.enums.SourceScoringConfigSourceImportance;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SourceScoringConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceImportance")
-      private final @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
+    private @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
 
-    public Output<SourceScoringConfigSourceImportance> sourceImportance() {
-        return this.sourceImportance == null ? Codegen.empty() : this.sourceImportance;
+    public Optional<Output<SourceScoringConfigSourceImportance>> sourceImportance() {
+        return Optional.ofNullable(this.sourceImportance);
     }
 
-    public SourceScoringConfigArgs(@Nullable Output<SourceScoringConfigSourceImportance> sourceImportance) {
-        this.sourceImportance = sourceImportance;
-    }
+    private SourceScoringConfigArgs() {}
 
-    private SourceScoringConfigArgs() {
-        this.sourceImportance = Codegen.empty();
+    private SourceScoringConfigArgs(SourceScoringConfigArgs $) {
+        this.sourceImportance = $.sourceImportance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceScoringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SourceScoringConfigSourceImportance> sourceImportance;
+        private SourceScoringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceScoringConfigArgs();
         }
 
         public Builder(SourceScoringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceImportance = defaults.sourceImportance;
+            $ = new SourceScoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceImportance(@Nullable Output<SourceScoringConfigSourceImportance> sourceImportance) {
-            this.sourceImportance = sourceImportance;
+            $.sourceImportance = sourceImportance;
             return this;
         }
-        public Builder sourceImportance(@Nullable SourceScoringConfigSourceImportance sourceImportance) {
-            this.sourceImportance = Codegen.ofNullable(sourceImportance);
-            return this;
-        }        public SourceScoringConfigArgs build() {
-            return new SourceScoringConfigArgs(sourceImportance);
+
+        public Builder sourceImportance(SourceScoringConfigSourceImportance sourceImportance) {
+            return sourceImportance(Output.of(sourceImportance));
+        }
+
+        public SourceScoringConfigArgs build() {
+            return $;
         }
     }
+
 }

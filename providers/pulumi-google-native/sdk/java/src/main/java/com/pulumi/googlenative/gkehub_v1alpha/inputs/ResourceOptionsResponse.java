@@ -22,7 +22,7 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="connectVersion", required=true)
-      private final String connectVersion;
+    private String connectVersion;
 
     public String connectVersion() {
         return this.connectVersion;
@@ -33,7 +33,7 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="k8sVersion", required=true)
-      private final String k8sVersion;
+    private String k8sVersion;
 
     public String k8sVersion() {
         return this.k8sVersion;
@@ -44,64 +44,59 @@ public final class ResourceOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="v1beta1Crd", required=true)
-      private final Boolean v1beta1Crd;
+    private Boolean v1beta1Crd;
 
     public Boolean v1beta1Crd() {
         return this.v1beta1Crd;
     }
 
-    public ResourceOptionsResponse(
-        String connectVersion,
-        String k8sVersion,
-        Boolean v1beta1Crd) {
-        this.connectVersion = Objects.requireNonNull(connectVersion, "expected parameter 'connectVersion' to be non-null");
-        this.k8sVersion = Objects.requireNonNull(k8sVersion, "expected parameter 'k8sVersion' to be non-null");
-        this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd, "expected parameter 'v1beta1Crd' to be non-null");
-    }
+    private ResourceOptionsResponse() {}
 
-    private ResourceOptionsResponse() {
-        this.connectVersion = null;
-        this.k8sVersion = null;
-        this.v1beta1Crd = null;
+    private ResourceOptionsResponse(ResourceOptionsResponse $) {
+        this.connectVersion = $.connectVersion;
+        this.k8sVersion = $.k8sVersion;
+        this.v1beta1Crd = $.v1beta1Crd;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectVersion;
-        private String k8sVersion;
-        private Boolean v1beta1Crd;
+        private ResourceOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceOptionsResponse();
         }
 
         public Builder(ResourceOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectVersion = defaults.connectVersion;
-    	      this.k8sVersion = defaults.k8sVersion;
-    	      this.v1beta1Crd = defaults.v1beta1Crd;
+            $ = new ResourceOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectVersion(String connectVersion) {
-            this.connectVersion = Objects.requireNonNull(connectVersion);
+            $.connectVersion = connectVersion;
             return this;
         }
+
         public Builder k8sVersion(String k8sVersion) {
-            this.k8sVersion = Objects.requireNonNull(k8sVersion);
+            $.k8sVersion = k8sVersion;
             return this;
         }
+
         public Builder v1beta1Crd(Boolean v1beta1Crd) {
-            this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
+            $.v1beta1Crd = v1beta1Crd;
             return this;
-        }        public ResourceOptionsResponse build() {
-            return new ResourceOptionsResponse(connectVersion, k8sVersion, v1beta1Crd);
+        }
+
+        public ResourceOptionsResponse build() {
+            $.connectVersion = Objects.requireNonNull($.connectVersion, "expected parameter 'connectVersion' to be non-null");
+            $.k8sVersion = Objects.requireNonNull($.k8sVersion, "expected parameter 'k8sVersion' to be non-null");
+            $.v1beta1Crd = Objects.requireNonNull($.v1beta1Crd, "expected parameter 'v1beta1Crd' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyNegativeCachingPolicyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cacheMode")
-      private final @Nullable Output<String> cacheMode;
+    private @Nullable Output<String> cacheMode;
 
-    public Output<String> cacheMode() {
-        return this.cacheMode == null ? Codegen.empty() : this.cacheMode;
+    public Optional<Output<String>> cacheMode() {
+        return Optional.ofNullable(this.cacheMode);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientTtl")
-      private final @Nullable Output<Integer> clientTtl;
+    private @Nullable Output<Integer> clientTtl;
 
-    public Output<Integer> clientTtl() {
-        return this.clientTtl == null ? Codegen.empty() : this.clientTtl;
+    public Optional<Output<Integer>> clientTtl() {
+        return Optional.ofNullable(this.clientTtl);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Output<Integer> defaultTtl;
+    private @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
+    public Optional<Output<Integer>> defaultTtl() {
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="maxTtl")
-      private final @Nullable Output<Integer> maxTtl;
+    private @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> maxTtl() {
-        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
+    public Optional<Output<Integer>> maxTtl() {
+        return Optional.ofNullable(this.maxTtl);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="negativeCaching")
-      private final @Nullable Output<Boolean> negativeCaching;
+    private @Nullable Output<Boolean> negativeCaching;
 
-    public Output<Boolean> negativeCaching() {
-        return this.negativeCaching == null ? Codegen.empty() : this.negativeCaching;
+    public Optional<Output<Boolean>> negativeCaching() {
+        return Optional.ofNullable(this.negativeCaching);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="negativeCachingPolicies")
-      private final @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies;
+    private @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies;
 
-    public Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies() {
-        return this.negativeCachingPolicies == null ? Codegen.empty() : this.negativeCachingPolicies;
+    public Optional<Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>>> negativeCachingPolicies() {
+        return Optional.ofNullable(this.negativeCachingPolicies);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="serveWhileStale")
-      private final @Nullable Output<Integer> serveWhileStale;
+    private @Nullable Output<Integer> serveWhileStale;
 
-    public Output<Integer> serveWhileStale() {
-        return this.serveWhileStale == null ? Codegen.empty() : this.serveWhileStale;
+    public Optional<Output<Integer>> serveWhileStale() {
+        return Optional.ofNullable(this.serveWhileStale);
     }
 
     /**
@@ -113,144 +113,122 @@ public final class BackendBucketCdnPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="signedUrlCacheMaxAgeSec")
-      private final @Nullable Output<Integer> signedUrlCacheMaxAgeSec;
+    private @Nullable Output<Integer> signedUrlCacheMaxAgeSec;
 
-    public Output<Integer> signedUrlCacheMaxAgeSec() {
-        return this.signedUrlCacheMaxAgeSec == null ? Codegen.empty() : this.signedUrlCacheMaxAgeSec;
+    public Optional<Output<Integer>> signedUrlCacheMaxAgeSec() {
+        return Optional.ofNullable(this.signedUrlCacheMaxAgeSec);
     }
 
-    public BackendBucketCdnPolicyArgs(
-        @Nullable Output<String> cacheMode,
-        @Nullable Output<Integer> clientTtl,
-        @Nullable Output<Integer> defaultTtl,
-        @Nullable Output<Integer> maxTtl,
-        @Nullable Output<Boolean> negativeCaching,
-        @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies,
-        @Nullable Output<Integer> serveWhileStale,
-        @Nullable Output<Integer> signedUrlCacheMaxAgeSec) {
-        this.cacheMode = cacheMode;
-        this.clientTtl = clientTtl;
-        this.defaultTtl = defaultTtl;
-        this.maxTtl = maxTtl;
-        this.negativeCaching = negativeCaching;
-        this.negativeCachingPolicies = negativeCachingPolicies;
-        this.serveWhileStale = serveWhileStale;
-        this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
-    }
+    private BackendBucketCdnPolicyArgs() {}
 
-    private BackendBucketCdnPolicyArgs() {
-        this.cacheMode = Codegen.empty();
-        this.clientTtl = Codegen.empty();
-        this.defaultTtl = Codegen.empty();
-        this.maxTtl = Codegen.empty();
-        this.negativeCaching = Codegen.empty();
-        this.negativeCachingPolicies = Codegen.empty();
-        this.serveWhileStale = Codegen.empty();
-        this.signedUrlCacheMaxAgeSec = Codegen.empty();
+    private BackendBucketCdnPolicyArgs(BackendBucketCdnPolicyArgs $) {
+        this.cacheMode = $.cacheMode;
+        this.clientTtl = $.clientTtl;
+        this.defaultTtl = $.defaultTtl;
+        this.maxTtl = $.maxTtl;
+        this.negativeCaching = $.negativeCaching;
+        this.negativeCachingPolicies = $.negativeCachingPolicies;
+        this.serveWhileStale = $.serveWhileStale;
+        this.signedUrlCacheMaxAgeSec = $.signedUrlCacheMaxAgeSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketCdnPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cacheMode;
-        private @Nullable Output<Integer> clientTtl;
-        private @Nullable Output<Integer> defaultTtl;
-        private @Nullable Output<Integer> maxTtl;
-        private @Nullable Output<Boolean> negativeCaching;
-        private @Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies;
-        private @Nullable Output<Integer> serveWhileStale;
-        private @Nullable Output<Integer> signedUrlCacheMaxAgeSec;
+        private BackendBucketCdnPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketCdnPolicyArgs();
         }
 
         public Builder(BackendBucketCdnPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheMode = defaults.cacheMode;
-    	      this.clientTtl = defaults.clientTtl;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.maxTtl = defaults.maxTtl;
-    	      this.negativeCaching = defaults.negativeCaching;
-    	      this.negativeCachingPolicies = defaults.negativeCachingPolicies;
-    	      this.serveWhileStale = defaults.serveWhileStale;
-    	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
+            $ = new BackendBucketCdnPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheMode(@Nullable Output<String> cacheMode) {
-            this.cacheMode = cacheMode;
+            $.cacheMode = cacheMode;
             return this;
         }
-        public Builder cacheMode(@Nullable String cacheMode) {
-            this.cacheMode = Codegen.ofNullable(cacheMode);
-            return this;
+
+        public Builder cacheMode(String cacheMode) {
+            return cacheMode(Output.of(cacheMode));
         }
+
         public Builder clientTtl(@Nullable Output<Integer> clientTtl) {
-            this.clientTtl = clientTtl;
+            $.clientTtl = clientTtl;
             return this;
         }
-        public Builder clientTtl(@Nullable Integer clientTtl) {
-            this.clientTtl = Codegen.ofNullable(clientTtl);
-            return this;
+
+        public Builder clientTtl(Integer clientTtl) {
+            return clientTtl(Output.of(clientTtl));
         }
+
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
-        public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Codegen.ofNullable(defaultTtl);
-            return this;
+
+        public Builder defaultTtl(Integer defaultTtl) {
+            return defaultTtl(Output.of(defaultTtl));
         }
+
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
-            this.maxTtl = maxTtl;
+            $.maxTtl = maxTtl;
             return this;
         }
-        public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Codegen.ofNullable(maxTtl);
-            return this;
+
+        public Builder maxTtl(Integer maxTtl) {
+            return maxTtl(Output.of(maxTtl));
         }
+
         public Builder negativeCaching(@Nullable Output<Boolean> negativeCaching) {
-            this.negativeCaching = negativeCaching;
+            $.negativeCaching = negativeCaching;
             return this;
         }
-        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
-            this.negativeCaching = Codegen.ofNullable(negativeCaching);
-            return this;
+
+        public Builder negativeCaching(Boolean negativeCaching) {
+            return negativeCaching(Output.of(negativeCaching));
         }
+
         public Builder negativeCachingPolicies(@Nullable Output<List<BackendBucketCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicies) {
-            this.negativeCachingPolicies = negativeCachingPolicies;
+            $.negativeCachingPolicies = negativeCachingPolicies;
             return this;
         }
-        public Builder negativeCachingPolicies(@Nullable List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicies) {
-            this.negativeCachingPolicies = Codegen.ofNullable(negativeCachingPolicies);
-            return this;
+
+        public Builder negativeCachingPolicies(List<BackendBucketCdnPolicyNegativeCachingPolicyArgs> negativeCachingPolicies) {
+            return negativeCachingPolicies(Output.of(negativeCachingPolicies));
         }
+
         public Builder negativeCachingPolicies(BackendBucketCdnPolicyNegativeCachingPolicyArgs... negativeCachingPolicies) {
             return negativeCachingPolicies(List.of(negativeCachingPolicies));
         }
+
         public Builder serveWhileStale(@Nullable Output<Integer> serveWhileStale) {
-            this.serveWhileStale = serveWhileStale;
+            $.serveWhileStale = serveWhileStale;
             return this;
         }
-        public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
-            this.serveWhileStale = Codegen.ofNullable(serveWhileStale);
-            return this;
+
+        public Builder serveWhileStale(Integer serveWhileStale) {
+            return serveWhileStale(Output.of(serveWhileStale));
         }
+
         public Builder signedUrlCacheMaxAgeSec(@Nullable Output<Integer> signedUrlCacheMaxAgeSec) {
-            this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
+            $.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
-        public Builder signedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
-            this.signedUrlCacheMaxAgeSec = Codegen.ofNullable(signedUrlCacheMaxAgeSec);
-            return this;
-        }        public BackendBucketCdnPolicyArgs build() {
-            return new BackendBucketCdnPolicyArgs(cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
+
+        public Builder signedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
+            return signedUrlCacheMaxAgeSec(Output.of(signedUrlCacheMaxAgeSec));
+        }
+
+        public BackendBucketCdnPolicyArgs build() {
+            return $;
         }
     }
+
 }

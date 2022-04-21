@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends com.pulumi
      * 
      */
     @Import(name="placeIds")
-      private final @Nullable Output<List<String>> placeIds;
+    private @Nullable Output<List<String>> placeIds;
 
-    public Output<List<String>> placeIds() {
-        return this.placeIds == null ? Codegen.empty() : this.placeIds;
+    public Optional<Output<List<String>>> placeIds() {
+        return Optional.ofNullable(this.placeIds);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoArgs extends com.pulumi
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GoogleCloudRetailV2betaFulfillmentInfoArgs(
-        @Nullable Output<List<String>> placeIds,
-        @Nullable Output<String> type) {
-        this.placeIds = placeIds;
-        this.type = type;
-    }
+    private GoogleCloudRetailV2betaFulfillmentInfoArgs() {}
 
-    private GoogleCloudRetailV2betaFulfillmentInfoArgs() {
-        this.placeIds = Codegen.empty();
-        this.type = Codegen.empty();
+    private GoogleCloudRetailV2betaFulfillmentInfoArgs(GoogleCloudRetailV2betaFulfillmentInfoArgs $) {
+        this.placeIds = $.placeIds;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaFulfillmentInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> placeIds;
-        private @Nullable Output<String> type;
+        private GoogleCloudRetailV2betaFulfillmentInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaFulfillmentInfoArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaFulfillmentInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.placeIds = defaults.placeIds;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudRetailV2betaFulfillmentInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder placeIds(@Nullable Output<List<String>> placeIds) {
-            this.placeIds = placeIds;
+            $.placeIds = placeIds;
             return this;
         }
-        public Builder placeIds(@Nullable List<String> placeIds) {
-            this.placeIds = Codegen.ofNullable(placeIds);
-            return this;
+
+        public Builder placeIds(List<String> placeIds) {
+            return placeIds(Output.of(placeIds));
         }
+
         public Builder placeIds(String... placeIds) {
             return placeIds(List.of(placeIds));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GoogleCloudRetailV2betaFulfillmentInfoArgs build() {
-            return new GoogleCloudRetailV2betaFulfillmentInfoArgs(placeIds, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudRetailV2betaFulfillmentInfoArgs build() {
+            return $;
         }
     }
+
 }

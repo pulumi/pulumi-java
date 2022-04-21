@@ -18,7 +18,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -29,7 +29,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ebs", required=true)
-      private final Map<String,String> ebs;
+    private Map<String,String> ebs;
 
     public Map<String,String> ebs() {
         return this.ebs;
@@ -40,7 +40,7 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="noDevice", required=true)
-      private final String noDevice;
+    private String noDevice;
 
     public String noDevice() {
         return this.noDevice;
@@ -51,73 +51,66 @@ public final class GetAmiBlockDeviceMapping extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="virtualName", required=true)
-      private final String virtualName;
+    private String virtualName;
 
     public String virtualName() {
         return this.virtualName;
     }
 
-    public GetAmiBlockDeviceMapping(
-        String deviceName,
-        Map<String,String> ebs,
-        String noDevice,
-        String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.ebs = Objects.requireNonNull(ebs, "expected parameter 'ebs' to be non-null");
-        this.noDevice = Objects.requireNonNull(noDevice, "expected parameter 'noDevice' to be non-null");
-        this.virtualName = Objects.requireNonNull(virtualName, "expected parameter 'virtualName' to be non-null");
-    }
+    private GetAmiBlockDeviceMapping() {}
 
-    private GetAmiBlockDeviceMapping() {
-        this.deviceName = null;
-        this.ebs = Map.of();
-        this.noDevice = null;
-        this.virtualName = null;
+    private GetAmiBlockDeviceMapping(GetAmiBlockDeviceMapping $) {
+        this.deviceName = $.deviceName;
+        this.ebs = $.ebs;
+        this.noDevice = $.noDevice;
+        this.virtualName = $.virtualName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAmiBlockDeviceMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private Map<String,String> ebs;
-        private String noDevice;
-        private String virtualName;
+        private GetAmiBlockDeviceMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAmiBlockDeviceMapping();
         }
 
         public Builder(GetAmiBlockDeviceMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.ebs = defaults.ebs;
-    	      this.noDevice = defaults.noDevice;
-    	      this.virtualName = defaults.virtualName;
+            $ = new GetAmiBlockDeviceMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder ebs(Map<String,String> ebs) {
-            this.ebs = Objects.requireNonNull(ebs);
+            $.ebs = ebs;
             return this;
         }
+
         public Builder noDevice(String noDevice) {
-            this.noDevice = Objects.requireNonNull(noDevice);
+            $.noDevice = noDevice;
             return this;
         }
+
         public Builder virtualName(String virtualName) {
-            this.virtualName = Objects.requireNonNull(virtualName);
+            $.virtualName = virtualName;
             return this;
-        }        public GetAmiBlockDeviceMapping build() {
-            return new GetAmiBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
+        }
+
+        public GetAmiBlockDeviceMapping build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.ebs = Objects.requireNonNull($.ebs, "expected parameter 'ebs' to be non-null");
+            $.noDevice = Objects.requireNonNull($.noDevice, "expected parameter 'noDevice' to be non-null");
+            $.virtualName = Objects.requireNonNull($.virtualName, "expected parameter 'virtualName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -33,7 +33,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
@@ -44,7 +44,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="shareType", required=true)
-      private final String shareType;
+    private String shareType;
 
     public String shareType() {
         return this.shareType;
@@ -55,7 +55,7 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="supportedAccessProtocols", required=true)
-      private final List<String> supportedAccessProtocols;
+    private List<String> supportedAccessProtocols;
 
     public List<String> supportedAccessProtocols() {
         return this.supportedAccessProtocols;
@@ -66,85 +66,77 @@ public final class ShareCredentialDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ShareCredentialDetailsResponse(
-        String password,
-        String shareName,
-        String shareType,
-        List<String> supportedAccessProtocols,
-        String userName) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.shareType = Objects.requireNonNull(shareType, "expected parameter 'shareType' to be non-null");
-        this.supportedAccessProtocols = Objects.requireNonNull(supportedAccessProtocols, "expected parameter 'supportedAccessProtocols' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ShareCredentialDetailsResponse() {}
 
-    private ShareCredentialDetailsResponse() {
-        this.password = null;
-        this.shareName = null;
-        this.shareType = null;
-        this.supportedAccessProtocols = List.of();
-        this.userName = null;
+    private ShareCredentialDetailsResponse(ShareCredentialDetailsResponse $) {
+        this.password = $.password;
+        this.shareName = $.shareName;
+        this.shareType = $.shareType;
+        this.supportedAccessProtocols = $.supportedAccessProtocols;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareCredentialDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String shareName;
-        private String shareType;
-        private List<String> supportedAccessProtocols;
-        private String userName;
+        private ShareCredentialDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareCredentialDetailsResponse();
         }
 
         public Builder(ShareCredentialDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.shareName = defaults.shareName;
-    	      this.shareType = defaults.shareType;
-    	      this.supportedAccessProtocols = defaults.supportedAccessProtocols;
-    	      this.userName = defaults.userName;
+            $ = new ShareCredentialDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareType(String shareType) {
-            this.shareType = Objects.requireNonNull(shareType);
+            $.shareType = shareType;
             return this;
         }
+
         public Builder supportedAccessProtocols(List<String> supportedAccessProtocols) {
-            this.supportedAccessProtocols = Objects.requireNonNull(supportedAccessProtocols);
+            $.supportedAccessProtocols = supportedAccessProtocols;
             return this;
         }
+
         public Builder supportedAccessProtocols(String... supportedAccessProtocols) {
             return supportedAccessProtocols(List.of(supportedAccessProtocols));
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ShareCredentialDetailsResponse build() {
-            return new ShareCredentialDetailsResponse(password, shareName, shareType, supportedAccessProtocols, userName);
+        }
+
+        public ShareCredentialDetailsResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            $.shareType = Objects.requireNonNull($.shareType, "expected parameter 'shareType' to be non-null");
+            $.supportedAccessProtocols = Objects.requireNonNull($.supportedAccessProtocols, "expected parameter 'supportedAccessProtocols' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

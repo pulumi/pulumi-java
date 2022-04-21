@@ -14,78 +14,73 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow extends com.pulum
     public static final GetDatabaseInstanceSettingMaintenanceWindow Empty = new GetDatabaseInstanceSettingMaintenanceWindow();
 
     @Import(name="day", required=true)
-      private final Integer day;
+    private Integer day;
 
     public Integer day() {
         return this.day;
     }
 
     @Import(name="hour", required=true)
-      private final Integer hour;
+    private Integer hour;
 
     public Integer hour() {
         return this.hour;
     }
 
     @Import(name="updateTrack", required=true)
-      private final String updateTrack;
+    private String updateTrack;
 
     public String updateTrack() {
         return this.updateTrack;
     }
 
-    public GetDatabaseInstanceSettingMaintenanceWindow(
-        Integer day,
-        Integer hour,
-        String updateTrack) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.hour = Objects.requireNonNull(hour, "expected parameter 'hour' to be non-null");
-        this.updateTrack = Objects.requireNonNull(updateTrack, "expected parameter 'updateTrack' to be non-null");
-    }
+    private GetDatabaseInstanceSettingMaintenanceWindow() {}
 
-    private GetDatabaseInstanceSettingMaintenanceWindow() {
-        this.day = null;
-        this.hour = null;
-        this.updateTrack = null;
+    private GetDatabaseInstanceSettingMaintenanceWindow(GetDatabaseInstanceSettingMaintenanceWindow $) {
+        this.day = $.day;
+        this.hour = $.hour;
+        this.updateTrack = $.updateTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingMaintenanceWindow defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer day;
-        private Integer hour;
-        private String updateTrack;
+        private GetDatabaseInstanceSettingMaintenanceWindow $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingMaintenanceWindow();
         }
 
         public Builder(GetDatabaseInstanceSettingMaintenanceWindow defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hour = defaults.hour;
-    	      this.updateTrack = defaults.updateTrack;
+            $ = new GetDatabaseInstanceSettingMaintenanceWindow(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Integer day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder hour(Integer hour) {
-            this.hour = Objects.requireNonNull(hour);
+            $.hour = hour;
             return this;
         }
+
         public Builder updateTrack(String updateTrack) {
-            this.updateTrack = Objects.requireNonNull(updateTrack);
+            $.updateTrack = updateTrack;
             return this;
-        }        public GetDatabaseInstanceSettingMaintenanceWindow build() {
-            return new GetDatabaseInstanceSettingMaintenanceWindow(day, hour, updateTrack);
+        }
+
+        public GetDatabaseInstanceSettingMaintenanceWindow build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.hour = Objects.requireNonNull($.hour, "expected parameter 'hour' to be non-null");
+            $.updateTrack = Objects.requireNonNull($.updateTrack, "expected parameter 'updateTrack' to be non-null");
+            return $;
         }
     }
+
 }

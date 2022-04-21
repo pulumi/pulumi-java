@@ -5,10 +5,10 @@ package com.pulumi.gcp.secretmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
@@ -44,76 +44,70 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretData", required=true)
-      private final Output<String> secretData;
+    private Output<String> secretData;
 
     public Output<String> secretData() {
         return this.secretData;
     }
 
-    public SecretVersionArgs(
-        @Nullable Output<Boolean> enabled,
-        Output<String> secret,
-        Output<String> secretData) {
-        this.enabled = enabled;
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.secretData = Objects.requireNonNull(secretData, "expected parameter 'secretData' to be non-null");
-    }
+    private SecretVersionArgs() {}
 
-    private SecretVersionArgs() {
-        this.enabled = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.secretData = Codegen.empty();
+    private SecretVersionArgs(SecretVersionArgs $) {
+        this.enabled = $.enabled;
+        this.secret = $.secret;
+        this.secretData = $.secretData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> secret;
-        private Output<String> secretData;
+        private SecretVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVersionArgs();
         }
 
         public Builder(SecretVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.secret = defaults.secret;
-    	      this.secretData = defaults.secretData;
+            $ = new SecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
+            return secret(Output.of(secret));
         }
+
         public Builder secretData(Output<String> secretData) {
-            this.secretData = Objects.requireNonNull(secretData);
+            $.secretData = secretData;
             return this;
         }
+
         public Builder secretData(String secretData) {
-            this.secretData = Output.of(Objects.requireNonNull(secretData));
-            return this;
-        }        public SecretVersionArgs build() {
-            return new SecretVersionArgs(enabled, secret, secretData);
+            return secretData(Output.of(secretData));
+        }
+
+        public SecretVersionArgs build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            $.secretData = Objects.requireNonNull($.secretData, "expected parameter 'secretData' to be non-null");
+            return $;
         }
     }
+
 }

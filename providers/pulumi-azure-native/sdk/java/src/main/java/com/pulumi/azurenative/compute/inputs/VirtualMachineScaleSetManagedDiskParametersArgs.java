@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends com.p
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
+    private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
+    public Optional<Output<DiskEncryptionSetParametersArgs>> diskEncryptionSet() {
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class VirtualMachineScaleSetManagedDiskParametersArgs extends com.p
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountTypes>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public VirtualMachineScaleSetManagedDiskParametersArgs(
-        @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet,
-        @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.storageAccountType = storageAccountType;
-    }
+    private VirtualMachineScaleSetManagedDiskParametersArgs() {}
 
-    private VirtualMachineScaleSetManagedDiskParametersArgs() {
-        this.diskEncryptionSet = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
+    private VirtualMachineScaleSetManagedDiskParametersArgs(VirtualMachineScaleSetManagedDiskParametersArgs $) {
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetManagedDiskParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
-        private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+        private VirtualMachineScaleSetManagedDiskParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetManagedDiskParametersArgs();
         }
 
         public Builder(VirtualMachineScaleSetManagedDiskParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new VirtualMachineScaleSetManagedDiskParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
-            return this;
+
+        public Builder diskEncryptionSet(DiskEncryptionSetParametersArgs diskEncryptionSet) {
+            return diskEncryptionSet(Output.of(diskEncryptionSet));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
-        }        public VirtualMachineScaleSetManagedDiskParametersArgs build() {
-            return new VirtualMachineScaleSetManagedDiskParametersArgs(diskEncryptionSet, storageAccountType);
+
+        public Builder storageAccountType(Either<String,StorageAccountTypes> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public VirtualMachineScaleSetManagedDiskParametersArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2FieldIdArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GooglePrivacyDlpV2FieldIdArgs(@Nullable Output<String> name) {
-        this.name = name;
-    }
+    private GooglePrivacyDlpV2FieldIdArgs() {}
 
-    private GooglePrivacyDlpV2FieldIdArgs() {
-        this.name = Codegen.empty();
+    private GooglePrivacyDlpV2FieldIdArgs(GooglePrivacyDlpV2FieldIdArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FieldIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
+        private GooglePrivacyDlpV2FieldIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FieldIdArgs();
         }
 
         public Builder(GooglePrivacyDlpV2FieldIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GooglePrivacyDlpV2FieldIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GooglePrivacyDlpV2FieldIdArgs build() {
-            return new GooglePrivacyDlpV2FieldIdArgs(name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GooglePrivacyDlpV2FieldIdArgs build() {
+            return $;
         }
     }
+
 }

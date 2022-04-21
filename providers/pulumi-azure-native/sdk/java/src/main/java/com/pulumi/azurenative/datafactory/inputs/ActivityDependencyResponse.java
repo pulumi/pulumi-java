@@ -22,7 +22,7 @@ public final class ActivityDependencyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="activity", required=true)
-      private final String activity;
+    private String activity;
 
     public String activity() {
         return this.activity;
@@ -33,58 +33,56 @@ public final class ActivityDependencyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dependencyConditions", required=true)
-      private final List<String> dependencyConditions;
+    private List<String> dependencyConditions;
 
     public List<String> dependencyConditions() {
         return this.dependencyConditions;
     }
 
-    public ActivityDependencyResponse(
-        String activity,
-        List<String> dependencyConditions) {
-        this.activity = Objects.requireNonNull(activity, "expected parameter 'activity' to be non-null");
-        this.dependencyConditions = Objects.requireNonNull(dependencyConditions, "expected parameter 'dependencyConditions' to be non-null");
-    }
+    private ActivityDependencyResponse() {}
 
-    private ActivityDependencyResponse() {
-        this.activity = null;
-        this.dependencyConditions = List.of();
+    private ActivityDependencyResponse(ActivityDependencyResponse $) {
+        this.activity = $.activity;
+        this.dependencyConditions = $.dependencyConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityDependencyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activity;
-        private List<String> dependencyConditions;
+        private ActivityDependencyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityDependencyResponse();
         }
 
         public Builder(ActivityDependencyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activity = defaults.activity;
-    	      this.dependencyConditions = defaults.dependencyConditions;
+            $ = new ActivityDependencyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activity(String activity) {
-            this.activity = Objects.requireNonNull(activity);
+            $.activity = activity;
             return this;
         }
+
         public Builder dependencyConditions(List<String> dependencyConditions) {
-            this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
+            $.dependencyConditions = dependencyConditions;
             return this;
         }
+
         public Builder dependencyConditions(String... dependencyConditions) {
             return dependencyConditions(List.of(dependencyConditions));
-        }        public ActivityDependencyResponse build() {
-            return new ActivityDependencyResponse(activity, dependencyConditions);
+        }
+
+        public ActivityDependencyResponse build() {
+            $.activity = Objects.requireNonNull($.activity, "expected parameter 'activity' to be non-null");
+            $.dependencyConditions = Objects.requireNonNull($.dependencyConditions, "expected parameter 'dependencyConditions' to be non-null");
+            return $;
         }
     }
+
 }

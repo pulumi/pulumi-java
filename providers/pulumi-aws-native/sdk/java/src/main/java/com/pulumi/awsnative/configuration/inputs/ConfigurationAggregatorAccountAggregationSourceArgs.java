@@ -5,11 +5,11 @@ package com.pulumi.awsnative.configuration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,96 +18,91 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends c
     public static final ConfigurationAggregatorAccountAggregationSourceArgs Empty = new ConfigurationAggregatorAccountAggregationSourceArgs();
 
     @Import(name="accountIds", required=true)
-      private final Output<List<String>> accountIds;
+    private Output<List<String>> accountIds;
 
     public Output<List<String>> accountIds() {
         return this.accountIds;
     }
 
     @Import(name="allAwsRegions")
-      private final @Nullable Output<Boolean> allAwsRegions;
+    private @Nullable Output<Boolean> allAwsRegions;
 
-    public Output<Boolean> allAwsRegions() {
-        return this.allAwsRegions == null ? Codegen.empty() : this.allAwsRegions;
+    public Optional<Output<Boolean>> allAwsRegions() {
+        return Optional.ofNullable(this.allAwsRegions);
     }
 
     @Import(name="awsRegions")
-      private final @Nullable Output<List<String>> awsRegions;
+    private @Nullable Output<List<String>> awsRegions;
 
-    public Output<List<String>> awsRegions() {
-        return this.awsRegions == null ? Codegen.empty() : this.awsRegions;
+    public Optional<Output<List<String>>> awsRegions() {
+        return Optional.ofNullable(this.awsRegions);
     }
 
-    public ConfigurationAggregatorAccountAggregationSourceArgs(
-        Output<List<String>> accountIds,
-        @Nullable Output<Boolean> allAwsRegions,
-        @Nullable Output<List<String>> awsRegions) {
-        this.accountIds = Objects.requireNonNull(accountIds, "expected parameter 'accountIds' to be non-null");
-        this.allAwsRegions = allAwsRegions;
-        this.awsRegions = awsRegions;
-    }
+    private ConfigurationAggregatorAccountAggregationSourceArgs() {}
 
-    private ConfigurationAggregatorAccountAggregationSourceArgs() {
-        this.accountIds = Codegen.empty();
-        this.allAwsRegions = Codegen.empty();
-        this.awsRegions = Codegen.empty();
+    private ConfigurationAggregatorAccountAggregationSourceArgs(ConfigurationAggregatorAccountAggregationSourceArgs $) {
+        this.accountIds = $.accountIds;
+        this.allAwsRegions = $.allAwsRegions;
+        this.awsRegions = $.awsRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationAggregatorAccountAggregationSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> accountIds;
-        private @Nullable Output<Boolean> allAwsRegions;
-        private @Nullable Output<List<String>> awsRegions;
+        private ConfigurationAggregatorAccountAggregationSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationAggregatorAccountAggregationSourceArgs();
         }
 
         public Builder(ConfigurationAggregatorAccountAggregationSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountIds = defaults.accountIds;
-    	      this.allAwsRegions = defaults.allAwsRegions;
-    	      this.awsRegions = defaults.awsRegions;
+            $ = new ConfigurationAggregatorAccountAggregationSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountIds(Output<List<String>> accountIds) {
-            this.accountIds = Objects.requireNonNull(accountIds);
+            $.accountIds = accountIds;
             return this;
         }
+
         public Builder accountIds(List<String> accountIds) {
-            this.accountIds = Output.of(Objects.requireNonNull(accountIds));
-            return this;
+            return accountIds(Output.of(accountIds));
         }
+
         public Builder accountIds(String... accountIds) {
             return accountIds(List.of(accountIds));
         }
+
         public Builder allAwsRegions(@Nullable Output<Boolean> allAwsRegions) {
-            this.allAwsRegions = allAwsRegions;
+            $.allAwsRegions = allAwsRegions;
             return this;
         }
-        public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = Codegen.ofNullable(allAwsRegions);
-            return this;
+
+        public Builder allAwsRegions(Boolean allAwsRegions) {
+            return allAwsRegions(Output.of(allAwsRegions));
         }
+
         public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
-            this.awsRegions = awsRegions;
+            $.awsRegions = awsRegions;
             return this;
         }
-        public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = Codegen.ofNullable(awsRegions);
-            return this;
+
+        public Builder awsRegions(List<String> awsRegions) {
+            return awsRegions(Output.of(awsRegions));
         }
+
         public Builder awsRegions(String... awsRegions) {
             return awsRegions(List.of(awsRegions));
-        }        public ConfigurationAggregatorAccountAggregationSourceArgs build() {
-            return new ConfigurationAggregatorAccountAggregationSourceArgs(accountIds, allAwsRegions, awsRegions);
+        }
+
+        public ConfigurationAggregatorAccountAggregationSourceArgs build() {
+            $.accountIds = Objects.requireNonNull($.accountIds, "expected parameter 'accountIds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.sagemaker;
 import com.pulumi.awsnative.sagemaker.inputs.DeviceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="device")
-      private final @Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
+    private @Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
-    public Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device() {
-        return this.device == null ? Codegen.empty() : this.device;
+    public Optional<Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs>> device() {
+        return Optional.ofNullable(this.device);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceFleetName", required=true)
-      private final Output<String> deviceFleetName;
+    private Output<String> deviceFleetName;
 
     public Output<String> deviceFleetName() {
         return this.deviceFleetName;
@@ -44,79 +44,73 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DeviceTagArgs>> tags;
+    private @Nullable Output<List<DeviceTagArgs>> tags;
 
-    public Output<List<DeviceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DeviceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DeviceArgs(
-        @Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device,
-        Output<String> deviceFleetName,
-        @Nullable Output<List<DeviceTagArgs>> tags) {
-        this.device = device;
-        this.deviceFleetName = Objects.requireNonNull(deviceFleetName, "expected parameter 'deviceFleetName' to be non-null");
-        this.tags = tags;
-    }
+    private DeviceArgs() {}
 
-    private DeviceArgs() {
-        this.device = Codegen.empty();
-        this.deviceFleetName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DeviceArgs(DeviceArgs $) {
+        this.device = $.device;
+        this.deviceFleetName = $.deviceFleetName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
-        private Output<String> deviceFleetName;
-        private @Nullable Output<List<DeviceTagArgs>> tags;
+        private DeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceArgs();
         }
 
         public Builder(DeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.device = defaults.device;
-    	      this.deviceFleetName = defaults.deviceFleetName;
-    	      this.tags = defaults.tags;
+            $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder device(@Nullable Output<com.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device) {
-            this.device = device;
+            $.device = device;
             return this;
         }
-        public Builder device(@Nullable com.pulumi.awsnative.sagemaker.inputs.DeviceArgs device) {
-            this.device = Codegen.ofNullable(device);
-            return this;
+
+        public Builder device(com.pulumi.awsnative.sagemaker.inputs.DeviceArgs device) {
+            return device(Output.of(device));
         }
+
         public Builder deviceFleetName(Output<String> deviceFleetName) {
-            this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
+            $.deviceFleetName = deviceFleetName;
             return this;
         }
+
         public Builder deviceFleetName(String deviceFleetName) {
-            this.deviceFleetName = Output.of(Objects.requireNonNull(deviceFleetName));
-            return this;
+            return deviceFleetName(Output.of(deviceFleetName));
         }
+
         public Builder tags(@Nullable Output<List<DeviceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DeviceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DeviceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DeviceTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DeviceArgs build() {
-            return new DeviceArgs(device, deviceFleetName, tags);
+        }
+
+        public DeviceArgs build() {
+            $.deviceFleetName = Objects.requireNonNull($.deviceFleetName, "expected parameter 'deviceFleetName' to be non-null");
+            return $;
         }
     }
+
 }

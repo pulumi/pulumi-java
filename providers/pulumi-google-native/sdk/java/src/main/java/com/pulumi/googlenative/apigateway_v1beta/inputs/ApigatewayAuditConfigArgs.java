@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApigatewayAuditConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="auditLogConfigs")
-      private final @Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
+    private @Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs() {
-        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
+    public Optional<Output<List<ApigatewayAuditLogConfigArgs>>> auditLogConfigs() {
+        return Optional.ofNullable(this.auditLogConfigs);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ApigatewayAuditConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ApigatewayAuditConfigArgs(
-        @Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs,
-        @Nullable Output<String> service) {
-        this.auditLogConfigs = auditLogConfigs;
-        this.service = service;
-    }
+    private ApigatewayAuditConfigArgs() {}
 
-    private ApigatewayAuditConfigArgs() {
-        this.auditLogConfigs = Codegen.empty();
-        this.service = Codegen.empty();
+    private ApigatewayAuditConfigArgs(ApigatewayAuditConfigArgs $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayAuditConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
-        private @Nullable Output<String> service;
+        private ApigatewayAuditConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayAuditConfigArgs();
         }
 
         public Builder(ApigatewayAuditConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.service = defaults.service;
+            $ = new ApigatewayAuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(@Nullable Output<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs) {
-            this.auditLogConfigs = auditLogConfigs;
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
-        public Builder auditLogConfigs(@Nullable List<ApigatewayAuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
-            return this;
+
+        public Builder auditLogConfigs(List<ApigatewayAuditLogConfigArgs> auditLogConfigs) {
+            return auditLogConfigs(Output.of(auditLogConfigs));
         }
+
         public Builder auditLogConfigs(ApigatewayAuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ApigatewayAuditConfigArgs build() {
-            return new ApigatewayAuditConfigArgs(auditLogConfigs, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ApigatewayAuditConfigArgs build() {
+            return $;
         }
     }
+
 }

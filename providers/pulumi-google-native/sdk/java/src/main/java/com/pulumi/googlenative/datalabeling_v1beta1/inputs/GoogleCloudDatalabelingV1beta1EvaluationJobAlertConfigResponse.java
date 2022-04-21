@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -33,55 +33,52 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
      * 
      */
     @Import(name="minAcceptableMeanAveragePrecision", required=true)
-      private final Double minAcceptableMeanAveragePrecision;
+    private Double minAcceptableMeanAveragePrecision;
 
     public Double minAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(
-        String email,
-        Double minAcceptableMeanAveragePrecision) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision, "expected parameter 'minAcceptableMeanAveragePrecision' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse() {
-        this.email = null;
-        this.minAcceptableMeanAveragePrecision = null;
+    private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse $) {
+        this.email = $.email;
+        this.minAcceptableMeanAveragePrecision = $.minAcceptableMeanAveragePrecision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
-        private Double minAcceptableMeanAveragePrecision;
+        private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.minAcceptableMeanAveragePrecision = defaults.minAcceptableMeanAveragePrecision;
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
-            this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
+            $.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(email, minAcceptableMeanAveragePrecision);
+        }
+
+        public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.minAcceptableMeanAveragePrecision = Objects.requireNonNull($.minAcceptableMeanAveragePrecision, "expected parameter 'minAcceptableMeanAveragePrecision' to be non-null");
+            return $;
         }
     }
+
 }

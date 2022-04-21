@@ -17,7 +17,7 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public ListIotHubResourceKeysForKeyNameArgs(
-        String keyName,
-        String resourceGroupName,
-        String resourceName) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ListIotHubResourceKeysForKeyNameArgs() {}
 
-    private ListIotHubResourceKeysForKeyNameArgs() {
-        this.keyName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private ListIotHubResourceKeysForKeyNameArgs(ListIotHubResourceKeysForKeyNameArgs $) {
+        this.keyName = $.keyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIotHubResourceKeysForKeyNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String resourceGroupName;
-        private String resourceName;
+        private ListIotHubResourceKeysForKeyNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIotHubResourceKeysForKeyNameArgs();
         }
 
         public Builder(ListIotHubResourceKeysForKeyNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ListIotHubResourceKeysForKeyNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public ListIotHubResourceKeysForKeyNameArgs build() {
-            return new ListIotHubResourceKeysForKeyNameArgs(keyName, resourceGroupName, resourceName);
+        }
+
+        public ListIotHubResourceKeysForKeyNameArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

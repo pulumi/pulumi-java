@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EventTargetSqsTargetGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="messageGroupId")
-      private final @Nullable Output<String> messageGroupId;
+    private @Nullable Output<String> messageGroupId;
 
-    public Output<String> messageGroupId() {
-        return this.messageGroupId == null ? Codegen.empty() : this.messageGroupId;
+    public Optional<Output<String>> messageGroupId() {
+        return Optional.ofNullable(this.messageGroupId);
     }
 
-    public EventTargetSqsTargetGetArgs(@Nullable Output<String> messageGroupId) {
-        this.messageGroupId = messageGroupId;
-    }
+    private EventTargetSqsTargetGetArgs() {}
 
-    private EventTargetSqsTargetGetArgs() {
-        this.messageGroupId = Codegen.empty();
+    private EventTargetSqsTargetGetArgs(EventTargetSqsTargetGetArgs $) {
+        this.messageGroupId = $.messageGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetSqsTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> messageGroupId;
+        private EventTargetSqsTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetSqsTargetGetArgs();
         }
 
         public Builder(EventTargetSqsTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageGroupId = defaults.messageGroupId;
+            $ = new EventTargetSqsTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageGroupId(@Nullable Output<String> messageGroupId) {
-            this.messageGroupId = messageGroupId;
+            $.messageGroupId = messageGroupId;
             return this;
         }
-        public Builder messageGroupId(@Nullable String messageGroupId) {
-            this.messageGroupId = Codegen.ofNullable(messageGroupId);
-            return this;
-        }        public EventTargetSqsTargetGetArgs build() {
-            return new EventTargetSqsTargetGetArgs(messageGroupId);
+
+        public Builder messageGroupId(String messageGroupId) {
+            return messageGroupId(Output.of(messageGroupId));
+        }
+
+        public EventTargetSqsTargetGetArgs build() {
+            return $;
         }
     }
+
 }

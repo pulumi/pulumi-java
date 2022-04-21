@@ -5,11 +5,11 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customAttributes")
-      private final @Nullable Output<Map<String,String>> customAttributes;
+    private @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> customAttributes() {
-        return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
+    public Optional<Output<Map<String,String>>> customAttributes() {
+        return Optional.ofNullable(this.customAttributes);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventTypes")
-      private final @Nullable Output<List<String>> eventTypes;
+    private @Nullable Output<List<String>> eventTypes;
 
-    public Output<List<String>> eventTypes() {
-        return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
+    public Optional<Output<List<String>>> eventTypes() {
+        return Optional.ofNullable(this.eventTypes);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationId")
-      private final @Nullable Output<String> notificationId;
+    private @Nullable Output<String> notificationId;
 
-    public Output<String> notificationId() {
-        return this.notificationId == null ? Codegen.empty() : this.notificationId;
+    public Optional<Output<String>> notificationId() {
+        return Optional.ofNullable(this.notificationId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectNamePrefix")
-      private final @Nullable Output<String> objectNamePrefix;
+    private @Nullable Output<String> objectNamePrefix;
 
-    public Output<String> objectNamePrefix() {
-        return this.objectNamePrefix == null ? Codegen.empty() : this.objectNamePrefix;
+    public Optional<Output<String>> objectNamePrefix() {
+        return Optional.ofNullable(this.objectNamePrefix);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="payloadFormat")
-      private final @Nullable Output<String> payloadFormat;
+    private @Nullable Output<String> payloadFormat;
 
-    public Output<String> payloadFormat() {
-        return this.payloadFormat == null ? Codegen.empty() : this.payloadFormat;
+    public Optional<Output<String>> payloadFormat() {
+        return Optional.ofNullable(this.payloadFormat);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -102,144 +102,122 @@ public final class NotificationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public NotificationState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<Map<String,String>> customAttributes,
-        @Nullable Output<List<String>> eventTypes,
-        @Nullable Output<String> notificationId,
-        @Nullable Output<String> objectNamePrefix,
-        @Nullable Output<String> payloadFormat,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> topic) {
-        this.bucket = bucket;
-        this.customAttributes = customAttributes;
-        this.eventTypes = eventTypes;
-        this.notificationId = notificationId;
-        this.objectNamePrefix = objectNamePrefix;
-        this.payloadFormat = payloadFormat;
-        this.selfLink = selfLink;
-        this.topic = topic;
-    }
+    private NotificationState() {}
 
-    private NotificationState() {
-        this.bucket = Codegen.empty();
-        this.customAttributes = Codegen.empty();
-        this.eventTypes = Codegen.empty();
-        this.notificationId = Codegen.empty();
-        this.objectNamePrefix = Codegen.empty();
-        this.payloadFormat = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.topic = Codegen.empty();
+    private NotificationState(NotificationState $) {
+        this.bucket = $.bucket;
+        this.customAttributes = $.customAttributes;
+        this.eventTypes = $.eventTypes;
+        this.notificationId = $.notificationId;
+        this.objectNamePrefix = $.objectNamePrefix;
+        this.payloadFormat = $.payloadFormat;
+        this.selfLink = $.selfLink;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<Map<String,String>> customAttributes;
-        private @Nullable Output<List<String>> eventTypes;
-        private @Nullable Output<String> notificationId;
-        private @Nullable Output<String> objectNamePrefix;
-        private @Nullable Output<String> payloadFormat;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> topic;
+        private NotificationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationState();
         }
 
         public Builder(NotificationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.customAttributes = defaults.customAttributes;
-    	      this.eventTypes = defaults.eventTypes;
-    	      this.notificationId = defaults.notificationId;
-    	      this.objectNamePrefix = defaults.objectNamePrefix;
-    	      this.payloadFormat = defaults.payloadFormat;
-    	      this.selfLink = defaults.selfLink;
-    	      this.topic = defaults.topic;
+            $ = new NotificationState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
-            this.customAttributes = customAttributes;
+            $.customAttributes = customAttributes;
             return this;
         }
-        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Codegen.ofNullable(customAttributes);
-            return this;
+
+        public Builder customAttributes(Map<String,String> customAttributes) {
+            return customAttributes(Output.of(customAttributes));
         }
+
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
-            this.eventTypes = eventTypes;
+            $.eventTypes = eventTypes;
             return this;
         }
-        public Builder eventTypes(@Nullable List<String> eventTypes) {
-            this.eventTypes = Codegen.ofNullable(eventTypes);
-            return this;
+
+        public Builder eventTypes(List<String> eventTypes) {
+            return eventTypes(Output.of(eventTypes));
         }
+
         public Builder eventTypes(String... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
+
         public Builder notificationId(@Nullable Output<String> notificationId) {
-            this.notificationId = notificationId;
+            $.notificationId = notificationId;
             return this;
         }
-        public Builder notificationId(@Nullable String notificationId) {
-            this.notificationId = Codegen.ofNullable(notificationId);
-            return this;
+
+        public Builder notificationId(String notificationId) {
+            return notificationId(Output.of(notificationId));
         }
+
         public Builder objectNamePrefix(@Nullable Output<String> objectNamePrefix) {
-            this.objectNamePrefix = objectNamePrefix;
+            $.objectNamePrefix = objectNamePrefix;
             return this;
         }
-        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            this.objectNamePrefix = Codegen.ofNullable(objectNamePrefix);
-            return this;
+
+        public Builder objectNamePrefix(String objectNamePrefix) {
+            return objectNamePrefix(Output.of(objectNamePrefix));
         }
+
         public Builder payloadFormat(@Nullable Output<String> payloadFormat) {
-            this.payloadFormat = payloadFormat;
+            $.payloadFormat = payloadFormat;
             return this;
         }
-        public Builder payloadFormat(@Nullable String payloadFormat) {
-            this.payloadFormat = Codegen.ofNullable(payloadFormat);
-            return this;
+
+        public Builder payloadFormat(String payloadFormat) {
+            return payloadFormat(Output.of(payloadFormat));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public NotificationState build() {
-            return new NotificationState(bucket, customAttributes, eventTypes, notificationId, objectNamePrefix, payloadFormat, selfLink, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public NotificationState build() {
+            return $;
         }
     }
+
 }

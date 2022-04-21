@@ -20,8 +20,8 @@ import com.pulumi.aws.iot.inputs.TopicRuleErrorActionSqsArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionStepFunctionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,330 +30,286 @@ public final class TopicRuleErrorActionArgs extends com.pulumi.resources.Resourc
     public static final TopicRuleErrorActionArgs Empty = new TopicRuleErrorActionArgs();
 
     @Import(name="cloudwatchAlarm")
-      private final @Nullable Output<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm;
+    private @Nullable Output<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm;
 
-    public Output<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm() {
-        return this.cloudwatchAlarm == null ? Codegen.empty() : this.cloudwatchAlarm;
+    public Optional<Output<TopicRuleErrorActionCloudwatchAlarmArgs>> cloudwatchAlarm() {
+        return Optional.ofNullable(this.cloudwatchAlarm);
     }
 
     @Import(name="cloudwatchMetric")
-      private final @Nullable Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric;
+    private @Nullable Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric;
 
-    public Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric() {
-        return this.cloudwatchMetric == null ? Codegen.empty() : this.cloudwatchMetric;
+    public Optional<Output<TopicRuleErrorActionCloudwatchMetricArgs>> cloudwatchMetric() {
+        return Optional.ofNullable(this.cloudwatchMetric);
     }
 
     @Import(name="dynamodb")
-      private final @Nullable Output<TopicRuleErrorActionDynamodbArgs> dynamodb;
+    private @Nullable Output<TopicRuleErrorActionDynamodbArgs> dynamodb;
 
-    public Output<TopicRuleErrorActionDynamodbArgs> dynamodb() {
-        return this.dynamodb == null ? Codegen.empty() : this.dynamodb;
+    public Optional<Output<TopicRuleErrorActionDynamodbArgs>> dynamodb() {
+        return Optional.ofNullable(this.dynamodb);
     }
 
     @Import(name="dynamodbv2")
-      private final @Nullable Output<TopicRuleErrorActionDynamodbv2Args> dynamodbv2;
+    private @Nullable Output<TopicRuleErrorActionDynamodbv2Args> dynamodbv2;
 
-    public Output<TopicRuleErrorActionDynamodbv2Args> dynamodbv2() {
-        return this.dynamodbv2 == null ? Codegen.empty() : this.dynamodbv2;
+    public Optional<Output<TopicRuleErrorActionDynamodbv2Args>> dynamodbv2() {
+        return Optional.ofNullable(this.dynamodbv2);
     }
 
     @Import(name="elasticsearch")
-      private final @Nullable Output<TopicRuleErrorActionElasticsearchArgs> elasticsearch;
+    private @Nullable Output<TopicRuleErrorActionElasticsearchArgs> elasticsearch;
 
-    public Output<TopicRuleErrorActionElasticsearchArgs> elasticsearch() {
-        return this.elasticsearch == null ? Codegen.empty() : this.elasticsearch;
+    public Optional<Output<TopicRuleErrorActionElasticsearchArgs>> elasticsearch() {
+        return Optional.ofNullable(this.elasticsearch);
     }
 
     @Import(name="firehose")
-      private final @Nullable Output<TopicRuleErrorActionFirehoseArgs> firehose;
+    private @Nullable Output<TopicRuleErrorActionFirehoseArgs> firehose;
 
-    public Output<TopicRuleErrorActionFirehoseArgs> firehose() {
-        return this.firehose == null ? Codegen.empty() : this.firehose;
+    public Optional<Output<TopicRuleErrorActionFirehoseArgs>> firehose() {
+        return Optional.ofNullable(this.firehose);
     }
 
     @Import(name="iotAnalytics")
-      private final @Nullable Output<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics;
+    private @Nullable Output<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics;
 
-    public Output<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics() {
-        return this.iotAnalytics == null ? Codegen.empty() : this.iotAnalytics;
+    public Optional<Output<TopicRuleErrorActionIotAnalyticsArgs>> iotAnalytics() {
+        return Optional.ofNullable(this.iotAnalytics);
     }
 
     @Import(name="iotEvents")
-      private final @Nullable Output<TopicRuleErrorActionIotEventsArgs> iotEvents;
+    private @Nullable Output<TopicRuleErrorActionIotEventsArgs> iotEvents;
 
-    public Output<TopicRuleErrorActionIotEventsArgs> iotEvents() {
-        return this.iotEvents == null ? Codegen.empty() : this.iotEvents;
+    public Optional<Output<TopicRuleErrorActionIotEventsArgs>> iotEvents() {
+        return Optional.ofNullable(this.iotEvents);
     }
 
     @Import(name="kinesis")
-      private final @Nullable Output<TopicRuleErrorActionKinesisArgs> kinesis;
+    private @Nullable Output<TopicRuleErrorActionKinesisArgs> kinesis;
 
-    public Output<TopicRuleErrorActionKinesisArgs> kinesis() {
-        return this.kinesis == null ? Codegen.empty() : this.kinesis;
+    public Optional<Output<TopicRuleErrorActionKinesisArgs>> kinesis() {
+        return Optional.ofNullable(this.kinesis);
     }
 
     @Import(name="lambda")
-      private final @Nullable Output<TopicRuleErrorActionLambdaArgs> lambda;
+    private @Nullable Output<TopicRuleErrorActionLambdaArgs> lambda;
 
-    public Output<TopicRuleErrorActionLambdaArgs> lambda() {
-        return this.lambda == null ? Codegen.empty() : this.lambda;
+    public Optional<Output<TopicRuleErrorActionLambdaArgs>> lambda() {
+        return Optional.ofNullable(this.lambda);
     }
 
     @Import(name="republish")
-      private final @Nullable Output<TopicRuleErrorActionRepublishArgs> republish;
+    private @Nullable Output<TopicRuleErrorActionRepublishArgs> republish;
 
-    public Output<TopicRuleErrorActionRepublishArgs> republish() {
-        return this.republish == null ? Codegen.empty() : this.republish;
+    public Optional<Output<TopicRuleErrorActionRepublishArgs>> republish() {
+        return Optional.ofNullable(this.republish);
     }
 
     @Import(name="s3")
-      private final @Nullable Output<TopicRuleErrorActionS3Args> s3;
+    private @Nullable Output<TopicRuleErrorActionS3Args> s3;
 
-    public Output<TopicRuleErrorActionS3Args> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<TopicRuleErrorActionS3Args>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
     @Import(name="sns")
-      private final @Nullable Output<TopicRuleErrorActionSnsArgs> sns;
+    private @Nullable Output<TopicRuleErrorActionSnsArgs> sns;
 
-    public Output<TopicRuleErrorActionSnsArgs> sns() {
-        return this.sns == null ? Codegen.empty() : this.sns;
+    public Optional<Output<TopicRuleErrorActionSnsArgs>> sns() {
+        return Optional.ofNullable(this.sns);
     }
 
     @Import(name="sqs")
-      private final @Nullable Output<TopicRuleErrorActionSqsArgs> sqs;
+    private @Nullable Output<TopicRuleErrorActionSqsArgs> sqs;
 
-    public Output<TopicRuleErrorActionSqsArgs> sqs() {
-        return this.sqs == null ? Codegen.empty() : this.sqs;
+    public Optional<Output<TopicRuleErrorActionSqsArgs>> sqs() {
+        return Optional.ofNullable(this.sqs);
     }
 
     @Import(name="stepFunctions")
-      private final @Nullable Output<TopicRuleErrorActionStepFunctionsArgs> stepFunctions;
+    private @Nullable Output<TopicRuleErrorActionStepFunctionsArgs> stepFunctions;
 
-    public Output<TopicRuleErrorActionStepFunctionsArgs> stepFunctions() {
-        return this.stepFunctions == null ? Codegen.empty() : this.stepFunctions;
+    public Optional<Output<TopicRuleErrorActionStepFunctionsArgs>> stepFunctions() {
+        return Optional.ofNullable(this.stepFunctions);
     }
 
-    public TopicRuleErrorActionArgs(
-        @Nullable Output<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm,
-        @Nullable Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric,
-        @Nullable Output<TopicRuleErrorActionDynamodbArgs> dynamodb,
-        @Nullable Output<TopicRuleErrorActionDynamodbv2Args> dynamodbv2,
-        @Nullable Output<TopicRuleErrorActionElasticsearchArgs> elasticsearch,
-        @Nullable Output<TopicRuleErrorActionFirehoseArgs> firehose,
-        @Nullable Output<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics,
-        @Nullable Output<TopicRuleErrorActionIotEventsArgs> iotEvents,
-        @Nullable Output<TopicRuleErrorActionKinesisArgs> kinesis,
-        @Nullable Output<TopicRuleErrorActionLambdaArgs> lambda,
-        @Nullable Output<TopicRuleErrorActionRepublishArgs> republish,
-        @Nullable Output<TopicRuleErrorActionS3Args> s3,
-        @Nullable Output<TopicRuleErrorActionSnsArgs> sns,
-        @Nullable Output<TopicRuleErrorActionSqsArgs> sqs,
-        @Nullable Output<TopicRuleErrorActionStepFunctionsArgs> stepFunctions) {
-        this.cloudwatchAlarm = cloudwatchAlarm;
-        this.cloudwatchMetric = cloudwatchMetric;
-        this.dynamodb = dynamodb;
-        this.dynamodbv2 = dynamodbv2;
-        this.elasticsearch = elasticsearch;
-        this.firehose = firehose;
-        this.iotAnalytics = iotAnalytics;
-        this.iotEvents = iotEvents;
-        this.kinesis = kinesis;
-        this.lambda = lambda;
-        this.republish = republish;
-        this.s3 = s3;
-        this.sns = sns;
-        this.sqs = sqs;
-        this.stepFunctions = stepFunctions;
-    }
+    private TopicRuleErrorActionArgs() {}
 
-    private TopicRuleErrorActionArgs() {
-        this.cloudwatchAlarm = Codegen.empty();
-        this.cloudwatchMetric = Codegen.empty();
-        this.dynamodb = Codegen.empty();
-        this.dynamodbv2 = Codegen.empty();
-        this.elasticsearch = Codegen.empty();
-        this.firehose = Codegen.empty();
-        this.iotAnalytics = Codegen.empty();
-        this.iotEvents = Codegen.empty();
-        this.kinesis = Codegen.empty();
-        this.lambda = Codegen.empty();
-        this.republish = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.sns = Codegen.empty();
-        this.sqs = Codegen.empty();
-        this.stepFunctions = Codegen.empty();
+    private TopicRuleErrorActionArgs(TopicRuleErrorActionArgs $) {
+        this.cloudwatchAlarm = $.cloudwatchAlarm;
+        this.cloudwatchMetric = $.cloudwatchMetric;
+        this.dynamodb = $.dynamodb;
+        this.dynamodbv2 = $.dynamodbv2;
+        this.elasticsearch = $.elasticsearch;
+        this.firehose = $.firehose;
+        this.iotAnalytics = $.iotAnalytics;
+        this.iotEvents = $.iotEvents;
+        this.kinesis = $.kinesis;
+        this.lambda = $.lambda;
+        this.republish = $.republish;
+        this.s3 = $.s3;
+        this.sns = $.sns;
+        this.sqs = $.sqs;
+        this.stepFunctions = $.stepFunctions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleErrorActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm;
-        private @Nullable Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric;
-        private @Nullable Output<TopicRuleErrorActionDynamodbArgs> dynamodb;
-        private @Nullable Output<TopicRuleErrorActionDynamodbv2Args> dynamodbv2;
-        private @Nullable Output<TopicRuleErrorActionElasticsearchArgs> elasticsearch;
-        private @Nullable Output<TopicRuleErrorActionFirehoseArgs> firehose;
-        private @Nullable Output<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics;
-        private @Nullable Output<TopicRuleErrorActionIotEventsArgs> iotEvents;
-        private @Nullable Output<TopicRuleErrorActionKinesisArgs> kinesis;
-        private @Nullable Output<TopicRuleErrorActionLambdaArgs> lambda;
-        private @Nullable Output<TopicRuleErrorActionRepublishArgs> republish;
-        private @Nullable Output<TopicRuleErrorActionS3Args> s3;
-        private @Nullable Output<TopicRuleErrorActionSnsArgs> sns;
-        private @Nullable Output<TopicRuleErrorActionSqsArgs> sqs;
-        private @Nullable Output<TopicRuleErrorActionStepFunctionsArgs> stepFunctions;
+        private TopicRuleErrorActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleErrorActionArgs();
         }
 
         public Builder(TopicRuleErrorActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchAlarm = defaults.cloudwatchAlarm;
-    	      this.cloudwatchMetric = defaults.cloudwatchMetric;
-    	      this.dynamodb = defaults.dynamodb;
-    	      this.dynamodbv2 = defaults.dynamodbv2;
-    	      this.elasticsearch = defaults.elasticsearch;
-    	      this.firehose = defaults.firehose;
-    	      this.iotAnalytics = defaults.iotAnalytics;
-    	      this.iotEvents = defaults.iotEvents;
-    	      this.kinesis = defaults.kinesis;
-    	      this.lambda = defaults.lambda;
-    	      this.republish = defaults.republish;
-    	      this.s3 = defaults.s3;
-    	      this.sns = defaults.sns;
-    	      this.sqs = defaults.sqs;
-    	      this.stepFunctions = defaults.stepFunctions;
+            $ = new TopicRuleErrorActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchAlarm(@Nullable Output<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm) {
-            this.cloudwatchAlarm = cloudwatchAlarm;
+            $.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
-        public Builder cloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarmArgs cloudwatchAlarm) {
-            this.cloudwatchAlarm = Codegen.ofNullable(cloudwatchAlarm);
-            return this;
+
+        public Builder cloudwatchAlarm(TopicRuleErrorActionCloudwatchAlarmArgs cloudwatchAlarm) {
+            return cloudwatchAlarm(Output.of(cloudwatchAlarm));
         }
+
         public Builder cloudwatchMetric(@Nullable Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric) {
-            this.cloudwatchMetric = cloudwatchMetric;
+            $.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
-        public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetricArgs cloudwatchMetric) {
-            this.cloudwatchMetric = Codegen.ofNullable(cloudwatchMetric);
-            return this;
+
+        public Builder cloudwatchMetric(TopicRuleErrorActionCloudwatchMetricArgs cloudwatchMetric) {
+            return cloudwatchMetric(Output.of(cloudwatchMetric));
         }
+
         public Builder dynamodb(@Nullable Output<TopicRuleErrorActionDynamodbArgs> dynamodb) {
-            this.dynamodb = dynamodb;
+            $.dynamodb = dynamodb;
             return this;
         }
-        public Builder dynamodb(@Nullable TopicRuleErrorActionDynamodbArgs dynamodb) {
-            this.dynamodb = Codegen.ofNullable(dynamodb);
-            return this;
+
+        public Builder dynamodb(TopicRuleErrorActionDynamodbArgs dynamodb) {
+            return dynamodb(Output.of(dynamodb));
         }
+
         public Builder dynamodbv2(@Nullable Output<TopicRuleErrorActionDynamodbv2Args> dynamodbv2) {
-            this.dynamodbv2 = dynamodbv2;
+            $.dynamodbv2 = dynamodbv2;
             return this;
         }
-        public Builder dynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2Args dynamodbv2) {
-            this.dynamodbv2 = Codegen.ofNullable(dynamodbv2);
-            return this;
+
+        public Builder dynamodbv2(TopicRuleErrorActionDynamodbv2Args dynamodbv2) {
+            return dynamodbv2(Output.of(dynamodbv2));
         }
+
         public Builder elasticsearch(@Nullable Output<TopicRuleErrorActionElasticsearchArgs> elasticsearch) {
-            this.elasticsearch = elasticsearch;
+            $.elasticsearch = elasticsearch;
             return this;
         }
-        public Builder elasticsearch(@Nullable TopicRuleErrorActionElasticsearchArgs elasticsearch) {
-            this.elasticsearch = Codegen.ofNullable(elasticsearch);
-            return this;
+
+        public Builder elasticsearch(TopicRuleErrorActionElasticsearchArgs elasticsearch) {
+            return elasticsearch(Output.of(elasticsearch));
         }
+
         public Builder firehose(@Nullable Output<TopicRuleErrorActionFirehoseArgs> firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
-        public Builder firehose(@Nullable TopicRuleErrorActionFirehoseArgs firehose) {
-            this.firehose = Codegen.ofNullable(firehose);
-            return this;
+
+        public Builder firehose(TopicRuleErrorActionFirehoseArgs firehose) {
+            return firehose(Output.of(firehose));
         }
+
         public Builder iotAnalytics(@Nullable Output<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics) {
-            this.iotAnalytics = iotAnalytics;
+            $.iotAnalytics = iotAnalytics;
             return this;
         }
-        public Builder iotAnalytics(@Nullable TopicRuleErrorActionIotAnalyticsArgs iotAnalytics) {
-            this.iotAnalytics = Codegen.ofNullable(iotAnalytics);
-            return this;
+
+        public Builder iotAnalytics(TopicRuleErrorActionIotAnalyticsArgs iotAnalytics) {
+            return iotAnalytics(Output.of(iotAnalytics));
         }
+
         public Builder iotEvents(@Nullable Output<TopicRuleErrorActionIotEventsArgs> iotEvents) {
-            this.iotEvents = iotEvents;
+            $.iotEvents = iotEvents;
             return this;
         }
-        public Builder iotEvents(@Nullable TopicRuleErrorActionIotEventsArgs iotEvents) {
-            this.iotEvents = Codegen.ofNullable(iotEvents);
-            return this;
+
+        public Builder iotEvents(TopicRuleErrorActionIotEventsArgs iotEvents) {
+            return iotEvents(Output.of(iotEvents));
         }
+
         public Builder kinesis(@Nullable Output<TopicRuleErrorActionKinesisArgs> kinesis) {
-            this.kinesis = kinesis;
+            $.kinesis = kinesis;
             return this;
         }
-        public Builder kinesis(@Nullable TopicRuleErrorActionKinesisArgs kinesis) {
-            this.kinesis = Codegen.ofNullable(kinesis);
-            return this;
+
+        public Builder kinesis(TopicRuleErrorActionKinesisArgs kinesis) {
+            return kinesis(Output.of(kinesis));
         }
+
         public Builder lambda(@Nullable Output<TopicRuleErrorActionLambdaArgs> lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
-        public Builder lambda(@Nullable TopicRuleErrorActionLambdaArgs lambda) {
-            this.lambda = Codegen.ofNullable(lambda);
-            return this;
+
+        public Builder lambda(TopicRuleErrorActionLambdaArgs lambda) {
+            return lambda(Output.of(lambda));
         }
+
         public Builder republish(@Nullable Output<TopicRuleErrorActionRepublishArgs> republish) {
-            this.republish = republish;
+            $.republish = republish;
             return this;
         }
-        public Builder republish(@Nullable TopicRuleErrorActionRepublishArgs republish) {
-            this.republish = Codegen.ofNullable(republish);
-            return this;
+
+        public Builder republish(TopicRuleErrorActionRepublishArgs republish) {
+            return republish(Output.of(republish));
         }
+
         public Builder s3(@Nullable Output<TopicRuleErrorActionS3Args> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable TopicRuleErrorActionS3Args s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
+
+        public Builder s3(TopicRuleErrorActionS3Args s3) {
+            return s3(Output.of(s3));
         }
+
         public Builder sns(@Nullable Output<TopicRuleErrorActionSnsArgs> sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
-        public Builder sns(@Nullable TopicRuleErrorActionSnsArgs sns) {
-            this.sns = Codegen.ofNullable(sns);
-            return this;
+
+        public Builder sns(TopicRuleErrorActionSnsArgs sns) {
+            return sns(Output.of(sns));
         }
+
         public Builder sqs(@Nullable Output<TopicRuleErrorActionSqsArgs> sqs) {
-            this.sqs = sqs;
+            $.sqs = sqs;
             return this;
         }
-        public Builder sqs(@Nullable TopicRuleErrorActionSqsArgs sqs) {
-            this.sqs = Codegen.ofNullable(sqs);
-            return this;
+
+        public Builder sqs(TopicRuleErrorActionSqsArgs sqs) {
+            return sqs(Output.of(sqs));
         }
+
         public Builder stepFunctions(@Nullable Output<TopicRuleErrorActionStepFunctionsArgs> stepFunctions) {
-            this.stepFunctions = stepFunctions;
+            $.stepFunctions = stepFunctions;
             return this;
         }
-        public Builder stepFunctions(@Nullable TopicRuleErrorActionStepFunctionsArgs stepFunctions) {
-            this.stepFunctions = Codegen.ofNullable(stepFunctions);
-            return this;
-        }        public TopicRuleErrorActionArgs build() {
-            return new TopicRuleErrorActionArgs(cloudwatchAlarm, cloudwatchMetric, dynamodb, dynamodbv2, elasticsearch, firehose, iotAnalytics, iotEvents, kinesis, lambda, republish, s3, sns, sqs, stepFunctions);
+
+        public Builder stepFunctions(TopicRuleErrorActionStepFunctionsArgs stepFunctions) {
+            return stepFunctions(Output.of(stepFunctions));
+        }
+
+        public TopicRuleErrorActionArgs build() {
+            return $;
         }
     }
+
 }

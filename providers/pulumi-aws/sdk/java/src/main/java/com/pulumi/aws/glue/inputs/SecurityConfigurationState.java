@@ -6,9 +6,9 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
+    private @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
-    public Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<SecurityConfigurationEncryptionConfigurationGetArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SecurityConfigurationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SecurityConfigurationState(
-        @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration,
-        @Nullable Output<String> name) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.name = name;
-    }
+    private SecurityConfigurationState() {}
 
-    private SecurityConfigurationState() {
-        this.encryptionConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
+    private SecurityConfigurationState(SecurityConfigurationState $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
-        private @Nullable Output<String> name;
+        private SecurityConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConfigurationState();
         }
 
         public Builder(SecurityConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.name = defaults.name;
+            $ = new SecurityConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable SecurityConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationGetArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SecurityConfigurationState build() {
-            return new SecurityConfigurationState(encryptionConfiguration, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SecurityConfigurationState build() {
+            return $;
         }
     }
+
 }

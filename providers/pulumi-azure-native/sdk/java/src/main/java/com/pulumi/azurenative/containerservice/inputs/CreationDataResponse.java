@@ -23,45 +23,44 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
-    public CreationDataResponse(@Nullable String sourceResourceId) {
-        this.sourceResourceId = sourceResourceId;
-    }
+    private CreationDataResponse() {}
 
-    private CreationDataResponse() {
-        this.sourceResourceId = null;
+    private CreationDataResponse(CreationDataResponse $) {
+        this.sourceResourceId = $.sourceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreationDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sourceResourceId;
+        private CreationDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreationDataResponse();
         }
 
         public Builder(CreationDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceResourceId = defaults.sourceResourceId;
+            $ = new CreationDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
-        }        public CreationDataResponse build() {
-            return new CreationDataResponse(sourceResourceId);
+        }
+
+        public CreationDataResponse build() {
+            return $;
         }
     }
+
 }

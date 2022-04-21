@@ -17,45 +17,45 @@ public final class SubResourceReadOnlyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public SubResourceReadOnlyResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private SubResourceReadOnlyResponse() {}
 
-    private SubResourceReadOnlyResponse() {
-        this.id = null;
+    private SubResourceReadOnlyResponse(SubResourceReadOnlyResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubResourceReadOnlyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private SubResourceReadOnlyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubResourceReadOnlyResponse();
         }
 
         public Builder(SubResourceReadOnlyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SubResourceReadOnlyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public SubResourceReadOnlyResponse build() {
-            return new SubResourceReadOnlyResponse(id);
+        }
+
+        public SubResourceReadOnlyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

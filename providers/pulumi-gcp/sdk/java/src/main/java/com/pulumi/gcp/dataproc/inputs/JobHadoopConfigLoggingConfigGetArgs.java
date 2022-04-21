@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,49 +15,49 @@ public final class JobHadoopConfigLoggingConfigGetArgs extends com.pulumi.resour
     public static final JobHadoopConfigLoggingConfigGetArgs Empty = new JobHadoopConfigLoggingConfigGetArgs();
 
     @Import(name="driverLogLevels", required=true)
-      private final Output<Map<String,String>> driverLogLevels;
+    private Output<Map<String,String>> driverLogLevels;
 
     public Output<Map<String,String>> driverLogLevels() {
         return this.driverLogLevels;
     }
 
-    public JobHadoopConfigLoggingConfigGetArgs(Output<Map<String,String>> driverLogLevels) {
-        this.driverLogLevels = Objects.requireNonNull(driverLogLevels, "expected parameter 'driverLogLevels' to be non-null");
-    }
+    private JobHadoopConfigLoggingConfigGetArgs() {}
 
-    private JobHadoopConfigLoggingConfigGetArgs() {
-        this.driverLogLevels = Codegen.empty();
+    private JobHadoopConfigLoggingConfigGetArgs(JobHadoopConfigLoggingConfigGetArgs $) {
+        this.driverLogLevels = $.driverLogLevels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobHadoopConfigLoggingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> driverLogLevels;
+        private JobHadoopConfigLoggingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobHadoopConfigLoggingConfigGetArgs();
         }
 
         public Builder(JobHadoopConfigLoggingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driverLogLevels = defaults.driverLogLevels;
+            $ = new JobHadoopConfigLoggingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driverLogLevels(Output<Map<String,String>> driverLogLevels) {
-            this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
+            $.driverLogLevels = driverLogLevels;
             return this;
         }
+
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Output.of(Objects.requireNonNull(driverLogLevels));
-            return this;
-        }        public JobHadoopConfigLoggingConfigGetArgs build() {
-            return new JobHadoopConfigLoggingConfigGetArgs(driverLogLevels);
+            return driverLogLevels(Output.of(driverLogLevels));
+        }
+
+        public JobHadoopConfigLoggingConfigGetArgs build() {
+            $.driverLogLevels = Objects.requireNonNull($.driverLogLevels, "expected parameter 'driverLogLevels' to be non-null");
+            return $;
         }
     }
+
 }

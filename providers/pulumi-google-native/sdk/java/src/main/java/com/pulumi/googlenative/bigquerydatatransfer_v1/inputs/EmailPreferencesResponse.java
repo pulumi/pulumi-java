@@ -21,45 +21,45 @@ public final class EmailPreferencesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enableFailureEmail", required=true)
-      private final Boolean enableFailureEmail;
+    private Boolean enableFailureEmail;
 
     public Boolean enableFailureEmail() {
         return this.enableFailureEmail;
     }
 
-    public EmailPreferencesResponse(Boolean enableFailureEmail) {
-        this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail, "expected parameter 'enableFailureEmail' to be non-null");
-    }
+    private EmailPreferencesResponse() {}
 
-    private EmailPreferencesResponse() {
-        this.enableFailureEmail = null;
+    private EmailPreferencesResponse(EmailPreferencesResponse $) {
+        this.enableFailureEmail = $.enableFailureEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailPreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableFailureEmail;
+        private EmailPreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailPreferencesResponse();
         }
 
         public Builder(EmailPreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableFailureEmail = defaults.enableFailureEmail;
+            $ = new EmailPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
-            this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
+            $.enableFailureEmail = enableFailureEmail;
             return this;
-        }        public EmailPreferencesResponse build() {
-            return new EmailPreferencesResponse(enableFailureEmail);
+        }
+
+        public EmailPreferencesResponse build() {
+            $.enableFailureEmail = Objects.requireNonNull($.enableFailureEmail, "expected parameter 'enableFailureEmail' to be non-null");
+            return $;
         }
     }
+
 }

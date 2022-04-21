@@ -24,10 +24,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authenticationMethods")
-      private final @Nullable String authenticationMethods;
+    private @Nullable String authenticationMethods;
 
     public Optional<String> authenticationMethods() {
-        return this.authenticationMethods == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethods);
+        return Optional.ofNullable(this.authenticationMethods);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelEncryption")
-      private final @Nullable String channelEncryption;
+    private @Nullable String channelEncryption;
 
     public Optional<String> channelEncryption() {
-        return this.channelEncryption == null ? Optional.empty() : Optional.ofNullable(this.channelEncryption);
+        return Optional.ofNullable(this.channelEncryption);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kerberosTicketEncryption")
-      private final @Nullable String kerberosTicketEncryption;
+    private @Nullable String kerberosTicketEncryption;
 
     public Optional<String> kerberosTicketEncryption() {
-        return this.kerberosTicketEncryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosTicketEncryption);
+        return Optional.ofNullable(this.kerberosTicketEncryption);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="multichannel")
-      private final @Nullable MultichannelResponse multichannel;
+    private @Nullable MultichannelResponse multichannel;
 
     public Optional<MultichannelResponse> multichannel() {
-        return this.multichannel == null ? Optional.empty() : Optional.ofNullable(this.multichannel);
+        return Optional.ofNullable(this.multichannel);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class SmbSettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="versions")
-      private final @Nullable String versions;
+    private @Nullable String versions;
 
     public Optional<String> versions() {
-        return this.versions == null ? Optional.empty() : Optional.ofNullable(this.versions);
+        return Optional.ofNullable(this.versions);
     }
 
-    public SmbSettingResponse(
-        @Nullable String authenticationMethods,
-        @Nullable String channelEncryption,
-        @Nullable String kerberosTicketEncryption,
-        @Nullable MultichannelResponse multichannel,
-        @Nullable String versions) {
-        this.authenticationMethods = authenticationMethods;
-        this.channelEncryption = channelEncryption;
-        this.kerberosTicketEncryption = kerberosTicketEncryption;
-        this.multichannel = multichannel;
-        this.versions = versions;
-    }
+    private SmbSettingResponse() {}
 
-    private SmbSettingResponse() {
-        this.authenticationMethods = null;
-        this.channelEncryption = null;
-        this.kerberosTicketEncryption = null;
-        this.multichannel = null;
-        this.versions = null;
+    private SmbSettingResponse(SmbSettingResponse $) {
+        this.authenticationMethods = $.authenticationMethods;
+        this.channelEncryption = $.channelEncryption;
+        this.kerberosTicketEncryption = $.kerberosTicketEncryption;
+        this.multichannel = $.multichannel;
+        this.versions = $.versions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmbSettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authenticationMethods;
-        private @Nullable String channelEncryption;
-        private @Nullable String kerberosTicketEncryption;
-        private @Nullable MultichannelResponse multichannel;
-        private @Nullable String versions;
+        private SmbSettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmbSettingResponse();
         }
 
         public Builder(SmbSettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationMethods = defaults.authenticationMethods;
-    	      this.channelEncryption = defaults.channelEncryption;
-    	      this.kerberosTicketEncryption = defaults.kerberosTicketEncryption;
-    	      this.multichannel = defaults.multichannel;
-    	      this.versions = defaults.versions;
+            $ = new SmbSettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationMethods(@Nullable String authenticationMethods) {
-            this.authenticationMethods = authenticationMethods;
+            $.authenticationMethods = authenticationMethods;
             return this;
         }
+
         public Builder channelEncryption(@Nullable String channelEncryption) {
-            this.channelEncryption = channelEncryption;
+            $.channelEncryption = channelEncryption;
             return this;
         }
+
         public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
-            this.kerberosTicketEncryption = kerberosTicketEncryption;
+            $.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
+
         public Builder multichannel(@Nullable MultichannelResponse multichannel) {
-            this.multichannel = multichannel;
+            $.multichannel = multichannel;
             return this;
         }
+
         public Builder versions(@Nullable String versions) {
-            this.versions = versions;
+            $.versions = versions;
             return this;
-        }        public SmbSettingResponse build() {
-            return new SmbSettingResponse(authenticationMethods, channelEncryption, kerberosTicketEncryption, multichannel, versions);
+        }
+
+        public SmbSettingResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.providerhub;
 import com.pulumi.azurenative.providerhub.inputs.NotificationRegistrationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class NotificationRegistrationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="notificationRegistrationName")
-      private final @Nullable Output<String> notificationRegistrationName;
+    private @Nullable Output<String> notificationRegistrationName;
 
-    public Output<String> notificationRegistrationName() {
-        return this.notificationRegistrationName == null ? Codegen.empty() : this.notificationRegistrationName;
+    public Optional<Output<String>> notificationRegistrationName() {
+        return Optional.ofNullable(this.notificationRegistrationName);
     }
 
     @Import(name="properties")
-      private final @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
+    private @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
 
-    public Output<NotificationRegistrationPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<NotificationRegistrationPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -39,76 +39,69 @@ public final class NotificationRegistrationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final Output<String> providerNamespace;
+    private Output<String> providerNamespace;
 
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
-    public NotificationRegistrationArgs(
-        @Nullable Output<String> notificationRegistrationName,
-        @Nullable Output<NotificationRegistrationPropertiesArgs> properties,
-        Output<String> providerNamespace) {
-        this.notificationRegistrationName = notificationRegistrationName;
-        this.properties = properties;
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-    }
+    private NotificationRegistrationArgs() {}
 
-    private NotificationRegistrationArgs() {
-        this.notificationRegistrationName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.providerNamespace = Codegen.empty();
+    private NotificationRegistrationArgs(NotificationRegistrationArgs $) {
+        this.notificationRegistrationName = $.notificationRegistrationName;
+        this.properties = $.properties;
+        this.providerNamespace = $.providerNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> notificationRegistrationName;
-        private @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
-        private Output<String> providerNamespace;
+        private NotificationRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRegistrationArgs();
         }
 
         public Builder(NotificationRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationRegistrationName = defaults.notificationRegistrationName;
-    	      this.properties = defaults.properties;
-    	      this.providerNamespace = defaults.providerNamespace;
+            $ = new NotificationRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationRegistrationName(@Nullable Output<String> notificationRegistrationName) {
-            this.notificationRegistrationName = notificationRegistrationName;
+            $.notificationRegistrationName = notificationRegistrationName;
             return this;
         }
-        public Builder notificationRegistrationName(@Nullable String notificationRegistrationName) {
-            this.notificationRegistrationName = Codegen.ofNullable(notificationRegistrationName);
-            return this;
+
+        public Builder notificationRegistrationName(String notificationRegistrationName) {
+            return notificationRegistrationName(Output.of(notificationRegistrationName));
         }
+
         public Builder properties(@Nullable Output<NotificationRegistrationPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable NotificationRegistrationPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(NotificationRegistrationPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder providerNamespace(Output<String> providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
-            return this;
-        }        public NotificationRegistrationArgs build() {
-            return new NotificationRegistrationArgs(notificationRegistrationName, properties, providerNamespace);
+            return providerNamespace(Output.of(providerNamespace));
+        }
+
+        public NotificationRegistrationArgs build() {
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

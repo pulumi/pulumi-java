@@ -23,7 +23,7 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
@@ -34,7 +34,7 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deadline", required=true)
-      private final Double deadline;
+    private Double deadline;
 
     public Double deadline() {
         return this.deadline;
@@ -45,7 +45,7 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableAuth", required=true)
-      private final Boolean disableAuth;
+    private Boolean disableAuth;
 
     public Boolean disableAuth() {
         return this.disableAuth;
@@ -56,7 +56,7 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jwtAudience", required=true)
-      private final String jwtAudience;
+    private String jwtAudience;
 
     public String jwtAudience() {
         return this.jwtAudience;
@@ -67,14 +67,14 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationDeadline", required=true)
-      private final Double operationDeadline;
+    private Double operationDeadline;
 
     public Double operationDeadline() {
         return this.operationDeadline;
     }
 
     @Import(name="pathTranslation", required=true)
-      private final String pathTranslation;
+    private String pathTranslation;
 
     public String pathTranslation() {
         return this.pathTranslation;
@@ -85,7 +85,7 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -96,109 +96,94 @@ public final class BackendRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public BackendRuleResponse(
-        String address,
-        Double deadline,
-        Boolean disableAuth,
-        String jwtAudience,
-        Double operationDeadline,
-        String pathTranslation,
-        String protocol,
-        String selector) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.deadline = Objects.requireNonNull(deadline, "expected parameter 'deadline' to be non-null");
-        this.disableAuth = Objects.requireNonNull(disableAuth, "expected parameter 'disableAuth' to be non-null");
-        this.jwtAudience = Objects.requireNonNull(jwtAudience, "expected parameter 'jwtAudience' to be non-null");
-        this.operationDeadline = Objects.requireNonNull(operationDeadline, "expected parameter 'operationDeadline' to be non-null");
-        this.pathTranslation = Objects.requireNonNull(pathTranslation, "expected parameter 'pathTranslation' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private BackendRuleResponse() {}
 
-    private BackendRuleResponse() {
-        this.address = null;
-        this.deadline = null;
-        this.disableAuth = null;
-        this.jwtAudience = null;
-        this.operationDeadline = null;
-        this.pathTranslation = null;
-        this.protocol = null;
-        this.selector = null;
+    private BackendRuleResponse(BackendRuleResponse $) {
+        this.address = $.address;
+        this.deadline = $.deadline;
+        this.disableAuth = $.disableAuth;
+        this.jwtAudience = $.jwtAudience;
+        this.operationDeadline = $.operationDeadline;
+        this.pathTranslation = $.pathTranslation;
+        this.protocol = $.protocol;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private Double deadline;
-        private Boolean disableAuth;
-        private String jwtAudience;
-        private Double operationDeadline;
-        private String pathTranslation;
-        private String protocol;
-        private String selector;
+        private BackendRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendRuleResponse();
         }
 
         public Builder(BackendRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.deadline = defaults.deadline;
-    	      this.disableAuth = defaults.disableAuth;
-    	      this.jwtAudience = defaults.jwtAudience;
-    	      this.operationDeadline = defaults.operationDeadline;
-    	      this.pathTranslation = defaults.pathTranslation;
-    	      this.protocol = defaults.protocol;
-    	      this.selector = defaults.selector;
+            $ = new BackendRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder deadline(Double deadline) {
-            this.deadline = Objects.requireNonNull(deadline);
+            $.deadline = deadline;
             return this;
         }
+
         public Builder disableAuth(Boolean disableAuth) {
-            this.disableAuth = Objects.requireNonNull(disableAuth);
+            $.disableAuth = disableAuth;
             return this;
         }
+
         public Builder jwtAudience(String jwtAudience) {
-            this.jwtAudience = Objects.requireNonNull(jwtAudience);
+            $.jwtAudience = jwtAudience;
             return this;
         }
+
         public Builder operationDeadline(Double operationDeadline) {
-            this.operationDeadline = Objects.requireNonNull(operationDeadline);
+            $.operationDeadline = operationDeadline;
             return this;
         }
+
         public Builder pathTranslation(String pathTranslation) {
-            this.pathTranslation = Objects.requireNonNull(pathTranslation);
+            $.pathTranslation = pathTranslation;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public BackendRuleResponse build() {
-            return new BackendRuleResponse(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
+        }
+
+        public BackendRuleResponse build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.deadline = Objects.requireNonNull($.deadline, "expected parameter 'deadline' to be non-null");
+            $.disableAuth = Objects.requireNonNull($.disableAuth, "expected parameter 'disableAuth' to be non-null");
+            $.jwtAudience = Objects.requireNonNull($.jwtAudience, "expected parameter 'jwtAudience' to be non-null");
+            $.operationDeadline = Objects.requireNonNull($.operationDeadline, "expected parameter 'operationDeadline' to be non-null");
+            $.pathTranslation = Objects.requireNonNull($.pathTranslation, "expected parameter 'pathTranslation' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

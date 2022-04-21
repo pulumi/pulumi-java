@@ -6,13 +6,13 @@ package com.pulumi.aws.iam;
 import com.pulumi.aws.iam.inputs.RoleInlinePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assumeRolePolicy", required=true)
-      private final Output<String> assumeRolePolicy;
+    private Output<String> assumeRolePolicy;
 
     public Output<String> assumeRolePolicy() {
         return this.assumeRolePolicy;
@@ -36,10 +36,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDetachPolicies")
-      private final @Nullable Output<Boolean> forceDetachPolicies;
+    private @Nullable Output<Boolean> forceDetachPolicies;
 
-    public Output<Boolean> forceDetachPolicies() {
-        return this.forceDetachPolicies == null ? Codegen.empty() : this.forceDetachPolicies;
+    public Optional<Output<Boolean>> forceDetachPolicies() {
+        return Optional.ofNullable(this.forceDetachPolicies);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inlinePolicies")
-      private final @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
+    private @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
 
-    public Output<List<RoleInlinePolicyArgs>> inlinePolicies() {
-        return this.inlinePolicies == null ? Codegen.empty() : this.inlinePolicies;
+    public Optional<Output<List<RoleInlinePolicyArgs>>> inlinePolicies() {
+        return Optional.ofNullable(this.inlinePolicies);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedPolicyArns")
-      private final @Nullable Output<List<String>> managedPolicyArns;
+    private @Nullable Output<List<String>> managedPolicyArns;
 
-    public Output<List<String>> managedPolicyArns() {
-        return this.managedPolicyArns == null ? Codegen.empty() : this.managedPolicyArns;
+    public Optional<Output<List<String>>> managedPolicyArns() {
+        return Optional.ofNullable(this.managedPolicyArns);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSessionDuration")
-      private final @Nullable Output<Integer> maxSessionDuration;
+    private @Nullable Output<Integer> maxSessionDuration;
 
-    public Output<Integer> maxSessionDuration() {
-        return this.maxSessionDuration == null ? Codegen.empty() : this.maxSessionDuration;
+    public Optional<Output<Integer>> maxSessionDuration() {
+        return Optional.ofNullable(this.maxSessionDuration);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionsBoundary")
-      private final @Nullable Output<String> permissionsBoundary;
+    private @Nullable Output<String> permissionsBoundary;
 
-    public Output<String> permissionsBoundary() {
-        return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
+    public Optional<Output<String>> permissionsBoundary() {
+        return Optional.ofNullable(this.permissionsBoundary);
     }
 
     /**
@@ -135,182 +135,157 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RoleArgs(
-        Output<String> assumeRolePolicy,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> forceDetachPolicies,
-        @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies,
-        @Nullable Output<List<String>> managedPolicyArns,
-        @Nullable Output<Integer> maxSessionDuration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> path,
-        @Nullable Output<String> permissionsBoundary,
-        @Nullable Output<Map<String,String>> tags) {
-        this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy, "expected parameter 'assumeRolePolicy' to be non-null");
-        this.description = description;
-        this.forceDetachPolicies = forceDetachPolicies;
-        this.inlinePolicies = inlinePolicies;
-        this.managedPolicyArns = managedPolicyArns;
-        this.maxSessionDuration = maxSessionDuration;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.path = path;
-        this.permissionsBoundary = permissionsBoundary;
-        this.tags = tags;
-    }
+    private RoleArgs() {}
 
-    private RoleArgs() {
-        this.assumeRolePolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.forceDetachPolicies = Codegen.empty();
-        this.inlinePolicies = Codegen.empty();
-        this.managedPolicyArns = Codegen.empty();
-        this.maxSessionDuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.path = Codegen.empty();
-        this.permissionsBoundary = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RoleArgs(RoleArgs $) {
+        this.assumeRolePolicy = $.assumeRolePolicy;
+        this.description = $.description;
+        this.forceDetachPolicies = $.forceDetachPolicies;
+        this.inlinePolicies = $.inlinePolicies;
+        this.managedPolicyArns = $.managedPolicyArns;
+        this.maxSessionDuration = $.maxSessionDuration;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.path = $.path;
+        this.permissionsBoundary = $.permissionsBoundary;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> assumeRolePolicy;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> forceDetachPolicies;
-        private @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
-        private @Nullable Output<List<String>> managedPolicyArns;
-        private @Nullable Output<Integer> maxSessionDuration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> permissionsBoundary;
-        private @Nullable Output<Map<String,String>> tags;
+        private RoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleArgs();
         }
 
         public Builder(RoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assumeRolePolicy = defaults.assumeRolePolicy;
-    	      this.description = defaults.description;
-    	      this.forceDetachPolicies = defaults.forceDetachPolicies;
-    	      this.inlinePolicies = defaults.inlinePolicies;
-    	      this.managedPolicyArns = defaults.managedPolicyArns;
-    	      this.maxSessionDuration = defaults.maxSessionDuration;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.path = defaults.path;
-    	      this.permissionsBoundary = defaults.permissionsBoundary;
-    	      this.tags = defaults.tags;
+            $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assumeRolePolicy(Output<String> assumeRolePolicy) {
-            this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy);
+            $.assumeRolePolicy = assumeRolePolicy;
             return this;
         }
+
+        public Builder assumeRolePolicy(String assumeRolePolicy) {
+            return assumeRolePolicy(Output.of(assumeRolePolicy));
+        }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder forceDetachPolicies(@Nullable Output<Boolean> forceDetachPolicies) {
-            this.forceDetachPolicies = forceDetachPolicies;
+            $.forceDetachPolicies = forceDetachPolicies;
             return this;
         }
-        public Builder forceDetachPolicies(@Nullable Boolean forceDetachPolicies) {
-            this.forceDetachPolicies = Codegen.ofNullable(forceDetachPolicies);
-            return this;
+
+        public Builder forceDetachPolicies(Boolean forceDetachPolicies) {
+            return forceDetachPolicies(Output.of(forceDetachPolicies));
         }
+
         public Builder inlinePolicies(@Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies) {
-            this.inlinePolicies = inlinePolicies;
+            $.inlinePolicies = inlinePolicies;
             return this;
         }
-        public Builder inlinePolicies(@Nullable List<RoleInlinePolicyArgs> inlinePolicies) {
-            this.inlinePolicies = Codegen.ofNullable(inlinePolicies);
-            return this;
+
+        public Builder inlinePolicies(List<RoleInlinePolicyArgs> inlinePolicies) {
+            return inlinePolicies(Output.of(inlinePolicies));
         }
+
         public Builder inlinePolicies(RoleInlinePolicyArgs... inlinePolicies) {
             return inlinePolicies(List.of(inlinePolicies));
         }
+
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
-            this.managedPolicyArns = managedPolicyArns;
+            $.managedPolicyArns = managedPolicyArns;
             return this;
         }
-        public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
-            this.managedPolicyArns = Codegen.ofNullable(managedPolicyArns);
-            return this;
+
+        public Builder managedPolicyArns(List<String> managedPolicyArns) {
+            return managedPolicyArns(Output.of(managedPolicyArns));
         }
+
         public Builder managedPolicyArns(String... managedPolicyArns) {
             return managedPolicyArns(List.of(managedPolicyArns));
         }
+
         public Builder maxSessionDuration(@Nullable Output<Integer> maxSessionDuration) {
-            this.maxSessionDuration = maxSessionDuration;
+            $.maxSessionDuration = maxSessionDuration;
             return this;
         }
-        public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
-            this.maxSessionDuration = Codegen.ofNullable(maxSessionDuration);
-            return this;
+
+        public Builder maxSessionDuration(Integer maxSessionDuration) {
+            return maxSessionDuration(Output.of(maxSessionDuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
-            this.permissionsBoundary = permissionsBoundary;
+            $.permissionsBoundary = permissionsBoundary;
             return this;
         }
-        public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
-            this.permissionsBoundary = Codegen.ofNullable(permissionsBoundary);
-            return this;
+
+        public Builder permissionsBoundary(String permissionsBoundary) {
+            return permissionsBoundary(Output.of(permissionsBoundary));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RoleArgs build() {
-            return new RoleArgs(assumeRolePolicy, description, forceDetachPolicies, inlinePolicies, managedPolicyArns, maxSessionDuration, name, namePrefix, path, permissionsBoundary, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RoleArgs build() {
+            $.assumeRolePolicy = Objects.requireNonNull($.assumeRolePolicy, "expected parameter 'assumeRolePolicy' to be non-null");
+            return $;
         }
     }
+
 }

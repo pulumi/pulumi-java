@@ -29,7 +29,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="applicationState", required=true)
-      private final String applicationState;
+    private String applicationState;
 
     public String applicationState() {
         return this.applicationState;
@@ -40,10 +40,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="applicationType")
-      private final @Nullable String applicationType;
+    private @Nullable String applicationType;
 
     public Optional<String> applicationType() {
-        return this.applicationType == null ? Optional.empty() : Optional.ofNullable(this.applicationType);
+        return Optional.ofNullable(this.applicationType);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="computeProfile")
-      private final @Nullable ComputeProfileResponse computeProfile;
+    private @Nullable ComputeProfileResponse computeProfile;
 
     public Optional<ComputeProfileResponse> computeProfile() {
-        return this.computeProfile == null ? Optional.empty() : Optional.ofNullable(this.computeProfile);
+        return Optional.ofNullable(this.computeProfile);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createdDate", required=true)
-      private final String createdDate;
+    private String createdDate;
 
     public String createdDate() {
         return this.createdDate;
@@ -73,10 +73,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<ErrorsResponse> errors;
+    private @Nullable List<ErrorsResponse> errors;
 
-    public List<ErrorsResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<ErrorsResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="httpsEndpoints")
-      private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
+    private @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
 
-    public List<ApplicationGetHttpsEndpointResponse> httpsEndpoints() {
-        return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
+    public Optional<List<ApplicationGetHttpsEndpointResponse>> httpsEndpoints() {
+        return Optional.ofNullable(this.httpsEndpoints);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="installScriptActions")
-      private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
+    private @Nullable List<RuntimeScriptActionResponse> installScriptActions;
 
-    public List<RuntimeScriptActionResponse> installScriptActions() {
-        return this.installScriptActions == null ? List.of() : this.installScriptActions;
+    public Optional<List<RuntimeScriptActionResponse>> installScriptActions() {
+        return Optional.ofNullable(this.installScriptActions);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="marketplaceIdentifier", required=true)
-      private final String marketplaceIdentifier;
+    private String marketplaceIdentifier;
 
     public String marketplaceIdentifier() {
         return this.marketplaceIdentifier;
@@ -117,7 +117,7 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -128,10 +128,10 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sshEndpoints")
-      private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
+    private @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
 
-    public List<ApplicationGetEndpointResponse> sshEndpoints() {
-        return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
+    public Optional<List<ApplicationGetEndpointResponse>> sshEndpoints() {
+        return Optional.ofNullable(this.sshEndpoints);
     }
 
     /**
@@ -139,151 +139,128 @@ public final class ApplicationPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="uninstallScriptActions")
-      private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
+    private @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
-    public List<RuntimeScriptActionResponse> uninstallScriptActions() {
-        return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
+    public Optional<List<RuntimeScriptActionResponse>> uninstallScriptActions() {
+        return Optional.ofNullable(this.uninstallScriptActions);
     }
 
-    public ApplicationPropertiesResponse(
-        String applicationState,
-        @Nullable String applicationType,
-        @Nullable ComputeProfileResponse computeProfile,
-        String createdDate,
-        @Nullable List<ErrorsResponse> errors,
-        @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
-        @Nullable List<RuntimeScriptActionResponse> installScriptActions,
-        String marketplaceIdentifier,
-        String provisioningState,
-        @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
-        @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
-        this.applicationState = Objects.requireNonNull(applicationState, "expected parameter 'applicationState' to be non-null");
-        this.applicationType = applicationType;
-        this.computeProfile = computeProfile;
-        this.createdDate = Objects.requireNonNull(createdDate, "expected parameter 'createdDate' to be non-null");
-        this.errors = errors;
-        this.httpsEndpoints = httpsEndpoints;
-        this.installScriptActions = installScriptActions;
-        this.marketplaceIdentifier = Objects.requireNonNull(marketplaceIdentifier, "expected parameter 'marketplaceIdentifier' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sshEndpoints = sshEndpoints;
-        this.uninstallScriptActions = uninstallScriptActions;
-    }
+    private ApplicationPropertiesResponse() {}
 
-    private ApplicationPropertiesResponse() {
-        this.applicationState = null;
-        this.applicationType = null;
-        this.computeProfile = null;
-        this.createdDate = null;
-        this.errors = List.of();
-        this.httpsEndpoints = List.of();
-        this.installScriptActions = List.of();
-        this.marketplaceIdentifier = null;
-        this.provisioningState = null;
-        this.sshEndpoints = List.of();
-        this.uninstallScriptActions = List.of();
+    private ApplicationPropertiesResponse(ApplicationPropertiesResponse $) {
+        this.applicationState = $.applicationState;
+        this.applicationType = $.applicationType;
+        this.computeProfile = $.computeProfile;
+        this.createdDate = $.createdDate;
+        this.errors = $.errors;
+        this.httpsEndpoints = $.httpsEndpoints;
+        this.installScriptActions = $.installScriptActions;
+        this.marketplaceIdentifier = $.marketplaceIdentifier;
+        this.provisioningState = $.provisioningState;
+        this.sshEndpoints = $.sshEndpoints;
+        this.uninstallScriptActions = $.uninstallScriptActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationState;
-        private @Nullable String applicationType;
-        private @Nullable ComputeProfileResponse computeProfile;
-        private String createdDate;
-        private @Nullable List<ErrorsResponse> errors;
-        private @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
-        private @Nullable List<RuntimeScriptActionResponse> installScriptActions;
-        private String marketplaceIdentifier;
-        private String provisioningState;
-        private @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
-        private @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
+        private ApplicationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPropertiesResponse();
         }
 
         public Builder(ApplicationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationState = defaults.applicationState;
-    	      this.applicationType = defaults.applicationType;
-    	      this.computeProfile = defaults.computeProfile;
-    	      this.createdDate = defaults.createdDate;
-    	      this.errors = defaults.errors;
-    	      this.httpsEndpoints = defaults.httpsEndpoints;
-    	      this.installScriptActions = defaults.installScriptActions;
-    	      this.marketplaceIdentifier = defaults.marketplaceIdentifier;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sshEndpoints = defaults.sshEndpoints;
-    	      this.uninstallScriptActions = defaults.uninstallScriptActions;
+            $ = new ApplicationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationState(String applicationState) {
-            this.applicationState = Objects.requireNonNull(applicationState);
+            $.applicationState = applicationState;
             return this;
         }
+
         public Builder applicationType(@Nullable String applicationType) {
-            this.applicationType = applicationType;
+            $.applicationType = applicationType;
             return this;
         }
+
         public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
-            this.computeProfile = computeProfile;
+            $.computeProfile = computeProfile;
             return this;
         }
+
         public Builder createdDate(String createdDate) {
-            this.createdDate = Objects.requireNonNull(createdDate);
+            $.createdDate = createdDate;
             return this;
         }
+
         public Builder errors(@Nullable List<ErrorsResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ErrorsResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
-            this.httpsEndpoints = httpsEndpoints;
+            $.httpsEndpoints = httpsEndpoints;
             return this;
         }
+
         public Builder httpsEndpoints(ApplicationGetHttpsEndpointResponse... httpsEndpoints) {
             return httpsEndpoints(List.of(httpsEndpoints));
         }
+
         public Builder installScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
-            this.installScriptActions = installScriptActions;
+            $.installScriptActions = installScriptActions;
             return this;
         }
+
         public Builder installScriptActions(RuntimeScriptActionResponse... installScriptActions) {
             return installScriptActions(List.of(installScriptActions));
         }
+
         public Builder marketplaceIdentifier(String marketplaceIdentifier) {
-            this.marketplaceIdentifier = Objects.requireNonNull(marketplaceIdentifier);
+            $.marketplaceIdentifier = marketplaceIdentifier;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
-            this.sshEndpoints = sshEndpoints;
+            $.sshEndpoints = sshEndpoints;
             return this;
         }
+
         public Builder sshEndpoints(ApplicationGetEndpointResponse... sshEndpoints) {
             return sshEndpoints(List.of(sshEndpoints));
         }
+
         public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
-            this.uninstallScriptActions = uninstallScriptActions;
+            $.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
+
         public Builder uninstallScriptActions(RuntimeScriptActionResponse... uninstallScriptActions) {
             return uninstallScriptActions(List.of(uninstallScriptActions));
-        }        public ApplicationPropertiesResponse build() {
-            return new ApplicationPropertiesResponse(applicationState, applicationType, computeProfile, createdDate, errors, httpsEndpoints, installScriptActions, marketplaceIdentifier, provisioningState, sshEndpoints, uninstallScriptActions);
+        }
+
+        public ApplicationPropertiesResponse build() {
+            $.applicationState = Objects.requireNonNull($.applicationState, "expected parameter 'applicationState' to be non-null");
+            $.createdDate = Objects.requireNonNull($.createdDate, "expected parameter 'createdDate' to be non-null");
+            $.marketplaceIdentifier = Objects.requireNonNull($.marketplaceIdentifier, "expected parameter 'marketplaceIdentifier' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

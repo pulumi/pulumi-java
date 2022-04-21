@@ -18,48 +18,49 @@ public final class GetSecretsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secrets", required=true)
-      private final List<GetSecretsSecret> secrets;
+    private List<GetSecretsSecret> secrets;
 
     public List<GetSecretsSecret> secrets() {
         return this.secrets;
     }
 
-    public GetSecretsArgs(List<GetSecretsSecret> secrets) {
-        this.secrets = Objects.requireNonNull(secrets, "expected parameter 'secrets' to be non-null");
-    }
+    private GetSecretsArgs() {}
 
-    private GetSecretsArgs() {
-        this.secrets = List.of();
+    private GetSecretsArgs(GetSecretsArgs $) {
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetSecretsSecret> secrets;
+        private GetSecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretsArgs();
         }
 
         public Builder(GetSecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secrets = defaults.secrets;
+            $ = new GetSecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secrets(List<GetSecretsSecret> secrets) {
-            this.secrets = Objects.requireNonNull(secrets);
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(GetSecretsSecret... secrets) {
             return secrets(List.of(secrets));
-        }        public GetSecretsArgs build() {
-            return new GetSecretsArgs(secrets);
+        }
+
+        public GetSecretsArgs build() {
+            $.secrets = Objects.requireNonNull($.secrets, "expected parameter 'secrets' to be non-null");
+            return $;
         }
     }
+
 }

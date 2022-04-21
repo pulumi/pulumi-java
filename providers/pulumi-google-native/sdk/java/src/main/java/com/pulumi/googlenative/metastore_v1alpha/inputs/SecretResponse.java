@@ -21,45 +21,45 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudSecret", required=true)
-      private final String cloudSecret;
+    private String cloudSecret;
 
     public String cloudSecret() {
         return this.cloudSecret;
     }
 
-    public SecretResponse(String cloudSecret) {
-        this.cloudSecret = Objects.requireNonNull(cloudSecret, "expected parameter 'cloudSecret' to be non-null");
-    }
+    private SecretResponse() {}
 
-    private SecretResponse() {
-        this.cloudSecret = null;
+    private SecretResponse(SecretResponse $) {
+        this.cloudSecret = $.cloudSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudSecret;
+        private SecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretResponse();
         }
 
         public Builder(SecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSecret = defaults.cloudSecret;
+            $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSecret(String cloudSecret) {
-            this.cloudSecret = Objects.requireNonNull(cloudSecret);
+            $.cloudSecret = cloudSecret;
             return this;
-        }        public SecretResponse build() {
-            return new SecretResponse(cloudSecret);
+        }
+
+        public SecretResponse build() {
+            $.cloudSecret = Objects.requireNonNull($.cloudSecret, "expected parameter 'cloudSecret' to be non-null");
+            return $;
         }
     }
+
 }

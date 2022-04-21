@@ -31,10 +31,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="compilationMode")
-      private final @Nullable Object compilationMode;
+    private @Nullable Object compilationMode;
 
     public Optional<Object> compilationMode() {
-        return this.compilationMode == null ? Optional.empty() : Optional.ofNullable(this.compilationMode);
+        return Optional.ofNullable(this.compilationMode);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="degreeOfParallelism")
-      private final @Nullable Object degreeOfParallelism;
+    private @Nullable Object degreeOfParallelism;
 
     public Optional<Object> degreeOfParallelism() {
-        return this.degreeOfParallelism == null ? Optional.empty() : Optional.ofNullable(this.degreeOfParallelism);
+        return Optional.ofNullable(this.degreeOfParallelism);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -86,7 +86,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -97,10 +97,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,Object> parameters;
+    private @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="priority")
-      private final @Nullable Object priority;
+    private @Nullable Object priority;
 
     public Optional<Object> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable Object runtimeVersion;
+    private @Nullable Object runtimeVersion;
 
     public Optional<Object> runtimeVersion() {
-        return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
     /**
@@ -141,7 +141,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="scriptLinkedService", required=true)
-      private final LinkedServiceReferenceResponse scriptLinkedService;
+    private LinkedServiceReferenceResponse scriptLinkedService;
 
     public LinkedServiceReferenceResponse scriptLinkedService() {
         return this.scriptLinkedService;
@@ -152,7 +152,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="scriptPath", required=true)
-      private final Object scriptPath;
+    private Object scriptPath;
 
     public Object scriptPath() {
         return this.scriptPath;
@@ -164,7 +164,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -175,169 +175,134 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public DataLakeAnalyticsUSQLActivityResponse(
-        @Nullable Object compilationMode,
-        @Nullable Object degreeOfParallelism,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable Map<String,Object> parameters,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object priority,
-        @Nullable Object runtimeVersion,
-        LinkedServiceReferenceResponse scriptLinkedService,
-        Object scriptPath,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.compilationMode = compilationMode;
-        this.degreeOfParallelism = degreeOfParallelism;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.policy = policy;
-        this.priority = priority;
-        this.runtimeVersion = runtimeVersion;
-        this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService, "expected parameter 'scriptLinkedService' to be non-null");
-        this.scriptPath = Objects.requireNonNull(scriptPath, "expected parameter 'scriptPath' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private DataLakeAnalyticsUSQLActivityResponse() {}
 
-    private DataLakeAnalyticsUSQLActivityResponse() {
-        this.compilationMode = null;
-        this.degreeOfParallelism = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.parameters = Map.of();
-        this.policy = null;
-        this.priority = null;
-        this.runtimeVersion = null;
-        this.scriptLinkedService = null;
-        this.scriptPath = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private DataLakeAnalyticsUSQLActivityResponse(DataLakeAnalyticsUSQLActivityResponse $) {
+        this.compilationMode = $.compilationMode;
+        this.degreeOfParallelism = $.degreeOfParallelism;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.policy = $.policy;
+        this.priority = $.priority;
+        this.runtimeVersion = $.runtimeVersion;
+        this.scriptLinkedService = $.scriptLinkedService;
+        this.scriptPath = $.scriptPath;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeAnalyticsUSQLActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object compilationMode;
-        private @Nullable Object degreeOfParallelism;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable Map<String,Object> parameters;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable Object priority;
-        private @Nullable Object runtimeVersion;
-        private LinkedServiceReferenceResponse scriptLinkedService;
-        private Object scriptPath;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private DataLakeAnalyticsUSQLActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeAnalyticsUSQLActivityResponse();
         }
 
         public Builder(DataLakeAnalyticsUSQLActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compilationMode = defaults.compilationMode;
-    	      this.degreeOfParallelism = defaults.degreeOfParallelism;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.policy = defaults.policy;
-    	      this.priority = defaults.priority;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.scriptLinkedService = defaults.scriptLinkedService;
-    	      this.scriptPath = defaults.scriptPath;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new DataLakeAnalyticsUSQLActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compilationMode(@Nullable Object compilationMode) {
-            this.compilationMode = compilationMode;
+            $.compilationMode = compilationMode;
             return this;
         }
+
         public Builder degreeOfParallelism(@Nullable Object degreeOfParallelism) {
-            this.degreeOfParallelism = degreeOfParallelism;
+            $.degreeOfParallelism = degreeOfParallelism;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder priority(@Nullable Object priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder runtimeVersion(@Nullable Object runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder scriptLinkedService(LinkedServiceReferenceResponse scriptLinkedService) {
-            this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
+            $.scriptLinkedService = scriptLinkedService;
             return this;
         }
+
         public Builder scriptPath(Object scriptPath) {
-            this.scriptPath = Objects.requireNonNull(scriptPath);
+            $.scriptPath = scriptPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public DataLakeAnalyticsUSQLActivityResponse build() {
-            return new DataLakeAnalyticsUSQLActivityResponse(compilationMode, degreeOfParallelism, dependsOn, description, linkedServiceName, name, parameters, policy, priority, runtimeVersion, scriptLinkedService, scriptPath, type, userProperties);
+        }
+
+        public DataLakeAnalyticsUSQLActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scriptLinkedService = Objects.requireNonNull($.scriptLinkedService, "expected parameter 'scriptLinkedService' to be non-null");
+            $.scriptPath = Objects.requireNonNull($.scriptPath, "expected parameter 'scriptPath' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

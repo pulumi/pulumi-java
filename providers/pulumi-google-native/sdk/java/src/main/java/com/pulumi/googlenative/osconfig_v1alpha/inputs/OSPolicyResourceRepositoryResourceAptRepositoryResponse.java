@@ -22,7 +22,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @Import(name="archiveType", required=true)
-      private final String archiveType;
+    private String archiveType;
 
     public String archiveType() {
         return this.archiveType;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @Import(name="components", required=true)
-      private final List<String> components;
+    private List<String> components;
 
     public List<String> components() {
         return this.components;
@@ -44,7 +44,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @Import(name="distribution", required=true)
-      private final String distribution;
+    private String distribution;
 
     public String distribution() {
         return this.distribution;
@@ -55,7 +55,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @Import(name="gpgKey", required=true)
-      private final String gpgKey;
+    private String gpgKey;
 
     public String gpgKey() {
         return this.gpgKey;
@@ -66,85 +66,77 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse exten
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public OSPolicyResourceRepositoryResourceAptRepositoryResponse(
-        String archiveType,
-        List<String> components,
-        String distribution,
-        String gpgKey,
-        String uri) {
-        this.archiveType = Objects.requireNonNull(archiveType, "expected parameter 'archiveType' to be non-null");
-        this.components = Objects.requireNonNull(components, "expected parameter 'components' to be non-null");
-        this.distribution = Objects.requireNonNull(distribution, "expected parameter 'distribution' to be non-null");
-        this.gpgKey = Objects.requireNonNull(gpgKey, "expected parameter 'gpgKey' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private OSPolicyResourceRepositoryResourceAptRepositoryResponse() {}
 
-    private OSPolicyResourceRepositoryResourceAptRepositoryResponse() {
-        this.archiveType = null;
-        this.components = List.of();
-        this.distribution = null;
-        this.gpgKey = null;
-        this.uri = null;
+    private OSPolicyResourceRepositoryResourceAptRepositoryResponse(OSPolicyResourceRepositoryResourceAptRepositoryResponse $) {
+        this.archiveType = $.archiveType;
+        this.components = $.components;
+        this.distribution = $.distribution;
+        this.gpgKey = $.gpgKey;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceRepositoryResourceAptRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String archiveType;
-        private List<String> components;
-        private String distribution;
-        private String gpgKey;
-        private String uri;
+        private OSPolicyResourceRepositoryResourceAptRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceRepositoryResourceAptRepositoryResponse();
         }
 
         public Builder(OSPolicyResourceRepositoryResourceAptRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveType = defaults.archiveType;
-    	      this.components = defaults.components;
-    	      this.distribution = defaults.distribution;
-    	      this.gpgKey = defaults.gpgKey;
-    	      this.uri = defaults.uri;
+            $ = new OSPolicyResourceRepositoryResourceAptRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveType(String archiveType) {
-            this.archiveType = Objects.requireNonNull(archiveType);
+            $.archiveType = archiveType;
             return this;
         }
+
         public Builder components(List<String> components) {
-            this.components = Objects.requireNonNull(components);
+            $.components = components;
             return this;
         }
+
         public Builder components(String... components) {
             return components(List.of(components));
         }
+
         public Builder distribution(String distribution) {
-            this.distribution = Objects.requireNonNull(distribution);
+            $.distribution = distribution;
             return this;
         }
+
         public Builder gpgKey(String gpgKey) {
-            this.gpgKey = Objects.requireNonNull(gpgKey);
+            $.gpgKey = gpgKey;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public OSPolicyResourceRepositoryResourceAptRepositoryResponse build() {
-            return new OSPolicyResourceRepositoryResourceAptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
+        }
+
+        public OSPolicyResourceRepositoryResourceAptRepositoryResponse build() {
+            $.archiveType = Objects.requireNonNull($.archiveType, "expected parameter 'archiveType' to be non-null");
+            $.components = Objects.requireNonNull($.components, "expected parameter 'components' to be non-null");
+            $.distribution = Objects.requireNonNull($.distribution, "expected parameter 'distribution' to be non-null");
+            $.gpgKey = Objects.requireNonNull($.gpgKey, "expected parameter 'gpgKey' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

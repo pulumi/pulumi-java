@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Output<Object> fileName;
+    private @Nullable Output<Object> fileName;
 
-    public Output<Object> fileName() {
-        return this.fileName == null ? Codegen.empty() : this.fileName;
+    public Optional<Output<Object>> fileName() {
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Output<Object> folderPath;
+    private @Nullable Output<Object> folderPath;
 
-    public Output<Object> folderPath() {
-        return this.folderPath == null ? Codegen.empty() : this.folderPath;
+    public Optional<Output<Object>> folderPath() {
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="relativeUrl")
-      private final @Nullable Output<Object> relativeUrl;
+    private @Nullable Output<Object> relativeUrl;
 
-    public Output<Object> relativeUrl() {
-        return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
+    public Optional<Output<Object>> relativeUrl() {
+        return Optional.ofNullable(this.relativeUrl);
     }
 
     /**
@@ -59,89 +60,79 @@ public final class HttpServerLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public HttpServerLocationArgs(
-        @Nullable Output<Object> fileName,
-        @Nullable Output<Object> folderPath,
-        @Nullable Output<Object> relativeUrl,
-        Output<String> type) {
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.relativeUrl = relativeUrl;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private HttpServerLocationArgs() {}
 
-    private HttpServerLocationArgs() {
-        this.fileName = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.relativeUrl = Codegen.empty();
-        this.type = Codegen.empty();
+    private HttpServerLocationArgs(HttpServerLocationArgs $) {
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.relativeUrl = $.relativeUrl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpServerLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> fileName;
-        private @Nullable Output<Object> folderPath;
-        private @Nullable Output<Object> relativeUrl;
-        private Output<String> type;
+        private HttpServerLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpServerLocationArgs();
         }
 
         public Builder(HttpServerLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.relativeUrl = defaults.relativeUrl;
-    	      this.type = defaults.type;
+            $ = new HttpServerLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Output<Object> fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
-        public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Codegen.ofNullable(fileName);
-            return this;
+
+        public Builder fileName(Object fileName) {
+            return fileName(Output.of(fileName));
         }
+
         public Builder folderPath(@Nullable Output<Object> folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
-        public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Codegen.ofNullable(folderPath);
-            return this;
+
+        public Builder folderPath(Object folderPath) {
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
-            this.relativeUrl = relativeUrl;
+            $.relativeUrl = relativeUrl;
             return this;
         }
-        public Builder relativeUrl(@Nullable Object relativeUrl) {
-            this.relativeUrl = Codegen.ofNullable(relativeUrl);
-            return this;
+
+        public Builder relativeUrl(Object relativeUrl) {
+            return relativeUrl(Output.of(relativeUrl));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public HttpServerLocationArgs build() {
-            return new HttpServerLocationArgs(fileName, folderPath, relativeUrl, type);
+            return type(Output.of(type));
+        }
+
+        public HttpServerLocationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

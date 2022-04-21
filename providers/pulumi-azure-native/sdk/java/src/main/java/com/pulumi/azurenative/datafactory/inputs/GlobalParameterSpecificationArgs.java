@@ -7,7 +7,6 @@ import com.pulumi.azurenative.datafactory.enums.GlobalParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class GlobalParameterSpecificationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,GlobalParameterType>> type;
+    private Output<Either<String,GlobalParameterType>> type;
 
     public Output<Either<String,GlobalParameterType>> type() {
         return this.type;
@@ -37,63 +36,60 @@ public final class GlobalParameterSpecificationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Object> value;
+    private Output<Object> value;
 
     public Output<Object> value() {
         return this.value;
     }
 
-    public GlobalParameterSpecificationArgs(
-        Output<Either<String,GlobalParameterType>> type,
-        Output<Object> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GlobalParameterSpecificationArgs() {}
 
-    private GlobalParameterSpecificationArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private GlobalParameterSpecificationArgs(GlobalParameterSpecificationArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalParameterSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,GlobalParameterType>> type;
-        private Output<Object> value;
+        private GlobalParameterSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalParameterSpecificationArgs();
         }
 
         public Builder(GlobalParameterSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new GlobalParameterSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<Either<String,GlobalParameterType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,GlobalParameterType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<Object> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Object value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public GlobalParameterSpecificationArgs build() {
-            return new GlobalParameterSpecificationArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public GlobalParameterSpecificationArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

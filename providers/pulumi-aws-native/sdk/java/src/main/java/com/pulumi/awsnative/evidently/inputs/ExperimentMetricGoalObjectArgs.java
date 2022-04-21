@@ -6,9 +6,9 @@ package com.pulumi.awsnative.evidently.inputs;
 import com.pulumi.awsnative.evidently.enums.ExperimentMetricGoalObjectDesiredChange;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class ExperimentMetricGoalObjectArgs extends com.pulumi.resources.R
     public static final ExperimentMetricGoalObjectArgs Empty = new ExperimentMetricGoalObjectArgs();
 
     @Import(name="desiredChange", required=true)
-      private final Output<ExperimentMetricGoalObjectDesiredChange> desiredChange;
+    private Output<ExperimentMetricGoalObjectDesiredChange> desiredChange;
 
     public Output<ExperimentMetricGoalObjectDesiredChange> desiredChange() {
         return this.desiredChange;
@@ -28,7 +28,7 @@ public final class ExperimentMetricGoalObjectArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="entityIdKey", required=true)
-      private final Output<String> entityIdKey;
+    private Output<String> entityIdKey;
 
     public Output<String> entityIdKey() {
         return this.entityIdKey;
@@ -39,24 +39,24 @@ public final class ExperimentMetricGoalObjectArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="eventPattern", required=true)
-      private final Output<String> eventPattern;
+    private Output<String> eventPattern;
 
     public Output<String> eventPattern() {
         return this.eventPattern;
     }
 
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
     }
 
     @Import(name="unitLabel")
-      private final @Nullable Output<String> unitLabel;
+    private @Nullable Output<String> unitLabel;
 
-    public Output<String> unitLabel() {
-        return this.unitLabel == null ? Codegen.empty() : this.unitLabel;
+    public Optional<Output<String>> unitLabel() {
+        return Optional.ofNullable(this.unitLabel);
     }
 
     /**
@@ -64,115 +64,103 @@ public final class ExperimentMetricGoalObjectArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="valueKey", required=true)
-      private final Output<String> valueKey;
+    private Output<String> valueKey;
 
     public Output<String> valueKey() {
         return this.valueKey;
     }
 
-    public ExperimentMetricGoalObjectArgs(
-        Output<ExperimentMetricGoalObjectDesiredChange> desiredChange,
-        Output<String> entityIdKey,
-        Output<String> eventPattern,
-        Output<String> metricName,
-        @Nullable Output<String> unitLabel,
-        Output<String> valueKey) {
-        this.desiredChange = Objects.requireNonNull(desiredChange, "expected parameter 'desiredChange' to be non-null");
-        this.entityIdKey = Objects.requireNonNull(entityIdKey, "expected parameter 'entityIdKey' to be non-null");
-        this.eventPattern = Objects.requireNonNull(eventPattern, "expected parameter 'eventPattern' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.unitLabel = unitLabel;
-        this.valueKey = Objects.requireNonNull(valueKey, "expected parameter 'valueKey' to be non-null");
-    }
+    private ExperimentMetricGoalObjectArgs() {}
 
-    private ExperimentMetricGoalObjectArgs() {
-        this.desiredChange = Codegen.empty();
-        this.entityIdKey = Codegen.empty();
-        this.eventPattern = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.unitLabel = Codegen.empty();
-        this.valueKey = Codegen.empty();
+    private ExperimentMetricGoalObjectArgs(ExperimentMetricGoalObjectArgs $) {
+        this.desiredChange = $.desiredChange;
+        this.entityIdKey = $.entityIdKey;
+        this.eventPattern = $.eventPattern;
+        this.metricName = $.metricName;
+        this.unitLabel = $.unitLabel;
+        this.valueKey = $.valueKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentMetricGoalObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ExperimentMetricGoalObjectDesiredChange> desiredChange;
-        private Output<String> entityIdKey;
-        private Output<String> eventPattern;
-        private Output<String> metricName;
-        private @Nullable Output<String> unitLabel;
-        private Output<String> valueKey;
+        private ExperimentMetricGoalObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentMetricGoalObjectArgs();
         }
 
         public Builder(ExperimentMetricGoalObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredChange = defaults.desiredChange;
-    	      this.entityIdKey = defaults.entityIdKey;
-    	      this.eventPattern = defaults.eventPattern;
-    	      this.metricName = defaults.metricName;
-    	      this.unitLabel = defaults.unitLabel;
-    	      this.valueKey = defaults.valueKey;
+            $ = new ExperimentMetricGoalObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredChange(Output<ExperimentMetricGoalObjectDesiredChange> desiredChange) {
-            this.desiredChange = Objects.requireNonNull(desiredChange);
+            $.desiredChange = desiredChange;
             return this;
         }
+
         public Builder desiredChange(ExperimentMetricGoalObjectDesiredChange desiredChange) {
-            this.desiredChange = Output.of(Objects.requireNonNull(desiredChange));
-            return this;
+            return desiredChange(Output.of(desiredChange));
         }
+
         public Builder entityIdKey(Output<String> entityIdKey) {
-            this.entityIdKey = Objects.requireNonNull(entityIdKey);
+            $.entityIdKey = entityIdKey;
             return this;
         }
+
         public Builder entityIdKey(String entityIdKey) {
-            this.entityIdKey = Output.of(Objects.requireNonNull(entityIdKey));
-            return this;
+            return entityIdKey(Output.of(entityIdKey));
         }
+
         public Builder eventPattern(Output<String> eventPattern) {
-            this.eventPattern = Objects.requireNonNull(eventPattern);
+            $.eventPattern = eventPattern;
             return this;
         }
+
         public Builder eventPattern(String eventPattern) {
-            this.eventPattern = Output.of(Objects.requireNonNull(eventPattern));
-            return this;
+            return eventPattern(Output.of(eventPattern));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder unitLabel(@Nullable Output<String> unitLabel) {
-            this.unitLabel = unitLabel;
+            $.unitLabel = unitLabel;
             return this;
         }
-        public Builder unitLabel(@Nullable String unitLabel) {
-            this.unitLabel = Codegen.ofNullable(unitLabel);
-            return this;
+
+        public Builder unitLabel(String unitLabel) {
+            return unitLabel(Output.of(unitLabel));
         }
+
         public Builder valueKey(Output<String> valueKey) {
-            this.valueKey = Objects.requireNonNull(valueKey);
+            $.valueKey = valueKey;
             return this;
         }
+
         public Builder valueKey(String valueKey) {
-            this.valueKey = Output.of(Objects.requireNonNull(valueKey));
-            return this;
-        }        public ExperimentMetricGoalObjectArgs build() {
-            return new ExperimentMetricGoalObjectArgs(desiredChange, entityIdKey, eventPattern, metricName, unitLabel, valueKey);
+            return valueKey(Output.of(valueKey));
+        }
+
+        public ExperimentMetricGoalObjectArgs build() {
+            $.desiredChange = Objects.requireNonNull($.desiredChange, "expected parameter 'desiredChange' to be non-null");
+            $.entityIdKey = Objects.requireNonNull($.entityIdKey, "expected parameter 'entityIdKey' to be non-null");
+            $.eventPattern = Objects.requireNonNull($.eventPattern, "expected parameter 'eventPattern' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.valueKey = Objects.requireNonNull($.valueKey, "expected parameter 'valueKey' to be non-null");
+            return $;
         }
     }
+
 }

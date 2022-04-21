@@ -23,7 +23,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="fileSystemId", required=true)
-      private final String fileSystemId;
+    private String fileSystemId;
 
     public String fileSystemId() {
         return this.fileSystemId;
@@ -34,7 +34,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -45,7 +45,7 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="mountTargetId", required=true)
-      private final String mountTargetId;
+    private String mountTargetId;
 
     public String mountTargetId() {
         return this.mountTargetId;
@@ -56,73 +56,65 @@ public final class MountTargetPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="smbServerFqdn")
-      private final @Nullable String smbServerFqdn;
+    private @Nullable String smbServerFqdn;
 
     public Optional<String> smbServerFqdn() {
-        return this.smbServerFqdn == null ? Optional.empty() : Optional.ofNullable(this.smbServerFqdn);
+        return Optional.ofNullable(this.smbServerFqdn);
     }
 
-    public MountTargetPropertiesResponse(
-        String fileSystemId,
-        String ipAddress,
-        String mountTargetId,
-        @Nullable String smbServerFqdn) {
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.mountTargetId = Objects.requireNonNull(mountTargetId, "expected parameter 'mountTargetId' to be non-null");
-        this.smbServerFqdn = smbServerFqdn;
-    }
+    private MountTargetPropertiesResponse() {}
 
-    private MountTargetPropertiesResponse() {
-        this.fileSystemId = null;
-        this.ipAddress = null;
-        this.mountTargetId = null;
-        this.smbServerFqdn = null;
+    private MountTargetPropertiesResponse(MountTargetPropertiesResponse $) {
+        this.fileSystemId = $.fileSystemId;
+        this.ipAddress = $.ipAddress;
+        this.mountTargetId = $.mountTargetId;
+        this.smbServerFqdn = $.smbServerFqdn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MountTargetPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileSystemId;
-        private String ipAddress;
-        private String mountTargetId;
-        private @Nullable String smbServerFqdn;
+        private MountTargetPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MountTargetPropertiesResponse();
         }
 
         public Builder(MountTargetPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.mountTargetId = defaults.mountTargetId;
-    	      this.smbServerFqdn = defaults.smbServerFqdn;
+            $ = new MountTargetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder mountTargetId(String mountTargetId) {
-            this.mountTargetId = Objects.requireNonNull(mountTargetId);
+            $.mountTargetId = mountTargetId;
             return this;
         }
+
         public Builder smbServerFqdn(@Nullable String smbServerFqdn) {
-            this.smbServerFqdn = smbServerFqdn;
+            $.smbServerFqdn = smbServerFqdn;
             return this;
-        }        public MountTargetPropertiesResponse build() {
-            return new MountTargetPropertiesResponse(fileSystemId, ipAddress, mountTargetId, smbServerFqdn);
+        }
+
+        public MountTargetPropertiesResponse build() {
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.mountTargetId = Objects.requireNonNull($.mountTargetId, "expected parameter 'mountTargetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="canIpForward")
-      private final @Nullable Output<Boolean> canIpForward;
+    private @Nullable Output<Boolean> canIpForward;
 
-    public Output<Boolean> canIpForward() {
-        return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
+    public Optional<Output<Boolean>> canIpForward() {
+        return Optional.ofNullable(this.canIpForward);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableExternalIps")
-      private final @Nullable Output<Boolean> enableExternalIps;
+    private @Nullable Output<Boolean> enableExternalIps;
 
-    public Output<Boolean> enableExternalIps() {
-        return this.enableExternalIps == null ? Codegen.empty() : this.enableExternalIps;
+    public Optional<Output<Boolean>> enableExternalIps() {
+        return Optional.ofNullable(this.enableExternalIps);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
-    public NetworkConfigArgs(
-        @Nullable Output<Boolean> canIpForward,
-        @Nullable Output<Boolean> enableExternalIps,
-        @Nullable Output<String> network,
-        @Nullable Output<String> subnetwork) {
-        this.canIpForward = canIpForward;
-        this.enableExternalIps = enableExternalIps;
-        this.network = network;
-        this.subnetwork = subnetwork;
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.canIpForward = Codegen.empty();
-        this.enableExternalIps = Codegen.empty();
-        this.network = Codegen.empty();
-        this.subnetwork = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.canIpForward = $.canIpForward;
+        this.enableExternalIps = $.enableExternalIps;
+        this.network = $.network;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> canIpForward;
-        private @Nullable Output<Boolean> enableExternalIps;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> subnetwork;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canIpForward = defaults.canIpForward;
-    	      this.enableExternalIps = defaults.enableExternalIps;
-    	      this.network = defaults.network;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
-            this.canIpForward = canIpForward;
+            $.canIpForward = canIpForward;
             return this;
         }
-        public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Codegen.ofNullable(canIpForward);
-            return this;
+
+        public Builder canIpForward(Boolean canIpForward) {
+            return canIpForward(Output.of(canIpForward));
         }
+
         public Builder enableExternalIps(@Nullable Output<Boolean> enableExternalIps) {
-            this.enableExternalIps = enableExternalIps;
+            $.enableExternalIps = enableExternalIps;
             return this;
         }
-        public Builder enableExternalIps(@Nullable Boolean enableExternalIps) {
-            this.enableExternalIps = Codegen.ofNullable(enableExternalIps);
-            return this;
+
+        public Builder enableExternalIps(Boolean enableExternalIps) {
+            return enableExternalIps(Output.of(enableExternalIps));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(canIpForward, enableExternalIps, network, subnetwork);
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public NetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

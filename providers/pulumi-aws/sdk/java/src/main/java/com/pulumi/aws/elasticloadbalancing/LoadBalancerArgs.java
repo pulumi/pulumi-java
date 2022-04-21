@@ -8,13 +8,13 @@ import com.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerHealthCheckArgs;
 import com.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerListenerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessLogs")
-      private final @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
+    private @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
 
-    public Output<LoadBalancerAccessLogsArgs> accessLogs() {
-        return this.accessLogs == null ? Codegen.empty() : this.accessLogs;
+    public Optional<Output<LoadBalancerAccessLogsArgs>> accessLogs() {
+        return Optional.ofNullable(this.accessLogs);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionDraining")
-      private final @Nullable Output<Boolean> connectionDraining;
+    private @Nullable Output<Boolean> connectionDraining;
 
-    public Output<Boolean> connectionDraining() {
-        return this.connectionDraining == null ? Codegen.empty() : this.connectionDraining;
+    public Optional<Output<Boolean>> connectionDraining() {
+        return Optional.ofNullable(this.connectionDraining);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionDrainingTimeout")
-      private final @Nullable Output<Integer> connectionDrainingTimeout;
+    private @Nullable Output<Integer> connectionDrainingTimeout;
 
-    public Output<Integer> connectionDrainingTimeout() {
-        return this.connectionDrainingTimeout == null ? Codegen.empty() : this.connectionDrainingTimeout;
+    public Optional<Output<Integer>> connectionDrainingTimeout() {
+        return Optional.ofNullable(this.connectionDrainingTimeout);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crossZoneLoadBalancing")
-      private final @Nullable Output<Boolean> crossZoneLoadBalancing;
+    private @Nullable Output<Boolean> crossZoneLoadBalancing;
 
-    public Output<Boolean> crossZoneLoadBalancing() {
-        return this.crossZoneLoadBalancing == null ? Codegen.empty() : this.crossZoneLoadBalancing;
+    public Optional<Output<Boolean>> crossZoneLoadBalancing() {
+        return Optional.ofNullable(this.crossZoneLoadBalancing);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desyncMitigationMode")
-      private final @Nullable Output<String> desyncMitigationMode;
+    private @Nullable Output<String> desyncMitigationMode;
 
-    public Output<String> desyncMitigationMode() {
-        return this.desyncMitigationMode == null ? Codegen.empty() : this.desyncMitigationMode;
+    public Optional<Output<String>> desyncMitigationMode() {
+        return Optional.ofNullable(this.desyncMitigationMode);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheck")
-      private final @Nullable Output<LoadBalancerHealthCheckArgs> healthCheck;
+    private @Nullable Output<LoadBalancerHealthCheckArgs> healthCheck;
 
-    public Output<LoadBalancerHealthCheckArgs> healthCheck() {
-        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
+    public Optional<Output<LoadBalancerHealthCheckArgs>> healthCheck() {
+        return Optional.ofNullable(this.healthCheck);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idleTimeout")
-      private final @Nullable Output<Integer> idleTimeout;
+    private @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> idleTimeout() {
-        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
+    public Optional<Output<Integer>> idleTimeout() {
+        return Optional.ofNullable(this.idleTimeout);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<List<String>> instances;
+    private @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<List<String>>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="internal")
-      private final @Nullable Output<Boolean> internal;
+    private @Nullable Output<Boolean> internal;
 
-    public Output<Boolean> internal() {
-        return this.internal == null ? Codegen.empty() : this.internal;
+    public Optional<Output<Boolean>> internal() {
+        return Optional.ofNullable(this.internal);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listeners", required=true)
-      private final Output<List<LoadBalancerListenerArgs>> listeners;
+    private Output<List<LoadBalancerListenerArgs>> listeners;
 
     public Output<List<LoadBalancerListenerArgs>> listeners() {
         return this.listeners;
@@ -148,10 +148,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceSecurityGroup")
-      private final @Nullable Output<String> sourceSecurityGroup;
+    private @Nullable Output<String> sourceSecurityGroup;
 
-    public Output<String> sourceSecurityGroup() {
-        return this.sourceSecurityGroup == null ? Codegen.empty() : this.sourceSecurityGroup;
+    public Optional<Output<String>> sourceSecurityGroup() {
+        return Optional.ofNullable(this.sourceSecurityGroup);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnets")
-      private final @Nullable Output<List<String>> subnets;
+    private @Nullable Output<List<String>> subnets;
 
-    public Output<List<String>> subnets() {
-        return this.subnets == null ? Codegen.empty() : this.subnets;
+    public Optional<Output<List<String>>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -207,273 +207,229 @@ public final class LoadBalancerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LoadBalancerArgs(
-        @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs,
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<Boolean> connectionDraining,
-        @Nullable Output<Integer> connectionDrainingTimeout,
-        @Nullable Output<Boolean> crossZoneLoadBalancing,
-        @Nullable Output<String> desyncMitigationMode,
-        @Nullable Output<LoadBalancerHealthCheckArgs> healthCheck,
-        @Nullable Output<Integer> idleTimeout,
-        @Nullable Output<List<String>> instances,
-        @Nullable Output<Boolean> internal,
-        Output<List<LoadBalancerListenerArgs>> listeners,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<String> sourceSecurityGroup,
-        @Nullable Output<List<String>> subnets,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accessLogs = accessLogs;
-        this.availabilityZones = availabilityZones;
-        this.connectionDraining = connectionDraining;
-        this.connectionDrainingTimeout = connectionDrainingTimeout;
-        this.crossZoneLoadBalancing = crossZoneLoadBalancing;
-        this.desyncMitigationMode = desyncMitigationMode;
-        this.healthCheck = healthCheck;
-        this.idleTimeout = idleTimeout;
-        this.instances = instances;
-        this.internal = internal;
-        this.listeners = Objects.requireNonNull(listeners, "expected parameter 'listeners' to be non-null");
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.securityGroups = securityGroups;
-        this.sourceSecurityGroup = sourceSecurityGroup;
-        this.subnets = subnets;
-        this.tags = tags;
-    }
+    private LoadBalancerArgs() {}
 
-    private LoadBalancerArgs() {
-        this.accessLogs = Codegen.empty();
-        this.availabilityZones = Codegen.empty();
-        this.connectionDraining = Codegen.empty();
-        this.connectionDrainingTimeout = Codegen.empty();
-        this.crossZoneLoadBalancing = Codegen.empty();
-        this.desyncMitigationMode = Codegen.empty();
-        this.healthCheck = Codegen.empty();
-        this.idleTimeout = Codegen.empty();
-        this.instances = Codegen.empty();
-        this.internal = Codegen.empty();
-        this.listeners = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.sourceSecurityGroup = Codegen.empty();
-        this.subnets = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LoadBalancerArgs(LoadBalancerArgs $) {
+        this.accessLogs = $.accessLogs;
+        this.availabilityZones = $.availabilityZones;
+        this.connectionDraining = $.connectionDraining;
+        this.connectionDrainingTimeout = $.connectionDrainingTimeout;
+        this.crossZoneLoadBalancing = $.crossZoneLoadBalancing;
+        this.desyncMitigationMode = $.desyncMitigationMode;
+        this.healthCheck = $.healthCheck;
+        this.idleTimeout = $.idleTimeout;
+        this.instances = $.instances;
+        this.internal = $.internal;
+        this.listeners = $.listeners;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.securityGroups = $.securityGroups;
+        this.sourceSecurityGroup = $.sourceSecurityGroup;
+        this.subnets = $.subnets;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<Boolean> connectionDraining;
-        private @Nullable Output<Integer> connectionDrainingTimeout;
-        private @Nullable Output<Boolean> crossZoneLoadBalancing;
-        private @Nullable Output<String> desyncMitigationMode;
-        private @Nullable Output<LoadBalancerHealthCheckArgs> healthCheck;
-        private @Nullable Output<Integer> idleTimeout;
-        private @Nullable Output<List<String>> instances;
-        private @Nullable Output<Boolean> internal;
-        private Output<List<LoadBalancerListenerArgs>> listeners;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<String> sourceSecurityGroup;
-        private @Nullable Output<List<String>> subnets;
-        private @Nullable Output<Map<String,String>> tags;
+        private LoadBalancerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerArgs();
         }
 
         public Builder(LoadBalancerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLogs = defaults.accessLogs;
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.connectionDraining = defaults.connectionDraining;
-    	      this.connectionDrainingTimeout = defaults.connectionDrainingTimeout;
-    	      this.crossZoneLoadBalancing = defaults.crossZoneLoadBalancing;
-    	      this.desyncMitigationMode = defaults.desyncMitigationMode;
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.idleTimeout = defaults.idleTimeout;
-    	      this.instances = defaults.instances;
-    	      this.internal = defaults.internal;
-    	      this.listeners = defaults.listeners;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.sourceSecurityGroup = defaults.sourceSecurityGroup;
-    	      this.subnets = defaults.subnets;
-    	      this.tags = defaults.tags;
+            $ = new LoadBalancerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLogs(@Nullable Output<LoadBalancerAccessLogsArgs> accessLogs) {
-            this.accessLogs = accessLogs;
+            $.accessLogs = accessLogs;
             return this;
         }
-        public Builder accessLogs(@Nullable LoadBalancerAccessLogsArgs accessLogs) {
-            this.accessLogs = Codegen.ofNullable(accessLogs);
-            return this;
+
+        public Builder accessLogs(LoadBalancerAccessLogsArgs accessLogs) {
+            return accessLogs(Output.of(accessLogs));
         }
+
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder connectionDraining(@Nullable Output<Boolean> connectionDraining) {
-            this.connectionDraining = connectionDraining;
+            $.connectionDraining = connectionDraining;
             return this;
         }
-        public Builder connectionDraining(@Nullable Boolean connectionDraining) {
-            this.connectionDraining = Codegen.ofNullable(connectionDraining);
-            return this;
+
+        public Builder connectionDraining(Boolean connectionDraining) {
+            return connectionDraining(Output.of(connectionDraining));
         }
+
         public Builder connectionDrainingTimeout(@Nullable Output<Integer> connectionDrainingTimeout) {
-            this.connectionDrainingTimeout = connectionDrainingTimeout;
+            $.connectionDrainingTimeout = connectionDrainingTimeout;
             return this;
         }
-        public Builder connectionDrainingTimeout(@Nullable Integer connectionDrainingTimeout) {
-            this.connectionDrainingTimeout = Codegen.ofNullable(connectionDrainingTimeout);
-            return this;
+
+        public Builder connectionDrainingTimeout(Integer connectionDrainingTimeout) {
+            return connectionDrainingTimeout(Output.of(connectionDrainingTimeout));
         }
+
         public Builder crossZoneLoadBalancing(@Nullable Output<Boolean> crossZoneLoadBalancing) {
-            this.crossZoneLoadBalancing = crossZoneLoadBalancing;
+            $.crossZoneLoadBalancing = crossZoneLoadBalancing;
             return this;
         }
-        public Builder crossZoneLoadBalancing(@Nullable Boolean crossZoneLoadBalancing) {
-            this.crossZoneLoadBalancing = Codegen.ofNullable(crossZoneLoadBalancing);
-            return this;
+
+        public Builder crossZoneLoadBalancing(Boolean crossZoneLoadBalancing) {
+            return crossZoneLoadBalancing(Output.of(crossZoneLoadBalancing));
         }
+
         public Builder desyncMitigationMode(@Nullable Output<String> desyncMitigationMode) {
-            this.desyncMitigationMode = desyncMitigationMode;
+            $.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
-        public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
-            this.desyncMitigationMode = Codegen.ofNullable(desyncMitigationMode);
-            return this;
+
+        public Builder desyncMitigationMode(String desyncMitigationMode) {
+            return desyncMitigationMode(Output.of(desyncMitigationMode));
         }
+
         public Builder healthCheck(@Nullable Output<LoadBalancerHealthCheckArgs> healthCheck) {
-            this.healthCheck = healthCheck;
+            $.healthCheck = healthCheck;
             return this;
         }
-        public Builder healthCheck(@Nullable LoadBalancerHealthCheckArgs healthCheck) {
-            this.healthCheck = Codegen.ofNullable(healthCheck);
-            return this;
+
+        public Builder healthCheck(LoadBalancerHealthCheckArgs healthCheck) {
+            return healthCheck(Output.of(healthCheck));
         }
+
         public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
-            this.idleTimeout = idleTimeout;
+            $.idleTimeout = idleTimeout;
             return this;
         }
-        public Builder idleTimeout(@Nullable Integer idleTimeout) {
-            this.idleTimeout = Codegen.ofNullable(idleTimeout);
-            return this;
+
+        public Builder idleTimeout(Integer idleTimeout) {
+            return idleTimeout(Output.of(idleTimeout));
         }
+
         public Builder instances(@Nullable Output<List<String>> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable List<String> instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
+
+        public Builder instances(List<String> instances) {
+            return instances(Output.of(instances));
         }
+
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
+
         public Builder internal(@Nullable Output<Boolean> internal) {
-            this.internal = internal;
+            $.internal = internal;
             return this;
         }
-        public Builder internal(@Nullable Boolean internal) {
-            this.internal = Codegen.ofNullable(internal);
-            return this;
+
+        public Builder internal(Boolean internal) {
+            return internal(Output.of(internal));
         }
+
         public Builder listeners(Output<List<LoadBalancerListenerArgs>> listeners) {
-            this.listeners = Objects.requireNonNull(listeners);
+            $.listeners = listeners;
             return this;
         }
+
         public Builder listeners(List<LoadBalancerListenerArgs> listeners) {
-            this.listeners = Output.of(Objects.requireNonNull(listeners));
-            return this;
+            return listeners(Output.of(listeners));
         }
+
         public Builder listeners(LoadBalancerListenerArgs... listeners) {
             return listeners(List.of(listeners));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder sourceSecurityGroup(@Nullable Output<String> sourceSecurityGroup) {
-            this.sourceSecurityGroup = sourceSecurityGroup;
+            $.sourceSecurityGroup = sourceSecurityGroup;
             return this;
         }
-        public Builder sourceSecurityGroup(@Nullable String sourceSecurityGroup) {
-            this.sourceSecurityGroup = Codegen.ofNullable(sourceSecurityGroup);
-            return this;
+
+        public Builder sourceSecurityGroup(String sourceSecurityGroup) {
+            return sourceSecurityGroup(Output.of(sourceSecurityGroup));
         }
+
         public Builder subnets(@Nullable Output<List<String>> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
-        public Builder subnets(@Nullable List<String> subnets) {
-            this.subnets = Codegen.ofNullable(subnets);
-            return this;
+
+        public Builder subnets(List<String> subnets) {
+            return subnets(Output.of(subnets));
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LoadBalancerArgs build() {
-            return new LoadBalancerArgs(accessLogs, availabilityZones, connectionDraining, connectionDrainingTimeout, crossZoneLoadBalancing, desyncMitigationMode, healthCheck, idleTimeout, instances, internal, listeners, name, namePrefix, securityGroups, sourceSecurityGroup, subnets, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LoadBalancerArgs build() {
+            $.listeners = Objects.requireNonNull($.listeners, "expected parameter 'listeners' to be non-null");
+            return $;
         }
     }
+
 }

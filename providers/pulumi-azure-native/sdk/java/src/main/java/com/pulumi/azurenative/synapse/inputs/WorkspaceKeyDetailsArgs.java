@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkspaceKeyDetailsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyVaultUrl")
-      private final @Nullable Output<String> keyVaultUrl;
+    private @Nullable Output<String> keyVaultUrl;
 
-    public Output<String> keyVaultUrl() {
-        return this.keyVaultUrl == null ? Codegen.empty() : this.keyVaultUrl;
+    public Optional<Output<String>> keyVaultUrl() {
+        return Optional.ofNullable(this.keyVaultUrl);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class WorkspaceKeyDetailsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public WorkspaceKeyDetailsArgs(
-        @Nullable Output<String> keyVaultUrl,
-        @Nullable Output<String> name) {
-        this.keyVaultUrl = keyVaultUrl;
-        this.name = name;
-    }
+    private WorkspaceKeyDetailsArgs() {}
 
-    private WorkspaceKeyDetailsArgs() {
-        this.keyVaultUrl = Codegen.empty();
-        this.name = Codegen.empty();
+    private WorkspaceKeyDetailsArgs(WorkspaceKeyDetailsArgs $) {
+        this.keyVaultUrl = $.keyVaultUrl;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceKeyDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultUrl;
-        private @Nullable Output<String> name;
+        private WorkspaceKeyDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceKeyDetailsArgs();
         }
 
         public Builder(WorkspaceKeyDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultUrl = defaults.keyVaultUrl;
-    	      this.name = defaults.name;
+            $ = new WorkspaceKeyDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
-            this.keyVaultUrl = keyVaultUrl;
+            $.keyVaultUrl = keyVaultUrl;
             return this;
         }
-        public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = Codegen.ofNullable(keyVaultUrl);
-            return this;
+
+        public Builder keyVaultUrl(String keyVaultUrl) {
+            return keyVaultUrl(Output.of(keyVaultUrl));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public WorkspaceKeyDetailsArgs build() {
-            return new WorkspaceKeyDetailsArgs(keyVaultUrl, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public WorkspaceKeyDetailsArgs build() {
+            return $;
         }
     }
+
 }

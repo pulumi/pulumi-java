@@ -23,7 +23,7 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -34,7 +34,7 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="httpHeaders", required=true)
-      private final List<HTTPHeaderResponse> httpHeaders;
+    private List<HTTPHeaderResponse> httpHeaders;
 
     public List<HTTPHeaderResponse> httpHeaders() {
         return this.httpHeaders;
@@ -45,7 +45,7 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -56,76 +56,70 @@ public final class HTTPGetActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scheme", required=true)
-      private final String scheme;
+    private String scheme;
 
     public String scheme() {
         return this.scheme;
     }
 
-    public HTTPGetActionResponse(
-        String host,
-        List<HTTPHeaderResponse> httpHeaders,
-        String path,
-        String scheme) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.httpHeaders = Objects.requireNonNull(httpHeaders, "expected parameter 'httpHeaders' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.scheme = Objects.requireNonNull(scheme, "expected parameter 'scheme' to be non-null");
-    }
+    private HTTPGetActionResponse() {}
 
-    private HTTPGetActionResponse() {
-        this.host = null;
-        this.httpHeaders = List.of();
-        this.path = null;
-        this.scheme = null;
+    private HTTPGetActionResponse(HTTPGetActionResponse $) {
+        this.host = $.host;
+        this.httpHeaders = $.httpHeaders;
+        this.path = $.path;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HTTPGetActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private List<HTTPHeaderResponse> httpHeaders;
-        private String path;
-        private String scheme;
+        private HTTPGetActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HTTPGetActionResponse();
         }
 
         public Builder(HTTPGetActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.httpHeaders = defaults.httpHeaders;
-    	      this.path = defaults.path;
-    	      this.scheme = defaults.scheme;
+            $ = new HTTPGetActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder httpHeaders(List<HTTPHeaderResponse> httpHeaders) {
-            this.httpHeaders = Objects.requireNonNull(httpHeaders);
+            $.httpHeaders = httpHeaders;
             return this;
         }
+
         public Builder httpHeaders(HTTPHeaderResponse... httpHeaders) {
             return httpHeaders(List.of(httpHeaders));
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder scheme(String scheme) {
-            this.scheme = Objects.requireNonNull(scheme);
+            $.scheme = scheme;
             return this;
-        }        public HTTPGetActionResponse build() {
-            return new HTTPGetActionResponse(host, httpHeaders, path, scheme);
+        }
+
+        public HTTPGetActionResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.httpHeaders = Objects.requireNonNull($.httpHeaders, "expected parameter 'httpHeaders' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.scheme = Objects.requireNonNull($.scheme, "expected parameter 'scheme' to be non-null");
+            return $;
         }
     }
+
 }

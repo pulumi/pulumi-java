@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreNotificationConfigArgs;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigArgs;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset", required=true)
-      private final Output<String> dataset;
+    private Output<String> dataset;
 
     public Output<String> dataset() {
         return this.dataset;
@@ -42,10 +42,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableReferentialIntegrity")
-      private final @Nullable Output<Boolean> disableReferentialIntegrity;
+    private @Nullable Output<Boolean> disableReferentialIntegrity;
 
-    public Output<Boolean> disableReferentialIntegrity() {
-        return this.disableReferentialIntegrity == null ? Codegen.empty() : this.disableReferentialIntegrity;
+    public Optional<Output<Boolean>> disableReferentialIntegrity() {
+        return Optional.ofNullable(this.disableReferentialIntegrity);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableResourceVersioning")
-      private final @Nullable Output<Boolean> disableResourceVersioning;
+    private @Nullable Output<Boolean> disableResourceVersioning;
 
-    public Output<Boolean> disableResourceVersioning() {
-        return this.disableResourceVersioning == null ? Codegen.empty() : this.disableResourceVersioning;
+    public Optional<Output<Boolean>> disableResourceVersioning() {
+        return Optional.ofNullable(this.disableResourceVersioning);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableHistoryImport")
-      private final @Nullable Output<Boolean> enableHistoryImport;
+    private @Nullable Output<Boolean> enableHistoryImport;
 
-    public Output<Boolean> enableHistoryImport() {
-        return this.enableHistoryImport == null ? Codegen.empty() : this.enableHistoryImport;
+    public Optional<Output<Boolean>> enableHistoryImport() {
+        return Optional.ofNullable(this.enableHistoryImport);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableUpdateCreate")
-      private final @Nullable Output<Boolean> enableUpdateCreate;
+    private @Nullable Output<Boolean> enableUpdateCreate;
 
-    public Output<Boolean> enableUpdateCreate() {
-        return this.enableUpdateCreate == null ? Codegen.empty() : this.enableUpdateCreate;
+    public Optional<Output<Boolean>> enableUpdateCreate() {
+        return Optional.ofNullable(this.enableUpdateCreate);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig;
+    private @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig;
 
-    public Output<FhirStoreNotificationConfigArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<FhirStoreNotificationConfigArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamConfigs")
-      private final @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs;
+    private @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs;
 
-    public Output<List<FhirStoreStreamConfigArgs>> streamConfigs() {
-        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
+    public Optional<Output<List<FhirStoreStreamConfigArgs>>> streamConfigs() {
+        return Optional.ofNullable(this.streamConfigs);
     }
 
     /**
@@ -162,170 +162,143 @@ public final class FhirStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public FhirStoreArgs(
-        Output<String> dataset,
-        @Nullable Output<Boolean> disableReferentialIntegrity,
-        @Nullable Output<Boolean> disableResourceVersioning,
-        @Nullable Output<Boolean> enableHistoryImport,
-        @Nullable Output<Boolean> enableUpdateCreate,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig,
-        @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs,
-        @Nullable Output<String> version) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.disableReferentialIntegrity = disableReferentialIntegrity;
-        this.disableResourceVersioning = disableResourceVersioning;
-        this.enableHistoryImport = enableHistoryImport;
-        this.enableUpdateCreate = enableUpdateCreate;
-        this.labels = labels;
-        this.name = name;
-        this.notificationConfig = notificationConfig;
-        this.streamConfigs = streamConfigs;
-        this.version = version;
-    }
+    private FhirStoreArgs() {}
 
-    private FhirStoreArgs() {
-        this.dataset = Codegen.empty();
-        this.disableReferentialIntegrity = Codegen.empty();
-        this.disableResourceVersioning = Codegen.empty();
-        this.enableHistoryImport = Codegen.empty();
-        this.enableUpdateCreate = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.streamConfigs = Codegen.empty();
-        this.version = Codegen.empty();
+    private FhirStoreArgs(FhirStoreArgs $) {
+        this.dataset = $.dataset;
+        this.disableReferentialIntegrity = $.disableReferentialIntegrity;
+        this.disableResourceVersioning = $.disableResourceVersioning;
+        this.enableHistoryImport = $.enableHistoryImport;
+        this.enableUpdateCreate = $.enableUpdateCreate;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.notificationConfig = $.notificationConfig;
+        this.streamConfigs = $.streamConfigs;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataset;
-        private @Nullable Output<Boolean> disableReferentialIntegrity;
-        private @Nullable Output<Boolean> disableResourceVersioning;
-        private @Nullable Output<Boolean> enableHistoryImport;
-        private @Nullable Output<Boolean> enableUpdateCreate;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig;
-        private @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs;
-        private @Nullable Output<String> version;
+        private FhirStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirStoreArgs();
         }
 
         public Builder(FhirStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.disableReferentialIntegrity = defaults.disableReferentialIntegrity;
-    	      this.disableResourceVersioning = defaults.disableResourceVersioning;
-    	      this.enableHistoryImport = defaults.enableHistoryImport;
-    	      this.enableUpdateCreate = defaults.enableUpdateCreate;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.streamConfigs = defaults.streamConfigs;
-    	      this.version = defaults.version;
+            $ = new FhirStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(Output<String> dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dataset(String dataset) {
-            this.dataset = Output.of(Objects.requireNonNull(dataset));
-            return this;
+            return dataset(Output.of(dataset));
         }
+
         public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
-            this.disableReferentialIntegrity = disableReferentialIntegrity;
+            $.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
-        public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
-            this.disableReferentialIntegrity = Codegen.ofNullable(disableReferentialIntegrity);
-            return this;
+
+        public Builder disableReferentialIntegrity(Boolean disableReferentialIntegrity) {
+            return disableReferentialIntegrity(Output.of(disableReferentialIntegrity));
         }
+
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
-            this.disableResourceVersioning = disableResourceVersioning;
+            $.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
-        public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
-            this.disableResourceVersioning = Codegen.ofNullable(disableResourceVersioning);
-            return this;
+
+        public Builder disableResourceVersioning(Boolean disableResourceVersioning) {
+            return disableResourceVersioning(Output.of(disableResourceVersioning));
         }
+
         public Builder enableHistoryImport(@Nullable Output<Boolean> enableHistoryImport) {
-            this.enableHistoryImport = enableHistoryImport;
+            $.enableHistoryImport = enableHistoryImport;
             return this;
         }
-        public Builder enableHistoryImport(@Nullable Boolean enableHistoryImport) {
-            this.enableHistoryImport = Codegen.ofNullable(enableHistoryImport);
-            return this;
+
+        public Builder enableHistoryImport(Boolean enableHistoryImport) {
+            return enableHistoryImport(Output.of(enableHistoryImport));
         }
+
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
-            this.enableUpdateCreate = enableUpdateCreate;
+            $.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
-        public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
-            this.enableUpdateCreate = Codegen.ofNullable(enableUpdateCreate);
-            return this;
+
+        public Builder enableUpdateCreate(Boolean enableUpdateCreate) {
+            return enableUpdateCreate(Output.of(enableUpdateCreate));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationConfig(@Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable FhirStoreNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(FhirStoreNotificationConfigArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder streamConfigs(@Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs) {
-            this.streamConfigs = streamConfigs;
+            $.streamConfigs = streamConfigs;
             return this;
         }
-        public Builder streamConfigs(@Nullable List<FhirStoreStreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Codegen.ofNullable(streamConfigs);
-            return this;
+
+        public Builder streamConfigs(List<FhirStoreStreamConfigArgs> streamConfigs) {
+            return streamConfigs(Output.of(streamConfigs));
         }
+
         public Builder streamConfigs(FhirStoreStreamConfigArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public FhirStoreArgs build() {
-            return new FhirStoreArgs(dataset, disableReferentialIntegrity, disableResourceVersioning, enableHistoryImport, enableUpdateCreate, labels, name, notificationConfig, streamConfigs, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public FhirStoreArgs build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            return $;
         }
     }
+
 }

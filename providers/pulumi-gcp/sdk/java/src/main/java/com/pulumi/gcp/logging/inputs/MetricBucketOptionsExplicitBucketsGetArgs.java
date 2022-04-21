@@ -5,7 +5,6 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends com.pulumi.
      * 
      */
     @Import(name="bounds", required=true)
-      private final Output<List<Double>> bounds;
+    private Output<List<Double>> bounds;
 
     public Output<List<Double>> bounds() {
         return this.bounds;
     }
 
-    public MetricBucketOptionsExplicitBucketsGetArgs(Output<List<Double>> bounds) {
-        this.bounds = Objects.requireNonNull(bounds, "expected parameter 'bounds' to be non-null");
-    }
+    private MetricBucketOptionsExplicitBucketsGetArgs() {}
 
-    private MetricBucketOptionsExplicitBucketsGetArgs() {
-        this.bounds = Codegen.empty();
+    private MetricBucketOptionsExplicitBucketsGetArgs(MetricBucketOptionsExplicitBucketsGetArgs $) {
+        this.bounds = $.bounds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricBucketOptionsExplicitBucketsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Double>> bounds;
+        private MetricBucketOptionsExplicitBucketsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricBucketOptionsExplicitBucketsGetArgs();
         }
 
         public Builder(MetricBucketOptionsExplicitBucketsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bounds = defaults.bounds;
+            $ = new MetricBucketOptionsExplicitBucketsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bounds(Output<List<Double>> bounds) {
-            this.bounds = Objects.requireNonNull(bounds);
+            $.bounds = bounds;
             return this;
         }
+
         public Builder bounds(List<Double> bounds) {
-            this.bounds = Output.of(Objects.requireNonNull(bounds));
-            return this;
+            return bounds(Output.of(bounds));
         }
+
         public Builder bounds(Double... bounds) {
             return bounds(List.of(bounds));
-        }        public MetricBucketOptionsExplicitBucketsGetArgs build() {
-            return new MetricBucketOptionsExplicitBucketsGetArgs(bounds);
+        }
+
+        public MetricBucketOptionsExplicitBucketsGetArgs build() {
+            $.bounds = Objects.requireNonNull($.bounds, "expected parameter 'bounds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,11 +10,11 @@ import com.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesArgs;
 import com.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<DataSourceCredentialsArgs> credentials;
+    private @Nullable Output<DataSourceCredentialsArgs> credentials;
 
-    public Output<DataSourceCredentialsArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<DataSourceCredentialsArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSourceId", required=true)
-      private final Output<String> dataSourceId;
+    private Output<String> dataSourceId;
 
     public Output<String> dataSourceId() {
         return this.dataSourceId;
@@ -60,10 +60,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<DataSourceParametersArgs> parameters;
+    private Output<DataSourceParametersArgs> parameters;
 
     public Output<DataSourceParametersArgs> parameters() {
         return this.parameters;
@@ -82,10 +82,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<DataSourcePermissionArgs>> permissions;
+    private @Nullable Output<List<DataSourcePermissionArgs>> permissions;
 
-    public Output<List<DataSourcePermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<DataSourcePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslProperties")
-      private final @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
+    private @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
 
-    public Output<DataSourceSslPropertiesArgs> sslProperties() {
-        return this.sslProperties == null ? Codegen.empty() : this.sslProperties;
+    public Optional<Output<DataSourceSslPropertiesArgs>> sslProperties() {
+        return Optional.ofNullable(this.sslProperties);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -115,7 +115,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -126,170 +126,145 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConnectionProperties")
-      private final @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
+    private @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
 
-    public Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties() {
-        return this.vpcConnectionProperties == null ? Codegen.empty() : this.vpcConnectionProperties;
+    public Optional<Output<DataSourceVpcConnectionPropertiesArgs>> vpcConnectionProperties() {
+        return Optional.ofNullable(this.vpcConnectionProperties);
     }
 
-    public DataSourceArgs(
-        @Nullable Output<String> awsAccountId,
-        @Nullable Output<DataSourceCredentialsArgs> credentials,
-        Output<String> dataSourceId,
-        @Nullable Output<String> name,
-        Output<DataSourceParametersArgs> parameters,
-        @Nullable Output<List<DataSourcePermissionArgs>> permissions,
-        @Nullable Output<DataSourceSslPropertiesArgs> sslProperties,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> type,
-        @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
-        this.awsAccountId = awsAccountId;
-        this.credentials = credentials;
-        this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
-        this.name = name;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.permissions = permissions;
-        this.sslProperties = sslProperties;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.vpcConnectionProperties = vpcConnectionProperties;
-    }
+    private DataSourceArgs() {}
 
-    private DataSourceArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.dataSourceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.sslProperties = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.vpcConnectionProperties = Codegen.empty();
+    private DataSourceArgs(DataSourceArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.credentials = $.credentials;
+        this.dataSourceId = $.dataSourceId;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.permissions = $.permissions;
+        this.sslProperties = $.sslProperties;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.vpcConnectionProperties = $.vpcConnectionProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsAccountId;
-        private @Nullable Output<DataSourceCredentialsArgs> credentials;
-        private Output<String> dataSourceId;
-        private @Nullable Output<String> name;
-        private Output<DataSourceParametersArgs> parameters;
-        private @Nullable Output<List<DataSourcePermissionArgs>> permissions;
-        private @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> type;
-        private @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
+        private DataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceArgs();
         }
 
         public Builder(DataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.credentials = defaults.credentials;
-    	      this.dataSourceId = defaults.dataSourceId;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.permissions = defaults.permissions;
-    	      this.sslProperties = defaults.sslProperties;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.vpcConnectionProperties = defaults.vpcConnectionProperties;
+            $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder credentials(@Nullable Output<DataSourceCredentialsArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable DataSourceCredentialsArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(DataSourceCredentialsArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder dataSourceId(Output<String> dataSourceId) {
-            this.dataSourceId = Objects.requireNonNull(dataSourceId);
+            $.dataSourceId = dataSourceId;
             return this;
         }
+
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Output.of(Objects.requireNonNull(dataSourceId));
-            return this;
+            return dataSourceId(Output.of(dataSourceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<DataSourceParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(DataSourceParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder permissions(@Nullable Output<List<DataSourcePermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<DataSourcePermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<DataSourcePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(DataSourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder sslProperties(@Nullable Output<DataSourceSslPropertiesArgs> sslProperties) {
-            this.sslProperties = sslProperties;
+            $.sslProperties = sslProperties;
             return this;
         }
-        public Builder sslProperties(@Nullable DataSourceSslPropertiesArgs sslProperties) {
-            this.sslProperties = Codegen.ofNullable(sslProperties);
-            return this;
+
+        public Builder sslProperties(DataSourceSslPropertiesArgs sslProperties) {
+            return sslProperties(Output.of(sslProperties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder vpcConnectionProperties(@Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties) {
-            this.vpcConnectionProperties = vpcConnectionProperties;
+            $.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
-        public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
-            this.vpcConnectionProperties = Codegen.ofNullable(vpcConnectionProperties);
-            return this;
-        }        public DataSourceArgs build() {
-            return new DataSourceArgs(awsAccountId, credentials, dataSourceId, name, parameters, permissions, sslProperties, tags, type, vpcConnectionProperties);
+
+        public Builder vpcConnectionProperties(DataSourceVpcConnectionPropertiesArgs vpcConnectionProperties) {
+            return vpcConnectionProperties(Output.of(vpcConnectionProperties));
+        }
+
+        public DataSourceArgs build() {
+            $.dataSourceId = Objects.requireNonNull($.dataSourceId, "expected parameter 'dataSourceId' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

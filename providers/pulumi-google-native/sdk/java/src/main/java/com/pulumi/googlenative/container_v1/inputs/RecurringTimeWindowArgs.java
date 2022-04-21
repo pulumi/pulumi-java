@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.inputs.TimeWindowArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RecurringTimeWindowArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable Output<String> recurrence;
+    private @Nullable Output<String> recurrence;
 
-    public Output<String> recurrence() {
-        return this.recurrence == null ? Codegen.empty() : this.recurrence;
+    public Optional<Output<String>> recurrence() {
+        return Optional.ofNullable(this.recurrence);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RecurringTimeWindowArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="window")
-      private final @Nullable Output<TimeWindowArgs> window;
+    private @Nullable Output<TimeWindowArgs> window;
 
-    public Output<TimeWindowArgs> window() {
-        return this.window == null ? Codegen.empty() : this.window;
+    public Optional<Output<TimeWindowArgs>> window() {
+        return Optional.ofNullable(this.window);
     }
 
-    public RecurringTimeWindowArgs(
-        @Nullable Output<String> recurrence,
-        @Nullable Output<TimeWindowArgs> window) {
-        this.recurrence = recurrence;
-        this.window = window;
-    }
+    private RecurringTimeWindowArgs() {}
 
-    private RecurringTimeWindowArgs() {
-        this.recurrence = Codegen.empty();
-        this.window = Codegen.empty();
+    private RecurringTimeWindowArgs(RecurringTimeWindowArgs $) {
+        this.recurrence = $.recurrence;
+        this.window = $.window;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurringTimeWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> recurrence;
-        private @Nullable Output<TimeWindowArgs> window;
+        private RecurringTimeWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurringTimeWindowArgs();
         }
 
         public Builder(RecurringTimeWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrence = defaults.recurrence;
-    	      this.window = defaults.window;
+            $ = new RecurringTimeWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrence(@Nullable Output<String> recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
-        public Builder recurrence(@Nullable String recurrence) {
-            this.recurrence = Codegen.ofNullable(recurrence);
-            return this;
+
+        public Builder recurrence(String recurrence) {
+            return recurrence(Output.of(recurrence));
         }
+
         public Builder window(@Nullable Output<TimeWindowArgs> window) {
-            this.window = window;
+            $.window = window;
             return this;
         }
-        public Builder window(@Nullable TimeWindowArgs window) {
-            this.window = Codegen.ofNullable(window);
-            return this;
-        }        public RecurringTimeWindowArgs build() {
-            return new RecurringTimeWindowArgs(recurrence, window);
+
+        public Builder window(TimeWindowArgs window) {
+            return window(Output.of(window));
+        }
+
+        public RecurringTimeWindowArgs build() {
+            return $;
         }
     }
+
 }

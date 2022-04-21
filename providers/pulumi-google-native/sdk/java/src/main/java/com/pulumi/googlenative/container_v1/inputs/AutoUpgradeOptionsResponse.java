@@ -21,7 +21,7 @@ public final class AutoUpgradeOptionsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoUpgradeStartTime", required=true)
-      private final String autoUpgradeStartTime;
+    private String autoUpgradeStartTime;
 
     public String autoUpgradeStartTime() {
         return this.autoUpgradeStartTime;
@@ -32,55 +32,52 @@ public final class AutoUpgradeOptionsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
-    public AutoUpgradeOptionsResponse(
-        String autoUpgradeStartTime,
-        String description) {
-        this.autoUpgradeStartTime = Objects.requireNonNull(autoUpgradeStartTime, "expected parameter 'autoUpgradeStartTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-    }
+    private AutoUpgradeOptionsResponse() {}
 
-    private AutoUpgradeOptionsResponse() {
-        this.autoUpgradeStartTime = null;
-        this.description = null;
+    private AutoUpgradeOptionsResponse(AutoUpgradeOptionsResponse $) {
+        this.autoUpgradeStartTime = $.autoUpgradeStartTime;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoUpgradeOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoUpgradeStartTime;
-        private String description;
+        private AutoUpgradeOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoUpgradeOptionsResponse();
         }
 
         public Builder(AutoUpgradeOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeStartTime = defaults.autoUpgradeStartTime;
-    	      this.description = defaults.description;
+            $ = new AutoUpgradeOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeStartTime(String autoUpgradeStartTime) {
-            this.autoUpgradeStartTime = Objects.requireNonNull(autoUpgradeStartTime);
+            $.autoUpgradeStartTime = autoUpgradeStartTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
-        }        public AutoUpgradeOptionsResponse build() {
-            return new AutoUpgradeOptionsResponse(autoUpgradeStartTime, description);
+        }
+
+        public AutoUpgradeOptionsResponse build() {
+            $.autoUpgradeStartTime = Objects.requireNonNull($.autoUpgradeStartTime, "expected parameter 'autoUpgradeStartTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            return $;
         }
     }
+
 }

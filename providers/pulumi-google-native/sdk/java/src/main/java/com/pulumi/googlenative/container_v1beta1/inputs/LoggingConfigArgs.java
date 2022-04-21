@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.LoggingComponentConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LoggingConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="componentConfig")
-      private final @Nullable Output<LoggingComponentConfigArgs> componentConfig;
+    private @Nullable Output<LoggingComponentConfigArgs> componentConfig;
 
-    public Output<LoggingComponentConfigArgs> componentConfig() {
-        return this.componentConfig == null ? Codegen.empty() : this.componentConfig;
+    public Optional<Output<LoggingComponentConfigArgs>> componentConfig() {
+        return Optional.ofNullable(this.componentConfig);
     }
 
-    public LoggingConfigArgs(@Nullable Output<LoggingComponentConfigArgs> componentConfig) {
-        this.componentConfig = componentConfig;
-    }
+    private LoggingConfigArgs() {}
 
-    private LoggingConfigArgs() {
-        this.componentConfig = Codegen.empty();
+    private LoggingConfigArgs(LoggingConfigArgs $) {
+        this.componentConfig = $.componentConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LoggingComponentConfigArgs> componentConfig;
+        private LoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigArgs();
         }
 
         public Builder(LoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentConfig = defaults.componentConfig;
+            $ = new LoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentConfig(@Nullable Output<LoggingComponentConfigArgs> componentConfig) {
-            this.componentConfig = componentConfig;
+            $.componentConfig = componentConfig;
             return this;
         }
-        public Builder componentConfig(@Nullable LoggingComponentConfigArgs componentConfig) {
-            this.componentConfig = Codegen.ofNullable(componentConfig);
-            return this;
-        }        public LoggingConfigArgs build() {
-            return new LoggingConfigArgs(componentConfig);
+
+        public Builder componentConfig(LoggingComponentConfigArgs componentConfig) {
+            return componentConfig(Output.of(componentConfig));
+        }
+
+        public LoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

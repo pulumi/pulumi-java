@@ -25,10 +25,10 @@ public final class ServerCertificateCommonNamesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="commonNames")
-      private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
+    private @Nullable List<ServerCertificateCommonNameResponse> commonNames;
 
-    public List<ServerCertificateCommonNameResponse> commonNames() {
-        return this.commonNames == null ? List.of() : this.commonNames;
+    public Optional<List<ServerCertificateCommonNameResponse>> commonNames() {
+        return Optional.ofNullable(this.commonNames);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ServerCertificateCommonNamesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="x509StoreName")
-      private final @Nullable String x509StoreName;
+    private @Nullable String x509StoreName;
 
     public Optional<String> x509StoreName() {
-        return this.x509StoreName == null ? Optional.empty() : Optional.ofNullable(this.x509StoreName);
+        return Optional.ofNullable(this.x509StoreName);
     }
 
-    public ServerCertificateCommonNamesResponse(
-        @Nullable List<ServerCertificateCommonNameResponse> commonNames,
-        @Nullable String x509StoreName) {
-        this.commonNames = commonNames;
-        this.x509StoreName = x509StoreName;
-    }
+    private ServerCertificateCommonNamesResponse() {}
 
-    private ServerCertificateCommonNamesResponse() {
-        this.commonNames = List.of();
-        this.x509StoreName = null;
+    private ServerCertificateCommonNamesResponse(ServerCertificateCommonNamesResponse $) {
+        this.commonNames = $.commonNames;
+        this.x509StoreName = $.x509StoreName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCertificateCommonNamesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ServerCertificateCommonNameResponse> commonNames;
-        private @Nullable String x509StoreName;
+        private ServerCertificateCommonNamesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCertificateCommonNamesResponse();
         }
 
         public Builder(ServerCertificateCommonNamesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonNames = defaults.commonNames;
-    	      this.x509StoreName = defaults.x509StoreName;
+            $ = new ServerCertificateCommonNamesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commonNames(@Nullable List<ServerCertificateCommonNameResponse> commonNames) {
-            this.commonNames = commonNames;
+            $.commonNames = commonNames;
             return this;
         }
+
         public Builder commonNames(ServerCertificateCommonNameResponse... commonNames) {
             return commonNames(List.of(commonNames));
         }
+
         public Builder x509StoreName(@Nullable String x509StoreName) {
-            this.x509StoreName = x509StoreName;
+            $.x509StoreName = x509StoreName;
             return this;
-        }        public ServerCertificateCommonNamesResponse build() {
-            return new ServerCertificateCommonNamesResponse(commonNames, x509StoreName);
+        }
+
+        public ServerCertificateCommonNamesResponse build() {
+            return $;
         }
     }
+
 }

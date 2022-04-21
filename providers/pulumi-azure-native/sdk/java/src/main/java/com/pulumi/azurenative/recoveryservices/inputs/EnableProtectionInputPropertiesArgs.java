@@ -11,10 +11,10 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageRcmEnableProtectionI
 import com.pulumi.azurenative.recoveryservices.inputs.SanEnableProtectionInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="protectableItemId")
-      private final @Nullable Output<String> protectableItemId;
+    private @Nullable Output<String> protectableItemId;
 
-    public Output<String> protectableItemId() {
-        return this.protectableItemId == null ? Codegen.empty() : this.protectableItemId;
+    public Optional<Output<String>> protectableItemId() {
+        return Optional.ofNullable(this.protectableItemId);
     }
 
     /**
@@ -53,76 +53,68 @@ public final class EnableProtectionInputPropertiesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="providerSpecificDetails")
-      private final @Nullable Output<Object> providerSpecificDetails;
+    private @Nullable Output<Object> providerSpecificDetails;
 
-    public Output<Object> providerSpecificDetails() {
-        return this.providerSpecificDetails == null ? Codegen.empty() : this.providerSpecificDetails;
+    public Optional<Output<Object>> providerSpecificDetails() {
+        return Optional.ofNullable(this.providerSpecificDetails);
     }
 
-    public EnableProtectionInputPropertiesArgs(
-        @Nullable Output<String> policyId,
-        @Nullable Output<String> protectableItemId,
-        @Nullable Output<Object> providerSpecificDetails) {
-        this.policyId = policyId;
-        this.protectableItemId = protectableItemId;
-        this.providerSpecificDetails = providerSpecificDetails;
-    }
+    private EnableProtectionInputPropertiesArgs() {}
 
-    private EnableProtectionInputPropertiesArgs() {
-        this.policyId = Codegen.empty();
-        this.protectableItemId = Codegen.empty();
-        this.providerSpecificDetails = Codegen.empty();
+    private EnableProtectionInputPropertiesArgs(EnableProtectionInputPropertiesArgs $) {
+        this.policyId = $.policyId;
+        this.protectableItemId = $.protectableItemId;
+        this.providerSpecificDetails = $.providerSpecificDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnableProtectionInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policyId;
-        private @Nullable Output<String> protectableItemId;
-        private @Nullable Output<Object> providerSpecificDetails;
+        private EnableProtectionInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnableProtectionInputPropertiesArgs();
         }
 
         public Builder(EnableProtectionInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.protectableItemId = defaults.protectableItemId;
-    	      this.providerSpecificDetails = defaults.providerSpecificDetails;
+            $ = new EnableProtectionInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder protectableItemId(@Nullable Output<String> protectableItemId) {
-            this.protectableItemId = protectableItemId;
+            $.protectableItemId = protectableItemId;
             return this;
         }
-        public Builder protectableItemId(@Nullable String protectableItemId) {
-            this.protectableItemId = Codegen.ofNullable(protectableItemId);
-            return this;
+
+        public Builder protectableItemId(String protectableItemId) {
+            return protectableItemId(Output.of(protectableItemId));
         }
+
         public Builder providerSpecificDetails(@Nullable Output<Object> providerSpecificDetails) {
-            this.providerSpecificDetails = providerSpecificDetails;
+            $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-        public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
-            this.providerSpecificDetails = Codegen.ofNullable(providerSpecificDetails);
-            return this;
-        }        public EnableProtectionInputPropertiesArgs build() {
-            return new EnableProtectionInputPropertiesArgs(policyId, protectableItemId, providerSpecificDetails);
+
+        public Builder providerSpecificDetails(Object providerSpecificDetails) {
+            return providerSpecificDetails(Output.of(providerSpecificDetails));
+        }
+
+        public EnableProtectionInputPropertiesArgs build() {
+            return $;
         }
     }
+
 }

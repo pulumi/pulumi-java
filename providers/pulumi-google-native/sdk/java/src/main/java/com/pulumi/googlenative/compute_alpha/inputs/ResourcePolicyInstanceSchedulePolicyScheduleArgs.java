@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends com.
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
-    public ResourcePolicyInstanceSchedulePolicyScheduleArgs(@Nullable Output<String> schedule) {
-        this.schedule = schedule;
-    }
+    private ResourcePolicyInstanceSchedulePolicyScheduleArgs() {}
 
-    private ResourcePolicyInstanceSchedulePolicyScheduleArgs() {
-        this.schedule = Codegen.empty();
+    private ResourcePolicyInstanceSchedulePolicyScheduleArgs(ResourcePolicyInstanceSchedulePolicyScheduleArgs $) {
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyInstanceSchedulePolicyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> schedule;
+        private ResourcePolicyInstanceSchedulePolicyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyInstanceSchedulePolicyScheduleArgs();
         }
 
         public Builder(ResourcePolicyInstanceSchedulePolicyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
+            $ = new ResourcePolicyInstanceSchedulePolicyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
-        }        public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
-            return new ResourcePolicyInstanceSchedulePolicyScheduleArgs(schedule);
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        public ResourcePolicyInstanceSchedulePolicyScheduleArgs build() {
+            return $;
         }
     }
+
 }

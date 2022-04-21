@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ContainerCapabilitiesGetArgs;
 import com.pulumi.docker.inputs.ContainerDeviceGetArgs;
 import com.pulumi.docker.inputs.ContainerHealthcheckGetArgs;
@@ -25,6 +24,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +37,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attach")
-      private final @Nullable Output<Boolean> attach;
+    private @Nullable Output<Boolean> attach;
 
-    public Output<Boolean> attach() {
-        return this.attach == null ? Codegen.empty() : this.attach;
+    public Optional<Output<Boolean>> attach() {
+        return Optional.ofNullable(this.attach);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bridge")
-      private final @Nullable Output<String> bridge;
+    private @Nullable Output<String> bridge;
 
-    public Output<String> bridge() {
-        return this.bridge == null ? Codegen.empty() : this.bridge;
+    public Optional<Output<String>> bridge() {
+        return Optional.ofNullable(this.bridge);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable Output<ContainerCapabilitiesGetArgs> capabilities;
+    private @Nullable Output<ContainerCapabilitiesGetArgs> capabilities;
 
-    public Output<ContainerCapabilitiesGetArgs> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<ContainerCapabilitiesGetArgs>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerLogs")
-      private final @Nullable Output<String> containerLogs;
+    private @Nullable Output<String> containerLogs;
 
-    public Output<String> containerLogs() {
-        return this.containerLogs == null ? Codegen.empty() : this.containerLogs;
+    public Optional<Output<String>> containerLogs() {
+        return Optional.ofNullable(this.containerLogs);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpuSet")
-      private final @Nullable Output<String> cpuSet;
+    private @Nullable Output<String> cpuSet;
 
-    public Output<String> cpuSet() {
-        return this.cpuSet == null ? Codegen.empty() : this.cpuSet;
+    public Optional<Output<String>> cpuSet() {
+        return Optional.ofNullable(this.cpuSet);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpuShares")
-      private final @Nullable Output<Integer> cpuShares;
+    private @Nullable Output<Integer> cpuShares;
 
-    public Output<Integer> cpuShares() {
-        return this.cpuShares == null ? Codegen.empty() : this.cpuShares;
+    public Optional<Output<Integer>> cpuShares() {
+        return Optional.ofNullable(this.cpuShares);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destroyGraceSeconds")
-      private final @Nullable Output<Integer> destroyGraceSeconds;
+    private @Nullable Output<Integer> destroyGraceSeconds;
 
-    public Output<Integer> destroyGraceSeconds() {
-        return this.destroyGraceSeconds == null ? Codegen.empty() : this.destroyGraceSeconds;
+    public Optional<Output<Integer>> destroyGraceSeconds() {
+        return Optional.ofNullable(this.destroyGraceSeconds);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="devices")
-      private final @Nullable Output<List<ContainerDeviceGetArgs>> devices;
+    private @Nullable Output<List<ContainerDeviceGetArgs>> devices;
 
-    public Output<List<ContainerDeviceGetArgs>> devices() {
-        return this.devices == null ? Codegen.empty() : this.devices;
+    public Optional<Output<List<ContainerDeviceGetArgs>>> devices() {
+        return Optional.ofNullable(this.devices);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dns")
-      private final @Nullable Output<List<String>> dns;
+    private @Nullable Output<List<String>> dns;
 
-    public Output<List<String>> dns() {
-        return this.dns == null ? Codegen.empty() : this.dns;
+    public Optional<Output<List<String>>> dns() {
+        return Optional.ofNullable(this.dns);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsOpts")
-      private final @Nullable Output<List<String>> dnsOpts;
+    private @Nullable Output<List<String>> dnsOpts;
 
-    public Output<List<String>> dnsOpts() {
-        return this.dnsOpts == null ? Codegen.empty() : this.dnsOpts;
+    public Optional<Output<List<String>>> dnsOpts() {
+        return Optional.ofNullable(this.dnsOpts);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsSearches")
-      private final @Nullable Output<List<String>> dnsSearches;
+    private @Nullable Output<List<String>> dnsSearches;
 
-    public Output<List<String>> dnsSearches() {
-        return this.dnsSearches == null ? Codegen.empty() : this.dnsSearches;
+    public Optional<Output<List<String>>> dnsSearches() {
+        return Optional.ofNullable(this.dnsSearches);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainname")
-      private final @Nullable Output<String> domainname;
+    private @Nullable Output<String> domainname;
 
-    public Output<String> domainname() {
-        return this.domainname == null ? Codegen.empty() : this.domainname;
+    public Optional<Output<String>> domainname() {
+        return Optional.ofNullable(this.domainname);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entrypoints")
-      private final @Nullable Output<List<String>> entrypoints;
+    private @Nullable Output<List<String>> entrypoints;
 
-    public Output<List<String>> entrypoints() {
-        return this.entrypoints == null ? Codegen.empty() : this.entrypoints;
+    public Optional<Output<List<String>>> entrypoints() {
+        return Optional.ofNullable(this.entrypoints);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="envs")
-      private final @Nullable Output<List<String>> envs;
+    private @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> envs() {
-        return this.envs == null ? Codegen.empty() : this.envs;
+    public Optional<Output<List<String>>> envs() {
+        return Optional.ofNullable(this.envs);
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exitCode")
-      private final @Nullable Output<Integer> exitCode;
+    private @Nullable Output<Integer> exitCode;
 
-    public Output<Integer> exitCode() {
-        return this.exitCode == null ? Codegen.empty() : this.exitCode;
+    public Optional<Output<Integer>> exitCode() {
+        return Optional.ofNullable(this.exitCode);
     }
 
     /**
@@ -221,11 +221,11 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     @Import(name="gateway")
-      private final @Nullable Output<String> gateway;
+    private @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    public Output<String> gateway() {
-        return this.gateway == null ? Codegen.empty() : this.gateway;
+    public Optional<Output<String>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupAdds")
-      private final @Nullable Output<List<String>> groupAdds;
+    private @Nullable Output<List<String>> groupAdds;
 
-    public Output<List<String>> groupAdds() {
-        return this.groupAdds == null ? Codegen.empty() : this.groupAdds;
+    public Optional<Output<List<String>>> groupAdds() {
+        return Optional.ofNullable(this.groupAdds);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthcheck")
-      private final @Nullable Output<ContainerHealthcheckGetArgs> healthcheck;
+    private @Nullable Output<ContainerHealthcheckGetArgs> healthcheck;
 
-    public Output<ContainerHealthcheckGetArgs> healthcheck() {
-        return this.healthcheck == null ? Codegen.empty() : this.healthcheck;
+    public Optional<Output<ContainerHealthcheckGetArgs>> healthcheck() {
+        return Optional.ofNullable(this.healthcheck);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hosts")
-      private final @Nullable Output<List<ContainerHostGetArgs>> hosts;
+    private @Nullable Output<List<ContainerHostGetArgs>> hosts;
 
-    public Output<List<ContainerHostGetArgs>> hosts() {
-        return this.hosts == null ? Codegen.empty() : this.hosts;
+    public Optional<Output<List<ContainerHostGetArgs>>> hosts() {
+        return Optional.ofNullable(this.hosts);
     }
 
     /**
@@ -278,10 +278,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -290,10 +290,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="init")
-      private final @Nullable Output<Boolean> init;
+    private @Nullable Output<Boolean> init;
 
-    public Output<Boolean> init() {
-        return this.init == null ? Codegen.empty() : this.init;
+    public Optional<Output<Boolean>> init() {
+        return Optional.ofNullable(this.init);
     }
 
     /**
@@ -305,11 +305,11 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -321,11 +321,11 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     @Import(name="ipPrefixLength")
-      private final @Nullable Output<Integer> ipPrefixLength;
+    private @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    public Output<Integer> ipPrefixLength() {
-        return this.ipPrefixLength == null ? Codegen.empty() : this.ipPrefixLength;
+    public Optional<Output<Integer>> ipPrefixLength() {
+        return Optional.ofNullable(this.ipPrefixLength);
     }
 
     /**
@@ -334,10 +334,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipcMode")
-      private final @Nullable Output<String> ipcMode;
+    private @Nullable Output<String> ipcMode;
 
-    public Output<String> ipcMode() {
-        return this.ipcMode == null ? Codegen.empty() : this.ipcMode;
+    public Optional<Output<String>> ipcMode() {
+        return Optional.ofNullable(this.ipcMode);
     }
 
     /**
@@ -345,10 +345,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<ContainerLabelGetArgs>> labels;
+    private @Nullable Output<List<ContainerLabelGetArgs>> labels;
 
-    public Output<List<ContainerLabelGetArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<ContainerLabelGetArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -360,11 +360,11 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
     @Import(name="links")
-      private final @Nullable Output<List<String>> links;
+    private @Nullable Output<List<String>> links;
 
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
-    public Output<List<String>> links() {
-        return this.links == null ? Codegen.empty() : this.links;
+    public Optional<Output<List<String>>> links() {
+        return Optional.ofNullable(this.links);
     }
 
     /**
@@ -372,10 +372,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logDriver")
-      private final @Nullable Output<String> logDriver;
+    private @Nullable Output<String> logDriver;
 
-    public Output<String> logDriver() {
-        return this.logDriver == null ? Codegen.empty() : this.logDriver;
+    public Optional<Output<String>> logDriver() {
+        return Optional.ofNullable(this.logDriver);
     }
 
     /**
@@ -383,10 +383,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logOpts")
-      private final @Nullable Output<Map<String,Object>> logOpts;
+    private @Nullable Output<Map<String,Object>> logOpts;
 
-    public Output<Map<String,Object>> logOpts() {
-        return this.logOpts == null ? Codegen.empty() : this.logOpts;
+    public Optional<Output<Map<String,Object>>> logOpts() {
+        return Optional.ofNullable(this.logOpts);
     }
 
     /**
@@ -394,10 +394,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<Boolean> logs;
+    private @Nullable Output<Boolean> logs;
 
-    public Output<Boolean> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<Boolean>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -405,10 +405,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxRetryCount")
-      private final @Nullable Output<Integer> maxRetryCount;
+    private @Nullable Output<Integer> maxRetryCount;
 
-    public Output<Integer> maxRetryCount() {
-        return this.maxRetryCount == null ? Codegen.empty() : this.maxRetryCount;
+    public Optional<Output<Integer>> maxRetryCount() {
+        return Optional.ofNullable(this.maxRetryCount);
     }
 
     /**
@@ -416,10 +416,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memory")
-      private final @Nullable Output<Integer> memory;
+    private @Nullable Output<Integer> memory;
 
-    public Output<Integer> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<Integer>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
     /**
@@ -428,10 +428,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memorySwap")
-      private final @Nullable Output<Integer> memorySwap;
+    private @Nullable Output<Integer> memorySwap;
 
-    public Output<Integer> memorySwap() {
-        return this.memorySwap == null ? Codegen.empty() : this.memorySwap;
+    public Optional<Output<Integer>> memorySwap() {
+        return Optional.ofNullable(this.memorySwap);
     }
 
     /**
@@ -439,10 +439,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mounts")
-      private final @Nullable Output<List<ContainerMountGetArgs>> mounts;
+    private @Nullable Output<List<ContainerMountGetArgs>> mounts;
 
-    public Output<List<ContainerMountGetArgs>> mounts() {
-        return this.mounts == null ? Codegen.empty() : this.mounts;
+    public Optional<Output<List<ContainerMountGetArgs>>> mounts() {
+        return Optional.ofNullable(this.mounts);
     }
 
     /**
@@ -451,10 +451,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mustRun")
-      private final @Nullable Output<Boolean> mustRun;
+    private @Nullable Output<Boolean> mustRun;
 
-    public Output<Boolean> mustRun() {
-        return this.mustRun == null ? Codegen.empty() : this.mustRun;
+    public Optional<Output<Boolean>> mustRun() {
+        return Optional.ofNullable(this.mustRun);
     }
 
     /**
@@ -462,10 +462,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -477,11 +477,11 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @Import(name="networkAliases")
-      private final @Nullable Output<List<String>> networkAliases;
+    private @Nullable Output<List<String>> networkAliases;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    public Output<List<String>> networkAliases() {
-        return this.networkAliases == null ? Codegen.empty() : this.networkAliases;
+    public Optional<Output<List<String>>> networkAliases() {
+        return Optional.ofNullable(this.networkAliases);
     }
 
     /**
@@ -489,10 +489,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkDatas")
-      private final @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas;
+    private @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas;
 
-    public Output<List<ContainerNetworkDataGetArgs>> networkDatas() {
-        return this.networkDatas == null ? Codegen.empty() : this.networkDatas;
+    public Optional<Output<List<ContainerNetworkDataGetArgs>>> networkDatas() {
+        return Optional.ofNullable(this.networkDatas);
     }
 
     /**
@@ -500,10 +500,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkMode")
-      private final @Nullable Output<String> networkMode;
+    private @Nullable Output<String> networkMode;
 
-    public Output<String> networkMode() {
-        return this.networkMode == null ? Codegen.empty() : this.networkMode;
+    public Optional<Output<String>> networkMode() {
+        return Optional.ofNullable(this.networkMode);
     }
 
     /**
@@ -515,11 +515,11 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
     @Import(name="networks")
-      private final @Nullable Output<List<String>> networks;
+    private @Nullable Output<List<String>> networks;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    public Output<List<String>> networks() {
-        return this.networks == null ? Codegen.empty() : this.networks;
+    public Optional<Output<List<String>>> networks() {
+        return Optional.ofNullable(this.networks);
     }
 
     /**
@@ -527,10 +527,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networksAdvanced")
-      private final @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced;
+    private @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced;
 
-    public Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced() {
-        return this.networksAdvanced == null ? Codegen.empty() : this.networksAdvanced;
+    public Optional<Output<List<ContainerNetworksAdvancedGetArgs>>> networksAdvanced() {
+        return Optional.ofNullable(this.networksAdvanced);
     }
 
     /**
@@ -538,10 +538,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pidMode")
-      private final @Nullable Output<String> pidMode;
+    private @Nullable Output<String> pidMode;
 
-    public Output<String> pidMode() {
-        return this.pidMode == null ? Codegen.empty() : this.pidMode;
+    public Optional<Output<String>> pidMode() {
+        return Optional.ofNullable(this.pidMode);
     }
 
     /**
@@ -549,10 +549,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<ContainerPortGetArgs>> ports;
+    private @Nullable Output<List<ContainerPortGetArgs>> ports;
 
-    public Output<List<ContainerPortGetArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ContainerPortGetArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -560,10 +560,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privileged")
-      private final @Nullable Output<Boolean> privileged;
+    private @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> privileged() {
-        return this.privileged == null ? Codegen.empty() : this.privileged;
+    public Optional<Output<Boolean>> privileged() {
+        return Optional.ofNullable(this.privileged);
     }
 
     /**
@@ -571,10 +571,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishAllPorts")
-      private final @Nullable Output<Boolean> publishAllPorts;
+    private @Nullable Output<Boolean> publishAllPorts;
 
-    public Output<Boolean> publishAllPorts() {
-        return this.publishAllPorts == null ? Codegen.empty() : this.publishAllPorts;
+    public Optional<Output<Boolean>> publishAllPorts() {
+        return Optional.ofNullable(this.publishAllPorts);
     }
 
     /**
@@ -582,10 +582,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -593,10 +593,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="removeVolumes")
-      private final @Nullable Output<Boolean> removeVolumes;
+    private @Nullable Output<Boolean> removeVolumes;
 
-    public Output<Boolean> removeVolumes() {
-        return this.removeVolumes == null ? Codegen.empty() : this.removeVolumes;
+    public Optional<Output<Boolean>> removeVolumes() {
+        return Optional.ofNullable(this.removeVolumes);
     }
 
     /**
@@ -604,10 +604,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restart")
-      private final @Nullable Output<String> restart;
+    private @Nullable Output<String> restart;
 
-    public Output<String> restart() {
-        return this.restart == null ? Codegen.empty() : this.restart;
+    public Optional<Output<String>> restart() {
+        return Optional.ofNullable(this.restart);
     }
 
     /**
@@ -616,10 +616,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rm")
-      private final @Nullable Output<Boolean> rm;
+    private @Nullable Output<Boolean> rm;
 
-    public Output<Boolean> rm() {
-        return this.rm == null ? Codegen.empty() : this.rm;
+    public Optional<Output<Boolean>> rm() {
+        return Optional.ofNullable(this.rm);
     }
 
     /**
@@ -628,10 +628,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityOpts")
-      private final @Nullable Output<List<String>> securityOpts;
+    private @Nullable Output<List<String>> securityOpts;
 
-    public Output<List<String>> securityOpts() {
-        return this.securityOpts == null ? Codegen.empty() : this.securityOpts;
+    public Optional<Output<List<String>>> securityOpts() {
+        return Optional.ofNullable(this.securityOpts);
     }
 
     /**
@@ -639,10 +639,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shmSize")
-      private final @Nullable Output<Integer> shmSize;
+    private @Nullable Output<Integer> shmSize;
 
-    public Output<Integer> shmSize() {
-        return this.shmSize == null ? Codegen.empty() : this.shmSize;
+    public Optional<Output<Integer>> shmSize() {
+        return Optional.ofNullable(this.shmSize);
     }
 
     /**
@@ -651,10 +651,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<Boolean> start;
+    private @Nullable Output<Boolean> start;
 
-    public Output<Boolean> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<Boolean>> start() {
+        return Optional.ofNullable(this.start);
     }
 
     /**
@@ -662,10 +662,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stdinOpen")
-      private final @Nullable Output<Boolean> stdinOpen;
+    private @Nullable Output<Boolean> stdinOpen;
 
-    public Output<Boolean> stdinOpen() {
-        return this.stdinOpen == null ? Codegen.empty() : this.stdinOpen;
+    public Optional<Output<Boolean>> stdinOpen() {
+        return Optional.ofNullable(this.stdinOpen);
     }
 
     /**
@@ -673,10 +673,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageOpts")
-      private final @Nullable Output<Map<String,Object>> storageOpts;
+    private @Nullable Output<Map<String,Object>> storageOpts;
 
-    public Output<Map<String,Object>> storageOpts() {
-        return this.storageOpts == null ? Codegen.empty() : this.storageOpts;
+    public Optional<Output<Map<String,Object>>> storageOpts() {
+        return Optional.ofNullable(this.storageOpts);
     }
 
     /**
@@ -684,10 +684,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sysctls")
-      private final @Nullable Output<Map<String,Object>> sysctls;
+    private @Nullable Output<Map<String,Object>> sysctls;
 
-    public Output<Map<String,Object>> sysctls() {
-        return this.sysctls == null ? Codegen.empty() : this.sysctls;
+    public Optional<Output<Map<String,Object>>> sysctls() {
+        return Optional.ofNullable(this.sysctls);
     }
 
     /**
@@ -695,10 +695,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tmpfs")
-      private final @Nullable Output<Map<String,Object>> tmpfs;
+    private @Nullable Output<Map<String,Object>> tmpfs;
 
-    public Output<Map<String,Object>> tmpfs() {
-        return this.tmpfs == null ? Codegen.empty() : this.tmpfs;
+    public Optional<Output<Map<String,Object>>> tmpfs() {
+        return Optional.ofNullable(this.tmpfs);
     }
 
     /**
@@ -706,10 +706,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tty")
-      private final @Nullable Output<Boolean> tty;
+    private @Nullable Output<Boolean> tty;
 
-    public Output<Boolean> tty() {
-        return this.tty == null ? Codegen.empty() : this.tty;
+    public Optional<Output<Boolean>> tty() {
+        return Optional.ofNullable(this.tty);
     }
 
     /**
@@ -717,10 +717,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ulimits")
-      private final @Nullable Output<List<ContainerUlimitGetArgs>> ulimits;
+    private @Nullable Output<List<ContainerUlimitGetArgs>> ulimits;
 
-    public Output<List<ContainerUlimitGetArgs>> ulimits() {
-        return this.ulimits == null ? Codegen.empty() : this.ulimits;
+    public Optional<Output<List<ContainerUlimitGetArgs>>> ulimits() {
+        return Optional.ofNullable(this.ulimits);
     }
 
     /**
@@ -729,10 +729,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uploads")
-      private final @Nullable Output<List<ContainerUploadGetArgs>> uploads;
+    private @Nullable Output<List<ContainerUploadGetArgs>> uploads;
 
-    public Output<List<ContainerUploadGetArgs>> uploads() {
-        return this.uploads == null ? Codegen.empty() : this.uploads;
+    public Optional<Output<List<ContainerUploadGetArgs>>> uploads() {
+        return Optional.ofNullable(this.uploads);
     }
 
     /**
@@ -741,10 +741,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
     /**
@@ -752,10 +752,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usernsMode")
-      private final @Nullable Output<String> usernsMode;
+    private @Nullable Output<String> usernsMode;
 
-    public Output<String> usernsMode() {
-        return this.usernsMode == null ? Codegen.empty() : this.usernsMode;
+    public Optional<Output<String>> usernsMode() {
+        return Optional.ofNullable(this.usernsMode);
     }
 
     /**
@@ -763,10 +763,10 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<ContainerVolumeGetArgs>> volumes;
+    private @Nullable Output<List<ContainerVolumeGetArgs>> volumes;
 
-    public Output<List<ContainerVolumeGetArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<ContainerVolumeGetArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
     /**
@@ -774,932 +774,762 @@ public final class ContainerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workingDir")
-      private final @Nullable Output<String> workingDir;
+    private @Nullable Output<String> workingDir;
 
-    public Output<String> workingDir() {
-        return this.workingDir == null ? Codegen.empty() : this.workingDir;
+    public Optional<Output<String>> workingDir() {
+        return Optional.ofNullable(this.workingDir);
     }
 
-    public ContainerState(
-        @Nullable Output<Boolean> attach,
-        @Nullable Output<String> bridge,
-        @Nullable Output<ContainerCapabilitiesGetArgs> capabilities,
-        @Nullable Output<List<String>> command,
-        @Nullable Output<String> containerLogs,
-        @Nullable Output<String> cpuSet,
-        @Nullable Output<Integer> cpuShares,
-        @Nullable Output<Integer> destroyGraceSeconds,
-        @Nullable Output<List<ContainerDeviceGetArgs>> devices,
-        @Nullable Output<List<String>> dns,
-        @Nullable Output<List<String>> dnsOpts,
-        @Nullable Output<List<String>> dnsSearches,
-        @Nullable Output<String> domainname,
-        @Nullable Output<List<String>> entrypoints,
-        @Nullable Output<List<String>> envs,
-        @Nullable Output<Integer> exitCode,
-        @Nullable Output<String> gateway,
-        @Nullable Output<List<String>> groupAdds,
-        @Nullable Output<ContainerHealthcheckGetArgs> healthcheck,
-        @Nullable Output<String> hostname,
-        @Nullable Output<List<ContainerHostGetArgs>> hosts,
-        @Nullable Output<String> image,
-        @Nullable Output<Boolean> init,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<Integer> ipPrefixLength,
-        @Nullable Output<String> ipcMode,
-        @Nullable Output<List<ContainerLabelGetArgs>> labels,
-        @Nullable Output<List<String>> links,
-        @Nullable Output<String> logDriver,
-        @Nullable Output<Map<String,Object>> logOpts,
-        @Nullable Output<Boolean> logs,
-        @Nullable Output<Integer> maxRetryCount,
-        @Nullable Output<Integer> memory,
-        @Nullable Output<Integer> memorySwap,
-        @Nullable Output<List<ContainerMountGetArgs>> mounts,
-        @Nullable Output<Boolean> mustRun,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> networkAliases,
-        @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas,
-        @Nullable Output<String> networkMode,
-        @Nullable Output<List<String>> networks,
-        @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced,
-        @Nullable Output<String> pidMode,
-        @Nullable Output<List<ContainerPortGetArgs>> ports,
-        @Nullable Output<Boolean> privileged,
-        @Nullable Output<Boolean> publishAllPorts,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<Boolean> removeVolumes,
-        @Nullable Output<String> restart,
-        @Nullable Output<Boolean> rm,
-        @Nullable Output<List<String>> securityOpts,
-        @Nullable Output<Integer> shmSize,
-        @Nullable Output<Boolean> start,
-        @Nullable Output<Boolean> stdinOpen,
-        @Nullable Output<Map<String,Object>> storageOpts,
-        @Nullable Output<Map<String,Object>> sysctls,
-        @Nullable Output<Map<String,Object>> tmpfs,
-        @Nullable Output<Boolean> tty,
-        @Nullable Output<List<ContainerUlimitGetArgs>> ulimits,
-        @Nullable Output<List<ContainerUploadGetArgs>> uploads,
-        @Nullable Output<String> user,
-        @Nullable Output<String> usernsMode,
-        @Nullable Output<List<ContainerVolumeGetArgs>> volumes,
-        @Nullable Output<String> workingDir) {
-        this.attach = attach;
-        this.bridge = bridge;
-        this.capabilities = capabilities;
-        this.command = command;
-        this.containerLogs = containerLogs;
-        this.cpuSet = cpuSet;
-        this.cpuShares = cpuShares;
-        this.destroyGraceSeconds = destroyGraceSeconds;
-        this.devices = devices;
-        this.dns = dns;
-        this.dnsOpts = dnsOpts;
-        this.dnsSearches = dnsSearches;
-        this.domainname = domainname;
-        this.entrypoints = entrypoints;
-        this.envs = envs;
-        this.exitCode = exitCode;
-        this.gateway = gateway;
-        this.groupAdds = groupAdds;
-        this.healthcheck = healthcheck;
-        this.hostname = hostname;
-        this.hosts = hosts;
-        this.image = image;
-        this.init = init;
-        this.ipAddress = ipAddress;
-        this.ipPrefixLength = ipPrefixLength;
-        this.ipcMode = ipcMode;
-        this.labels = labels;
-        this.links = links;
-        this.logDriver = logDriver;
-        this.logOpts = logOpts;
-        this.logs = logs;
-        this.maxRetryCount = maxRetryCount;
-        this.memory = memory;
-        this.memorySwap = memorySwap;
-        this.mounts = mounts;
-        this.mustRun = mustRun;
-        this.name = name;
-        this.networkAliases = networkAliases;
-        this.networkDatas = networkDatas;
-        this.networkMode = networkMode;
-        this.networks = networks;
-        this.networksAdvanced = networksAdvanced;
-        this.pidMode = pidMode;
-        this.ports = ports;
-        this.privileged = privileged;
-        this.publishAllPorts = publishAllPorts;
-        this.readOnly = readOnly;
-        this.removeVolumes = removeVolumes;
-        this.restart = restart;
-        this.rm = rm;
-        this.securityOpts = securityOpts;
-        this.shmSize = shmSize;
-        this.start = start;
-        this.stdinOpen = stdinOpen;
-        this.storageOpts = storageOpts;
-        this.sysctls = sysctls;
-        this.tmpfs = tmpfs;
-        this.tty = tty;
-        this.ulimits = ulimits;
-        this.uploads = uploads;
-        this.user = user;
-        this.usernsMode = usernsMode;
-        this.volumes = volumes;
-        this.workingDir = workingDir;
-    }
+    private ContainerState() {}
 
-    private ContainerState() {
-        this.attach = Codegen.empty();
-        this.bridge = Codegen.empty();
-        this.capabilities = Codegen.empty();
-        this.command = Codegen.empty();
-        this.containerLogs = Codegen.empty();
-        this.cpuSet = Codegen.empty();
-        this.cpuShares = Codegen.empty();
-        this.destroyGraceSeconds = Codegen.empty();
-        this.devices = Codegen.empty();
-        this.dns = Codegen.empty();
-        this.dnsOpts = Codegen.empty();
-        this.dnsSearches = Codegen.empty();
-        this.domainname = Codegen.empty();
-        this.entrypoints = Codegen.empty();
-        this.envs = Codegen.empty();
-        this.exitCode = Codegen.empty();
-        this.gateway = Codegen.empty();
-        this.groupAdds = Codegen.empty();
-        this.healthcheck = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.hosts = Codegen.empty();
-        this.image = Codegen.empty();
-        this.init = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.ipPrefixLength = Codegen.empty();
-        this.ipcMode = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.links = Codegen.empty();
-        this.logDriver = Codegen.empty();
-        this.logOpts = Codegen.empty();
-        this.logs = Codegen.empty();
-        this.maxRetryCount = Codegen.empty();
-        this.memory = Codegen.empty();
-        this.memorySwap = Codegen.empty();
-        this.mounts = Codegen.empty();
-        this.mustRun = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkAliases = Codegen.empty();
-        this.networkDatas = Codegen.empty();
-        this.networkMode = Codegen.empty();
-        this.networks = Codegen.empty();
-        this.networksAdvanced = Codegen.empty();
-        this.pidMode = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.privileged = Codegen.empty();
-        this.publishAllPorts = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.removeVolumes = Codegen.empty();
-        this.restart = Codegen.empty();
-        this.rm = Codegen.empty();
-        this.securityOpts = Codegen.empty();
-        this.shmSize = Codegen.empty();
-        this.start = Codegen.empty();
-        this.stdinOpen = Codegen.empty();
-        this.storageOpts = Codegen.empty();
-        this.sysctls = Codegen.empty();
-        this.tmpfs = Codegen.empty();
-        this.tty = Codegen.empty();
-        this.ulimits = Codegen.empty();
-        this.uploads = Codegen.empty();
-        this.user = Codegen.empty();
-        this.usernsMode = Codegen.empty();
-        this.volumes = Codegen.empty();
-        this.workingDir = Codegen.empty();
+    private ContainerState(ContainerState $) {
+        this.attach = $.attach;
+        this.bridge = $.bridge;
+        this.capabilities = $.capabilities;
+        this.command = $.command;
+        this.containerLogs = $.containerLogs;
+        this.cpuSet = $.cpuSet;
+        this.cpuShares = $.cpuShares;
+        this.destroyGraceSeconds = $.destroyGraceSeconds;
+        this.devices = $.devices;
+        this.dns = $.dns;
+        this.dnsOpts = $.dnsOpts;
+        this.dnsSearches = $.dnsSearches;
+        this.domainname = $.domainname;
+        this.entrypoints = $.entrypoints;
+        this.envs = $.envs;
+        this.exitCode = $.exitCode;
+        this.gateway = $.gateway;
+        this.groupAdds = $.groupAdds;
+        this.healthcheck = $.healthcheck;
+        this.hostname = $.hostname;
+        this.hosts = $.hosts;
+        this.image = $.image;
+        this.init = $.init;
+        this.ipAddress = $.ipAddress;
+        this.ipPrefixLength = $.ipPrefixLength;
+        this.ipcMode = $.ipcMode;
+        this.labels = $.labels;
+        this.links = $.links;
+        this.logDriver = $.logDriver;
+        this.logOpts = $.logOpts;
+        this.logs = $.logs;
+        this.maxRetryCount = $.maxRetryCount;
+        this.memory = $.memory;
+        this.memorySwap = $.memorySwap;
+        this.mounts = $.mounts;
+        this.mustRun = $.mustRun;
+        this.name = $.name;
+        this.networkAliases = $.networkAliases;
+        this.networkDatas = $.networkDatas;
+        this.networkMode = $.networkMode;
+        this.networks = $.networks;
+        this.networksAdvanced = $.networksAdvanced;
+        this.pidMode = $.pidMode;
+        this.ports = $.ports;
+        this.privileged = $.privileged;
+        this.publishAllPorts = $.publishAllPorts;
+        this.readOnly = $.readOnly;
+        this.removeVolumes = $.removeVolumes;
+        this.restart = $.restart;
+        this.rm = $.rm;
+        this.securityOpts = $.securityOpts;
+        this.shmSize = $.shmSize;
+        this.start = $.start;
+        this.stdinOpen = $.stdinOpen;
+        this.storageOpts = $.storageOpts;
+        this.sysctls = $.sysctls;
+        this.tmpfs = $.tmpfs;
+        this.tty = $.tty;
+        this.ulimits = $.ulimits;
+        this.uploads = $.uploads;
+        this.user = $.user;
+        this.usernsMode = $.usernsMode;
+        this.volumes = $.volumes;
+        this.workingDir = $.workingDir;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> attach;
-        private @Nullable Output<String> bridge;
-        private @Nullable Output<ContainerCapabilitiesGetArgs> capabilities;
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<String> containerLogs;
-        private @Nullable Output<String> cpuSet;
-        private @Nullable Output<Integer> cpuShares;
-        private @Nullable Output<Integer> destroyGraceSeconds;
-        private @Nullable Output<List<ContainerDeviceGetArgs>> devices;
-        private @Nullable Output<List<String>> dns;
-        private @Nullable Output<List<String>> dnsOpts;
-        private @Nullable Output<List<String>> dnsSearches;
-        private @Nullable Output<String> domainname;
-        private @Nullable Output<List<String>> entrypoints;
-        private @Nullable Output<List<String>> envs;
-        private @Nullable Output<Integer> exitCode;
-        private @Nullable Output<String> gateway;
-        private @Nullable Output<List<String>> groupAdds;
-        private @Nullable Output<ContainerHealthcheckGetArgs> healthcheck;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<List<ContainerHostGetArgs>> hosts;
-        private @Nullable Output<String> image;
-        private @Nullable Output<Boolean> init;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<Integer> ipPrefixLength;
-        private @Nullable Output<String> ipcMode;
-        private @Nullable Output<List<ContainerLabelGetArgs>> labels;
-        private @Nullable Output<List<String>> links;
-        private @Nullable Output<String> logDriver;
-        private @Nullable Output<Map<String,Object>> logOpts;
-        private @Nullable Output<Boolean> logs;
-        private @Nullable Output<Integer> maxRetryCount;
-        private @Nullable Output<Integer> memory;
-        private @Nullable Output<Integer> memorySwap;
-        private @Nullable Output<List<ContainerMountGetArgs>> mounts;
-        private @Nullable Output<Boolean> mustRun;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> networkAliases;
-        private @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas;
-        private @Nullable Output<String> networkMode;
-        private @Nullable Output<List<String>> networks;
-        private @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced;
-        private @Nullable Output<String> pidMode;
-        private @Nullable Output<List<ContainerPortGetArgs>> ports;
-        private @Nullable Output<Boolean> privileged;
-        private @Nullable Output<Boolean> publishAllPorts;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<Boolean> removeVolumes;
-        private @Nullable Output<String> restart;
-        private @Nullable Output<Boolean> rm;
-        private @Nullable Output<List<String>> securityOpts;
-        private @Nullable Output<Integer> shmSize;
-        private @Nullable Output<Boolean> start;
-        private @Nullable Output<Boolean> stdinOpen;
-        private @Nullable Output<Map<String,Object>> storageOpts;
-        private @Nullable Output<Map<String,Object>> sysctls;
-        private @Nullable Output<Map<String,Object>> tmpfs;
-        private @Nullable Output<Boolean> tty;
-        private @Nullable Output<List<ContainerUlimitGetArgs>> ulimits;
-        private @Nullable Output<List<ContainerUploadGetArgs>> uploads;
-        private @Nullable Output<String> user;
-        private @Nullable Output<String> usernsMode;
-        private @Nullable Output<List<ContainerVolumeGetArgs>> volumes;
-        private @Nullable Output<String> workingDir;
+        private ContainerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerState();
         }
 
         public Builder(ContainerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attach = defaults.attach;
-    	      this.bridge = defaults.bridge;
-    	      this.capabilities = defaults.capabilities;
-    	      this.command = defaults.command;
-    	      this.containerLogs = defaults.containerLogs;
-    	      this.cpuSet = defaults.cpuSet;
-    	      this.cpuShares = defaults.cpuShares;
-    	      this.destroyGraceSeconds = defaults.destroyGraceSeconds;
-    	      this.devices = defaults.devices;
-    	      this.dns = defaults.dns;
-    	      this.dnsOpts = defaults.dnsOpts;
-    	      this.dnsSearches = defaults.dnsSearches;
-    	      this.domainname = defaults.domainname;
-    	      this.entrypoints = defaults.entrypoints;
-    	      this.envs = defaults.envs;
-    	      this.exitCode = defaults.exitCode;
-    	      this.gateway = defaults.gateway;
-    	      this.groupAdds = defaults.groupAdds;
-    	      this.healthcheck = defaults.healthcheck;
-    	      this.hostname = defaults.hostname;
-    	      this.hosts = defaults.hosts;
-    	      this.image = defaults.image;
-    	      this.init = defaults.init;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipPrefixLength = defaults.ipPrefixLength;
-    	      this.ipcMode = defaults.ipcMode;
-    	      this.labels = defaults.labels;
-    	      this.links = defaults.links;
-    	      this.logDriver = defaults.logDriver;
-    	      this.logOpts = defaults.logOpts;
-    	      this.logs = defaults.logs;
-    	      this.maxRetryCount = defaults.maxRetryCount;
-    	      this.memory = defaults.memory;
-    	      this.memorySwap = defaults.memorySwap;
-    	      this.mounts = defaults.mounts;
-    	      this.mustRun = defaults.mustRun;
-    	      this.name = defaults.name;
-    	      this.networkAliases = defaults.networkAliases;
-    	      this.networkDatas = defaults.networkDatas;
-    	      this.networkMode = defaults.networkMode;
-    	      this.networks = defaults.networks;
-    	      this.networksAdvanced = defaults.networksAdvanced;
-    	      this.pidMode = defaults.pidMode;
-    	      this.ports = defaults.ports;
-    	      this.privileged = defaults.privileged;
-    	      this.publishAllPorts = defaults.publishAllPorts;
-    	      this.readOnly = defaults.readOnly;
-    	      this.removeVolumes = defaults.removeVolumes;
-    	      this.restart = defaults.restart;
-    	      this.rm = defaults.rm;
-    	      this.securityOpts = defaults.securityOpts;
-    	      this.shmSize = defaults.shmSize;
-    	      this.start = defaults.start;
-    	      this.stdinOpen = defaults.stdinOpen;
-    	      this.storageOpts = defaults.storageOpts;
-    	      this.sysctls = defaults.sysctls;
-    	      this.tmpfs = defaults.tmpfs;
-    	      this.tty = defaults.tty;
-    	      this.ulimits = defaults.ulimits;
-    	      this.uploads = defaults.uploads;
-    	      this.user = defaults.user;
-    	      this.usernsMode = defaults.usernsMode;
-    	      this.volumes = defaults.volumes;
-    	      this.workingDir = defaults.workingDir;
+            $ = new ContainerState(Objects.requireNonNull(defaults));
         }
 
         public Builder attach(@Nullable Output<Boolean> attach) {
-            this.attach = attach;
+            $.attach = attach;
             return this;
         }
-        public Builder attach(@Nullable Boolean attach) {
-            this.attach = Codegen.ofNullable(attach);
-            return this;
+
+        public Builder attach(Boolean attach) {
+            return attach(Output.of(attach));
         }
+
         public Builder bridge(@Nullable Output<String> bridge) {
-            this.bridge = bridge;
+            $.bridge = bridge;
             return this;
         }
-        public Builder bridge(@Nullable String bridge) {
-            this.bridge = Codegen.ofNullable(bridge);
-            return this;
+
+        public Builder bridge(String bridge) {
+            return bridge(Output.of(bridge));
         }
+
         public Builder capabilities(@Nullable Output<ContainerCapabilitiesGetArgs> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable ContainerCapabilitiesGetArgs capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(ContainerCapabilitiesGetArgs capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder containerLogs(@Nullable Output<String> containerLogs) {
-            this.containerLogs = containerLogs;
+            $.containerLogs = containerLogs;
             return this;
         }
-        public Builder containerLogs(@Nullable String containerLogs) {
-            this.containerLogs = Codegen.ofNullable(containerLogs);
-            return this;
+
+        public Builder containerLogs(String containerLogs) {
+            return containerLogs(Output.of(containerLogs));
         }
+
         public Builder cpuSet(@Nullable Output<String> cpuSet) {
-            this.cpuSet = cpuSet;
+            $.cpuSet = cpuSet;
             return this;
         }
-        public Builder cpuSet(@Nullable String cpuSet) {
-            this.cpuSet = Codegen.ofNullable(cpuSet);
-            return this;
+
+        public Builder cpuSet(String cpuSet) {
+            return cpuSet(Output.of(cpuSet));
         }
+
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
-            this.cpuShares = cpuShares;
+            $.cpuShares = cpuShares;
             return this;
         }
-        public Builder cpuShares(@Nullable Integer cpuShares) {
-            this.cpuShares = Codegen.ofNullable(cpuShares);
-            return this;
+
+        public Builder cpuShares(Integer cpuShares) {
+            return cpuShares(Output.of(cpuShares));
         }
+
         public Builder destroyGraceSeconds(@Nullable Output<Integer> destroyGraceSeconds) {
-            this.destroyGraceSeconds = destroyGraceSeconds;
+            $.destroyGraceSeconds = destroyGraceSeconds;
             return this;
         }
-        public Builder destroyGraceSeconds(@Nullable Integer destroyGraceSeconds) {
-            this.destroyGraceSeconds = Codegen.ofNullable(destroyGraceSeconds);
-            return this;
+
+        public Builder destroyGraceSeconds(Integer destroyGraceSeconds) {
+            return destroyGraceSeconds(Output.of(destroyGraceSeconds));
         }
+
         public Builder devices(@Nullable Output<List<ContainerDeviceGetArgs>> devices) {
-            this.devices = devices;
+            $.devices = devices;
             return this;
         }
-        public Builder devices(@Nullable List<ContainerDeviceGetArgs> devices) {
-            this.devices = Codegen.ofNullable(devices);
-            return this;
+
+        public Builder devices(List<ContainerDeviceGetArgs> devices) {
+            return devices(Output.of(devices));
         }
+
         public Builder devices(ContainerDeviceGetArgs... devices) {
             return devices(List.of(devices));
         }
+
         public Builder dns(@Nullable Output<List<String>> dns) {
-            this.dns = dns;
+            $.dns = dns;
             return this;
         }
-        public Builder dns(@Nullable List<String> dns) {
-            this.dns = Codegen.ofNullable(dns);
-            return this;
+
+        public Builder dns(List<String> dns) {
+            return dns(Output.of(dns));
         }
+
         public Builder dns(String... dns) {
             return dns(List.of(dns));
         }
+
         public Builder dnsOpts(@Nullable Output<List<String>> dnsOpts) {
-            this.dnsOpts = dnsOpts;
+            $.dnsOpts = dnsOpts;
             return this;
         }
-        public Builder dnsOpts(@Nullable List<String> dnsOpts) {
-            this.dnsOpts = Codegen.ofNullable(dnsOpts);
-            return this;
+
+        public Builder dnsOpts(List<String> dnsOpts) {
+            return dnsOpts(Output.of(dnsOpts));
         }
+
         public Builder dnsOpts(String... dnsOpts) {
             return dnsOpts(List.of(dnsOpts));
         }
+
         public Builder dnsSearches(@Nullable Output<List<String>> dnsSearches) {
-            this.dnsSearches = dnsSearches;
+            $.dnsSearches = dnsSearches;
             return this;
         }
-        public Builder dnsSearches(@Nullable List<String> dnsSearches) {
-            this.dnsSearches = Codegen.ofNullable(dnsSearches);
-            return this;
+
+        public Builder dnsSearches(List<String> dnsSearches) {
+            return dnsSearches(Output.of(dnsSearches));
         }
+
         public Builder dnsSearches(String... dnsSearches) {
             return dnsSearches(List.of(dnsSearches));
         }
+
         public Builder domainname(@Nullable Output<String> domainname) {
-            this.domainname = domainname;
+            $.domainname = domainname;
             return this;
         }
-        public Builder domainname(@Nullable String domainname) {
-            this.domainname = Codegen.ofNullable(domainname);
-            return this;
+
+        public Builder domainname(String domainname) {
+            return domainname(Output.of(domainname));
         }
+
         public Builder entrypoints(@Nullable Output<List<String>> entrypoints) {
-            this.entrypoints = entrypoints;
+            $.entrypoints = entrypoints;
             return this;
         }
-        public Builder entrypoints(@Nullable List<String> entrypoints) {
-            this.entrypoints = Codegen.ofNullable(entrypoints);
-            return this;
+
+        public Builder entrypoints(List<String> entrypoints) {
+            return entrypoints(Output.of(entrypoints));
         }
+
         public Builder entrypoints(String... entrypoints) {
             return entrypoints(List.of(entrypoints));
         }
+
         public Builder envs(@Nullable Output<List<String>> envs) {
-            this.envs = envs;
+            $.envs = envs;
             return this;
         }
-        public Builder envs(@Nullable List<String> envs) {
-            this.envs = Codegen.ofNullable(envs);
-            return this;
+
+        public Builder envs(List<String> envs) {
+            return envs(Output.of(envs));
         }
+
         public Builder envs(String... envs) {
             return envs(List.of(envs));
         }
+
         public Builder exitCode(@Nullable Output<Integer> exitCode) {
-            this.exitCode = exitCode;
+            $.exitCode = exitCode;
             return this;
         }
-        public Builder exitCode(@Nullable Integer exitCode) {
-            this.exitCode = Codegen.ofNullable(exitCode);
-            return this;
+
+        public Builder exitCode(Integer exitCode) {
+            return exitCode(Output.of(exitCode));
         }
+
         public Builder gateway(@Nullable Output<String> gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
-        public Builder gateway(@Nullable String gateway) {
-            this.gateway = Codegen.ofNullable(gateway);
-            return this;
+
+        public Builder gateway(String gateway) {
+            return gateway(Output.of(gateway));
         }
+
         public Builder groupAdds(@Nullable Output<List<String>> groupAdds) {
-            this.groupAdds = groupAdds;
+            $.groupAdds = groupAdds;
             return this;
         }
-        public Builder groupAdds(@Nullable List<String> groupAdds) {
-            this.groupAdds = Codegen.ofNullable(groupAdds);
-            return this;
+
+        public Builder groupAdds(List<String> groupAdds) {
+            return groupAdds(Output.of(groupAdds));
         }
+
         public Builder groupAdds(String... groupAdds) {
             return groupAdds(List.of(groupAdds));
         }
+
         public Builder healthcheck(@Nullable Output<ContainerHealthcheckGetArgs> healthcheck) {
-            this.healthcheck = healthcheck;
+            $.healthcheck = healthcheck;
             return this;
         }
-        public Builder healthcheck(@Nullable ContainerHealthcheckGetArgs healthcheck) {
-            this.healthcheck = Codegen.ofNullable(healthcheck);
-            return this;
+
+        public Builder healthcheck(ContainerHealthcheckGetArgs healthcheck) {
+            return healthcheck(Output.of(healthcheck));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder hosts(@Nullable Output<List<ContainerHostGetArgs>> hosts) {
-            this.hosts = hosts;
+            $.hosts = hosts;
             return this;
         }
-        public Builder hosts(@Nullable List<ContainerHostGetArgs> hosts) {
-            this.hosts = Codegen.ofNullable(hosts);
-            return this;
+
+        public Builder hosts(List<ContainerHostGetArgs> hosts) {
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(ContainerHostGetArgs... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder init(@Nullable Output<Boolean> init) {
-            this.init = init;
+            $.init = init;
             return this;
         }
-        public Builder init(@Nullable Boolean init) {
-            this.init = Codegen.ofNullable(init);
-            return this;
+
+        public Builder init(Boolean init) {
+            return init(Output.of(init));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder ipPrefixLength(@Nullable Output<Integer> ipPrefixLength) {
-            this.ipPrefixLength = ipPrefixLength;
+            $.ipPrefixLength = ipPrefixLength;
             return this;
         }
-        public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
-            this.ipPrefixLength = Codegen.ofNullable(ipPrefixLength);
-            return this;
+
+        public Builder ipPrefixLength(Integer ipPrefixLength) {
+            return ipPrefixLength(Output.of(ipPrefixLength));
         }
+
         public Builder ipcMode(@Nullable Output<String> ipcMode) {
-            this.ipcMode = ipcMode;
+            $.ipcMode = ipcMode;
             return this;
         }
-        public Builder ipcMode(@Nullable String ipcMode) {
-            this.ipcMode = Codegen.ofNullable(ipcMode);
-            return this;
+
+        public Builder ipcMode(String ipcMode) {
+            return ipcMode(Output.of(ipcMode));
         }
+
         public Builder labels(@Nullable Output<List<ContainerLabelGetArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<ContainerLabelGetArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<ContainerLabelGetArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(ContainerLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder links(@Nullable Output<List<String>> links) {
-            this.links = links;
+            $.links = links;
             return this;
         }
-        public Builder links(@Nullable List<String> links) {
-            this.links = Codegen.ofNullable(links);
-            return this;
+
+        public Builder links(List<String> links) {
+            return links(Output.of(links));
         }
+
         public Builder links(String... links) {
             return links(List.of(links));
         }
+
         public Builder logDriver(@Nullable Output<String> logDriver) {
-            this.logDriver = logDriver;
+            $.logDriver = logDriver;
             return this;
         }
-        public Builder logDriver(@Nullable String logDriver) {
-            this.logDriver = Codegen.ofNullable(logDriver);
-            return this;
+
+        public Builder logDriver(String logDriver) {
+            return logDriver(Output.of(logDriver));
         }
+
         public Builder logOpts(@Nullable Output<Map<String,Object>> logOpts) {
-            this.logOpts = logOpts;
+            $.logOpts = logOpts;
             return this;
         }
-        public Builder logOpts(@Nullable Map<String,Object> logOpts) {
-            this.logOpts = Codegen.ofNullable(logOpts);
-            return this;
+
+        public Builder logOpts(Map<String,Object> logOpts) {
+            return logOpts(Output.of(logOpts));
         }
+
         public Builder logs(@Nullable Output<Boolean> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable Boolean logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
+
+        public Builder logs(Boolean logs) {
+            return logs(Output.of(logs));
         }
+
         public Builder maxRetryCount(@Nullable Output<Integer> maxRetryCount) {
-            this.maxRetryCount = maxRetryCount;
+            $.maxRetryCount = maxRetryCount;
             return this;
         }
-        public Builder maxRetryCount(@Nullable Integer maxRetryCount) {
-            this.maxRetryCount = Codegen.ofNullable(maxRetryCount);
-            return this;
+
+        public Builder maxRetryCount(Integer maxRetryCount) {
+            return maxRetryCount(Output.of(maxRetryCount));
         }
+
         public Builder memory(@Nullable Output<Integer> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable Integer memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
+
+        public Builder memory(Integer memory) {
+            return memory(Output.of(memory));
         }
+
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
-            this.memorySwap = memorySwap;
+            $.memorySwap = memorySwap;
             return this;
         }
-        public Builder memorySwap(@Nullable Integer memorySwap) {
-            this.memorySwap = Codegen.ofNullable(memorySwap);
-            return this;
+
+        public Builder memorySwap(Integer memorySwap) {
+            return memorySwap(Output.of(memorySwap));
         }
+
         public Builder mounts(@Nullable Output<List<ContainerMountGetArgs>> mounts) {
-            this.mounts = mounts;
+            $.mounts = mounts;
             return this;
         }
-        public Builder mounts(@Nullable List<ContainerMountGetArgs> mounts) {
-            this.mounts = Codegen.ofNullable(mounts);
-            return this;
+
+        public Builder mounts(List<ContainerMountGetArgs> mounts) {
+            return mounts(Output.of(mounts));
         }
+
         public Builder mounts(ContainerMountGetArgs... mounts) {
             return mounts(List.of(mounts));
         }
+
         public Builder mustRun(@Nullable Output<Boolean> mustRun) {
-            this.mustRun = mustRun;
+            $.mustRun = mustRun;
             return this;
         }
-        public Builder mustRun(@Nullable Boolean mustRun) {
-            this.mustRun = Codegen.ofNullable(mustRun);
-            return this;
+
+        public Builder mustRun(Boolean mustRun) {
+            return mustRun(Output.of(mustRun));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkAliases(@Nullable Output<List<String>> networkAliases) {
-            this.networkAliases = networkAliases;
+            $.networkAliases = networkAliases;
             return this;
         }
-        public Builder networkAliases(@Nullable List<String> networkAliases) {
-            this.networkAliases = Codegen.ofNullable(networkAliases);
-            return this;
+
+        public Builder networkAliases(List<String> networkAliases) {
+            return networkAliases(Output.of(networkAliases));
         }
+
         public Builder networkAliases(String... networkAliases) {
             return networkAliases(List.of(networkAliases));
         }
+
         public Builder networkDatas(@Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas) {
-            this.networkDatas = networkDatas;
+            $.networkDatas = networkDatas;
             return this;
         }
-        public Builder networkDatas(@Nullable List<ContainerNetworkDataGetArgs> networkDatas) {
-            this.networkDatas = Codegen.ofNullable(networkDatas);
-            return this;
+
+        public Builder networkDatas(List<ContainerNetworkDataGetArgs> networkDatas) {
+            return networkDatas(Output.of(networkDatas));
         }
+
         public Builder networkDatas(ContainerNetworkDataGetArgs... networkDatas) {
             return networkDatas(List.of(networkDatas));
         }
+
         public Builder networkMode(@Nullable Output<String> networkMode) {
-            this.networkMode = networkMode;
+            $.networkMode = networkMode;
             return this;
         }
-        public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Codegen.ofNullable(networkMode);
-            return this;
+
+        public Builder networkMode(String networkMode) {
+            return networkMode(Output.of(networkMode));
         }
+
         public Builder networks(@Nullable Output<List<String>> networks) {
-            this.networks = networks;
+            $.networks = networks;
             return this;
         }
-        public Builder networks(@Nullable List<String> networks) {
-            this.networks = Codegen.ofNullable(networks);
-            return this;
+
+        public Builder networks(List<String> networks) {
+            return networks(Output.of(networks));
         }
+
         public Builder networks(String... networks) {
             return networks(List.of(networks));
         }
+
         public Builder networksAdvanced(@Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced) {
-            this.networksAdvanced = networksAdvanced;
+            $.networksAdvanced = networksAdvanced;
             return this;
         }
-        public Builder networksAdvanced(@Nullable List<ContainerNetworksAdvancedGetArgs> networksAdvanced) {
-            this.networksAdvanced = Codegen.ofNullable(networksAdvanced);
-            return this;
+
+        public Builder networksAdvanced(List<ContainerNetworksAdvancedGetArgs> networksAdvanced) {
+            return networksAdvanced(Output.of(networksAdvanced));
         }
+
         public Builder networksAdvanced(ContainerNetworksAdvancedGetArgs... networksAdvanced) {
             return networksAdvanced(List.of(networksAdvanced));
         }
+
         public Builder pidMode(@Nullable Output<String> pidMode) {
-            this.pidMode = pidMode;
+            $.pidMode = pidMode;
             return this;
         }
-        public Builder pidMode(@Nullable String pidMode) {
-            this.pidMode = Codegen.ofNullable(pidMode);
-            return this;
+
+        public Builder pidMode(String pidMode) {
+            return pidMode(Output.of(pidMode));
         }
+
         public Builder ports(@Nullable Output<List<ContainerPortGetArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ContainerPortGetArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ContainerPortGetArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ContainerPortGetArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder privileged(@Nullable Output<Boolean> privileged) {
-            this.privileged = privileged;
+            $.privileged = privileged;
             return this;
         }
-        public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Codegen.ofNullable(privileged);
-            return this;
+
+        public Builder privileged(Boolean privileged) {
+            return privileged(Output.of(privileged));
         }
+
         public Builder publishAllPorts(@Nullable Output<Boolean> publishAllPorts) {
-            this.publishAllPorts = publishAllPorts;
+            $.publishAllPorts = publishAllPorts;
             return this;
         }
-        public Builder publishAllPorts(@Nullable Boolean publishAllPorts) {
-            this.publishAllPorts = Codegen.ofNullable(publishAllPorts);
-            return this;
+
+        public Builder publishAllPorts(Boolean publishAllPorts) {
+            return publishAllPorts(Output.of(publishAllPorts));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder removeVolumes(@Nullable Output<Boolean> removeVolumes) {
-            this.removeVolumes = removeVolumes;
+            $.removeVolumes = removeVolumes;
             return this;
         }
-        public Builder removeVolumes(@Nullable Boolean removeVolumes) {
-            this.removeVolumes = Codegen.ofNullable(removeVolumes);
-            return this;
+
+        public Builder removeVolumes(Boolean removeVolumes) {
+            return removeVolumes(Output.of(removeVolumes));
         }
+
         public Builder restart(@Nullable Output<String> restart) {
-            this.restart = restart;
+            $.restart = restart;
             return this;
         }
-        public Builder restart(@Nullable String restart) {
-            this.restart = Codegen.ofNullable(restart);
-            return this;
+
+        public Builder restart(String restart) {
+            return restart(Output.of(restart));
         }
+
         public Builder rm(@Nullable Output<Boolean> rm) {
-            this.rm = rm;
+            $.rm = rm;
             return this;
         }
-        public Builder rm(@Nullable Boolean rm) {
-            this.rm = Codegen.ofNullable(rm);
-            return this;
+
+        public Builder rm(Boolean rm) {
+            return rm(Output.of(rm));
         }
+
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
-            this.securityOpts = securityOpts;
+            $.securityOpts = securityOpts;
             return this;
         }
-        public Builder securityOpts(@Nullable List<String> securityOpts) {
-            this.securityOpts = Codegen.ofNullable(securityOpts);
-            return this;
+
+        public Builder securityOpts(List<String> securityOpts) {
+            return securityOpts(Output.of(securityOpts));
         }
+
         public Builder securityOpts(String... securityOpts) {
             return securityOpts(List.of(securityOpts));
         }
+
         public Builder shmSize(@Nullable Output<Integer> shmSize) {
-            this.shmSize = shmSize;
+            $.shmSize = shmSize;
             return this;
         }
-        public Builder shmSize(@Nullable Integer shmSize) {
-            this.shmSize = Codegen.ofNullable(shmSize);
-            return this;
+
+        public Builder shmSize(Integer shmSize) {
+            return shmSize(Output.of(shmSize));
         }
+
         public Builder start(@Nullable Output<Boolean> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable Boolean start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
+
+        public Builder start(Boolean start) {
+            return start(Output.of(start));
         }
+
         public Builder stdinOpen(@Nullable Output<Boolean> stdinOpen) {
-            this.stdinOpen = stdinOpen;
+            $.stdinOpen = stdinOpen;
             return this;
         }
-        public Builder stdinOpen(@Nullable Boolean stdinOpen) {
-            this.stdinOpen = Codegen.ofNullable(stdinOpen);
-            return this;
+
+        public Builder stdinOpen(Boolean stdinOpen) {
+            return stdinOpen(Output.of(stdinOpen));
         }
+
         public Builder storageOpts(@Nullable Output<Map<String,Object>> storageOpts) {
-            this.storageOpts = storageOpts;
+            $.storageOpts = storageOpts;
             return this;
         }
-        public Builder storageOpts(@Nullable Map<String,Object> storageOpts) {
-            this.storageOpts = Codegen.ofNullable(storageOpts);
-            return this;
+
+        public Builder storageOpts(Map<String,Object> storageOpts) {
+            return storageOpts(Output.of(storageOpts));
         }
+
         public Builder sysctls(@Nullable Output<Map<String,Object>> sysctls) {
-            this.sysctls = sysctls;
+            $.sysctls = sysctls;
             return this;
         }
-        public Builder sysctls(@Nullable Map<String,Object> sysctls) {
-            this.sysctls = Codegen.ofNullable(sysctls);
-            return this;
+
+        public Builder sysctls(Map<String,Object> sysctls) {
+            return sysctls(Output.of(sysctls));
         }
+
         public Builder tmpfs(@Nullable Output<Map<String,Object>> tmpfs) {
-            this.tmpfs = tmpfs;
+            $.tmpfs = tmpfs;
             return this;
         }
-        public Builder tmpfs(@Nullable Map<String,Object> tmpfs) {
-            this.tmpfs = Codegen.ofNullable(tmpfs);
-            return this;
+
+        public Builder tmpfs(Map<String,Object> tmpfs) {
+            return tmpfs(Output.of(tmpfs));
         }
+
         public Builder tty(@Nullable Output<Boolean> tty) {
-            this.tty = tty;
+            $.tty = tty;
             return this;
         }
-        public Builder tty(@Nullable Boolean tty) {
-            this.tty = Codegen.ofNullable(tty);
-            return this;
+
+        public Builder tty(Boolean tty) {
+            return tty(Output.of(tty));
         }
+
         public Builder ulimits(@Nullable Output<List<ContainerUlimitGetArgs>> ulimits) {
-            this.ulimits = ulimits;
+            $.ulimits = ulimits;
             return this;
         }
-        public Builder ulimits(@Nullable List<ContainerUlimitGetArgs> ulimits) {
-            this.ulimits = Codegen.ofNullable(ulimits);
-            return this;
+
+        public Builder ulimits(List<ContainerUlimitGetArgs> ulimits) {
+            return ulimits(Output.of(ulimits));
         }
+
         public Builder ulimits(ContainerUlimitGetArgs... ulimits) {
             return ulimits(List.of(ulimits));
         }
+
         public Builder uploads(@Nullable Output<List<ContainerUploadGetArgs>> uploads) {
-            this.uploads = uploads;
+            $.uploads = uploads;
             return this;
         }
-        public Builder uploads(@Nullable List<ContainerUploadGetArgs> uploads) {
-            this.uploads = Codegen.ofNullable(uploads);
-            return this;
+
+        public Builder uploads(List<ContainerUploadGetArgs> uploads) {
+            return uploads(Output.of(uploads));
         }
+
         public Builder uploads(ContainerUploadGetArgs... uploads) {
             return uploads(List.of(uploads));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
+
+        public Builder user(String user) {
+            return user(Output.of(user));
         }
+
         public Builder usernsMode(@Nullable Output<String> usernsMode) {
-            this.usernsMode = usernsMode;
+            $.usernsMode = usernsMode;
             return this;
         }
-        public Builder usernsMode(@Nullable String usernsMode) {
-            this.usernsMode = Codegen.ofNullable(usernsMode);
-            return this;
+
+        public Builder usernsMode(String usernsMode) {
+            return usernsMode(Output.of(usernsMode));
         }
+
         public Builder volumes(@Nullable Output<List<ContainerVolumeGetArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<ContainerVolumeGetArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<ContainerVolumeGetArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(ContainerVolumeGetArgs... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder workingDir(@Nullable Output<String> workingDir) {
-            this.workingDir = workingDir;
+            $.workingDir = workingDir;
             return this;
         }
-        public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Codegen.ofNullable(workingDir);
-            return this;
-        }        public ContainerState build() {
-            return new ContainerState(attach, bridge, capabilities, command, containerLogs, cpuSet, cpuShares, destroyGraceSeconds, devices, dns, dnsOpts, dnsSearches, domainname, entrypoints, envs, exitCode, gateway, groupAdds, healthcheck, hostname, hosts, image, init, ipAddress, ipPrefixLength, ipcMode, labels, links, logDriver, logOpts, logs, maxRetryCount, memory, memorySwap, mounts, mustRun, name, networkAliases, networkDatas, networkMode, networks, networksAdvanced, pidMode, ports, privileged, publishAllPorts, readOnly, removeVolumes, restart, rm, securityOpts, shmSize, start, stdinOpen, storageOpts, sysctls, tmpfs, tty, ulimits, uploads, user, usernsMode, volumes, workingDir);
+
+        public Builder workingDir(String workingDir) {
+            return workingDir(Output.of(workingDir));
+        }
+
+        public ContainerState build() {
+            return $;
         }
     }
+
 }

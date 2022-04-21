@@ -17,7 +17,7 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final String httpMethod;
+    private String httpMethod;
 
     public String httpMethod() {
         return this.httpMethod;
@@ -28,7 +28,7 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -39,64 +39,59 @@ public final class GetMethodArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetMethodArgs(
-        String httpMethod,
-        String resourceId,
-        String restApiId) {
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetMethodArgs() {}
 
-    private GetMethodArgs() {
-        this.httpMethod = null;
-        this.resourceId = null;
-        this.restApiId = null;
+    private GetMethodArgs(GetMethodArgs $) {
+        this.httpMethod = $.httpMethod;
+        this.resourceId = $.resourceId;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMethodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpMethod;
-        private String resourceId;
-        private String restApiId;
+        private GetMethodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMethodArgs();
         }
 
         public Builder(GetMethodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.resourceId = defaults.resourceId;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetMethodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetMethodArgs build() {
-            return new GetMethodArgs(httpMethod, resourceId, restApiId);
+        }
+
+        public GetMethodArgs build() {
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

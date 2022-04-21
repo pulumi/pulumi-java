@@ -7,8 +7,8 @@ import com.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfiguratio
 import com.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationValuesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceCodeConfigurationArgs extends com.pulumi.resources.Res
     public static final ServiceCodeConfigurationArgs Empty = new ServiceCodeConfigurationArgs();
 
     @Import(name="codeConfigurationValues")
-      private final @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
+    private @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
 
-    public Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues() {
-        return this.codeConfigurationValues == null ? Codegen.empty() : this.codeConfigurationValues;
+    public Optional<Output<ServiceCodeConfigurationValuesArgs>> codeConfigurationValues() {
+        return Optional.ofNullable(this.codeConfigurationValues);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class ServiceCodeConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="configurationSource", required=true)
-      private final Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
+    private Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
 
     public Output<ServiceCodeConfigurationConfigurationSource> configurationSource() {
         return this.configurationSource;
     }
 
-    public ServiceCodeConfigurationArgs(
-        @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues,
-        Output<ServiceCodeConfigurationConfigurationSource> configurationSource) {
-        this.codeConfigurationValues = codeConfigurationValues;
-        this.configurationSource = Objects.requireNonNull(configurationSource, "expected parameter 'configurationSource' to be non-null");
-    }
+    private ServiceCodeConfigurationArgs() {}
 
-    private ServiceCodeConfigurationArgs() {
-        this.codeConfigurationValues = Codegen.empty();
-        this.configurationSource = Codegen.empty();
+    private ServiceCodeConfigurationArgs(ServiceCodeConfigurationArgs $) {
+        this.codeConfigurationValues = $.codeConfigurationValues;
+        this.configurationSource = $.configurationSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCodeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues;
-        private Output<ServiceCodeConfigurationConfigurationSource> configurationSource;
+        private ServiceCodeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCodeConfigurationArgs();
         }
 
         public Builder(ServiceCodeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeConfigurationValues = defaults.codeConfigurationValues;
-    	      this.configurationSource = defaults.configurationSource;
+            $ = new ServiceCodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeConfigurationValues(@Nullable Output<ServiceCodeConfigurationValuesArgs> codeConfigurationValues) {
-            this.codeConfigurationValues = codeConfigurationValues;
+            $.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
-        public Builder codeConfigurationValues(@Nullable ServiceCodeConfigurationValuesArgs codeConfigurationValues) {
-            this.codeConfigurationValues = Codegen.ofNullable(codeConfigurationValues);
-            return this;
+
+        public Builder codeConfigurationValues(ServiceCodeConfigurationValuesArgs codeConfigurationValues) {
+            return codeConfigurationValues(Output.of(codeConfigurationValues));
         }
+
         public Builder configurationSource(Output<ServiceCodeConfigurationConfigurationSource> configurationSource) {
-            this.configurationSource = Objects.requireNonNull(configurationSource);
+            $.configurationSource = configurationSource;
             return this;
         }
+
         public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
-            this.configurationSource = Output.of(Objects.requireNonNull(configurationSource));
-            return this;
-        }        public ServiceCodeConfigurationArgs build() {
-            return new ServiceCodeConfigurationArgs(codeConfigurationValues, configurationSource);
+            return configurationSource(Output.of(configurationSource));
+        }
+
+        public ServiceCodeConfigurationArgs build() {
+            $.configurationSource = Objects.requireNonNull($.configurationSource, "expected parameter 'configurationSource' to be non-null");
+            return $;
         }
     }
+
 }

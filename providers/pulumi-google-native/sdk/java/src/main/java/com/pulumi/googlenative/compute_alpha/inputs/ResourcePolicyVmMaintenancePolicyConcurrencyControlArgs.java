@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs();
 
     @Import(name="concurrencyLimit")
-      private final @Nullable Output<Integer> concurrencyLimit;
+    private @Nullable Output<Integer> concurrencyLimit;
 
-    public Output<Integer> concurrencyLimit() {
-        return this.concurrencyLimit == null ? Codegen.empty() : this.concurrencyLimit;
+    public Optional<Output<Integer>> concurrencyLimit() {
+        return Optional.ofNullable(this.concurrencyLimit);
     }
 
-    public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(@Nullable Output<Integer> concurrencyLimit) {
-        this.concurrencyLimit = concurrencyLimit;
-    }
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs() {}
 
-    private ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs() {
-        this.concurrencyLimit = Codegen.empty();
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs $) {
+        this.concurrencyLimit = $.concurrencyLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> concurrencyLimit;
+        private ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs();
         }
 
         public Builder(ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.concurrencyLimit = defaults.concurrencyLimit;
+            $ = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder concurrencyLimit(@Nullable Output<Integer> concurrencyLimit) {
-            this.concurrencyLimit = concurrencyLimit;
+            $.concurrencyLimit = concurrencyLimit;
             return this;
         }
-        public Builder concurrencyLimit(@Nullable Integer concurrencyLimit) {
-            this.concurrencyLimit = Codegen.ofNullable(concurrencyLimit);
-            return this;
-        }        public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {
-            return new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(concurrencyLimit);
+
+        public Builder concurrencyLimit(Integer concurrencyLimit) {
+            return concurrencyLimit(Output.of(concurrencyLimit));
+        }
+
+        public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {
+            return $;
         }
     }
+
 }

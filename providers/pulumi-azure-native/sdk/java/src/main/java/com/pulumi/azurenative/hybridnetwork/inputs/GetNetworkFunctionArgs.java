@@ -17,7 +17,7 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkFunctionName", required=true)
-      private final String networkFunctionName;
+    private String networkFunctionName;
 
     public String networkFunctionName() {
         return this.networkFunctionName;
@@ -28,55 +28,52 @@ public final class GetNetworkFunctionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkFunctionArgs(
-        String networkFunctionName,
-        String resourceGroupName) {
-        this.networkFunctionName = Objects.requireNonNull(networkFunctionName, "expected parameter 'networkFunctionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkFunctionArgs() {}
 
-    private GetNetworkFunctionArgs() {
-        this.networkFunctionName = null;
-        this.resourceGroupName = null;
+    private GetNetworkFunctionArgs(GetNetworkFunctionArgs $) {
+        this.networkFunctionName = $.networkFunctionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkFunctionName;
-        private String resourceGroupName;
+        private GetNetworkFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkFunctionArgs();
         }
 
         public Builder(GetNetworkFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkFunctionName = defaults.networkFunctionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkFunctionName(String networkFunctionName) {
-            this.networkFunctionName = Objects.requireNonNull(networkFunctionName);
+            $.networkFunctionName = networkFunctionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkFunctionArgs build() {
-            return new GetNetworkFunctionArgs(networkFunctionName, resourceGroupName);
+        }
+
+        public GetNetworkFunctionArgs build() {
+            $.networkFunctionName = Objects.requireNonNull($.networkFunctionName, "expected parameter 'networkFunctionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

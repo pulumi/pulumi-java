@@ -26,7 +26,7 @@ public final class MpiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distributionType", required=true)
-      private final String distributionType;
+    private String distributionType;
 
     public String distributionType() {
         return this.distributionType;
@@ -37,55 +37,51 @@ public final class MpiResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="processCountPerInstance")
-      private final @Nullable Integer processCountPerInstance;
+    private @Nullable Integer processCountPerInstance;
 
     public Optional<Integer> processCountPerInstance() {
-        return this.processCountPerInstance == null ? Optional.empty() : Optional.ofNullable(this.processCountPerInstance);
+        return Optional.ofNullable(this.processCountPerInstance);
     }
 
-    public MpiResponse(
-        String distributionType,
-        @Nullable Integer processCountPerInstance) {
-        this.distributionType = Codegen.stringProp("distributionType").arg(distributionType).require();
-        this.processCountPerInstance = processCountPerInstance;
-    }
+    private MpiResponse() {}
 
-    private MpiResponse() {
-        this.distributionType = null;
-        this.processCountPerInstance = null;
+    private MpiResponse(MpiResponse $) {
+        this.distributionType = $.distributionType;
+        this.processCountPerInstance = $.processCountPerInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MpiResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String distributionType;
-        private @Nullable Integer processCountPerInstance;
+        private MpiResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MpiResponse();
         }
 
         public Builder(MpiResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionType = defaults.distributionType;
-    	      this.processCountPerInstance = defaults.processCountPerInstance;
+            $ = new MpiResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionType(String distributionType) {
-            this.distributionType = Objects.requireNonNull(distributionType);
+            $.distributionType = distributionType;
             return this;
         }
+
         public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
-            this.processCountPerInstance = processCountPerInstance;
+            $.processCountPerInstance = processCountPerInstance;
             return this;
-        }        public MpiResponse build() {
-            return new MpiResponse(distributionType, processCountPerInstance);
+        }
+
+        public MpiResponse build() {
+            $.distributionType = Codegen.stringProp("distributionType").arg($.distributionType).require();
+            return $;
         }
     }
+
 }

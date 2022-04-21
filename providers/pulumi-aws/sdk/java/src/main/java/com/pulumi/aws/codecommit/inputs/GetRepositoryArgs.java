@@ -17,45 +17,45 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final String repositoryName;
+    private String repositoryName;
 
     public String repositoryName() {
         return this.repositoryName;
     }
 
-    public GetRepositoryArgs(String repositoryName) {
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-    }
+    private GetRepositoryArgs() {}
 
-    private GetRepositoryArgs() {
-        this.repositoryName = null;
+    private GetRepositoryArgs(GetRepositoryArgs $) {
+        this.repositoryName = $.repositoryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String repositoryName;
+        private GetRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryArgs();
         }
 
         public Builder(GetRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
+            $ = new GetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
-        }        public GetRepositoryArgs build() {
-            return new GetRepositoryArgs(repositoryName);
+        }
+
+        public GetRepositoryArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            return $;
         }
     }
+
 }

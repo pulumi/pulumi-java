@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -42,7 +43,7 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="containerType", required=true)
-      private final Output<String> containerType;
+    private Output<String> containerType;
 
     public Output<String> containerType() {
         return this.containerType;
@@ -53,10 +54,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable Output<String> healthStatus;
+    private @Nullable Output<String> healthStatus;
 
-    public Output<String> healthStatus() {
-        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
+    public Optional<Output<String>> healthStatus() {
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="protectedItemCount")
-      private final @Nullable Output<Double> protectedItemCount;
+    private @Nullable Output<Double> protectedItemCount;
 
-    public Output<Double> protectedItemCount() {
-        return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
+    public Optional<Output<Double>> protectedItemCount() {
+        return Optional.ofNullable(this.protectedItemCount);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable Output<String> registrationStatus;
+    private @Nullable Output<String> registrationStatus;
 
-    public Output<String> registrationStatus() {
-        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
+    public Optional<Output<String>> registrationStatus() {
+        return Optional.ofNullable(this.registrationStatus);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<String> resourceGroup;
+    private @Nullable Output<String> resourceGroup;
 
-    public Output<String> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<String>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -108,10 +109,10 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable Output<String> sourceResourceId;
+    private @Nullable Output<String> sourceResourceId;
 
-    public Output<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
+    public Optional<Output<String>> sourceResourceId() {
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -119,154 +120,129 @@ public final class AzureStorageContainerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="storageAccountVersion")
-      private final @Nullable Output<String> storageAccountVersion;
+    private @Nullable Output<String> storageAccountVersion;
 
-    public Output<String> storageAccountVersion() {
-        return this.storageAccountVersion == null ? Codegen.empty() : this.storageAccountVersion;
+    public Optional<Output<String>> storageAccountVersion() {
+        return Optional.ofNullable(this.storageAccountVersion);
     }
 
-    public AzureStorageContainerArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        Output<String> containerType,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> healthStatus,
-        @Nullable Output<Double> protectedItemCount,
-        @Nullable Output<String> registrationStatus,
-        @Nullable Output<String> resourceGroup,
-        @Nullable Output<String> sourceResourceId,
-        @Nullable Output<String> storageAccountVersion) {
-        this.backupManagementType = backupManagementType;
-        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.protectedItemCount = protectedItemCount;
-        this.registrationStatus = registrationStatus;
-        this.resourceGroup = resourceGroup;
-        this.sourceResourceId = sourceResourceId;
-        this.storageAccountVersion = storageAccountVersion;
-    }
+    private AzureStorageContainerArgs() {}
 
-    private AzureStorageContainerArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.healthStatus = Codegen.empty();
-        this.protectedItemCount = Codegen.empty();
-        this.registrationStatus = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.sourceResourceId = Codegen.empty();
-        this.storageAccountVersion = Codegen.empty();
+    private AzureStorageContainerArgs(AzureStorageContainerArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.containerType = $.containerType;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.protectedItemCount = $.protectedItemCount;
+        this.registrationStatus = $.registrationStatus;
+        this.resourceGroup = $.resourceGroup;
+        this.sourceResourceId = $.sourceResourceId;
+        this.storageAccountVersion = $.storageAccountVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureStorageContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private Output<String> containerType;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> healthStatus;
-        private @Nullable Output<Double> protectedItemCount;
-        private @Nullable Output<String> registrationStatus;
-        private @Nullable Output<String> resourceGroup;
-        private @Nullable Output<String> sourceResourceId;
-        private @Nullable Output<String> storageAccountVersion;
+        private AzureStorageContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureStorageContainerArgs();
         }
 
         public Builder(AzureStorageContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerType = defaults.containerType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.protectedItemCount = defaults.protectedItemCount;
-    	      this.registrationStatus = defaults.registrationStatus;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.storageAccountVersion = defaults.storageAccountVersion;
+            $ = new AzureStorageContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder containerType(Output<String> containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Output.of(Objects.requireNonNull(containerType));
-            return this;
+            return containerType(Output.of(containerType));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
-        public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Codegen.ofNullable(healthStatus);
-            return this;
+
+        public Builder healthStatus(String healthStatus) {
+            return healthStatus(Output.of(healthStatus));
         }
+
         public Builder protectedItemCount(@Nullable Output<Double> protectedItemCount) {
-            this.protectedItemCount = protectedItemCount;
+            $.protectedItemCount = protectedItemCount;
             return this;
         }
-        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = Codegen.ofNullable(protectedItemCount);
-            return this;
+
+        public Builder protectedItemCount(Double protectedItemCount) {
+            return protectedItemCount(Output.of(protectedItemCount));
         }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
-        public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Codegen.ofNullable(registrationStatus);
-            return this;
+
+        public Builder registrationStatus(String registrationStatus) {
+            return registrationStatus(Output.of(registrationStatus));
         }
+
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(String resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
-        public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
-            return this;
+
+        public Builder sourceResourceId(String sourceResourceId) {
+            return sourceResourceId(Output.of(sourceResourceId));
         }
+
         public Builder storageAccountVersion(@Nullable Output<String> storageAccountVersion) {
-            this.storageAccountVersion = storageAccountVersion;
+            $.storageAccountVersion = storageAccountVersion;
             return this;
         }
-        public Builder storageAccountVersion(@Nullable String storageAccountVersion) {
-            this.storageAccountVersion = Codegen.ofNullable(storageAccountVersion);
-            return this;
-        }        public AzureStorageContainerArgs build() {
-            return new AzureStorageContainerArgs(backupManagementType, containerType, friendlyName, healthStatus, protectedItemCount, registrationStatus, resourceGroup, sourceResourceId, storageAccountVersion);
+
+        public Builder storageAccountVersion(String storageAccountVersion) {
+            return storageAccountVersion(Output.of(storageAccountVersion));
+        }
+
+        public AzureStorageContainerArgs build() {
+            $.containerType = Codegen.stringProp("containerType").output().arg($.containerType).require();
+            return $;
         }
     }
+
 }

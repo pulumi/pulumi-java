@@ -26,7 +26,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -37,10 +37,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="matchConditions", required=true)
-      private final List<FrontDoorMatchConditionResponse> matchConditions;
+    private List<FrontDoorMatchConditionResponse> matchConditions;
 
     public List<FrontDoorMatchConditionResponse> matchConditions() {
         return this.matchConditions;
@@ -59,10 +59,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -81,10 +81,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rateLimitDurationInMinutes")
-      private final @Nullable Integer rateLimitDurationInMinutes;
+    private @Nullable Integer rateLimitDurationInMinutes;
 
     public Optional<Integer> rateLimitDurationInMinutes() {
-        return this.rateLimitDurationInMinutes == null ? Optional.empty() : Optional.ofNullable(this.rateLimitDurationInMinutes);
+        return Optional.ofNullable(this.rateLimitDurationInMinutes);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rateLimitThreshold")
-      private final @Nullable Integer rateLimitThreshold;
+    private @Nullable Integer rateLimitThreshold;
 
     public Optional<Integer> rateLimitThreshold() {
-        return this.rateLimitThreshold == null ? Optional.empty() : Optional.ofNullable(this.rateLimitThreshold);
+        return Optional.ofNullable(this.rateLimitThreshold);
     }
 
     /**
@@ -103,112 +103,94 @@ public final class CustomRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleType", required=true)
-      private final String ruleType;
+    private String ruleType;
 
     public String ruleType() {
         return this.ruleType;
     }
 
-    public CustomRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<FrontDoorMatchConditionResponse> matchConditions,
-        @Nullable String name,
-        Integer priority,
-        @Nullable Integer rateLimitDurationInMinutes,
-        @Nullable Integer rateLimitThreshold,
-        String ruleType) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions, "expected parameter 'matchConditions' to be non-null");
-        this.name = name;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
-        this.rateLimitThreshold = rateLimitThreshold;
-        this.ruleType = Objects.requireNonNull(ruleType, "expected parameter 'ruleType' to be non-null");
-    }
+    private CustomRuleResponse() {}
 
-    private CustomRuleResponse() {
-        this.action = null;
-        this.enabledState = null;
-        this.matchConditions = List.of();
-        this.name = null;
-        this.priority = null;
-        this.rateLimitDurationInMinutes = null;
-        this.rateLimitThreshold = null;
-        this.ruleType = null;
+    private CustomRuleResponse(CustomRuleResponse $) {
+        this.action = $.action;
+        this.enabledState = $.enabledState;
+        this.matchConditions = $.matchConditions;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.rateLimitDurationInMinutes = $.rateLimitDurationInMinutes;
+        this.rateLimitThreshold = $.rateLimitThreshold;
+        this.ruleType = $.ruleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private @Nullable String enabledState;
-        private List<FrontDoorMatchConditionResponse> matchConditions;
-        private @Nullable String name;
-        private Integer priority;
-        private @Nullable Integer rateLimitDurationInMinutes;
-        private @Nullable Integer rateLimitThreshold;
-        private String ruleType;
+        private CustomRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRuleResponse();
         }
 
         public Builder(CustomRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.enabledState = defaults.enabledState;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.rateLimitDurationInMinutes = defaults.rateLimitDurationInMinutes;
-    	      this.rateLimitThreshold = defaults.rateLimitThreshold;
-    	      this.ruleType = defaults.ruleType;
+            $ = new CustomRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder matchConditions(List<FrontDoorMatchConditionResponse> matchConditions) {
-            this.matchConditions = Objects.requireNonNull(matchConditions);
+            $.matchConditions = matchConditions;
             return this;
         }
+
         public Builder matchConditions(FrontDoorMatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder rateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
-            this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
+            $.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
+
         public Builder rateLimitThreshold(@Nullable Integer rateLimitThreshold) {
-            this.rateLimitThreshold = rateLimitThreshold;
+            $.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
+
         public Builder ruleType(String ruleType) {
-            this.ruleType = Objects.requireNonNull(ruleType);
+            $.ruleType = ruleType;
             return this;
-        }        public CustomRuleResponse build() {
-            return new CustomRuleResponse(action, enabledState, matchConditions, name, priority, rateLimitDurationInMinutes, rateLimitThreshold, ruleType);
+        }
+
+        public CustomRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.matchConditions = Objects.requireNonNull($.matchConditions, "expected parameter 'matchConditions' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.ruleType = Objects.requireNonNull($.ruleType, "expected parameter 'ruleType' to be non-null");
+            return $;
         }
     }
+
 }

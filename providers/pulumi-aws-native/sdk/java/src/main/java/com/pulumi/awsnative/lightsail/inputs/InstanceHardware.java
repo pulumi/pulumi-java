@@ -25,10 +25,10 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cpuCount")
-      private final @Nullable Integer cpuCount;
+    private @Nullable Integer cpuCount;
 
     public Optional<Integer> cpuCount() {
-        return this.cpuCount == null ? Optional.empty() : Optional.ofNullable(this.cpuCount);
+        return Optional.ofNullable(this.cpuCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disks")
-      private final @Nullable List<InstanceDisk> disks;
+    private @Nullable List<InstanceDisk> disks;
 
-    public List<InstanceDisk> disks() {
-        return this.disks == null ? List.of() : this.disks;
+    public Optional<List<InstanceDisk>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class InstanceHardware extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ramSizeInGb")
-      private final @Nullable Integer ramSizeInGb;
+    private @Nullable Integer ramSizeInGb;
 
     public Optional<Integer> ramSizeInGb() {
-        return this.ramSizeInGb == null ? Optional.empty() : Optional.ofNullable(this.ramSizeInGb);
+        return Optional.ofNullable(this.ramSizeInGb);
     }
 
-    public InstanceHardware(
-        @Nullable Integer cpuCount,
-        @Nullable List<InstanceDisk> disks,
-        @Nullable Integer ramSizeInGb) {
-        this.cpuCount = cpuCount;
-        this.disks = disks;
-        this.ramSizeInGb = ramSizeInGb;
-    }
+    private InstanceHardware() {}
 
-    private InstanceHardware() {
-        this.cpuCount = null;
-        this.disks = List.of();
-        this.ramSizeInGb = null;
+    private InstanceHardware(InstanceHardware $) {
+        this.cpuCount = $.cpuCount;
+        this.disks = $.disks;
+        this.ramSizeInGb = $.ramSizeInGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceHardware defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer cpuCount;
-        private @Nullable List<InstanceDisk> disks;
-        private @Nullable Integer ramSizeInGb;
+        private InstanceHardware $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceHardware();
         }
 
         public Builder(InstanceHardware defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCount = defaults.cpuCount;
-    	      this.disks = defaults.disks;
-    	      this.ramSizeInGb = defaults.ramSizeInGb;
+            $ = new InstanceHardware(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = cpuCount;
+            $.cpuCount = cpuCount;
             return this;
         }
+
         public Builder disks(@Nullable List<InstanceDisk> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
+
         public Builder disks(InstanceDisk... disks) {
             return disks(List.of(disks));
         }
+
         public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
-            this.ramSizeInGb = ramSizeInGb;
+            $.ramSizeInGb = ramSizeInGb;
             return this;
-        }        public InstanceHardware build() {
-            return new InstanceHardware(cpuCount, disks, ramSizeInGb);
+        }
+
+        public InstanceHardware build() {
+            return $;
         }
     }
+
 }

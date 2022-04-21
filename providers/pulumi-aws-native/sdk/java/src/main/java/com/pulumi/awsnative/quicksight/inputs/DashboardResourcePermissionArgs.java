@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class DashboardResourcePermissionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<String>> actions;
+    private Output<List<String>> actions;
 
     public Output<List<String>> actions() {
         return this.actions;
@@ -49,66 +48,64 @@ public final class DashboardResourcePermissionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="principal", required=true)
-      private final Output<String> principal;
+    private Output<String> principal;
 
     public Output<String> principal() {
         return this.principal;
     }
 
-    public DashboardResourcePermissionArgs(
-        Output<List<String>> actions,
-        Output<String> principal) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-    }
+    private DashboardResourcePermissionArgs() {}
 
-    private DashboardResourcePermissionArgs() {
-        this.actions = Codegen.empty();
-        this.principal = Codegen.empty();
+    private DashboardResourcePermissionArgs(DashboardResourcePermissionArgs $) {
+        this.actions = $.actions;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardResourcePermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> actions;
-        private Output<String> principal;
+        private DashboardResourcePermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardResourcePermissionArgs();
         }
 
         public Builder(DashboardResourcePermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.principal = defaults.principal;
+            $ = new DashboardResourcePermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<String>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<String> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder principal(Output<String> principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Output.of(Objects.requireNonNull(principal));
-            return this;
-        }        public DashboardResourcePermissionArgs build() {
-            return new DashboardResourcePermissionArgs(actions, principal);
+            return principal(Output.of(principal));
+        }
+
+        public DashboardResourcePermissionArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetSecurityProfileArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="securityProfileName", required=true)
-      private final String securityProfileName;
+    private String securityProfileName;
 
     public String securityProfileName() {
         return this.securityProfileName;
     }
 
-    public GetSecurityProfileArgs(String securityProfileName) {
-        this.securityProfileName = Objects.requireNonNull(securityProfileName, "expected parameter 'securityProfileName' to be non-null");
-    }
+    private GetSecurityProfileArgs() {}
 
-    private GetSecurityProfileArgs() {
-        this.securityProfileName = null;
+    private GetSecurityProfileArgs(GetSecurityProfileArgs $) {
+        this.securityProfileName = $.securityProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String securityProfileName;
+        private GetSecurityProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityProfileArgs();
         }
 
         public Builder(GetSecurityProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityProfileName = defaults.securityProfileName;
+            $ = new GetSecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityProfileName(String securityProfileName) {
-            this.securityProfileName = Objects.requireNonNull(securityProfileName);
+            $.securityProfileName = securityProfileName;
             return this;
-        }        public GetSecurityProfileArgs build() {
-            return new GetSecurityProfileArgs(securityProfileName);
+        }
+
+        public GetSecurityProfileArgs build() {
+            $.securityProfileName = Objects.requireNonNull($.securityProfileName, "expected parameter 'securityProfileName' to be non-null");
+            return $;
         }
     }
+
 }

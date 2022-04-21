@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceFromTemplateAdvancedMachineFeaturesArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromTemplateAttachedDiskArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromTemplateBootDiskArgs;
@@ -23,6 +22,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="advancedMachineFeatures")
-      private final @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
+    private @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Codegen.empty() : this.advancedMachineFeatures;
+    public Optional<Output<InstanceFromTemplateAdvancedMachineFeaturesArgs>> advancedMachineFeatures() {
+        return Optional.ofNullable(this.advancedMachineFeatures);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowStoppingForUpdate")
-      private final @Nullable Output<Boolean> allowStoppingForUpdate;
+    private @Nullable Output<Boolean> allowStoppingForUpdate;
 
-    public Output<Boolean> allowStoppingForUpdate() {
-        return this.allowStoppingForUpdate == null ? Codegen.empty() : this.allowStoppingForUpdate;
+    public Optional<Output<Boolean>> allowStoppingForUpdate() {
+        return Optional.ofNullable(this.allowStoppingForUpdate);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="attachedDisks")
-      private final @Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks;
+    private @Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks;
 
-    public Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks() {
-        return this.attachedDisks == null ? Codegen.empty() : this.attachedDisks;
+    public Optional<Output<List<InstanceFromTemplateAttachedDiskArgs>>> attachedDisks() {
+        return Optional.ofNullable(this.attachedDisks);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="bootDisk")
-      private final @Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk;
+    private @Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk;
 
-    public Output<InstanceFromTemplateBootDiskArgs> bootDisk() {
-        return this.bootDisk == null ? Codegen.empty() : this.bootDisk;
+    public Optional<Output<InstanceFromTemplateBootDiskArgs>> bootDisk() {
+        return Optional.ofNullable(this.bootDisk);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="canIpForward")
-      private final @Nullable Output<Boolean> canIpForward;
+    private @Nullable Output<Boolean> canIpForward;
 
-    public Output<Boolean> canIpForward() {
-        return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
+    public Optional<Output<Boolean>> canIpForward() {
+        return Optional.ofNullable(this.canIpForward);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="confidentialInstanceConfig")
-      private final @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+    private @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Codegen.empty() : this.confidentialInstanceConfig;
+    public Optional<Output<InstanceFromTemplateConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
+        return Optional.ofNullable(this.confidentialInstanceConfig);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="desiredStatus")
-      private final @Nullable Output<String> desiredStatus;
+    private @Nullable Output<String> desiredStatus;
 
-    public Output<String> desiredStatus() {
-        return this.desiredStatus == null ? Codegen.empty() : this.desiredStatus;
+    public Optional<Output<String>> desiredStatus() {
+        return Optional.ofNullable(this.desiredStatus);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enableDisplay")
-      private final @Nullable Output<Boolean> enableDisplay;
+    private @Nullable Output<Boolean> enableDisplay;
 
-    public Output<Boolean> enableDisplay() {
-        return this.enableDisplay == null ? Codegen.empty() : this.enableDisplay;
+    public Optional<Output<Boolean>> enableDisplay() {
+        return Optional.ofNullable(this.enableDisplay);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="guestAccelerators")
-      private final @Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators;
+    private @Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators;
 
-    public Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators() {
-        return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
+    public Optional<Output<List<InstanceFromTemplateGuestAcceleratorArgs>>> guestAccelerators() {
+        return Optional.ofNullable(this.guestAccelerators);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metadataStartupScript")
-      private final @Nullable Output<String> metadataStartupScript;
+    private @Nullable Output<String> metadataStartupScript;
 
-    public Output<String> metadataStartupScript() {
-        return this.metadataStartupScript == null ? Codegen.empty() : this.metadataStartupScript;
+    public Optional<Output<String>> metadataStartupScript() {
+        return Optional.ofNullable(this.metadataStartupScript);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces;
+    private @Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<InstanceFromTemplateNetworkInterfaceArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -250,10 +250,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkPerformanceConfig")
-      private final @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
+    private @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig() {
-        return this.networkPerformanceConfig == null ? Codegen.empty() : this.networkPerformanceConfig;
+    public Optional<Output<InstanceFromTemplateNetworkPerformanceConfigArgs>> networkPerformanceConfig() {
+        return Optional.ofNullable(this.networkPerformanceConfig);
     }
 
     /**
@@ -262,10 +262,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="reservationAffinity")
-      private final @Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity;
+    private @Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity;
 
-    public Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity() {
-        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
+    public Optional<Output<InstanceFromTemplateReservationAffinityArgs>> reservationAffinity() {
+        return Optional.ofNullable(this.reservationAffinity);
     }
 
     /**
@@ -285,10 +285,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourcePolicies")
-      private final @Nullable Output<String> resourcePolicies;
+    private @Nullable Output<String> resourcePolicies;
 
-    public Output<String> resourcePolicies() {
-        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
+    public Optional<Output<String>> resourcePolicies() {
+        return Optional.ofNullable(this.resourcePolicies);
     }
 
     /**
@@ -296,10 +296,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling;
+    private @Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling;
 
-    public Output<InstanceFromTemplateSchedulingArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<InstanceFromTemplateSchedulingArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
     /**
@@ -307,10 +307,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="scratchDisks")
-      private final @Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks;
+    private @Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks;
 
-    public Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks() {
-        return this.scratchDisks == null ? Codegen.empty() : this.scratchDisks;
+    public Optional<Output<List<InstanceFromTemplateScratchDiskArgs>>> scratchDisks() {
+        return Optional.ofNullable(this.scratchDisks);
     }
 
     /**
@@ -318,10 +318,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount;
+    private @Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount;
 
-    public Output<InstanceFromTemplateServiceAccountArgs> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<InstanceFromTemplateServiceAccountArgs>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -329,10 +329,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<InstanceFromTemplateShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -341,7 +341,7 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceInstanceTemplate", required=true)
-      private final Output<String> sourceInstanceTemplate;
+    private Output<String> sourceInstanceTemplate;
 
     public Output<String> sourceInstanceTemplate() {
         return this.sourceInstanceTemplate;
@@ -352,10 +352,10 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -364,442 +364,359 @@ public final class InstanceFromTemplateArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceFromTemplateArgs(
-        @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures,
-        @Nullable Output<Boolean> allowStoppingForUpdate,
-        @Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks,
-        @Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk,
-        @Nullable Output<Boolean> canIpForward,
-        @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig,
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> description,
-        @Nullable Output<String> desiredStatus,
-        @Nullable Output<Boolean> enableDisplay,
-        @Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators,
-        @Nullable Output<String> hostname,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> metadataStartupScript,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<String> name,
-        @Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity,
-        @Nullable Output<String> resourcePolicies,
-        @Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling,
-        @Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks,
-        @Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount,
-        @Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        Output<String> sourceInstanceTemplate,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> zone) {
-        this.advancedMachineFeatures = advancedMachineFeatures;
-        this.allowStoppingForUpdate = allowStoppingForUpdate;
-        this.attachedDisks = attachedDisks;
-        this.bootDisk = bootDisk;
-        this.canIpForward = canIpForward;
-        this.confidentialInstanceConfig = confidentialInstanceConfig;
-        this.deletionProtection = deletionProtection;
-        this.description = description;
-        this.desiredStatus = desiredStatus;
-        this.enableDisplay = enableDisplay;
-        this.guestAccelerators = guestAccelerators;
-        this.hostname = hostname;
-        this.labels = labels;
-        this.machineType = machineType;
-        this.metadata = metadata;
-        this.metadataStartupScript = metadataStartupScript;
-        this.minCpuPlatform = minCpuPlatform;
-        this.name = name;
-        this.networkInterfaces = networkInterfaces;
-        this.networkPerformanceConfig = networkPerformanceConfig;
-        this.project = project;
-        this.reservationAffinity = reservationAffinity;
-        this.resourcePolicies = resourcePolicies;
-        this.scheduling = scheduling;
-        this.scratchDisks = scratchDisks;
-        this.serviceAccount = serviceAccount;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.sourceInstanceTemplate = Objects.requireNonNull(sourceInstanceTemplate, "expected parameter 'sourceInstanceTemplate' to be non-null");
-        this.tags = tags;
-        this.zone = zone;
-    }
+    private InstanceFromTemplateArgs() {}
 
-    private InstanceFromTemplateArgs() {
-        this.advancedMachineFeatures = Codegen.empty();
-        this.allowStoppingForUpdate = Codegen.empty();
-        this.attachedDisks = Codegen.empty();
-        this.bootDisk = Codegen.empty();
-        this.canIpForward = Codegen.empty();
-        this.confidentialInstanceConfig = Codegen.empty();
-        this.deletionProtection = Codegen.empty();
-        this.description = Codegen.empty();
-        this.desiredStatus = Codegen.empty();
-        this.enableDisplay = Codegen.empty();
-        this.guestAccelerators = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.metadataStartupScript = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkInterfaces = Codegen.empty();
-        this.networkPerformanceConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reservationAffinity = Codegen.empty();
-        this.resourcePolicies = Codegen.empty();
-        this.scheduling = Codegen.empty();
-        this.scratchDisks = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.sourceInstanceTemplate = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceFromTemplateArgs(InstanceFromTemplateArgs $) {
+        this.advancedMachineFeatures = $.advancedMachineFeatures;
+        this.allowStoppingForUpdate = $.allowStoppingForUpdate;
+        this.attachedDisks = $.attachedDisks;
+        this.bootDisk = $.bootDisk;
+        this.canIpForward = $.canIpForward;
+        this.confidentialInstanceConfig = $.confidentialInstanceConfig;
+        this.deletionProtection = $.deletionProtection;
+        this.description = $.description;
+        this.desiredStatus = $.desiredStatus;
+        this.enableDisplay = $.enableDisplay;
+        this.guestAccelerators = $.guestAccelerators;
+        this.hostname = $.hostname;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.metadataStartupScript = $.metadataStartupScript;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.name = $.name;
+        this.networkInterfaces = $.networkInterfaces;
+        this.networkPerformanceConfig = $.networkPerformanceConfig;
+        this.project = $.project;
+        this.reservationAffinity = $.reservationAffinity;
+        this.resourcePolicies = $.resourcePolicies;
+        this.scheduling = $.scheduling;
+        this.scratchDisks = $.scratchDisks;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.sourceInstanceTemplate = $.sourceInstanceTemplate;
+        this.tags = $.tags;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
-        private @Nullable Output<Boolean> allowStoppingForUpdate;
-        private @Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks;
-        private @Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk;
-        private @Nullable Output<Boolean> canIpForward;
-        private @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> desiredStatus;
-        private @Nullable Output<Boolean> enableDisplay;
-        private @Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> metadataStartupScript;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity;
-        private @Nullable Output<String> resourcePolicies;
-        private @Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling;
-        private @Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks;
-        private @Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount;
-        private @Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private Output<String> sourceInstanceTemplate;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> zone;
+        private InstanceFromTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromTemplateArgs();
         }
 
         public Builder(InstanceFromTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedMachineFeatures = defaults.advancedMachineFeatures;
-    	      this.allowStoppingForUpdate = defaults.allowStoppingForUpdate;
-    	      this.attachedDisks = defaults.attachedDisks;
-    	      this.bootDisk = defaults.bootDisk;
-    	      this.canIpForward = defaults.canIpForward;
-    	      this.confidentialInstanceConfig = defaults.confidentialInstanceConfig;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.description = defaults.description;
-    	      this.desiredStatus = defaults.desiredStatus;
-    	      this.enableDisplay = defaults.enableDisplay;
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.hostname = defaults.hostname;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.metadataStartupScript = defaults.metadataStartupScript;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.name = defaults.name;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.networkPerformanceConfig = defaults.networkPerformanceConfig;
-    	      this.project = defaults.project;
-    	      this.reservationAffinity = defaults.reservationAffinity;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.scheduling = defaults.scheduling;
-    	      this.scratchDisks = defaults.scratchDisks;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.sourceInstanceTemplate = defaults.sourceInstanceTemplate;
-    	      this.tags = defaults.tags;
-    	      this.zone = defaults.zone;
+            $ = new InstanceFromTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedMachineFeatures(@Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures) {
-            this.advancedMachineFeatures = advancedMachineFeatures;
+            $.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
-        public Builder advancedMachineFeatures(@Nullable InstanceFromTemplateAdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Codegen.ofNullable(advancedMachineFeatures);
-            return this;
+
+        public Builder advancedMachineFeatures(InstanceFromTemplateAdvancedMachineFeaturesArgs advancedMachineFeatures) {
+            return advancedMachineFeatures(Output.of(advancedMachineFeatures));
         }
+
         public Builder allowStoppingForUpdate(@Nullable Output<Boolean> allowStoppingForUpdate) {
-            this.allowStoppingForUpdate = allowStoppingForUpdate;
+            $.allowStoppingForUpdate = allowStoppingForUpdate;
             return this;
         }
-        public Builder allowStoppingForUpdate(@Nullable Boolean allowStoppingForUpdate) {
-            this.allowStoppingForUpdate = Codegen.ofNullable(allowStoppingForUpdate);
-            return this;
+
+        public Builder allowStoppingForUpdate(Boolean allowStoppingForUpdate) {
+            return allowStoppingForUpdate(Output.of(allowStoppingForUpdate));
         }
+
         public Builder attachedDisks(@Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks) {
-            this.attachedDisks = attachedDisks;
+            $.attachedDisks = attachedDisks;
             return this;
         }
-        public Builder attachedDisks(@Nullable List<InstanceFromTemplateAttachedDiskArgs> attachedDisks) {
-            this.attachedDisks = Codegen.ofNullable(attachedDisks);
-            return this;
+
+        public Builder attachedDisks(List<InstanceFromTemplateAttachedDiskArgs> attachedDisks) {
+            return attachedDisks(Output.of(attachedDisks));
         }
+
         public Builder attachedDisks(InstanceFromTemplateAttachedDiskArgs... attachedDisks) {
             return attachedDisks(List.of(attachedDisks));
         }
+
         public Builder bootDisk(@Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk) {
-            this.bootDisk = bootDisk;
+            $.bootDisk = bootDisk;
             return this;
         }
-        public Builder bootDisk(@Nullable InstanceFromTemplateBootDiskArgs bootDisk) {
-            this.bootDisk = Codegen.ofNullable(bootDisk);
-            return this;
+
+        public Builder bootDisk(InstanceFromTemplateBootDiskArgs bootDisk) {
+            return bootDisk(Output.of(bootDisk));
         }
+
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
-            this.canIpForward = canIpForward;
+            $.canIpForward = canIpForward;
             return this;
         }
-        public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Codegen.ofNullable(canIpForward);
-            return this;
+
+        public Builder canIpForward(Boolean canIpForward) {
+            return canIpForward(Output.of(canIpForward));
         }
+
         public Builder confidentialInstanceConfig(@Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = confidentialInstanceConfig;
+            $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
-        public Builder confidentialInstanceConfig(@Nullable InstanceFromTemplateConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Codegen.ofNullable(confidentialInstanceConfig);
-            return this;
+
+        public Builder confidentialInstanceConfig(InstanceFromTemplateConfidentialInstanceConfigArgs confidentialInstanceConfig) {
+            return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
+
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder desiredStatus(@Nullable Output<String> desiredStatus) {
-            this.desiredStatus = desiredStatus;
+            $.desiredStatus = desiredStatus;
             return this;
         }
-        public Builder desiredStatus(@Nullable String desiredStatus) {
-            this.desiredStatus = Codegen.ofNullable(desiredStatus);
-            return this;
+
+        public Builder desiredStatus(String desiredStatus) {
+            return desiredStatus(Output.of(desiredStatus));
         }
+
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
-            this.enableDisplay = enableDisplay;
+            $.enableDisplay = enableDisplay;
             return this;
         }
-        public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Codegen.ofNullable(enableDisplay);
-            return this;
+
+        public Builder enableDisplay(Boolean enableDisplay) {
+            return enableDisplay(Output.of(enableDisplay));
         }
+
         public Builder guestAccelerators(@Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators) {
-            this.guestAccelerators = guestAccelerators;
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
-        public Builder guestAccelerators(@Nullable List<InstanceFromTemplateGuestAcceleratorArgs> guestAccelerators) {
-            this.guestAccelerators = Codegen.ofNullable(guestAccelerators);
-            return this;
+
+        public Builder guestAccelerators(List<InstanceFromTemplateGuestAcceleratorArgs> guestAccelerators) {
+            return guestAccelerators(Output.of(guestAccelerators));
         }
+
         public Builder guestAccelerators(InstanceFromTemplateGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder metadataStartupScript(@Nullable Output<String> metadataStartupScript) {
-            this.metadataStartupScript = metadataStartupScript;
+            $.metadataStartupScript = metadataStartupScript;
             return this;
         }
-        public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
-            this.metadataStartupScript = Codegen.ofNullable(metadataStartupScript);
-            return this;
+
+        public Builder metadataStartupScript(String metadataStartupScript) {
+            return metadataStartupScript(Output.of(metadataStartupScript));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkInterfaces(@Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<InstanceFromTemplateNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<InstanceFromTemplateNetworkInterfaceArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(InstanceFromTemplateNetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder networkPerformanceConfig(@Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig) {
-            this.networkPerformanceConfig = networkPerformanceConfig;
+            $.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
-        public Builder networkPerformanceConfig(@Nullable InstanceFromTemplateNetworkPerformanceConfigArgs networkPerformanceConfig) {
-            this.networkPerformanceConfig = Codegen.ofNullable(networkPerformanceConfig);
-            return this;
+
+        public Builder networkPerformanceConfig(InstanceFromTemplateNetworkPerformanceConfigArgs networkPerformanceConfig) {
+            return networkPerformanceConfig(Output.of(networkPerformanceConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reservationAffinity(@Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity) {
-            this.reservationAffinity = reservationAffinity;
+            $.reservationAffinity = reservationAffinity;
             return this;
         }
-        public Builder reservationAffinity(@Nullable InstanceFromTemplateReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
-            return this;
+
+        public Builder reservationAffinity(InstanceFromTemplateReservationAffinityArgs reservationAffinity) {
+            return reservationAffinity(Output.of(reservationAffinity));
         }
+
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
-            this.resourcePolicies = resourcePolicies;
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
-        public Builder resourcePolicies(@Nullable String resourcePolicies) {
-            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
-            return this;
+
+        public Builder resourcePolicies(String resourcePolicies) {
+            return resourcePolicies(Output.of(resourcePolicies));
         }
+
         public Builder scheduling(@Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable InstanceFromTemplateSchedulingArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
+
+        public Builder scheduling(InstanceFromTemplateSchedulingArgs scheduling) {
+            return scheduling(Output.of(scheduling));
         }
+
         public Builder scratchDisks(@Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks) {
-            this.scratchDisks = scratchDisks;
+            $.scratchDisks = scratchDisks;
             return this;
         }
-        public Builder scratchDisks(@Nullable List<InstanceFromTemplateScratchDiskArgs> scratchDisks) {
-            this.scratchDisks = Codegen.ofNullable(scratchDisks);
-            return this;
+
+        public Builder scratchDisks(List<InstanceFromTemplateScratchDiskArgs> scratchDisks) {
+            return scratchDisks(Output.of(scratchDisks));
         }
+
         public Builder scratchDisks(InstanceFromTemplateScratchDiskArgs... scratchDisks) {
             return scratchDisks(List.of(scratchDisks));
         }
+
         public Builder serviceAccount(@Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable InstanceFromTemplateServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(InstanceFromTemplateServiceAccountArgs serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable InstanceFromTemplateShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(InstanceFromTemplateShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder sourceInstanceTemplate(Output<String> sourceInstanceTemplate) {
-            this.sourceInstanceTemplate = Objects.requireNonNull(sourceInstanceTemplate);
+            $.sourceInstanceTemplate = sourceInstanceTemplate;
             return this;
         }
+
         public Builder sourceInstanceTemplate(String sourceInstanceTemplate) {
-            this.sourceInstanceTemplate = Output.of(Objects.requireNonNull(sourceInstanceTemplate));
-            return this;
+            return sourceInstanceTemplate(Output.of(sourceInstanceTemplate));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceFromTemplateArgs build() {
-            return new InstanceFromTemplateArgs(advancedMachineFeatures, allowStoppingForUpdate, attachedDisks, bootDisk, canIpForward, confidentialInstanceConfig, deletionProtection, description, desiredStatus, enableDisplay, guestAccelerators, hostname, labels, machineType, metadata, metadataStartupScript, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, project, reservationAffinity, resourcePolicies, scheduling, scratchDisks, serviceAccount, shieldedInstanceConfig, sourceInstanceTemplate, tags, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceFromTemplateArgs build() {
+            $.sourceInstanceTemplate = Objects.requireNonNull($.sourceInstanceTemplate, "expected parameter 'sourceInstanceTemplate' to be non-null");
+            return $;
         }
     }
+
 }

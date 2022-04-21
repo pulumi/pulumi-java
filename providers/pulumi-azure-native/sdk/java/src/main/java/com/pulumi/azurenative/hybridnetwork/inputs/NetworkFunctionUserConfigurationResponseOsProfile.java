@@ -23,45 +23,44 @@ public final class NetworkFunctionUserConfigurationResponseOsProfile extends com
      * 
      */
     @Import(name="customData")
-      private final @Nullable String customData;
+    private @Nullable String customData;
 
     public Optional<String> customData() {
-        return this.customData == null ? Optional.empty() : Optional.ofNullable(this.customData);
+        return Optional.ofNullable(this.customData);
     }
 
-    public NetworkFunctionUserConfigurationResponseOsProfile(@Nullable String customData) {
-        this.customData = customData;
-    }
+    private NetworkFunctionUserConfigurationResponseOsProfile() {}
 
-    private NetworkFunctionUserConfigurationResponseOsProfile() {
-        this.customData = null;
+    private NetworkFunctionUserConfigurationResponseOsProfile(NetworkFunctionUserConfigurationResponseOsProfile $) {
+        this.customData = $.customData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionUserConfigurationResponseOsProfile defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String customData;
+        private NetworkFunctionUserConfigurationResponseOsProfile $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionUserConfigurationResponseOsProfile();
         }
 
         public Builder(NetworkFunctionUserConfigurationResponseOsProfile defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customData = defaults.customData;
+            $ = new NetworkFunctionUserConfigurationResponseOsProfile(Objects.requireNonNull(defaults));
         }
 
         public Builder customData(@Nullable String customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
-        }        public NetworkFunctionUserConfigurationResponseOsProfile build() {
-            return new NetworkFunctionUserConfigurationResponseOsProfile(customData);
+        }
+
+        public NetworkFunctionUserConfigurationResponseOsProfile build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.firestore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.firestore.inputs.IndexFieldArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collection", required=true)
-      private final Output<String> collection;
+    private Output<String> collection;
 
     public Output<String> collection() {
         return this.collection;
@@ -33,10 +33,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<List<IndexFieldArgs>> fields;
+    private Output<List<IndexFieldArgs>> fields;
 
     public Output<List<IndexFieldArgs>> fields() {
         return this.fields;
@@ -62,10 +62,10 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -75,105 +75,94 @@ public final class IndexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryScope")
-      private final @Nullable Output<String> queryScope;
+    private @Nullable Output<String> queryScope;
 
-    public Output<String> queryScope() {
-        return this.queryScope == null ? Codegen.empty() : this.queryScope;
+    public Optional<Output<String>> queryScope() {
+        return Optional.ofNullable(this.queryScope);
     }
 
-    public IndexArgs(
-        Output<String> collection,
-        @Nullable Output<String> database,
-        Output<List<IndexFieldArgs>> fields,
-        @Nullable Output<String> project,
-        @Nullable Output<String> queryScope) {
-        this.collection = Objects.requireNonNull(collection, "expected parameter 'collection' to be non-null");
-        this.database = database;
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.project = project;
-        this.queryScope = queryScope;
-    }
+    private IndexArgs() {}
 
-    private IndexArgs() {
-        this.collection = Codegen.empty();
-        this.database = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.project = Codegen.empty();
-        this.queryScope = Codegen.empty();
+    private IndexArgs(IndexArgs $) {
+        this.collection = $.collection;
+        this.database = $.database;
+        this.fields = $.fields;
+        this.project = $.project;
+        this.queryScope = $.queryScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> collection;
-        private @Nullable Output<String> database;
-        private Output<List<IndexFieldArgs>> fields;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> queryScope;
+        private IndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexArgs();
         }
 
         public Builder(IndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.database = defaults.database;
-    	      this.fields = defaults.fields;
-    	      this.project = defaults.project;
-    	      this.queryScope = defaults.queryScope;
+            $ = new IndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(Output<String> collection) {
-            this.collection = Objects.requireNonNull(collection);
+            $.collection = collection;
             return this;
         }
+
         public Builder collection(String collection) {
-            this.collection = Output.of(Objects.requireNonNull(collection));
-            return this;
+            return collection(Output.of(collection));
         }
+
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder fields(Output<List<IndexFieldArgs>> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(List<IndexFieldArgs> fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder fields(IndexFieldArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder queryScope(@Nullable Output<String> queryScope) {
-            this.queryScope = queryScope;
+            $.queryScope = queryScope;
             return this;
         }
-        public Builder queryScope(@Nullable String queryScope) {
-            this.queryScope = Codegen.ofNullable(queryScope);
-            return this;
-        }        public IndexArgs build() {
-            return new IndexArgs(collection, database, fields, project, queryScope);
+
+        public Builder queryScope(String queryScope) {
+            return queryScope(Output.of(queryScope));
+        }
+
+        public IndexArgs build() {
+            $.collection = Objects.requireNonNull($.collection, "expected parameter 'collection' to be non-null");
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends com.pu
      * 
      */
     @Import(name="classifications")
-      private final @Nullable Output<List<String>> classifications;
+    private @Nullable Output<List<String>> classifications;
 
-    public Output<List<String>> classifications() {
-        return this.classifications == null ? Codegen.empty() : this.classifications;
+    public Optional<Output<List<String>>> classifications() {
+        return Optional.ofNullable(this.classifications);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends com.pu
      * 
      */
     @Import(name="excludes")
-      private final @Nullable Output<List<String>> excludes;
+    private @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> excludes() {
-        return this.excludes == null ? Codegen.empty() : this.excludes;
+    public Optional<Output<List<String>>> excludes() {
+        return Optional.ofNullable(this.excludes);
     }
 
     /**
@@ -45,85 +45,80 @@ public final class PatchDeploymentPatchConfigWindowsUpdateGetArgs extends com.pu
      * 
      */
     @Import(name="exclusivePatches")
-      private final @Nullable Output<List<String>> exclusivePatches;
+    private @Nullable Output<List<String>> exclusivePatches;
 
-    public Output<List<String>> exclusivePatches() {
-        return this.exclusivePatches == null ? Codegen.empty() : this.exclusivePatches;
+    public Optional<Output<List<String>>> exclusivePatches() {
+        return Optional.ofNullable(this.exclusivePatches);
     }
 
-    public PatchDeploymentPatchConfigWindowsUpdateGetArgs(
-        @Nullable Output<List<String>> classifications,
-        @Nullable Output<List<String>> excludes,
-        @Nullable Output<List<String>> exclusivePatches) {
-        this.classifications = classifications;
-        this.excludes = excludes;
-        this.exclusivePatches = exclusivePatches;
-    }
+    private PatchDeploymentPatchConfigWindowsUpdateGetArgs() {}
 
-    private PatchDeploymentPatchConfigWindowsUpdateGetArgs() {
-        this.classifications = Codegen.empty();
-        this.excludes = Codegen.empty();
-        this.exclusivePatches = Codegen.empty();
+    private PatchDeploymentPatchConfigWindowsUpdateGetArgs(PatchDeploymentPatchConfigWindowsUpdateGetArgs $) {
+        this.classifications = $.classifications;
+        this.excludes = $.excludes;
+        this.exclusivePatches = $.exclusivePatches;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentPatchConfigWindowsUpdateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> classifications;
-        private @Nullable Output<List<String>> excludes;
-        private @Nullable Output<List<String>> exclusivePatches;
+        private PatchDeploymentPatchConfigWindowsUpdateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentPatchConfigWindowsUpdateGetArgs();
         }
 
         public Builder(PatchDeploymentPatchConfigWindowsUpdateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classifications = defaults.classifications;
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePatches = defaults.exclusivePatches;
+            $ = new PatchDeploymentPatchConfigWindowsUpdateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classifications(@Nullable Output<List<String>> classifications) {
-            this.classifications = classifications;
+            $.classifications = classifications;
             return this;
         }
-        public Builder classifications(@Nullable List<String> classifications) {
-            this.classifications = Codegen.ofNullable(classifications);
-            return this;
+
+        public Builder classifications(List<String> classifications) {
+            return classifications(Output.of(classifications));
         }
+
         public Builder classifications(String... classifications) {
             return classifications(List.of(classifications));
         }
+
         public Builder excludes(@Nullable Output<List<String>> excludes) {
-            this.excludes = excludes;
+            $.excludes = excludes;
             return this;
         }
-        public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Codegen.ofNullable(excludes);
-            return this;
+
+        public Builder excludes(List<String> excludes) {
+            return excludes(Output.of(excludes));
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePatches(@Nullable Output<List<String>> exclusivePatches) {
-            this.exclusivePatches = exclusivePatches;
+            $.exclusivePatches = exclusivePatches;
             return this;
         }
-        public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
-            this.exclusivePatches = Codegen.ofNullable(exclusivePatches);
-            return this;
+
+        public Builder exclusivePatches(List<String> exclusivePatches) {
+            return exclusivePatches(Output.of(exclusivePatches));
         }
+
         public Builder exclusivePatches(String... exclusivePatches) {
             return exclusivePatches(List.of(exclusivePatches));
-        }        public PatchDeploymentPatchConfigWindowsUpdateGetArgs build() {
-            return new PatchDeploymentPatchConfigWindowsUpdateGetArgs(classifications, excludes, exclusivePatches);
+        }
+
+        public PatchDeploymentPatchConfigWindowsUpdateGetArgs build() {
+            return $;
         }
     }
+
 }

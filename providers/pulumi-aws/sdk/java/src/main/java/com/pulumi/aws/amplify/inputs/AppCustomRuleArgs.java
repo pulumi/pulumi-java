@@ -5,9 +5,9 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppCustomRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AppCustomRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
@@ -42,10 +42,10 @@ public final class AppCustomRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class AppCustomRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target", required=true)
-      private final Output<String> target;
+    private Output<String> target;
 
     public Output<String> target() {
         return this.target;
     }
 
-    public AppCustomRuleArgs(
-        @Nullable Output<String> condition,
-        Output<String> source,
-        @Nullable Output<String> status,
-        Output<String> target) {
-        this.condition = condition;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.status = status;
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private AppCustomRuleArgs() {}
 
-    private AppCustomRuleArgs() {
-        this.condition = Codegen.empty();
-        this.source = Codegen.empty();
-        this.status = Codegen.empty();
-        this.target = Codegen.empty();
+    private AppCustomRuleArgs(AppCustomRuleArgs $) {
+        this.condition = $.condition;
+        this.source = $.source;
+        this.status = $.status;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppCustomRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> condition;
-        private Output<String> source;
-        private @Nullable Output<String> status;
-        private Output<String> target;
+        private AppCustomRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppCustomRuleArgs();
         }
 
         public Builder(AppCustomRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.source = defaults.source;
-    	      this.status = defaults.status;
-    	      this.target = defaults.target;
+            $ = new AppCustomRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder target(Output<String> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public AppCustomRuleArgs build() {
-            return new AppCustomRuleArgs(condition, source, status, target);
+            return target(Output.of(target));
+        }
+
+        public AppCustomRuleArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

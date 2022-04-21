@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,76 +17,73 @@ public final class ContainerCapabilitiesGetArgs extends com.pulumi.resources.Res
     public static final ContainerCapabilitiesGetArgs Empty = new ContainerCapabilitiesGetArgs();
 
     @Import(name="adds")
-      private final @Nullable Output<List<String>> adds;
+    private @Nullable Output<List<String>> adds;
 
-    public Output<List<String>> adds() {
-        return this.adds == null ? Codegen.empty() : this.adds;
+    public Optional<Output<List<String>>> adds() {
+        return Optional.ofNullable(this.adds);
     }
 
     @Import(name="drops")
-      private final @Nullable Output<List<String>> drops;
+    private @Nullable Output<List<String>> drops;
 
-    public Output<List<String>> drops() {
-        return this.drops == null ? Codegen.empty() : this.drops;
+    public Optional<Output<List<String>>> drops() {
+        return Optional.ofNullable(this.drops);
     }
 
-    public ContainerCapabilitiesGetArgs(
-        @Nullable Output<List<String>> adds,
-        @Nullable Output<List<String>> drops) {
-        this.adds = adds;
-        this.drops = drops;
-    }
+    private ContainerCapabilitiesGetArgs() {}
 
-    private ContainerCapabilitiesGetArgs() {
-        this.adds = Codegen.empty();
-        this.drops = Codegen.empty();
+    private ContainerCapabilitiesGetArgs(ContainerCapabilitiesGetArgs $) {
+        this.adds = $.adds;
+        this.drops = $.drops;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerCapabilitiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> adds;
-        private @Nullable Output<List<String>> drops;
+        private ContainerCapabilitiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerCapabilitiesGetArgs();
         }
 
         public Builder(ContainerCapabilitiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adds = defaults.adds;
-    	      this.drops = defaults.drops;
+            $ = new ContainerCapabilitiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adds(@Nullable Output<List<String>> adds) {
-            this.adds = adds;
+            $.adds = adds;
             return this;
         }
-        public Builder adds(@Nullable List<String> adds) {
-            this.adds = Codegen.ofNullable(adds);
-            return this;
+
+        public Builder adds(List<String> adds) {
+            return adds(Output.of(adds));
         }
+
         public Builder adds(String... adds) {
             return adds(List.of(adds));
         }
+
         public Builder drops(@Nullable Output<List<String>> drops) {
-            this.drops = drops;
+            $.drops = drops;
             return this;
         }
-        public Builder drops(@Nullable List<String> drops) {
-            this.drops = Codegen.ofNullable(drops);
-            return this;
+
+        public Builder drops(List<String> drops) {
+            return drops(Output.of(drops));
         }
+
         public Builder drops(String... drops) {
             return drops(List.of(drops));
-        }        public ContainerCapabilitiesGetArgs build() {
-            return new ContainerCapabilitiesGetArgs(adds, drops);
+        }
+
+        public ContainerCapabilitiesGetArgs build() {
+            return $;
         }
     }
+
 }

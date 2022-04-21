@@ -25,10 +25,10 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="events")
-      private final @Nullable List<DetectorModelEvent> events;
+    private @Nullable List<DetectorModelEvent> events;
 
-    public List<DetectorModelEvent> events() {
-        return this.events == null ? List.of() : this.events;
+    public Optional<List<DetectorModelEvent>> events() {
+        return Optional.ofNullable(this.events);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class DetectorModelOnInput extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="transitionEvents")
-      private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;
+    private @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
-    public List<DetectorModelTransitionEvent> transitionEvents() {
-        return this.transitionEvents == null ? List.of() : this.transitionEvents;
+    public Optional<List<DetectorModelTransitionEvent>> transitionEvents() {
+        return Optional.ofNullable(this.transitionEvents);
     }
 
-    public DetectorModelOnInput(
-        @Nullable List<DetectorModelEvent> events,
-        @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
-        this.events = events;
-        this.transitionEvents = transitionEvents;
-    }
+    private DetectorModelOnInput() {}
 
-    private DetectorModelOnInput() {
-        this.events = List.of();
-        this.transitionEvents = List.of();
+    private DetectorModelOnInput(DetectorModelOnInput $) {
+        this.events = $.events;
+        this.transitionEvents = $.transitionEvents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelOnInput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DetectorModelEvent> events;
-        private @Nullable List<DetectorModelTransitionEvent> transitionEvents;
+        private DetectorModelOnInput $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelOnInput();
         }
 
         public Builder(DetectorModelOnInput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
-    	      this.transitionEvents = defaults.transitionEvents;
+            $ = new DetectorModelOnInput(Objects.requireNonNull(defaults));
         }
 
         public Builder events(@Nullable List<DetectorModelEvent> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
+
         public Builder events(DetectorModelEvent... events) {
             return events(List.of(events));
         }
+
         public Builder transitionEvents(@Nullable List<DetectorModelTransitionEvent> transitionEvents) {
-            this.transitionEvents = transitionEvents;
+            $.transitionEvents = transitionEvents;
             return this;
         }
+
         public Builder transitionEvents(DetectorModelTransitionEvent... transitionEvents) {
             return transitionEvents(List.of(transitionEvents));
-        }        public DetectorModelOnInput build() {
-            return new DetectorModelOnInput(events, transitionEvents);
+        }
+
+        public DetectorModelOnInput build() {
+            return $;
         }
     }
+
 }

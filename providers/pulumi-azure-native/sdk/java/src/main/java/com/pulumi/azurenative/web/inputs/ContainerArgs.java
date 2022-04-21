@@ -7,10 +7,10 @@ import com.pulumi.azurenative.web.inputs.ContainerResourcesArgs;
 import com.pulumi.azurenative.web.inputs.EnvironmentVarArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<EnvironmentVarArgs>> env;
+    private @Nullable Output<List<EnvironmentVarArgs>> env;
 
-    public Output<List<EnvironmentVarArgs>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<EnvironmentVarArgs>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,124 +82,110 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<ContainerResourcesArgs> resources;
+    private @Nullable Output<ContainerResourcesArgs> resources;
 
-    public Output<ContainerResourcesArgs> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<ContainerResourcesArgs>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
-    public ContainerArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<EnvironmentVarArgs>> env,
-        @Nullable Output<String> image,
-        @Nullable Output<String> name,
-        @Nullable Output<ContainerResourcesArgs> resources) {
-        this.args = args;
-        this.command = command;
-        this.env = env;
-        this.image = image;
-        this.name = name;
-        this.resources = resources;
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.args = Codegen.empty();
-        this.command = Codegen.empty();
-        this.env = Codegen.empty();
-        this.image = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resources = Codegen.empty();
+    private ContainerArgs(ContainerArgs $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.image = $.image;
+        this.name = $.name;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<EnvironmentVarArgs>> env;
-        private @Nullable Output<String> image;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ContainerResourcesArgs> resources;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.resources = defaults.resources;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(@Nullable Output<List<EnvironmentVarArgs>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<EnvironmentVarArgs> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<EnvironmentVarArgs> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(EnvironmentVarArgs... env) {
             return env(List.of(env));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resources(@Nullable Output<ContainerResourcesArgs> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable ContainerResourcesArgs resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
-        }        public ContainerArgs build() {
-            return new ContainerArgs(args, command, env, image, name, resources);
+
+        public Builder resources(ContainerResourcesArgs resources) {
+            return resources(Output.of(resources));
+        }
+
+        public ContainerArgs build() {
+            return $;
         }
     }
+
 }

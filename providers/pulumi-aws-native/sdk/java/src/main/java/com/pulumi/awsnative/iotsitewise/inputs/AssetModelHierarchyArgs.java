@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="childAssetModelId", required=true)
-      private final Output<String> childAssetModelId;
+    private Output<String> childAssetModelId;
 
     public Output<String> childAssetModelId() {
         return this.childAssetModelId;
@@ -34,7 +33,7 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="logicalId", required=true)
-      private final Output<String> logicalId;
+    private Output<String> logicalId;
 
     public Output<String> logicalId() {
         return this.logicalId;
@@ -45,76 +44,71 @@ public final class AssetModelHierarchyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public AssetModelHierarchyArgs(
-        Output<String> childAssetModelId,
-        Output<String> logicalId,
-        Output<String> name) {
-        this.childAssetModelId = Objects.requireNonNull(childAssetModelId, "expected parameter 'childAssetModelId' to be non-null");
-        this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AssetModelHierarchyArgs() {}
 
-    private AssetModelHierarchyArgs() {
-        this.childAssetModelId = Codegen.empty();
-        this.logicalId = Codegen.empty();
-        this.name = Codegen.empty();
+    private AssetModelHierarchyArgs(AssetModelHierarchyArgs $) {
+        this.childAssetModelId = $.childAssetModelId;
+        this.logicalId = $.logicalId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelHierarchyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> childAssetModelId;
-        private Output<String> logicalId;
-        private Output<String> name;
+        private AssetModelHierarchyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelHierarchyArgs();
         }
 
         public Builder(AssetModelHierarchyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childAssetModelId = defaults.childAssetModelId;
-    	      this.logicalId = defaults.logicalId;
-    	      this.name = defaults.name;
+            $ = new AssetModelHierarchyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder childAssetModelId(Output<String> childAssetModelId) {
-            this.childAssetModelId = Objects.requireNonNull(childAssetModelId);
+            $.childAssetModelId = childAssetModelId;
             return this;
         }
+
         public Builder childAssetModelId(String childAssetModelId) {
-            this.childAssetModelId = Output.of(Objects.requireNonNull(childAssetModelId));
-            return this;
+            return childAssetModelId(Output.of(childAssetModelId));
         }
+
         public Builder logicalId(Output<String> logicalId) {
-            this.logicalId = Objects.requireNonNull(logicalId);
+            $.logicalId = logicalId;
             return this;
         }
+
         public Builder logicalId(String logicalId) {
-            this.logicalId = Output.of(Objects.requireNonNull(logicalId));
-            return this;
+            return logicalId(Output.of(logicalId));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public AssetModelHierarchyArgs build() {
-            return new AssetModelHierarchyArgs(childAssetModelId, logicalId, name);
+            return name(Output.of(name));
+        }
+
+        public AssetModelHierarchyArgs build() {
+            $.childAssetModelId = Objects.requireNonNull($.childAssetModelId, "expected parameter 'childAssetModelId' to be non-null");
+            $.logicalId = Objects.requireNonNull($.logicalId, "expected parameter 'logicalId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

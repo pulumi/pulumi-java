@@ -29,10 +29,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="dailyRecurrence")
-      private final @Nullable DayDetailsResponse dailyRecurrence;
+    private @Nullable DayDetailsResponse dailyRecurrence;
 
     public Optional<DayDetailsResponse> dailyRecurrence() {
-        return this.dailyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.dailyRecurrence);
+        return Optional.ofNullable(this.dailyRecurrence);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="hourlyRecurrence")
-      private final @Nullable HourDetailsResponse hourlyRecurrence;
+    private @Nullable HourDetailsResponse hourlyRecurrence;
 
     public Optional<HourDetailsResponse> hourlyRecurrence() {
-        return this.hourlyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.hourlyRecurrence);
+        return Optional.ofNullable(this.hourlyRecurrence);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -62,10 +62,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="notificationSettings")
-      private final @Nullable NotificationSettingsResponse notificationSettings;
+    private @Nullable NotificationSettingsResponse notificationSettings;
 
     public Optional<NotificationSettingsResponse> notificationSettings() {
-        return this.notificationSettings == null ? Optional.empty() : Optional.ofNullable(this.notificationSettings);
+        return Optional.ofNullable(this.notificationSettings);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetResourceId")
-      private final @Nullable String targetResourceId;
+    private @Nullable String targetResourceId;
 
     public Optional<String> targetResourceId() {
-        return this.targetResourceId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceId);
+        return Optional.ofNullable(this.targetResourceId);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="taskType")
-      private final @Nullable String taskType;
+    private @Nullable String taskType;
 
     public Optional<String> taskType() {
-        return this.taskType == null ? Optional.empty() : Optional.ofNullable(this.taskType);
+        return Optional.ofNullable(this.taskType);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="timeZoneId")
-      private final @Nullable String timeZoneId;
+    private @Nullable String timeZoneId;
 
     public Optional<String> timeZoneId() {
-        return this.timeZoneId == null ? Optional.empty() : Optional.ofNullable(this.timeZoneId);
+        return Optional.ofNullable(this.timeZoneId);
     }
 
     /**
@@ -139,136 +139,106 @@ public final class ScheduleCreationParameterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="weeklyRecurrence")
-      private final @Nullable WeekDetailsResponse weeklyRecurrence;
+    private @Nullable WeekDetailsResponse weeklyRecurrence;
 
     public Optional<WeekDetailsResponse> weeklyRecurrence() {
-        return this.weeklyRecurrence == null ? Optional.empty() : Optional.ofNullable(this.weeklyRecurrence);
+        return Optional.ofNullable(this.weeklyRecurrence);
     }
 
-    public ScheduleCreationParameterResponse(
-        @Nullable DayDetailsResponse dailyRecurrence,
-        @Nullable HourDetailsResponse hourlyRecurrence,
-        String location,
-        @Nullable String name,
-        @Nullable NotificationSettingsResponse notificationSettings,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceId,
-        @Nullable String taskType,
-        @Nullable String timeZoneId,
-        @Nullable WeekDetailsResponse weeklyRecurrence) {
-        this.dailyRecurrence = dailyRecurrence;
-        this.hourlyRecurrence = hourlyRecurrence;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.notificationSettings = notificationSettings;
-        this.status = Codegen.stringProp("status").arg(status).def("Disabled").getNullable();
-        this.tags = tags;
-        this.targetResourceId = targetResourceId;
-        this.taskType = taskType;
-        this.timeZoneId = timeZoneId;
-        this.weeklyRecurrence = weeklyRecurrence;
-    }
+    private ScheduleCreationParameterResponse() {}
 
-    private ScheduleCreationParameterResponse() {
-        this.dailyRecurrence = null;
-        this.hourlyRecurrence = null;
-        this.location = null;
-        this.name = null;
-        this.notificationSettings = null;
-        this.status = null;
-        this.tags = Map.of();
-        this.targetResourceId = null;
-        this.taskType = null;
-        this.timeZoneId = null;
-        this.weeklyRecurrence = null;
+    private ScheduleCreationParameterResponse(ScheduleCreationParameterResponse $) {
+        this.dailyRecurrence = $.dailyRecurrence;
+        this.hourlyRecurrence = $.hourlyRecurrence;
+        this.location = $.location;
+        this.name = $.name;
+        this.notificationSettings = $.notificationSettings;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.targetResourceId = $.targetResourceId;
+        this.taskType = $.taskType;
+        this.timeZoneId = $.timeZoneId;
+        this.weeklyRecurrence = $.weeklyRecurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleCreationParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DayDetailsResponse dailyRecurrence;
-        private @Nullable HourDetailsResponse hourlyRecurrence;
-        private String location;
-        private @Nullable String name;
-        private @Nullable NotificationSettingsResponse notificationSettings;
-        private @Nullable String status;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String targetResourceId;
-        private @Nullable String taskType;
-        private @Nullable String timeZoneId;
-        private @Nullable WeekDetailsResponse weeklyRecurrence;
+        private ScheduleCreationParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleCreationParameterResponse();
         }
 
         public Builder(ScheduleCreationParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyRecurrence = defaults.dailyRecurrence;
-    	      this.hourlyRecurrence = defaults.hourlyRecurrence;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.notificationSettings = defaults.notificationSettings;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.targetResourceId = defaults.targetResourceId;
-    	      this.taskType = defaults.taskType;
-    	      this.timeZoneId = defaults.timeZoneId;
-    	      this.weeklyRecurrence = defaults.weeklyRecurrence;
+            $ = new ScheduleCreationParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
-            this.dailyRecurrence = dailyRecurrence;
+            $.dailyRecurrence = dailyRecurrence;
             return this;
         }
+
         public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
-            this.hourlyRecurrence = hourlyRecurrence;
+            $.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
-            this.notificationSettings = notificationSettings;
+            $.notificationSettings = notificationSettings;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = targetResourceId;
+            $.targetResourceId = targetResourceId;
             return this;
         }
+
         public Builder taskType(@Nullable String taskType) {
-            this.taskType = taskType;
+            $.taskType = taskType;
             return this;
         }
+
         public Builder timeZoneId(@Nullable String timeZoneId) {
-            this.timeZoneId = timeZoneId;
+            $.timeZoneId = timeZoneId;
             return this;
         }
+
         public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
-            this.weeklyRecurrence = weeklyRecurrence;
+            $.weeklyRecurrence = weeklyRecurrence;
             return this;
-        }        public ScheduleCreationParameterResponse build() {
-            return new ScheduleCreationParameterResponse(dailyRecurrence, hourlyRecurrence, location, name, notificationSettings, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);
+        }
+
+        public ScheduleCreationParameterResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.status = Codegen.stringProp("status").arg($.status).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

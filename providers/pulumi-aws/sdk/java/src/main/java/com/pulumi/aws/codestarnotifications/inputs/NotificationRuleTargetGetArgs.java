@@ -5,9 +5,9 @@ package com.pulumi.aws.codestarnotifications.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class NotificationRuleTargetGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="address", required=true)
-      private final Output<String> address;
+    private Output<String> address;
 
     public Output<String> address() {
         return this.address;
@@ -31,10 +31,10 @@ public final class NotificationRuleTargetGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class NotificationRuleTargetGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public NotificationRuleTargetGetArgs(
-        Output<String> address,
-        @Nullable Output<String> status,
-        @Nullable Output<String> type) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.status = status;
-        this.type = type;
-    }
+    private NotificationRuleTargetGetArgs() {}
 
-    private NotificationRuleTargetGetArgs() {
-        this.address = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private NotificationRuleTargetGetArgs(NotificationRuleTargetGetArgs $) {
+        this.address = $.address;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRuleTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> address;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> type;
+        private NotificationRuleTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRuleTargetGetArgs();
         }
 
         public Builder(NotificationRuleTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new NotificationRuleTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(Output<String> address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder address(String address) {
-            this.address = Output.of(Objects.requireNonNull(address));
-            return this;
+            return address(Output.of(address));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public NotificationRuleTargetGetArgs build() {
-            return new NotificationRuleTargetGetArgs(address, status, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public NotificationRuleTargetGetArgs build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.GenericSignedAttestationContentType;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.SignatureArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GenericSignedAttestationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<GenericSignedAttestationContentType> contentType;
+    private @Nullable Output<GenericSignedAttestationContentType> contentType;
 
-    public Output<GenericSignedAttestationContentType> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<GenericSignedAttestationContentType>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GenericSignedAttestationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serializedPayload")
-      private final @Nullable Output<String> serializedPayload;
+    private @Nullable Output<String> serializedPayload;
 
-    public Output<String> serializedPayload() {
-        return this.serializedPayload == null ? Codegen.empty() : this.serializedPayload;
+    public Optional<Output<String>> serializedPayload() {
+        return Optional.ofNullable(this.serializedPayload);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class GenericSignedAttestationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="signatures")
-      private final @Nullable Output<List<SignatureArgs>> signatures;
+    private @Nullable Output<List<SignatureArgs>> signatures;
 
-    public Output<List<SignatureArgs>> signatures() {
-        return this.signatures == null ? Codegen.empty() : this.signatures;
+    public Optional<Output<List<SignatureArgs>>> signatures() {
+        return Optional.ofNullable(this.signatures);
     }
 
-    public GenericSignedAttestationArgs(
-        @Nullable Output<GenericSignedAttestationContentType> contentType,
-        @Nullable Output<String> serializedPayload,
-        @Nullable Output<List<SignatureArgs>> signatures) {
-        this.contentType = contentType;
-        this.serializedPayload = serializedPayload;
-        this.signatures = signatures;
-    }
+    private GenericSignedAttestationArgs() {}
 
-    private GenericSignedAttestationArgs() {
-        this.contentType = Codegen.empty();
-        this.serializedPayload = Codegen.empty();
-        this.signatures = Codegen.empty();
+    private GenericSignedAttestationArgs(GenericSignedAttestationArgs $) {
+        this.contentType = $.contentType;
+        this.serializedPayload = $.serializedPayload;
+        this.signatures = $.signatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericSignedAttestationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GenericSignedAttestationContentType> contentType;
-        private @Nullable Output<String> serializedPayload;
-        private @Nullable Output<List<SignatureArgs>> signatures;
+        private GenericSignedAttestationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericSignedAttestationArgs();
         }
 
         public Builder(GenericSignedAttestationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.serializedPayload = defaults.serializedPayload;
-    	      this.signatures = defaults.signatures;
+            $ = new GenericSignedAttestationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<GenericSignedAttestationContentType> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable GenericSignedAttestationContentType contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(GenericSignedAttestationContentType contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder serializedPayload(@Nullable Output<String> serializedPayload) {
-            this.serializedPayload = serializedPayload;
+            $.serializedPayload = serializedPayload;
             return this;
         }
-        public Builder serializedPayload(@Nullable String serializedPayload) {
-            this.serializedPayload = Codegen.ofNullable(serializedPayload);
-            return this;
+
+        public Builder serializedPayload(String serializedPayload) {
+            return serializedPayload(Output.of(serializedPayload));
         }
+
         public Builder signatures(@Nullable Output<List<SignatureArgs>> signatures) {
-            this.signatures = signatures;
+            $.signatures = signatures;
             return this;
         }
-        public Builder signatures(@Nullable List<SignatureArgs> signatures) {
-            this.signatures = Codegen.ofNullable(signatures);
-            return this;
+
+        public Builder signatures(List<SignatureArgs> signatures) {
+            return signatures(Output.of(signatures));
         }
+
         public Builder signatures(SignatureArgs... signatures) {
             return signatures(List.of(signatures));
-        }        public GenericSignedAttestationArgs build() {
-            return new GenericSignedAttestationArgs(contentType, serializedPayload, signatures);
+        }
+
+        public GenericSignedAttestationArgs build() {
+            return $;
         }
     }
+
 }

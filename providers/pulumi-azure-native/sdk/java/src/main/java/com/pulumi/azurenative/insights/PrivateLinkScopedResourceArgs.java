@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="linkedResourceId")
-      private final @Nullable Output<String> linkedResourceId;
+    private @Nullable Output<String> linkedResourceId;
 
-    public Output<String> linkedResourceId() {
-        return this.linkedResourceId == null ? Codegen.empty() : this.linkedResourceId;
+    public Optional<Output<String>> linkedResourceId() {
+        return Optional.ofNullable(this.linkedResourceId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,80 @@ public final class PrivateLinkScopedResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="scopeName", required=true)
-      private final Output<String> scopeName;
+    private Output<String> scopeName;
 
     public Output<String> scopeName() {
         return this.scopeName;
     }
 
-    public PrivateLinkScopedResourceArgs(
-        @Nullable Output<String> linkedResourceId,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<String> scopeName) {
-        this.linkedResourceId = linkedResourceId;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeName = Objects.requireNonNull(scopeName, "expected parameter 'scopeName' to be non-null");
-    }
+    private PrivateLinkScopedResourceArgs() {}
 
-    private PrivateLinkScopedResourceArgs() {
-        this.linkedResourceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scopeName = Codegen.empty();
+    private PrivateLinkScopedResourceArgs(PrivateLinkScopedResourceArgs $) {
+        this.linkedResourceId = $.linkedResourceId;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeName = $.scopeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkScopedResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> linkedResourceId;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<String> scopeName;
+        private PrivateLinkScopedResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkScopedResourceArgs();
         }
 
         public Builder(PrivateLinkScopedResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedResourceId = defaults.linkedResourceId;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeName = defaults.scopeName;
+            $ = new PrivateLinkScopedResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedResourceId(@Nullable Output<String> linkedResourceId) {
-            this.linkedResourceId = linkedResourceId;
+            $.linkedResourceId = linkedResourceId;
             return this;
         }
-        public Builder linkedResourceId(@Nullable String linkedResourceId) {
-            this.linkedResourceId = Codegen.ofNullable(linkedResourceId);
-            return this;
+
+        public Builder linkedResourceId(String linkedResourceId) {
+            return linkedResourceId(Output.of(linkedResourceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scopeName(Output<String> scopeName) {
-            this.scopeName = Objects.requireNonNull(scopeName);
+            $.scopeName = scopeName;
             return this;
         }
+
         public Builder scopeName(String scopeName) {
-            this.scopeName = Output.of(Objects.requireNonNull(scopeName));
-            return this;
-        }        public PrivateLinkScopedResourceArgs build() {
-            return new PrivateLinkScopedResourceArgs(linkedResourceId, name, resourceGroupName, scopeName);
+            return scopeName(Output.of(scopeName));
+        }
+
+        public PrivateLinkScopedResourceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scopeName = Objects.requireNonNull($.scopeName, "expected parameter 'scopeName' to be non-null");
+            return $;
         }
     }
+
 }

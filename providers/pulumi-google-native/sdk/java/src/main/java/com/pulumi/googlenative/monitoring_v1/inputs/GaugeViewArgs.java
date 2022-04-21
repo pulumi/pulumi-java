@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GaugeViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lowerBound")
-      private final @Nullable Output<Double> lowerBound;
+    private @Nullable Output<Double> lowerBound;
 
-    public Output<Double> lowerBound() {
-        return this.lowerBound == null ? Codegen.empty() : this.lowerBound;
+    public Optional<Output<Double>> lowerBound() {
+        return Optional.ofNullable(this.lowerBound);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GaugeViewArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upperBound")
-      private final @Nullable Output<Double> upperBound;
+    private @Nullable Output<Double> upperBound;
 
-    public Output<Double> upperBound() {
-        return this.upperBound == null ? Codegen.empty() : this.upperBound;
+    public Optional<Output<Double>> upperBound() {
+        return Optional.ofNullable(this.upperBound);
     }
 
-    public GaugeViewArgs(
-        @Nullable Output<Double> lowerBound,
-        @Nullable Output<Double> upperBound) {
-        this.lowerBound = lowerBound;
-        this.upperBound = upperBound;
-    }
+    private GaugeViewArgs() {}
 
-    private GaugeViewArgs() {
-        this.lowerBound = Codegen.empty();
-        this.upperBound = Codegen.empty();
+    private GaugeViewArgs(GaugeViewArgs $) {
+        this.lowerBound = $.lowerBound;
+        this.upperBound = $.upperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GaugeViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> lowerBound;
-        private @Nullable Output<Double> upperBound;
+        private GaugeViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GaugeViewArgs();
         }
 
         public Builder(GaugeViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lowerBound = defaults.lowerBound;
-    	      this.upperBound = defaults.upperBound;
+            $ = new GaugeViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lowerBound(@Nullable Output<Double> lowerBound) {
-            this.lowerBound = lowerBound;
+            $.lowerBound = lowerBound;
             return this;
         }
-        public Builder lowerBound(@Nullable Double lowerBound) {
-            this.lowerBound = Codegen.ofNullable(lowerBound);
-            return this;
+
+        public Builder lowerBound(Double lowerBound) {
+            return lowerBound(Output.of(lowerBound));
         }
+
         public Builder upperBound(@Nullable Output<Double> upperBound) {
-            this.upperBound = upperBound;
+            $.upperBound = upperBound;
             return this;
         }
-        public Builder upperBound(@Nullable Double upperBound) {
-            this.upperBound = Codegen.ofNullable(upperBound);
-            return this;
-        }        public GaugeViewArgs build() {
-            return new GaugeViewArgs(lowerBound, upperBound);
+
+        public Builder upperBound(Double upperBound) {
+            return upperBound(Output.of(upperBound));
+        }
+
+        public GaugeViewArgs build() {
+            return $;
         }
     }
+
 }

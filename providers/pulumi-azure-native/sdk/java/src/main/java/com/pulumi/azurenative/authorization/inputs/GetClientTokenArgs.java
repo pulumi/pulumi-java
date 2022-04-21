@@ -19,45 +19,44 @@ public final class GetClientTokenArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
-    public GetClientTokenArgs(@Nullable String endpoint) {
-        this.endpoint = endpoint;
-    }
+    private GetClientTokenArgs() {}
 
-    private GetClientTokenArgs() {
-        this.endpoint = null;
+    private GetClientTokenArgs(GetClientTokenArgs $) {
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClientTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
+        private GetClientTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClientTokenArgs();
         }
 
         public Builder(GetClientTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
+            $ = new GetClientTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
-        }        public GetClientTokenArgs build() {
-            return new GetClientTokenArgs(endpoint);
+        }
+
+        public GetClientTokenArgs build() {
+            return $;
         }
     }
+
 }

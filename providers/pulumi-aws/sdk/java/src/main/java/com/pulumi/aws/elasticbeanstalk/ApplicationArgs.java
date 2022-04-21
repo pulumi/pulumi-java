@@ -6,10 +6,10 @@ package com.pulumi.aws.elasticbeanstalk;
 import com.pulumi.aws.elasticbeanstalk.inputs.ApplicationAppversionLifecycleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @Import(name="appversionLifecycle")
-      private final @Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle;
+    private @Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle;
 
-    public Output<ApplicationAppversionLifecycleArgs> appversionLifecycle() {
-        return this.appversionLifecycle == null ? Codegen.empty() : this.appversionLifecycle;
+    public Optional<Output<ApplicationAppversionLifecycleArgs>> appversionLifecycle() {
+        return Optional.ofNullable(this.appversionLifecycle);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -51,89 +51,78 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ApplicationArgs(
-        @Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags) {
-        this.appversionLifecycle = appversionLifecycle;
-        this.description = description;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.appversionLifecycle = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.appversionLifecycle = $.appversionLifecycle;
+        this.description = $.description;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appversionLifecycle = defaults.appversionLifecycle;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appversionLifecycle(@Nullable Output<ApplicationAppversionLifecycleArgs> appversionLifecycle) {
-            this.appversionLifecycle = appversionLifecycle;
+            $.appversionLifecycle = appversionLifecycle;
             return this;
         }
-        public Builder appversionLifecycle(@Nullable ApplicationAppversionLifecycleArgs appversionLifecycle) {
-            this.appversionLifecycle = Codegen.ofNullable(appversionLifecycle);
-            return this;
+
+        public Builder appversionLifecycle(ApplicationAppversionLifecycleArgs appversionLifecycle) {
+            return appversionLifecycle(Output.of(appversionLifecycle));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(appversionLifecycle, description, name, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ApplicationArgs build() {
+            return $;
         }
     }
+
 }

@@ -32,10 +32,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allowSelfSignedServerCert")
-      private final @Nullable Object allowSelfSignedServerCert;
+    private @Nullable Object allowSelfSignedServerCert;
 
     public Optional<Object> allowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
+        return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="authSource")
-      private final @Nullable Object authSource;
+    private @Nullable Object authSource;
 
     public Optional<Object> authSource() {
-        return this.authSource == null ? Optional.empty() : Optional.ofNullable(this.authSource);
+        return Optional.ofNullable(this.authSource);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Object databaseName;
+    private Object databaseName;
 
     public Object databaseName() {
         return this.databaseName;
@@ -98,10 +98,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableSsl")
-      private final @Nullable Object enableSsl;
+    private @Nullable Object enableSsl;
 
     public Optional<Object> enableSsl() {
-        return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
+        return Optional.ofNullable(this.enableSsl);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="port")
-      private final @Nullable Object port;
+    private @Nullable Object port;
 
     public Optional<Object> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -164,7 +164,7 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="server", required=true)
-      private final Object server;
+    private Object server;
 
     public Object server() {
         return this.server;
@@ -176,7 +176,7 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -187,175 +187,135 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public MongoDbLinkedServiceResponse(
-        @Nullable Object allowSelfSignedServerCert,
-        @Nullable List<Object> annotations,
-        @Nullable Object authSource,
-        @Nullable String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object databaseName,
-        @Nullable String description,
-        @Nullable Object enableSsl,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        Object server,
-        String type,
-        @Nullable Object username) {
-        this.allowSelfSignedServerCert = allowSelfSignedServerCert;
-        this.annotations = annotations;
-        this.authSource = authSource;
-        this.authenticationType = authenticationType;
-        this.connectVia = connectVia;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.description = description;
-        this.enableSsl = enableSsl;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.port = port;
-        this.server = Objects.requireNonNull(server, "expected parameter 'server' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private MongoDbLinkedServiceResponse() {}
 
-    private MongoDbLinkedServiceResponse() {
-        this.allowSelfSignedServerCert = null;
-        this.annotations = List.of();
-        this.authSource = null;
-        this.authenticationType = null;
-        this.connectVia = null;
-        this.databaseName = null;
-        this.description = null;
-        this.enableSsl = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.port = null;
-        this.server = null;
-        this.type = null;
-        this.username = null;
+    private MongoDbLinkedServiceResponse(MongoDbLinkedServiceResponse $) {
+        this.allowSelfSignedServerCert = $.allowSelfSignedServerCert;
+        this.annotations = $.annotations;
+        this.authSource = $.authSource;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.databaseName = $.databaseName;
+        this.description = $.description;
+        this.enableSsl = $.enableSsl;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.port = $.port;
+        this.server = $.server;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDbLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object allowSelfSignedServerCert;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object authSource;
-        private @Nullable String authenticationType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private Object databaseName;
-        private @Nullable String description;
-        private @Nullable Object enableSsl;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object port;
-        private Object server;
-        private String type;
-        private @Nullable Object username;
+        private MongoDbLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDbLinkedServiceResponse();
         }
 
         public Builder(MongoDbLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSelfSignedServerCert = defaults.allowSelfSignedServerCert;
-    	      this.annotations = defaults.annotations;
-    	      this.authSource = defaults.authSource;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.databaseName = defaults.databaseName;
-    	      this.description = defaults.description;
-    	      this.enableSsl = defaults.enableSsl;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.server = defaults.server;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new MongoDbLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = allowSelfSignedServerCert;
+            $.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authSource(@Nullable Object authSource) {
-            this.authSource = authSource;
+            $.authSource = authSource;
             return this;
         }
+
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder databaseName(Object databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = enableSsl;
+            $.enableSsl = enableSsl;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(@Nullable Object port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder server(Object server) {
-            this.server = Objects.requireNonNull(server);
+            $.server = server;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public MongoDbLinkedServiceResponse build() {
-            return new MongoDbLinkedServiceResponse(allowSelfSignedServerCert, annotations, authSource, authenticationType, connectVia, databaseName, description, enableSsl, encryptedCredential, parameters, password, port, server, type, username);
+        }
+
+        public MongoDbLinkedServiceResponse build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.server = Objects.requireNonNull($.server, "expected parameter 'server' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

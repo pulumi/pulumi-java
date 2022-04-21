@@ -24,7 +24,7 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="event", required=true)
-      private final String event;
+    private String event;
 
     public String event() {
         return this.event;
@@ -35,10 +35,10 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="filter")
-      private final @Nullable BucketNotificationFilter filter;
+    private @Nullable BucketNotificationFilter filter;
 
     public Optional<BucketNotificationFilter> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class BucketLambdaConfiguration extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="function", required=true)
-      private final String function;
+    private String function;
 
     public String function() {
         return this.function;
     }
 
-    public BucketLambdaConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String function) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.filter = filter;
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-    }
+    private BucketLambdaConfiguration() {}
 
-    private BucketLambdaConfiguration() {
-        this.event = null;
-        this.filter = null;
-        this.function = null;
+    private BucketLambdaConfiguration(BucketLambdaConfiguration $) {
+        this.event = $.event;
+        this.filter = $.filter;
+        this.function = $.function;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLambdaConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String event;
-        private @Nullable BucketNotificationFilter filter;
-        private String function;
+        private BucketLambdaConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLambdaConfiguration();
         }
 
         public Builder(BucketLambdaConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.filter = defaults.filter;
-    	      this.function = defaults.function;
+            $ = new BucketLambdaConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder event(String event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder filter(@Nullable BucketNotificationFilter filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder function(String function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
-        }        public BucketLambdaConfiguration build() {
-            return new BucketLambdaConfiguration(event, filter, function);
+        }
+
+        public BucketLambdaConfiguration build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            return $;
         }
     }
+
 }

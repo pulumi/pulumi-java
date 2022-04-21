@@ -37,7 +37,7 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connectVia", required=true)
-      private final IntegrationRuntimeReferenceResponse connectVia;
+    private IntegrationRuntimeReferenceResponse connectVia;
 
     public IntegrationRuntimeReferenceResponse connectVia() {
         return this.connectVia;
@@ -48,10 +48,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="environmentPath")
-      private final @Nullable Object environmentPath;
+    private @Nullable Object environmentPath;
 
     public Optional<Object> environmentPath() {
-        return this.environmentPath == null ? Optional.empty() : Optional.ofNullable(this.environmentPath);
+        return Optional.ofNullable(this.environmentPath);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="executionCredential")
-      private final @Nullable SSISExecutionCredentialResponse executionCredential;
+    private @Nullable SSISExecutionCredentialResponse executionCredential;
 
     public Optional<SSISExecutionCredentialResponse> executionCredential() {
-        return this.executionCredential == null ? Optional.empty() : Optional.ofNullable(this.executionCredential);
+        return Optional.ofNullable(this.executionCredential);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="logLocation")
-      private final @Nullable SSISLogLocationResponse logLocation;
+    private @Nullable SSISLogLocationResponse logLocation;
 
     public Optional<SSISLogLocationResponse> logLocation() {
-        return this.logLocation == null ? Optional.empty() : Optional.ofNullable(this.logLocation);
+        return Optional.ofNullable(this.logLocation);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="loggingLevel")
-      private final @Nullable Object loggingLevel;
+    private @Nullable Object loggingLevel;
 
     public Optional<Object> loggingLevel() {
-        return this.loggingLevel == null ? Optional.empty() : Optional.ofNullable(this.loggingLevel);
+        return Optional.ofNullable(this.loggingLevel);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -136,10 +136,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="packageConnectionManagers")
-      private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
+    private @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
 
-    public Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers() {
-        return this.packageConnectionManagers == null ? Map.of() : this.packageConnectionManagers;
+    public Optional<Map<String,Map<String,SSISExecutionParameterResponse>>> packageConnectionManagers() {
+        return Optional.ofNullable(this.packageConnectionManagers);
     }
 
     /**
@@ -147,7 +147,7 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="packageLocation", required=true)
-      private final SSISPackageLocationResponse packageLocation;
+    private SSISPackageLocationResponse packageLocation;
 
     public SSISPackageLocationResponse packageLocation() {
         return this.packageLocation;
@@ -158,10 +158,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="packageParameters")
-      private final @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
+    private @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
 
-    public Map<String,SSISExecutionParameterResponse> packageParameters() {
-        return this.packageParameters == null ? Map.of() : this.packageParameters;
+    public Optional<Map<String,SSISExecutionParameterResponse>> packageParameters() {
+        return Optional.ofNullable(this.packageParameters);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="projectConnectionManagers")
-      private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
+    private @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
 
-    public Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers() {
-        return this.projectConnectionManagers == null ? Map.of() : this.projectConnectionManagers;
+    public Optional<Map<String,Map<String,SSISExecutionParameterResponse>>> projectConnectionManagers() {
+        return Optional.ofNullable(this.projectConnectionManagers);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="projectParameters")
-      private final @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
+    private @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
 
-    public Map<String,SSISExecutionParameterResponse> projectParameters() {
-        return this.projectParameters == null ? Map.of() : this.projectParameters;
+    public Optional<Map<String,SSISExecutionParameterResponse>> projectParameters() {
+        return Optional.ofNullable(this.projectParameters);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="propertyOverrides")
-      private final @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
+    private @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
 
-    public Map<String,SSISPropertyOverrideResponse> propertyOverrides() {
-        return this.propertyOverrides == null ? Map.of() : this.propertyOverrides;
+    public Optional<Map<String,SSISPropertyOverrideResponse>> propertyOverrides() {
+        return Optional.ofNullable(this.propertyOverrides);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="runtime")
-      private final @Nullable Object runtime;
+    private @Nullable Object runtime;
 
     public Optional<Object> runtime() {
-        return this.runtime == null ? Optional.empty() : Optional.ofNullable(this.runtime);
+        return Optional.ofNullable(this.runtime);
     }
 
     /**
@@ -225,7 +225,7 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -236,214 +236,164 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public ExecuteSSISPackageActivityResponse(
-        IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object environmentPath,
-        @Nullable SSISExecutionCredentialResponse executionCredential,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable SSISLogLocationResponse logLocation,
-        @Nullable Object loggingLevel,
-        String name,
-        @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers,
-        SSISPackageLocationResponse packageLocation,
-        @Nullable Map<String,SSISExecutionParameterResponse> packageParameters,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers,
-        @Nullable Map<String,SSISExecutionParameterResponse> projectParameters,
-        @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides,
-        @Nullable Object runtime,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.connectVia = Objects.requireNonNull(connectVia, "expected parameter 'connectVia' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.environmentPath = environmentPath;
-        this.executionCredential = executionCredential;
-        this.linkedServiceName = linkedServiceName;
-        this.logLocation = logLocation;
-        this.loggingLevel = loggingLevel;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.packageConnectionManagers = packageConnectionManagers;
-        this.packageLocation = Objects.requireNonNull(packageLocation, "expected parameter 'packageLocation' to be non-null");
-        this.packageParameters = packageParameters;
-        this.policy = policy;
-        this.projectConnectionManagers = projectConnectionManagers;
-        this.projectParameters = projectParameters;
-        this.propertyOverrides = propertyOverrides;
-        this.runtime = runtime;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private ExecuteSSISPackageActivityResponse() {}
 
-    private ExecuteSSISPackageActivityResponse() {
-        this.connectVia = null;
-        this.dependsOn = List.of();
-        this.description = null;
-        this.environmentPath = null;
-        this.executionCredential = null;
-        this.linkedServiceName = null;
-        this.logLocation = null;
-        this.loggingLevel = null;
-        this.name = null;
-        this.packageConnectionManagers = Map.of();
-        this.packageLocation = null;
-        this.packageParameters = Map.of();
-        this.policy = null;
-        this.projectConnectionManagers = Map.of();
-        this.projectParameters = Map.of();
-        this.propertyOverrides = Map.of();
-        this.runtime = null;
-        this.type = null;
-        this.userProperties = List.of();
+    private ExecuteSSISPackageActivityResponse(ExecuteSSISPackageActivityResponse $) {
+        this.connectVia = $.connectVia;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.environmentPath = $.environmentPath;
+        this.executionCredential = $.executionCredential;
+        this.linkedServiceName = $.linkedServiceName;
+        this.logLocation = $.logLocation;
+        this.loggingLevel = $.loggingLevel;
+        this.name = $.name;
+        this.packageConnectionManagers = $.packageConnectionManagers;
+        this.packageLocation = $.packageLocation;
+        this.packageParameters = $.packageParameters;
+        this.policy = $.policy;
+        this.projectConnectionManagers = $.projectConnectionManagers;
+        this.projectParameters = $.projectParameters;
+        this.propertyOverrides = $.propertyOverrides;
+        this.runtime = $.runtime;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecuteSSISPackageActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Object environmentPath;
-        private @Nullable SSISExecutionCredentialResponse executionCredential;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable SSISLogLocationResponse logLocation;
-        private @Nullable Object loggingLevel;
-        private String name;
-        private @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
-        private SSISPackageLocationResponse packageLocation;
-        private @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
-        private @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
-        private @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
-        private @Nullable Object runtime;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private ExecuteSSISPackageActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecuteSSISPackageActivityResponse();
         }
 
         public Builder(ExecuteSSISPackageActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectVia = defaults.connectVia;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.environmentPath = defaults.environmentPath;
-    	      this.executionCredential = defaults.executionCredential;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.logLocation = defaults.logLocation;
-    	      this.loggingLevel = defaults.loggingLevel;
-    	      this.name = defaults.name;
-    	      this.packageConnectionManagers = defaults.packageConnectionManagers;
-    	      this.packageLocation = defaults.packageLocation;
-    	      this.packageParameters = defaults.packageParameters;
-    	      this.policy = defaults.policy;
-    	      this.projectConnectionManagers = defaults.projectConnectionManagers;
-    	      this.projectParameters = defaults.projectParameters;
-    	      this.propertyOverrides = defaults.propertyOverrides;
-    	      this.runtime = defaults.runtime;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new ExecuteSSISPackageActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectVia(IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = Objects.requireNonNull(connectVia);
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder environmentPath(@Nullable Object environmentPath) {
-            this.environmentPath = environmentPath;
+            $.environmentPath = environmentPath;
             return this;
         }
+
         public Builder executionCredential(@Nullable SSISExecutionCredentialResponse executionCredential) {
-            this.executionCredential = executionCredential;
+            $.executionCredential = executionCredential;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder logLocation(@Nullable SSISLogLocationResponse logLocation) {
-            this.logLocation = logLocation;
+            $.logLocation = logLocation;
             return this;
         }
+
         public Builder loggingLevel(@Nullable Object loggingLevel) {
-            this.loggingLevel = loggingLevel;
+            $.loggingLevel = loggingLevel;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers) {
-            this.packageConnectionManagers = packageConnectionManagers;
+            $.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
+
         public Builder packageLocation(SSISPackageLocationResponse packageLocation) {
-            this.packageLocation = Objects.requireNonNull(packageLocation);
+            $.packageLocation = packageLocation;
             return this;
         }
+
         public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterResponse> packageParameters) {
-            this.packageParameters = packageParameters;
+            $.packageParameters = packageParameters;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers) {
-            this.projectConnectionManagers = projectConnectionManagers;
+            $.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
+
         public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterResponse> projectParameters) {
-            this.projectParameters = projectParameters;
+            $.projectParameters = projectParameters;
             return this;
         }
+
         public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides) {
-            this.propertyOverrides = propertyOverrides;
+            $.propertyOverrides = propertyOverrides;
             return this;
         }
+
         public Builder runtime(@Nullable Object runtime) {
-            this.runtime = runtime;
+            $.runtime = runtime;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public ExecuteSSISPackageActivityResponse build() {
-            return new ExecuteSSISPackageActivityResponse(connectVia, dependsOn, description, environmentPath, executionCredential, linkedServiceName, logLocation, loggingLevel, name, packageConnectionManagers, packageLocation, packageParameters, policy, projectConnectionManagers, projectParameters, propertyOverrides, runtime, type, userProperties);
+        }
+
+        public ExecuteSSISPackageActivityResponse build() {
+            $.connectVia = Objects.requireNonNull($.connectVia, "expected parameter 'connectVia' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.packageLocation = Objects.requireNonNull($.packageLocation, "expected parameter 'packageLocation' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

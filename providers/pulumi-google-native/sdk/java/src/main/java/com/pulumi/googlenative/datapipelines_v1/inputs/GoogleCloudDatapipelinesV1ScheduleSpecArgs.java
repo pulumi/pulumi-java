@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends com.pulumi
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends com.pulumi
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public GoogleCloudDatapipelinesV1ScheduleSpecArgs(
-        @Nullable Output<String> schedule,
-        @Nullable Output<String> timeZone) {
-        this.schedule = schedule;
-        this.timeZone = timeZone;
-    }
+    private GoogleCloudDatapipelinesV1ScheduleSpecArgs() {}
 
-    private GoogleCloudDatapipelinesV1ScheduleSpecArgs() {
-        this.schedule = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private GoogleCloudDatapipelinesV1ScheduleSpecArgs(GoogleCloudDatapipelinesV1ScheduleSpecArgs $) {
+        this.schedule = $.schedule;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1ScheduleSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<String> timeZone;
+        private GoogleCloudDatapipelinesV1ScheduleSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1ScheduleSpecArgs();
         }
 
         public Builder(GoogleCloudDatapipelinesV1ScheduleSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.timeZone = defaults.timeZone;
+            $ = new GoogleCloudDatapipelinesV1ScheduleSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public GoogleCloudDatapipelinesV1ScheduleSpecArgs build() {
-            return new GoogleCloudDatapipelinesV1ScheduleSpecArgs(schedule, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public GoogleCloudDatapipelinesV1ScheduleSpecArgs build() {
+            return $;
         }
     }
+
 }

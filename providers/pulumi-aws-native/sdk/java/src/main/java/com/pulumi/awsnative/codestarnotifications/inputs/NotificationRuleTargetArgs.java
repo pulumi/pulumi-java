@@ -5,7 +5,6 @@ package com.pulumi.awsnative.codestarnotifications.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class NotificationRuleTargetArgs extends com.pulumi.resources.Resou
     public static final NotificationRuleTargetArgs Empty = new NotificationRuleTargetArgs();
 
     @Import(name="targetAddress", required=true)
-      private final Output<String> targetAddress;
+    private Output<String> targetAddress;
 
     public Output<String> targetAddress() {
         return this.targetAddress;
     }
 
     @Import(name="targetType", required=true)
-      private final Output<String> targetType;
+    private Output<String> targetType;
 
     public Output<String> targetType() {
         return this.targetType;
     }
 
-    public NotificationRuleTargetArgs(
-        Output<String> targetAddress,
-        Output<String> targetType) {
-        this.targetAddress = Objects.requireNonNull(targetAddress, "expected parameter 'targetAddress' to be non-null");
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-    }
+    private NotificationRuleTargetArgs() {}
 
-    private NotificationRuleTargetArgs() {
-        this.targetAddress = Codegen.empty();
-        this.targetType = Codegen.empty();
+    private NotificationRuleTargetArgs(NotificationRuleTargetArgs $) {
+        this.targetAddress = $.targetAddress;
+        this.targetType = $.targetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRuleTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> targetAddress;
-        private Output<String> targetType;
+        private NotificationRuleTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRuleTargetArgs();
         }
 
         public Builder(NotificationRuleTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetAddress = defaults.targetAddress;
-    	      this.targetType = defaults.targetType;
+            $ = new NotificationRuleTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetAddress(Output<String> targetAddress) {
-            this.targetAddress = Objects.requireNonNull(targetAddress);
+            $.targetAddress = targetAddress;
             return this;
         }
+
         public Builder targetAddress(String targetAddress) {
-            this.targetAddress = Output.of(Objects.requireNonNull(targetAddress));
-            return this;
+            return targetAddress(Output.of(targetAddress));
         }
+
         public Builder targetType(Output<String> targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
         }
+
         public Builder targetType(String targetType) {
-            this.targetType = Output.of(Objects.requireNonNull(targetType));
-            return this;
-        }        public NotificationRuleTargetArgs build() {
-            return new NotificationRuleTargetArgs(targetAddress, targetType);
+            return targetType(Output.of(targetType));
+        }
+
+        public NotificationRuleTargetArgs build() {
+            $.targetAddress = Objects.requireNonNull($.targetAddress, "expected parameter 'targetAddress' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            return $;
         }
     }
+
 }

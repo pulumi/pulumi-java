@@ -24,10 +24,10 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isEncrypted")
-      private final @Nullable Boolean isEncrypted;
+    private @Nullable Boolean isEncrypted;
 
     public Optional<Boolean> isEncrypted() {
-        return this.isEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isEncrypted);
+        return Optional.ofNullable(this.isEncrypted);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isOptional")
-      private final @Nullable Boolean isOptional;
+    private @Nullable Boolean isOptional;
 
     public Optional<Boolean> isOptional() {
-        return this.isOptional == null ? Optional.empty() : Optional.ofNullable(this.isOptional);
+        return Optional.ofNullable(this.isOptional);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class FieldDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FieldDefinitionResponse(
-        @Nullable Boolean isEncrypted,
-        @Nullable Boolean isOptional,
-        String type) {
-        this.isEncrypted = isEncrypted;
-        this.isOptional = isOptional;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FieldDefinitionResponse() {}
 
-    private FieldDefinitionResponse() {
-        this.isEncrypted = null;
-        this.isOptional = null;
-        this.type = null;
+    private FieldDefinitionResponse(FieldDefinitionResponse $) {
+        this.isEncrypted = $.isEncrypted;
+        this.isOptional = $.isOptional;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isEncrypted;
-        private @Nullable Boolean isOptional;
-        private String type;
+        private FieldDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldDefinitionResponse();
         }
 
         public Builder(FieldDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEncrypted = defaults.isEncrypted;
-    	      this.isOptional = defaults.isOptional;
-    	      this.type = defaults.type;
+            $ = new FieldDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = isEncrypted;
+            $.isEncrypted = isEncrypted;
             return this;
         }
+
         public Builder isOptional(@Nullable Boolean isOptional) {
-            this.isOptional = isOptional;
+            $.isOptional = isOptional;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FieldDefinitionResponse build() {
-            return new FieldDefinitionResponse(isEncrypted, isOptional, type);
+        }
+
+        public FieldDefinitionResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

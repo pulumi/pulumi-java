@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,49 +23,49 @@ public final class Hl7StoreNotificationConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final Output<String> pubsubTopic;
+    private Output<String> pubsubTopic;
 
     public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public Hl7StoreNotificationConfigArgs(Output<String> pubsubTopic) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-    }
+    private Hl7StoreNotificationConfigArgs() {}
 
-    private Hl7StoreNotificationConfigArgs() {
-        this.pubsubTopic = Codegen.empty();
+    private Hl7StoreNotificationConfigArgs(Hl7StoreNotificationConfigArgs $) {
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreNotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> pubsubTopic;
+        private Hl7StoreNotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreNotificationConfigArgs();
         }
 
         public Builder(Hl7StoreNotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new Hl7StoreNotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopic(Output<String> pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
+
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
-            return this;
-        }        public Hl7StoreNotificationConfigArgs build() {
-            return new Hl7StoreNotificationConfigArgs(pubsubTopic);
+            return pubsubTopic(Output.of(pubsubTopic));
+        }
+
+        public Hl7StoreNotificationConfigArgs build() {
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            return $;
         }
     }
+
 }

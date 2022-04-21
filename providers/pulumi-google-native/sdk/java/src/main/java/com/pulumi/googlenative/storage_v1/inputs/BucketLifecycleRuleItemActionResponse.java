@@ -21,7 +21,7 @@ public final class BucketLifecycleRuleItemActionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="storageClass", required=true)
-      private final String storageClass;
+    private String storageClass;
 
     public String storageClass() {
         return this.storageClass;
@@ -32,55 +32,52 @@ public final class BucketLifecycleRuleItemActionResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BucketLifecycleRuleItemActionResponse(
-        String storageClass,
-        String type) {
-        this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BucketLifecycleRuleItemActionResponse() {}
 
-    private BucketLifecycleRuleItemActionResponse() {
-        this.storageClass = null;
-        this.type = null;
+    private BucketLifecycleRuleItemActionResponse(BucketLifecycleRuleItemActionResponse $) {
+        this.storageClass = $.storageClass;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleItemActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String storageClass;
-        private String type;
+        private BucketLifecycleRuleItemActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleItemActionResponse();
         }
 
         public Builder(BucketLifecycleRuleItemActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageClass = defaults.storageClass;
-    	      this.type = defaults.type;
+            $ = new BucketLifecycleRuleItemActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder storageClass(String storageClass) {
-            this.storageClass = Objects.requireNonNull(storageClass);
+            $.storageClass = storageClass;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BucketLifecycleRuleItemActionResponse build() {
-            return new BucketLifecycleRuleItemActionResponse(storageClass, type);
+        }
+
+        public BucketLifecycleRuleItemActionResponse build() {
+            $.storageClass = Objects.requireNonNull($.storageClass, "expected parameter 'storageClass' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

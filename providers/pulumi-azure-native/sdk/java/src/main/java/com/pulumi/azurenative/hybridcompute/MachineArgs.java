@@ -7,10 +7,10 @@ import com.pulumi.azurenative.hybridcompute.inputs.LocationDataArgs;
 import com.pulumi.azurenative.hybridcompute.inputs.MachineIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientPublicKey")
-      private final @Nullable Output<String> clientPublicKey;
+    private @Nullable Output<String> clientPublicKey;
 
-    public Output<String> clientPublicKey() {
-        return this.clientPublicKey == null ? Codegen.empty() : this.clientPublicKey;
+    public Optional<Output<String>> clientPublicKey() {
+        return Optional.ofNullable(this.clientPublicKey);
     }
 
     @Import(name="identity")
-      private final @Nullable Output<MachineIdentityArgs> identity;
+    private @Nullable Output<MachineIdentityArgs> identity;
 
-    public Output<MachineIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<MachineIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationData")
-      private final @Nullable Output<LocationDataArgs> locationData;
+    private @Nullable Output<LocationDataArgs> locationData;
 
-    public Output<LocationDataArgs> locationData() {
-        return this.locationData == null ? Codegen.empty() : this.locationData;
+    public Optional<Output<LocationDataArgs>> locationData() {
+        return Optional.ofNullable(this.locationData);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -85,10 +85,10 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -96,141 +96,119 @@ public final class MachineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmId")
-      private final @Nullable Output<String> vmId;
+    private @Nullable Output<String> vmId;
 
-    public Output<String> vmId() {
-        return this.vmId == null ? Codegen.empty() : this.vmId;
+    public Optional<Output<String>> vmId() {
+        return Optional.ofNullable(this.vmId);
     }
 
-    public MachineArgs(
-        @Nullable Output<String> clientPublicKey,
-        @Nullable Output<MachineIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<LocationDataArgs> locationData,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vmId) {
-        this.clientPublicKey = clientPublicKey;
-        this.identity = identity;
-        this.location = location;
-        this.locationData = locationData;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vmId = vmId;
-    }
+    private MachineArgs() {}
 
-    private MachineArgs() {
-        this.clientPublicKey = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.locationData = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vmId = Codegen.empty();
+    private MachineArgs(MachineArgs $) {
+        this.clientPublicKey = $.clientPublicKey;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.locationData = $.locationData;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vmId = $.vmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientPublicKey;
-        private @Nullable Output<MachineIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<LocationDataArgs> locationData;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vmId;
+        private MachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineArgs();
         }
 
         public Builder(MachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientPublicKey = defaults.clientPublicKey;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.locationData = defaults.locationData;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vmId = defaults.vmId;
+            $ = new MachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientPublicKey(@Nullable Output<String> clientPublicKey) {
-            this.clientPublicKey = clientPublicKey;
+            $.clientPublicKey = clientPublicKey;
             return this;
         }
-        public Builder clientPublicKey(@Nullable String clientPublicKey) {
-            this.clientPublicKey = Codegen.ofNullable(clientPublicKey);
-            return this;
+
+        public Builder clientPublicKey(String clientPublicKey) {
+            return clientPublicKey(Output.of(clientPublicKey));
         }
+
         public Builder identity(@Nullable Output<MachineIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable MachineIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(MachineIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder locationData(@Nullable Output<LocationDataArgs> locationData) {
-            this.locationData = locationData;
+            $.locationData = locationData;
             return this;
         }
-        public Builder locationData(@Nullable LocationDataArgs locationData) {
-            this.locationData = Codegen.ofNullable(locationData);
-            return this;
+
+        public Builder locationData(LocationDataArgs locationData) {
+            return locationData(Output.of(locationData));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vmId(@Nullable Output<String> vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
-        public Builder vmId(@Nullable String vmId) {
-            this.vmId = Codegen.ofNullable(vmId);
-            return this;
-        }        public MachineArgs build() {
-            return new MachineArgs(clientPublicKey, identity, location, locationData, name, resourceGroupName, tags, vmId);
+
+        public Builder vmId(String vmId) {
+            return vmId(Output.of(vmId));
+        }
+
+        public MachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

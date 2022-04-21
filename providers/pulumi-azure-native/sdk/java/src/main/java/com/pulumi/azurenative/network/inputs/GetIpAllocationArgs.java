@@ -19,10 +19,10 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAllocationName", required=true)
-      private final String ipAllocationName;
+    private String ipAllocationName;
 
     public String ipAllocationName() {
         return this.ipAllocationName;
@@ -41,64 +41,58 @@ public final class GetIpAllocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIpAllocationArgs(
-        @Nullable String expand,
-        String ipAllocationName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.ipAllocationName = Objects.requireNonNull(ipAllocationName, "expected parameter 'ipAllocationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIpAllocationArgs() {}
 
-    private GetIpAllocationArgs() {
-        this.expand = null;
-        this.ipAllocationName = null;
-        this.resourceGroupName = null;
+    private GetIpAllocationArgs(GetIpAllocationArgs $) {
+        this.expand = $.expand;
+        this.ipAllocationName = $.ipAllocationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIpAllocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String ipAllocationName;
-        private String resourceGroupName;
+        private GetIpAllocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIpAllocationArgs();
         }
 
         public Builder(GetIpAllocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.ipAllocationName = defaults.ipAllocationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIpAllocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder ipAllocationName(String ipAllocationName) {
-            this.ipAllocationName = Objects.requireNonNull(ipAllocationName);
+            $.ipAllocationName = ipAllocationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIpAllocationArgs build() {
-            return new GetIpAllocationArgs(expand, ipAllocationName, resourceGroupName);
+        }
+
+        public GetIpAllocationArgs build() {
+            $.ipAllocationName = Objects.requireNonNull($.ipAllocationName, "expected parameter 'ipAllocationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAssessmentArgs Empty = new GetAssessmentArgs();
 
     @Import(name="assessmentId", required=true)
-      private final String assessmentId;
+    private String assessmentId;
 
     public String assessmentId() {
         return this.assessmentId;
     }
 
-    public GetAssessmentArgs(String assessmentId) {
-        this.assessmentId = Objects.requireNonNull(assessmentId, "expected parameter 'assessmentId' to be non-null");
-    }
+    private GetAssessmentArgs() {}
 
-    private GetAssessmentArgs() {
-        this.assessmentId = null;
+    private GetAssessmentArgs(GetAssessmentArgs $) {
+        this.assessmentId = $.assessmentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssessmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assessmentId;
+        private GetAssessmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssessmentArgs();
         }
 
         public Builder(GetAssessmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentId = defaults.assessmentId;
+            $ = new GetAssessmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentId(String assessmentId) {
-            this.assessmentId = Objects.requireNonNull(assessmentId);
+            $.assessmentId = assessmentId;
             return this;
-        }        public GetAssessmentArgs build() {
-            return new GetAssessmentArgs(assessmentId);
+        }
+
+        public GetAssessmentArgs build() {
+            $.assessmentId = Objects.requireNonNull($.assessmentId, "expected parameter 'assessmentId' to be non-null");
+            return $;
         }
     }
+
 }

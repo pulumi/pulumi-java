@@ -6,10 +6,10 @@ package com.pulumi.azurenative.connectedvmwarevsphere;
 import com.pulumi.azurenative.connectedvmwarevsphere.inputs.ExtendedLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inventoryItemId")
-      private final @Nullable Output<String> inventoryItemId;
+    private @Nullable Output<String> inventoryItemId;
 
-    public Output<String> inventoryItemId() {
-        return this.inventoryItemId == null ? Codegen.empty() : this.inventoryItemId;
+    public Optional<Output<String>> inventoryItemId() {
+        return Optional.ofNullable(this.inventoryItemId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="moRefId")
-      private final @Nullable Output<String> moRefId;
+    private @Nullable Output<String> moRefId;
 
-    public Output<String> moRefId() {
-        return this.moRefId == null ? Codegen.empty() : this.moRefId;
+    public Optional<Output<String>> moRefId() {
+        return Optional.ofNullable(this.moRefId);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,10 +99,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -110,154 +110,129 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vCenterId")
-      private final @Nullable Output<String> vCenterId;
+    private @Nullable Output<String> vCenterId;
 
-    public Output<String> vCenterId() {
-        return this.vCenterId == null ? Codegen.empty() : this.vCenterId;
+    public Optional<Output<String>> vCenterId() {
+        return Optional.ofNullable(this.vCenterId);
     }
 
-    public ClusterArgs(
-        @Nullable Output<String> clusterName,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> inventoryItemId,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> moRefId,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vCenterId) {
-        this.clusterName = clusterName;
-        this.extendedLocation = extendedLocation;
-        this.inventoryItemId = inventoryItemId;
-        this.kind = kind;
-        this.location = location;
-        this.moRefId = moRefId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.vCenterId = vCenterId;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.clusterName = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.inventoryItemId = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.moRefId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vCenterId = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.clusterName = $.clusterName;
+        this.extendedLocation = $.extendedLocation;
+        this.inventoryItemId = $.inventoryItemId;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.moRefId = $.moRefId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.vCenterId = $.vCenterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> inventoryItemId;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> moRefId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vCenterId;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.inventoryItemId = defaults.inventoryItemId;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.moRefId = defaults.moRefId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.vCenterId = defaults.vCenterId;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
-            this.inventoryItemId = inventoryItemId;
+            $.inventoryItemId = inventoryItemId;
             return this;
         }
-        public Builder inventoryItemId(@Nullable String inventoryItemId) {
-            this.inventoryItemId = Codegen.ofNullable(inventoryItemId);
-            return this;
+
+        public Builder inventoryItemId(String inventoryItemId) {
+            return inventoryItemId(Output.of(inventoryItemId));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder moRefId(@Nullable Output<String> moRefId) {
-            this.moRefId = moRefId;
+            $.moRefId = moRefId;
             return this;
         }
-        public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Codegen.ofNullable(moRefId);
-            return this;
+
+        public Builder moRefId(String moRefId) {
+            return moRefId(Output.of(moRefId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vCenterId(@Nullable Output<String> vCenterId) {
-            this.vCenterId = vCenterId;
+            $.vCenterId = vCenterId;
             return this;
         }
-        public Builder vCenterId(@Nullable String vCenterId) {
-            this.vCenterId = Codegen.ofNullable(vCenterId);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(clusterName, extendedLocation, inventoryItemId, kind, location, moRefId, resourceGroupName, tags, vCenterId);
+
+        public Builder vCenterId(String vCenterId) {
+            return vCenterId(Output.of(vCenterId));
+        }
+
+        public ClusterArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

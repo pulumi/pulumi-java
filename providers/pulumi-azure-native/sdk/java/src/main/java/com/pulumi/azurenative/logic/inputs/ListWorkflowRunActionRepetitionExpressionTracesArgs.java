@@ -17,7 +17,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="actionName", required=true)
-      private final String actionName;
+    private String actionName;
 
     public String actionName() {
         return this.actionName;
@@ -28,7 +28,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="repetitionName", required=true)
-      private final String repetitionName;
+    private String repetitionName;
 
     public String repetitionName() {
         return this.repetitionName;
@@ -39,7 +39,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="runName", required=true)
-      private final String runName;
+    private String runName;
 
     public String runName() {
         return this.runName;
@@ -61,82 +61,73 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends c
      * 
      */
     @Import(name="workflowName", required=true)
-      private final String workflowName;
+    private String workflowName;
 
     public String workflowName() {
         return this.workflowName;
     }
 
-    public ListWorkflowRunActionRepetitionExpressionTracesArgs(
-        String actionName,
-        String repetitionName,
-        String resourceGroupName,
-        String runName,
-        String workflowName) {
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-        this.repetitionName = Objects.requireNonNull(repetitionName, "expected parameter 'repetitionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runName = Objects.requireNonNull(runName, "expected parameter 'runName' to be non-null");
-        this.workflowName = Objects.requireNonNull(workflowName, "expected parameter 'workflowName' to be non-null");
-    }
+    private ListWorkflowRunActionRepetitionExpressionTracesArgs() {}
 
-    private ListWorkflowRunActionRepetitionExpressionTracesArgs() {
-        this.actionName = null;
-        this.repetitionName = null;
-        this.resourceGroupName = null;
-        this.runName = null;
-        this.workflowName = null;
+    private ListWorkflowRunActionRepetitionExpressionTracesArgs(ListWorkflowRunActionRepetitionExpressionTracesArgs $) {
+        this.actionName = $.actionName;
+        this.repetitionName = $.repetitionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runName = $.runName;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWorkflowRunActionRepetitionExpressionTracesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionName;
-        private String repetitionName;
-        private String resourceGroupName;
-        private String runName;
-        private String workflowName;
+        private ListWorkflowRunActionRepetitionExpressionTracesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWorkflowRunActionRepetitionExpressionTracesArgs();
         }
 
         public Builder(ListWorkflowRunActionRepetitionExpressionTracesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.repetitionName = defaults.repetitionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runName = defaults.runName;
-    	      this.workflowName = defaults.workflowName;
+            $ = new ListWorkflowRunActionRepetitionExpressionTracesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder repetitionName(String repetitionName) {
-            this.repetitionName = Objects.requireNonNull(repetitionName);
+            $.repetitionName = repetitionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder runName(String runName) {
-            this.runName = Objects.requireNonNull(runName);
+            $.runName = runName;
             return this;
         }
+
         public Builder workflowName(String workflowName) {
-            this.workflowName = Objects.requireNonNull(workflowName);
+            $.workflowName = workflowName;
             return this;
-        }        public ListWorkflowRunActionRepetitionExpressionTracesArgs build() {
-            return new ListWorkflowRunActionRepetitionExpressionTracesArgs(actionName, repetitionName, resourceGroupName, runName, workflowName);
+        }
+
+        public ListWorkflowRunActionRepetitionExpressionTracesArgs build() {
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            $.repetitionName = Objects.requireNonNull($.repetitionName, "expected parameter 'repetitionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.runName = Objects.requireNonNull($.runName, "expected parameter 'runName' to be non-null");
+            $.workflowName = Objects.requireNonNull($.workflowName, "expected parameter 'workflowName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class Oauth2ClientCredentialsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class Oauth2ClientCredentialsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<SecretArgs> clientSecret;
+    private @Nullable Output<SecretArgs> clientSecret;
 
-    public Output<SecretArgs> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<SecretArgs>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
-    public Oauth2ClientCredentialsArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<SecretArgs> clientSecret) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-    }
+    private Oauth2ClientCredentialsArgs() {}
 
-    private Oauth2ClientCredentialsArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
+    private Oauth2ClientCredentialsArgs(Oauth2ClientCredentialsArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Oauth2ClientCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<SecretArgs> clientSecret;
+        private Oauth2ClientCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Oauth2ClientCredentialsArgs();
         }
 
         public Builder(Oauth2ClientCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new Oauth2ClientCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<SecretArgs> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable SecretArgs clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
-        }        public Oauth2ClientCredentialsArgs build() {
-            return new Oauth2ClientCredentialsArgs(clientId, clientSecret);
+
+        public Builder clientSecret(SecretArgs clientSecret) {
+            return clientSecret(Output.of(clientSecret));
+        }
+
+        public Oauth2ClientCredentialsArgs build() {
+            return $;
         }
     }
+
 }

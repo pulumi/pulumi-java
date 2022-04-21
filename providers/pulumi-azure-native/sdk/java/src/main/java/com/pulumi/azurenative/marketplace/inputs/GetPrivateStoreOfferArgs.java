@@ -17,7 +17,7 @@ public final class GetPrivateStoreOfferArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="offerId", required=true)
-      private final String offerId;
+    private String offerId;
 
     public String offerId() {
         return this.offerId;
@@ -28,55 +28,52 @@ public final class GetPrivateStoreOfferArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateStoreId", required=true)
-      private final String privateStoreId;
+    private String privateStoreId;
 
     public String privateStoreId() {
         return this.privateStoreId;
     }
 
-    public GetPrivateStoreOfferArgs(
-        String offerId,
-        String privateStoreId) {
-        this.offerId = Objects.requireNonNull(offerId, "expected parameter 'offerId' to be non-null");
-        this.privateStoreId = Objects.requireNonNull(privateStoreId, "expected parameter 'privateStoreId' to be non-null");
-    }
+    private GetPrivateStoreOfferArgs() {}
 
-    private GetPrivateStoreOfferArgs() {
-        this.offerId = null;
-        this.privateStoreId = null;
+    private GetPrivateStoreOfferArgs(GetPrivateStoreOfferArgs $) {
+        this.offerId = $.offerId;
+        this.privateStoreId = $.privateStoreId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateStoreOfferArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String offerId;
-        private String privateStoreId;
+        private GetPrivateStoreOfferArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateStoreOfferArgs();
         }
 
         public Builder(GetPrivateStoreOfferArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offerId = defaults.offerId;
-    	      this.privateStoreId = defaults.privateStoreId;
+            $ = new GetPrivateStoreOfferArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offerId(String offerId) {
-            this.offerId = Objects.requireNonNull(offerId);
+            $.offerId = offerId;
             return this;
         }
+
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Objects.requireNonNull(privateStoreId);
+            $.privateStoreId = privateStoreId;
             return this;
-        }        public GetPrivateStoreOfferArgs build() {
-            return new GetPrivateStoreOfferArgs(offerId, privateStoreId);
+        }
+
+        public GetPrivateStoreOfferArgs build() {
+            $.offerId = Objects.requireNonNull($.offerId, "expected parameter 'offerId' to be non-null");
+            $.privateStoreId = Objects.requireNonNull($.privateStoreId, "expected parameter 'privateStoreId' to be non-null");
+            return $;
         }
     }
+
 }

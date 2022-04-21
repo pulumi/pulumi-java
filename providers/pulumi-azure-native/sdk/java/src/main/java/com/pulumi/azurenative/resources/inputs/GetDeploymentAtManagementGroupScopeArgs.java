@@ -17,7 +17,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
@@ -28,55 +28,52 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
     }
 
-    public GetDeploymentAtManagementGroupScopeArgs(
-        String deploymentName,
-        String groupId) {
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-    }
+    private GetDeploymentAtManagementGroupScopeArgs() {}
 
-    private GetDeploymentAtManagementGroupScopeArgs() {
-        this.deploymentName = null;
-        this.groupId = null;
+    private GetDeploymentAtManagementGroupScopeArgs(GetDeploymentAtManagementGroupScopeArgs $) {
+        this.deploymentName = $.deploymentName;
+        this.groupId = $.groupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentAtManagementGroupScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentName;
-        private String groupId;
+        private GetDeploymentAtManagementGroupScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentAtManagementGroupScopeArgs();
         }
 
         public Builder(GetDeploymentAtManagementGroupScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.groupId = defaults.groupId;
+            $ = new GetDeploymentAtManagementGroupScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
-        }        public GetDeploymentAtManagementGroupScopeArgs build() {
-            return new GetDeploymentAtManagementGroupScopeArgs(deploymentName, groupId);
+        }
+
+        public GetDeploymentAtManagementGroupScopeArgs build() {
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

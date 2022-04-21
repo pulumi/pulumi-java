@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +27,49 @@ public final class InputPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,InputPortType>> type;
+    private @Nullable Output<Either<String,InputPortType>> type;
 
-    public Output<Either<String,InputPortType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,InputPortType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public InputPortArgs(@Nullable Output<Either<String,InputPortType>> type) {
-        this.type = Codegen.stringProp("type").left(InputPortType.class).output().arg(type).def("Dataset").getNullable();
-    }
+    private InputPortArgs() {}
 
-    private InputPortArgs() {
-        this.type = Codegen.empty();
+    private InputPortArgs(InputPortArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,InputPortType>> type;
+        private InputPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputPortArgs();
         }
 
         public Builder(InputPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new InputPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,InputPortType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,InputPortType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public InputPortArgs build() {
-            return new InputPortArgs(type);
+
+        public Builder type(Either<String,InputPortType> type) {
+            return type(Output.of(type));
+        }
+
+        public InputPortArgs build() {
+            $.type = Codegen.stringProp("type").left(InputPortType.class).output().arg($.type).def("Dataset").getNullable();
+            return $;
         }
     }
+
 }

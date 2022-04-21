@@ -6,10 +6,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appProtocol")
-      private final @Nullable Output<String> appProtocol;
+    private @Nullable Output<String> appProtocol;
 
-    public Output<String> appProtocol() {
-        return this.appProtocol == null ? Codegen.empty() : this.appProtocol;
+    public Optional<Output<String>> appProtocol() {
+        return Optional.ofNullable(this.appProtocol);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodePort")
-      private final @Nullable Output<Integer> nodePort;
+    private @Nullable Output<Integer> nodePort;
 
-    public Output<Integer> nodePort() {
-        return this.nodePort == null ? Codegen.empty() : this.nodePort;
+    public Optional<Output<Integer>> nodePort() {
+        return Optional.ofNullable(this.nodePort);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -75,10 +75,10 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -86,115 +86,99 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetPort")
-      private final @Nullable Output<Either<Integer,String>> targetPort;
+    private @Nullable Output<Either<Integer,String>> targetPort;
 
-    public Output<Either<Integer,String>> targetPort() {
-        return this.targetPort == null ? Codegen.empty() : this.targetPort;
+    public Optional<Output<Either<Integer,String>>> targetPort() {
+        return Optional.ofNullable(this.targetPort);
     }
 
-    public ServicePortArgs(
-        @Nullable Output<String> appProtocol,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> nodePort,
-        Output<Integer> port,
-        @Nullable Output<String> protocol,
-        @Nullable Output<Either<Integer,String>> targetPort) {
-        this.appProtocol = appProtocol;
-        this.name = name;
-        this.nodePort = nodePort;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = protocol;
-        this.targetPort = targetPort;
-    }
+    private ServicePortArgs() {}
 
-    private ServicePortArgs() {
-        this.appProtocol = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodePort = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.targetPort = Codegen.empty();
+    private ServicePortArgs(ServicePortArgs $) {
+        this.appProtocol = $.appProtocol;
+        this.name = $.name;
+        this.nodePort = $.nodePort;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.targetPort = $.targetPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appProtocol;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> nodePort;
-        private Output<Integer> port;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<Either<Integer,String>> targetPort;
+        private ServicePortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePortArgs();
         }
 
         public Builder(ServicePortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appProtocol = defaults.appProtocol;
-    	      this.name = defaults.name;
-    	      this.nodePort = defaults.nodePort;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.targetPort = defaults.targetPort;
+            $ = new ServicePortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appProtocol(@Nullable Output<String> appProtocol) {
-            this.appProtocol = appProtocol;
+            $.appProtocol = appProtocol;
             return this;
         }
-        public Builder appProtocol(@Nullable String appProtocol) {
-            this.appProtocol = Codegen.ofNullable(appProtocol);
-            return this;
+
+        public Builder appProtocol(String appProtocol) {
+            return appProtocol(Output.of(appProtocol));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodePort(@Nullable Output<Integer> nodePort) {
-            this.nodePort = nodePort;
+            $.nodePort = nodePort;
             return this;
         }
-        public Builder nodePort(@Nullable Integer nodePort) {
-            this.nodePort = Codegen.ofNullable(nodePort);
-            return this;
+
+        public Builder nodePort(Integer nodePort) {
+            return nodePort(Output.of(nodePort));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder targetPort(@Nullable Output<Either<Integer,String>> targetPort) {
-            this.targetPort = targetPort;
+            $.targetPort = targetPort;
             return this;
         }
-        public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
-            this.targetPort = Codegen.ofNullable(targetPort);
-            return this;
-        }        public ServicePortArgs build() {
-            return new ServicePortArgs(appProtocol, name, nodePort, port, protocol, targetPort);
+
+        public Builder targetPort(Either<Integer,String> targetPort) {
+            return targetPort(Output.of(targetPort));
+        }
+
+        public ServicePortArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToAr
      * 
      */
     @Import(name="operations")
-      private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
+    private @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
 
-    public Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations() {
-        return this.operations == null ? Codegen.empty() : this.operations;
+    public Optional<Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>>> operations() {
+        return Optional.ofNullable(this.operations);
     }
 
     /**
@@ -39,69 +39,66 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToAr
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
-    public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs(
-        @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations,
-        @Nullable Output<List<String>> resources) {
-        this.operations = operations;
-        this.resources = resources;
-    }
+    private ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs() {}
 
-    private ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs() {
-        this.operations = Codegen.empty();
-        this.resources = Codegen.empty();
+    private ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs(ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs $) {
+        this.operations = $.operations;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
-        private @Nullable Output<List<String>> resources;
+        private ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs();
         }
 
         public Builder(ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operations = defaults.operations;
-    	      this.resources = defaults.resources;
+            $ = new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operations(@Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations) {
-            this.operations = operations;
+            $.operations = operations;
             return this;
         }
-        public Builder operations(@Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs> operations) {
-            this.operations = Codegen.ofNullable(operations);
-            return this;
+
+        public Builder operations(List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs> operations) {
+            return operations(Output.of(operations));
         }
+
         public Builder operations(ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationArgs... operations) {
             return operations(List.of(operations));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs build() {
-            return new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs(operations, resources);
+        }
+
+        public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs build() {
+            return $;
         }
     }
+
 }

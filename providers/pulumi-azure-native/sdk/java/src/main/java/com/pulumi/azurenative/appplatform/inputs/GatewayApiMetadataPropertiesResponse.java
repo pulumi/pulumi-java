@@ -23,10 +23,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="documentation")
-      private final @Nullable String documentation;
+    private @Nullable String documentation;
 
     public Optional<String> documentation() {
-        return this.documentation == null ? Optional.empty() : Optional.ofNullable(this.documentation);
+        return Optional.ofNullable(this.documentation);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="serverUrl")
-      private final @Nullable String serverUrl;
+    private @Nullable String serverUrl;
 
     public Optional<String> serverUrl() {
-        return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
+        return Optional.ofNullable(this.serverUrl);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class GatewayApiMetadataPropertiesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GatewayApiMetadataPropertiesResponse(
-        @Nullable String description,
-        @Nullable String documentation,
-        @Nullable String serverUrl,
-        @Nullable String title,
-        @Nullable String version) {
-        this.description = description;
-        this.documentation = documentation;
-        this.serverUrl = serverUrl;
-        this.title = title;
-        this.version = version;
-    }
+    private GatewayApiMetadataPropertiesResponse() {}
 
-    private GatewayApiMetadataPropertiesResponse() {
-        this.description = null;
-        this.documentation = null;
-        this.serverUrl = null;
-        this.title = null;
-        this.version = null;
+    private GatewayApiMetadataPropertiesResponse(GatewayApiMetadataPropertiesResponse $) {
+        this.description = $.description;
+        this.documentation = $.documentation;
+        this.serverUrl = $.serverUrl;
+        this.title = $.title;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayApiMetadataPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String documentation;
-        private @Nullable String serverUrl;
-        private @Nullable String title;
-        private @Nullable String version;
+        private GatewayApiMetadataPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayApiMetadataPropertiesResponse();
         }
 
         public Builder(GatewayApiMetadataPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.documentation = defaults.documentation;
-    	      this.serverUrl = defaults.serverUrl;
-    	      this.title = defaults.title;
-    	      this.version = defaults.version;
+            $ = new GatewayApiMetadataPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder documentation(@Nullable String documentation) {
-            this.documentation = documentation;
+            $.documentation = documentation;
             return this;
         }
+
         public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = serverUrl;
+            $.serverUrl = serverUrl;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GatewayApiMetadataPropertiesResponse build() {
-            return new GatewayApiMetadataPropertiesResponse(description, documentation, serverUrl, title, version);
+        }
+
+        public GatewayApiMetadataPropertiesResponse build() {
+            return $;
         }
     }
+
 }

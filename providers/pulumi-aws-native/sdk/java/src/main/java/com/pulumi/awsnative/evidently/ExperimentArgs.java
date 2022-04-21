@@ -9,11 +9,11 @@ import com.pulumi.awsnative.evidently.inputs.ExperimentTagArgs;
 import com.pulumi.awsnative.evidently.inputs.ExperimentTreatmentObjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,52 +22,52 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="metricGoals", required=true)
-      private final Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
+    private Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
 
     public Output<List<ExperimentMetricGoalObjectArgs>> metricGoals() {
         return this.metricGoals;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="onlineAbConfig", required=true)
-      private final Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
+    private Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
 
     public Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig() {
         return this.onlineAbConfig;
     }
 
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
     }
 
     @Import(name="randomizationSalt")
-      private final @Nullable Output<String> randomizationSalt;
+    private @Nullable Output<String> randomizationSalt;
 
-    public Output<String> randomizationSalt() {
-        return this.randomizationSalt == null ? Codegen.empty() : this.randomizationSalt;
+    public Optional<Output<String>> randomizationSalt() {
+        return Optional.ofNullable(this.randomizationSalt);
     }
 
     @Import(name="samplingRate")
-      private final @Nullable Output<Integer> samplingRate;
+    private @Nullable Output<Integer> samplingRate;
 
-    public Output<Integer> samplingRate() {
-        return this.samplingRate == null ? Codegen.empty() : this.samplingRate;
+    public Optional<Output<Integer>> samplingRate() {
+        return Optional.ofNullable(this.samplingRate);
     }
 
     /**
@@ -75,170 +75,151 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ExperimentTagArgs>> tags;
+    private @Nullable Output<List<ExperimentTagArgs>> tags;
 
-    public Output<List<ExperimentTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ExperimentTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="treatments", required=true)
-      private final Output<List<ExperimentTreatmentObjectArgs>> treatments;
+    private Output<List<ExperimentTreatmentObjectArgs>> treatments;
 
     public Output<List<ExperimentTreatmentObjectArgs>> treatments() {
         return this.treatments;
     }
 
-    public ExperimentArgs(
-        @Nullable Output<String> description,
-        Output<List<ExperimentMetricGoalObjectArgs>> metricGoals,
-        @Nullable Output<String> name,
-        Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig,
-        Output<String> project,
-        @Nullable Output<String> randomizationSalt,
-        @Nullable Output<Integer> samplingRate,
-        @Nullable Output<List<ExperimentTagArgs>> tags,
-        Output<List<ExperimentTreatmentObjectArgs>> treatments) {
-        this.description = description;
-        this.metricGoals = Objects.requireNonNull(metricGoals, "expected parameter 'metricGoals' to be non-null");
-        this.name = name;
-        this.onlineAbConfig = Objects.requireNonNull(onlineAbConfig, "expected parameter 'onlineAbConfig' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.randomizationSalt = randomizationSalt;
-        this.samplingRate = samplingRate;
-        this.tags = tags;
-        this.treatments = Objects.requireNonNull(treatments, "expected parameter 'treatments' to be non-null");
-    }
+    private ExperimentArgs() {}
 
-    private ExperimentArgs() {
-        this.description = Codegen.empty();
-        this.metricGoals = Codegen.empty();
-        this.name = Codegen.empty();
-        this.onlineAbConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.randomizationSalt = Codegen.empty();
-        this.samplingRate = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.treatments = Codegen.empty();
+    private ExperimentArgs(ExperimentArgs $) {
+        this.description = $.description;
+        this.metricGoals = $.metricGoals;
+        this.name = $.name;
+        this.onlineAbConfig = $.onlineAbConfig;
+        this.project = $.project;
+        this.randomizationSalt = $.randomizationSalt;
+        this.samplingRate = $.samplingRate;
+        this.tags = $.tags;
+        this.treatments = $.treatments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
-        private @Nullable Output<String> name;
-        private Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
-        private Output<String> project;
-        private @Nullable Output<String> randomizationSalt;
-        private @Nullable Output<Integer> samplingRate;
-        private @Nullable Output<List<ExperimentTagArgs>> tags;
-        private Output<List<ExperimentTreatmentObjectArgs>> treatments;
+        private ExperimentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentArgs();
         }
 
         public Builder(ExperimentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.metricGoals = defaults.metricGoals;
-    	      this.name = defaults.name;
-    	      this.onlineAbConfig = defaults.onlineAbConfig;
-    	      this.project = defaults.project;
-    	      this.randomizationSalt = defaults.randomizationSalt;
-    	      this.samplingRate = defaults.samplingRate;
-    	      this.tags = defaults.tags;
-    	      this.treatments = defaults.treatments;
+            $ = new ExperimentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder metricGoals(Output<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
-            this.metricGoals = Objects.requireNonNull(metricGoals);
+            $.metricGoals = metricGoals;
             return this;
         }
+
         public Builder metricGoals(List<ExperimentMetricGoalObjectArgs> metricGoals) {
-            this.metricGoals = Output.of(Objects.requireNonNull(metricGoals));
-            return this;
+            return metricGoals(Output.of(metricGoals));
         }
+
         public Builder metricGoals(ExperimentMetricGoalObjectArgs... metricGoals) {
             return metricGoals(List.of(metricGoals));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder onlineAbConfig(Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
-            this.onlineAbConfig = Objects.requireNonNull(onlineAbConfig);
+            $.onlineAbConfig = onlineAbConfig;
             return this;
         }
+
         public Builder onlineAbConfig(ExperimentOnlineAbConfigObjectArgs onlineAbConfig) {
-            this.onlineAbConfig = Output.of(Objects.requireNonNull(onlineAbConfig));
-            return this;
+            return onlineAbConfig(Output.of(onlineAbConfig));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder randomizationSalt(@Nullable Output<String> randomizationSalt) {
-            this.randomizationSalt = randomizationSalt;
+            $.randomizationSalt = randomizationSalt;
             return this;
         }
-        public Builder randomizationSalt(@Nullable String randomizationSalt) {
-            this.randomizationSalt = Codegen.ofNullable(randomizationSalt);
-            return this;
+
+        public Builder randomizationSalt(String randomizationSalt) {
+            return randomizationSalt(Output.of(randomizationSalt));
         }
+
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
-            this.samplingRate = samplingRate;
+            $.samplingRate = samplingRate;
             return this;
         }
-        public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Codegen.ofNullable(samplingRate);
-            return this;
+
+        public Builder samplingRate(Integer samplingRate) {
+            return samplingRate(Output.of(samplingRate));
         }
+
         public Builder tags(@Nullable Output<List<ExperimentTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ExperimentTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ExperimentTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ExperimentTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder treatments(Output<List<ExperimentTreatmentObjectArgs>> treatments) {
-            this.treatments = Objects.requireNonNull(treatments);
+            $.treatments = treatments;
             return this;
         }
+
         public Builder treatments(List<ExperimentTreatmentObjectArgs> treatments) {
-            this.treatments = Output.of(Objects.requireNonNull(treatments));
-            return this;
+            return treatments(Output.of(treatments));
         }
+
         public Builder treatments(ExperimentTreatmentObjectArgs... treatments) {
             return treatments(List.of(treatments));
-        }        public ExperimentArgs build() {
-            return new ExperimentArgs(description, metricGoals, name, onlineAbConfig, project, randomizationSalt, samplingRate, tags, treatments);
+        }
+
+        public ExperimentArgs build() {
+            $.metricGoals = Objects.requireNonNull($.metricGoals, "expected parameter 'metricGoals' to be non-null");
+            $.onlineAbConfig = Objects.requireNonNull($.onlineAbConfig, "expected parameter 'onlineAbConfig' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.treatments = Objects.requireNonNull($.treatments, "expected parameter 'treatments' to be non-null");
+            return $;
         }
     }
+
 }

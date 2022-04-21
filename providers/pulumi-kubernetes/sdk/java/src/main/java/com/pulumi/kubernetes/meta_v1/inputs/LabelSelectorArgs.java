@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorRequirementArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchExpressions")
-      private final @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
+    private @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
 
-    public Output<List<LabelSelectorRequirementArgs>> matchExpressions() {
-        return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
+    public Optional<Output<List<LabelSelectorRequirementArgs>>> matchExpressions() {
+        return Optional.ofNullable(this.matchExpressions);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class LabelSelectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchLabels")
-      private final @Nullable Output<Map<String,String>> matchLabels;
+    private @Nullable Output<Map<String,String>> matchLabels;
 
-    public Output<Map<String,String>> matchLabels() {
-        return this.matchLabels == null ? Codegen.empty() : this.matchLabels;
+    public Optional<Output<Map<String,String>>> matchLabels() {
+        return Optional.ofNullable(this.matchLabels);
     }
 
-    public LabelSelectorArgs(
-        @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions,
-        @Nullable Output<Map<String,String>> matchLabels) {
-        this.matchExpressions = matchExpressions;
-        this.matchLabels = matchLabels;
-    }
+    private LabelSelectorArgs() {}
 
-    private LabelSelectorArgs() {
-        this.matchExpressions = Codegen.empty();
-        this.matchLabels = Codegen.empty();
+    private LabelSelectorArgs(LabelSelectorArgs $) {
+        this.matchExpressions = $.matchExpressions;
+        this.matchLabels = $.matchLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
-        private @Nullable Output<Map<String,String>> matchLabels;
+        private LabelSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelSelectorArgs();
         }
 
         public Builder(LabelSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchExpressions = defaults.matchExpressions;
-    	      this.matchLabels = defaults.matchLabels;
+            $ = new LabelSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchExpressions(@Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions) {
-            this.matchExpressions = matchExpressions;
+            $.matchExpressions = matchExpressions;
             return this;
         }
-        public Builder matchExpressions(@Nullable List<LabelSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Codegen.ofNullable(matchExpressions);
-            return this;
+
+        public Builder matchExpressions(List<LabelSelectorRequirementArgs> matchExpressions) {
+            return matchExpressions(Output.of(matchExpressions));
         }
+
         public Builder matchExpressions(LabelSelectorRequirementArgs... matchExpressions) {
             return matchExpressions(List.of(matchExpressions));
         }
+
         public Builder matchLabels(@Nullable Output<Map<String,String>> matchLabels) {
-            this.matchLabels = matchLabels;
+            $.matchLabels = matchLabels;
             return this;
         }
-        public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
-            this.matchLabels = Codegen.ofNullable(matchLabels);
-            return this;
-        }        public LabelSelectorArgs build() {
-            return new LabelSelectorArgs(matchExpressions, matchLabels);
+
+        public Builder matchLabels(Map<String,String> matchLabels) {
+            return matchLabels(Output.of(matchLabels));
+        }
+
+        public LabelSelectorArgs build() {
+            return $;
         }
     }
+
 }

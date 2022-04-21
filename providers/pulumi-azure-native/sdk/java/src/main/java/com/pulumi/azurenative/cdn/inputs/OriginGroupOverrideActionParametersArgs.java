@@ -6,7 +6,6 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class OriginGroupOverrideActionParametersArgs extends com.pulumi.re
     public static final OriginGroupOverrideActionParametersArgs Empty = new OriginGroupOverrideActionParametersArgs();
 
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -31,63 +30,60 @@ public final class OriginGroupOverrideActionParametersArgs extends com.pulumi.re
      * 
      */
     @Import(name="originGroup", required=true)
-      private final Output<ResourceReferenceArgs> originGroup;
+    private Output<ResourceReferenceArgs> originGroup;
 
     public Output<ResourceReferenceArgs> originGroup() {
         return this.originGroup;
     }
 
-    public OriginGroupOverrideActionParametersArgs(
-        Output<String> odataType,
-        Output<ResourceReferenceArgs> originGroup) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.originGroup = Objects.requireNonNull(originGroup, "expected parameter 'originGroup' to be non-null");
-    }
+    private OriginGroupOverrideActionParametersArgs() {}
 
-    private OriginGroupOverrideActionParametersArgs() {
-        this.odataType = Codegen.empty();
-        this.originGroup = Codegen.empty();
+    private OriginGroupOverrideActionParametersArgs(OriginGroupOverrideActionParametersArgs $) {
+        this.odataType = $.odataType;
+        this.originGroup = $.originGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginGroupOverrideActionParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
-        private Output<ResourceReferenceArgs> originGroup;
+        private OriginGroupOverrideActionParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginGroupOverrideActionParametersArgs();
         }
 
         public Builder(OriginGroupOverrideActionParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.originGroup = defaults.originGroup;
+            $ = new OriginGroupOverrideActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {
-            this.originGroup = Objects.requireNonNull(originGroup);
+            $.originGroup = originGroup;
             return this;
         }
+
         public Builder originGroup(ResourceReferenceArgs originGroup) {
-            this.originGroup = Output.of(Objects.requireNonNull(originGroup));
-            return this;
-        }        public OriginGroupOverrideActionParametersArgs build() {
-            return new OriginGroupOverrideActionParametersArgs(odataType, originGroup);
+            return originGroup(Output.of(originGroup));
+        }
+
+        public OriginGroupOverrideActionParametersArgs build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.originGroup = Objects.requireNonNull($.originGroup, "expected parameter 'originGroup' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.guardduty.inputs;
 import com.pulumi.aws.guardduty.inputs.FilterFindingCriteriaCriterionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,52 +15,53 @@ public final class FilterFindingCriteriaGetArgs extends com.pulumi.resources.Res
     public static final FilterFindingCriteriaGetArgs Empty = new FilterFindingCriteriaGetArgs();
 
     @Import(name="criterions", required=true)
-      private final Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions;
+    private Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions;
 
     public Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions() {
         return this.criterions;
     }
 
-    public FilterFindingCriteriaGetArgs(Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions) {
-        this.criterions = Objects.requireNonNull(criterions, "expected parameter 'criterions' to be non-null");
-    }
+    private FilterFindingCriteriaGetArgs() {}
 
-    private FilterFindingCriteriaGetArgs() {
-        this.criterions = Codegen.empty();
+    private FilterFindingCriteriaGetArgs(FilterFindingCriteriaGetArgs $) {
+        this.criterions = $.criterions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterFindingCriteriaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions;
+        private FilterFindingCriteriaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterFindingCriteriaGetArgs();
         }
 
         public Builder(FilterFindingCriteriaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criterions = defaults.criterions;
+            $ = new FilterFindingCriteriaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder criterions(Output<List<FilterFindingCriteriaCriterionGetArgs>> criterions) {
-            this.criterions = Objects.requireNonNull(criterions);
+            $.criterions = criterions;
             return this;
         }
+
         public Builder criterions(List<FilterFindingCriteriaCriterionGetArgs> criterions) {
-            this.criterions = Output.of(Objects.requireNonNull(criterions));
-            return this;
+            return criterions(Output.of(criterions));
         }
+
         public Builder criterions(FilterFindingCriteriaCriterionGetArgs... criterions) {
             return criterions(List.of(criterions));
-        }        public FilterFindingCriteriaGetArgs build() {
-            return new FilterFindingCriteriaGetArgs(criterions);
+        }
+
+        public FilterFindingCriteriaGetArgs build() {
+            $.criterions = Objects.requireNonNull($.criterions, "expected parameter 'criterions' to be non-null");
+            return $;
         }
     }
+
 }

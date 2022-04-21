@@ -7,8 +7,8 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
      * 
      */
     @Import(name="applicationRestoreConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration() {
-        return this.applicationRestoreConfiguration == null ? Codegen.empty() : this.applicationRestoreConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs>> applicationRestoreConfiguration() {
+        return Optional.ofNullable(this.applicationRestoreConfiguration);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
      * 
      */
     @Import(name="flinkRunConfiguration")
-      private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
+    private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
 
-    public Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration() {
-        return this.flinkRunConfiguration == null ? Codegen.empty() : this.flinkRunConfiguration;
+    public Optional<Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs>> flinkRunConfiguration() {
+        return Optional.ofNullable(this.flinkRunConfiguration);
     }
 
-    public ApplicationApplicationConfigurationRunConfigurationArgs(
-        @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration,
-        @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
-        this.applicationRestoreConfiguration = applicationRestoreConfiguration;
-        this.flinkRunConfiguration = flinkRunConfiguration;
-    }
+    private ApplicationApplicationConfigurationRunConfigurationArgs() {}
 
-    private ApplicationApplicationConfigurationRunConfigurationArgs() {
-        this.applicationRestoreConfiguration = Codegen.empty();
-        this.flinkRunConfiguration = Codegen.empty();
+    private ApplicationApplicationConfigurationRunConfigurationArgs(ApplicationApplicationConfigurationRunConfigurationArgs $) {
+        this.applicationRestoreConfiguration = $.applicationRestoreConfiguration;
+        this.flinkRunConfiguration = $.flinkRunConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationRunConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
-        private @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
+        private ApplicationApplicationConfigurationRunConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationRunConfigurationArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationRunConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationRestoreConfiguration = defaults.applicationRestoreConfiguration;
-    	      this.flinkRunConfiguration = defaults.flinkRunConfiguration;
+            $ = new ApplicationApplicationConfigurationRunConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationRestoreConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration) {
-            this.applicationRestoreConfiguration = applicationRestoreConfiguration;
+            $.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
-        public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
-            this.applicationRestoreConfiguration = Codegen.ofNullable(applicationRestoreConfiguration);
-            return this;
+
+        public Builder applicationRestoreConfiguration(ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
+            return applicationRestoreConfiguration(Output.of(applicationRestoreConfiguration));
         }
+
         public Builder flinkRunConfiguration(@Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
-            this.flinkRunConfiguration = flinkRunConfiguration;
+            $.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }
-        public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
-            this.flinkRunConfiguration = Codegen.ofNullable(flinkRunConfiguration);
-            return this;
-        }        public ApplicationApplicationConfigurationRunConfigurationArgs build() {
-            return new ApplicationApplicationConfigurationRunConfigurationArgs(applicationRestoreConfiguration, flinkRunConfiguration);
+
+        public Builder flinkRunConfiguration(ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
+            return flinkRunConfiguration(Output.of(flinkRunConfiguration));
+        }
+
+        public ApplicationApplicationConfigurationRunConfigurationArgs build() {
+            return $;
         }
     }
+
 }

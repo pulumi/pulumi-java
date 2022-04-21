@@ -19,45 +19,44 @@ public final class RGitHubPackageResponseResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="repository")
-      private final @Nullable String repository;
+    private @Nullable String repository;
 
     public Optional<String> repository() {
-        return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
+        return Optional.ofNullable(this.repository);
     }
 
-    public RGitHubPackageResponseResponse(@Nullable String repository) {
-        this.repository = repository;
-    }
+    private RGitHubPackageResponseResponse() {}
 
-    private RGitHubPackageResponseResponse() {
-        this.repository = null;
+    private RGitHubPackageResponseResponse(RGitHubPackageResponseResponse $) {
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RGitHubPackageResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String repository;
+        private RGitHubPackageResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RGitHubPackageResponseResponse();
         }
 
         public Builder(RGitHubPackageResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repository = defaults.repository;
+            $ = new RGitHubPackageResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder repository(@Nullable String repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
-        }        public RGitHubPackageResponseResponse build() {
-            return new RGitHubPackageResponseResponse(repository);
+        }
+
+        public RGitHubPackageResponseResponse build() {
+            return $;
         }
     }
+
 }

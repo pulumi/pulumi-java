@@ -5,7 +5,6 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ServerInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverId", required=true)
-      private final Output<String> serverId;
+    private Output<String> serverId;
 
     public Output<String> serverId() {
         return this.serverId;
     }
 
-    public ServerInfoArgs(Output<String> serverId) {
-        this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
-    }
+    private ServerInfoArgs() {}
 
-    private ServerInfoArgs() {
-        this.serverId = Codegen.empty();
+    private ServerInfoArgs(ServerInfoArgs $) {
+        this.serverId = $.serverId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> serverId;
+        private ServerInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerInfoArgs();
         }
 
         public Builder(ServerInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverId = defaults.serverId;
+            $ = new ServerInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serverId(Output<String> serverId) {
-            this.serverId = Objects.requireNonNull(serverId);
+            $.serverId = serverId;
             return this;
         }
+
         public Builder serverId(String serverId) {
-            this.serverId = Output.of(Objects.requireNonNull(serverId));
-            return this;
-        }        public ServerInfoArgs build() {
-            return new ServerInfoArgs(serverId);
+            return serverId(Output.of(serverId));
+        }
+
+        public ServerInfoArgs build() {
+            $.serverId = Objects.requireNonNull($.serverId, "expected parameter 'serverId' to be non-null");
+            return $;
         }
     }
+
 }

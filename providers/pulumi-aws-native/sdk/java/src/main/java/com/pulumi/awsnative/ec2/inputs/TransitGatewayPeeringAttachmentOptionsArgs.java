@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends com.pulumi
      * 
      */
     @Import(name="dynamicRouting")
-      private final @Nullable Output<String> dynamicRouting;
+    private @Nullable Output<String> dynamicRouting;
 
-    public Output<String> dynamicRouting() {
-        return this.dynamicRouting == null ? Codegen.empty() : this.dynamicRouting;
+    public Optional<Output<String>> dynamicRouting() {
+        return Optional.ofNullable(this.dynamicRouting);
     }
 
-    public TransitGatewayPeeringAttachmentOptionsArgs(@Nullable Output<String> dynamicRouting) {
-        this.dynamicRouting = dynamicRouting;
-    }
+    private TransitGatewayPeeringAttachmentOptionsArgs() {}
 
-    private TransitGatewayPeeringAttachmentOptionsArgs() {
-        this.dynamicRouting = Codegen.empty();
+    private TransitGatewayPeeringAttachmentOptionsArgs(TransitGatewayPeeringAttachmentOptionsArgs $) {
+        this.dynamicRouting = $.dynamicRouting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayPeeringAttachmentOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dynamicRouting;
+        private TransitGatewayPeeringAttachmentOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayPeeringAttachmentOptionsArgs();
         }
 
         public Builder(TransitGatewayPeeringAttachmentOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dynamicRouting = defaults.dynamicRouting;
+            $ = new TransitGatewayPeeringAttachmentOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dynamicRouting(@Nullable Output<String> dynamicRouting) {
-            this.dynamicRouting = dynamicRouting;
+            $.dynamicRouting = dynamicRouting;
             return this;
         }
-        public Builder dynamicRouting(@Nullable String dynamicRouting) {
-            this.dynamicRouting = Codegen.ofNullable(dynamicRouting);
-            return this;
-        }        public TransitGatewayPeeringAttachmentOptionsArgs build() {
-            return new TransitGatewayPeeringAttachmentOptionsArgs(dynamicRouting);
+
+        public Builder dynamicRouting(String dynamicRouting) {
+            return dynamicRouting(Output.of(dynamicRouting));
+        }
+
+        public TransitGatewayPeeringAttachmentOptionsArgs build() {
+            return $;
         }
     }
+
 }

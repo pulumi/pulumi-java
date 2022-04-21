@@ -22,7 +22,7 @@ public final class ContactSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="adminContact", required=true)
-      private final ContactResponse adminContact;
+    private ContactResponse adminContact;
 
     public ContactResponse adminContact() {
         return this.adminContact;
@@ -33,7 +33,7 @@ public final class ContactSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privacy", required=true)
-      private final String privacy;
+    private String privacy;
 
     public String privacy() {
         return this.privacy;
@@ -44,7 +44,7 @@ public final class ContactSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="registrantContact", required=true)
-      private final ContactResponse registrantContact;
+    private ContactResponse registrantContact;
 
     public ContactResponse registrantContact() {
         return this.registrantContact;
@@ -55,73 +55,66 @@ public final class ContactSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="technicalContact", required=true)
-      private final ContactResponse technicalContact;
+    private ContactResponse technicalContact;
 
     public ContactResponse technicalContact() {
         return this.technicalContact;
     }
 
-    public ContactSettingsResponse(
-        ContactResponse adminContact,
-        String privacy,
-        ContactResponse registrantContact,
-        ContactResponse technicalContact) {
-        this.adminContact = Objects.requireNonNull(adminContact, "expected parameter 'adminContact' to be non-null");
-        this.privacy = Objects.requireNonNull(privacy, "expected parameter 'privacy' to be non-null");
-        this.registrantContact = Objects.requireNonNull(registrantContact, "expected parameter 'registrantContact' to be non-null");
-        this.technicalContact = Objects.requireNonNull(technicalContact, "expected parameter 'technicalContact' to be non-null");
-    }
+    private ContactSettingsResponse() {}
 
-    private ContactSettingsResponse() {
-        this.adminContact = null;
-        this.privacy = null;
-        this.registrantContact = null;
-        this.technicalContact = null;
+    private ContactSettingsResponse(ContactSettingsResponse $) {
+        this.adminContact = $.adminContact;
+        this.privacy = $.privacy;
+        this.registrantContact = $.registrantContact;
+        this.technicalContact = $.technicalContact;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ContactResponse adminContact;
-        private String privacy;
-        private ContactResponse registrantContact;
-        private ContactResponse technicalContact;
+        private ContactSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactSettingsResponse();
         }
 
         public Builder(ContactSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminContact = defaults.adminContact;
-    	      this.privacy = defaults.privacy;
-    	      this.registrantContact = defaults.registrantContact;
-    	      this.technicalContact = defaults.technicalContact;
+            $ = new ContactSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adminContact(ContactResponse adminContact) {
-            this.adminContact = Objects.requireNonNull(adminContact);
+            $.adminContact = adminContact;
             return this;
         }
+
         public Builder privacy(String privacy) {
-            this.privacy = Objects.requireNonNull(privacy);
+            $.privacy = privacy;
             return this;
         }
+
         public Builder registrantContact(ContactResponse registrantContact) {
-            this.registrantContact = Objects.requireNonNull(registrantContact);
+            $.registrantContact = registrantContact;
             return this;
         }
+
         public Builder technicalContact(ContactResponse technicalContact) {
-            this.technicalContact = Objects.requireNonNull(technicalContact);
+            $.technicalContact = technicalContact;
             return this;
-        }        public ContactSettingsResponse build() {
-            return new ContactSettingsResponse(adminContact, privacy, registrantContact, technicalContact);
+        }
+
+        public ContactSettingsResponse build() {
+            $.adminContact = Objects.requireNonNull($.adminContact, "expected parameter 'adminContact' to be non-null");
+            $.privacy = Objects.requireNonNull($.privacy, "expected parameter 'privacy' to be non-null");
+            $.registrantContact = Objects.requireNonNull($.registrantContact, "expected parameter 'registrantContact' to be non-null");
+            $.technicalContact = Objects.requireNonNull($.technicalContact, "expected parameter 'technicalContact' to be non-null");
+            return $;
         }
     }
+
 }

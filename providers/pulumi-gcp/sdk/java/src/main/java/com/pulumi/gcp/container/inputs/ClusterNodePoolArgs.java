@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolManagementArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNetworkConfigArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
     public static final ClusterNodePoolArgs Empty = new ClusterNodePoolArgs();
 
     @Import(name="autoscaling")
-      private final @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling;
+    private @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling;
 
-    public Output<ClusterNodePoolAutoscalingArgs> autoscaling() {
-        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
+    public Optional<Output<ClusterNodePoolAutoscalingArgs>> autoscaling() {
+        return Optional.ofNullable(this.autoscaling);
     }
 
     /**
@@ -39,38 +39,38 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="initialNodeCount")
-      private final @Nullable Output<Integer> initialNodeCount;
+    private @Nullable Output<Integer> initialNodeCount;
 
-    public Output<Integer> initialNodeCount() {
-        return this.initialNodeCount == null ? Codegen.empty() : this.initialNodeCount;
+    public Optional<Output<Integer>> initialNodeCount() {
+        return Optional.ofNullable(this.initialNodeCount);
     }
 
     @Import(name="instanceGroupUrls")
-      private final @Nullable Output<List<String>> instanceGroupUrls;
+    private @Nullable Output<List<String>> instanceGroupUrls;
 
-    public Output<List<String>> instanceGroupUrls() {
-        return this.instanceGroupUrls == null ? Codegen.empty() : this.instanceGroupUrls;
+    public Optional<Output<List<String>>> instanceGroupUrls() {
+        return Optional.ofNullable(this.instanceGroupUrls);
     }
 
     @Import(name="managedInstanceGroupUrls")
-      private final @Nullable Output<List<String>> managedInstanceGroupUrls;
+    private @Nullable Output<List<String>> managedInstanceGroupUrls;
 
-    public Output<List<String>> managedInstanceGroupUrls() {
-        return this.managedInstanceGroupUrls == null ? Codegen.empty() : this.managedInstanceGroupUrls;
+    public Optional<Output<List<String>>> managedInstanceGroupUrls() {
+        return Optional.ofNullable(this.managedInstanceGroupUrls);
     }
 
     @Import(name="management")
-      private final @Nullable Output<ClusterNodePoolManagementArgs> management;
+    private @Nullable Output<ClusterNodePoolManagementArgs> management;
 
-    public Output<ClusterNodePoolManagementArgs> management() {
-        return this.management == null ? Codegen.empty() : this.management;
+    public Optional<Output<ClusterNodePoolManagementArgs>> management() {
+        return Optional.ofNullable(this.management);
     }
 
     @Import(name="maxPodsPerNode")
-      private final @Nullable Output<Integer> maxPodsPerNode;
+    private @Nullable Output<Integer> maxPodsPerNode;
 
-    public Output<Integer> maxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
+    public Optional<Output<Integer>> maxPodsPerNode() {
+        return Optional.ofNullable(this.maxPodsPerNode);
     }
 
     /**
@@ -79,17 +79,17 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig;
+    private @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig;
 
-    public Output<ClusterNodePoolNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<ClusterNodePoolNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -113,17 +113,17 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="nodeConfig")
-      private final @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig;
+    private @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig;
 
-    public Output<ClusterNodePoolNodeConfigArgs> nodeConfig() {
-        return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
+    public Optional<Output<ClusterNodePoolNodeConfigArgs>> nodeConfig() {
+        return Optional.ofNullable(this.nodeConfig);
     }
 
     @Import(name="nodeCount")
-      private final @Nullable Output<Integer> nodeCount;
+    private @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> nodeCount() {
-        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
+    public Optional<Output<Integer>> nodeCount() {
+        return Optional.ofNullable(this.nodeCount);
     }
 
     /**
@@ -134,242 +134,204 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="nodeLocations")
-      private final @Nullable Output<List<String>> nodeLocations;
+    private @Nullable Output<List<String>> nodeLocations;
 
-    public Output<List<String>> nodeLocations() {
-        return this.nodeLocations == null ? Codegen.empty() : this.nodeLocations;
+    public Optional<Output<List<String>>> nodeLocations() {
+        return Optional.ofNullable(this.nodeLocations);
     }
 
     @Import(name="upgradeSettings")
-      private final @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
+    private @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings() {
-        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
+    public Optional<Output<ClusterNodePoolUpgradeSettingsArgs>> upgradeSettings() {
+        return Optional.ofNullable(this.upgradeSettings);
     }
 
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ClusterNodePoolArgs(
-        @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling,
-        @Nullable Output<Integer> initialNodeCount,
-        @Nullable Output<List<String>> instanceGroupUrls,
-        @Nullable Output<List<String>> managedInstanceGroupUrls,
-        @Nullable Output<ClusterNodePoolManagementArgs> management,
-        @Nullable Output<Integer> maxPodsPerNode,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig,
-        @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig,
-        @Nullable Output<Integer> nodeCount,
-        @Nullable Output<List<String>> nodeLocations,
-        @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings,
-        @Nullable Output<String> version) {
-        this.autoscaling = autoscaling;
-        this.initialNodeCount = initialNodeCount;
-        this.instanceGroupUrls = instanceGroupUrls;
-        this.managedInstanceGroupUrls = managedInstanceGroupUrls;
-        this.management = management;
-        this.maxPodsPerNode = maxPodsPerNode;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.networkConfig = networkConfig;
-        this.nodeConfig = nodeConfig;
-        this.nodeCount = nodeCount;
-        this.nodeLocations = nodeLocations;
-        this.upgradeSettings = upgradeSettings;
-        this.version = version;
-    }
+    private ClusterNodePoolArgs() {}
 
-    private ClusterNodePoolArgs() {
-        this.autoscaling = Codegen.empty();
-        this.initialNodeCount = Codegen.empty();
-        this.instanceGroupUrls = Codegen.empty();
-        this.managedInstanceGroupUrls = Codegen.empty();
-        this.management = Codegen.empty();
-        this.maxPodsPerNode = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.nodeConfig = Codegen.empty();
-        this.nodeCount = Codegen.empty();
-        this.nodeLocations = Codegen.empty();
-        this.upgradeSettings = Codegen.empty();
-        this.version = Codegen.empty();
+    private ClusterNodePoolArgs(ClusterNodePoolArgs $) {
+        this.autoscaling = $.autoscaling;
+        this.initialNodeCount = $.initialNodeCount;
+        this.instanceGroupUrls = $.instanceGroupUrls;
+        this.managedInstanceGroupUrls = $.managedInstanceGroupUrls;
+        this.management = $.management;
+        this.maxPodsPerNode = $.maxPodsPerNode;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.networkConfig = $.networkConfig;
+        this.nodeConfig = $.nodeConfig;
+        this.nodeCount = $.nodeCount;
+        this.nodeLocations = $.nodeLocations;
+        this.upgradeSettings = $.upgradeSettings;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNodePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling;
-        private @Nullable Output<Integer> initialNodeCount;
-        private @Nullable Output<List<String>> instanceGroupUrls;
-        private @Nullable Output<List<String>> managedInstanceGroupUrls;
-        private @Nullable Output<ClusterNodePoolManagementArgs> management;
-        private @Nullable Output<Integer> maxPodsPerNode;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig;
-        private @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig;
-        private @Nullable Output<Integer> nodeCount;
-        private @Nullable Output<List<String>> nodeLocations;
-        private @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Output<String> version;
+        private ClusterNodePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNodePoolArgs();
         }
 
         public Builder(ClusterNodePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.initialNodeCount = defaults.initialNodeCount;
-    	      this.instanceGroupUrls = defaults.instanceGroupUrls;
-    	      this.managedInstanceGroupUrls = defaults.managedInstanceGroupUrls;
-    	      this.management = defaults.management;
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.nodeConfig = defaults.nodeConfig;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.nodeLocations = defaults.nodeLocations;
-    	      this.upgradeSettings = defaults.upgradeSettings;
-    	      this.version = defaults.version;
+            $ = new ClusterNodePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaling(@Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling) {
-            this.autoscaling = autoscaling;
+            $.autoscaling = autoscaling;
             return this;
         }
-        public Builder autoscaling(@Nullable ClusterNodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Codegen.ofNullable(autoscaling);
-            return this;
+
+        public Builder autoscaling(ClusterNodePoolAutoscalingArgs autoscaling) {
+            return autoscaling(Output.of(autoscaling));
         }
+
         public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
-            this.initialNodeCount = initialNodeCount;
+            $.initialNodeCount = initialNodeCount;
             return this;
         }
-        public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Codegen.ofNullable(initialNodeCount);
-            return this;
+
+        public Builder initialNodeCount(Integer initialNodeCount) {
+            return initialNodeCount(Output.of(initialNodeCount));
         }
+
         public Builder instanceGroupUrls(@Nullable Output<List<String>> instanceGroupUrls) {
-            this.instanceGroupUrls = instanceGroupUrls;
+            $.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
-        public Builder instanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
-            this.instanceGroupUrls = Codegen.ofNullable(instanceGroupUrls);
-            return this;
+
+        public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
+            return instanceGroupUrls(Output.of(instanceGroupUrls));
         }
+
         public Builder instanceGroupUrls(String... instanceGroupUrls) {
             return instanceGroupUrls(List.of(instanceGroupUrls));
         }
+
         public Builder managedInstanceGroupUrls(@Nullable Output<List<String>> managedInstanceGroupUrls) {
-            this.managedInstanceGroupUrls = managedInstanceGroupUrls;
+            $.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
-        public Builder managedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
-            this.managedInstanceGroupUrls = Codegen.ofNullable(managedInstanceGroupUrls);
-            return this;
+
+        public Builder managedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
+            return managedInstanceGroupUrls(Output.of(managedInstanceGroupUrls));
         }
+
         public Builder managedInstanceGroupUrls(String... managedInstanceGroupUrls) {
             return managedInstanceGroupUrls(List.of(managedInstanceGroupUrls));
         }
+
         public Builder management(@Nullable Output<ClusterNodePoolManagementArgs> management) {
-            this.management = management;
+            $.management = management;
             return this;
         }
-        public Builder management(@Nullable ClusterNodePoolManagementArgs management) {
-            this.management = Codegen.ofNullable(management);
-            return this;
+
+        public Builder management(ClusterNodePoolManagementArgs management) {
+            return management(Output.of(management));
         }
+
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
-            this.maxPodsPerNode = maxPodsPerNode;
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Codegen.ofNullable(maxPodsPerNode);
-            return this;
+
+        public Builder maxPodsPerNode(Integer maxPodsPerNode) {
+            return maxPodsPerNode(Output.of(maxPodsPerNode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder networkConfig(@Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable ClusterNodePoolNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(ClusterNodePoolNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder nodeConfig(@Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig) {
-            this.nodeConfig = nodeConfig;
+            $.nodeConfig = nodeConfig;
             return this;
         }
-        public Builder nodeConfig(@Nullable ClusterNodePoolNodeConfigArgs nodeConfig) {
-            this.nodeConfig = Codegen.ofNullable(nodeConfig);
-            return this;
+
+        public Builder nodeConfig(ClusterNodePoolNodeConfigArgs nodeConfig) {
+            return nodeConfig(Output.of(nodeConfig));
         }
+
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
-            this.nodeCount = nodeCount;
+            $.nodeCount = nodeCount;
             return this;
         }
-        public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Codegen.ofNullable(nodeCount);
-            return this;
+
+        public Builder nodeCount(Integer nodeCount) {
+            return nodeCount(Output.of(nodeCount));
         }
+
         public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
-            this.nodeLocations = nodeLocations;
+            $.nodeLocations = nodeLocations;
             return this;
         }
-        public Builder nodeLocations(@Nullable List<String> nodeLocations) {
-            this.nodeLocations = Codegen.ofNullable(nodeLocations);
-            return this;
+
+        public Builder nodeLocations(List<String> nodeLocations) {
+            return nodeLocations(Output.of(nodeLocations));
         }
+
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
+
         public Builder upgradeSettings(@Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings) {
-            this.upgradeSettings = upgradeSettings;
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
-        public Builder upgradeSettings(@Nullable ClusterNodePoolUpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
-            return this;
+
+        public Builder upgradeSettings(ClusterNodePoolUpgradeSettingsArgs upgradeSettings) {
+            return upgradeSettings(Output.of(upgradeSettings));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ClusterNodePoolArgs build() {
-            return new ClusterNodePoolArgs(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, upgradeSettings, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ClusterNodePoolArgs build() {
+            return $;
         }
     }
+
 }

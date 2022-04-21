@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GroupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -55,85 +55,78 @@ public final class GroupPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public GroupPolicyState(
-        @Nullable Output<String> group,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> policy) {
-        this.group = group;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.policy = policy;
-    }
+    private GroupPolicyState() {}
 
-    private GroupPolicyState() {
-        this.group = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.policy = Codegen.empty();
+    private GroupPolicyState(GroupPolicyState $) {
+        this.group = $.group;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> group;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> policy;
+        private GroupPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupPolicyState();
         }
 
         public Builder(GroupPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.policy = defaults.policy;
+            $ = new GroupPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
-        }        public GroupPolicyState build() {
-            return new GroupPolicyState(group, name, namePrefix, policy);
+        }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public GroupPolicyState build() {
+            return $;
         }
     }
+
 }

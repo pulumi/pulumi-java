@@ -25,10 +25,10 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="day")
-      private final @Nullable String day;
+    private @Nullable String day;
 
     public Optional<String> day() {
-        return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="hour")
-      private final @Nullable Integer hour;
+    private @Nullable Integer hour;
 
     public Optional<Integer> hour() {
-        return this.hour == null ? Optional.empty() : Optional.ofNullable(this.hour);
+        return Optional.ofNullable(this.hour);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="minute")
-      private final @Nullable Integer minute;
+    private @Nullable Integer minute;
 
     public Optional<Integer> minute() {
-        return this.minute == null ? Optional.empty() : Optional.ofNullable(this.minute);
+        return Optional.ofNullable(this.minute);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="snapshotsToKeep")
-      private final @Nullable Integer snapshotsToKeep;
+    private @Nullable Integer snapshotsToKeep;
 
     public Optional<Integer> snapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Optional.empty() : Optional.ofNullable(this.snapshotsToKeep);
+        return Optional.ofNullable(this.snapshotsToKeep);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="usedBytes")
-      private final @Nullable Double usedBytes;
+    private @Nullable Double usedBytes;
 
     public Optional<Double> usedBytes() {
-        return this.usedBytes == null ? Optional.empty() : Optional.ofNullable(this.usedBytes);
+        return Optional.ofNullable(this.usedBytes);
     }
 
-    public WeeklyScheduleResponse(
-        @Nullable String day,
-        @Nullable Integer hour,
-        @Nullable Integer minute,
-        @Nullable Integer snapshotsToKeep,
-        @Nullable Double usedBytes) {
-        this.day = day;
-        this.hour = hour;
-        this.minute = minute;
-        this.snapshotsToKeep = snapshotsToKeep;
-        this.usedBytes = usedBytes;
-    }
+    private WeeklyScheduleResponse() {}
 
-    private WeeklyScheduleResponse() {
-        this.day = null;
-        this.hour = null;
-        this.minute = null;
-        this.snapshotsToKeep = null;
-        this.usedBytes = null;
+    private WeeklyScheduleResponse(WeeklyScheduleResponse $) {
+        this.day = $.day;
+        this.hour = $.hour;
+        this.minute = $.minute;
+        this.snapshotsToKeep = $.snapshotsToKeep;
+        this.usedBytes = $.usedBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String day;
-        private @Nullable Integer hour;
-        private @Nullable Integer minute;
-        private @Nullable Integer snapshotsToKeep;
-        private @Nullable Double usedBytes;
+        private WeeklyScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyScheduleResponse();
         }
 
         public Builder(WeeklyScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hour = defaults.hour;
-    	      this.minute = defaults.minute;
-    	      this.snapshotsToKeep = defaults.snapshotsToKeep;
-    	      this.usedBytes = defaults.usedBytes;
+            $ = new WeeklyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable String day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
+
         public Builder hour(@Nullable Integer hour) {
-            this.hour = hour;
+            $.hour = hour;
             return this;
         }
+
         public Builder minute(@Nullable Integer minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
         }
+
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = snapshotsToKeep;
+            $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
+
         public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = usedBytes;
+            $.usedBytes = usedBytes;
             return this;
-        }        public WeeklyScheduleResponse build() {
-            return new WeeklyScheduleResponse(day, hour, minute, snapshotsToKeep, usedBytes);
+        }
+
+        public WeeklyScheduleResponse build() {
+            return $;
         }
     }
+
 }

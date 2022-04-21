@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ContainerPortInfoArgs extends com.pulumi.resources.ResourceAr
     public static final ContainerPortInfoArgs Empty = new ContainerPortInfoArgs();
 
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ContainerPortInfoArgs(
-        @Nullable Output<String> port,
-        @Nullable Output<String> protocol) {
-        this.port = port;
-        this.protocol = protocol;
-    }
+    private ContainerPortInfoArgs() {}
 
-    private ContainerPortInfoArgs() {
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private ContainerPortInfoArgs(ContainerPortInfoArgs $) {
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPortInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> port;
-        private @Nullable Output<String> protocol;
+        private ContainerPortInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPortInfoArgs();
         }
 
         public Builder(ContainerPortInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new ContainerPortInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(String port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public ContainerPortInfoArgs build() {
-            return new ContainerPortInfoArgs(port, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public ContainerPortInfoArgs build() {
+            return $;
         }
     }
+
 }

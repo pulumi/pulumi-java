@@ -21,45 +21,45 @@ public final class GoogleCloudRetailV2betaPromotionResponse extends com.pulumi.r
      * 
      */
     @Import(name="promotionId", required=true)
-      private final String promotionId;
+    private String promotionId;
 
     public String promotionId() {
         return this.promotionId;
     }
 
-    public GoogleCloudRetailV2betaPromotionResponse(String promotionId) {
-        this.promotionId = Objects.requireNonNull(promotionId, "expected parameter 'promotionId' to be non-null");
-    }
+    private GoogleCloudRetailV2betaPromotionResponse() {}
 
-    private GoogleCloudRetailV2betaPromotionResponse() {
-        this.promotionId = null;
+    private GoogleCloudRetailV2betaPromotionResponse(GoogleCloudRetailV2betaPromotionResponse $) {
+        this.promotionId = $.promotionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaPromotionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String promotionId;
+        private GoogleCloudRetailV2betaPromotionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaPromotionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaPromotionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.promotionId = defaults.promotionId;
+            $ = new GoogleCloudRetailV2betaPromotionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder promotionId(String promotionId) {
-            this.promotionId = Objects.requireNonNull(promotionId);
+            $.promotionId = promotionId;
             return this;
-        }        public GoogleCloudRetailV2betaPromotionResponse build() {
-            return new GoogleCloudRetailV2betaPromotionResponse(promotionId);
+        }
+
+        public GoogleCloudRetailV2betaPromotionResponse build() {
+            $.promotionId = Objects.requireNonNull($.promotionId, "expected parameter 'promotionId' to be non-null");
+            return $;
         }
     }
+
 }

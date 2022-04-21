@@ -5,7 +5,6 @@ package com.pulumi.aws.opsworks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbPassword", required=true)
-      private final Output<String> dbPassword;
+    private Output<String> dbPassword;
 
     public Output<String> dbPassword() {
         return this.dbPassword;
@@ -30,7 +29,7 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbUser", required=true)
-      private final Output<String> dbUser;
+    private Output<String> dbUser;
 
     public Output<String> dbUser() {
         return this.dbUser;
@@ -41,7 +40,7 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rdsDbInstanceArn", required=true)
-      private final Output<String> rdsDbInstanceArn;
+    private Output<String> rdsDbInstanceArn;
 
     public Output<String> rdsDbInstanceArn() {
         return this.rdsDbInstanceArn;
@@ -52,89 +51,82 @@ public final class RdsDbInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackId", required=true)
-      private final Output<String> stackId;
+    private Output<String> stackId;
 
     public Output<String> stackId() {
         return this.stackId;
     }
 
-    public RdsDbInstanceArgs(
-        Output<String> dbPassword,
-        Output<String> dbUser,
-        Output<String> rdsDbInstanceArn,
-        Output<String> stackId) {
-        this.dbPassword = Objects.requireNonNull(dbPassword, "expected parameter 'dbPassword' to be non-null");
-        this.dbUser = Objects.requireNonNull(dbUser, "expected parameter 'dbUser' to be non-null");
-        this.rdsDbInstanceArn = Objects.requireNonNull(rdsDbInstanceArn, "expected parameter 'rdsDbInstanceArn' to be non-null");
-        this.stackId = Objects.requireNonNull(stackId, "expected parameter 'stackId' to be non-null");
-    }
+    private RdsDbInstanceArgs() {}
 
-    private RdsDbInstanceArgs() {
-        this.dbPassword = Codegen.empty();
-        this.dbUser = Codegen.empty();
-        this.rdsDbInstanceArn = Codegen.empty();
-        this.stackId = Codegen.empty();
+    private RdsDbInstanceArgs(RdsDbInstanceArgs $) {
+        this.dbPassword = $.dbPassword;
+        this.dbUser = $.dbUser;
+        this.rdsDbInstanceArn = $.rdsDbInstanceArn;
+        this.stackId = $.stackId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RdsDbInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dbPassword;
-        private Output<String> dbUser;
-        private Output<String> rdsDbInstanceArn;
-        private Output<String> stackId;
+        private RdsDbInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RdsDbInstanceArgs();
         }
 
         public Builder(RdsDbInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbPassword = defaults.dbPassword;
-    	      this.dbUser = defaults.dbUser;
-    	      this.rdsDbInstanceArn = defaults.rdsDbInstanceArn;
-    	      this.stackId = defaults.stackId;
+            $ = new RdsDbInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbPassword(Output<String> dbPassword) {
-            this.dbPassword = Objects.requireNonNull(dbPassword);
+            $.dbPassword = dbPassword;
             return this;
         }
+
         public Builder dbPassword(String dbPassword) {
-            this.dbPassword = Output.of(Objects.requireNonNull(dbPassword));
-            return this;
+            return dbPassword(Output.of(dbPassword));
         }
+
         public Builder dbUser(Output<String> dbUser) {
-            this.dbUser = Objects.requireNonNull(dbUser);
+            $.dbUser = dbUser;
             return this;
         }
+
         public Builder dbUser(String dbUser) {
-            this.dbUser = Output.of(Objects.requireNonNull(dbUser));
-            return this;
+            return dbUser(Output.of(dbUser));
         }
+
         public Builder rdsDbInstanceArn(Output<String> rdsDbInstanceArn) {
-            this.rdsDbInstanceArn = Objects.requireNonNull(rdsDbInstanceArn);
+            $.rdsDbInstanceArn = rdsDbInstanceArn;
             return this;
         }
+
         public Builder rdsDbInstanceArn(String rdsDbInstanceArn) {
-            this.rdsDbInstanceArn = Output.of(Objects.requireNonNull(rdsDbInstanceArn));
-            return this;
+            return rdsDbInstanceArn(Output.of(rdsDbInstanceArn));
         }
+
         public Builder stackId(Output<String> stackId) {
-            this.stackId = Objects.requireNonNull(stackId);
+            $.stackId = stackId;
             return this;
         }
+
         public Builder stackId(String stackId) {
-            this.stackId = Output.of(Objects.requireNonNull(stackId));
-            return this;
-        }        public RdsDbInstanceArgs build() {
-            return new RdsDbInstanceArgs(dbPassword, dbUser, rdsDbInstanceArn, stackId);
+            return stackId(Output.of(stackId));
+        }
+
+        public RdsDbInstanceArgs build() {
+            $.dbPassword = Objects.requireNonNull($.dbPassword, "expected parameter 'dbPassword' to be non-null");
+            $.dbUser = Objects.requireNonNull($.dbUser, "expected parameter 'dbUser' to be non-null");
+            $.rdsDbInstanceArn = Objects.requireNonNull($.rdsDbInstanceArn, "expected parameter 'rdsDbInstanceArn' to be non-null");
+            $.stackId = Objects.requireNonNull($.stackId, "expected parameter 'stackId' to be non-null");
+            return $;
         }
     }
+
 }

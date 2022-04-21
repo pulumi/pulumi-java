@@ -6,9 +6,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestDataPathArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class DatasetCreateRequestPathArgs extends com.pulumi.resources.Res
     public static final DatasetCreateRequestPathArgs Empty = new DatasetCreateRequestPathArgs();
 
     @Import(name="dataPath")
-      private final @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
+    private @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
 
-    public Output<DatasetCreateRequestDataPathArgs> dataPath() {
-        return this.dataPath == null ? Codegen.empty() : this.dataPath;
+    public Optional<Output<DatasetCreateRequestDataPathArgs>> dataPath() {
+        return Optional.ofNullable(this.dataPath);
     }
 
     /**
@@ -28,63 +28,58 @@ public final class DatasetCreateRequestPathArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="httpUrl")
-      private final @Nullable Output<String> httpUrl;
+    private @Nullable Output<String> httpUrl;
 
-    public Output<String> httpUrl() {
-        return this.httpUrl == null ? Codegen.empty() : this.httpUrl;
+    public Optional<Output<String>> httpUrl() {
+        return Optional.ofNullable(this.httpUrl);
     }
 
-    public DatasetCreateRequestPathArgs(
-        @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath,
-        @Nullable Output<String> httpUrl) {
-        this.dataPath = dataPath;
-        this.httpUrl = httpUrl;
-    }
+    private DatasetCreateRequestPathArgs() {}
 
-    private DatasetCreateRequestPathArgs() {
-        this.dataPath = Codegen.empty();
-        this.httpUrl = Codegen.empty();
+    private DatasetCreateRequestPathArgs(DatasetCreateRequestPathArgs $) {
+        this.dataPath = $.dataPath;
+        this.httpUrl = $.httpUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCreateRequestPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetCreateRequestDataPathArgs> dataPath;
-        private @Nullable Output<String> httpUrl;
+        private DatasetCreateRequestPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCreateRequestPathArgs();
         }
 
         public Builder(DatasetCreateRequestPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataPath = defaults.dataPath;
-    	      this.httpUrl = defaults.httpUrl;
+            $ = new DatasetCreateRequestPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataPath(@Nullable Output<DatasetCreateRequestDataPathArgs> dataPath) {
-            this.dataPath = dataPath;
+            $.dataPath = dataPath;
             return this;
         }
-        public Builder dataPath(@Nullable DatasetCreateRequestDataPathArgs dataPath) {
-            this.dataPath = Codegen.ofNullable(dataPath);
-            return this;
+
+        public Builder dataPath(DatasetCreateRequestDataPathArgs dataPath) {
+            return dataPath(Output.of(dataPath));
         }
+
         public Builder httpUrl(@Nullable Output<String> httpUrl) {
-            this.httpUrl = httpUrl;
+            $.httpUrl = httpUrl;
             return this;
         }
-        public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = Codegen.ofNullable(httpUrl);
-            return this;
-        }        public DatasetCreateRequestPathArgs build() {
-            return new DatasetCreateRequestPathArgs(dataPath, httpUrl);
+
+        public Builder httpUrl(String httpUrl) {
+            return httpUrl(Output.of(httpUrl));
+        }
+
+        public DatasetCreateRequestPathArgs build() {
+            return $;
         }
     }
+
 }

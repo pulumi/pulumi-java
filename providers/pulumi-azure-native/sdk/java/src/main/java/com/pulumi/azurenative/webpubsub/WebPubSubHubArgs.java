@@ -6,9 +6,9 @@ package com.pulumi.azurenative.webpubsub;
 import com.pulumi.azurenative.webpubsub.inputs.WebPubSubHubPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName")
-      private final @Nullable Output<String> hubName;
+    private @Nullable Output<String> hubName;
 
-    public Output<String> hubName() {
-        return this.hubName == null ? Codegen.empty() : this.hubName;
+    public Optional<Output<String>> hubName() {
+        return Optional.ofNullable(this.hubName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<WebPubSubHubPropertiesArgs> properties;
+    private Output<WebPubSubHubPropertiesArgs> properties;
 
     public Output<WebPubSubHubPropertiesArgs> properties() {
         return this.properties;
@@ -43,7 +43,7 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,81 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public WebPubSubHubArgs(
-        @Nullable Output<String> hubName,
-        Output<WebPubSubHubPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.hubName = hubName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private WebPubSubHubArgs() {}
 
-    private WebPubSubHubArgs() {
-        this.hubName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private WebPubSubHubArgs(WebPubSubHubArgs $) {
+        this.hubName = $.hubName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hubName;
-        private Output<WebPubSubHubPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private WebPubSubHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubHubArgs();
         }
 
         public Builder(WebPubSubHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new WebPubSubHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(@Nullable Output<String> hubName) {
-            this.hubName = hubName;
+            $.hubName = hubName;
             return this;
         }
-        public Builder hubName(@Nullable String hubName) {
-            this.hubName = Codegen.ofNullable(hubName);
-            return this;
+
+        public Builder hubName(String hubName) {
+            return hubName(Output.of(hubName));
         }
+
         public Builder properties(Output<WebPubSubHubPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(WebPubSubHubPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public WebPubSubHubArgs build() {
-            return new WebPubSubHubArgs(hubName, properties, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public WebPubSubHubArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

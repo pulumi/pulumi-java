@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends com.pul
      * 
      */
     @Import(name="transformations", required=true)
-      private final Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
+    private Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
     public Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations() {
         return this.transformations;
     }
 
-    public GooglePrivacyDlpV2InfoTypeTransformationsArgs(Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
-        this.transformations = Objects.requireNonNull(transformations, "expected parameter 'transformations' to be non-null");
-    }
+    private GooglePrivacyDlpV2InfoTypeTransformationsArgs() {}
 
-    private GooglePrivacyDlpV2InfoTypeTransformationsArgs() {
-        this.transformations = Codegen.empty();
+    private GooglePrivacyDlpV2InfoTypeTransformationsArgs(GooglePrivacyDlpV2InfoTypeTransformationsArgs $) {
+        this.transformations = $.transformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InfoTypeTransformationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
+        private GooglePrivacyDlpV2InfoTypeTransformationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InfoTypeTransformationsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2InfoTypeTransformationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transformations = defaults.transformations;
+            $ = new GooglePrivacyDlpV2InfoTypeTransformationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transformations(Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations) {
-            this.transformations = Objects.requireNonNull(transformations);
+            $.transformations = transformations;
             return this;
         }
+
         public Builder transformations(List<GooglePrivacyDlpV2InfoTypeTransformationArgs> transformations) {
-            this.transformations = Output.of(Objects.requireNonNull(transformations));
-            return this;
+            return transformations(Output.of(transformations));
         }
+
         public Builder transformations(GooglePrivacyDlpV2InfoTypeTransformationArgs... transformations) {
             return transformations(List.of(transformations));
-        }        public GooglePrivacyDlpV2InfoTypeTransformationsArgs build() {
-            return new GooglePrivacyDlpV2InfoTypeTransformationsArgs(transformations);
+        }
+
+        public GooglePrivacyDlpV2InfoTypeTransformationsArgs build() {
+            $.transformations = Objects.requireNonNull($.transformations, "expected parameter 'transformations' to be non-null");
+            return $;
         }
     }
+
 }

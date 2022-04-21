@@ -5,9 +5,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ConfigDecodeConfigArgs extends com.pulumi.resources.ResourceA
     public static final ConfigDecodeConfigArgs Empty = new ConfigDecodeConfigArgs();
 
     @Import(name="unvalidatedJSON")
-      private final @Nullable Output<String> unvalidatedJSON;
+    private @Nullable Output<String> unvalidatedJSON;
 
-    public Output<String> unvalidatedJSON() {
-        return this.unvalidatedJSON == null ? Codegen.empty() : this.unvalidatedJSON;
+    public Optional<Output<String>> unvalidatedJSON() {
+        return Optional.ofNullable(this.unvalidatedJSON);
     }
 
-    public ConfigDecodeConfigArgs(@Nullable Output<String> unvalidatedJSON) {
-        this.unvalidatedJSON = unvalidatedJSON;
-    }
+    private ConfigDecodeConfigArgs() {}
 
-    private ConfigDecodeConfigArgs() {
-        this.unvalidatedJSON = Codegen.empty();
+    private ConfigDecodeConfigArgs(ConfigDecodeConfigArgs $) {
+        this.unvalidatedJSON = $.unvalidatedJSON;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigDecodeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> unvalidatedJSON;
+        private ConfigDecodeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigDecodeConfigArgs();
         }
 
         public Builder(ConfigDecodeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unvalidatedJSON = defaults.unvalidatedJSON;
+            $ = new ConfigDecodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder unvalidatedJSON(@Nullable Output<String> unvalidatedJSON) {
-            this.unvalidatedJSON = unvalidatedJSON;
+            $.unvalidatedJSON = unvalidatedJSON;
             return this;
         }
-        public Builder unvalidatedJSON(@Nullable String unvalidatedJSON) {
-            this.unvalidatedJSON = Codegen.ofNullable(unvalidatedJSON);
-            return this;
-        }        public ConfigDecodeConfigArgs build() {
-            return new ConfigDecodeConfigArgs(unvalidatedJSON);
+
+        public Builder unvalidatedJSON(String unvalidatedJSON) {
+            return unvalidatedJSON(Output.of(unvalidatedJSON));
+        }
+
+        public ConfigDecodeConfigArgs build() {
+            return $;
         }
     }
+
 }

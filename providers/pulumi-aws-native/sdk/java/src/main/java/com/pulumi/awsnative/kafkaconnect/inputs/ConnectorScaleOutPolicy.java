@@ -21,45 +21,45 @@ public final class ConnectorScaleOutPolicy extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="cpuUtilizationPercentage", required=true)
-      private final Integer cpuUtilizationPercentage;
+    private Integer cpuUtilizationPercentage;
 
     public Integer cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 
-    public ConnectorScaleOutPolicy(Integer cpuUtilizationPercentage) {
-        this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
-    }
+    private ConnectorScaleOutPolicy() {}
 
-    private ConnectorScaleOutPolicy() {
-        this.cpuUtilizationPercentage = null;
+    private ConnectorScaleOutPolicy(ConnectorScaleOutPolicy $) {
+        this.cpuUtilizationPercentage = $.cpuUtilizationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorScaleOutPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cpuUtilizationPercentage;
+        private ConnectorScaleOutPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorScaleOutPolicy();
         }
 
         public Builder(ConnectorScaleOutPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuUtilizationPercentage = defaults.cpuUtilizationPercentage;
+            $ = new ConnectorScaleOutPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
-            this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
+            $.cpuUtilizationPercentage = cpuUtilizationPercentage;
             return this;
-        }        public ConnectorScaleOutPolicy build() {
-            return new ConnectorScaleOutPolicy(cpuUtilizationPercentage);
+        }
+
+        public ConnectorScaleOutPolicy build() {
+            $.cpuUtilizationPercentage = Objects.requireNonNull($.cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
+            return $;
         }
     }
+
 }

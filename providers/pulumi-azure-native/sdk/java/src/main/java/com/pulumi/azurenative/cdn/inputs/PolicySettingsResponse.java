@@ -24,10 +24,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="defaultCustomBlockResponseBody")
-      private final @Nullable String defaultCustomBlockResponseBody;
+    private @Nullable String defaultCustomBlockResponseBody;
 
     public Optional<String> defaultCustomBlockResponseBody() {
-        return this.defaultCustomBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseBody);
+        return Optional.ofNullable(this.defaultCustomBlockResponseBody);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="defaultCustomBlockResponseStatusCode")
-      private final @Nullable Integer defaultCustomBlockResponseStatusCode;
+    private @Nullable Integer defaultCustomBlockResponseStatusCode;
 
     public Optional<Integer> defaultCustomBlockResponseStatusCode() {
-        return this.defaultCustomBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
+        return Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="defaultRedirectUrl")
-      private final @Nullable String defaultRedirectUrl;
+    private @Nullable String defaultRedirectUrl;
 
     public Optional<String> defaultRedirectUrl() {
-        return this.defaultRedirectUrl == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectUrl);
+        return Optional.ofNullable(this.defaultRedirectUrl);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class PolicySettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public PolicySettingsResponse(
-        @Nullable String defaultCustomBlockResponseBody,
-        @Nullable Integer defaultCustomBlockResponseStatusCode,
-        @Nullable String defaultRedirectUrl,
-        @Nullable String enabledState,
-        @Nullable String mode) {
-        this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
-        this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
-        this.defaultRedirectUrl = defaultRedirectUrl;
-        this.enabledState = enabledState;
-        this.mode = mode;
-    }
+    private PolicySettingsResponse() {}
 
-    private PolicySettingsResponse() {
-        this.defaultCustomBlockResponseBody = null;
-        this.defaultCustomBlockResponseStatusCode = null;
-        this.defaultRedirectUrl = null;
-        this.enabledState = null;
-        this.mode = null;
+    private PolicySettingsResponse(PolicySettingsResponse $) {
+        this.defaultCustomBlockResponseBody = $.defaultCustomBlockResponseBody;
+        this.defaultCustomBlockResponseStatusCode = $.defaultCustomBlockResponseStatusCode;
+        this.defaultRedirectUrl = $.defaultRedirectUrl;
+        this.enabledState = $.enabledState;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultCustomBlockResponseBody;
-        private @Nullable Integer defaultCustomBlockResponseStatusCode;
-        private @Nullable String defaultRedirectUrl;
-        private @Nullable String enabledState;
-        private @Nullable String mode;
+        private PolicySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicySettingsResponse();
         }
 
         public Builder(PolicySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultCustomBlockResponseBody = defaults.defaultCustomBlockResponseBody;
-    	      this.defaultCustomBlockResponseStatusCode = defaults.defaultCustomBlockResponseStatusCode;
-    	      this.defaultRedirectUrl = defaults.defaultRedirectUrl;
-    	      this.enabledState = defaults.enabledState;
-    	      this.mode = defaults.mode;
+            $ = new PolicySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
-            this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
+            $.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
+
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
-            this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
+            $.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
+
         public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
-            this.defaultRedirectUrl = defaultRedirectUrl;
+            $.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public PolicySettingsResponse build() {
-            return new PolicySettingsResponse(defaultCustomBlockResponseBody, defaultCustomBlockResponseStatusCode, defaultRedirectUrl, enabledState, mode);
+        }
+
+        public PolicySettingsResponse build() {
+            return $;
         }
     }
+
 }

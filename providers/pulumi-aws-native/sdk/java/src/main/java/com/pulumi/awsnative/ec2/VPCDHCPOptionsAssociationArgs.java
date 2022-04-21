@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VPCDHCPOptionsAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dhcpOptionsId", required=true)
-      private final Output<String> dhcpOptionsId;
+    private Output<String> dhcpOptionsId;
 
     public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
@@ -30,63 +29,60 @@ public final class VPCDHCPOptionsAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public VPCDHCPOptionsAssociationArgs(
-        Output<String> dhcpOptionsId,
-        Output<String> vpcId) {
-        this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId, "expected parameter 'dhcpOptionsId' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private VPCDHCPOptionsAssociationArgs() {}
 
-    private VPCDHCPOptionsAssociationArgs() {
-        this.dhcpOptionsId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private VPCDHCPOptionsAssociationArgs(VPCDHCPOptionsAssociationArgs $) {
+        this.dhcpOptionsId = $.dhcpOptionsId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VPCDHCPOptionsAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dhcpOptionsId;
-        private Output<String> vpcId;
+        private VPCDHCPOptionsAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VPCDHCPOptionsAssociationArgs();
         }
 
         public Builder(VPCDHCPOptionsAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhcpOptionsId = defaults.dhcpOptionsId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new VPCDHCPOptionsAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dhcpOptionsId(Output<String> dhcpOptionsId) {
-            this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
+            $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
+
         public Builder dhcpOptionsId(String dhcpOptionsId) {
-            this.dhcpOptionsId = Output.of(Objects.requireNonNull(dhcpOptionsId));
-            return this;
+            return dhcpOptionsId(Output.of(dhcpOptionsId));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public VPCDHCPOptionsAssociationArgs build() {
-            return new VPCDHCPOptionsAssociationArgs(dhcpOptionsId, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public VPCDHCPOptionsAssociationArgs build() {
+            $.dhcpOptionsId = Objects.requireNonNull($.dhcpOptionsId, "expected parameter 'dhcpOptionsId' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

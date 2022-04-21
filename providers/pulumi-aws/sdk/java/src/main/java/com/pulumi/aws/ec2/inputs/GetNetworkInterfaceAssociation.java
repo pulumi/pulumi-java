@@ -17,7 +17,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="allocationId", required=true)
-      private final String allocationId;
+    private String allocationId;
 
     public String allocationId() {
         return this.allocationId;
@@ -28,7 +28,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="associationId", required=true)
-      private final String associationId;
+    private String associationId;
 
     public String associationId() {
         return this.associationId;
@@ -39,7 +39,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="carrierIp", required=true)
-      private final String carrierIp;
+    private String carrierIp;
 
     public String carrierIp() {
         return this.carrierIp;
@@ -50,7 +50,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="customerOwnedIp", required=true)
-      private final String customerOwnedIp;
+    private String customerOwnedIp;
 
     public String customerOwnedIp() {
         return this.customerOwnedIp;
@@ -61,7 +61,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="ipOwnerId", required=true)
-      private final String ipOwnerId;
+    private String ipOwnerId;
 
     public String ipOwnerId() {
         return this.ipOwnerId;
@@ -72,7 +72,7 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicDnsName", required=true)
-      private final String publicDnsName;
+    private String publicDnsName;
 
     public String publicDnsName() {
         return this.publicDnsName;
@@ -83,100 +83,87 @@ public final class GetNetworkInterfaceAssociation extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicIp", required=true)
-      private final String publicIp;
+    private String publicIp;
 
     public String publicIp() {
         return this.publicIp;
     }
 
-    public GetNetworkInterfaceAssociation(
-        String allocationId,
-        String associationId,
-        String carrierIp,
-        String customerOwnedIp,
-        String ipOwnerId,
-        String publicDnsName,
-        String publicIp) {
-        this.allocationId = Objects.requireNonNull(allocationId, "expected parameter 'allocationId' to be non-null");
-        this.associationId = Objects.requireNonNull(associationId, "expected parameter 'associationId' to be non-null");
-        this.carrierIp = Objects.requireNonNull(carrierIp, "expected parameter 'carrierIp' to be non-null");
-        this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp, "expected parameter 'customerOwnedIp' to be non-null");
-        this.ipOwnerId = Objects.requireNonNull(ipOwnerId, "expected parameter 'ipOwnerId' to be non-null");
-        this.publicDnsName = Objects.requireNonNull(publicDnsName, "expected parameter 'publicDnsName' to be non-null");
-        this.publicIp = Objects.requireNonNull(publicIp, "expected parameter 'publicIp' to be non-null");
-    }
+    private GetNetworkInterfaceAssociation() {}
 
-    private GetNetworkInterfaceAssociation() {
-        this.allocationId = null;
-        this.associationId = null;
-        this.carrierIp = null;
-        this.customerOwnedIp = null;
-        this.ipOwnerId = null;
-        this.publicDnsName = null;
-        this.publicIp = null;
+    private GetNetworkInterfaceAssociation(GetNetworkInterfaceAssociation $) {
+        this.allocationId = $.allocationId;
+        this.associationId = $.associationId;
+        this.carrierIp = $.carrierIp;
+        this.customerOwnedIp = $.customerOwnedIp;
+        this.ipOwnerId = $.ipOwnerId;
+        this.publicDnsName = $.publicDnsName;
+        this.publicIp = $.publicIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInterfaceAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String allocationId;
-        private String associationId;
-        private String carrierIp;
-        private String customerOwnedIp;
-        private String ipOwnerId;
-        private String publicDnsName;
-        private String publicIp;
+        private GetNetworkInterfaceAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInterfaceAssociation();
         }
 
         public Builder(GetNetworkInterfaceAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationId = defaults.allocationId;
-    	      this.associationId = defaults.associationId;
-    	      this.carrierIp = defaults.carrierIp;
-    	      this.customerOwnedIp = defaults.customerOwnedIp;
-    	      this.ipOwnerId = defaults.ipOwnerId;
-    	      this.publicDnsName = defaults.publicDnsName;
-    	      this.publicIp = defaults.publicIp;
+            $ = new GetNetworkInterfaceAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationId(String allocationId) {
-            this.allocationId = Objects.requireNonNull(allocationId);
+            $.allocationId = allocationId;
             return this;
         }
+
         public Builder associationId(String associationId) {
-            this.associationId = Objects.requireNonNull(associationId);
+            $.associationId = associationId;
             return this;
         }
+
         public Builder carrierIp(String carrierIp) {
-            this.carrierIp = Objects.requireNonNull(carrierIp);
+            $.carrierIp = carrierIp;
             return this;
         }
+
         public Builder customerOwnedIp(String customerOwnedIp) {
-            this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
+            $.customerOwnedIp = customerOwnedIp;
             return this;
         }
+
         public Builder ipOwnerId(String ipOwnerId) {
-            this.ipOwnerId = Objects.requireNonNull(ipOwnerId);
+            $.ipOwnerId = ipOwnerId;
             return this;
         }
+
         public Builder publicDnsName(String publicDnsName) {
-            this.publicDnsName = Objects.requireNonNull(publicDnsName);
+            $.publicDnsName = publicDnsName;
             return this;
         }
+
         public Builder publicIp(String publicIp) {
-            this.publicIp = Objects.requireNonNull(publicIp);
+            $.publicIp = publicIp;
             return this;
-        }        public GetNetworkInterfaceAssociation build() {
-            return new GetNetworkInterfaceAssociation(allocationId, associationId, carrierIp, customerOwnedIp, ipOwnerId, publicDnsName, publicIp);
+        }
+
+        public GetNetworkInterfaceAssociation build() {
+            $.allocationId = Objects.requireNonNull($.allocationId, "expected parameter 'allocationId' to be non-null");
+            $.associationId = Objects.requireNonNull($.associationId, "expected parameter 'associationId' to be non-null");
+            $.carrierIp = Objects.requireNonNull($.carrierIp, "expected parameter 'carrierIp' to be non-null");
+            $.customerOwnedIp = Objects.requireNonNull($.customerOwnedIp, "expected parameter 'customerOwnedIp' to be non-null");
+            $.ipOwnerId = Objects.requireNonNull($.ipOwnerId, "expected parameter 'ipOwnerId' to be non-null");
+            $.publicDnsName = Objects.requireNonNull($.publicDnsName, "expected parameter 'publicDnsName' to be non-null");
+            $.publicIp = Objects.requireNonNull($.publicIp, "expected parameter 'publicIp' to be non-null");
+            return $;
         }
     }
+
 }

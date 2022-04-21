@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="charset")
-      private final @Nullable Output<String> charset;
+    private @Nullable Output<String> charset;
 
-    public Output<String> charset() {
-        return this.charset == null ? Codegen.empty() : this.charset;
+    public Optional<Output<String>> charset() {
+        return Optional.ofNullable(this.charset);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -86,115 +86,98 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public DatabaseState(
-        @Nullable Output<String> charset,
-        @Nullable Output<String> collation,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink) {
-        this.charset = charset;
-        this.collation = collation;
-        this.instance = instance;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-    }
+    private DatabaseState() {}
 
-    private DatabaseState() {
-        this.charset = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private DatabaseState(DatabaseState $) {
+        this.charset = $.charset;
+        this.collation = $.collation;
+        this.instance = $.instance;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> charset;
-        private @Nullable Output<String> collation;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
+        private DatabaseState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseState();
         }
 
         public Builder(DatabaseState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.collation = defaults.collation;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
+            $ = new DatabaseState(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable Output<String> charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
-        public Builder charset(@Nullable String charset) {
-            this.charset = Codegen.ofNullable(charset);
-            return this;
+
+        public Builder charset(String charset) {
+            return charset(Output.of(charset));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public DatabaseState build() {
-            return new DatabaseState(charset, collation, instance, name, project, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public DatabaseState build() {
+            return $;
         }
     }
+
 }

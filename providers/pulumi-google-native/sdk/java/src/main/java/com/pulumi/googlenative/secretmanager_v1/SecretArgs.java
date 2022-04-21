@@ -5,7 +5,6 @@ package com.pulumi.googlenative.secretmanager_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.secretmanager_v1.inputs.ReplicationArgs;
 import com.pulumi.googlenative.secretmanager_v1.inputs.RotationArgs;
 import com.pulumi.googlenative.secretmanager_v1.inputs.TopicArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replication", required=true)
-      private final Output<ReplicationArgs> replication;
+    private Output<ReplicationArgs> replication;
 
     public Output<ReplicationArgs> replication() {
         return this.replication;
@@ -76,14 +76,14 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rotation")
-      private final @Nullable Output<RotationArgs> rotation;
+    private @Nullable Output<RotationArgs> rotation;
 
-    public Output<RotationArgs> rotation() {
-        return this.rotation == null ? Codegen.empty() : this.rotation;
+    public Optional<Output<RotationArgs>> rotation() {
+        return Optional.ofNullable(this.rotation);
     }
 
     @Import(name="secretId", required=true)
-      private final Output<String> secretId;
+    private Output<String> secretId;
 
     public Output<String> secretId() {
         return this.secretId;
@@ -94,10 +94,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topics")
-      private final @Nullable Output<List<TopicArgs>> topics;
+    private @Nullable Output<List<TopicArgs>> topics;
 
-    public Output<List<TopicArgs>> topics() {
-        return this.topics == null ? Codegen.empty() : this.topics;
+    public Optional<Output<List<TopicArgs>>> topics() {
+        return Optional.ofNullable(this.topics);
     }
 
     /**
@@ -105,157 +105,134 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public SecretArgs(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project,
-        Output<ReplicationArgs> replication,
-        @Nullable Output<RotationArgs> rotation,
-        Output<String> secretId,
-        @Nullable Output<List<TopicArgs>> topics,
-        @Nullable Output<String> ttl) {
-        this.etag = etag;
-        this.expireTime = expireTime;
-        this.labels = labels;
-        this.project = project;
-        this.replication = Objects.requireNonNull(replication, "expected parameter 'replication' to be non-null");
-        this.rotation = rotation;
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-        this.topics = topics;
-        this.ttl = ttl;
-    }
+    private SecretArgs() {}
 
-    private SecretArgs() {
-        this.etag = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
-        this.replication = Codegen.empty();
-        this.rotation = Codegen.empty();
-        this.secretId = Codegen.empty();
-        this.topics = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private SecretArgs(SecretArgs $) {
+        this.etag = $.etag;
+        this.expireTime = $.expireTime;
+        this.labels = $.labels;
+        this.project = $.project;
+        this.replication = $.replication;
+        this.rotation = $.rotation;
+        this.secretId = $.secretId;
+        this.topics = $.topics;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
-        private Output<ReplicationArgs> replication;
-        private @Nullable Output<RotationArgs> rotation;
-        private Output<String> secretId;
-        private @Nullable Output<List<TopicArgs>> topics;
-        private @Nullable Output<String> ttl;
+        private SecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretArgs();
         }
 
         public Builder(SecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.expireTime = defaults.expireTime;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
-    	      this.replication = defaults.replication;
-    	      this.rotation = defaults.rotation;
-    	      this.secretId = defaults.secretId;
-    	      this.topics = defaults.topics;
-    	      this.ttl = defaults.ttl;
+            $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder replication(Output<ReplicationArgs> replication) {
-            this.replication = Objects.requireNonNull(replication);
+            $.replication = replication;
             return this;
         }
+
         public Builder replication(ReplicationArgs replication) {
-            this.replication = Output.of(Objects.requireNonNull(replication));
-            return this;
+            return replication(Output.of(replication));
         }
+
         public Builder rotation(@Nullable Output<RotationArgs> rotation) {
-            this.rotation = rotation;
+            $.rotation = rotation;
             return this;
         }
-        public Builder rotation(@Nullable RotationArgs rotation) {
-            this.rotation = Codegen.ofNullable(rotation);
-            return this;
+
+        public Builder rotation(RotationArgs rotation) {
+            return rotation(Output.of(rotation));
         }
+
         public Builder secretId(Output<String> secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
         }
+
         public Builder secretId(String secretId) {
-            this.secretId = Output.of(Objects.requireNonNull(secretId));
-            return this;
+            return secretId(Output.of(secretId));
         }
+
         public Builder topics(@Nullable Output<List<TopicArgs>> topics) {
-            this.topics = topics;
+            $.topics = topics;
             return this;
         }
-        public Builder topics(@Nullable List<TopicArgs> topics) {
-            this.topics = Codegen.ofNullable(topics);
-            return this;
+
+        public Builder topics(List<TopicArgs> topics) {
+            return topics(Output.of(topics));
         }
+
         public Builder topics(TopicArgs... topics) {
             return topics(List.of(topics));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public SecretArgs build() {
-            return new SecretArgs(etag, expireTime, labels, project, replication, rotation, secretId, topics, ttl);
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public SecretArgs build() {
+            $.replication = Objects.requireNonNull($.replication, "expected parameter 'replication' to be non-null");
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

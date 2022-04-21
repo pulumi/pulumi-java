@@ -15,94 +15,85 @@ public final class GetApiIamPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetApiIamPolicyArgs Empty = new GetApiIamPolicyArgs();
 
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetApiIamPolicyArgs(
-        String apiId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetApiIamPolicyArgs() {}
 
-    private GetApiIamPolicyArgs() {
-        this.apiId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetApiIamPolicyArgs(GetApiIamPolicyArgs $) {
+        this.apiId = $.apiId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetApiIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiIamPolicyArgs();
         }
 
         public Builder(GetApiIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetApiIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetApiIamPolicyArgs build() {
-            return new GetApiIamPolicyArgs(apiId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetApiIamPolicyArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

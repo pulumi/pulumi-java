@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class DynamicThresholdFailingPeriodsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="minFailingPeriodsToAlert", required=true)
-      private final Output<Double> minFailingPeriodsToAlert;
+    private Output<Double> minFailingPeriodsToAlert;
 
     public Output<Double> minFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
@@ -34,63 +33,60 @@ public final class DynamicThresholdFailingPeriodsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="numberOfEvaluationPeriods", required=true)
-      private final Output<Double> numberOfEvaluationPeriods;
+    private Output<Double> numberOfEvaluationPeriods;
 
     public Output<Double> numberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
     }
 
-    public DynamicThresholdFailingPeriodsArgs(
-        Output<Double> minFailingPeriodsToAlert,
-        Output<Double> numberOfEvaluationPeriods) {
-        this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert, "expected parameter 'minFailingPeriodsToAlert' to be non-null");
-        this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods, "expected parameter 'numberOfEvaluationPeriods' to be non-null");
-    }
+    private DynamicThresholdFailingPeriodsArgs() {}
 
-    private DynamicThresholdFailingPeriodsArgs() {
-        this.minFailingPeriodsToAlert = Codegen.empty();
-        this.numberOfEvaluationPeriods = Codegen.empty();
+    private DynamicThresholdFailingPeriodsArgs(DynamicThresholdFailingPeriodsArgs $) {
+        this.minFailingPeriodsToAlert = $.minFailingPeriodsToAlert;
+        this.numberOfEvaluationPeriods = $.numberOfEvaluationPeriods;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DynamicThresholdFailingPeriodsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> minFailingPeriodsToAlert;
-        private Output<Double> numberOfEvaluationPeriods;
+        private DynamicThresholdFailingPeriodsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DynamicThresholdFailingPeriodsArgs();
         }
 
         public Builder(DynamicThresholdFailingPeriodsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minFailingPeriodsToAlert = defaults.minFailingPeriodsToAlert;
-    	      this.numberOfEvaluationPeriods = defaults.numberOfEvaluationPeriods;
+            $ = new DynamicThresholdFailingPeriodsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minFailingPeriodsToAlert(Output<Double> minFailingPeriodsToAlert) {
-            this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert);
+            $.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
             return this;
         }
+
         public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
-            this.minFailingPeriodsToAlert = Output.of(Objects.requireNonNull(minFailingPeriodsToAlert));
-            return this;
+            return minFailingPeriodsToAlert(Output.of(minFailingPeriodsToAlert));
         }
+
         public Builder numberOfEvaluationPeriods(Output<Double> numberOfEvaluationPeriods) {
-            this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
+            $.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
             return this;
         }
+
         public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
-            this.numberOfEvaluationPeriods = Output.of(Objects.requireNonNull(numberOfEvaluationPeriods));
-            return this;
-        }        public DynamicThresholdFailingPeriodsArgs build() {
-            return new DynamicThresholdFailingPeriodsArgs(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
+            return numberOfEvaluationPeriods(Output.of(numberOfEvaluationPeriods));
+        }
+
+        public DynamicThresholdFailingPeriodsArgs build() {
+            $.minFailingPeriodsToAlert = Objects.requireNonNull($.minFailingPeriodsToAlert, "expected parameter 'minFailingPeriodsToAlert' to be non-null");
+            $.numberOfEvaluationPeriods = Objects.requireNonNull($.numberOfEvaluationPeriods, "expected parameter 'numberOfEvaluationPeriods' to be non-null");
+            return $;
         }
     }
+
 }

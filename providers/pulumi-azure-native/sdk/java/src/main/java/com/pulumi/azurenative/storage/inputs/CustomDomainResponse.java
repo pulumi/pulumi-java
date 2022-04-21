@@ -24,7 +24,7 @@ public final class CustomDomainResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,51 @@ public final class CustomDomainResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="useSubDomainName")
-      private final @Nullable Boolean useSubDomainName;
+    private @Nullable Boolean useSubDomainName;
 
     public Optional<Boolean> useSubDomainName() {
-        return this.useSubDomainName == null ? Optional.empty() : Optional.ofNullable(this.useSubDomainName);
+        return Optional.ofNullable(this.useSubDomainName);
     }
 
-    public CustomDomainResponse(
-        String name,
-        @Nullable Boolean useSubDomainName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.useSubDomainName = useSubDomainName;
-    }
+    private CustomDomainResponse() {}
 
-    private CustomDomainResponse() {
-        this.name = null;
-        this.useSubDomainName = null;
+    private CustomDomainResponse(CustomDomainResponse $) {
+        this.name = $.name;
+        this.useSubDomainName = $.useSubDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable Boolean useSubDomainName;
+        private CustomDomainResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainResponse();
         }
 
         public Builder(CustomDomainResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.useSubDomainName = defaults.useSubDomainName;
+            $ = new CustomDomainResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
-            this.useSubDomainName = useSubDomainName;
+            $.useSubDomainName = useSubDomainName;
             return this;
-        }        public CustomDomainResponse build() {
-            return new CustomDomainResponse(name, useSubDomainName);
+        }
+
+        public CustomDomainResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
@@ -46,7 +46,7 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmResourceId", required=true)
-      private final String vmResourceId;
+    private String vmResourceId;
 
     public String vmResourceId() {
         return this.vmResourceId;
@@ -57,73 +57,65 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmStateDetails", required=true)
-      private final VmStateDetailsResponse vmStateDetails;
+    private VmStateDetailsResponse vmStateDetails;
 
     public VmStateDetailsResponse vmStateDetails() {
         return this.vmStateDetails;
     }
 
-    public ReferenceVmResponse(
-        @Nullable String password,
-        String userName,
-        String vmResourceId,
-        VmStateDetailsResponse vmStateDetails) {
-        this.password = password;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-        this.vmResourceId = Objects.requireNonNull(vmResourceId, "expected parameter 'vmResourceId' to be non-null");
-        this.vmStateDetails = Objects.requireNonNull(vmStateDetails, "expected parameter 'vmStateDetails' to be non-null");
-    }
+    private ReferenceVmResponse() {}
 
-    private ReferenceVmResponse() {
-        this.password = null;
-        this.userName = null;
-        this.vmResourceId = null;
-        this.vmStateDetails = null;
+    private ReferenceVmResponse(ReferenceVmResponse $) {
+        this.password = $.password;
+        this.userName = $.userName;
+        this.vmResourceId = $.vmResourceId;
+        this.vmStateDetails = $.vmStateDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReferenceVmResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private String userName;
-        private String vmResourceId;
-        private VmStateDetailsResponse vmStateDetails;
+        private ReferenceVmResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReferenceVmResponse();
         }
 
         public Builder(ReferenceVmResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.userName = defaults.userName;
-    	      this.vmResourceId = defaults.vmResourceId;
-    	      this.vmStateDetails = defaults.vmStateDetails;
+            $ = new ReferenceVmResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder vmResourceId(String vmResourceId) {
-            this.vmResourceId = Objects.requireNonNull(vmResourceId);
+            $.vmResourceId = vmResourceId;
             return this;
         }
+
         public Builder vmStateDetails(VmStateDetailsResponse vmStateDetails) {
-            this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
+            $.vmStateDetails = vmStateDetails;
             return this;
-        }        public ReferenceVmResponse build() {
-            return new ReferenceVmResponse(password, userName, vmResourceId, vmStateDetails);
+        }
+
+        public ReferenceVmResponse build() {
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            $.vmResourceId = Objects.requireNonNull($.vmResourceId, "expected parameter 'vmResourceId' to be non-null");
+            $.vmStateDetails = Objects.requireNonNull($.vmStateDetails, "expected parameter 'vmStateDetails' to be non-null");
+            return $;
         }
     }
+
 }

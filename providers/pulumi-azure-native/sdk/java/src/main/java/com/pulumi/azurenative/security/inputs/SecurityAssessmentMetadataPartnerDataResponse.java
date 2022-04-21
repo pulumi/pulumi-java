@@ -23,7 +23,7 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
      * 
      */
     @Import(name="partnerName", required=true)
-      private final String partnerName;
+    private String partnerName;
 
     public String partnerName() {
         return this.partnerName;
@@ -34,10 +34,10 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
      * 
      */
     @Import(name="productName")
-      private final @Nullable String productName;
+    private @Nullable String productName;
 
     public Optional<String> productName() {
-        return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
+        return Optional.ofNullable(this.productName);
     }
 
     /**
@@ -45,64 +45,58 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
     }
 
-    public SecurityAssessmentMetadataPartnerDataResponse(
-        String partnerName,
-        @Nullable String productName,
-        String secret) {
-        this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
-        this.productName = productName;
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private SecurityAssessmentMetadataPartnerDataResponse() {}
 
-    private SecurityAssessmentMetadataPartnerDataResponse() {
-        this.partnerName = null;
-        this.productName = null;
-        this.secret = null;
+    private SecurityAssessmentMetadataPartnerDataResponse(SecurityAssessmentMetadataPartnerDataResponse $) {
+        this.partnerName = $.partnerName;
+        this.productName = $.productName;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityAssessmentMetadataPartnerDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String partnerName;
-        private @Nullable String productName;
-        private String secret;
+        private SecurityAssessmentMetadataPartnerDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityAssessmentMetadataPartnerDataResponse();
         }
 
         public Builder(SecurityAssessmentMetadataPartnerDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerName = defaults.partnerName;
-    	      this.productName = defaults.productName;
-    	      this.secret = defaults.secret;
+            $ = new SecurityAssessmentMetadataPartnerDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerName(String partnerName) {
-            this.partnerName = Objects.requireNonNull(partnerName);
+            $.partnerName = partnerName;
             return this;
         }
+
         public Builder productName(@Nullable String productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
-        }        public SecurityAssessmentMetadataPartnerDataResponse build() {
-            return new SecurityAssessmentMetadataPartnerDataResponse(partnerName, productName, secret);
+        }
+
+        public SecurityAssessmentMetadataPartnerDataResponse build() {
+            $.partnerName = Objects.requireNonNull($.partnerName, "expected parameter 'partnerName' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

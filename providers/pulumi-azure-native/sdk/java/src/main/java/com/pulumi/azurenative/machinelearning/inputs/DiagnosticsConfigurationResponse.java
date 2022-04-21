@@ -23,10 +23,10 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="expiry")
-      private final @Nullable String expiry;
+    private @Nullable String expiry;
 
     public Optional<String> expiry() {
-        return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
+        return Optional.ofNullable(this.expiry);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="level", required=true)
-      private final String level;
+    private String level;
 
     public String level() {
         return this.level;
     }
 
-    public DiagnosticsConfigurationResponse(
-        @Nullable String expiry,
-        String level) {
-        this.expiry = expiry;
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-    }
+    private DiagnosticsConfigurationResponse() {}
 
-    private DiagnosticsConfigurationResponse() {
-        this.expiry = null;
-        this.level = null;
+    private DiagnosticsConfigurationResponse(DiagnosticsConfigurationResponse $) {
+        this.expiry = $.expiry;
+        this.level = $.level;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expiry;
-        private String level;
+        private DiagnosticsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticsConfigurationResponse();
         }
 
         public Builder(DiagnosticsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiry = defaults.expiry;
-    	      this.level = defaults.level;
+            $ = new DiagnosticsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = expiry;
+            $.expiry = expiry;
             return this;
         }
+
         public Builder level(String level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
-        }        public DiagnosticsConfigurationResponse build() {
-            return new DiagnosticsConfigurationResponse(expiry, level);
+        }
+
+        public DiagnosticsConfigurationResponse build() {
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SloRequestBasedSliDistributionCutRangeArgs extends com.pulumi
      * 
      */
     @Import(name="max")
-      private final @Nullable Output<Double> max;
+    private @Nullable Output<Double> max;
 
-    public Output<Double> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<Double>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SloRequestBasedSliDistributionCutRangeArgs extends com.pulumi
      * 
      */
     @Import(name="min")
-      private final @Nullable Output<Double> min;
+    private @Nullable Output<Double> min;
 
-    public Output<Double> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<Double>> min() {
+        return Optional.ofNullable(this.min);
     }
 
-    public SloRequestBasedSliDistributionCutRangeArgs(
-        @Nullable Output<Double> max,
-        @Nullable Output<Double> min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SloRequestBasedSliDistributionCutRangeArgs() {}
 
-    private SloRequestBasedSliDistributionCutRangeArgs() {
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
+    private SloRequestBasedSliDistributionCutRangeArgs(SloRequestBasedSliDistributionCutRangeArgs $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloRequestBasedSliDistributionCutRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> max;
-        private @Nullable Output<Double> min;
+        private SloRequestBasedSliDistributionCutRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloRequestBasedSliDistributionCutRangeArgs();
         }
 
         public Builder(SloRequestBasedSliDistributionCutRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SloRequestBasedSliDistributionCutRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Output<Double> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable Double max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(Double max) {
+            return max(Output.of(max));
         }
+
         public Builder min(@Nullable Output<Double> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable Double min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
-        }        public SloRequestBasedSliDistributionCutRangeArgs build() {
-            return new SloRequestBasedSliDistributionCutRangeArgs(max, min);
+
+        public Builder min(Double min) {
+            return min(Output.of(min));
+        }
+
+        public SloRequestBasedSliDistributionCutRangeArgs build() {
+            return $;
         }
     }
+
 }

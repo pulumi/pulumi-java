@@ -5,9 +5,9 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ApplicationAppSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApplicationAppSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<String> revision;
+    private @Nullable Output<String> revision;
 
-    public Output<String> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<String>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApplicationAppSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sshKey")
-      private final @Nullable Output<String> sshKey;
+    private @Nullable Output<String> sshKey;
 
-    public Output<String> sshKey() {
-        return this.sshKey == null ? Codegen.empty() : this.sshKey;
+    public Optional<Output<String>> sshKey() {
+        return Optional.ofNullable(this.sshKey);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ApplicationAppSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -64,10 +64,10 @@ public final class ApplicationAppSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -75,115 +75,99 @@ public final class ApplicationAppSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ApplicationAppSourceArgs(
-        @Nullable Output<String> password,
-        @Nullable Output<String> revision,
-        @Nullable Output<String> sshKey,
-        Output<String> type,
-        @Nullable Output<String> url,
-        @Nullable Output<String> username) {
-        this.password = password;
-        this.revision = revision;
-        this.sshKey = sshKey;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.url = url;
-        this.username = username;
-    }
+    private ApplicationAppSourceArgs() {}
 
-    private ApplicationAppSourceArgs() {
-        this.password = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.sshKey = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
-        this.username = Codegen.empty();
+    private ApplicationAppSourceArgs(ApplicationAppSourceArgs $) {
+        this.password = $.password;
+        this.revision = $.revision;
+        this.sshKey = $.sshKey;
+        this.type = $.type;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationAppSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> revision;
-        private @Nullable Output<String> sshKey;
-        private Output<String> type;
-        private @Nullable Output<String> url;
-        private @Nullable Output<String> username;
+        private ApplicationAppSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationAppSourceArgs();
         }
 
         public Builder(ApplicationAppSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.revision = defaults.revision;
-    	      this.sshKey = defaults.sshKey;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new ApplicationAppSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder revision(@Nullable Output<String> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable String revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(String revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder sshKey(@Nullable Output<String> sshKey) {
-            this.sshKey = sshKey;
+            $.sshKey = sshKey;
             return this;
         }
-        public Builder sshKey(@Nullable String sshKey) {
-            this.sshKey = Codegen.ofNullable(sshKey);
-            return this;
+
+        public Builder sshKey(String sshKey) {
+            return sshKey(Output.of(sshKey));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
+
+        public Builder url(String url) {
+            return url(Output.of(url));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ApplicationAppSourceArgs build() {
-            return new ApplicationAppSourceArgs(password, revision, sshKey, type, url, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ApplicationAppSourceArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

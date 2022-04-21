@@ -5,9 +5,9 @@ package com.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConsumerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
-    public ConsumerArgs(@Nullable Output<String> subnetwork) {
-        this.subnetwork = subnetwork;
-    }
+    private ConsumerArgs() {}
 
-    private ConsumerArgs() {
-        this.subnetwork = Codegen.empty();
+    private ConsumerArgs(ConsumerArgs $) {
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> subnetwork;
+        private ConsumerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumerArgs();
         }
 
         public Builder(ConsumerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new ConsumerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
-        }        public ConsumerArgs build() {
-            return new ConsumerArgs(subnetwork);
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public ConsumerArgs build() {
+            return $;
         }
     }
+
 }

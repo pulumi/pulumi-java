@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,17 +20,17 @@ public final class JobIAMPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="jobId")
-      private final @Nullable Output<String> jobId;
+    private @Nullable Output<String> jobId;
 
-    public Output<String> jobId() {
-        return this.jobId == null ? Codegen.empty() : this.jobId;
+    public Optional<Output<String>> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class JobIAMPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class JobIAMPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -62,102 +62,88 @@ public final class JobIAMPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public JobIAMPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> jobId,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.etag = etag;
-        this.jobId = jobId;
-        this.policyData = policyData;
-        this.project = project;
-        this.region = region;
-    }
+    private JobIAMPolicyState() {}
 
-    private JobIAMPolicyState() {
-        this.etag = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private JobIAMPolicyState(JobIAMPolicyState $) {
+        this.etag = $.etag;
+        this.jobId = $.jobId;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobIAMPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> jobId;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private JobIAMPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobIAMPolicyState();
         }
 
         public Builder(JobIAMPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.jobId = defaults.jobId;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new JobIAMPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder jobId(@Nullable Output<String> jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
-        public Builder jobId(@Nullable String jobId) {
-            this.jobId = Codegen.ofNullable(jobId);
-            return this;
+
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public JobIAMPolicyState build() {
-            return new JobIAMPolicyState(etag, jobId, policyData, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public JobIAMPolicyState build() {
+            return $;
         }
     }
+
 }

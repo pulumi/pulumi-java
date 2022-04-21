@@ -5,9 +5,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ContainerRecipeComponentConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="componentArn")
-      private final @Nullable Output<String> componentArn;
+    private @Nullable Output<String> componentArn;
 
-    public Output<String> componentArn() {
-        return this.componentArn == null ? Codegen.empty() : this.componentArn;
+    public Optional<Output<String>> componentArn() {
+        return Optional.ofNullable(this.componentArn);
     }
 
-    public ContainerRecipeComponentConfigurationArgs(@Nullable Output<String> componentArn) {
-        this.componentArn = componentArn;
-    }
+    private ContainerRecipeComponentConfigurationArgs() {}
 
-    private ContainerRecipeComponentConfigurationArgs() {
-        this.componentArn = Codegen.empty();
+    private ContainerRecipeComponentConfigurationArgs(ContainerRecipeComponentConfigurationArgs $) {
+        this.componentArn = $.componentArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRecipeComponentConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> componentArn;
+        private ContainerRecipeComponentConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRecipeComponentConfigurationArgs();
         }
 
         public Builder(ContainerRecipeComponentConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentArn = defaults.componentArn;
+            $ = new ContainerRecipeComponentConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentArn(@Nullable Output<String> componentArn) {
-            this.componentArn = componentArn;
+            $.componentArn = componentArn;
             return this;
         }
-        public Builder componentArn(@Nullable String componentArn) {
-            this.componentArn = Codegen.ofNullable(componentArn);
-            return this;
-        }        public ContainerRecipeComponentConfigurationArgs build() {
-            return new ContainerRecipeComponentConfigurationArgs(componentArn);
+
+        public Builder componentArn(String componentArn) {
+            return componentArn(Output.of(componentArn));
+        }
+
+        public ContainerRecipeComponentConfigurationArgs build() {
+            return $;
         }
     }
+
 }

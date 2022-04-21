@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="callerReference")
-      private final @Nullable Output<String> callerReference;
+    private @Nullable Output<String> callerReference;
 
-    public Output<String> callerReference() {
-        return this.callerReference == null ? Codegen.empty() : this.callerReference;
+    public Optional<Output<String>> callerReference() {
+        return Optional.ofNullable(this.callerReference);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cloudfrontAccessIdentityPath")
-      private final @Nullable Output<String> cloudfrontAccessIdentityPath;
+    private @Nullable Output<String> cloudfrontAccessIdentityPath;
 
-    public Output<String> cloudfrontAccessIdentityPath() {
-        return this.cloudfrontAccessIdentityPath == null ? Codegen.empty() : this.cloudfrontAccessIdentityPath;
+    public Optional<Output<String>> cloudfrontAccessIdentityPath() {
+        return Optional.ofNullable(this.cloudfrontAccessIdentityPath);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="iamArn")
-      private final @Nullable Output<String> iamArn;
+    private @Nullable Output<String> iamArn;
 
-    public Output<String> iamArn() {
-        return this.iamArn == null ? Codegen.empty() : this.iamArn;
+    public Optional<Output<String>> iamArn() {
+        return Optional.ofNullable(this.iamArn);
     }
 
     /**
@@ -82,115 +82,98 @@ public final class OriginAccessIdentityState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="s3CanonicalUserId")
-      private final @Nullable Output<String> s3CanonicalUserId;
+    private @Nullable Output<String> s3CanonicalUserId;
 
-    public Output<String> s3CanonicalUserId() {
-        return this.s3CanonicalUserId == null ? Codegen.empty() : this.s3CanonicalUserId;
+    public Optional<Output<String>> s3CanonicalUserId() {
+        return Optional.ofNullable(this.s3CanonicalUserId);
     }
 
-    public OriginAccessIdentityState(
-        @Nullable Output<String> callerReference,
-        @Nullable Output<String> cloudfrontAccessIdentityPath,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> iamArn,
-        @Nullable Output<String> s3CanonicalUserId) {
-        this.callerReference = callerReference;
-        this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
-        this.comment = comment;
-        this.etag = etag;
-        this.iamArn = iamArn;
-        this.s3CanonicalUserId = s3CanonicalUserId;
-    }
+    private OriginAccessIdentityState() {}
 
-    private OriginAccessIdentityState() {
-        this.callerReference = Codegen.empty();
-        this.cloudfrontAccessIdentityPath = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.iamArn = Codegen.empty();
-        this.s3CanonicalUserId = Codegen.empty();
+    private OriginAccessIdentityState(OriginAccessIdentityState $) {
+        this.callerReference = $.callerReference;
+        this.cloudfrontAccessIdentityPath = $.cloudfrontAccessIdentityPath;
+        this.comment = $.comment;
+        this.etag = $.etag;
+        this.iamArn = $.iamArn;
+        this.s3CanonicalUserId = $.s3CanonicalUserId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginAccessIdentityState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> callerReference;
-        private @Nullable Output<String> cloudfrontAccessIdentityPath;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> iamArn;
-        private @Nullable Output<String> s3CanonicalUserId;
+        private OriginAccessIdentityState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginAccessIdentityState();
         }
 
         public Builder(OriginAccessIdentityState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callerReference = defaults.callerReference;
-    	      this.cloudfrontAccessIdentityPath = defaults.cloudfrontAccessIdentityPath;
-    	      this.comment = defaults.comment;
-    	      this.etag = defaults.etag;
-    	      this.iamArn = defaults.iamArn;
-    	      this.s3CanonicalUserId = defaults.s3CanonicalUserId;
+            $ = new OriginAccessIdentityState(Objects.requireNonNull(defaults));
         }
 
         public Builder callerReference(@Nullable Output<String> callerReference) {
-            this.callerReference = callerReference;
+            $.callerReference = callerReference;
             return this;
         }
-        public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Codegen.ofNullable(callerReference);
-            return this;
+
+        public Builder callerReference(String callerReference) {
+            return callerReference(Output.of(callerReference));
         }
+
         public Builder cloudfrontAccessIdentityPath(@Nullable Output<String> cloudfrontAccessIdentityPath) {
-            this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
+            $.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
             return this;
         }
-        public Builder cloudfrontAccessIdentityPath(@Nullable String cloudfrontAccessIdentityPath) {
-            this.cloudfrontAccessIdentityPath = Codegen.ofNullable(cloudfrontAccessIdentityPath);
-            return this;
+
+        public Builder cloudfrontAccessIdentityPath(String cloudfrontAccessIdentityPath) {
+            return cloudfrontAccessIdentityPath(Output.of(cloudfrontAccessIdentityPath));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder iamArn(@Nullable Output<String> iamArn) {
-            this.iamArn = iamArn;
+            $.iamArn = iamArn;
             return this;
         }
-        public Builder iamArn(@Nullable String iamArn) {
-            this.iamArn = Codegen.ofNullable(iamArn);
-            return this;
+
+        public Builder iamArn(String iamArn) {
+            return iamArn(Output.of(iamArn));
         }
+
         public Builder s3CanonicalUserId(@Nullable Output<String> s3CanonicalUserId) {
-            this.s3CanonicalUserId = s3CanonicalUserId;
+            $.s3CanonicalUserId = s3CanonicalUserId;
             return this;
         }
-        public Builder s3CanonicalUserId(@Nullable String s3CanonicalUserId) {
-            this.s3CanonicalUserId = Codegen.ofNullable(s3CanonicalUserId);
-            return this;
-        }        public OriginAccessIdentityState build() {
-            return new OriginAccessIdentityState(callerReference, cloudfrontAccessIdentityPath, comment, etag, iamArn, s3CanonicalUserId);
+
+        public Builder s3CanonicalUserId(String s3CanonicalUserId) {
+            return s3CanonicalUserId(Output.of(s3CanonicalUserId));
+        }
+
+        public OriginAccessIdentityState build() {
+            return $;
         }
     }
+
 }

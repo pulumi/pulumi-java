@@ -5,10 +5,10 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.eventarc.inputs.TriggerTransportPubsubArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class TriggerTransportArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pubsubs")
-      private final @Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs;
+    private @Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs;
 
-    public Output<List<TriggerTransportPubsubArgs>> pubsubs() {
-        return this.pubsubs == null ? Codegen.empty() : this.pubsubs;
+    public Optional<Output<List<TriggerTransportPubsubArgs>>> pubsubs() {
+        return Optional.ofNullable(this.pubsubs);
     }
 
-    public TriggerTransportArgs(@Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs) {
-        this.pubsubs = pubsubs;
-    }
+    private TriggerTransportArgs() {}
 
-    private TriggerTransportArgs() {
-        this.pubsubs = Codegen.empty();
+    private TriggerTransportArgs(TriggerTransportArgs $) {
+        this.pubsubs = $.pubsubs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerTransportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs;
+        private TriggerTransportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerTransportArgs();
         }
 
         public Builder(TriggerTransportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubs = defaults.pubsubs;
+            $ = new TriggerTransportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubs(@Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs) {
-            this.pubsubs = pubsubs;
+            $.pubsubs = pubsubs;
             return this;
         }
-        public Builder pubsubs(@Nullable List<TriggerTransportPubsubArgs> pubsubs) {
-            this.pubsubs = Codegen.ofNullable(pubsubs);
-            return this;
+
+        public Builder pubsubs(List<TriggerTransportPubsubArgs> pubsubs) {
+            return pubsubs(Output.of(pubsubs));
         }
+
         public Builder pubsubs(TriggerTransportPubsubArgs... pubsubs) {
             return pubsubs(List.of(pubsubs));
-        }        public TriggerTransportArgs build() {
-            return new TriggerTransportArgs(pubsubs);
+        }
+
+        public TriggerTransportArgs build() {
+            return $;
         }
     }
+
 }

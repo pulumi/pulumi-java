@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class JwtArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compactJwt")
-      private final @Nullable Output<String> compactJwt;
+    private @Nullable Output<String> compactJwt;
 
-    public Output<String> compactJwt() {
-        return this.compactJwt == null ? Codegen.empty() : this.compactJwt;
+    public Optional<Output<String>> compactJwt() {
+        return Optional.ofNullable(this.compactJwt);
     }
 
-    public JwtArgs(@Nullable Output<String> compactJwt) {
-        this.compactJwt = compactJwt;
-    }
+    private JwtArgs() {}
 
-    private JwtArgs() {
-        this.compactJwt = Codegen.empty();
+    private JwtArgs(JwtArgs $) {
+        this.compactJwt = $.compactJwt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> compactJwt;
+        private JwtArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtArgs();
         }
 
         public Builder(JwtArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compactJwt = defaults.compactJwt;
+            $ = new JwtArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compactJwt(@Nullable Output<String> compactJwt) {
-            this.compactJwt = compactJwt;
+            $.compactJwt = compactJwt;
             return this;
         }
-        public Builder compactJwt(@Nullable String compactJwt) {
-            this.compactJwt = Codegen.ofNullable(compactJwt);
-            return this;
-        }        public JwtArgs build() {
-            return new JwtArgs(compactJwt);
+
+        public Builder compactJwt(String compactJwt) {
+            return compactJwt(Output.of(compactJwt));
+        }
+
+        public JwtArgs build() {
+            return $;
         }
     }
+
 }

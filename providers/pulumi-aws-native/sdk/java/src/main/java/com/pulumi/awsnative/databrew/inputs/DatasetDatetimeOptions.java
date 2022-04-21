@@ -19,7 +19,7 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
@@ -30,10 +30,10 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="localeCode")
-      private final @Nullable String localeCode;
+    private @Nullable String localeCode;
 
     public Optional<String> localeCode() {
-        return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
+        return Optional.ofNullable(this.localeCode);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class DatasetDatetimeOptions extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timezoneOffset")
-      private final @Nullable String timezoneOffset;
+    private @Nullable String timezoneOffset;
 
     public Optional<String> timezoneOffset() {
-        return this.timezoneOffset == null ? Optional.empty() : Optional.ofNullable(this.timezoneOffset);
+        return Optional.ofNullable(this.timezoneOffset);
     }
 
-    public DatasetDatetimeOptions(
-        String format,
-        @Nullable String localeCode,
-        @Nullable String timezoneOffset) {
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.localeCode = localeCode;
-        this.timezoneOffset = timezoneOffset;
-    }
+    private DatasetDatetimeOptions() {}
 
-    private DatasetDatetimeOptions() {
-        this.format = null;
-        this.localeCode = null;
-        this.timezoneOffset = null;
+    private DatasetDatetimeOptions(DatasetDatetimeOptions $) {
+        this.format = $.format;
+        this.localeCode = $.localeCode;
+        this.timezoneOffset = $.timezoneOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDatetimeOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String format;
-        private @Nullable String localeCode;
-        private @Nullable String timezoneOffset;
+        private DatasetDatetimeOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDatetimeOptions();
         }
 
         public Builder(DatasetDatetimeOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.localeCode = defaults.localeCode;
-    	      this.timezoneOffset = defaults.timezoneOffset;
+            $ = new DatasetDatetimeOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder localeCode(@Nullable String localeCode) {
-            this.localeCode = localeCode;
+            $.localeCode = localeCode;
             return this;
         }
+
         public Builder timezoneOffset(@Nullable String timezoneOffset) {
-            this.timezoneOffset = timezoneOffset;
+            $.timezoneOffset = timezoneOffset;
             return this;
-        }        public DatasetDatetimeOptions build() {
-            return new DatasetDatetimeOptions(format, localeCode, timezoneOffset);
+        }
+
+        public DatasetDatetimeOptions build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

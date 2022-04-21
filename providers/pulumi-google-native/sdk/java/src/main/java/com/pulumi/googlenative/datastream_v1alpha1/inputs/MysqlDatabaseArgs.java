@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlTableArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MysqlDatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mysqlTables")
-      private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;
+    private @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
-    public Output<List<MysqlTableArgs>> mysqlTables() {
-        return this.mysqlTables == null ? Codegen.empty() : this.mysqlTables;
+    public Optional<Output<List<MysqlTableArgs>>> mysqlTables() {
+        return Optional.ofNullable(this.mysqlTables);
     }
 
-    public MysqlDatabaseArgs(
-        @Nullable Output<String> databaseName,
-        @Nullable Output<List<MysqlTableArgs>> mysqlTables) {
-        this.databaseName = databaseName;
-        this.mysqlTables = mysqlTables;
-    }
+    private MysqlDatabaseArgs() {}
 
-    private MysqlDatabaseArgs() {
-        this.databaseName = Codegen.empty();
-        this.mysqlTables = Codegen.empty();
+    private MysqlDatabaseArgs(MysqlDatabaseArgs $) {
+        this.databaseName = $.databaseName;
+        this.mysqlTables = $.mysqlTables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<List<MysqlTableArgs>> mysqlTables;
+        private MysqlDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlDatabaseArgs();
         }
 
         public Builder(MysqlDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.mysqlTables = defaults.mysqlTables;
+            $ = new MysqlDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder mysqlTables(@Nullable Output<List<MysqlTableArgs>> mysqlTables) {
-            this.mysqlTables = mysqlTables;
+            $.mysqlTables = mysqlTables;
             return this;
         }
-        public Builder mysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
-            this.mysqlTables = Codegen.ofNullable(mysqlTables);
-            return this;
+
+        public Builder mysqlTables(List<MysqlTableArgs> mysqlTables) {
+            return mysqlTables(Output.of(mysqlTables));
         }
+
         public Builder mysqlTables(MysqlTableArgs... mysqlTables) {
             return mysqlTables(List.of(mysqlTables));
-        }        public MysqlDatabaseArgs build() {
-            return new MysqlDatabaseArgs(databaseName, mysqlTables);
+        }
+
+        public MysqlDatabaseArgs build() {
+            return $;
         }
     }
+
 }

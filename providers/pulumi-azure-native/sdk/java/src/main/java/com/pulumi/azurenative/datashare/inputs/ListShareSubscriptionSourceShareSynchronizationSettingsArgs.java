@@ -19,7 +19,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final String shareSubscriptionName;
+    private String shareSubscriptionName;
 
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -52,73 +52,65 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListShareSubscriptionSourceShareSynchronizationSettingsArgs(
-        String accountName,
-        String resourceGroupName,
-        String shareSubscriptionName,
-        @Nullable String skipToken) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListShareSubscriptionSourceShareSynchronizationSettingsArgs() {}
 
-    private ListShareSubscriptionSourceShareSynchronizationSettingsArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.shareSubscriptionName = null;
-        this.skipToken = null;
+    private ListShareSubscriptionSourceShareSynchronizationSettingsArgs(ListShareSubscriptionSourceShareSynchronizationSettingsArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListShareSubscriptionSourceShareSynchronizationSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String shareSubscriptionName;
-        private @Nullable String skipToken;
+        private ListShareSubscriptionSourceShareSynchronizationSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListShareSubscriptionSourceShareSynchronizationSettingsArgs();
         }
 
         public Builder(ListShareSubscriptionSourceShareSynchronizationSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListShareSubscriptionSourceShareSynchronizationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListShareSubscriptionSourceShareSynchronizationSettingsArgs build() {
-            return new ListShareSubscriptionSourceShareSynchronizationSettingsArgs(accountName, resourceGroupName, shareSubscriptionName, skipToken);
+        }
+
+        public ListShareSubscriptionSourceShareSynchronizationSettingsArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            return $;
         }
     }
+
 }

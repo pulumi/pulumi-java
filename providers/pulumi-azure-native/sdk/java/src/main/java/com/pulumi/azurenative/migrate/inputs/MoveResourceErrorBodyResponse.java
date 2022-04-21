@@ -22,7 +22,7 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -33,7 +33,7 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="details", required=true)
-      private final List<MoveResourceErrorBodyResponse> details;
+    private List<MoveResourceErrorBodyResponse> details;
 
     public List<MoveResourceErrorBodyResponse> details() {
         return this.details;
@@ -44,7 +44,7 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -55,76 +55,70 @@ public final class MoveResourceErrorBodyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
     }
 
-    public MoveResourceErrorBodyResponse(
-        String code,
-        List<MoveResourceErrorBodyResponse> details,
-        String message,
-        String target) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private MoveResourceErrorBodyResponse() {}
 
-    private MoveResourceErrorBodyResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.target = null;
+    private MoveResourceErrorBodyResponse(MoveResourceErrorBodyResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourceErrorBodyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private List<MoveResourceErrorBodyResponse> details;
-        private String message;
-        private String target;
+        private MoveResourceErrorBodyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourceErrorBodyResponse();
         }
 
         public Builder(MoveResourceErrorBodyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new MoveResourceErrorBodyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<MoveResourceErrorBodyResponse> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(MoveResourceErrorBodyResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
-        }        public MoveResourceErrorBodyResponse build() {
-            return new MoveResourceErrorBodyResponse(code, details, message, target);
+        }
+
+        public MoveResourceErrorBodyResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

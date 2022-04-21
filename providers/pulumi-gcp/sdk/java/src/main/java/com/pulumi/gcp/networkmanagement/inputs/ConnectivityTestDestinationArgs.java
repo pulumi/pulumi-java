@@ -5,10 +5,10 @@ package com.pulumi.gcp.networkmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -75,102 +75,88 @@ public final class ConnectivityTestDestinationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
-    public ConnectivityTestDestinationArgs(
-        @Nullable Output<String> instance,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> projectId) {
-        this.instance = instance;
-        this.ipAddress = ipAddress;
-        this.network = network;
-        this.port = port;
-        this.projectId = projectId;
-    }
+    private ConnectivityTestDestinationArgs() {}
 
-    private ConnectivityTestDestinationArgs() {
-        this.instance = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.network = Codegen.empty();
-        this.port = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private ConnectivityTestDestinationArgs(ConnectivityTestDestinationArgs $) {
+        this.instance = $.instance;
+        this.ipAddress = $.ipAddress;
+        this.network = $.network;
+        this.port = $.port;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityTestDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> projectId;
+        private ConnectivityTestDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityTestDestinationArgs();
         }
 
         public Builder(ConnectivityTestDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
-    	      this.projectId = defaults.projectId;
+            $ = new ConnectivityTestDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
-        }        public ConnectivityTestDestinationArgs build() {
-            return new ConnectivityTestDestinationArgs(instance, ipAddress, network, port, projectId);
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public ConnectivityTestDestinationArgs build() {
+            return $;
         }
     }
+
 }

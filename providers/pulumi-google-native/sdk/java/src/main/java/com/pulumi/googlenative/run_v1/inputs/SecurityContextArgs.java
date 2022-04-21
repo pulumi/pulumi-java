@@ -5,9 +5,9 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecurityContextArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="runAsUser")
-      private final @Nullable Output<Integer> runAsUser;
+    private @Nullable Output<Integer> runAsUser;
 
-    public Output<Integer> runAsUser() {
-        return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
+    public Optional<Output<Integer>> runAsUser() {
+        return Optional.ofNullable(this.runAsUser);
     }
 
-    public SecurityContextArgs(@Nullable Output<Integer> runAsUser) {
-        this.runAsUser = runAsUser;
-    }
+    private SecurityContextArgs() {}
 
-    private SecurityContextArgs() {
-        this.runAsUser = Codegen.empty();
+    private SecurityContextArgs(SecurityContextArgs $) {
+        this.runAsUser = $.runAsUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> runAsUser;
+        private SecurityContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityContextArgs();
         }
 
         public Builder(SecurityContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.runAsUser = defaults.runAsUser;
+            $ = new SecurityContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
-            this.runAsUser = runAsUser;
+            $.runAsUser = runAsUser;
             return this;
         }
-        public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Codegen.ofNullable(runAsUser);
-            return this;
-        }        public SecurityContextArgs build() {
-            return new SecurityContextArgs(runAsUser);
+
+        public Builder runAsUser(Integer runAsUser) {
+            return runAsUser(Output.of(runAsUser));
+        }
+
+        public SecurityContextArgs build() {
+            return $;
         }
     }
+
 }

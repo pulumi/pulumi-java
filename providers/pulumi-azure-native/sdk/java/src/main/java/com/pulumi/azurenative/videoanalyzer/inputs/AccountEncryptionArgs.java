@@ -9,9 +9,9 @@ import com.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ResourceIdentityArgs> identity;
+    private @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
     /**
@@ -50,76 +50,69 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,AccountEncryptionKeyType>> type;
+    private Output<Either<String,AccountEncryptionKeyType>> type;
 
     public Output<Either<String,AccountEncryptionKeyType>> type() {
         return this.type;
     }
 
-    public AccountEncryptionArgs(
-        @Nullable Output<ResourceIdentityArgs> identity,
-        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties,
-        Output<Either<String,AccountEncryptionKeyType>> type) {
-        this.identity = identity;
-        this.keyVaultProperties = keyVaultProperties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AccountEncryptionArgs() {}
 
-    private AccountEncryptionArgs() {
-        this.identity = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
-        this.type = Codegen.empty();
+    private AccountEncryptionArgs(AccountEncryptionArgs $) {
+        this.identity = $.identity;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityArgs> identity;
-        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
-        private Output<Either<String,AccountEncryptionKeyType>> type;
+        private AccountEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountEncryptionArgs();
         }
 
         public Builder(AccountEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.type = defaults.type;
+            $ = new AccountEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
+
+        public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
         }
+
         public Builder type(Output<Either<String,AccountEncryptionKeyType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,AccountEncryptionKeyType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AccountEncryptionArgs build() {
-            return new AccountEncryptionArgs(identity, keyVaultProperties, type);
+            return type(Output.of(type));
+        }
+
+        public AccountEncryptionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

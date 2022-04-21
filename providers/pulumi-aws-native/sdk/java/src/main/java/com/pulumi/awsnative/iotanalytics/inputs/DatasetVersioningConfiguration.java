@@ -16,62 +16,57 @@ public final class DatasetVersioningConfiguration extends com.pulumi.resources.I
     public static final DatasetVersioningConfiguration Empty = new DatasetVersioningConfiguration();
 
     @Import(name="maxVersions")
-      private final @Nullable Integer maxVersions;
+    private @Nullable Integer maxVersions;
 
     public Optional<Integer> maxVersions() {
-        return this.maxVersions == null ? Optional.empty() : Optional.ofNullable(this.maxVersions);
+        return Optional.ofNullable(this.maxVersions);
     }
 
     @Import(name="unlimited")
-      private final @Nullable Boolean unlimited;
+    private @Nullable Boolean unlimited;
 
     public Optional<Boolean> unlimited() {
-        return this.unlimited == null ? Optional.empty() : Optional.ofNullable(this.unlimited);
+        return Optional.ofNullable(this.unlimited);
     }
 
-    public DatasetVersioningConfiguration(
-        @Nullable Integer maxVersions,
-        @Nullable Boolean unlimited) {
-        this.maxVersions = maxVersions;
-        this.unlimited = unlimited;
-    }
+    private DatasetVersioningConfiguration() {}
 
-    private DatasetVersioningConfiguration() {
-        this.maxVersions = null;
-        this.unlimited = null;
+    private DatasetVersioningConfiguration(DatasetVersioningConfiguration $) {
+        this.maxVersions = $.maxVersions;
+        this.unlimited = $.unlimited;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetVersioningConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxVersions;
-        private @Nullable Boolean unlimited;
+        private DatasetVersioningConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetVersioningConfiguration();
         }
 
         public Builder(DatasetVersioningConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxVersions = defaults.maxVersions;
-    	      this.unlimited = defaults.unlimited;
+            $ = new DatasetVersioningConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder maxVersions(@Nullable Integer maxVersions) {
-            this.maxVersions = maxVersions;
+            $.maxVersions = maxVersions;
             return this;
         }
+
         public Builder unlimited(@Nullable Boolean unlimited) {
-            this.unlimited = unlimited;
+            $.unlimited = unlimited;
             return this;
-        }        public DatasetVersioningConfiguration build() {
-            return new DatasetVersioningConfiguration(maxVersions, unlimited);
+        }
+
+        public DatasetVersioningConfiguration build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ConfigurationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class ConfigurationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public ConfigurationInfoResponse(
-        String name,
-        String version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ConfigurationInfoResponse() {}
 
-    private ConfigurationInfoResponse() {
-        this.name = null;
-        this.version = null;
+    private ConfigurationInfoResponse(ConfigurationInfoResponse $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String version;
+        private ConfigurationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationInfoResponse();
         }
 
         public Builder(ConfigurationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new ConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ConfigurationInfoResponse build() {
-            return new ConfigurationInfoResponse(name, version);
+        }
+
+        public ConfigurationInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

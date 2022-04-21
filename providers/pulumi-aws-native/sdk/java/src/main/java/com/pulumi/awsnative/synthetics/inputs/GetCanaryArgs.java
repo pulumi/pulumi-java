@@ -17,45 +17,45 @@ public final class GetCanaryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetCanaryArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetCanaryArgs() {}
 
-    private GetCanaryArgs() {
-        this.name = null;
+    private GetCanaryArgs(GetCanaryArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCanaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetCanaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCanaryArgs();
         }
 
         public Builder(GetCanaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetCanaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetCanaryArgs build() {
-            return new GetCanaryArgs(name);
+        }
+
+        public GetCanaryArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

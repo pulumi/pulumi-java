@@ -15,78 +15,73 @@ public final class WebACLIPSetForwardedIPConfiguration extends com.pulumi.resour
     public static final WebACLIPSetForwardedIPConfiguration Empty = new WebACLIPSetForwardedIPConfiguration();
 
     @Import(name="fallbackBehavior", required=true)
-      private final WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
+    private WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
     public WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
     }
 
     @Import(name="position", required=true)
-      private final WebACLIPSetForwardedIPConfigurationPosition position;
+    private WebACLIPSetForwardedIPConfigurationPosition position;
 
     public WebACLIPSetForwardedIPConfigurationPosition position() {
         return this.position;
     }
 
-    public WebACLIPSetForwardedIPConfiguration(
-        WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName,
-        WebACLIPSetForwardedIPConfigurationPosition position) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-    }
+    private WebACLIPSetForwardedIPConfiguration() {}
 
-    private WebACLIPSetForwardedIPConfiguration() {
-        this.fallbackBehavior = null;
-        this.headerName = null;
-        this.position = null;
+    private WebACLIPSetForwardedIPConfiguration(WebACLIPSetForwardedIPConfiguration $) {
+        this.fallbackBehavior = $.fallbackBehavior;
+        this.headerName = $.headerName;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLIPSetForwardedIPConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
-        private String headerName;
-        private WebACLIPSetForwardedIPConfigurationPosition position;
+        private WebACLIPSetForwardedIPConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLIPSetForwardedIPConfiguration();
         }
 
         public Builder(WebACLIPSetForwardedIPConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fallbackBehavior = defaults.fallbackBehavior;
-    	      this.headerName = defaults.headerName;
-    	      this.position = defaults.position;
+            $ = new WebACLIPSetForwardedIPConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder fallbackBehavior(WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
-            this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
+            $.fallbackBehavior = fallbackBehavior;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder position(WebACLIPSetForwardedIPConfigurationPosition position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
-        }        public WebACLIPSetForwardedIPConfiguration build() {
-            return new WebACLIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
+        }
+
+        public WebACLIPSetForwardedIPConfiguration build() {
+            $.fallbackBehavior = Objects.requireNonNull($.fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

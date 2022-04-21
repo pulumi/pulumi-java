@@ -5,11 +5,11 @@ package com.pulumi.googlenative.firebasehosting_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     public static final ChannelArgs Empty = new ChannelArgs();
 
     @Import(name="channelId", required=true)
-      private final Output<String> channelId;
+    private Output<String> channelId;
 
     public Output<String> channelId() {
         return this.channelId;
@@ -29,10 +29,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -51,17 +51,17 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -69,14 +69,14 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retainedReleaseCount")
-      private final @Nullable Output<Integer> retainedReleaseCount;
+    private @Nullable Output<Integer> retainedReleaseCount;
 
-    public Output<Integer> retainedReleaseCount() {
-        return this.retainedReleaseCount == null ? Codegen.empty() : this.retainedReleaseCount;
+    public Optional<Output<Integer>> retainedReleaseCount() {
+        return Optional.ofNullable(this.retainedReleaseCount);
     }
 
     @Import(name="siteId", required=true)
-      private final Output<String> siteId;
+    private Output<String> siteId;
 
     public Output<String> siteId() {
         return this.siteId;
@@ -87,141 +87,120 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public ChannelArgs(
-        Output<String> channelId,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> retainedReleaseCount,
-        Output<String> siteId,
-        @Nullable Output<String> ttl) {
-        this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.expireTime = expireTime;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.retainedReleaseCount = retainedReleaseCount;
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-        this.ttl = ttl;
-    }
+    private ChannelArgs() {}
 
-    private ChannelArgs() {
-        this.channelId = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.retainedReleaseCount = Codegen.empty();
-        this.siteId = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private ChannelArgs(ChannelArgs $) {
+        this.channelId = $.channelId;
+        this.expireTime = $.expireTime;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.retainedReleaseCount = $.retainedReleaseCount;
+        this.siteId = $.siteId;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channelId;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> retainedReleaseCount;
-        private Output<String> siteId;
-        private @Nullable Output<String> ttl;
+        private ChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelArgs();
         }
 
         public Builder(ChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelId = defaults.channelId;
-    	      this.expireTime = defaults.expireTime;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.retainedReleaseCount = defaults.retainedReleaseCount;
-    	      this.siteId = defaults.siteId;
-    	      this.ttl = defaults.ttl;
+            $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelId(Output<String> channelId) {
-            this.channelId = Objects.requireNonNull(channelId);
+            $.channelId = channelId;
             return this;
         }
+
         public Builder channelId(String channelId) {
-            this.channelId = Output.of(Objects.requireNonNull(channelId));
-            return this;
+            return channelId(Output.of(channelId));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder retainedReleaseCount(@Nullable Output<Integer> retainedReleaseCount) {
-            this.retainedReleaseCount = retainedReleaseCount;
+            $.retainedReleaseCount = retainedReleaseCount;
             return this;
         }
-        public Builder retainedReleaseCount(@Nullable Integer retainedReleaseCount) {
-            this.retainedReleaseCount = Codegen.ofNullable(retainedReleaseCount);
-            return this;
+
+        public Builder retainedReleaseCount(Integer retainedReleaseCount) {
+            return retainedReleaseCount(Output.of(retainedReleaseCount));
         }
+
         public Builder siteId(Output<String> siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Output.of(Objects.requireNonNull(siteId));
-            return this;
+            return siteId(Output.of(siteId));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public ChannelArgs build() {
-            return new ChannelArgs(channelId, expireTime, labels, name, project, retainedReleaseCount, siteId, ttl);
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public ChannelArgs build() {
+            $.channelId = Objects.requireNonNull($.channelId, "expected parameter 'channelId' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

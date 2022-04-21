@@ -7,11 +7,11 @@ import com.pulumi.azurenative.storage.inputs.PermissionScopeArgs;
 import com.pulumi.azurenative.storage.inputs.SshPublicKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -35,10 +35,10 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasSharedKey")
-      private final @Nullable Output<Boolean> hasSharedKey;
+    private @Nullable Output<Boolean> hasSharedKey;
 
-    public Output<Boolean> hasSharedKey() {
-        return this.hasSharedKey == null ? Codegen.empty() : this.hasSharedKey;
+    public Optional<Output<Boolean>> hasSharedKey() {
+        return Optional.ofNullable(this.hasSharedKey);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasSshKey")
-      private final @Nullable Output<Boolean> hasSshKey;
+    private @Nullable Output<Boolean> hasSshKey;
 
-    public Output<Boolean> hasSshKey() {
-        return this.hasSshKey == null ? Codegen.empty() : this.hasSshKey;
+    public Optional<Output<Boolean>> hasSshKey() {
+        return Optional.ofNullable(this.hasSshKey);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hasSshPassword")
-      private final @Nullable Output<Boolean> hasSshPassword;
+    private @Nullable Output<Boolean> hasSshPassword;
 
-    public Output<Boolean> hasSshPassword() {
-        return this.hasSshPassword == null ? Codegen.empty() : this.hasSshPassword;
+    public Optional<Output<Boolean>> hasSshPassword() {
+        return Optional.ofNullable(this.hasSshPassword);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeDirectory")
-      private final @Nullable Output<String> homeDirectory;
+    private @Nullable Output<String> homeDirectory;
 
-    public Output<String> homeDirectory() {
-        return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
+    public Optional<Output<String>> homeDirectory() {
+        return Optional.ofNullable(this.homeDirectory);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionScopes")
-      private final @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
+    private @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
 
-    public Output<List<PermissionScopeArgs>> permissionScopes() {
-        return this.permissionScopes == null ? Codegen.empty() : this.permissionScopes;
+    public Optional<Output<List<PermissionScopeArgs>>> permissionScopes() {
+        return Optional.ofNullable(this.permissionScopes);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,10 +101,10 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sshAuthorizedKeys")
-      private final @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
+    private @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
-    public Output<List<SshPublicKeyArgs>> sshAuthorizedKeys() {
-        return this.sshAuthorizedKeys == null ? Codegen.empty() : this.sshAuthorizedKeys;
+    public Optional<Output<List<SshPublicKeyArgs>>> sshAuthorizedKeys() {
+        return Optional.ofNullable(this.sshAuthorizedKeys);
     }
 
     /**
@@ -112,160 +112,138 @@ public final class LocalUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public LocalUserArgs(
-        Output<String> accountName,
-        @Nullable Output<Boolean> hasSharedKey,
-        @Nullable Output<Boolean> hasSshKey,
-        @Nullable Output<Boolean> hasSshPassword,
-        @Nullable Output<String> homeDirectory,
-        @Nullable Output<List<PermissionScopeArgs>> permissionScopes,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys,
-        @Nullable Output<String> username) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.hasSharedKey = hasSharedKey;
-        this.hasSshKey = hasSshKey;
-        this.hasSshPassword = hasSshPassword;
-        this.homeDirectory = homeDirectory;
-        this.permissionScopes = permissionScopes;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sshAuthorizedKeys = sshAuthorizedKeys;
-        this.username = username;
-    }
+    private LocalUserArgs() {}
 
-    private LocalUserArgs() {
-        this.accountName = Codegen.empty();
-        this.hasSharedKey = Codegen.empty();
-        this.hasSshKey = Codegen.empty();
-        this.hasSshPassword = Codegen.empty();
-        this.homeDirectory = Codegen.empty();
-        this.permissionScopes = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sshAuthorizedKeys = Codegen.empty();
-        this.username = Codegen.empty();
+    private LocalUserArgs(LocalUserArgs $) {
+        this.accountName = $.accountName;
+        this.hasSharedKey = $.hasSharedKey;
+        this.hasSshKey = $.hasSshKey;
+        this.hasSshPassword = $.hasSshPassword;
+        this.homeDirectory = $.homeDirectory;
+        this.permissionScopes = $.permissionScopes;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sshAuthorizedKeys = $.sshAuthorizedKeys;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<Boolean> hasSharedKey;
-        private @Nullable Output<Boolean> hasSshKey;
-        private @Nullable Output<Boolean> hasSshPassword;
-        private @Nullable Output<String> homeDirectory;
-        private @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
-        private @Nullable Output<String> username;
+        private LocalUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalUserArgs();
         }
 
         public Builder(LocalUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.hasSharedKey = defaults.hasSharedKey;
-    	      this.hasSshKey = defaults.hasSshKey;
-    	      this.hasSshPassword = defaults.hasSshPassword;
-    	      this.homeDirectory = defaults.homeDirectory;
-    	      this.permissionScopes = defaults.permissionScopes;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sshAuthorizedKeys = defaults.sshAuthorizedKeys;
-    	      this.username = defaults.username;
+            $ = new LocalUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder hasSharedKey(@Nullable Output<Boolean> hasSharedKey) {
-            this.hasSharedKey = hasSharedKey;
+            $.hasSharedKey = hasSharedKey;
             return this;
         }
-        public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
-            this.hasSharedKey = Codegen.ofNullable(hasSharedKey);
-            return this;
+
+        public Builder hasSharedKey(Boolean hasSharedKey) {
+            return hasSharedKey(Output.of(hasSharedKey));
         }
+
         public Builder hasSshKey(@Nullable Output<Boolean> hasSshKey) {
-            this.hasSshKey = hasSshKey;
+            $.hasSshKey = hasSshKey;
             return this;
         }
-        public Builder hasSshKey(@Nullable Boolean hasSshKey) {
-            this.hasSshKey = Codegen.ofNullable(hasSshKey);
-            return this;
+
+        public Builder hasSshKey(Boolean hasSshKey) {
+            return hasSshKey(Output.of(hasSshKey));
         }
+
         public Builder hasSshPassword(@Nullable Output<Boolean> hasSshPassword) {
-            this.hasSshPassword = hasSshPassword;
+            $.hasSshPassword = hasSshPassword;
             return this;
         }
-        public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
-            this.hasSshPassword = Codegen.ofNullable(hasSshPassword);
-            return this;
+
+        public Builder hasSshPassword(Boolean hasSshPassword) {
+            return hasSshPassword(Output.of(hasSshPassword));
         }
+
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
-            this.homeDirectory = homeDirectory;
+            $.homeDirectory = homeDirectory;
             return this;
         }
-        public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Codegen.ofNullable(homeDirectory);
-            return this;
+
+        public Builder homeDirectory(String homeDirectory) {
+            return homeDirectory(Output.of(homeDirectory));
         }
+
         public Builder permissionScopes(@Nullable Output<List<PermissionScopeArgs>> permissionScopes) {
-            this.permissionScopes = permissionScopes;
+            $.permissionScopes = permissionScopes;
             return this;
         }
-        public Builder permissionScopes(@Nullable List<PermissionScopeArgs> permissionScopes) {
-            this.permissionScopes = Codegen.ofNullable(permissionScopes);
-            return this;
+
+        public Builder permissionScopes(List<PermissionScopeArgs> permissionScopes) {
+            return permissionScopes(Output.of(permissionScopes));
         }
+
         public Builder permissionScopes(PermissionScopeArgs... permissionScopes) {
             return permissionScopes(List.of(permissionScopes));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sshAuthorizedKeys(@Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys) {
-            this.sshAuthorizedKeys = sshAuthorizedKeys;
+            $.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
-        public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyArgs> sshAuthorizedKeys) {
-            this.sshAuthorizedKeys = Codegen.ofNullable(sshAuthorizedKeys);
-            return this;
+
+        public Builder sshAuthorizedKeys(List<SshPublicKeyArgs> sshAuthorizedKeys) {
+            return sshAuthorizedKeys(Output.of(sshAuthorizedKeys));
         }
+
         public Builder sshAuthorizedKeys(SshPublicKeyArgs... sshAuthorizedKeys) {
             return sshAuthorizedKeys(List.of(sshAuthorizedKeys));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public LocalUserArgs build() {
-            return new LocalUserArgs(accountName, hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, permissionScopes, resourceGroupName, sshAuthorizedKeys, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public LocalUserArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

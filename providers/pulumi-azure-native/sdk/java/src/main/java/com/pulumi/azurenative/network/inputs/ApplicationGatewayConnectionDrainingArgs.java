@@ -5,7 +5,6 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends com.pulumi.r
      * 
      */
     @Import(name="drainTimeoutInSec", required=true)
-      private final Output<Integer> drainTimeoutInSec;
+    private Output<Integer> drainTimeoutInSec;
 
     public Output<Integer> drainTimeoutInSec() {
         return this.drainTimeoutInSec;
@@ -35,63 +34,60 @@ public final class ApplicationGatewayConnectionDrainingArgs extends com.pulumi.r
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ApplicationGatewayConnectionDrainingArgs(
-        Output<Integer> drainTimeoutInSec,
-        Output<Boolean> enabled) {
-        this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec, "expected parameter 'drainTimeoutInSec' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ApplicationGatewayConnectionDrainingArgs() {}
 
-    private ApplicationGatewayConnectionDrainingArgs() {
-        this.drainTimeoutInSec = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private ApplicationGatewayConnectionDrainingArgs(ApplicationGatewayConnectionDrainingArgs $) {
+        this.drainTimeoutInSec = $.drainTimeoutInSec;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayConnectionDrainingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> drainTimeoutInSec;
-        private Output<Boolean> enabled;
+        private ApplicationGatewayConnectionDrainingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayConnectionDrainingArgs();
         }
 
         public Builder(ApplicationGatewayConnectionDrainingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.drainTimeoutInSec = defaults.drainTimeoutInSec;
-    	      this.enabled = defaults.enabled;
+            $ = new ApplicationGatewayConnectionDrainingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder drainTimeoutInSec(Output<Integer> drainTimeoutInSec) {
-            this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec);
+            $.drainTimeoutInSec = drainTimeoutInSec;
             return this;
         }
+
         public Builder drainTimeoutInSec(Integer drainTimeoutInSec) {
-            this.drainTimeoutInSec = Output.of(Objects.requireNonNull(drainTimeoutInSec));
-            return this;
+            return drainTimeoutInSec(Output.of(drainTimeoutInSec));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ApplicationGatewayConnectionDrainingArgs build() {
-            return new ApplicationGatewayConnectionDrainingArgs(drainTimeoutInSec, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ApplicationGatewayConnectionDrainingArgs build() {
+            $.drainTimeoutInSec = Objects.requireNonNull($.drainTimeoutInSec, "expected parameter 'drainTimeoutInSec' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

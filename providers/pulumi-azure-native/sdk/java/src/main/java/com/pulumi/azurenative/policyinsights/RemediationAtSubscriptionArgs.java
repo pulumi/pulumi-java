@@ -8,9 +8,9 @@ import com.pulumi.azurenative.policyinsights.inputs.RemediationFiltersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RemediationAtSubscriptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<RemediationFiltersArgs> filters;
+    private @Nullable Output<RemediationFiltersArgs> filters;
 
-    public Output<RemediationFiltersArgs> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<RemediationFiltersArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RemediationAtSubscriptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="policyAssignmentId")
-      private final @Nullable Output<String> policyAssignmentId;
+    private @Nullable Output<String> policyAssignmentId;
 
-    public Output<String> policyAssignmentId() {
-        return this.policyAssignmentId == null ? Codegen.empty() : this.policyAssignmentId;
+    public Optional<Output<String>> policyAssignmentId() {
+        return Optional.ofNullable(this.policyAssignmentId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RemediationAtSubscriptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="policyDefinitionReferenceId")
-      private final @Nullable Output<String> policyDefinitionReferenceId;
+    private @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
+    public Optional<Output<String>> policyDefinitionReferenceId() {
+        return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RemediationAtSubscriptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="remediationName")
-      private final @Nullable Output<String> remediationName;
+    private @Nullable Output<String> remediationName;
 
-    public Output<String> remediationName() {
-        return this.remediationName == null ? Codegen.empty() : this.remediationName;
+    public Optional<Output<String>> remediationName() {
+        return Optional.ofNullable(this.remediationName);
     }
 
     /**
@@ -67,102 +67,88 @@ public final class RemediationAtSubscriptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceDiscoveryMode")
-      private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+    private @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
-    public Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode() {
-        return this.resourceDiscoveryMode == null ? Codegen.empty() : this.resourceDiscoveryMode;
+    public Optional<Output<Either<String,ResourceDiscoveryMode>>> resourceDiscoveryMode() {
+        return Optional.ofNullable(this.resourceDiscoveryMode);
     }
 
-    public RemediationAtSubscriptionArgs(
-        @Nullable Output<RemediationFiltersArgs> filters,
-        @Nullable Output<String> policyAssignmentId,
-        @Nullable Output<String> policyDefinitionReferenceId,
-        @Nullable Output<String> remediationName,
-        @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
-        this.filters = filters;
-        this.policyAssignmentId = policyAssignmentId;
-        this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-        this.remediationName = remediationName;
-        this.resourceDiscoveryMode = resourceDiscoveryMode;
-    }
+    private RemediationAtSubscriptionArgs() {}
 
-    private RemediationAtSubscriptionArgs() {
-        this.filters = Codegen.empty();
-        this.policyAssignmentId = Codegen.empty();
-        this.policyDefinitionReferenceId = Codegen.empty();
-        this.remediationName = Codegen.empty();
-        this.resourceDiscoveryMode = Codegen.empty();
+    private RemediationAtSubscriptionArgs(RemediationAtSubscriptionArgs $) {
+        this.filters = $.filters;
+        this.policyAssignmentId = $.policyAssignmentId;
+        this.policyDefinitionReferenceId = $.policyDefinitionReferenceId;
+        this.remediationName = $.remediationName;
+        this.resourceDiscoveryMode = $.resourceDiscoveryMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationAtSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RemediationFiltersArgs> filters;
-        private @Nullable Output<String> policyAssignmentId;
-        private @Nullable Output<String> policyDefinitionReferenceId;
-        private @Nullable Output<String> remediationName;
-        private @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+        private RemediationAtSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationAtSubscriptionArgs();
         }
 
         public Builder(RemediationAtSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.policyAssignmentId = defaults.policyAssignmentId;
-    	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
-    	      this.remediationName = defaults.remediationName;
-    	      this.resourceDiscoveryMode = defaults.resourceDiscoveryMode;
+            $ = new RemediationAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<RemediationFiltersArgs> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable RemediationFiltersArgs filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(RemediationFiltersArgs filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder policyAssignmentId(@Nullable Output<String> policyAssignmentId) {
-            this.policyAssignmentId = policyAssignmentId;
+            $.policyAssignmentId = policyAssignmentId;
             return this;
         }
-        public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
-            this.policyAssignmentId = Codegen.ofNullable(policyAssignmentId);
-            return this;
+
+        public Builder policyAssignmentId(String policyAssignmentId) {
+            return policyAssignmentId(Output.of(policyAssignmentId));
         }
+
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = policyDefinitionReferenceId;
+            $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
-            return this;
+
+        public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
+            return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }
+
         public Builder remediationName(@Nullable Output<String> remediationName) {
-            this.remediationName = remediationName;
+            $.remediationName = remediationName;
             return this;
         }
-        public Builder remediationName(@Nullable String remediationName) {
-            this.remediationName = Codegen.ofNullable(remediationName);
-            return this;
+
+        public Builder remediationName(String remediationName) {
+            return remediationName(Output.of(remediationName));
         }
+
         public Builder resourceDiscoveryMode(@Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
-            this.resourceDiscoveryMode = resourceDiscoveryMode;
+            $.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
-        public Builder resourceDiscoveryMode(@Nullable Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
-            this.resourceDiscoveryMode = Codegen.ofNullable(resourceDiscoveryMode);
-            return this;
-        }        public RemediationAtSubscriptionArgs build() {
-            return new RemediationAtSubscriptionArgs(filters, policyAssignmentId, policyDefinitionReferenceId, remediationName, resourceDiscoveryMode);
+
+        public Builder resourceDiscoveryMode(Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Output.of(resourceDiscoveryMode));
+        }
+
+        public RemediationAtSubscriptionArgs build() {
+            return $;
         }
     }
+
 }

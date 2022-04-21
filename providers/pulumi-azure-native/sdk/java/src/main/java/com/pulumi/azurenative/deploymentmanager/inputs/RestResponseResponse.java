@@ -25,10 +25,10 @@ public final class RestResponseResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="regex")
-      private final @Nullable RestResponseResponseRegex regex;
+    private @Nullable RestResponseResponseRegex regex;
 
     public Optional<RestResponseResponseRegex> regex() {
-        return this.regex == null ? Optional.empty() : Optional.ofNullable(this.regex);
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class RestResponseResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="successStatusCodes")
-      private final @Nullable List<String> successStatusCodes;
+    private @Nullable List<String> successStatusCodes;
 
-    public List<String> successStatusCodes() {
-        return this.successStatusCodes == null ? List.of() : this.successStatusCodes;
+    public Optional<List<String>> successStatusCodes() {
+        return Optional.ofNullable(this.successStatusCodes);
     }
 
-    public RestResponseResponse(
-        @Nullable RestResponseResponseRegex regex,
-        @Nullable List<String> successStatusCodes) {
-        this.regex = regex;
-        this.successStatusCodes = successStatusCodes;
-    }
+    private RestResponseResponse() {}
 
-    private RestResponseResponse() {
-        this.regex = null;
-        this.successStatusCodes = List.of();
+    private RestResponseResponse(RestResponseResponse $) {
+        this.regex = $.regex;
+        this.successStatusCodes = $.successStatusCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable RestResponseResponseRegex regex;
-        private @Nullable List<String> successStatusCodes;
+        private RestResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestResponseResponse();
         }
 
         public Builder(RestResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regex = defaults.regex;
-    	      this.successStatusCodes = defaults.successStatusCodes;
+            $ = new RestResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder regex(@Nullable RestResponseResponseRegex regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
+
         public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
-            this.successStatusCodes = successStatusCodes;
+            $.successStatusCodes = successStatusCodes;
             return this;
         }
+
         public Builder successStatusCodes(String... successStatusCodes) {
             return successStatusCodes(List.of(successStatusCodes));
-        }        public RestResponseResponse build() {
-            return new RestResponseResponse(regex, successStatusCodes);
+        }
+
+        public RestResponseResponse build() {
+            return $;
         }
     }
+
 }

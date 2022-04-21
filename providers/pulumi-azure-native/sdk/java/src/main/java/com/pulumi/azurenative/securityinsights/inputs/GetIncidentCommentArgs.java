@@ -17,7 +17,7 @@ public final class GetIncidentCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="incidentCommentId", required=true)
-      private final String incidentCommentId;
+    private String incidentCommentId;
 
     public String incidentCommentId() {
         return this.incidentCommentId;
@@ -28,7 +28,7 @@ public final class GetIncidentCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="incidentId", required=true)
-      private final String incidentId;
+    private String incidentId;
 
     public String incidentId() {
         return this.incidentId;
@@ -39,7 +39,7 @@ public final class GetIncidentCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -50,7 +50,7 @@ public final class GetIncidentCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetIncidentCommentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetIncidentCommentArgs(
-        String incidentCommentId,
-        String incidentId,
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String workspaceName) {
-        this.incidentCommentId = Objects.requireNonNull(incidentCommentId, "expected parameter 'incidentCommentId' to be non-null");
-        this.incidentId = Objects.requireNonNull(incidentId, "expected parameter 'incidentId' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetIncidentCommentArgs() {}
 
-    private GetIncidentCommentArgs() {
-        this.incidentCommentId = null;
-        this.incidentId = null;
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetIncidentCommentArgs(GetIncidentCommentArgs $) {
+        this.incidentCommentId = $.incidentCommentId;
+        this.incidentId = $.incidentId;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIncidentCommentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String incidentCommentId;
-        private String incidentId;
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetIncidentCommentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIncidentCommentArgs();
         }
 
         public Builder(GetIncidentCommentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incidentCommentId = defaults.incidentCommentId;
-    	      this.incidentId = defaults.incidentId;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetIncidentCommentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder incidentCommentId(String incidentCommentId) {
-            this.incidentCommentId = Objects.requireNonNull(incidentCommentId);
+            $.incidentCommentId = incidentCommentId;
             return this;
         }
+
         public Builder incidentId(String incidentId) {
-            this.incidentId = Objects.requireNonNull(incidentId);
+            $.incidentId = incidentId;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetIncidentCommentArgs build() {
-            return new GetIncidentCommentArgs(incidentCommentId, incidentId, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
+        }
+
+        public GetIncidentCommentArgs build() {
+            $.incidentCommentId = Objects.requireNonNull($.incidentCommentId, "expected parameter 'incidentCommentId' to be non-null");
+            $.incidentId = Objects.requireNonNull($.incidentId, "expected parameter 'incidentId' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class PackagingConfigurationTag extends com.pulumi.resources.Invoke
     public static final PackagingConfigurationTag Empty = new PackagingConfigurationTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public PackagingConfigurationTag(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private PackagingConfigurationTag() {}
 
-    private PackagingConfigurationTag() {
-        this.key = null;
-        this.value = null;
+    private PackagingConfigurationTag(PackagingConfigurationTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private PackagingConfigurationTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationTag();
         }
 
         public Builder(PackagingConfigurationTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new PackagingConfigurationTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public PackagingConfigurationTag build() {
-            return new PackagingConfigurationTag(key, value);
+        }
+
+        public PackagingConfigurationTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

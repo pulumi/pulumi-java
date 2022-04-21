@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.LogConfigCloudAuditOptionsArgs;
 import com.pulumi.googlenative.compute_v1.inputs.LogConfigCounterOptionsArgs;
 import com.pulumi.googlenative.compute_v1.inputs.LogConfigDataAccessOptionsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudAudit")
-      private final @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit;
+    private @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit;
 
-    public Output<LogConfigCloudAuditOptionsArgs> cloudAudit() {
-        return this.cloudAudit == null ? Codegen.empty() : this.cloudAudit;
+    public Optional<Output<LogConfigCloudAuditOptionsArgs>> cloudAudit() {
+        return Optional.ofNullable(this.cloudAudit);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="counter")
-      private final @Nullable Output<LogConfigCounterOptionsArgs> counter;
+    private @Nullable Output<LogConfigCounterOptionsArgs> counter;
 
-    public Output<LogConfigCounterOptionsArgs> counter() {
-        return this.counter == null ? Codegen.empty() : this.counter;
+    public Optional<Output<LogConfigCounterOptionsArgs>> counter() {
+        return Optional.ofNullable(this.counter);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class LogConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataAccess")
-      private final @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess;
+    private @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess;
 
-    public Output<LogConfigDataAccessOptionsArgs> dataAccess() {
-        return this.dataAccess == null ? Codegen.empty() : this.dataAccess;
+    public Optional<Output<LogConfigDataAccessOptionsArgs>> dataAccess() {
+        return Optional.ofNullable(this.dataAccess);
     }
 
-    public LogConfigArgs(
-        @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit,
-        @Nullable Output<LogConfigCounterOptionsArgs> counter,
-        @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess) {
-        this.cloudAudit = cloudAudit;
-        this.counter = counter;
-        this.dataAccess = dataAccess;
-    }
+    private LogConfigArgs() {}
 
-    private LogConfigArgs() {
-        this.cloudAudit = Codegen.empty();
-        this.counter = Codegen.empty();
-        this.dataAccess = Codegen.empty();
+    private LogConfigArgs(LogConfigArgs $) {
+        this.cloudAudit = $.cloudAudit;
+        this.counter = $.counter;
+        this.dataAccess = $.dataAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit;
-        private @Nullable Output<LogConfigCounterOptionsArgs> counter;
-        private @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess;
+        private LogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogConfigArgs();
         }
 
         public Builder(LogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudAudit = defaults.cloudAudit;
-    	      this.counter = defaults.counter;
-    	      this.dataAccess = defaults.dataAccess;
+            $ = new LogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudAudit(@Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit) {
-            this.cloudAudit = cloudAudit;
+            $.cloudAudit = cloudAudit;
             return this;
         }
-        public Builder cloudAudit(@Nullable LogConfigCloudAuditOptionsArgs cloudAudit) {
-            this.cloudAudit = Codegen.ofNullable(cloudAudit);
-            return this;
+
+        public Builder cloudAudit(LogConfigCloudAuditOptionsArgs cloudAudit) {
+            return cloudAudit(Output.of(cloudAudit));
         }
+
         public Builder counter(@Nullable Output<LogConfigCounterOptionsArgs> counter) {
-            this.counter = counter;
+            $.counter = counter;
             return this;
         }
-        public Builder counter(@Nullable LogConfigCounterOptionsArgs counter) {
-            this.counter = Codegen.ofNullable(counter);
-            return this;
+
+        public Builder counter(LogConfigCounterOptionsArgs counter) {
+            return counter(Output.of(counter));
         }
+
         public Builder dataAccess(@Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess) {
-            this.dataAccess = dataAccess;
+            $.dataAccess = dataAccess;
             return this;
         }
-        public Builder dataAccess(@Nullable LogConfigDataAccessOptionsArgs dataAccess) {
-            this.dataAccess = Codegen.ofNullable(dataAccess);
-            return this;
-        }        public LogConfigArgs build() {
-            return new LogConfigArgs(cloudAudit, counter, dataAccess);
+
+        public Builder dataAccess(LogConfigDataAccessOptionsArgs dataAccess) {
+            return dataAccess(Output.of(dataAccess));
+        }
+
+        public LogConfigArgs build() {
+            return $;
         }
     }
+
 }

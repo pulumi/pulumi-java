@@ -7,9 +7,9 @@ import com.pulumi.azurenative.streamanalytics.enums.SkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,SkuName>> name;
+    private @Nullable Output<Either<String,SkuName>> name;
 
-    public Output<Either<String,SkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,SkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SkuArgs(@Nullable Output<Either<String,SkuName>> name) {
-        this.name = name;
-    }
+    private SkuArgs() {}
 
-    private SkuArgs() {
-        this.name = Codegen.empty();
+    private SkuArgs(SkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SkuName>> name;
+        private SkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuArgs();
         }
 
         public Builder(SkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,SkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,SkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SkuArgs build() {
-            return new SkuArgs(name);
+
+        public Builder name(Either<String,SkuName> name) {
+            return name(Output.of(name));
+        }
+
+        public SkuArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class WirelessDeviceSessionKeysAbpV10x extends com.pulumi.resources
     public static final WirelessDeviceSessionKeysAbpV10x Empty = new WirelessDeviceSessionKeysAbpV10x();
 
     @Import(name="appSKey", required=true)
-      private final String appSKey;
+    private String appSKey;
 
     public String appSKey() {
         return this.appSKey;
     }
 
     @Import(name="nwkSKey", required=true)
-      private final String nwkSKey;
+    private String nwkSKey;
 
     public String nwkSKey() {
         return this.nwkSKey;
     }
 
-    public WirelessDeviceSessionKeysAbpV10x(
-        String appSKey,
-        String nwkSKey) {
-        this.appSKey = Objects.requireNonNull(appSKey, "expected parameter 'appSKey' to be non-null");
-        this.nwkSKey = Objects.requireNonNull(nwkSKey, "expected parameter 'nwkSKey' to be non-null");
-    }
+    private WirelessDeviceSessionKeysAbpV10x() {}
 
-    private WirelessDeviceSessionKeysAbpV10x() {
-        this.appSKey = null;
-        this.nwkSKey = null;
+    private WirelessDeviceSessionKeysAbpV10x(WirelessDeviceSessionKeysAbpV10x $) {
+        this.appSKey = $.appSKey;
+        this.nwkSKey = $.nwkSKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceSessionKeysAbpV10x defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appSKey;
-        private String nwkSKey;
+        private WirelessDeviceSessionKeysAbpV10x $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceSessionKeysAbpV10x();
         }
 
         public Builder(WirelessDeviceSessionKeysAbpV10x defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appSKey = defaults.appSKey;
-    	      this.nwkSKey = defaults.nwkSKey;
+            $ = new WirelessDeviceSessionKeysAbpV10x(Objects.requireNonNull(defaults));
         }
 
         public Builder appSKey(String appSKey) {
-            this.appSKey = Objects.requireNonNull(appSKey);
+            $.appSKey = appSKey;
             return this;
         }
+
         public Builder nwkSKey(String nwkSKey) {
-            this.nwkSKey = Objects.requireNonNull(nwkSKey);
+            $.nwkSKey = nwkSKey;
             return this;
-        }        public WirelessDeviceSessionKeysAbpV10x build() {
-            return new WirelessDeviceSessionKeysAbpV10x(appSKey, nwkSKey);
+        }
+
+        public WirelessDeviceSessionKeysAbpV10x build() {
+            $.appSKey = Objects.requireNonNull($.appSKey, "expected parameter 'appSKey' to be non-null");
+            $.nwkSKey = Objects.requireNonNull($.nwkSKey, "expected parameter 'nwkSKey' to be non-null");
+            return $;
         }
     }
+
 }

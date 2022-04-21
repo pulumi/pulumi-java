@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class SparkMavenPackageArgs extends com.pulumi.resources.ResourceAr
     public static final SparkMavenPackageArgs Empty = new SparkMavenPackageArgs();
 
     @Import(name="artifact")
-      private final @Nullable Output<String> artifact;
+    private @Nullable Output<String> artifact;
 
-    public Output<String> artifact() {
-        return this.artifact == null ? Codegen.empty() : this.artifact;
+    public Optional<Output<String>> artifact() {
+        return Optional.ofNullable(this.artifact);
     }
 
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SparkMavenPackageArgs(
-        @Nullable Output<String> artifact,
-        @Nullable Output<String> group,
-        @Nullable Output<String> version) {
-        this.artifact = artifact;
-        this.group = group;
-        this.version = version;
-    }
+    private SparkMavenPackageArgs() {}
 
-    private SparkMavenPackageArgs() {
-        this.artifact = Codegen.empty();
-        this.group = Codegen.empty();
-        this.version = Codegen.empty();
+    private SparkMavenPackageArgs(SparkMavenPackageArgs $) {
+        this.artifact = $.artifact;
+        this.group = $.group;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkMavenPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifact;
-        private @Nullable Output<String> group;
-        private @Nullable Output<String> version;
+        private SparkMavenPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkMavenPackageArgs();
         }
 
         public Builder(SparkMavenPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifact = defaults.artifact;
-    	      this.group = defaults.group;
-    	      this.version = defaults.version;
+            $ = new SparkMavenPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifact(@Nullable Output<String> artifact) {
-            this.artifact = artifact;
+            $.artifact = artifact;
             return this;
         }
-        public Builder artifact(@Nullable String artifact) {
-            this.artifact = Codegen.ofNullable(artifact);
-            return this;
+
+        public Builder artifact(String artifact) {
+            return artifact(Output.of(artifact));
         }
+
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SparkMavenPackageArgs build() {
-            return new SparkMavenPackageArgs(artifact, group, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SparkMavenPackageArgs build() {
+            return $;
         }
     }
+
 }

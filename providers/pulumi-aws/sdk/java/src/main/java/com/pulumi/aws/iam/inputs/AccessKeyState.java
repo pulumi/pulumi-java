@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,24 +20,24 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createDate")
-      private final @Nullable Output<String> createDate;
+    private @Nullable Output<String> createDate;
 
-    public Output<String> createDate() {
-        return this.createDate == null ? Codegen.empty() : this.createDate;
+    public Optional<Output<String>> createDate() {
+        return Optional.ofNullable(this.createDate);
     }
 
     @Import(name="encryptedSecret")
-      private final @Nullable Output<String> encryptedSecret;
+    private @Nullable Output<String> encryptedSecret;
 
-    public Output<String> encryptedSecret() {
-        return this.encryptedSecret == null ? Codegen.empty() : this.encryptedSecret;
+    public Optional<Output<String>> encryptedSecret() {
+        return Optional.ofNullable(this.encryptedSecret);
     }
 
     @Import(name="encryptedSesSmtpPasswordV4")
-      private final @Nullable Output<String> encryptedSesSmtpPasswordV4;
+    private @Nullable Output<String> encryptedSesSmtpPasswordV4;
 
-    public Output<String> encryptedSesSmtpPasswordV4() {
-        return this.encryptedSesSmtpPasswordV4 == null ? Codegen.empty() : this.encryptedSesSmtpPasswordV4;
+    public Optional<Output<String>> encryptedSesSmtpPasswordV4() {
+        return Optional.ofNullable(this.encryptedSesSmtpPasswordV4);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyFingerprint")
-      private final @Nullable Output<String> keyFingerprint;
+    private @Nullable Output<String> keyFingerprint;
 
-    public Output<String> keyFingerprint() {
-        return this.keyFingerprint == null ? Codegen.empty() : this.keyFingerprint;
+    public Optional<Output<String>> keyFingerprint() {
+        return Optional.ofNullable(this.keyFingerprint);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pgpKey")
-      private final @Nullable Output<String> pgpKey;
+    private @Nullable Output<String> pgpKey;
 
-    public Output<String> pgpKey() {
-        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
+    public Optional<Output<String>> pgpKey() {
+        return Optional.ofNullable(this.pgpKey);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sesSmtpPasswordV4")
-      private final @Nullable Output<String> sesSmtpPasswordV4;
+    private @Nullable Output<String> sesSmtpPasswordV4;
 
-    public Output<String> sesSmtpPasswordV4() {
-        return this.sesSmtpPasswordV4 == null ? Codegen.empty() : this.sesSmtpPasswordV4;
+    public Optional<Output<String>> sesSmtpPasswordV4() {
+        return Optional.ofNullable(this.sesSmtpPasswordV4);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -100,154 +100,128 @@ public final class AccessKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public AccessKeyState(
-        @Nullable Output<String> createDate,
-        @Nullable Output<String> encryptedSecret,
-        @Nullable Output<String> encryptedSesSmtpPasswordV4,
-        @Nullable Output<String> keyFingerprint,
-        @Nullable Output<String> pgpKey,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> sesSmtpPasswordV4,
-        @Nullable Output<String> status,
-        @Nullable Output<String> user) {
-        this.createDate = createDate;
-        this.encryptedSecret = encryptedSecret;
-        this.encryptedSesSmtpPasswordV4 = encryptedSesSmtpPasswordV4;
-        this.keyFingerprint = keyFingerprint;
-        this.pgpKey = pgpKey;
-        this.secret = secret;
-        this.sesSmtpPasswordV4 = sesSmtpPasswordV4;
-        this.status = status;
-        this.user = user;
-    }
+    private AccessKeyState() {}
 
-    private AccessKeyState() {
-        this.createDate = Codegen.empty();
-        this.encryptedSecret = Codegen.empty();
-        this.encryptedSesSmtpPasswordV4 = Codegen.empty();
-        this.keyFingerprint = Codegen.empty();
-        this.pgpKey = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.sesSmtpPasswordV4 = Codegen.empty();
-        this.status = Codegen.empty();
-        this.user = Codegen.empty();
+    private AccessKeyState(AccessKeyState $) {
+        this.createDate = $.createDate;
+        this.encryptedSecret = $.encryptedSecret;
+        this.encryptedSesSmtpPasswordV4 = $.encryptedSesSmtpPasswordV4;
+        this.keyFingerprint = $.keyFingerprint;
+        this.pgpKey = $.pgpKey;
+        this.secret = $.secret;
+        this.sesSmtpPasswordV4 = $.sesSmtpPasswordV4;
+        this.status = $.status;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createDate;
-        private @Nullable Output<String> encryptedSecret;
-        private @Nullable Output<String> encryptedSesSmtpPasswordV4;
-        private @Nullable Output<String> keyFingerprint;
-        private @Nullable Output<String> pgpKey;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> sesSmtpPasswordV4;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> user;
+        private AccessKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessKeyState();
         }
 
         public Builder(AccessKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createDate = defaults.createDate;
-    	      this.encryptedSecret = defaults.encryptedSecret;
-    	      this.encryptedSesSmtpPasswordV4 = defaults.encryptedSesSmtpPasswordV4;
-    	      this.keyFingerprint = defaults.keyFingerprint;
-    	      this.pgpKey = defaults.pgpKey;
-    	      this.secret = defaults.secret;
-    	      this.sesSmtpPasswordV4 = defaults.sesSmtpPasswordV4;
-    	      this.status = defaults.status;
-    	      this.user = defaults.user;
+            $ = new AccessKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder createDate(@Nullable Output<String> createDate) {
-            this.createDate = createDate;
+            $.createDate = createDate;
             return this;
         }
-        public Builder createDate(@Nullable String createDate) {
-            this.createDate = Codegen.ofNullable(createDate);
-            return this;
+
+        public Builder createDate(String createDate) {
+            return createDate(Output.of(createDate));
         }
+
         public Builder encryptedSecret(@Nullable Output<String> encryptedSecret) {
-            this.encryptedSecret = encryptedSecret;
+            $.encryptedSecret = encryptedSecret;
             return this;
         }
-        public Builder encryptedSecret(@Nullable String encryptedSecret) {
-            this.encryptedSecret = Codegen.ofNullable(encryptedSecret);
-            return this;
+
+        public Builder encryptedSecret(String encryptedSecret) {
+            return encryptedSecret(Output.of(encryptedSecret));
         }
+
         public Builder encryptedSesSmtpPasswordV4(@Nullable Output<String> encryptedSesSmtpPasswordV4) {
-            this.encryptedSesSmtpPasswordV4 = encryptedSesSmtpPasswordV4;
+            $.encryptedSesSmtpPasswordV4 = encryptedSesSmtpPasswordV4;
             return this;
         }
-        public Builder encryptedSesSmtpPasswordV4(@Nullable String encryptedSesSmtpPasswordV4) {
-            this.encryptedSesSmtpPasswordV4 = Codegen.ofNullable(encryptedSesSmtpPasswordV4);
-            return this;
+
+        public Builder encryptedSesSmtpPasswordV4(String encryptedSesSmtpPasswordV4) {
+            return encryptedSesSmtpPasswordV4(Output.of(encryptedSesSmtpPasswordV4));
         }
+
         public Builder keyFingerprint(@Nullable Output<String> keyFingerprint) {
-            this.keyFingerprint = keyFingerprint;
+            $.keyFingerprint = keyFingerprint;
             return this;
         }
-        public Builder keyFingerprint(@Nullable String keyFingerprint) {
-            this.keyFingerprint = Codegen.ofNullable(keyFingerprint);
-            return this;
+
+        public Builder keyFingerprint(String keyFingerprint) {
+            return keyFingerprint(Output.of(keyFingerprint));
         }
+
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
-            this.pgpKey = pgpKey;
+            $.pgpKey = pgpKey;
             return this;
         }
-        public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Codegen.ofNullable(pgpKey);
-            return this;
+
+        public Builder pgpKey(String pgpKey) {
+            return pgpKey(Output.of(pgpKey));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder sesSmtpPasswordV4(@Nullable Output<String> sesSmtpPasswordV4) {
-            this.sesSmtpPasswordV4 = sesSmtpPasswordV4;
+            $.sesSmtpPasswordV4 = sesSmtpPasswordV4;
             return this;
         }
-        public Builder sesSmtpPasswordV4(@Nullable String sesSmtpPasswordV4) {
-            this.sesSmtpPasswordV4 = Codegen.ofNullable(sesSmtpPasswordV4);
-            return this;
+
+        public Builder sesSmtpPasswordV4(String sesSmtpPasswordV4) {
+            return sesSmtpPasswordV4(Output.of(sesSmtpPasswordV4));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public AccessKeyState build() {
-            return new AccessKeyState(createDate, encryptedSecret, encryptedSesSmtpPasswordV4, keyFingerprint, pgpKey, secret, sesSmtpPasswordV4, status, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public AccessKeyState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.KeyRingIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class KeyRingIAMMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition;
 
-    public Output<KeyRingIAMMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<KeyRingIAMMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class KeyRingIAMMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class KeyRingIAMMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyRingId")
-      private final @Nullable Output<String> keyRingId;
+    private @Nullable Output<String> keyRingId;
 
-    public Output<String> keyRingId() {
-        return this.keyRingId == null ? Codegen.empty() : this.keyRingId;
+    public Optional<Output<String>> keyRingId() {
+        return Optional.ofNullable(this.keyRingId);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -67,102 +67,88 @@ public final class KeyRingIAMMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public KeyRingIAMMemberState(
-        @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> keyRingId,
-        @Nullable Output<String> member,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.etag = etag;
-        this.keyRingId = keyRingId;
-        this.member = member;
-        this.role = role;
-    }
+    private KeyRingIAMMemberState() {}
 
-    private KeyRingIAMMemberState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.keyRingId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private KeyRingIAMMemberState(KeyRingIAMMemberState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.keyRingId = $.keyRingId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingIAMMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyRingIAMMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> keyRingId;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> role;
+        private KeyRingIAMMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingIAMMemberState();
         }
 
         public Builder(KeyRingIAMMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new KeyRingIAMMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<KeyRingIAMMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable KeyRingIAMMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(KeyRingIAMMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder keyRingId(@Nullable Output<String> keyRingId) {
-            this.keyRingId = keyRingId;
+            $.keyRingId = keyRingId;
             return this;
         }
-        public Builder keyRingId(@Nullable String keyRingId) {
-            this.keyRingId = Codegen.ofNullable(keyRingId);
-            return this;
+
+        public Builder keyRingId(String keyRingId) {
+            return keyRingId(Output.of(keyRingId));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public KeyRingIAMMemberState build() {
-            return new KeyRingIAMMemberState(condition, etag, keyRingId, member, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public KeyRingIAMMemberState build() {
+            return $;
         }
     }
+
 }

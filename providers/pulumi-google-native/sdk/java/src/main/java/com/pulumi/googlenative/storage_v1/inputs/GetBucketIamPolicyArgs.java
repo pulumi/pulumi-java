@@ -15,94 +15,84 @@ public final class GetBucketIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetBucketIamPolicyArgs Empty = new GetBucketIamPolicyArgs();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable String provisionalUserProject;
+    private @Nullable String provisionalUserProject;
 
     public Optional<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetBucketIamPolicyArgs(
-        String bucket,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String provisionalUserProject,
-        @Nullable String userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.provisionalUserProject = provisionalUserProject;
-        this.userProject = userProject;
-    }
+    private GetBucketIamPolicyArgs() {}
 
-    private GetBucketIamPolicyArgs() {
-        this.bucket = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.provisionalUserProject = null;
-        this.userProject = null;
+    private GetBucketIamPolicyArgs(GetBucketIamPolicyArgs $) {
+        this.bucket = $.bucket;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String provisionalUserProject;
-        private @Nullable String userProject;
+        private GetBucketIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketIamPolicyArgs();
         }
 
         public Builder(GetBucketIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.userProject = defaults.userProject;
+            $ = new GetBucketIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetBucketIamPolicyArgs build() {
-            return new GetBucketIamPolicyArgs(bucket, optionsRequestedPolicyVersion, provisionalUserProject, userProject);
+        }
+
+        public GetBucketIamPolicyArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

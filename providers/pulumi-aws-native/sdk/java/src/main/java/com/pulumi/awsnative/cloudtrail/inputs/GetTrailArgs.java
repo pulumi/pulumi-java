@@ -13,45 +13,45 @@ public final class GetTrailArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTrailArgs Empty = new GetTrailArgs();
 
     @Import(name="trailName", required=true)
-      private final String trailName;
+    private String trailName;
 
     public String trailName() {
         return this.trailName;
     }
 
-    public GetTrailArgs(String trailName) {
-        this.trailName = Objects.requireNonNull(trailName, "expected parameter 'trailName' to be non-null");
-    }
+    private GetTrailArgs() {}
 
-    private GetTrailArgs() {
-        this.trailName = null;
+    private GetTrailArgs(GetTrailArgs $) {
+        this.trailName = $.trailName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTrailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String trailName;
+        private GetTrailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTrailArgs();
         }
 
         public Builder(GetTrailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trailName = defaults.trailName;
+            $ = new GetTrailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder trailName(String trailName) {
-            this.trailName = Objects.requireNonNull(trailName);
+            $.trailName = trailName;
             return this;
-        }        public GetTrailArgs build() {
-            return new GetTrailArgs(trailName);
+        }
+
+        public GetTrailArgs build() {
+            $.trailName = Objects.requireNonNull($.trailName, "expected parameter 'trailName' to be non-null");
+            return $;
         }
     }
+
 }

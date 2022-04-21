@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsArgs;
 import com.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VpnSiteLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bgpProperties")
-      private final @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
+    private @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
 
-    public Output<VpnLinkBgpSettingsArgs> bgpProperties() {
-        return this.bgpProperties == null ? Codegen.empty() : this.bgpProperties;
+    public Optional<Output<VpnLinkBgpSettingsArgs>> bgpProperties() {
+        return Optional.ofNullable(this.bgpProperties);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VpnSiteLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VpnSiteLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VpnSiteLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class VpnSiteLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkProperties")
-      private final @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
+    private @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
 
-    public Output<VpnLinkProviderPropertiesArgs> linkProperties() {
-        return this.linkProperties == null ? Codegen.empty() : this.linkProperties;
+    public Optional<Output<VpnLinkProviderPropertiesArgs>> linkProperties() {
+        return Optional.ofNullable(this.linkProperties);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class VpnSiteLinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public VpnSiteLinkArgs(
-        @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties,
-        @Nullable Output<String> fqdn,
-        @Nullable Output<String> id,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties,
-        @Nullable Output<String> name) {
-        this.bgpProperties = bgpProperties;
-        this.fqdn = fqdn;
-        this.id = id;
-        this.ipAddress = ipAddress;
-        this.linkProperties = linkProperties;
-        this.name = name;
-    }
+    private VpnSiteLinkArgs() {}
 
-    private VpnSiteLinkArgs() {
-        this.bgpProperties = Codegen.empty();
-        this.fqdn = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.linkProperties = Codegen.empty();
-        this.name = Codegen.empty();
+    private VpnSiteLinkArgs(VpnSiteLinkArgs $) {
+        this.bgpProperties = $.bgpProperties;
+        this.fqdn = $.fqdn;
+        this.id = $.id;
+        this.ipAddress = $.ipAddress;
+        this.linkProperties = $.linkProperties;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnSiteLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
-        private @Nullable Output<String> name;
+        private VpnSiteLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnSiteLinkArgs();
         }
 
         public Builder(VpnSiteLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpProperties = defaults.bgpProperties;
-    	      this.fqdn = defaults.fqdn;
-    	      this.id = defaults.id;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.linkProperties = defaults.linkProperties;
-    	      this.name = defaults.name;
+            $ = new VpnSiteLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpProperties(@Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties) {
-            this.bgpProperties = bgpProperties;
+            $.bgpProperties = bgpProperties;
             return this;
         }
-        public Builder bgpProperties(@Nullable VpnLinkBgpSettingsArgs bgpProperties) {
-            this.bgpProperties = Codegen.ofNullable(bgpProperties);
-            return this;
+
+        public Builder bgpProperties(VpnLinkBgpSettingsArgs bgpProperties) {
+            return bgpProperties(Output.of(bgpProperties));
         }
+
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder linkProperties(@Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties) {
-            this.linkProperties = linkProperties;
+            $.linkProperties = linkProperties;
             return this;
         }
-        public Builder linkProperties(@Nullable VpnLinkProviderPropertiesArgs linkProperties) {
-            this.linkProperties = Codegen.ofNullable(linkProperties);
-            return this;
+
+        public Builder linkProperties(VpnLinkProviderPropertiesArgs linkProperties) {
+            return linkProperties(Output.of(linkProperties));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public VpnSiteLinkArgs build() {
-            return new VpnSiteLinkArgs(bgpProperties, fqdn, id, ipAddress, linkProperties, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public VpnSiteLinkArgs build() {
+            return $;
         }
     }
+
 }

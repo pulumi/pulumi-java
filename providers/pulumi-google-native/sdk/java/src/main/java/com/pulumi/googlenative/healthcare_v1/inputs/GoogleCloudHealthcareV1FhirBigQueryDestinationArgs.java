@@ -5,12 +5,12 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.enums.GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition;
 import com.pulumi.googlenative.healthcare_v1.inputs.SchemaConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
      * 
      */
     @Import(name="datasetUri")
-      private final @Nullable Output<String> datasetUri;
+    private @Nullable Output<String> datasetUri;
 
-    public Output<String> datasetUri() {
-        return this.datasetUri == null ? Codegen.empty() : this.datasetUri;
+    public Optional<Output<String>> datasetUri() {
+        return Optional.ofNullable(this.datasetUri);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
      * 
      */
     @Import(name="force")
-      private final @Nullable Output<Boolean> force;
+    private @Nullable Output<Boolean> force;
 
-    public Output<Boolean> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<Boolean>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
      * 
      */
     @Import(name="schemaConfig")
-      private final @Nullable Output<SchemaConfigArgs> schemaConfig;
+    private @Nullable Output<SchemaConfigArgs> schemaConfig;
 
-    public Output<SchemaConfigArgs> schemaConfig() {
-        return this.schemaConfig == null ? Codegen.empty() : this.schemaConfig;
+    public Optional<Output<SchemaConfigArgs>> schemaConfig() {
+        return Optional.ofNullable(this.schemaConfig);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends co
      * 
      */
     @Import(name="writeDisposition")
-      private final @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition;
+    private @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition;
 
-    public Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition() {
-        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
+    public Optional<Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition>> writeDisposition() {
+        return Optional.ofNullable(this.writeDisposition);
     }
 
-    public GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(
-        @Nullable Output<String> datasetUri,
-        @Nullable Output<Boolean> force,
-        @Nullable Output<SchemaConfigArgs> schemaConfig,
-        @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition) {
-        this.datasetUri = datasetUri;
-        this.force = force;
-        this.schemaConfig = schemaConfig;
-        this.writeDisposition = writeDisposition;
-    }
+    private GoogleCloudHealthcareV1FhirBigQueryDestinationArgs() {}
 
-    private GoogleCloudHealthcareV1FhirBigQueryDestinationArgs() {
-        this.datasetUri = Codegen.empty();
-        this.force = Codegen.empty();
-        this.schemaConfig = Codegen.empty();
-        this.writeDisposition = Codegen.empty();
+    private GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(GoogleCloudHealthcareV1FhirBigQueryDestinationArgs $) {
+        this.datasetUri = $.datasetUri;
+        this.force = $.force;
+        this.schemaConfig = $.schemaConfig;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1FhirBigQueryDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetUri;
-        private @Nullable Output<Boolean> force;
-        private @Nullable Output<SchemaConfigArgs> schemaConfig;
-        private @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition;
+        private GoogleCloudHealthcareV1FhirBigQueryDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs();
         }
 
         public Builder(GoogleCloudHealthcareV1FhirBigQueryDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetUri = defaults.datasetUri;
-    	      this.force = defaults.force;
-    	      this.schemaConfig = defaults.schemaConfig;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetUri(@Nullable Output<String> datasetUri) {
-            this.datasetUri = datasetUri;
+            $.datasetUri = datasetUri;
             return this;
         }
-        public Builder datasetUri(@Nullable String datasetUri) {
-            this.datasetUri = Codegen.ofNullable(datasetUri);
-            return this;
+
+        public Builder datasetUri(String datasetUri) {
+            return datasetUri(Output.of(datasetUri));
         }
+
         public Builder force(@Nullable Output<Boolean> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable Boolean force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(Boolean force) {
+            return force(Output.of(force));
         }
+
         public Builder schemaConfig(@Nullable Output<SchemaConfigArgs> schemaConfig) {
-            this.schemaConfig = schemaConfig;
+            $.schemaConfig = schemaConfig;
             return this;
         }
-        public Builder schemaConfig(@Nullable SchemaConfigArgs schemaConfig) {
-            this.schemaConfig = Codegen.ofNullable(schemaConfig);
-            return this;
+
+        public Builder schemaConfig(SchemaConfigArgs schemaConfig) {
+            return schemaConfig(Output.of(schemaConfig));
         }
+
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition) {
-            this.writeDisposition = writeDisposition;
+            $.writeDisposition = writeDisposition;
             return this;
         }
-        public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition writeDisposition) {
-            this.writeDisposition = Codegen.ofNullable(writeDisposition);
-            return this;
-        }        public GoogleCloudHealthcareV1FhirBigQueryDestinationArgs build() {
-            return new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(datasetUri, force, schemaConfig, writeDisposition);
+
+        public Builder writeDisposition(GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition writeDisposition) {
+            return writeDisposition(Output.of(writeDisposition));
+        }
+
+        public GoogleCloudHealthcareV1FhirBigQueryDestinationArgs build() {
+            return $;
         }
     }
+
 }

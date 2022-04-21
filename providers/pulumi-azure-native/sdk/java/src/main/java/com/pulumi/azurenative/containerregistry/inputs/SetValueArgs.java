@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isSecret")
-      private final @Nullable Output<Boolean> isSecret;
+    private @Nullable Output<Boolean> isSecret;
 
-    public Output<Boolean> isSecret() {
-        return this.isSecret == null ? Codegen.empty() : this.isSecret;
+    public Optional<Output<Boolean>> isSecret() {
+        return Optional.ofNullable(this.isSecret);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,76 +48,71 @@ public final class SetValueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public SetValueArgs(
-        @Nullable Output<Boolean> isSecret,
-        Output<String> name,
-        Output<String> value) {
-        this.isSecret = Codegen.booleanProp("isSecret").output().arg(isSecret).def(false).getNullable();
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SetValueArgs() {}
 
-    private SetValueArgs() {
-        this.isSecret = Codegen.empty();
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private SetValueArgs(SetValueArgs $) {
+        this.isSecret = $.isSecret;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SetValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isSecret;
-        private Output<String> name;
-        private Output<String> value;
+        private SetValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SetValueArgs();
         }
 
         public Builder(SetValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isSecret = defaults.isSecret;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new SetValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isSecret(@Nullable Output<Boolean> isSecret) {
-            this.isSecret = isSecret;
+            $.isSecret = isSecret;
             return this;
         }
-        public Builder isSecret(@Nullable Boolean isSecret) {
-            this.isSecret = Codegen.ofNullable(isSecret);
-            return this;
+
+        public Builder isSecret(Boolean isSecret) {
+            return isSecret(Output.of(isSecret));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SetValueArgs build() {
-            return new SetValueArgs(isSecret, name, value);
+            return value(Output.of(value));
+        }
+
+        public SetValueArgs build() {
+            $.isSecret = Codegen.booleanProp("isSecret").output().arg($.isSecret).def(false).getNullable();
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

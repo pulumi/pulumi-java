@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="maxNodes", required=true)
-      private final Integer maxNodes;
+    private Integer maxNodes;
 
     public Integer maxNodes() {
         return this.maxNodes;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<GoogleCloudMlV1__MetricSpecResponse> metrics;
+    private List<GoogleCloudMlV1__MetricSpecResponse> metrics;
 
     public List<GoogleCloudMlV1__MetricSpecResponse> metrics() {
         return this.metrics;
@@ -45,67 +45,63 @@ public final class GoogleCloudMlV1__AutoScalingResponse extends com.pulumi.resou
      * 
      */
     @Import(name="minNodes", required=true)
-      private final Integer minNodes;
+    private Integer minNodes;
 
     public Integer minNodes() {
         return this.minNodes;
     }
 
-    public GoogleCloudMlV1__AutoScalingResponse(
-        Integer maxNodes,
-        List<GoogleCloudMlV1__MetricSpecResponse> metrics,
-        Integer minNodes) {
-        this.maxNodes = Objects.requireNonNull(maxNodes, "expected parameter 'maxNodes' to be non-null");
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.minNodes = Objects.requireNonNull(minNodes, "expected parameter 'minNodes' to be non-null");
-    }
+    private GoogleCloudMlV1__AutoScalingResponse() {}
 
-    private GoogleCloudMlV1__AutoScalingResponse() {
-        this.maxNodes = null;
-        this.metrics = List.of();
-        this.minNodes = null;
+    private GoogleCloudMlV1__AutoScalingResponse(GoogleCloudMlV1__AutoScalingResponse $) {
+        this.maxNodes = $.maxNodes;
+        this.metrics = $.metrics;
+        this.minNodes = $.minNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__AutoScalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxNodes;
-        private List<GoogleCloudMlV1__MetricSpecResponse> metrics;
-        private Integer minNodes;
+        private GoogleCloudMlV1__AutoScalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__AutoScalingResponse();
         }
 
         public Builder(GoogleCloudMlV1__AutoScalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxNodes = defaults.maxNodes;
-    	      this.metrics = defaults.metrics;
-    	      this.minNodes = defaults.minNodes;
+            $ = new GoogleCloudMlV1__AutoScalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxNodes(Integer maxNodes) {
-            this.maxNodes = Objects.requireNonNull(maxNodes);
+            $.maxNodes = maxNodes;
             return this;
         }
+
         public Builder metrics(List<GoogleCloudMlV1__MetricSpecResponse> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(GoogleCloudMlV1__MetricSpecResponse... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder minNodes(Integer minNodes) {
-            this.minNodes = Objects.requireNonNull(minNodes);
+            $.minNodes = minNodes;
             return this;
-        }        public GoogleCloudMlV1__AutoScalingResponse build() {
-            return new GoogleCloudMlV1__AutoScalingResponse(maxNodes, metrics, minNodes);
+        }
+
+        public GoogleCloudMlV1__AutoScalingResponse build() {
+            $.maxNodes = Objects.requireNonNull($.maxNodes, "expected parameter 'maxNodes' to be non-null");
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.minNodes = Objects.requireNonNull($.minNodes, "expected parameter 'minNodes' to be non-null");
+            return $;
         }
     }
+
 }

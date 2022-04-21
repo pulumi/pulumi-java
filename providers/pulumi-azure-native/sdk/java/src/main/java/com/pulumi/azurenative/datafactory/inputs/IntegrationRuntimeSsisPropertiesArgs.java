@@ -17,11 +17,11 @@ import com.pulumi.azurenative.datafactory.inputs.PackageStoreArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -38,10 +38,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="catalogInfo")
-      private final @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
+    private @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
 
-    public Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo() {
-        return this.catalogInfo == null ? Codegen.empty() : this.catalogInfo;
+    public Optional<Output<IntegrationRuntimeSsisCatalogInfoArgs>> catalogInfo() {
+        return Optional.ofNullable(this.catalogInfo);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="credential")
-      private final @Nullable Output<CredentialReferenceArgs> credential;
+    private @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> credential() {
-        return this.credential == null ? Codegen.empty() : this.credential;
+    public Optional<Output<CredentialReferenceArgs>> credential() {
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="customSetupScriptProperties")
-      private final @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
+    private @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
 
-    public Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties() {
-        return this.customSetupScriptProperties == null ? Codegen.empty() : this.customSetupScriptProperties;
+    public Optional<Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs>> customSetupScriptProperties() {
+        return Optional.ofNullable(this.customSetupScriptProperties);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="dataProxyProperties")
-      private final @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
+    private @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
 
-    public Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties() {
-        return this.dataProxyProperties == null ? Codegen.empty() : this.dataProxyProperties;
+    public Optional<Output<IntegrationRuntimeDataProxyPropertiesArgs>> dataProxyProperties() {
+        return Optional.ofNullable(this.dataProxyProperties);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="edition")
-      private final @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition;
+    private @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition;
 
-    public Output<Either<String,IntegrationRuntimeEdition>> edition() {
-        return this.edition == null ? Codegen.empty() : this.edition;
+    public Optional<Output<Either<String,IntegrationRuntimeEdition>>> edition() {
+        return Optional.ofNullable(this.edition);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="expressCustomSetupProperties")
-      private final @Nullable Output<List<Object>> expressCustomSetupProperties;
+    private @Nullable Output<List<Object>> expressCustomSetupProperties;
 
-    public Output<List<Object>> expressCustomSetupProperties() {
-        return this.expressCustomSetupProperties == null ? Codegen.empty() : this.expressCustomSetupProperties;
+    public Optional<Output<List<Object>>> expressCustomSetupProperties() {
+        return Optional.ofNullable(this.expressCustomSetupProperties);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType;
+    private @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType;
 
-    public Output<Either<String,IntegrationRuntimeLicenseType>> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<Either<String,IntegrationRuntimeLicenseType>>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -115,147 +115,126 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="packageStores")
-      private final @Nullable Output<List<PackageStoreArgs>> packageStores;
+    private @Nullable Output<List<PackageStoreArgs>> packageStores;
 
-    public Output<List<PackageStoreArgs>> packageStores() {
-        return this.packageStores == null ? Codegen.empty() : this.packageStores;
+    public Optional<Output<List<PackageStoreArgs>>> packageStores() {
+        return Optional.ofNullable(this.packageStores);
     }
 
-    public IntegrationRuntimeSsisPropertiesArgs(
-        @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo,
-        @Nullable Output<CredentialReferenceArgs> credential,
-        @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties,
-        @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties,
-        @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition,
-        @Nullable Output<List<Object>> expressCustomSetupProperties,
-        @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType,
-        @Nullable Output<List<PackageStoreArgs>> packageStores) {
-        this.catalogInfo = catalogInfo;
-        this.credential = credential;
-        this.customSetupScriptProperties = customSetupScriptProperties;
-        this.dataProxyProperties = dataProxyProperties;
-        this.edition = edition;
-        this.expressCustomSetupProperties = expressCustomSetupProperties;
-        this.licenseType = licenseType;
-        this.packageStores = packageStores;
-    }
+    private IntegrationRuntimeSsisPropertiesArgs() {}
 
-    private IntegrationRuntimeSsisPropertiesArgs() {
-        this.catalogInfo = Codegen.empty();
-        this.credential = Codegen.empty();
-        this.customSetupScriptProperties = Codegen.empty();
-        this.dataProxyProperties = Codegen.empty();
-        this.edition = Codegen.empty();
-        this.expressCustomSetupProperties = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.packageStores = Codegen.empty();
+    private IntegrationRuntimeSsisPropertiesArgs(IntegrationRuntimeSsisPropertiesArgs $) {
+        this.catalogInfo = $.catalogInfo;
+        this.credential = $.credential;
+        this.customSetupScriptProperties = $.customSetupScriptProperties;
+        this.dataProxyProperties = $.dataProxyProperties;
+        this.edition = $.edition;
+        this.expressCustomSetupProperties = $.expressCustomSetupProperties;
+        this.licenseType = $.licenseType;
+        this.packageStores = $.packageStores;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeSsisPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
-        private @Nullable Output<CredentialReferenceArgs> credential;
-        private @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
-        private @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
-        private @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition;
-        private @Nullable Output<List<Object>> expressCustomSetupProperties;
-        private @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType;
-        private @Nullable Output<List<PackageStoreArgs>> packageStores;
+        private IntegrationRuntimeSsisPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeSsisPropertiesArgs();
         }
 
         public Builder(IntegrationRuntimeSsisPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogInfo = defaults.catalogInfo;
-    	      this.credential = defaults.credential;
-    	      this.customSetupScriptProperties = defaults.customSetupScriptProperties;
-    	      this.dataProxyProperties = defaults.dataProxyProperties;
-    	      this.edition = defaults.edition;
-    	      this.expressCustomSetupProperties = defaults.expressCustomSetupProperties;
-    	      this.licenseType = defaults.licenseType;
-    	      this.packageStores = defaults.packageStores;
+            $ = new IntegrationRuntimeSsisPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogInfo(@Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo) {
-            this.catalogInfo = catalogInfo;
+            $.catalogInfo = catalogInfo;
             return this;
         }
-        public Builder catalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoArgs catalogInfo) {
-            this.catalogInfo = Codegen.ofNullable(catalogInfo);
-            return this;
+
+        public Builder catalogInfo(IntegrationRuntimeSsisCatalogInfoArgs catalogInfo) {
+            return catalogInfo(Output.of(catalogInfo));
         }
+
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
-        public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Codegen.ofNullable(credential);
-            return this;
+
+        public Builder credential(CredentialReferenceArgs credential) {
+            return credential(Output.of(credential));
         }
+
         public Builder customSetupScriptProperties(@Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties) {
-            this.customSetupScriptProperties = customSetupScriptProperties;
+            $.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
-        public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesArgs customSetupScriptProperties) {
-            this.customSetupScriptProperties = Codegen.ofNullable(customSetupScriptProperties);
-            return this;
+
+        public Builder customSetupScriptProperties(IntegrationRuntimeCustomSetupScriptPropertiesArgs customSetupScriptProperties) {
+            return customSetupScriptProperties(Output.of(customSetupScriptProperties));
         }
+
         public Builder dataProxyProperties(@Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties) {
-            this.dataProxyProperties = dataProxyProperties;
+            $.dataProxyProperties = dataProxyProperties;
             return this;
         }
-        public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesArgs dataProxyProperties) {
-            this.dataProxyProperties = Codegen.ofNullable(dataProxyProperties);
-            return this;
+
+        public Builder dataProxyProperties(IntegrationRuntimeDataProxyPropertiesArgs dataProxyProperties) {
+            return dataProxyProperties(Output.of(dataProxyProperties));
         }
+
         public Builder edition(@Nullable Output<Either<String,IntegrationRuntimeEdition>> edition) {
-            this.edition = edition;
+            $.edition = edition;
             return this;
         }
-        public Builder edition(@Nullable Either<String,IntegrationRuntimeEdition> edition) {
-            this.edition = Codegen.ofNullable(edition);
-            return this;
+
+        public Builder edition(Either<String,IntegrationRuntimeEdition> edition) {
+            return edition(Output.of(edition));
         }
+
         public Builder expressCustomSetupProperties(@Nullable Output<List<Object>> expressCustomSetupProperties) {
-            this.expressCustomSetupProperties = expressCustomSetupProperties;
+            $.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
-        public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
-            this.expressCustomSetupProperties = Codegen.ofNullable(expressCustomSetupProperties);
-            return this;
+
+        public Builder expressCustomSetupProperties(List<Object> expressCustomSetupProperties) {
+            return expressCustomSetupProperties(Output.of(expressCustomSetupProperties));
         }
+
         public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
             return expressCustomSetupProperties(List.of(expressCustomSetupProperties));
         }
+
         public Builder licenseType(@Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable Either<String,IntegrationRuntimeLicenseType> licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(Either<String,IntegrationRuntimeLicenseType> licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder packageStores(@Nullable Output<List<PackageStoreArgs>> packageStores) {
-            this.packageStores = packageStores;
+            $.packageStores = packageStores;
             return this;
         }
-        public Builder packageStores(@Nullable List<PackageStoreArgs> packageStores) {
-            this.packageStores = Codegen.ofNullable(packageStores);
-            return this;
+
+        public Builder packageStores(List<PackageStoreArgs> packageStores) {
+            return packageStores(Output.of(packageStores));
         }
+
         public Builder packageStores(PackageStoreArgs... packageStores) {
             return packageStores(List.of(packageStores));
-        }        public IntegrationRuntimeSsisPropertiesArgs build() {
-            return new IntegrationRuntimeSsisPropertiesArgs(catalogInfo, credential, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType, packageStores);
+        }
+
+        public IntegrationRuntimeSsisPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="blobTypes", required=true)
-      private final List<String> blobTypes;
+    private List<String> blobTypes;
 
     public List<String> blobTypes() {
         return this.blobTypes;
@@ -36,10 +36,10 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="includeBlobVersions")
-      private final @Nullable Boolean includeBlobVersions;
+    private @Nullable Boolean includeBlobVersions;
 
     public Optional<Boolean> includeBlobVersions() {
-        return this.includeBlobVersions == null ? Optional.empty() : Optional.ofNullable(this.includeBlobVersions);
+        return Optional.ofNullable(this.includeBlobVersions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="includeSnapshots")
-      private final @Nullable Boolean includeSnapshots;
+    private @Nullable Boolean includeSnapshots;
 
     public Optional<Boolean> includeSnapshots() {
-        return this.includeSnapshots == null ? Optional.empty() : Optional.ofNullable(this.includeSnapshots);
+        return Optional.ofNullable(this.includeSnapshots);
     }
 
     /**
@@ -58,79 +58,71 @@ public final class BlobInventoryPolicyFilterResponse extends com.pulumi.resource
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable List<String> prefixMatch;
+    private @Nullable List<String> prefixMatch;
 
-    public List<String> prefixMatch() {
-        return this.prefixMatch == null ? List.of() : this.prefixMatch;
+    public Optional<List<String>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
-    public BlobInventoryPolicyFilterResponse(
-        List<String> blobTypes,
-        @Nullable Boolean includeBlobVersions,
-        @Nullable Boolean includeSnapshots,
-        @Nullable List<String> prefixMatch) {
-        this.blobTypes = Objects.requireNonNull(blobTypes, "expected parameter 'blobTypes' to be non-null");
-        this.includeBlobVersions = includeBlobVersions;
-        this.includeSnapshots = includeSnapshots;
-        this.prefixMatch = prefixMatch;
-    }
+    private BlobInventoryPolicyFilterResponse() {}
 
-    private BlobInventoryPolicyFilterResponse() {
-        this.blobTypes = List.of();
-        this.includeBlobVersions = null;
-        this.includeSnapshots = null;
-        this.prefixMatch = List.of();
+    private BlobInventoryPolicyFilterResponse(BlobInventoryPolicyFilterResponse $) {
+        this.blobTypes = $.blobTypes;
+        this.includeBlobVersions = $.includeBlobVersions;
+        this.includeSnapshots = $.includeSnapshots;
+        this.prefixMatch = $.prefixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicyFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> blobTypes;
-        private @Nullable Boolean includeBlobVersions;
-        private @Nullable Boolean includeSnapshots;
-        private @Nullable List<String> prefixMatch;
+        private BlobInventoryPolicyFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicyFilterResponse();
         }
 
         public Builder(BlobInventoryPolicyFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobTypes = defaults.blobTypes;
-    	      this.includeBlobVersions = defaults.includeBlobVersions;
-    	      this.includeSnapshots = defaults.includeSnapshots;
-    	      this.prefixMatch = defaults.prefixMatch;
+            $ = new BlobInventoryPolicyFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobTypes(List<String> blobTypes) {
-            this.blobTypes = Objects.requireNonNull(blobTypes);
+            $.blobTypes = blobTypes;
             return this;
         }
+
         public Builder blobTypes(String... blobTypes) {
             return blobTypes(List.of(blobTypes));
         }
+
         public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
-            this.includeBlobVersions = includeBlobVersions;
+            $.includeBlobVersions = includeBlobVersions;
             return this;
         }
+
         public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
-            this.includeSnapshots = includeSnapshots;
+            $.includeSnapshots = includeSnapshots;
             return this;
         }
+
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
+
         public Builder prefixMatch(String... prefixMatch) {
             return prefixMatch(List.of(prefixMatch));
-        }        public BlobInventoryPolicyFilterResponse build() {
-            return new BlobInventoryPolicyFilterResponse(blobTypes, includeBlobVersions, includeSnapshots, prefixMatch);
+        }
+
+        public BlobInventoryPolicyFilterResponse build() {
+            $.blobTypes = Objects.requireNonNull($.blobTypes, "expected parameter 'blobTypes' to be non-null");
+            return $;
         }
     }
+
 }

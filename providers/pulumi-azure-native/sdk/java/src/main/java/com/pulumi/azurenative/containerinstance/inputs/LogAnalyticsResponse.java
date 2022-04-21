@@ -24,10 +24,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="logType")
-      private final @Nullable String logType;
+    private @Nullable String logType;
 
     public Optional<String> logType() {
-        return this.logType == null ? Optional.empty() : Optional.ofNullable(this.logType);
+        return Optional.ofNullable(this.logType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,String> metadata;
+    private @Nullable Map<String,String> metadata;
 
-    public Map<String,String> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,String>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final String workspaceId;
+    private String workspaceId;
 
     public String workspaceId() {
         return this.workspaceId;
@@ -57,7 +57,7 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workspaceKey", required=true)
-      private final String workspaceKey;
+    private String workspaceKey;
 
     public String workspaceKey() {
         return this.workspaceKey;
@@ -68,82 +68,70 @@ public final class LogAnalyticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Map<String,String> workspaceResourceId;
+    private @Nullable Map<String,String> workspaceResourceId;
 
-    public Map<String,String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Map.of() : this.workspaceResourceId;
+    public Optional<Map<String,String>> workspaceResourceId() {
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public LogAnalyticsResponse(
-        @Nullable String logType,
-        @Nullable Map<String,String> metadata,
-        String workspaceId,
-        String workspaceKey,
-        @Nullable Map<String,String> workspaceResourceId) {
-        this.logType = logType;
-        this.metadata = metadata;
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-        this.workspaceKey = Objects.requireNonNull(workspaceKey, "expected parameter 'workspaceKey' to be non-null");
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private LogAnalyticsResponse() {}
 
-    private LogAnalyticsResponse() {
-        this.logType = null;
-        this.metadata = Map.of();
-        this.workspaceId = null;
-        this.workspaceKey = null;
-        this.workspaceResourceId = Map.of();
+    private LogAnalyticsResponse(LogAnalyticsResponse $) {
+        this.logType = $.logType;
+        this.metadata = $.metadata;
+        this.workspaceId = $.workspaceId;
+        this.workspaceKey = $.workspaceKey;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logType;
-        private @Nullable Map<String,String> metadata;
-        private String workspaceId;
-        private String workspaceKey;
-        private @Nullable Map<String,String> workspaceResourceId;
+        private LogAnalyticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsResponse();
         }
 
         public Builder(LogAnalyticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logType = defaults.logType;
-    	      this.metadata = defaults.metadata;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceKey = defaults.workspaceKey;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new LogAnalyticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logType(@Nullable String logType) {
-            this.logType = logType;
+            $.logType = logType;
             return this;
         }
+
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceKey(String workspaceKey) {
-            this.workspaceKey = Objects.requireNonNull(workspaceKey);
+            $.workspaceKey = workspaceKey;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public LogAnalyticsResponse build() {
-            return new LogAnalyticsResponse(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
+        }
+
+        public LogAnalyticsResponse build() {
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            $.workspaceKey = Objects.requireNonNull($.workspaceKey, "expected parameter 'workspaceKey' to be non-null");
+            return $;
         }
     }
+
 }

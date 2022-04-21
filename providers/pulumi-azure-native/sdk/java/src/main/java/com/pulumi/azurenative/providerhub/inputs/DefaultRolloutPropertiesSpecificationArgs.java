@@ -13,9 +13,9 @@ import com.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationRest
 import com.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,193 +24,171 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends com.pulumi.
     public static final DefaultRolloutPropertiesSpecificationArgs Empty = new DefaultRolloutPropertiesSpecificationArgs();
 
     @Import(name="canary")
-      private final @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary;
+    private @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary;
 
-    public Output<DefaultRolloutSpecificationCanaryArgs> canary() {
-        return this.canary == null ? Codegen.empty() : this.canary;
+    public Optional<Output<DefaultRolloutSpecificationCanaryArgs>> canary() {
+        return Optional.ofNullable(this.canary);
     }
 
     @Import(name="highTraffic")
-      private final @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
+    private @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
 
-    public Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic() {
-        return this.highTraffic == null ? Codegen.empty() : this.highTraffic;
+    public Optional<Output<DefaultRolloutSpecificationHighTrafficArgs>> highTraffic() {
+        return Optional.ofNullable(this.highTraffic);
     }
 
     @Import(name="lowTraffic")
-      private final @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
+    private @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
 
-    public Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic() {
-        return this.lowTraffic == null ? Codegen.empty() : this.lowTraffic;
+    public Optional<Output<DefaultRolloutSpecificationLowTrafficArgs>> lowTraffic() {
+        return Optional.ofNullable(this.lowTraffic);
     }
 
     @Import(name="mediumTraffic")
-      private final @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
+    private @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
 
-    public Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic() {
-        return this.mediumTraffic == null ? Codegen.empty() : this.mediumTraffic;
+    public Optional<Output<DefaultRolloutSpecificationMediumTrafficArgs>> mediumTraffic() {
+        return Optional.ofNullable(this.mediumTraffic);
     }
 
     @Import(name="providerRegistration")
-      private final @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
+    private @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
 
-    public Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration() {
-        return this.providerRegistration == null ? Codegen.empty() : this.providerRegistration;
+    public Optional<Output<DefaultRolloutSpecificationProviderRegistrationArgs>> providerRegistration() {
+        return Optional.ofNullable(this.providerRegistration);
     }
 
     @Import(name="resourceTypeRegistrations")
-      private final @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
+    private @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
 
-    public Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations() {
-        return this.resourceTypeRegistrations == null ? Codegen.empty() : this.resourceTypeRegistrations;
+    public Optional<Output<List<ResourceTypeRegistrationArgs>>> resourceTypeRegistrations() {
+        return Optional.ofNullable(this.resourceTypeRegistrations);
     }
 
     @Import(name="restOfTheWorldGroupOne")
-      private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
+    private @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
 
-    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne() {
-        return this.restOfTheWorldGroupOne == null ? Codegen.empty() : this.restOfTheWorldGroupOne;
+    public Optional<Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs>> restOfTheWorldGroupOne() {
+        return Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
 
     @Import(name="restOfTheWorldGroupTwo")
-      private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
+    private @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
 
-    public Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo() {
-        return this.restOfTheWorldGroupTwo == null ? Codegen.empty() : this.restOfTheWorldGroupTwo;
+    public Optional<Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs>> restOfTheWorldGroupTwo() {
+        return Optional.ofNullable(this.restOfTheWorldGroupTwo);
     }
 
-    public DefaultRolloutPropertiesSpecificationArgs(
-        @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary,
-        @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic,
-        @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic,
-        @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic,
-        @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration,
-        @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations,
-        @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne,
-        @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo) {
-        this.canary = canary;
-        this.highTraffic = highTraffic;
-        this.lowTraffic = lowTraffic;
-        this.mediumTraffic = mediumTraffic;
-        this.providerRegistration = providerRegistration;
-        this.resourceTypeRegistrations = resourceTypeRegistrations;
-        this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
-        this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
-    }
+    private DefaultRolloutPropertiesSpecificationArgs() {}
 
-    private DefaultRolloutPropertiesSpecificationArgs() {
-        this.canary = Codegen.empty();
-        this.highTraffic = Codegen.empty();
-        this.lowTraffic = Codegen.empty();
-        this.mediumTraffic = Codegen.empty();
-        this.providerRegistration = Codegen.empty();
-        this.resourceTypeRegistrations = Codegen.empty();
-        this.restOfTheWorldGroupOne = Codegen.empty();
-        this.restOfTheWorldGroupTwo = Codegen.empty();
+    private DefaultRolloutPropertiesSpecificationArgs(DefaultRolloutPropertiesSpecificationArgs $) {
+        this.canary = $.canary;
+        this.highTraffic = $.highTraffic;
+        this.lowTraffic = $.lowTraffic;
+        this.mediumTraffic = $.mediumTraffic;
+        this.providerRegistration = $.providerRegistration;
+        this.resourceTypeRegistrations = $.resourceTypeRegistrations;
+        this.restOfTheWorldGroupOne = $.restOfTheWorldGroupOne;
+        this.restOfTheWorldGroupTwo = $.restOfTheWorldGroupTwo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutPropertiesSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary;
-        private @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
-        private @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
-        private @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
-        private @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
-        private @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
-        private @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
-        private @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
+        private DefaultRolloutPropertiesSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutPropertiesSpecificationArgs();
         }
 
         public Builder(DefaultRolloutPropertiesSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canary = defaults.canary;
-    	      this.highTraffic = defaults.highTraffic;
-    	      this.lowTraffic = defaults.lowTraffic;
-    	      this.mediumTraffic = defaults.mediumTraffic;
-    	      this.providerRegistration = defaults.providerRegistration;
-    	      this.resourceTypeRegistrations = defaults.resourceTypeRegistrations;
-    	      this.restOfTheWorldGroupOne = defaults.restOfTheWorldGroupOne;
-    	      this.restOfTheWorldGroupTwo = defaults.restOfTheWorldGroupTwo;
+            $ = new DefaultRolloutPropertiesSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canary(@Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary) {
-            this.canary = canary;
+            $.canary = canary;
             return this;
         }
-        public Builder canary(@Nullable DefaultRolloutSpecificationCanaryArgs canary) {
-            this.canary = Codegen.ofNullable(canary);
-            return this;
+
+        public Builder canary(DefaultRolloutSpecificationCanaryArgs canary) {
+            return canary(Output.of(canary));
         }
+
         public Builder highTraffic(@Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic) {
-            this.highTraffic = highTraffic;
+            $.highTraffic = highTraffic;
             return this;
         }
-        public Builder highTraffic(@Nullable DefaultRolloutSpecificationHighTrafficArgs highTraffic) {
-            this.highTraffic = Codegen.ofNullable(highTraffic);
-            return this;
+
+        public Builder highTraffic(DefaultRolloutSpecificationHighTrafficArgs highTraffic) {
+            return highTraffic(Output.of(highTraffic));
         }
+
         public Builder lowTraffic(@Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic) {
-            this.lowTraffic = lowTraffic;
+            $.lowTraffic = lowTraffic;
             return this;
         }
-        public Builder lowTraffic(@Nullable DefaultRolloutSpecificationLowTrafficArgs lowTraffic) {
-            this.lowTraffic = Codegen.ofNullable(lowTraffic);
-            return this;
+
+        public Builder lowTraffic(DefaultRolloutSpecificationLowTrafficArgs lowTraffic) {
+            return lowTraffic(Output.of(lowTraffic));
         }
+
         public Builder mediumTraffic(@Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic) {
-            this.mediumTraffic = mediumTraffic;
+            $.mediumTraffic = mediumTraffic;
             return this;
         }
-        public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationMediumTrafficArgs mediumTraffic) {
-            this.mediumTraffic = Codegen.ofNullable(mediumTraffic);
-            return this;
+
+        public Builder mediumTraffic(DefaultRolloutSpecificationMediumTrafficArgs mediumTraffic) {
+            return mediumTraffic(Output.of(mediumTraffic));
         }
+
         public Builder providerRegistration(@Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration) {
-            this.providerRegistration = providerRegistration;
+            $.providerRegistration = providerRegistration;
             return this;
         }
-        public Builder providerRegistration(@Nullable DefaultRolloutSpecificationProviderRegistrationArgs providerRegistration) {
-            this.providerRegistration = Codegen.ofNullable(providerRegistration);
-            return this;
+
+        public Builder providerRegistration(DefaultRolloutSpecificationProviderRegistrationArgs providerRegistration) {
+            return providerRegistration(Output.of(providerRegistration));
         }
+
         public Builder resourceTypeRegistrations(@Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations) {
-            this.resourceTypeRegistrations = resourceTypeRegistrations;
+            $.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
-        public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationArgs> resourceTypeRegistrations) {
-            this.resourceTypeRegistrations = Codegen.ofNullable(resourceTypeRegistrations);
-            return this;
+
+        public Builder resourceTypeRegistrations(List<ResourceTypeRegistrationArgs> resourceTypeRegistrations) {
+            return resourceTypeRegistrations(Output.of(resourceTypeRegistrations));
         }
+
         public Builder resourceTypeRegistrations(ResourceTypeRegistrationArgs... resourceTypeRegistrations) {
             return resourceTypeRegistrations(List.of(resourceTypeRegistrations));
         }
+
         public Builder restOfTheWorldGroupOne(@Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne) {
-            this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
+            $.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
-        public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs restOfTheWorldGroupOne) {
-            this.restOfTheWorldGroupOne = Codegen.ofNullable(restOfTheWorldGroupOne);
-            return this;
+
+        public Builder restOfTheWorldGroupOne(DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs restOfTheWorldGroupOne) {
+            return restOfTheWorldGroupOne(Output.of(restOfTheWorldGroupOne));
         }
+
         public Builder restOfTheWorldGroupTwo(@Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo) {
-            this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
+            $.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }
-        public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs restOfTheWorldGroupTwo) {
-            this.restOfTheWorldGroupTwo = Codegen.ofNullable(restOfTheWorldGroupTwo);
-            return this;
-        }        public DefaultRolloutPropertiesSpecificationArgs build() {
-            return new DefaultRolloutPropertiesSpecificationArgs(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
+
+        public Builder restOfTheWorldGroupTwo(DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs restOfTheWorldGroupTwo) {
+            return restOfTheWorldGroupTwo(Output.of(restOfTheWorldGroupTwo));
+        }
+
+        public DefaultRolloutPropertiesSpecificationArgs build() {
+            return $;
         }
     }
+
 }

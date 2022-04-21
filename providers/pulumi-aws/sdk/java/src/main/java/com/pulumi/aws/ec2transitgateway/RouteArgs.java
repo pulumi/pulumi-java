@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blackhole")
-      private final @Nullable Output<Boolean> blackhole;
+    private @Nullable Output<Boolean> blackhole;
 
-    public Output<Boolean> blackhole() {
-        return this.blackhole == null ? Codegen.empty() : this.blackhole;
+    public Optional<Output<Boolean>> blackhole() {
+        return Optional.ofNullable(this.blackhole);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationCidrBlock", required=true)
-      private final Output<String> destinationCidrBlock;
+    private Output<String> destinationCidrBlock;
 
     public Output<String> destinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -43,10 +43,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitGatewayAttachmentId")
-      private final @Nullable Output<String> transitGatewayAttachmentId;
+    private @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> transitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
+    public Optional<Output<String>> transitGatewayAttachmentId() {
+        return Optional.ofNullable(this.transitGatewayAttachmentId);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitGatewayRouteTableId", required=true)
-      private final Output<String> transitGatewayRouteTableId;
+    private Output<String> transitGatewayRouteTableId;
 
     public Output<String> transitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;
     }
 
-    public RouteArgs(
-        @Nullable Output<Boolean> blackhole,
-        Output<String> destinationCidrBlock,
-        @Nullable Output<String> transitGatewayAttachmentId,
-        Output<String> transitGatewayRouteTableId) {
-        this.blackhole = blackhole;
-        this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
-        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
-        this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
-    }
+    private RouteArgs() {}
 
-    private RouteArgs() {
-        this.blackhole = Codegen.empty();
-        this.destinationCidrBlock = Codegen.empty();
-        this.transitGatewayAttachmentId = Codegen.empty();
-        this.transitGatewayRouteTableId = Codegen.empty();
+    private RouteArgs(RouteArgs $) {
+        this.blackhole = $.blackhole;
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
+        this.transitGatewayRouteTableId = $.transitGatewayRouteTableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> blackhole;
-        private Output<String> destinationCidrBlock;
-        private @Nullable Output<String> transitGatewayAttachmentId;
-        private Output<String> transitGatewayRouteTableId;
+        private RouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteArgs();
         }
 
         public Builder(RouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blackhole = defaults.blackhole;
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
-    	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
+            $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blackhole(@Nullable Output<Boolean> blackhole) {
-            this.blackhole = blackhole;
+            $.blackhole = blackhole;
             return this;
         }
-        public Builder blackhole(@Nullable Boolean blackhole) {
-            this.blackhole = Codegen.ofNullable(blackhole);
-            return this;
+
+        public Builder blackhole(Boolean blackhole) {
+            return blackhole(Output.of(blackhole));
         }
+
         public Builder destinationCidrBlock(Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
+
         public Builder destinationCidrBlock(String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.of(Objects.requireNonNull(destinationCidrBlock));
-            return this;
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
-        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
-            return this;
+
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
+            return transitGatewayAttachmentId(Output.of(transitGatewayAttachmentId));
         }
+
         public Builder transitGatewayRouteTableId(Output<String> transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
+            $.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
+
         public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Output.of(Objects.requireNonNull(transitGatewayRouteTableId));
-            return this;
-        }        public RouteArgs build() {
-            return new RouteArgs(blackhole, destinationCidrBlock, transitGatewayAttachmentId, transitGatewayRouteTableId);
+            return transitGatewayRouteTableId(Output.of(transitGatewayRouteTableId));
+        }
+
+        public RouteArgs build() {
+            $.destinationCidrBlock = Objects.requireNonNull($.destinationCidrBlock, "expected parameter 'destinationCidrBlock' to be non-null");
+            $.transitGatewayRouteTableId = Objects.requireNonNull($.transitGatewayRouteTableId, "expected parameter 'transitGatewayRouteTableId' to be non-null");
+            return $;
         }
     }
+
 }

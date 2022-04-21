@@ -27,7 +27,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="cachePerformance", required=true)
-      private final CloudTieringCachePerformanceResponse cachePerformance;
+    private CloudTieringCachePerformanceResponse cachePerformance;
 
     public CloudTieringCachePerformanceResponse cachePerformance() {
         return this.cachePerformance;
@@ -38,7 +38,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="datePolicyStatus", required=true)
-      private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
+    private CloudTieringDatePolicyStatusResponse datePolicyStatus;
 
     public CloudTieringDatePolicyStatusResponse datePolicyStatus() {
         return this.datePolicyStatus;
@@ -49,7 +49,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="filesNotTiering", required=true)
-      private final CloudTieringFilesNotTieringResponse filesNotTiering;
+    private CloudTieringFilesNotTieringResponse filesNotTiering;
 
     public CloudTieringFilesNotTieringResponse filesNotTiering() {
         return this.filesNotTiering;
@@ -60,7 +60,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="health", required=true)
-      private final String health;
+    private String health;
 
     public String health() {
         return this.health;
@@ -71,7 +71,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="healthLastUpdatedTimestamp", required=true)
-      private final String healthLastUpdatedTimestamp;
+    private String healthLastUpdatedTimestamp;
 
     public String healthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
@@ -82,7 +82,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastCloudTieringResult", required=true)
-      private final Integer lastCloudTieringResult;
+    private Integer lastCloudTieringResult;
 
     public Integer lastCloudTieringResult() {
         return this.lastCloudTieringResult;
@@ -93,7 +93,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastSuccessTimestamp", required=true)
-      private final String lastSuccessTimestamp;
+    private String lastSuccessTimestamp;
 
     public String lastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
@@ -104,7 +104,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
@@ -115,7 +115,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="spaceSavings", required=true)
-      private final CloudTieringSpaceSavingsResponse spaceSavings;
+    private CloudTieringSpaceSavingsResponse spaceSavings;
 
     public CloudTieringSpaceSavingsResponse spaceSavings() {
         return this.spaceSavings;
@@ -126,127 +126,108 @@ public final class ServerEndpointCloudTieringStatusResponse extends com.pulumi.r
      * 
      */
     @Import(name="volumeFreeSpacePolicyStatus", required=true)
-      private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
+    private CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
     public CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;
     }
 
-    public ServerEndpointCloudTieringStatusResponse(
-        CloudTieringCachePerformanceResponse cachePerformance,
-        CloudTieringDatePolicyStatusResponse datePolicyStatus,
-        CloudTieringFilesNotTieringResponse filesNotTiering,
-        String health,
-        String healthLastUpdatedTimestamp,
-        Integer lastCloudTieringResult,
-        String lastSuccessTimestamp,
-        String lastUpdatedTimestamp,
-        CloudTieringSpaceSavingsResponse spaceSavings,
-        CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
-        this.cachePerformance = Objects.requireNonNull(cachePerformance, "expected parameter 'cachePerformance' to be non-null");
-        this.datePolicyStatus = Objects.requireNonNull(datePolicyStatus, "expected parameter 'datePolicyStatus' to be non-null");
-        this.filesNotTiering = Objects.requireNonNull(filesNotTiering, "expected parameter 'filesNotTiering' to be non-null");
-        this.health = Objects.requireNonNull(health, "expected parameter 'health' to be non-null");
-        this.healthLastUpdatedTimestamp = Objects.requireNonNull(healthLastUpdatedTimestamp, "expected parameter 'healthLastUpdatedTimestamp' to be non-null");
-        this.lastCloudTieringResult = Objects.requireNonNull(lastCloudTieringResult, "expected parameter 'lastCloudTieringResult' to be non-null");
-        this.lastSuccessTimestamp = Objects.requireNonNull(lastSuccessTimestamp, "expected parameter 'lastSuccessTimestamp' to be non-null");
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-        this.spaceSavings = Objects.requireNonNull(spaceSavings, "expected parameter 'spaceSavings' to be non-null");
-        this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus, "expected parameter 'volumeFreeSpacePolicyStatus' to be non-null");
-    }
+    private ServerEndpointCloudTieringStatusResponse() {}
 
-    private ServerEndpointCloudTieringStatusResponse() {
-        this.cachePerformance = null;
-        this.datePolicyStatus = null;
-        this.filesNotTiering = null;
-        this.health = null;
-        this.healthLastUpdatedTimestamp = null;
-        this.lastCloudTieringResult = null;
-        this.lastSuccessTimestamp = null;
-        this.lastUpdatedTimestamp = null;
-        this.spaceSavings = null;
-        this.volumeFreeSpacePolicyStatus = null;
+    private ServerEndpointCloudTieringStatusResponse(ServerEndpointCloudTieringStatusResponse $) {
+        this.cachePerformance = $.cachePerformance;
+        this.datePolicyStatus = $.datePolicyStatus;
+        this.filesNotTiering = $.filesNotTiering;
+        this.health = $.health;
+        this.healthLastUpdatedTimestamp = $.healthLastUpdatedTimestamp;
+        this.lastCloudTieringResult = $.lastCloudTieringResult;
+        this.lastSuccessTimestamp = $.lastSuccessTimestamp;
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
+        this.spaceSavings = $.spaceSavings;
+        this.volumeFreeSpacePolicyStatus = $.volumeFreeSpacePolicyStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointCloudTieringStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudTieringCachePerformanceResponse cachePerformance;
-        private CloudTieringDatePolicyStatusResponse datePolicyStatus;
-        private CloudTieringFilesNotTieringResponse filesNotTiering;
-        private String health;
-        private String healthLastUpdatedTimestamp;
-        private Integer lastCloudTieringResult;
-        private String lastSuccessTimestamp;
-        private String lastUpdatedTimestamp;
-        private CloudTieringSpaceSavingsResponse spaceSavings;
-        private CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
+        private ServerEndpointCloudTieringStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointCloudTieringStatusResponse();
         }
 
         public Builder(ServerEndpointCloudTieringStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cachePerformance = defaults.cachePerformance;
-    	      this.datePolicyStatus = defaults.datePolicyStatus;
-    	      this.filesNotTiering = defaults.filesNotTiering;
-    	      this.health = defaults.health;
-    	      this.healthLastUpdatedTimestamp = defaults.healthLastUpdatedTimestamp;
-    	      this.lastCloudTieringResult = defaults.lastCloudTieringResult;
-    	      this.lastSuccessTimestamp = defaults.lastSuccessTimestamp;
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
-    	      this.spaceSavings = defaults.spaceSavings;
-    	      this.volumeFreeSpacePolicyStatus = defaults.volumeFreeSpacePolicyStatus;
+            $ = new ServerEndpointCloudTieringStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cachePerformance(CloudTieringCachePerformanceResponse cachePerformance) {
-            this.cachePerformance = Objects.requireNonNull(cachePerformance);
+            $.cachePerformance = cachePerformance;
             return this;
         }
+
         public Builder datePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
-            this.datePolicyStatus = Objects.requireNonNull(datePolicyStatus);
+            $.datePolicyStatus = datePolicyStatus;
             return this;
         }
+
         public Builder filesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
-            this.filesNotTiering = Objects.requireNonNull(filesNotTiering);
+            $.filesNotTiering = filesNotTiering;
             return this;
         }
+
         public Builder health(String health) {
-            this.health = Objects.requireNonNull(health);
+            $.health = health;
             return this;
         }
+
         public Builder healthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
-            this.healthLastUpdatedTimestamp = Objects.requireNonNull(healthLastUpdatedTimestamp);
+            $.healthLastUpdatedTimestamp = healthLastUpdatedTimestamp;
             return this;
         }
+
         public Builder lastCloudTieringResult(Integer lastCloudTieringResult) {
-            this.lastCloudTieringResult = Objects.requireNonNull(lastCloudTieringResult);
+            $.lastCloudTieringResult = lastCloudTieringResult;
             return this;
         }
+
         public Builder lastSuccessTimestamp(String lastSuccessTimestamp) {
-            this.lastSuccessTimestamp = Objects.requireNonNull(lastSuccessTimestamp);
+            $.lastSuccessTimestamp = lastSuccessTimestamp;
             return this;
         }
+
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
         }
+
         public Builder spaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
-            this.spaceSavings = Objects.requireNonNull(spaceSavings);
+            $.spaceSavings = spaceSavings;
             return this;
         }
+
         public Builder volumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
-            this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
+            $.volumeFreeSpacePolicyStatus = volumeFreeSpacePolicyStatus;
             return this;
-        }        public ServerEndpointCloudTieringStatusResponse build() {
-            return new ServerEndpointCloudTieringStatusResponse(cachePerformance, datePolicyStatus, filesNotTiering, health, healthLastUpdatedTimestamp, lastCloudTieringResult, lastSuccessTimestamp, lastUpdatedTimestamp, spaceSavings, volumeFreeSpacePolicyStatus);
+        }
+
+        public ServerEndpointCloudTieringStatusResponse build() {
+            $.cachePerformance = Objects.requireNonNull($.cachePerformance, "expected parameter 'cachePerformance' to be non-null");
+            $.datePolicyStatus = Objects.requireNonNull($.datePolicyStatus, "expected parameter 'datePolicyStatus' to be non-null");
+            $.filesNotTiering = Objects.requireNonNull($.filesNotTiering, "expected parameter 'filesNotTiering' to be non-null");
+            $.health = Objects.requireNonNull($.health, "expected parameter 'health' to be non-null");
+            $.healthLastUpdatedTimestamp = Objects.requireNonNull($.healthLastUpdatedTimestamp, "expected parameter 'healthLastUpdatedTimestamp' to be non-null");
+            $.lastCloudTieringResult = Objects.requireNonNull($.lastCloudTieringResult, "expected parameter 'lastCloudTieringResult' to be non-null");
+            $.lastSuccessTimestamp = Objects.requireNonNull($.lastSuccessTimestamp, "expected parameter 'lastSuccessTimestamp' to be non-null");
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            $.spaceSavings = Objects.requireNonNull($.spaceSavings, "expected parameter 'spaceSavings' to be non-null");
+            $.volumeFreeSpacePolicyStatus = Objects.requireNonNull($.volumeFreeSpacePolicyStatus, "expected parameter 'volumeFreeSpacePolicyStatus' to be non-null");
+            return $;
         }
     }
+
 }

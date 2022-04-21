@@ -17,7 +17,7 @@ public final class ListBitLockerKeyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -28,55 +28,52 @@ public final class ListBitLockerKeyArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListBitLockerKeyArgs(
-        String jobName,
-        String resourceGroupName) {
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListBitLockerKeyArgs() {}
 
-    private ListBitLockerKeyArgs() {
-        this.jobName = null;
-        this.resourceGroupName = null;
+    private ListBitLockerKeyArgs(ListBitLockerKeyArgs $) {
+        this.jobName = $.jobName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListBitLockerKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobName;
-        private String resourceGroupName;
+        private ListBitLockerKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListBitLockerKeyArgs();
         }
 
         public Builder(ListBitLockerKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobName = defaults.jobName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListBitLockerKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListBitLockerKeyArgs build() {
-            return new ListBitLockerKeyArgs(jobName, resourceGroupName);
+        }
+
+        public ListBitLockerKeyArgs build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

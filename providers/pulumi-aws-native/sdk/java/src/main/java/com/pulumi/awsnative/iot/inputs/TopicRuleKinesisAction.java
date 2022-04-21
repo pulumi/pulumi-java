@@ -15,78 +15,72 @@ public final class TopicRuleKinesisAction extends com.pulumi.resources.InvokeArg
     public static final TopicRuleKinesisAction Empty = new TopicRuleKinesisAction();
 
     @Import(name="partitionKey")
-      private final @Nullable String partitionKey;
+    private @Nullable String partitionKey;
 
     public Optional<String> partitionKey() {
-        return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
+        return Optional.ofNullable(this.partitionKey);
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamName", required=true)
-      private final String streamName;
+    private String streamName;
 
     public String streamName() {
         return this.streamName;
     }
 
-    public TopicRuleKinesisAction(
-        @Nullable String partitionKey,
-        String roleArn,
-        String streamName) {
-        this.partitionKey = partitionKey;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.streamName = Objects.requireNonNull(streamName, "expected parameter 'streamName' to be non-null");
-    }
+    private TopicRuleKinesisAction() {}
 
-    private TopicRuleKinesisAction() {
-        this.partitionKey = null;
-        this.roleArn = null;
-        this.streamName = null;
+    private TopicRuleKinesisAction(TopicRuleKinesisAction $) {
+        this.partitionKey = $.partitionKey;
+        this.roleArn = $.roleArn;
+        this.streamName = $.streamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleKinesisAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String partitionKey;
-        private String roleArn;
-        private String streamName;
+        private TopicRuleKinesisAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleKinesisAction();
         }
 
         public Builder(TopicRuleKinesisAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.roleArn = defaults.roleArn;
-    	      this.streamName = defaults.streamName;
+            $ = new TopicRuleKinesisAction(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder streamName(String streamName) {
-            this.streamName = Objects.requireNonNull(streamName);
+            $.streamName = streamName;
             return this;
-        }        public TopicRuleKinesisAction build() {
-            return new TopicRuleKinesisAction(partitionKey, roleArn, streamName);
+        }
+
+        public TopicRuleKinesisAction build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.streamName = Objects.requireNonNull($.streamName, "expected parameter 'streamName' to be non-null");
+            return $;
         }
     }
+
 }

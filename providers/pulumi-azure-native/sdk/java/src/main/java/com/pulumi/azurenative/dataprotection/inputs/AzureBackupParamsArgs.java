@@ -23,7 +23,7 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="backupType", required=true)
-      private final Output<String> backupType;
+    private Output<String> backupType;
 
     public Output<String> backupType() {
         return this.backupType;
@@ -35,63 +35,60 @@ public final class AzureBackupParamsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
     }
 
-    public AzureBackupParamsArgs(
-        Output<String> backupType,
-        Output<String> objectType) {
-        this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-    }
+    private AzureBackupParamsArgs() {}
 
-    private AzureBackupParamsArgs() {
-        this.backupType = Codegen.empty();
-        this.objectType = Codegen.empty();
+    private AzureBackupParamsArgs(AzureBackupParamsArgs $) {
+        this.backupType = $.backupType;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBackupParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupType;
-        private Output<String> objectType;
+        private AzureBackupParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBackupParamsArgs();
         }
 
         public Builder(AzureBackupParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupType = defaults.backupType;
-    	      this.objectType = defaults.objectType;
+            $ = new AzureBackupParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupType(Output<String> backupType) {
-            this.backupType = Objects.requireNonNull(backupType);
+            $.backupType = backupType;
             return this;
         }
+
         public Builder backupType(String backupType) {
-            this.backupType = Output.of(Objects.requireNonNull(backupType));
-            return this;
+            return backupType(Output.of(backupType));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
-        }        public AzureBackupParamsArgs build() {
-            return new AzureBackupParamsArgs(backupType, objectType);
+            return objectType(Output.of(objectType));
+        }
+
+        public AzureBackupParamsArgs build() {
+            $.backupType = Objects.requireNonNull($.backupType, "expected parameter 'backupType' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            return $;
         }
     }
+
 }

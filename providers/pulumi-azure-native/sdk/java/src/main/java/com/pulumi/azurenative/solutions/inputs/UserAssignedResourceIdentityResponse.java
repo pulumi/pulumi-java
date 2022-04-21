@@ -21,7 +21,7 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -32,55 +32,52 @@ public final class UserAssignedResourceIdentityResponse extends com.pulumi.resou
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public UserAssignedResourceIdentityResponse(
-        String principalId,
-        String tenantId) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private UserAssignedResourceIdentityResponse() {}
 
-    private UserAssignedResourceIdentityResponse() {
-        this.principalId = null;
-        this.tenantId = null;
+    private UserAssignedResourceIdentityResponse(UserAssignedResourceIdentityResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedResourceIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String tenantId;
+        private UserAssignedResourceIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedResourceIdentityResponse();
         }
 
         public Builder(UserAssignedResourceIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new UserAssignedResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public UserAssignedResourceIdentityResponse build() {
-            return new UserAssignedResourceIdentityResponse(principalId, tenantId);
+        }
+
+        public UserAssignedResourceIdentityResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

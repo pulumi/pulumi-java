@@ -5,12 +5,12 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="definitions")
-      private final @Nullable Output<List<String>> definitions;
+    private @Nullable Output<List<String>> definitions;
 
-    public Output<List<String>> definitions() {
-        return this.definitions == null ? Codegen.empty() : this.definitions;
+    public Optional<Output<List<String>>> definitions() {
+        return Optional.ofNullable(this.definitions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="identifierPrefix")
-      private final @Nullable Output<String> identifierPrefix;
+    private @Nullable Output<String> identifierPrefix;
 
-    public Output<String> identifierPrefix() {
-        return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
+    public Optional<Output<String>> identifierPrefix() {
+        return Optional.ofNullable(this.identifierPrefix);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,144 +101,122 @@ public final class SnapshotScheduleState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public SnapshotScheduleState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> definitions,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> identifierPrefix,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.definitions = definitions;
-        this.description = description;
-        this.forceDestroy = forceDestroy;
-        this.identifier = identifier;
-        this.identifierPrefix = identifierPrefix;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private SnapshotScheduleState() {}
 
-    private SnapshotScheduleState() {
-        this.arn = Codegen.empty();
-        this.definitions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.identifierPrefix = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private SnapshotScheduleState(SnapshotScheduleState $) {
+        this.arn = $.arn;
+        this.definitions = $.definitions;
+        this.description = $.description;
+        this.forceDestroy = $.forceDestroy;
+        this.identifier = $.identifier;
+        this.identifierPrefix = $.identifierPrefix;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotScheduleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> definitions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> identifierPrefix;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private SnapshotScheduleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotScheduleState();
         }
 
         public Builder(SnapshotScheduleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.definitions = defaults.definitions;
-    	      this.description = defaults.description;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.identifier = defaults.identifier;
-    	      this.identifierPrefix = defaults.identifierPrefix;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new SnapshotScheduleState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder definitions(@Nullable Output<List<String>> definitions) {
-            this.definitions = definitions;
+            $.definitions = definitions;
             return this;
         }
-        public Builder definitions(@Nullable List<String> definitions) {
-            this.definitions = Codegen.ofNullable(definitions);
-            return this;
+
+        public Builder definitions(List<String> definitions) {
+            return definitions(Output.of(definitions));
         }
+
         public Builder definitions(String... definitions) {
             return definitions(List.of(definitions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
-            this.identifierPrefix = identifierPrefix;
+            $.identifierPrefix = identifierPrefix;
             return this;
         }
-        public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Codegen.ofNullable(identifierPrefix);
-            return this;
+
+        public Builder identifierPrefix(String identifierPrefix) {
+            return identifierPrefix(Output.of(identifierPrefix));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public SnapshotScheduleState build() {
-            return new SnapshotScheduleState(arn, definitions, description, forceDestroy, identifier, identifierPrefix, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public SnapshotScheduleState build() {
+            return $;
         }
     }
+
 }

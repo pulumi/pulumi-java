@@ -13,62 +13,59 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStreamArgs Empty = new GetStreamArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="ledgerName", required=true)
-      private final String ledgerName;
+    private String ledgerName;
 
     public String ledgerName() {
         return this.ledgerName;
     }
 
-    public GetStreamArgs(
-        String id,
-        String ledgerName) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.ledgerName = Objects.requireNonNull(ledgerName, "expected parameter 'ledgerName' to be non-null");
-    }
+    private GetStreamArgs() {}
 
-    private GetStreamArgs() {
-        this.id = null;
-        this.ledgerName = null;
+    private GetStreamArgs(GetStreamArgs $) {
+        this.id = $.id;
+        this.ledgerName = $.ledgerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String ledgerName;
+        private GetStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamArgs();
         }
 
         public Builder(GetStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ledgerName = defaults.ledgerName;
+            $ = new GetStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder ledgerName(String ledgerName) {
-            this.ledgerName = Objects.requireNonNull(ledgerName);
+            $.ledgerName = ledgerName;
             return this;
-        }        public GetStreamArgs build() {
-            return new GetStreamArgs(id, ledgerName);
+        }
+
+        public GetStreamArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.ledgerName = Objects.requireNonNull($.ledgerName, "expected parameter 'ledgerName' to be non-null");
+            return $;
         }
     }
+
 }

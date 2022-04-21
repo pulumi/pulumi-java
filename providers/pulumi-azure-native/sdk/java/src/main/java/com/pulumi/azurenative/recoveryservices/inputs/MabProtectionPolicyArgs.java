@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,7 +34,7 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="backupManagementType", required=true)
-      private final Output<String> backupManagementType;
+    private Output<String> backupManagementType;
 
     public Output<String> backupManagementType() {
         return this.backupManagementType;
@@ -44,10 +45,10 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="protectedItemsCount")
-      private final @Nullable Output<Integer> protectedItemsCount;
+    private @Nullable Output<Integer> protectedItemsCount;
 
-    public Output<Integer> protectedItemsCount() {
-        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
+    public Optional<Output<Integer>> protectedItemsCount() {
+        return Optional.ofNullable(this.protectedItemsCount);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+    private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -66,89 +67,79 @@ public final class MabProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schedulePolicy")
-      private final @Nullable Output<Object> schedulePolicy;
+    private @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> schedulePolicy() {
-        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
+    public Optional<Output<Object>> schedulePolicy() {
+        return Optional.ofNullable(this.schedulePolicy);
     }
 
-    public MabProtectionPolicyArgs(
-        Output<String> backupManagementType,
-        @Nullable Output<Integer> protectedItemsCount,
-        @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
-        @Nullable Output<Object> schedulePolicy) {
-        this.backupManagementType = Codegen.stringProp("backupManagementType").output().arg(backupManagementType).require();
-        this.protectedItemsCount = protectedItemsCount;
-        this.retentionPolicy = retentionPolicy;
-        this.schedulePolicy = schedulePolicy;
-    }
+    private MabProtectionPolicyArgs() {}
 
-    private MabProtectionPolicyArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.protectedItemsCount = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
-        this.schedulePolicy = Codegen.empty();
+    private MabProtectionPolicyArgs(MabProtectionPolicyArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.protectedItemsCount = $.protectedItemsCount;
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedulePolicy = $.schedulePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupManagementType;
-        private @Nullable Output<Integer> protectedItemsCount;
-        private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
-        private @Nullable Output<Object> schedulePolicy;
+        private MabProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabProtectionPolicyArgs();
         }
 
         public Builder(MabProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.protectedItemsCount = defaults.protectedItemsCount;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedulePolicy = defaults.schedulePolicy;
+            $ = new MabProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(Output<String> backupManagementType) {
-            this.backupManagementType = Objects.requireNonNull(backupManagementType);
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupManagementType(String backupManagementType) {
-            this.backupManagementType = Output.of(Objects.requireNonNull(backupManagementType));
-            return this;
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
-            this.protectedItemsCount = protectedItemsCount;
+            $.protectedItemsCount = protectedItemsCount;
             return this;
         }
-        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
-            return this;
+
+        public Builder protectedItemsCount(Integer protectedItemsCount) {
+            return protectedItemsCount(Output.of(protectedItemsCount));
         }
+
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
+
+        public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
-            this.schedulePolicy = schedulePolicy;
+            $.schedulePolicy = schedulePolicy;
             return this;
         }
-        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
-            return this;
-        }        public MabProtectionPolicyArgs build() {
-            return new MabProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);
+
+        public Builder schedulePolicy(Object schedulePolicy) {
+            return schedulePolicy(Output.of(schedulePolicy));
+        }
+
+        public MabProtectionPolicyArgs build() {
+            $.backupManagementType = Codegen.stringProp("backupManagementType").output().arg($.backupManagementType).require();
+            return $;
         }
     }
+
 }

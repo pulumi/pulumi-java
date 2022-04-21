@@ -5,10 +5,10 @@ package com.pulumi.azurenative.containerregistry;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<String>> actions;
+    private Output<List<String>> actions;
 
     public Output<List<String>> actions() {
         return this.actions;
@@ -34,10 +34,10 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -56,7 +56,7 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,105 +67,95 @@ public final class ScopeMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopeMapName")
-      private final @Nullable Output<String> scopeMapName;
+    private @Nullable Output<String> scopeMapName;
 
-    public Output<String> scopeMapName() {
-        return this.scopeMapName == null ? Codegen.empty() : this.scopeMapName;
+    public Optional<Output<String>> scopeMapName() {
+        return Optional.ofNullable(this.scopeMapName);
     }
 
-    public ScopeMapArgs(
-        Output<List<String>> actions,
-        @Nullable Output<String> description,
-        Output<String> registryName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scopeMapName) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.description = description;
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeMapName = scopeMapName;
-    }
+    private ScopeMapArgs() {}
 
-    private ScopeMapArgs() {
-        this.actions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scopeMapName = Codegen.empty();
+    private ScopeMapArgs(ScopeMapArgs $) {
+        this.actions = $.actions;
+        this.description = $.description;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeMapName = $.scopeMapName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> actions;
-        private @Nullable Output<String> description;
-        private Output<String> registryName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scopeMapName;
+        private ScopeMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeMapArgs();
         }
 
         public Builder(ScopeMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.description = defaults.description;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeMapName = defaults.scopeMapName;
+            $ = new ScopeMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<String>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<String> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scopeMapName(@Nullable Output<String> scopeMapName) {
-            this.scopeMapName = scopeMapName;
+            $.scopeMapName = scopeMapName;
             return this;
         }
-        public Builder scopeMapName(@Nullable String scopeMapName) {
-            this.scopeMapName = Codegen.ofNullable(scopeMapName);
-            return this;
-        }        public ScopeMapArgs build() {
-            return new ScopeMapArgs(actions, description, registryName, resourceGroupName, scopeMapName);
+
+        public Builder scopeMapName(String scopeMapName) {
+            return scopeMapName(Output.of(scopeMapName));
+        }
+
+        public ScopeMapArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

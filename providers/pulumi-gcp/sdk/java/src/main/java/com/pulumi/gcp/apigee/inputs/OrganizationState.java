@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyticsRegion")
-      private final @Nullable Output<String> analyticsRegion;
+    private @Nullable Output<String> analyticsRegion;
 
-    public Output<String> analyticsRegion() {
-        return this.analyticsRegion == null ? Codegen.empty() : this.analyticsRegion;
+    public Optional<Output<String>> analyticsRegion() {
+        return Optional.ofNullable(this.analyticsRegion);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetwork")
-      private final @Nullable Output<String> authorizedNetwork;
+    private @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> authorizedNetwork() {
-        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
+    public Optional<Output<String>> authorizedNetwork() {
+        return Optional.ofNullable(this.authorizedNetwork);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caCertificate")
-      private final @Nullable Output<String> caCertificate;
+    private @Nullable Output<String> caCertificate;
 
-    public Output<String> caCertificate() {
-        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
+    public Optional<Output<String>> caCertificate() {
+        return Optional.ofNullable(this.caCertificate);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeDatabaseEncryptionKeyName")
-      private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
+    private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> runtimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Optional<Output<String>> runtimeDatabaseEncryptionKeyName() {
+        return Optional.ofNullable(this.runtimeDatabaseEncryptionKeyName);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeType")
-      private final @Nullable Output<String> runtimeType;
+    private @Nullable Output<String> runtimeType;
 
-    public Output<String> runtimeType() {
-        return this.runtimeType == null ? Codegen.empty() : this.runtimeType;
+    public Optional<Output<String>> runtimeType() {
+        return Optional.ofNullable(this.runtimeType);
     }
 
     /**
@@ -128,167 +128,138 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionType")
-      private final @Nullable Output<String> subscriptionType;
+    private @Nullable Output<String> subscriptionType;
 
-    public Output<String> subscriptionType() {
-        return this.subscriptionType == null ? Codegen.empty() : this.subscriptionType;
+    public Optional<Output<String>> subscriptionType() {
+        return Optional.ofNullable(this.subscriptionType);
     }
 
-    public OrganizationState(
-        @Nullable Output<String> analyticsRegion,
-        @Nullable Output<String> authorizedNetwork,
-        @Nullable Output<String> caCertificate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> projectId,
-        @Nullable Output<String> runtimeDatabaseEncryptionKeyName,
-        @Nullable Output<String> runtimeType,
-        @Nullable Output<String> subscriptionType) {
-        this.analyticsRegion = analyticsRegion;
-        this.authorizedNetwork = authorizedNetwork;
-        this.caCertificate = caCertificate;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = name;
-        this.projectId = projectId;
-        this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
-        this.runtimeType = runtimeType;
-        this.subscriptionType = subscriptionType;
-    }
+    private OrganizationState() {}
 
-    private OrganizationState() {
-        this.analyticsRegion = Codegen.empty();
-        this.authorizedNetwork = Codegen.empty();
-        this.caCertificate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.runtimeDatabaseEncryptionKeyName = Codegen.empty();
-        this.runtimeType = Codegen.empty();
-        this.subscriptionType = Codegen.empty();
+    private OrganizationState(OrganizationState $) {
+        this.analyticsRegion = $.analyticsRegion;
+        this.authorizedNetwork = $.authorizedNetwork;
+        this.caCertificate = $.caCertificate;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.projectId = $.projectId;
+        this.runtimeDatabaseEncryptionKeyName = $.runtimeDatabaseEncryptionKeyName;
+        this.runtimeType = $.runtimeType;
+        this.subscriptionType = $.subscriptionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> analyticsRegion;
-        private @Nullable Output<String> authorizedNetwork;
-        private @Nullable Output<String> caCertificate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> projectId;
-        private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
-        private @Nullable Output<String> runtimeType;
-        private @Nullable Output<String> subscriptionType;
+        private OrganizationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationState();
         }
 
         public Builder(OrganizationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticsRegion = defaults.analyticsRegion;
-    	      this.authorizedNetwork = defaults.authorizedNetwork;
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.projectId = defaults.projectId;
-    	      this.runtimeDatabaseEncryptionKeyName = defaults.runtimeDatabaseEncryptionKeyName;
-    	      this.runtimeType = defaults.runtimeType;
-    	      this.subscriptionType = defaults.subscriptionType;
+            $ = new OrganizationState(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticsRegion(@Nullable Output<String> analyticsRegion) {
-            this.analyticsRegion = analyticsRegion;
+            $.analyticsRegion = analyticsRegion;
             return this;
         }
-        public Builder analyticsRegion(@Nullable String analyticsRegion) {
-            this.analyticsRegion = Codegen.ofNullable(analyticsRegion);
-            return this;
+
+        public Builder analyticsRegion(String analyticsRegion) {
+            return analyticsRegion(Output.of(analyticsRegion));
         }
+
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
-            this.authorizedNetwork = authorizedNetwork;
+            $.authorizedNetwork = authorizedNetwork;
             return this;
         }
-        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
-            return this;
+
+        public Builder authorizedNetwork(String authorizedNetwork) {
+            return authorizedNetwork(Output.of(authorizedNetwork));
         }
+
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
-            this.caCertificate = caCertificate;
+            $.caCertificate = caCertificate;
             return this;
         }
-        public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Codegen.ofNullable(caCertificate);
-            return this;
+
+        public Builder caCertificate(String caCertificate) {
+            return caCertificate(Output.of(caCertificate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
         }
+
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
+            $.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
-        public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Codegen.ofNullable(runtimeDatabaseEncryptionKeyName);
-            return this;
+
+        public Builder runtimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
+            return runtimeDatabaseEncryptionKeyName(Output.of(runtimeDatabaseEncryptionKeyName));
         }
+
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
-            this.runtimeType = runtimeType;
+            $.runtimeType = runtimeType;
             return this;
         }
-        public Builder runtimeType(@Nullable String runtimeType) {
-            this.runtimeType = Codegen.ofNullable(runtimeType);
-            return this;
+
+        public Builder runtimeType(String runtimeType) {
+            return runtimeType(Output.of(runtimeType));
         }
+
         public Builder subscriptionType(@Nullable Output<String> subscriptionType) {
-            this.subscriptionType = subscriptionType;
+            $.subscriptionType = subscriptionType;
             return this;
         }
-        public Builder subscriptionType(@Nullable String subscriptionType) {
-            this.subscriptionType = Codegen.ofNullable(subscriptionType);
-            return this;
-        }        public OrganizationState build() {
-            return new OrganizationState(analyticsRegion, authorizedNetwork, caCertificate, description, displayName, name, projectId, runtimeDatabaseEncryptionKeyName, runtimeType, subscriptionType);
+
+        public Builder subscriptionType(String subscriptionType) {
+            return subscriptionType(Output.of(subscriptionType));
+        }
+
+        public OrganizationState build() {
+            return $;
         }
     }
+
 }

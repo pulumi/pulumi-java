@@ -6,9 +6,9 @@ package com.pulumi.awsnative.events.inputs;
 import com.pulumi.awsnative.events.inputs.ConnectionParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,99 +17,94 @@ public final class ConnectionHttpParametersArgs extends com.pulumi.resources.Res
     public static final ConnectionHttpParametersArgs Empty = new ConnectionHttpParametersArgs();
 
     @Import(name="bodyParameters")
-      private final @Nullable Output<List<ConnectionParameterArgs>> bodyParameters;
+    private @Nullable Output<List<ConnectionParameterArgs>> bodyParameters;
 
-    public Output<List<ConnectionParameterArgs>> bodyParameters() {
-        return this.bodyParameters == null ? Codegen.empty() : this.bodyParameters;
+    public Optional<Output<List<ConnectionParameterArgs>>> bodyParameters() {
+        return Optional.ofNullable(this.bodyParameters);
     }
 
     @Import(name="headerParameters")
-      private final @Nullable Output<List<ConnectionParameterArgs>> headerParameters;
+    private @Nullable Output<List<ConnectionParameterArgs>> headerParameters;
 
-    public Output<List<ConnectionParameterArgs>> headerParameters() {
-        return this.headerParameters == null ? Codegen.empty() : this.headerParameters;
+    public Optional<Output<List<ConnectionParameterArgs>>> headerParameters() {
+        return Optional.ofNullable(this.headerParameters);
     }
 
     @Import(name="queryStringParameters")
-      private final @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters;
+    private @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters;
 
-    public Output<List<ConnectionParameterArgs>> queryStringParameters() {
-        return this.queryStringParameters == null ? Codegen.empty() : this.queryStringParameters;
+    public Optional<Output<List<ConnectionParameterArgs>>> queryStringParameters() {
+        return Optional.ofNullable(this.queryStringParameters);
     }
 
-    public ConnectionHttpParametersArgs(
-        @Nullable Output<List<ConnectionParameterArgs>> bodyParameters,
-        @Nullable Output<List<ConnectionParameterArgs>> headerParameters,
-        @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters) {
-        this.bodyParameters = bodyParameters;
-        this.headerParameters = headerParameters;
-        this.queryStringParameters = queryStringParameters;
-    }
+    private ConnectionHttpParametersArgs() {}
 
-    private ConnectionHttpParametersArgs() {
-        this.bodyParameters = Codegen.empty();
-        this.headerParameters = Codegen.empty();
-        this.queryStringParameters = Codegen.empty();
+    private ConnectionHttpParametersArgs(ConnectionHttpParametersArgs $) {
+        this.bodyParameters = $.bodyParameters;
+        this.headerParameters = $.headerParameters;
+        this.queryStringParameters = $.queryStringParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionHttpParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConnectionParameterArgs>> bodyParameters;
-        private @Nullable Output<List<ConnectionParameterArgs>> headerParameters;
-        private @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters;
+        private ConnectionHttpParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionHttpParametersArgs();
         }
 
         public Builder(ConnectionHttpParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bodyParameters = defaults.bodyParameters;
-    	      this.headerParameters = defaults.headerParameters;
-    	      this.queryStringParameters = defaults.queryStringParameters;
+            $ = new ConnectionHttpParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bodyParameters(@Nullable Output<List<ConnectionParameterArgs>> bodyParameters) {
-            this.bodyParameters = bodyParameters;
+            $.bodyParameters = bodyParameters;
             return this;
         }
-        public Builder bodyParameters(@Nullable List<ConnectionParameterArgs> bodyParameters) {
-            this.bodyParameters = Codegen.ofNullable(bodyParameters);
-            return this;
+
+        public Builder bodyParameters(List<ConnectionParameterArgs> bodyParameters) {
+            return bodyParameters(Output.of(bodyParameters));
         }
+
         public Builder bodyParameters(ConnectionParameterArgs... bodyParameters) {
             return bodyParameters(List.of(bodyParameters));
         }
+
         public Builder headerParameters(@Nullable Output<List<ConnectionParameterArgs>> headerParameters) {
-            this.headerParameters = headerParameters;
+            $.headerParameters = headerParameters;
             return this;
         }
-        public Builder headerParameters(@Nullable List<ConnectionParameterArgs> headerParameters) {
-            this.headerParameters = Codegen.ofNullable(headerParameters);
-            return this;
+
+        public Builder headerParameters(List<ConnectionParameterArgs> headerParameters) {
+            return headerParameters(Output.of(headerParameters));
         }
+
         public Builder headerParameters(ConnectionParameterArgs... headerParameters) {
             return headerParameters(List.of(headerParameters));
         }
+
         public Builder queryStringParameters(@Nullable Output<List<ConnectionParameterArgs>> queryStringParameters) {
-            this.queryStringParameters = queryStringParameters;
+            $.queryStringParameters = queryStringParameters;
             return this;
         }
-        public Builder queryStringParameters(@Nullable List<ConnectionParameterArgs> queryStringParameters) {
-            this.queryStringParameters = Codegen.ofNullable(queryStringParameters);
-            return this;
+
+        public Builder queryStringParameters(List<ConnectionParameterArgs> queryStringParameters) {
+            return queryStringParameters(Output.of(queryStringParameters));
         }
+
         public Builder queryStringParameters(ConnectionParameterArgs... queryStringParameters) {
             return queryStringParameters(List.of(queryStringParameters));
-        }        public ConnectionHttpParametersArgs build() {
-            return new ConnectionHttpParametersArgs(bodyParameters, headerParameters, queryStringParameters);
+        }
+
+        public ConnectionHttpParametersArgs build() {
+            return $;
         }
     }
+
 }
